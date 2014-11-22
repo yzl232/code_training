@@ -1,0 +1,81 @@
+# encoding=utf-8
+'''
+
+Maximum size square sub-matrix with all 1s
+
+Maximum size square sub-matrix with all 1s
+
+Given a binary matrix, find out the maximum size square sub-matrix with all 1s.
+
+For example, consider the below binary matrix.
+
+
+   0  1  1  0  1
+   1  1  0  1  0
+   0  1  1  1  0
+   1  1  1  1  0
+   1  1  1  1  1
+   0  0  0  0  0
+
+The maximum square sub-matrix with all set bits is
+
+    1  1  1
+    1  1  1
+    1  1  1
+
+Algorithm:
+Let the given binary matrix be M[R][C]. The idea of the algorithm is to construct an auxiliary size matrix S[][] in which each entry S[i][j] represents size of the square sub-matrix with all 1s including M[i][j] where M[i][j] is the rightmost and bottommost entry in sub-matrix.
+
+1) Construct a sum matrix S[R][C] for the given M[R][C].
+     a)	Copy first row and first columns as it is from M[][] to S[][]
+     b)	For other entries, use following expressions to construct S[][]
+         If M[i][j] is 1 then
+            S[i][j] = min(S[i][j-1], S[i-1][j], S[i-1][j-1]) + 1
+         Else /*If M[i][j] is 0*/
+            S[i][j] = 0
+2) Find the maximum entry in S[R][C]
+3) Using the value and coordinates of maximum entry in S[i], print
+   sub-matrix of M[][]
+
+For the given M[R][C] in above example, constructed S[R][C] would be:
+
+   0  1  1  0  1
+   1  1  0  1  0
+   0  1  1  1  0
+   1  1  2  2  0
+   1  2  2  3  1
+   0  0  0  0  0
+
+The value of maximum entry in above matrix is 3 and coordinates of the entry are (4, 3). Using the maximum value and its coordinates, we can find out the required sub-matrix.
+
+
+Time Complexity: O(m*n) where m is number of rows and n is number of columns in the given matrix.
+Auxiliary Space: O(m*n) where m is number of rows and n is number of columns in the given matrix.
+Algorithmic Paradigm: Dynamic Programming
+
+
+和leetcode不同在于这个是正方形。
+还是leetcode更加通用一些
+
+'''
+class Solution:
+    def printMaxSubSquare(self, matrix):
+        r = len(matrix); c = len(matrix[0])
+        s = [[0 for i in range(c)] for j in range(r)]
+        for i in range(r):
+            s[i][0] = matrix[i][0]
+        for  i in range(c):
+            s[0][i] = matrix[0][i]
+        for i in range(1, r):
+            for j in range(1, c):
+                if matrix[i][j] == 1:
+                    s[i][j] = min(s[i][j-1], s[i-1][j], s[i-1][j-1]) + 1
+                else:  s[i][j] = 0
+        result = s[0][0]
+        for i in range(r):
+            for j in range(c):
+                result= max(result, s[i][j])
+        print s
+        return result
+s = Solution()
+print s.printMaxSubSquare([[1, 1]])

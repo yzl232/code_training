@@ -1,0 +1,44 @@
+# encoding=utf-8
+'''
+A triangulation of a convex polygon is formed by drawing diagonals between non-adjacent vertices (corners) such that the diagonals never intersect. The problem is to find the cost of triangulation with the minimum cost. The cost of a triangulation is sum of the weights of its component triangles. Weight of each triangle is its perimeter (sum of lengths of all sides)
+
+所有三角形的周长之和
+'''
+class Solution:
+    def distance(self, a, b):
+        return (b[0]-a[0])**2+(b[1]-a[1])**2
+
+    def cost(self, i, j, k, points):
+        p1 = points[i];  p2 = points[j];  p3 = points[k]
+        return self.distance(p1, p2)+self.distance(p2, p3) + self.distance(p1, p3)
+
+    def getMinimumCut(self, points):
+        return self.helper(points, 0, len(points)-1)
+
+    def helper(self, points, i, j):
+        if j<i+2: return 0
+        return min(self.helper(points,i, k)+self.helper(points, k, j)+ self.cost(i, k, j) for k in range(i+1, j))
+
+
+#递归写法
+'''
+dp写法。
+
+O(n3)
+'''
+
+class Solution:
+    def distance(self, a, b):
+        return (b[0]-a[0])**2+(b[1]-a[1])**2
+
+    def cost(self, i, j, k, points):
+        p1 = points[i];  p2 = points[j];  p3 = points[k]
+        return self.distance(p1, p2)+self.distance(p2, p3) + self.distance(p1, p3)
+
+    def getMinimumCutDP(self, points):
+        n = len(points)
+        results  =[[0 for i in range(n)]for j in range(n)]
+        for j in range(n):
+            for i in range(j-3, -1, -1):  # i=0,  j=3
+                results[i][j] = min(results[i][k]+results[k][j]+ self.cost(i, k, j) for k in range(i+1, j))
+        return results[0][n-1]  #长度n-1。这是最后一步了。
