@@ -49,3 +49,4 @@ class Solution2:
         self.reverse(0, d-1, arr)
         self.reverse(d, len(arr)-1, arr)
         self.reverse(0, len(arr)-1, arr)
+#和leetcode Reverse Words in a String II  比较像

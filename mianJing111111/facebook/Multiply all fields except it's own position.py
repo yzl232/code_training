@@ -47,3 +47,5 @@ class Solution:
         for i in range(len(arr)):
             result[i] = forward[i] * backward[i]
         return result
+
+#有O(1),  one pass的算法
