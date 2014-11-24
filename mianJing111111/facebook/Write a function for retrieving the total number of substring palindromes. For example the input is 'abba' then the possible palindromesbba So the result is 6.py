@@ -12,14 +12,14 @@ After the interview I got know that the O(n^3) solution is not enough to go to t
 和  longest  palindrome   leetcode 类似的题目。
 
 
-  暴力法 O(n3)
 
-  艹。  O(n)的也要背下来。
+
+  艹。  O(n)的也要背下来。  dp.  以及O(n2) 三种都要。
 
 '''
 
 class Solution:
-    # @return a string    O(n2)
+    # @return a string    O(n2)  #space 用太多。 效率其实不好
     def longestPalindrome(self, s):  # http://blog.csdn.net/feliciafay/article/details/16984031
         n = len(s)
         dp = [[False for i in range(n)] for j in range(n)]
@@ -50,14 +50,7 @@ class Solution11:
             if i+P[i] > R:
                 C = i
                 R = i + P[i]
-
-        num = 0
-        for i in P:
-            num+= (i+1)/2   #经过测验   一个substring如果是palindrome。 以之为中心的为(i+1)/2个一个substring如果是palindrome
-        return num
-
-
-
+        return sum((i+1)/2 for i in P) #经过测验   一个substring如果是palindrome。 以之为中心的为(i+1)/2个一个substring如果是palindrome
 
     def process(self, s):
         ret = '^'
@@ -65,7 +58,32 @@ class Solution11:
             ret += '#'+s[i]
         ret +='#$'
         return ret
-a = Solution()
+a = Solution11()
 print a.longestPalindrome("aaa") #确实6个
 print a.longestPalindrome("abcd")
 print a.longestPalindrome("abba")
+
+
+#背下代码。 和一个例子就好
+#abba
+'''
+^ a # b # b # a$
+0 1  0 1 4 1 0 1 0
+'''
+
+
+class Solution6:  # O(1) space  O(n2)
+    # @return a string
+    def expand(self, s, l, r):
+        cout = 0
+        while l >= 0 and r < len(s) and s[l] == s[r]:  #这里设定好了边界
+            l -= 1; r += 1
+            cout+=1
+        return cout
+
+    def longestPalindrome(self, s):
+        return sum(self.expand(s, i, i)+self.expand(s, i, i+1) for i in range(len(s)))
+
+
+sss = Solution6()
+print sss.longestPalindrome('abba')
