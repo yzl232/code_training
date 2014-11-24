@@ -37,6 +37,25 @@ UCS-4 range (hex.) UTF-8 octet sequence (binary)
 　　根据UTF8编码,最多可由6个字节组成,所以UTF8是1-6字节编码组成
 
 
+
+
+
+UTF-8 encoding scheme is described below:
+
+0XXXXXXX = this is the entire rune
+10XXXXXX = this is a continuation of the rune from the previous byte
+110XXXXX = this is the start of a 2-byte rune.
+1110XXXX = this is the start of a 3-byte rune.
+11110XXX = this is the start of a 4-byte rune.
+111110XX = this is the start of a 5-byte rune.
+1111110X = this is the start of a 6-byte rune.
+11111110 = this is the start of a 7-byte rune.
+11111111 = this is the start of a 8-byte rune.
+
+For example, a 3-byte rune would be 1110XXXX 10XXXXXX 10XXXXXX.
+
+Write a function that decides whether a given byte array (or string) is
+valid UTF-8 encoded text.
 '''
 
 class Solution:

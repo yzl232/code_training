@@ -35,6 +35,23 @@ class Solution2:
             self.count+=1
             pass
 
+#设计一个function: bool cancall(), 保证每秒钟内return true的数量小于 N,
+
+
+class Solution3:
+    def __init__(self, N):
+        self.lastTime = -1
+        self.count = 0
+        self.N = N
+
+    def add_money(self):
+        curr_time = int(time.time())
+        if curr_time - self.lastTime > 1:
+            if self.count>=self.N: return False
+            self.lastTime = curr_time
+            self.count+=1
+            pass
+
 
 '''
 最近一分钟调用了多少次？
