@@ -1,74 +1,169 @@
-class ListNode:
-    def __init__(self, key, val):
-        self.val = val
-        self.key = key
-        self.next = None
-        self.prev = None
-        
-class LinkedList:
+import numpy as np
+from copy import copy
+import matplotlib.pyplot as plt
+
+class HMM:
     def __init__(self):
-        self.head = None
-        self.tail = None
-    
-    def insert(self, node):
-        if self.head is None:
-            self.head = node
-        else:
-            self.tail.next = node
-            node.prev = self.tail
-        self.tail = node
-            
-    def delete(self, node):
-        if node.prev:     node.prev.next = node.next
-        else:       self.head = node.next
-        if node.next:         node.next.prev = node.prev
-        else:        self.tail = node.prev
+        pass
 
-class LRUCache:
-    def __init__(self, capacity):
-        self.cache = LinkedList()
-        self.d = {}
-        self.capacity = capacity
+    def simulate(self,nSteps):
+
+        def drawFrom(probs):
+            return np.where(np.random.multinomial(1,probs) == 1)[0][0]
+
+        observations = np.zeros(nSteps)
+        states = np.zeros(nSteps)
+        states[0] = drawFrom(self.pi)
+        observations[0] = drawFrom(self.B[states[0],:])
+        for t in range(1,nSteps):
+            states[t] = drawFrom(self.A[states[t-1],:])
+            observations[t] = drawFrom(self.B[states[t],:])
+        return observations,states
+
+
+    def train(self,observations,criterion,graphics=False):
+        if graphics:
+            plt.ion()
+
+        nStates = self.A.shape[0]
+        nSamples = len(observations)
+
+        A = self.A
+        B = self.B
+        pi = copy(self.pi)
         
-    def _insert(self, key, val):
-        node = ListNode(key, val)
-        self.cache.insert(node)
-        self.d[key] = node
+        done = False
+        while not done:
 
-    def get(self, key):
-        if key in self.d:
-            val = self.d[key].val
-            self.cache.delete(self.d[key])
-            self._insert(key, val)
-            return val
-        return -1
+            # alpha_t(i) = P(O_1 O_2 ... O_t, q_t = S_i | hmm)
+            # Initialize alpha
+            alpha = np.zeros((nStates,nSamples))
+            c = np.zeros(nSamples) #scale factors
+            alpha[:,0] = pi.T * self.B[:,observations[0]]
+            c[0] = 1.0/np.sum(alpha[:,0])
+            alpha[:,0] = c[0] * alpha[:,0]
+            # Update alpha for each observation step
+            for t in range(1,nSamples):
+                alpha[:,t] = np.dot(alpha[:,t-1].T, self.A).T * self.B[:,observations[t]]
+                c[t] = 1.0/np.sum(alpha[:,t])
+                alpha[:,t] = c[t] * alpha[:,t]
 
-    def set(self, key, val):
-        if key in self.d:
-            self.cache.delete(self.d[key])
-        elif len(self.d) == self.capacity:
-            del self.d[self.cache.head.key]
-            self.cache.delete(self.cache.head)
-        self._insert(key, val)
+            # beta_t(i) = P(O_t+1 O_t+2 ... O_T | q_t = S_i , hmm)
+            # Initialize beta
+            beta = np.zeros((nStates,nSamples))
+            beta[:,nSamples-1] = 1
+            beta[:,nSamples-1] = c[nSamples-1] * beta[:,nSamples-1]
+            # Update beta backwards from end of sequence
+            for t in range(len(observations)-1,0,-1):
+                beta[:,t-1] = np.dot(self.A, (self.B[:,observations[t]] * beta[:,t]))
+                beta[:,t-1] = c[t-1] * beta[:,t-1]
+
+            xi = np.zeros((nStates,nStates,nSamples-1));
+            for t in range(nSamples-1):
+                denom = np.dot(np.dot(alpha[:,t].T, self.A) * self.B[:,observations[t+1]].T,
+                               beta[:,t+1])
+                for i in range(nStates):
+                    numer = alpha[i,t] * self.A[i,:] * self.B[:,observations[t+1]].T * \
+                            beta[:,t+1].T
+                    xi[i,:,t] = numer / denom
+  
+            # gamma_t(i) = P(q_t = S_i | O, hmm)
+            gamma = np.squeeze(np.sum(xi,axis=1))
+            # Need final gamma element for new B
+            prod =  (alpha[:,nSamples-1] * beta[:,nSamples-1]).reshape((-1,1))
+            gamma = np.hstack((gamma,  prod / np.sum(prod))) #append one more to gamma!!!
+
+            newpi = gamma[:,0]
+            newA = np.sum(xi,2) / np.sum(gamma[:,:-1],axis=1).reshape((-1,1))
+            newB = copy(B)
+
+            if graphics:
+                plt.subplot(2,1,1)
+                plt.cla()
+                #plt.plot(gamma.T)
+                plt.plot(gamma[1])
+                plt.ylim(-0.1,1.1)
+                plt.legend(('Probability State=1'))
+                plt.xlabel('Time')
+                plt.draw()
+            
+            numLevels = self.B.shape[1]
+            sumgamma = np.sum(gamma,axis=1)
+            for lev in range(numLevels):
+                mask = observations == lev
+                newB[:,lev] = np.sum(gamma[:,mask],axis=1) / sumgamma
+
+            if np.max(abs(pi - newpi)) < criterion and \
+                   np.max(abs(A - newA)) < criterion and \
+                   np.max(abs(B - newB)) < criterion:
+                done = 1;
+  
+            A[:],B[:],pi[:] = newA,newB,newpi
+
+        self.A[:] = newA
+        self.B[:] = newB
+        self.pi[:] = newpi
+        self.gamma = gamma
+        
+
+if __name__ == '__main__':
+    np.set_printoptions(precision=3,suppress=True)
+    if True:
+        #'Two states, three possible observations in a state'
+        q = 0.7
+        hmm = HMM()
+        hmm.pi = np.array([0.2, 0.8])
+        hmm.A = np.array([[0.8, 0.2],
+                          [0.2, 0.8]])
+        hmm.B = np.array([[q, 1-q],
+                          [1-q, q]])
+
+        hmmguess = HMM()
+        hmmguess.pi = np.array([0.5, 0.5])
+        hmmguess.A = np.array([[0.5, 0.5],
+                               [0.5, 0.5]])
+        hmmguess.B = np.array([[0.3, 0.3, 0.4],
+                               [0.2, 0.5, 0.3]])
+    else:
+        #three states
+        print "Error....this example with three states is not working correctly."
+        hmm = HMM()
+        hmm.pi = np.array([0.1, 0.4, 0.5])
+        hmm.A = np.array([[0.7, 0.2, 0.1],
+                          [0.1, 0.6, 0.3],
+                          [0.4, 0.2, 0.4]])
+        hmm.B = np.array([[0.5, 0.3, 0.2],
+                          [0.1, 0.6, 0.3],
+                          [0.0, 0.3, 0.7]])
+        hmmguess = HMM()
+        hmmguess.pi = np.array([0.333, 0.333, 0.333])
+        hmmguess.A = np.array([[0.3333, 0.3333, 0.3333],
+                               [0.3333, 0.3333, 0.3333],
+                               [0.3333, 0.3333, 0.3333]])
+        hmmguess.B = np.array([[0.3, 0.3, 0.4],
+                               [0.2, 0.5, 0.3],
+                               [0.3, 0.3, 0.4]])
+
+    o,s = hmm.simulate(1000)
+    hmmguess.train(o,0.0001,graphics=True)
+
+    print 'Actual probabilities\n',hmm.pi
+    print 'Estimated initial probabilities\n',hmmguess.pi
+
+    print 'Actual state transition probabililities\n',hmm.A
+    print 'Estimated state transition probabililities\n',hmmguess.A
+
+    print 'Actual observation probabililities\n',hmm.B
+    print 'Estimated observation probabililities\n',hmmguess.B
+
+    plt.subplot(2,1,2)
+    plt.cla()
+    plt.plot(np.vstack((s*0.9+0.05,hmmguess.gamma[1,:])).T,'-o',alpha=0.7)
+    plt.legend(('True State','Guessed Probability of State=1'))
+    plt.ylim(-0.1,1.1)
+    plt.xlabel('Time')
+    plt.draw()
 
 
 
 
-
-        self.printList()
-
-        print self.d.keys()
-
-    def printList(self):
-        node = self.cache.head
-        s = ''
-        while node:
-            s+=str( node.key)+' '
-            node = node.next
-        print s
-a = LRUCache(4)
-a.set(2, 5)
-
-a.set(10,13);a.set(3,17);a.set(6,11);a.set(10,5);a.set(9,10);a.get(13);a.set(2,19);a.get(2);a.get(3);
-a.set(5,25);a.get(8);a.set(9,22);a.set(5,5);a.set(1,30);
-a.get(7);a.get(5);a.get(8);a.get(9);a.set(4,30);a.set(9,3);a.get(9);a.get(10);a.get(10);a.set(6,14);a.set(3,1);a.get(3);a.set(10,11);a.get(8);a.set(2,14);a.get(1);a.get(5);a.get(4);a.set(11,4);a.set(12,24);a.set(5,18);a.get(13);a.set(7,23);a.get(8);a.get(12);a.set(3,27);a.set(2,12);a.get(5);a.set(2,9);a.set(13,4);a.set(8,18);a.set(1,7);a.get(6);a.set(9,29);a.set(8,21);a.get(5);a.set(6,30);a.set(1,12);a.get(10);a.set(4,15);a.set(7,22);a.set(11,26);a.set(8,17);a.set(9,29);a.get(5);a.set(3,4);a.set(11,30);a.get(12);a.set(4,29);a.get(3);a.get(9);a.get(6);a.set(3,4);a.get(1);a.get(10);a.set(3,29);a.set(10,28);a.set(1,20);a.set(11,13);a.get(3);a.set(3,12);a.set(3,8);a.set(10,9);a.set(3,26);a.get(8);a.get(7);a.get(5);a.set(13,17);a.set(2,27);a.set(11,15);a.get(12);a.set(9,19);a.set(2,15);a.set(3,16);a.get(1);a.set(12,17);a.set(9,1);a.set(6,19);a.get(4);a.get(5);a.get(5);a.set(8,1);a.set(11,7);a.set(5,2);a.set(9,28);a.get(1);a.set(2,2);a.set(7,4);a.set(4,22);a.set(7,24);a.set(9,26);a.set(13,28);a.set(11,26)

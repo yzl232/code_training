@@ -38,3 +38,18 @@ X – Y = 2
 找repeat,  missing，  1~n范围可以求和
 
 '''
+
+
+'''
+方法2： Use array elements as index
+在  Check if array elements are consecutive  也有出现
+
+不适合负数。 适合发现repeat  。  而且可以发现任何repeat
+#leetcode是find first missing positive  也就是说，找missing 。 没范围。 有负数
+'''
+class Solution:
+    def findRep(self, arr):
+        for i in range(len(arr)):
+            tmp = abs(arr[i])  #就是利用负号。 增加了信息
+            if arr[tmp]>0:  arr[tmp] = -arr[tmp]
+            else:  print tmp

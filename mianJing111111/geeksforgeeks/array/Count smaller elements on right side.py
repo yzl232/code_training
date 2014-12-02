@@ -1,5 +1,7 @@
 # encoding=utf-8
 '''
+看看就好
+
 
 Count smaller elements on right side
 
@@ -28,5 +30,8 @@ Output:  countSmaller[]  =  {0, 0, 0, 0, 0}
 
 暴力法：O(n2)
 BST: O(nlogn)
+
+A Self Balancing Binary Search Tree (AVL, Red Black,.. etc) can be used to get the solution in O(nLogn) time complexity. We can augment these trees so that every node N contains size the subtree rooted with N
+
 从后往前走，每次插入bst
 '''

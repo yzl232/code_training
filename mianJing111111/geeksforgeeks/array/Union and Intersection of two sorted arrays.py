@@ -38,10 +38,13 @@ class Solution:
                 result.append(arr2[j])
                 j+=1
             else:
-                result.append(arr1[i])   #只要i+=1就可以打破平衡了。 够了。
-                i+=1
+                result.append(arr1[i])   #union   只要i+=1就可以打破平衡了。 够了。
+                i+=1     #union肯定是每次i+1, 或者j+1。不能同时
+        result+=arr1[i:]
+        result+=arr2[j:]
         return result
 
+#要去重复的话，每次append之前加一句if i>0 and result[-1]!=arr1[i]
     def printIntersection(self, arr1, arr2):
         i=j=0; result = []
         m = len(arr1);  n = len(arr2)
@@ -49,5 +52,10 @@ class Solution:
             if arr1[i] < arr2[j]:  i+=1
             elif arr1[i]> arr2[j]: j+=1
             else:
-                result.append([arr1[i]])   #只要i+=1就可以打破平衡了。 够了。
+                result.append([arr1[i]])   #intersection, i j 都要+1.
                 i+=1
+                j+=1
+        return result
+s = Solution()
+print s.printIntersection([1, 2, 2, 4], [2, 2,  5, 8])
+print s.printUnion([1, 2, 2, 4], [2, 2, 5, 8])

@@ -45,11 +45,15 @@ print s.findCycle( [[1, 2], [1, 3], [4, 1], [3, 2], [3, 4], [2, 6], [4, 6], [8, 
 
 
 #每个数是一个vertex.每个数组是一个edge。 用一堆edge就可以表示一个directed graphs了。
+
 '''
 neigbours
 
 #find all cycles就用edge的方法做
 其他都用二元做。
+
+
+DFS的做法。  有向
 '''
 
 
@@ -64,7 +68,7 @@ class Solution3:
     def dfs(self, tmpPath, node, visited):  #visited传进去。 这是一个特别的地方。
         visited[node]=1
         for n in node.candidates:
-                if n in visited and tmpPath[-2] != n:  #因为长度必须大于2
+                if n in visited:
                     return True
                 self.dfs(tmpPath+[n], n, visited)
         return False

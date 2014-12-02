@@ -31,12 +31,10 @@ class Solution:
         l =0;  h=len(arr)-1
         while l<=h:
             if l==h: return arr[l]
-            if h==l+1:
-                if arr[l]>=arr[h]: return arr[l]
-                if arr[l]< arr[h]: return arr[h]
+            if h==l+1:  return max(arr[l], arr[h])    #主要是解除了m-1, m+1超过了边界的情况
             m = (l+h)/2
             if arr[m]>arr[m-1] and arr[m]>arr[m+1]: return arr[m]  #主要的比较部分涉及三个数。  所以之前考虑特殊的只有2个数情况
-            elif arr[m-1]>arr[m]>arr[m+1]: #递减部分
+            elif arr[m-1]>arr[m]>arr[m+1]: #递减部分,最大在左边
                 h = m-1
             else: l = m+1 #递增部分
         return arr[-1]

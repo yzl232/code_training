@@ -85,6 +85,7 @@ class Solution2:
 
 '''
 实现 readline，假设提供read4k可以读取4k个字符
+还是建议写好class variable版本的
 '''
 
 class Solution:
@@ -95,7 +96,7 @@ class Solution:
         pass
 
 #buf 保存读得结果
-    def read(self, buf):
+    def readline(self, buf):
         tmpBuffer = [None for i in range(4096)]
         count = 0; tmpN = 4096; flag = True
         while flag:#tmp的作用就是判断是不是4096。

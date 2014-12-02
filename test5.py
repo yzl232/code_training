@@ -1,11 +1,3 @@
-class Solution:
-    # @param A, a list of integers
-    # @return an integer
-    def maxProduct(self, A):
-        result = maxN = minN = A[0]
-        for i in range(1, len(A)):
-            a = maxN; b = minN
-            maxN = max(b * A[i], a * A[i], A[i])
-            minN = min(b * A[i], a * A[i], A[i])
-            result = max(result, maxN)
-        return result
+q = 0.7  #  good 0 , bad 1        y=+1  0 .  y=-1.  1
+h =  ([0.2, 0.8], [0.8, 0.2, 0.2, 0.8], [q, 1-q, 1-q, q])
+

@@ -1,10 +1,26 @@
 # encoding=utf-8
 '''
+
+implement a method called printNonComments() which prints out a extract of text with comments removed.
+
+For example, the input:
+
+hello /* this is a
+multi line comment */ all
+
+Should produce:
+
+hello
+all
+
+You have access to a method called getNextLine() which returns the next line in the input string.
+
 remove comments
 
 /* xxxxx*/
 
 '''
+#面经出现了2次！！！
 class Solution:
     def remove_Comments(self, s):
         isCommenting = False

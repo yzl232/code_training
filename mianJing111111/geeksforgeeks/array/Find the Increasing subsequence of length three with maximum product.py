@@ -99,21 +99,17 @@ Solution:
 3) Finally traverse both smaller[] and greater[] and find the index i for which both smaller[i] and greater[i] are not -1.
 '''
 
-class Solution:
+class Solution6:
     def find3(self, arr):
-        n = len(arr)
-        small = [None for i in range(n)]
-        big = [None for i in range(n)]
-        minN = arr[0]
+        n =len(arr)
+        lMin = [None for i in range(n)]
+        rMax = lMin[:]
+        lMin[0]=arr[0];  rMax[-1]=arr[-1]
         for i in range(1, n):
-            if minN<arr[i]:   small[i] = minN
-            minN = min(arr[i], minN)
-        print small
-        maxN = arr[-1]
+            lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
         for i in range(n-2, -1, -1):
-            if maxN>arr[i]:   big[i] = maxN
-            maxN = max(maxN, arr[i])
+            rMax[i] = max(rMax[i+1], arr[i])
         for i in range(n):
-            if small[i] and big[i]:  print small[i], arr[i], big[i]
-s = Solution()
+            if lMin[i]!=arr[i] and rMax[i]!=arr[i]:  print lMin[i], arr[i], rMax[i]
+s = Solution6()
 print s.find3([12, 11, 10, 5, 6, 2, 30])

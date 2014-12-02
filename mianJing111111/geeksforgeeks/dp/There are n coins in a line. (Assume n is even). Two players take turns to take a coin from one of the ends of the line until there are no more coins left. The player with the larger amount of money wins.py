@@ -35,6 +35,9 @@ P(i, j) = max { P1, P2 }
                 Aj + min { P(i+1, j-1), P(i,   j-2) } }
 
                 对付游戏minimax是比较常用的思路
+
+
+http://www.geeksforgeeks.org/dynamic-programming-set-31-optimal-strategy-for-a-game/也有，
 '''
 
 class Solution:

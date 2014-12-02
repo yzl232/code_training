@@ -1,7 +1,7 @@
 # encoding=utf-8
 '''
 
-
+Check if a given string is a rotation of a palindrome
 
 
 
@@ -15,3 +15,7 @@ s = S1+S2
 check if
 
 '''
+class Solution:
+    def isRotate(self, s1, s2):
+        return s2 in (s1+s1)
+    pass

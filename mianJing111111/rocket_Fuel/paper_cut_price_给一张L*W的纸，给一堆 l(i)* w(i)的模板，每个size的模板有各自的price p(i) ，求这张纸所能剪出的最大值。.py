@@ -57,3 +57,24 @@ prices[k] + dp[i-pieceW][j] + dp[pieceW][j-pieceH]
  prices[k] +dp[i][j-pieceH] + dp[i-pieceW][pieceH]
 
 '''
+
+
+'''
+一面墙dimension: m*n, 家里有各种尺寸的照片，设计一个算法贴最多照片。
+
+Google也有此类题目
+
+'''
+
+class Solution:
+    def cutProfit(self, l, w, pieces):
+        n = len(pieces)
+        dp = [[0 for i in range(w+1)] for j in range(l+1)]
+        for i in range(l):
+            for j in range(w):
+                for k in range(1, n):
+                    pieceW = pieces[k][0];   pieceH = pieces[k][1]
+                    if i>=pieceW and j>=pieceH:
+
+                        dp[i][j] = max(dp[i][j],  1 + dp[i-pieceW][j] + dp[pieceW][j-pieceH], 1 +dp[i][j-pieceH] + dp[i-pieceW][pieceH])
+        return dp[-1][-1]

@@ -17,6 +17,7 @@ Total cost for connecting all ropes is 5 + 9 + 15 = 29. This is the optimized co
 
 Time complexity of the algorithm is O(nLogn) assuming that we use a O(nLogn) sorting algorithm. Note that heap operations like insert and extract take O(Logn) time.
 
+这道题目做法是用了Greedy Algorithm
 '''
 import heapq
 class Solution:

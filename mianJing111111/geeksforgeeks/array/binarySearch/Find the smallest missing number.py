@@ -20,7 +20,8 @@ Output: 8
 
 这道题的关键在于与本身的比较。
 '''
-
+#leetcode不是sorted, leetcode没有范围
+#sorted 用binary search
 class Solution:
     def findFirstMissing(self,  arr):
         l =0;  h = len(arr)-1

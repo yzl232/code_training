@@ -18,7 +18,7 @@ print quickSort(L)
 def quickSelect(a, k):
     pivot = random.choice(a)
     small = [i for i in a if i<pivot]
-    middle = [i for i in a if i==pivot]
+    middle = [i for i in a if i==pivot]     #写一下O(1)的partition写法。 这种效率略低。
     big = [i for i in a if i>pivot]
     s = len(small)
     m = len(middle)
@@ -28,5 +28,3 @@ def quickSelect(a, k):
         return quickSelect(small, k)
     else:
         return quickSelect(big, k-m-s)
-
-print quickSelect(L, 4)

@@ -10,54 +10,70 @@ Find the distance between two keys in a binary tree, no parent pointers are give
 'lca' is lowest common ancestor of n1 and n2
 Dist(n1, n2) is the distance between n1 and n2.
 
-geeks是正确的。 只是自己理解不够正确。
 
-        1
-    2      3
- 4    5
 
-要验证。只要跑简单的例子就好
+
+geeks的答案过于复杂了。 害死我了。
+只要找到n1与lca的距离，  n2与lca的距离，  然后相加就可以了。  真二。
+
+
+1)first find LCA of n1 and n2.
+
+2)a=find distance of n1 from lca.
+
+3)b=find distance of n2 from lca.
+
+4) return a+b;
 
 '''
-
-class SolutionRecursin:
-    def findAncestor(self, root, p, q, lvl):
+class Solution:
+    def findAncestor(self, root, p, q):
         if not root: return
-        if root == p :
-            self.d1 = lvl  #Dist(root, n1)   d1的意思。
-            return root
-        elif root ==q:
-            self.d2 = lvl
-            return root
-        l = self.findAncestor(root.left, p, q, lvl+1)
-        r = self.findAncestor(root.right, p, q, lvl+1)
-        if l and r:
-            self.distance = self.d1+self.d2-2*lvl
-            return root  #2个都找到。在root.    分布在root左右两边
+        if root == p or root == q: return root
+        l = self.findAncestor(root.left, p, q)
+        r = self.findAncestor(root.right, p, q)
+        if l and r: return root  #2个都找到。在root
         if l: return l  #找到一个。在左边
         else: return r  #找到一个。在右边
 
-    def findLevel(self, root, level): #找一个子节点到root得距离
-        if not root: return -1
-        if root == self.node: return level
-        d = self.findLevel(root.left, level+1)
-        if d==-1:
-            d = self.findLevel(root.right,  level+1)
-        return d
+    def findShortestPath(self, root, a, b):
+        self.path = []
+        lca = self.findAncestor(root, a,b)
+        self.a = a; self.b = b
+        self.shortestPath(lca, [])
+        path1 = self.path[0][::-1] #逆转一下path
+        path2 = self.path[1][1:]   #多了一个root
+        return path1+path2
 
-    def findDistance(self, root, n1, n2, level):
-        self.d1 = self.d2 =self.distance = -1
-        lca = self.findDistance(root, n1, n2, 0)
-        if lca!=n1 and lca != n2: return self.distance
-        if lca==n1:    #  If n1 is ancestor of n2, consider n1 as root and find level of n2 in subtree rooted with n1...     n2 没有更新。 是子节点。
-            self.node = n2    #
-            return  self.findLevel(n1, 0)
-        if lca==n2:
-            self.node = n1
-            return self.findLevel(n2, 0)
-'''
-也就是三种情况  。
-n1是N2的父节点。  这样子。找ancestor的时候，直接无视了N2
-N2是n1的父节点。
-普通情况。 这时候，某个递归里边。 已经update了 self.distance
-'''
+    def shortestPath(self, root, tmpPath):
+        if not root: return
+        if root.val == self.a.val or root.val == self.b.val:
+            self.path.append(tmpPath+[root.val])
+            return
+        self.shortestPath(root.left,tmpPath+[root.val])
+        self.shortestPath(root.right,tmpPath+[root.val])
+
+#如果只是求距离
+
+class Solution5:
+    def findAncestor(self, root, p, q):
+        if not root: return
+        if root == p or root == q: return root
+        l = self.findAncestor(root.left, p, q)
+        r = self.findAncestor(root.right, p, q)
+        if l and r: return root  #2个都找到。在root
+        if l: return l  #找到一个。在左边
+        else: return r  #找到一个。在右边
+
+    def findLevel(self, root, node, level): #找一个子节点到root得距离
+        if not root: return -1  #没找到，就是-1
+        if root == node: return level
+        d = self.findLevel(root.left, level+1)
+        if d !=-1: return d
+        return self.findLevel(root.right,  level+1)
+
+    def findDistance(self, root, n1, n2):
+        lca = self.findAncestor(root, n1, n2)
+        d1 = self.findLevel(lca, n1, 0)
+        d2 = self.findLevel(lca, n2, 0)
+        return d1+d2

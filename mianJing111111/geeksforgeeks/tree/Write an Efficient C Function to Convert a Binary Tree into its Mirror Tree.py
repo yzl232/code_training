@@ -23,5 +23,5 @@ class Solution:
         if not root:
             return
         self.mirror(root.left)
-        self.mirror(root.right) #先recursion  子树以后，再交换。
+        self.mirror(root.right) #先recursion  子树以后，再弄父节点。
         root.left, root.right =  root.right, root.left

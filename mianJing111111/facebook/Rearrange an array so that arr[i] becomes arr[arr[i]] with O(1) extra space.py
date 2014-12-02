@@ -36,6 +36,7 @@ by doing arr[i] = arr[i]/n.
 After second step, array becomes {1, 0, 3, 2}
 
 
+每个数包含2个信息： a[i]/n,  a[i]%n
 '''
 
 class Solution:

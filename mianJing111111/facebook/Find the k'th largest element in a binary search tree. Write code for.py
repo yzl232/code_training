@@ -31,7 +31,11 @@ class Solution:
         if right: return right       #在右边。
         count+=1  #弄完一个右边子树。count +1。  看root是不是。    #每次在root 加1就好。 root代表一个节点。
         if count==self.k: return root
-        self.dfs(root.left,  count)
+        return self.dfs(root.left,  count)
+'''
+跟findlevel有点像。 设置flag.  if left,  return left
+'''
+
 
 #这就是反向的traversal嘛。。。。right, root, left
 # kth smallest number
@@ -47,4 +51,4 @@ class Solution2:
         if left: return left
         count+=1
         if count==self.k:   return root
-        self.dfs(root.right, count)
+        return self.dfs(root.right, count)

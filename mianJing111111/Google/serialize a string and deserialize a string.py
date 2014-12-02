@@ -36,6 +36,8 @@ class Solution:
             result.append(content[:size[i]])
             content = content[size[i]:]
         return result
+
+
 s = Solution()
 tmp =  s.serizlize(["abc%c de", "a#aa", "haha"])
 print tmp

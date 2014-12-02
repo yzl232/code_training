@@ -25,7 +25,7 @@ class Solution:
         for edge in graph:
             candidates = graph[:] #注意冒号。 更新candidates
             candidates.remove(edge) #注意remove不返回值的。
-            self.dfs(edge[:], candidates)
+            self.dfs(list(edge), candidates)
         return self.results
 
 #[1, 2],  [2, 8],  [1,  8]
@@ -51,3 +51,30 @@ print s.findCycle( [[1, 2], [1, 3], [1, 4], [2, 3], [3, 4], [2, 6], [4, 6], [8, 
 #每个数是一个vertex.每个数组是一个edge。 用一堆edge就可以表示一个directed graphs了。
 
 
+'''
+neigbours
+
+#find all cycles就用edge的方法做
+其他都用二元做。
+
+
+DFS的做法。  无向
+'''
+
+
+
+class Solution3:
+    def paths(self, nodes):
+        for n in nodes:
+            if self.dfs([n], n, {}):
+                return True
+        return False
+
+    def dfs(self, tmpPath, node, visited):  #visited传进去。 这是一个特别的地方。
+        visited[node]=1
+        for n in node.candidates:
+                if n==tmpPath[-2]: continue  #因为长度必须大于2.  这是与有向图的唯一区别
+                if n in visited:
+                    return True
+                self.dfs(tmpPath+[n], n, visited)
+        return False
