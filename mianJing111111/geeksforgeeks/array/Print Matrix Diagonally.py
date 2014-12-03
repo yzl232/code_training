@@ -46,3 +46,22 @@ matrix = [[1, 2, 3, 4],
 s = Solution()
 ret =  s.diag(matrix)
 for l in ret: print l
+
+
+'''
+    输入一个矩阵，从右上角开始按照斜对角线打印矩阵的值，如矩阵为：
+
+1, 2,  3,  4
+5, 6,  7,  8
+9, 10, 11, 12
+13,14, 15, 16
+
+    输出：
+
+4, 3, 8, 2, 7, 12, 1, 6, 11, 16, 5, 10, 15, 9, 14, 13
+
+如果碰到这种情况。 就直接说，
+I feel It will be easier if we print from the left.
+
+I can do it from the left and then modify the approach a little bit to finish the problem
+'''

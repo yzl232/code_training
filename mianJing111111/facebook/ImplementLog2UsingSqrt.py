@@ -12,8 +12,9 @@ import math
 
 class Solution:
     def log2(self, val):
+        if 0<1<val: return -self.log2(1.0/val)
         hx = 0
-        while (1<<hx) < val:
+        while (2**hx) < val:
             hx+=1
         lx = hx-1  #如果是求整数， 已经求得结果了。
         accuracy = 0.00001

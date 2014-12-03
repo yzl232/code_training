@@ -30,7 +30,6 @@ class Solution:
         while cur !=tail:
             if cur.child:  #每次碰到child, flat，并且更新tail
                 tail.next = cur.child
-                tmp = cur.child
-                while tmp.next: tmp = tmp.next
-                tail = tmp
+                tail = cur.child
+                while tail.next: tail = tail.next  #重复了
             cur = cur.next

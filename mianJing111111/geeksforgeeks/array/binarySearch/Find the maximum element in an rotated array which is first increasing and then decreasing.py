@@ -25,13 +25,19 @@ rotate没有递减。
 
 2345671
 67123456
+
+
+#if h==l+1:  return max(arr[l], arr[h])    #主要是解除了m-1, m+1超过了边界的情况
+
+#binary search的题目就是要举例子，来判断if  else
+
 '''
 class Solution:
     def findMax(self, arr):
         l =0;  h=len(arr)-1
         while l<=h:
-            if l==h: return arr[l]
-            if h==l+1:  return max(arr[l], arr[h])    #主要是解除了m-1, m+1超过了边界的情况
+            if l==h: return arr[l]  #边界到这里就好
+            if h==l+1:  return max(arr[l], arr[h])  #主要是解除了m-1, m+1超过了边界的情况
             m = (l+h)/2
             if arr[m]>arr[m-1] and arr[m]>arr[m+1]: return arr[m]  #主要的比较部分涉及三个数。  所以之前考虑特殊的只有2个数情况
             elif arr[m-1]>arr[m]>arr[m+1]: #递减部分,最大在左边
@@ -40,6 +46,7 @@ class Solution:
         return arr[-1]
 
 s = Solution()
-print s.findMax([7 , 2, 1])
-
+print s.findMax([1, 5 , 7, 14 , 2, 1])
+print s.findMax([1, 3, 4, 7, 9])
+print s.findMax([7, 4, 2])
 

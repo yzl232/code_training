@@ -34,14 +34,17 @@ Thanks to pchild for suggesting following approach.
 class Solution:
     def nge(self, arr):
         if not arr: return
-        stack = [arr[0]];  result = []
+        stack = [arr[0]];  result = [];  d={}  #顺序是乱得。 用hashmap可以保存好顺序。
         for i in range(1, len(arr)):
             cur = arr[i]
-            while stack and stack[-1]<cur:
-                result.append(cur)
-                stack.pop()
+            while stack and stack[-1]<cur: #发现了一个比之前都要大，不断pop
+                d[stack.pop()]=cur  #pop出来的都是
             stack.append(cur)
-        return result+[None]*len(stack)
+        for i in arr:
+            if i in d: result.append(d[i])
+            else: result.append(None)  #没在hashmap的就是没有更大
+        return result
 s = Solution()
 print s.nge([4, 5, 2, 2, 25])
 print s.nge([11, 13, 21, 3])
+print s.nge([ 9, 2, 1, 4, 8])

@@ -62,11 +62,11 @@ class Solution:
     def findNumConference(self, intervals):
         timeS = [];  count = 0; result = 0
         for i in intervals:
-            timeS.append((i[0], 'start'))
-            timeS.append((i[1], 'end'))
+            timeS.append((i[0], 1))
+            timeS.append((i[1], -1))
         timeS.sort()
         for i in timeS:
-            if i[-1]=='start': count+=1
+            if i[-1]==1: count+=1
             else:   count-=1
             result = max(result, count)
         return result
@@ -97,3 +97,64 @@ a meeting (as in int),
 第二题就按pair.first sort一下 然后从头扫到尾 如果 arr[i+1][2]<arr[i+1][2]
 
 '''
+
+
+
+
+
+'''
+刚听别人说的，转过来，代码好细致：
+
+Given a collection of user login logs, print all intervals at which there is a change in the total # of users online.
+
+Class Log:
+
+int login_time
+int logout_time
+
+
+user 1:
+login_time: 0
+logout_time: 1
+
+user 2:
+login_time: 1
+logout_time: 3
+
+user 3:
+login_time: 0
+logout_time: 2
+
+
+Output:
+so print
+
+0-2  2 users online
+2-3 1 user online
+3 - infinity 0 user online
+
+
+
+
+'''
+
+class Solution:
+    def findNumConference(self, intervals):
+        timeS = [];  count = 0; result = 0
+        for i in intervals:
+            timeS.append((i[0], 1))
+            timeS.append((i[1], -1))
+        timeS.sort()
+        now = 0
+        while i<len(timeS) and timeS[i][0]==0: #因为0增加，不用打印。 所以无所谓
+            count+= 1 if timeS[-1]==1 else -1 #猛加
+        while i<len(timeS):
+            old = count
+            j =i
+            while i<len(timeS) and timeS[i][0]==timeS[j][0]: #碰到同一时间的特殊情况
+                count+= 1 if timeS[-1]==1 else -1
+            if count!=old: print
+
+        return result
+s = Solution()
+print s.findNumConference([(5, 10), (6, 9), (11, 17), (15, 20), (16, 25), (10, 12)  ])

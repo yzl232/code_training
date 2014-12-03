@@ -24,7 +24,7 @@ class Solution:
         while l<=h:
             m = l+(h-l)/2
             if x==arr[m]: return m
-            elif m>l and arr[m-1]==x: return m-1
-            elif m<h and arr[m+1]==x: return m+1        #每次都检查3个点
+            elif m-1>=0 and arr[m-1]==x: return m-1
+            elif m+1<len(arr) and arr[m+1]==x: return m+1        #每次都检查3个点
             elif arr[m]>x:   h =m-2   #比较赞的题目
             else:  l=m+2

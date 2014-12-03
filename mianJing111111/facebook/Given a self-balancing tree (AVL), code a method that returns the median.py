@@ -1,5 +1,32 @@
 # encoding=utf-8
 '''
+Given a self-balancing tree (AVL), code a method that returns the median.(Median: the numerical value separating the higher half of a data sample from the lower half. Example: if the series is
+
+2, 7, 4, 9, 1, 5, 8, 3, 6
+
+then the median is 5.)
+'''
+'''
+Create the data structure for a component that will receive a series of numbers over the time and, when asked, returns the median of all received elements.
+
+(Median: the numerical value separating the higher half of a data sample from the lower half. Example: if the series is
+
+2, 7, 4, 9, 1, 5, 8, 3, 6
+
+then the median is 5.)
+
+Model the data structure for a component that would have these two methods:
+
+@interface SampleHandler {
+- (void)addNumber:(NSNumber*)number;
+- (NSNumber*)median;
+}
+
+Justify your decisions. Calculate the complexity of each method.
+'''
+
+
+'''
 
 不用写代码。
 Median in a stream of integers (running integers)
@@ -22,6 +49,9 @@ Method 2: Augmented self balanced binary search tree (AVL, RB, etc…)
 At every node of BST, maintain number of elements in the subtree rooted at that node. We can use a node as root of simple binary tree, whose left child is self balancing BST with elements less than root and right child is self balancing BST with elements greater than root. The root element always holds effective median.
 
 If left and right subtrees contain same number of elements, root node holds average of left and right subtree root data. Otherwise, root contains same data as the root of subtree which is having more elements. After processing an incoming element, the left and right subtrees (BST) are differed utmost by 1.
+
+这一句很巧妙。 root==   较大的子树的root的val。   或者是平均左右子树的root
+
 
 Self balancing BST is costly in managing balancing factor of BST. However, they provide sorted data which we don’t need. We need median only. The next method make use of Heaps to trace median.
 

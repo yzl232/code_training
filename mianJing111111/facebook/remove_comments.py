@@ -19,8 +19,19 @@ remove comments
 
 /* xxxxx*/
 
+
+
+
+For single line comments parse the current line until you find '//' then ignore anything that follows it (including the double slashes).
+
+If you encounter '/*', then call nextLine() until you encounter '*/' and remove anything in between.
+
+Another thing to pay attention to is, and this is at the discretion of the interviewer, to watch out for comment characters within double quotes like "//" or "/* */", these wouldn't be considered comments and removing anything in between would be wrong.
+
+Other than the odd edge case, this problem seems to be straightforward enough. And, if you did mention those edge cases, I believe the interviewer would steer you in the correct direction.
 '''
 #面经出现了2次！！！
+
 class Solution:
     def remove_Comments(self, s):
         isCommenting = False
