@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0520e970-349b-4e5e-87ea-597afa187170" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/BST, given a min and a max, can you trim the tree so that the remaining nodes are within the range of (min, max)_Remove BST keys outside the given range.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Check for Identical BSTs without building the trees.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given a self-balancing tree (AVL), code a method that returns the median.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/ode a function that receives a string composed by words separated by spaces and returns a string where words appear in the same order but than the original string, but every word is inverted..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/找出这串数字中长度为‘k’的subsequence（不是subarray, 我专门问了，就是subsequence，不一定挨着的元素序列），使得这串subsequence的和最大.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/binarySearch/Find the maximum element in an rotated array which is first increasing and then decreasing.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/binarySearch/Find the maximum element in an rotated array which is first increasing and then decreasing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/word break how many How many spaces can we add to a word such that.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/一个组数，里面的数都是0~9，求第K小的数。 想到的是用quicksort的方法，提示有没有linear time的，想到统计0~9的frequency，再计算.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/有两个一样的树A和B，每个节点都有父指针，要求写一个 函数，参数是A的一个子节点x，和B的根节点，要求返回B中对应x的那个节点.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/有这么一个class Contact，里面有一个String的name，和一个List&lt;String&gt; 装着email address，是这个Contact有的address.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/输出count最多的连续的 字符.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/重复最多的数是3，这些3 的index分别是0 3 6，那么要求程序以相等的概率返回这3个index.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Lowest Common Ancestor in a Binary Tree.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Lowest Common Ancestor in a Binary Tree__binary search tree_bst.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find the maximum repeating number in.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find the maximum repeating number in.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array, print the Next Greater Element (NGE) for every element.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array, print the Next Greater Element (NGE) for every element.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Median in a stream of integers.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Median in a stream of integers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Print Matrix Diagonally.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Print Matrix Diagonally.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/binarySearch/Search in an almost sorted array.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/binarySearch/Search in an almost sorted array.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/biggest_Drop_寻找数列中下降最大的差值，举个例子：[2, 3, 7, 4, 6, 1, 10] 输出 (7 - 1) = 6.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/biggest_Drop_寻找数列中下降最大的差值，举个例子：[2, 3, 7, 4, 6, 1, 10] 输出 (7 - 1) = 6.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/generate Parenthesis &amp; remove minimum Number parentheses.py" afterPath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/generate Parenthesis &amp; remove minimum Number parentheses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/logn  binary search single number twice except one.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/logn  binary search single number twice except one.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/remove_comments.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/remove_comments.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Move all zeroes to end of array_minimum_swap_steps.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Move all zeroes to end of array_minimum_swap_steps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/Two very large numbers are represented using arrays. Multiply these two numbers. E.g. Two numbers 12 and 13 are represented as a=[1,2] adn b=[1,3]. The expected result is 12*13=156 i.e. c=[1,5,6].py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Two very large numbers are represented using arrays. Multiply these two numbers. E.g. Two numbers 12 and 13 are represented as a=[1,2] adn b=[1,3]. The expected result is 12*13=156 i.e. c=[1,5,6].py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/quickSort.py" afterPath="$PROJECT_DIR$/algorithms/quickSort.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py" />
     </list>
     <ignored path="code_training.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +41,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BST, given a min and a max, can you trim the tree so that the remaining nodes are within the range of (min, max)_Remove BST keys outside the given range.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/BST, given a min and a max, can you trim the tree so that the remaining nodes are within the range of (min, max)_Remove BST keys outside the given range.py">
+      <file leaf-file-name="Inorder predecessor and successor for a given key in BST.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Inorder predecessor and successor for a given key in BST.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31657356" vertical-offset="0" max-vertical-offset="537">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="629">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="给TreeNode写Iterator，使得以上代码可以in order traversal.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1411">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Maximum sum rectangle in a 2D matrix.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Maximum sum rectangle in a 2D matrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30612245" vertical-offset="396" max-vertical-offset="935">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -66,23 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find the Increasing subsequence of length three with maximum product.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i].py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Largest subarray with equal number of 0s and 1s.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find whether an array is subset of another array.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Leaders in an array.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Linked List vs Array.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Maximum difference between two elements such that larger element appears after the smaller number.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Maximum Length Bitonic Subarray.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Common Subsequence__increasing Subsequence_  substring.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Maximum Length Chain of Pairs.py" />
-        <option value="$PROJECT_DIR$/algorithms/heap.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Maximum of all subarrays of size k.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Maximum sum rectangle in a 2D matrix.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Maximum sum such that no two elements are adjacent.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Maximum sum such that no two elements are adjacent.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Minimum Number of Platforms Required for a Railway Bus Station.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Pancake sorting.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Remove minimum elements from either side such that 2*min becomes more than max.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/reverseArray_ Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Sort an array according to the order defined by another array.py" />
@@ -111,17 +112,34 @@
         <option value="$PROJECT_DIR$/mianJing111111/rocket_Fuel/generate Parenthesis &amp; remove minimum Number parentheses.py" />
         <option value="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" />
         <option value="$PROJECT_DIR$/mianJing111111/facebook/找出这串数字中长度为‘k’的subsequence（不是subarray, 我专门问了，就是subsequence，不一定挨着的元素序列），使得这串subsequence的和最大.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/BST, given a min and a max, can you trim the tree so that the remaining nodes are within the range of (min, max).py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/BST, given a min and a max, can you trim the tree so that the remaining nodes are within the range of (min, max)_Remove BST keys outside the given range.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array, print the Next Greater Element (NGE) for every element.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Check for Identical BSTs without building the trees.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/一个组数，里面的数都是0~9，求第K小的数。 想到的是用quicksort的方法，提示有没有linear time的，想到统计0~9的frequency，再计算.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/Multiply Strings.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Two very large numbers are represented using arrays. Multiply these two numbers. E.g. Two numbers 12 and 13 are represented as a=[1,2] adn b=[1,3]. The expected result is 12*13=156 i.e. c=[1,5,6].py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/有这么一个class Contact，里面有一个String的name，和一个List&lt;String&gt; 装着email address，是这个Contact有的address.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/Simplify Path.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/有两个一样的树A和B，每个节点都有父指针，要求写一个 函数，参数是A的一个子节点x，和B的根节点，要求返回B中对应x的那个节点.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find the maximum repeating number in.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py" />
+        <option value="$PROJECT_DIR$/algorithms/quickSort.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Move all zeroes to end of array_minimum_swap_steps.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/重复最多的数是3，这些3 的index分别是0 3 6，那么要求程序以相等的概率返回这3个index.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/Word Break.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/word break how many How many spaces can we add to a word such that.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/输出count最多的连续的 字符.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="453" />
+    <option name="x" value="406" />
     <option name="y" value="23" />
     <option name="width" value="951" />
     <option name="height" value="841" />
@@ -220,7 +238,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tree" />
+              <option name="myItemId" value="random" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,7 +271,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="bst&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/tree/Check for Identical BSTs without building the trees.py&#10; Leaders in an array &#9;null&#9;null&#10;next gre&#9;null&#9;null&#10;confere&#9;null&#9;null&#10;Sum Increasing Subsequence&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Maximum Sum Increasing Subsequence Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array such that the intgers in the subsequence are sorted in increasing order.py&#10;longest &#9;null&#9;null&#10;max  subsequence&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Maximum Sum Increasing Subsequence Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array such that the intgers in the subsequence are sorted in increasing order.py&#10;log2&#9;null&#9;null&#10;path&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/Print Matrix Diagonally.py&#10;parenth&#9;null&#9;null&#10;parenthe&#9;null&#9;null&#10;diago&#9;null&#9;null&#10;flatten&#9;null&#9;null&#10;drop&#9;null&#9;null&#10;increasing&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/binarySearch/Find the maximum element in an rotated array which is first increasing and then decreasing.py&#10;single num&#9;null&#9;null&#10;ancest&#9;null&#9;null&#10;random&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py&#10;reverse&#9;null&#9;null&#10;median&#9;null&#9;null&#10;comment&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/remove_comments.py&#10;dict word   &#9;null&#9;null&#10;dict&#9;null&#9;null&#10;square&#9;null&#9;null&#10;3sum&#9;null&#9;null&#10;sqrt&#9;null&#9;null&#10;circle&#9;null&#9;null&#10;vertical&#9;null&#9;null&#10;triplet&#9;null&#9;null&#10;first in&#9;null&#9;null&#10;seri&#9;null&#9;null&#10;read&#9;null&#9;null&#10;two sum&#9;null&#9;null&#10;almost&#9;null&#9;null&#10;confer&#9;null&#9;null&#10;heap&#9;null&#9;null&#10;queue&#9;null&#9;null&#10;longest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Longest Common Subsequence__increasing Subsequence_  substring.py&#10;bitonic&#9;null&#9;null&#10;cumu&#9;null&#9;null&#10;three&#9;null&#9;null&#10;odd&#9;null&#9;null&#10;major&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/binarySearch/Check for Majority Element in a sorted array.py&#10;one edit&#9;null&#9;null&#10;closest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/Find k closest elements to a given value.py&#10;floor&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/binarySearch/Floor and Ceiling in a sorted array.py&#10;cumula&#9;null&#9;null&#10;subarray  sum&#9;null&#9;null&#10;subarray&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/subarray_Find the largest sum contiguous sub array. The length of the returned sub array must be at least of length 2.py" />
+    <property name="SearchEverywhereHistoryKey" value="rectangle&#9;null&#9;null&#10;itera&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py&#10;inorder&#9;null&#9;null&#10;word break&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/random/重复最多的数是3，这些3 的index分别是0 3 6，那么要求程序以相等的概率返回这3个index.py&#10;move ze&#9;null&#9;null&#10;quick&#9;null&#9;null&#10;ance   bi&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/tree/Lowest Common Ancestor in a Binary Tree.py&#10;words  trie&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/ode a function that receives a string composed by words separated by spaces and returns a string where words appear in the same order but than the original string, but every word is inverted..py&#10;max repeat&#9;null&#9;null&#10;simpl&#9;null&#9;null&#10;multip&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Two very large numbers are represented using arrays. Multiply these two numbers. E.g. Two numbers 12 and 13 are represented as a=[1,2] adn b=[1,3]. The expected result is 12*13=156 i.e. c=[1,5,6].py&#10;intersection&#9;null&#9;null&#10;sparse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/You have 2 sparse vectors (large number of 0’s). First tell me a way to represent and store them, and then find the dot product..py&#10;divide&#9;null&#9;null&#10;confere&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py&#10;bst&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/tree/Check for Identical BSTs without building the trees.py&#10; Leaders in an array &#9;null&#9;null&#10;next gre&#9;null&#9;null&#10;Sum Increasing Subsequence&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Maximum Sum Increasing Subsequence Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array such that the intgers in the subsequence are sorted in increasing order.py&#10;longest &#9;null&#9;null&#10;max  subsequence&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Maximum Sum Increasing Subsequence Given an array of n positive integers. Write a program to find the sum of maximum sum subsequence of the given array such that the intgers in the subsequence are sorted in increasing order.py&#10;log2&#9;null&#9;null&#10;path&#9;null&#9;null&#10;parenth&#9;null&#9;null&#10;parenthe&#9;null&#9;null&#10;diago&#9;null&#9;null&#10;flatten&#9;null&#9;null&#10;drop&#9;null&#9;null&#10;increasing&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/binarySearch/Find the maximum element in an rotated array which is first increasing and then decreasing.py&#10;single num&#9;null&#9;null&#10;ancest&#9;null&#9;null&#10;random&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py&#10;reverse&#9;null&#9;null&#10;median&#9;null&#9;null&#10;comment&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/remove_comments.py&#10;dict word   &#9;null&#9;null&#10;dict&#9;null&#9;null&#10;square&#9;null&#9;null&#10;3sum&#9;null&#9;null&#10;sqrt&#9;null&#9;null&#10;circle&#9;null&#9;null&#10;vertical&#9;null&#9;null&#10;triplet&#9;null&#9;null&#10;first in&#9;null&#9;null&#10;seri&#9;null&#9;null&#10;read&#9;null&#9;null&#10;two sum&#9;null&#9;null&#10;almost&#9;null&#9;null&#10;confer&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -271,79 +289,7 @@
       <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/design" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Given an array, print the Next Greater Element (NGE) for every element">
-    <configuration default="false" name="logn  binary search single number twice except one" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/facebook" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/facebook/logn  binary search single number twice except one.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i].py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ImplementLog2UsingSqrt" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/facebook" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.输出count最多的连续的 字符">
     <configuration default="false" name="Given an array, print the Next Greater Element (NGE) for every element" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,6 +303,78 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array, print the Next Greater Element (NGE) for every element.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/facebook" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Divide Two Integers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_training_leet_code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="word break how many How many spaces can we add to a word such that" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/facebook" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/facebook/word break how many How many spaces can we add to a word such that.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="输出count最多的连续的 字符" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/facebook" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/facebook/输出count最多的连续的 字符.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -484,19 +502,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.logn  binary search single number twice except one" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]" />
-      <item index="2" class="java.lang.String" itemvalue="Python.ImplementLog2UsingSqrt" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Given an array, print the Next Greater Element (NGE) for every element" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Given an array, print the Next Greater Element (NGE) for every element" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Divide Two Integers" />
+      <item index="3" class="java.lang.String" itemvalue="Python.word break how many How many spaces can we add to a word such that" />
+      <item index="4" class="java.lang.String" itemvalue="Python.输出count最多的连续的 字符" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Given an array, print the Next Greater Element (NGE) for every element" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ImplementLog2UsingSqrt" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]" />
-        <item index="4" class="java.lang.String" itemvalue="Python.logn  binary search single number twice except one" />
+        <item index="0" class="java.lang.String" itemvalue="Python.输出count最多的连续的 字符" />
+        <item index="1" class="java.lang.String" itemvalue="Python.word break how many How many spaces can we add to a word such that" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Divide Two Integers" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Given an array, print the Next Greater Element (NGE) for every element" />
       </list>
     </recent_temporary>
   </component>
@@ -513,8 +531,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="453" y="23" width="951" height="841" extended-state="6" />
-    <editor active="true" />
+    <frame x="406" y="23" width="951" height="841" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -524,7 +542,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19285715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18620689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -574,166 +592,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Search in a row wise and column wise sorted matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.36120996" vertical-offset="203" max-vertical-offset="765">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Segregate Even and Odd numbers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1797153" vertical-offset="101" max-vertical-offset="663">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Sort an array according to the order defined by another array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45373666" vertical-offset="0" max-vertical-offset="578">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Time complexity of insertion sort when there are O(n) inversions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5160142" vertical-offset="101" max-vertical-offset="748">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Two elements whose sum is closest to zero.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.090747334" vertical-offset="0" max-vertical-offset="562">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Two Sum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48576513" vertical-offset="135" max-vertical-offset="697">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="30" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Union and Intersection of two sorted arrays.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0816326" vertical-offset="583" max-vertical-offset="1122">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/read4k_chars_read4096.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1427" max-vertical-offset="3366">
-          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/serialize a string and deserialize a string.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27402136" vertical-offset="322" max-vertical-offset="884">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/which returns a random triplet of letters from a string. You don't know the string using calls to this function you have to correctly guess the string. the length of the string is also given.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9074733" vertical-offset="0" max-vertical-offset="612">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Print arbitrary binary tree by vertical levels  columns from left to right.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26572007" vertical-offset="770" max-vertical-offset="1309">
-          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Multiply all fields except it's own position__Product Array Puzzle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/OneEditDistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.47309834" vertical-offset="255" max-vertical-offset="1309">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/You have 2 sparse vectors (large number of 0’s). First tell me a way to represent and store them, and then find the dot product..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8895349" vertical-offset="102" max-vertical-offset="680">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/triplet_password_decode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62068963" vertical-offset="697" max-vertical-offset="1190">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/string/Given an array of strings, find if the strings can be chained to form a circle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1343">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/sqrt_Please write a function that accepts a floating number and returns its square-root.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37988827" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Unbounded Binary Search Example (Find the point where a monotonically increasing function becomes positive first time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.918288" vertical-offset="0" max-vertical-offset="1496">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/3Sum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/3Sum_each number can be used more than once.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Let's say there is a double square number X, which can be expressed as the sum of two perfect squares, for example, 10 is double square because.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="674">
@@ -774,14 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/ode a function that receives a string composed by words separated by spaces and returns a string where words appear in the same order but than the original string, but every word is inverted..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059907835" vertical-offset="488" max-vertical-offset="1139">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Given a self-balancing tree (AVL), code a method that returns the median.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32789317" vertical-offset="833" max-vertical-offset="1785">
@@ -794,22 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1054">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Lowest Common Ancestor in a Binary Tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.31336406" vertical-offset="204" max-vertical-offset="1734">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19287834" vertical-offset="856" max-vertical-offset="1530">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -934,22 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49536178" vertical-offset="2283" max-vertical-offset="2839">
-          <caret line="148" column="65" selection-start-line="148" selection-start-column="65" selection-end-line="148" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Leaders in an array.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7281192" vertical-offset="0" max-vertical-offset="537">
@@ -976,8 +794,208 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/BST, given a min and a max, can you trim the tree so that the remaining nodes are within the range of (min, max)_Remove BST keys outside the given range.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31657356" vertical-offset="0" max-vertical-offset="537">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.41154563" vertical-offset="0" max-vertical-offset="537">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6484375" vertical-offset="2361" max-vertical-offset="2873">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/You have 2 sparse vectors (large number of 0’s). First tell me a way to represent and store them, and then find the dot product..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="697">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/intersection_find common elements in both binary search trees.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/一个组数，里面的数都是0~9，求第K小的数。 想到的是用quicksort的方法，提示有没有linear time的，想到统计0~9的frequency，再计算.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15124555" vertical-offset="0" max-vertical-offset="562">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Multiply Strings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66548043" vertical-offset="0" max-vertical-offset="562">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Two very large numbers are represented using arrays. Multiply these two numbers. E.g. Two numbers 12 and 13 are represented as a=[1,2] adn b=[1,3]. The expected result is 12*13=156 i.e. c=[1,5,6].py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3024911" vertical-offset="0" max-vertical-offset="562">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Simplify Path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9369202" vertical-offset="39" max-vertical-offset="646">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5361781" vertical-offset="0" max-vertical-offset="539">
+          <caret line="17" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/有这么一个class Contact，里面有一个String的name，和一个List&lt;String&gt; 装着email address，是这个Contact有的address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69572955" vertical-offset="0" max-vertical-offset="663">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/有两个一样的树A和B，每个节点都有父指针，要求写一个 函数，参数是A的一个子节点x，和B的根节点，要求返回B中对应x的那个节点.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66548043" vertical-offset="0" max-vertical-offset="562">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find the maximum repeating number in.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36476868" vertical-offset="390" max-vertical-offset="952">
+          <caret line="25" column="77" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/Given an array of integers. We have to find the max element of the array, which is at multiple places in the array and return any one of the indices randomly..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6419295" vertical-offset="827" max-vertical-offset="1496">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="77" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/ode a function that receives a string composed by words separated by spaces and returns a string where words appear in the same order but than the original string, but every word is inverted..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Lowest Common Ancestor in a Binary Tree__binary search tree_bst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="804" max-vertical-offset="1734">
+          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/重复最多的数是3，这些3 的index分别是0 3 6，那么要求程序以相等的概率返回这3个index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6938776" vertical-offset="51" max-vertical-offset="1462">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56082475" vertical-offset="0" max-vertical-offset="485">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/quickSort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.090747334" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Move all zeroes to end of array_minimum_swap_steps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0587189" vertical-offset="459" max-vertical-offset="1785">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/word break how many How many spaces can we add to a word such that.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0130354" vertical-offset="0" max-vertical-offset="969">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Word Break.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41154563" vertical-offset="0" max-vertical-offset="833">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/输出count最多的连续的 字符.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24199288" vertical-offset="102" max-vertical-offset="680">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Inorder predecessor and successor for a given key in BST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1411">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Maximum sum rectangle in a 2D matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30612245" vertical-offset="396" max-vertical-offset="935">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -56,9 +56,6 @@ class Solution:
 
 
 
-
-
-
 '''
 和segregate  0s  1s 没有区别
 '''

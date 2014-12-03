@@ -61,20 +61,18 @@ time: O(N)
 space: O(1)
 '''
 
-#这个做法是最优解。
+#这个做法是最优解。 返回index
 import random
-
-def rand_max(arr):
-	curr_max = 0
-	curr_max_idx = 0
-	curr_max_count = 1
-	for i,x in enumerate(arr):
-		if x > curr_max:
-			curr_max = x
-			curr_max_idx = i
-			curr_max_count = 1
-		elif x == curr_max:
-			curr_max_count = curr_max_count + 1
-			if random.random() < 1.0 / curr_max_count:   #replace currentMaxNum with a[i] with probability 1 / currentMaxCount;
-				curr_max_idx = i
-	return curr_max_idx
+class Solution:
+    def randMax(self, arr):
+        if not arr: return
+        ret=0;  maxN= arr[0]; count=1
+        for i in range(1, len(arr)):
+            if arr[i]>maxN:
+                maxN = arr[i]
+                ret = i
+                count=1
+            elif arr[i]==maxN:
+                count+=1
+                if random.randint(1, count)==count:  ret=i  #prob 1/count
+        return ret

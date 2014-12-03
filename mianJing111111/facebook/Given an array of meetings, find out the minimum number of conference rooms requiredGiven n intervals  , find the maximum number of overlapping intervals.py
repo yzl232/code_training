@@ -60,14 +60,13 @@ output:
 
 class Solution:
     def findNumConference(self, intervals):
-        timeS = [];  count = 0; result = 0
+        affairs = [];  count = 0; result = 0
         for i in intervals:
-            timeS.append((i[0], 1))
-            timeS.append((i[1], -1))
-        timeS.sort()
-        for i in timeS:
-            if i[-1]==1: count+=1
-            else:   count-=1
+            affairs.append((i[0], 1))
+            affairs.append((i[1], -1))
+        affairs.sort()
+        for i in affairs:
+            count+=i[-1]
             result = max(result, count)
         return result
 s = Solution()
@@ -138,23 +137,26 @@ so print
 
 '''
 
-class Solution:
+class Solution2: #比较难写
     def findNumConference(self, intervals):
-        timeS = [];  count = 0; result = 0
+        affairs = []
         for i in intervals:
-            timeS.append((i[0], 1))
-            timeS.append((i[1], -1))
-        timeS.sort()
-        now = 0
-        while i<len(timeS) and timeS[i][0]==0: #因为0增加，不用打印。 所以无所谓
-            count+= 1 if timeS[-1]==1 else -1 #猛加
-        while i<len(timeS):
+            affairs.append((i[0], 1))
+            affairs.append((i[1], -1))
+        affairs.sort()
+        prev =i =count= 0
+        while i<len(affairs) and affairs[i][0]==0:       #因为0增加，不用打印。 所以无所谓
+            count+=affairs[i][-1]     #猛加
+            i+=1
+        while i<len(affairs):
             old = count
-            j =i
-            while i<len(timeS) and timeS[i][0]==timeS[j][0]: #碰到同一时间的特殊情况
-                count+= 1 if timeS[-1]==1 else -1
-            if count!=old: print
-
-        return result
-s = Solution()
-print s.findNumConference([(5, 10), (6, 9), (11, 17), (15, 20), (16, 25), (10, 12)  ])
+            now =i
+            while i<len(affairs) and affairs[i][0]==affairs[now][0]: #碰到同一时间的特殊情况
+                count+= affairs[i][-1]
+                i+=1
+            if count!=old:
+                print prev, '~',affairs[now][0], 'have:',  old, "user online"
+                prev = affairs[now][0]  #不等的时候，更新
+        print prev, '~ infinity', 'have:',0, "user online"
+s = Solution2()
+s.findNumConference([(0,1), (1,3), (0,2)  ])

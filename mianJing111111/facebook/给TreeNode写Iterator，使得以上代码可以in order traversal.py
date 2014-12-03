@@ -13,6 +13,11 @@ while (a.hasNext()) {)
 
 #非常巧妙。 和leetcode原理一致。
 
+facebook考过好多次
+
+实现一个iterator, constructer
+传入一个二叉排序树，第一次调用next()返回最小的，第二次返回第二小的，第n次返
+回最大的，以后返回null.
 '''
 
 # Definition for a  binary tree node
