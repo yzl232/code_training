@@ -46,6 +46,7 @@ class Solution:
 s = Solution()
 print s.primeFactors(315)
 print s.primeFactors(60)
+print s.primeFactors(36)
 
 
 

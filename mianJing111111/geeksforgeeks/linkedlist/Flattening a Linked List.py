@@ -36,16 +36,68 @@ class Solution:
         dummy = ListNode(-1); cur = dummy
         while l1 and l2:
             if l1.val <= l2.val:
-                cur.next = l1
-                l1 = l1.next
+                cur.down = l1
+                l1 = l1.down
             else:
-                cur.next = l2
-                l2 = l2.next
-            cur = cur.next
-        if l1:    cur.next = l1
-        if l2:    cur.next = l2
-        return dummy.next
+                cur.down = l2
+                l2 = l2.down
+            cur = cur.down
+        if l1:    cur.down = l1
+        if l2:    cur.down = l2
+        return dummy.down
 
     def flatten(self, head):
         if not head or not head.next: return head
-        return self.mergeTwoLists(head, self.flatten(head.next))
+        head= self.mergeTwoLists(head, self.flatten(head.right))  #一直到最底部。 merge
+        return self.downToright(head)
+
+    def downToright(self, head):   #clean所有right,  down
+        if not head.right:return
+        self.downToright(head)
+        head.right = head.down
+        head.down =None
+
+#想象成每一列合并。 压扁到一列。   就是N列进行merge sort
+
+'''
+L1 --> L2 --> L3 --> L7 --> L8
+                      |
+                      v
+                     L4 --> L5-->L6
+
+WIll be flattened to
+L1 --> L2 --> L3 -->L4 -->L5-->L6-->L7-->L8
+
+
+可能是Facebook的题目
+'''
+#难点。 h.child要置为空
+#和那个multilevel一个套路.
+class Solution4: #如果只有2层
+    def flatten(self, head):
+        cur = head
+        while cur:
+            if cur.child:   #如果有child。找到tail。连上
+                tail = cur.child
+                while tail.next: tail=tail.next
+                tail.next = cur.next
+                cur.next, cur.child= cur.child, None
+            cur = cur.next
+
+#比较难。做了一个小时。 要先形象化想清楚。
+#recur一次后， h由L3, 变成L7，   L6连接L7
+class Solution6:
+    def fill(self, h):
+        if h:  return self.flatten(h, None)
+
+    def flatten(self, h, toConnect):
+        if h.child:
+            tmp1, tmp2=h.child, h.next
+            h.child, h.next = None, h.child
+            h = self.flatten(tmp1, tmp2)  #L3, 变成L7.    toConnect变成L7  #碰到child，更新toConnect
+        if not h.next:        #find tail.   L6连接L7
+            h.next = toConnect
+            return toConnect
+        else: self.flatten(h.next, toConnect)    #因为不用改变连接
+        return h
+#想象一下移动linkedlist的过程。 不断从下面往中间插入。     必须用recursion。 必须用tail

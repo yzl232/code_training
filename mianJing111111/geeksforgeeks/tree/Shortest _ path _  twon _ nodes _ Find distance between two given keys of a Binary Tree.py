@@ -45,7 +45,7 @@ class Solution:
         path2 = self.path[1][1:]   #多了一个root
         return path1+path2
 
-    def shortestPath(self, root, tmpPath):
+    def shortestPath(self, root, tmpPath):    #然后就是普通的DFS从ancester找path
         if not root: return
         if root.val == self.a.val or root.val == self.b.val:
             self.path.append(tmpPath+[root.val])

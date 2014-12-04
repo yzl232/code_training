@@ -82,9 +82,22 @@ heap优点在于findMax, findMin都是O(1)。非常好。
 删除max, min都是O(logn)
 heap的每个node也存储pointer双链表的node
 
-本来只用堆就好。但是删除要2个heap同时删除。 对于第二个堆。搜索最小值又要O(n) 因为heap得sibling之间没有关系。 只保证了parent更大而已
+本来只用堆heap就好。但是删除要2个heap同时删除。 对于第二个堆。搜索最小值又要O(n) 因为heap得sibling之间没有关系。 只保证了parent更大而已
  deleteMin(), deleteMax()都要同时操作2个heap
 
 
  Delete()达到O(logn)要用bst
+'''
+
+
+
+'''
+The main challenge is, while deleting an item, we need to delete from both min-heap and max-heap. So, we need some kind of mutual data structure.
+
+
+ The doubly linked list contains all input items and indexes of corresponding min and max heap nodes. The nodes of min and max heaps store addresses of nodes of doubly linked list.
+
+
+
+ 就是说，相互之间存了对方的address, pointer
 '''

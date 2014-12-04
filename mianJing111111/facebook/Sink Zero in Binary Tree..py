@@ -35,6 +35,6 @@ class Solution:
         elif len(self.q)>0:  #之前存在0元素
             tmp = self.q.popleft()
             root.val, tmp.val = tmp.val, root.val
-            self.q.append(root)
+            self.q.append(root) #自己也加进去。
         self.dfs(root.left)
         self.dfs(root.right)

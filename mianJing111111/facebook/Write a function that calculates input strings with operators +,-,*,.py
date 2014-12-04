@@ -12,17 +12,33 @@
 才知道原来可以先按“+” split，得到[5] [5*6]。对第二项用"*" split。得到[5][6
 ]，相乘得到30，再和前面的5加起来。
 
-
-
-/* A Java program to evaluate a given expression where tokens are separated
-   by space.
-   Test Cases:
-     "10 + 2 * 6"            ---> 22
-     "100 * 2 + 12"          ---> 212
-     "100 * ( 2 + 12 )"      ---> 1400
-     "100 * ( 2 + 12 ) / 14" ---> 100
 */
 '''
+
+
+class Solution:
+    def eval(self, s):
+        adds = s.split('+')
+        for i in range(len(adds)):
+            adds[i] = adds[i].split('*')
+        ret = 0
+        for p1 in adds:
+            tmp = 1
+            for p2 in p1:
+                tmp*=int(p2)
+            ret+=tmp
+        return ret
+
+        print adds
+s = Solution()
+print s.eval('5+5*6')
+
+
+
+'''
+Write a function that calculates input strings with operators +,-,*,/ eg. "5+5*6" should output 35
+'''
+#glassdoor也看到了
 
 '''
 class Solution:
@@ -41,4 +57,3 @@ class Solution:
                 stackOps.append(s[i])
             elif s[i] == ')':
 '''
-#比较难。。。http://www.geeksforgeeks.org/expression-evaluation/

@@ -46,8 +46,8 @@ class Solution:
     def dfs(self, root):
         if not root: return
         self.dfs(root.right)
-        if self.head:
-            root.right = self.head  #右边连上
-            self.head.left = root
+        if self.head:  self.head.left = root  #在这里，还可以设置tail节点。 如果有必要
+        root.right = self.head  #右边连上
         self.head = root    #更新head
         self.dfs(root.left)
+

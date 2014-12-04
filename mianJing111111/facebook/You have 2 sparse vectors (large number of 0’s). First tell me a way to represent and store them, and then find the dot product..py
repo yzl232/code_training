@@ -18,6 +18,17 @@ You have 2 sparse vectors (large number of 0’s). First tell me a way to repres
 
 
 
+'''
+
+You are given 2 streams of data, representing very sparse vectors
+you are guaranteed that the 2 incoming streams are of same size
+give a data structure which is optimized for producing the dot product of those sparse vectors
+analyze your runtime/space complexity,
+b) what if you are now told that v1, is much more sparse than v2
+give another (or the same) data structure optimized for the dot product of any such 2 vectors (where 1 is more sparse than the other)
+'''
+
+
 #facebook这道题目。 可以这样。只储存非0的value.    (val, index). sort by index
 class Solution:
     def multip(self, v1, v2):

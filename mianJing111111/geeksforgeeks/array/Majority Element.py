@@ -3,7 +3,12 @@
 Majority Element: A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element).
 
 Write a function which takes an array and emits the majority element (if it exists), otherwise prints NONE as follows:
+
+
+
 '''
+
+#其他元素看做-1，  这个元素看做1？？。。
 class Solution:
     def findCandidate(self, arr):
         mindex = 0; cout = 0
