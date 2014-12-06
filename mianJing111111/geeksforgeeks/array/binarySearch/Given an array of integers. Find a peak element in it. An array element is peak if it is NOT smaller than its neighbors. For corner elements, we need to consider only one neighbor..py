@@ -26,11 +26,22 @@ valley :   \      /
 1 3 8 5 4
 
 '''
+#leetcode看到一个简洁解法
+class Solution:
+    def findPeak(self, arr):
+        l=0; h = len(arr)-1
+        while l<h:  #当l==h的时候，找到了
+            m = (l+h)/2
+            if arr[m]<arr[m+1]:  l=m+1  #在右边。 l取更大的。 m+1
+            else: h=m  #在左边。 h取更小的。 m
+        return l
+#非常简洁巧妙。
+
 
 class Solution:
     def finPeak(self, arr):
         l = 0;  h = len(arr)-1
-        while l<=h:
+        while l<h:  #
             m = l+(h-l)/2
             if (m==0 or  arr[m-1]<=arr[m]) and (m==len(arr)-1 or arr[m]>=arr[m+1]):
                 return m

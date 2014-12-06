@@ -13,10 +13,12 @@ gives and outputs how many 1 cent coins, 5 cent coins, 10 cent coins , 25 cent c
 
 
 #这道题目自己写的时候可以多复制粘贴
+
+
 class Solution:
     def printChange(self, receive, actual):
         change = int((receive-actual)*100)
-        print "$1:  " + str(change/100)
+        print "$1:  " + str(change/100) #总是这样。 除以后mod
         change = change%100
         print "50 cents: " + str(change/50)
         change = change%50
