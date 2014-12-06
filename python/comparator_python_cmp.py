@@ -21,3 +21,7 @@ def myCMP(a, b):
 arr.sort(myCMP)  #注意，传入的知识函数名
 print arr
 
+
+L = [('a', 0), ('b', 1), ('c', 2), ('d', 3)]
+L.sort(key=lambda x:-x[1])
+print L

@@ -1,6 +1,7 @@
 # encoding=utf-8
 '''
-You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG
+You can swap only two consecutive elements.
+Show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG
 
 GUM
 GMU
@@ -16,18 +17,17 @@ while每次都检查一下i+1,  j-1
 
 class Solution:
     def transition(self, a, b):
-        if len(a)!= len(b): return
-        n = len(a);  i=j=0
+        if sorted(a)!=sorted(b): return
+        n = len(a);  j=i=0
         a = list(a); b = list(b)
-        while i<n:
-            j = i
-            while a[j] != b[i]:  #找到目标char
-                j+=1
-            while j>i:
-                a[j-1], a[j] = a[j], a[j-1]  #逐个往前挪。swap  a[j], a[j-1]
+        while j<n:
+            i = j
+            while a[i] != b[j]:  i+=1 ##找到目标char
+            while i>j:
+                a[i-1], a[i] = a[i], a[i-1]  #逐个往前挪。swap  a[i], a[i-1]
                 print ''.join(a)
-                j-=1
-            i+=1
+                i-=1
+            j+=1
 
 s = Solution()
 s.transition("ACADBB123", "DC1BA32BA")

@@ -2,24 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0520e970-349b-4e5e-87ea-597afa187170" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Check whether a given graph is Bipartite or not.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_training_leet_code/Find Peak Element.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/string/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/subsets with a specific length.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/ugly_numbers_Design an algorithm to find the kth number such that the only prime factors are 3,5, and 7.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/There is a game they termed as Mingo. A random generator (like a speaker standing in a group housie game calls out a number) generates out any number from 1 to 1000. There is a 10X10 matrix..py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/phoneNumber.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Print all palindromes of size greater than equal to 3 of a given string. (DP).py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/string/Print all palindromes of size greater than equal to 3 of a given string. (DP).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/sqrt_Please write a function that accepts a floating number and returns its square-root.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/sqrt_Please write a function that accepts a floating number and returns its square-root.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a program which asks user to input numbers and find the smallest even number and largest odd number from those numbers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write, efficient code for extracting unique elements from a sorted list of array. e.g. (1, 1, 3, 3, 3, 5, 5, 5, 9, 9, 9, 9) -&gt; (1, 3, 5, 9)..py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/you can go to a fast food restaurant to buy chicken nuggets in 6-pack, 9-pack or 20-packs. is there such a number N, such that for all numbers bigger than or equal to N, you can buy that number of chicken nuggets?.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/liveramp/Find the degree of separation between two people (e.g. LinkedIn's connected feature).py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/You are given a grid of numbers. A snake sequence is made up of adjacent numbers such that for each number.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/You are given a grid of numbers. A snake sequence is made up of adjacent numbers such that for each number.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design the data structures for an online book reader system.py" afterPath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design the data structures for an online book reader system.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain how you would design a chat server. In particular, provide details about the various backend components, classes, and methods. What would be the hardest problems to solve?.py" afterPath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain how you would design a chat server. In particular, provide details about the various backend components, classes, and methods. What would be the hardest problems to solve?.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain the data structures and algorithms that you would use to design an in-memory file system. Illustrate with an example in code where possible.py" afterPath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain the data structures and algorithms that you would use to design an in-memory file system. Illustrate with an example in code where possible.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Given an input file with four billion integers, provide an algorithm to generate an integer which is not contained in the file Assume you have 1 GB of memory FOLLOW UP What if you have only 10 MB of memory?.py" afterPath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Given an input file with four billion integers, provide an algorithm to generate an integer which is not contained in the file Assume you have 1 GB of memory FOLLOW UP What if you have only 10 MB of memory?.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Subsets II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Subsets II.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Subsets.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Subsets.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" afterPath="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a software to print triangle made of *s.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a software to print triangle made of *s.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG .py" afterPath="$PROJECT_DIR$/mianJing111111/epic/You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG .py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/comparator_python_cmp.py" afterPath="$PROJECT_DIR$/python/comparator_python_cmp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/dead_lock_Can you design a mechanism to make sure that B is executed after A, and C is ex- ecuted after B_q_16_5_First_second.py" afterPath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/dead_lock_Can you design a mechanism to make sure that B is executed after A, and C is ex- ecuted after B_q_16_5_First_second.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/singleton.py" afterPath="$PROJECT_DIR$/code_training_leet_code/singleton.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/singleton.py" afterPath="$PROJECT_DIR$/python/singleton.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/thread_safe_LRU_Cache.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/thread_safe_LRU_Cache.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="code_training.iws" />
@@ -43,21 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file leaf-file-name="Given an input file with four billion integers, provide an algorithm to generate an integer which is not contained in the file Assume you have 1 GB of memory FOLLOW UP What if you have only 10 MB of memory?.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Given an input file with four billion integers, provide an algorithm to generate an integer which is not contained in the file Assume you have 1 GB of memory FOLLOW UP What if you have only 10 MB of memory?.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4091904" vertical-offset="0" max-vertical-offset="646">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.032380953" vertical-offset="0" max-vertical-offset="1122">
+              <caret line="1" column="114" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -71,28 +69,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/code_training_leet_code" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/code_training_leet_code/One Edit Distance.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Intersection of Two Linked Lists.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Merge Intervals.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Insert Interval.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/Given an array of numbers, they are arranged so that the a[0] is in the 1st bucket, a[1]a[2] are in the 2nd bucket, a[3]a[4]a[5] is in the 3rd bucket and so o.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/You have 2 sparse vectors (large number of 0’s). First tell me a way to represent and store them, and then find the dot product..py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/design/Implement two stacks in an array.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/binarySearch/Count the number of occurrences in a sorted array.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Majority Element.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Search for a Range.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Efficient program to print all prime factors of a given number.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Gray Code.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/flatten Convert a given Binary Tree to Double Linked List.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/5) Given a set of n jobs with [start time, end time, cost] find a subset so that no 2 jobs overlap and the cost is maximum ?.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair.py" />
         <option value="$PROJECT_DIR$/mianJing111111/facebook/Reverse a doubly linked list.py" />
         <option value="$PROJECT_DIR$/mianJing111111/facebook/Write a function that calculates input strings with operators +,-,*,.py" />
         <option value="$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py" />
@@ -120,19 +101,36 @@
         <option value="$PROJECT_DIR$/mianJing111111/epic/jumper_find the longest ways for each players.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py" />
-        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/Write a program which asks user to input numbers and find the smallest even number and largest odd number from those numbers.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/Write a software to print triangle made of *s.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG .py" />
+        <option value="$PROJECT_DIR$/python/comparator_python_cmp.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/dead_lock_Can you design a mechanism to make sure that B is executed after A, and C is ex- ecuted after B_q_16_5_First_second.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/thread_safe_LRU_Cache.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design the data structures for a generic deck of cards. Explain how you would subclass the data structures to implement blackjack..py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design the data structures for an online book reader system.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/Subsets.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/Subsets II.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/subsets with a specific length.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/Check whether a given graph is Bipartite or not.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/singleton.py" />
+        <option value="$PROJECT_DIR$/python/singleton.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain how you would design a chat server. In particular, provide details about the various backend components, classes, and methods. What would be the hardest problems to solve?.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain the data structures and algorithms that you would use to design an in-memory file system. Illustrate with an example in code where possible.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Given an input file with four billion integers, provide an algorithm to generate an integer which is not contained in the file Assume you have 1 GB of memory FOLLOW UP What if you have only 10 MB of memory?.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="306" />
-    <option name="y" value="23" />
+    <option name="x" value="184" />
+    <option name="y" value="102" />
     <option name="width" value="1185" />
     <option name="height" value="841" />
   </component>
@@ -234,11 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mianJing111111" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geeksforgeeks" />
+              <option name="myItemId" value="code_training_leet_code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,33 +246,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mianJing111111" />
+              <option name="myItemId" value="code_training_leet_code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="geeksforgeeks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code_training" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code_training" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mianJing111111" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="epic" />
+              <option name="myItemId" value="cracking_the_coding" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,7 +265,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py&#10;prime&#9;null&#9;null&#10;rime&#9;null&#9;null&#10;primes&#9;null&#9;null&#10;date&#9;null&#9;null&#10;peak&#9;null&#9;null&#10;decimal&#9;null&#9;null&#10;merge k&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge &#9;null&#9;null&#10;lar&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;Count smaller elements on right side&#9;null&#9;null&#10;largest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;calculate&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Reverse a doubly linked list.py&#10;flatten&#9;null&#9;null&#10;gray code&#9;null&#9;null&#10;atof&#9;null&#9;null&#10;search&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Search for a Range.py&#10;majority&#9;null&#9;null&#10;search range&#9;null&#9;null&#10;range&#9;null&#9;null&#10; contain a number from each row&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py&#10;queue&#9;null&#9;null&#10;stack&#9;null&#9;null&#10;sparse&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;insert in&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py&#10;mer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;merge in&#9;null&#9;null&#10;cele&#9;null&#9;null&#10;sorted  matrix&#9;null&#9;null&#10;shortest&#9;null&#9;null&#10;kth&#9;null&#9;null&#10;next &#9;null&#9;null&#10;sink&#9;null&#9;null&#10;delete&#9;null&#9;null&#10;divide&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Divide Two Integers.py&#10;add&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/bit/Add two numbers without using arithmetic operators.py&#10;flatt&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;add tw&#9;null&#9;null&#10;multil&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;flatte&#9;null&#9;null&#10;subset&#9;null&#9;null&#10;rectangle&#9;null&#9;null&#10;itera&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py&#10;inorder&#9;null&#9;null&#10;word break&#9;null&#9;null&#10;move ze&#9;null&#9;null&#10;quick&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="single&#9;null&#9;null&#10;ladder&#9;null&#9;null&#10;subse&#9;null&#9;null&#10;thre&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/epic/You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG .py&#10;change&#9;null&#9;null&#10;date&#9;null&#9;null&#10;prime&#9;null&#9;null&#10;rime&#9;null&#9;null&#10;primes&#9;null&#9;null&#10;peak&#9;null&#9;null&#10;decimal&#9;null&#9;null&#10;merge k&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge &#9;null&#9;null&#10;lar&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;Count smaller elements on right side&#9;null&#9;null&#10;largest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;calculate&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Reverse a doubly linked list.py&#10;flatten&#9;null&#9;null&#10;gray code&#9;null&#9;null&#10;atof&#9;null&#9;null&#10;search&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Search for a Range.py&#10;majority&#9;null&#9;null&#10;search range&#9;null&#9;null&#10;range&#9;null&#9;null&#10; contain a number from each row&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py&#10;queue&#9;null&#9;null&#10;stack&#9;null&#9;null&#10;sparse&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;insert in&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py&#10;mer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;merge in&#9;null&#9;null&#10;cele&#9;null&#9;null&#10;sorted  matrix&#9;null&#9;null&#10;shortest&#9;null&#9;null&#10;kth&#9;null&#9;null&#10;next &#9;null&#9;null&#10;sink&#9;null&#9;null&#10;delete&#9;null&#9;null&#10;divide&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Divide Two Integers.py&#10;add&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/bit/Add two numbers without using arithmetic operators.py&#10;flatt&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;add tw&#9;null&#9;null&#10;multil&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;flatte&#9;null&#9;null&#10;subset&#9;null&#9;null&#10;rectangle&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -304,15 +276,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp" />
       <recent name="$PROJECT_DIR$/mianJing111111/Google" />
       <recent name="$PROJECT_DIR$/mianJing111111/facebook" />
       <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/string" />
       <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree" />
-      <recent name="$PROJECT_DIR$/python" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY">
-    <configuration default="false" name="In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.singleton">
+    <configuration default="false" name="Write a software to print triangle made of *s" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -324,31 +296,31 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Write a software to print triangle made of *s.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Let the user enter a decimal number_Greatest_Common_Divisor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Let the user enter a decimal number_Greatest_Common_Divisor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="printAllposiibleDate_year" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG " type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -360,43 +332,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG .py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message." type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="comparator_python_cmp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/comparator_python_cmp.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="singleton" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_training_leet_code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_training_leet_code/singleton.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -524,19 +496,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
-      <item index="2" class="java.lang.String" itemvalue="Python.printAllposiibleDate_year" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message." />
-      <item index="4" class="java.lang.String" itemvalue="Python.Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Write a software to print triangle made of *s" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG " />
+      <item index="3" class="java.lang.String" itemvalue="Python.comparator_python_cmp" />
+      <item index="4" class="java.lang.String" itemvalue="Python.singleton" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message." />
-        <item index="2" class="java.lang.String" itemvalue="Python.printAllposiibleDate_year" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
-        <item index="4" class="java.lang.String" itemvalue="Python.In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" />
+        <item index="0" class="java.lang.String" itemvalue="Python.singleton" />
+        <item index="1" class="java.lang.String" itemvalue="Python.comparator_python_cmp" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG " />
+        <item index="4" class="java.lang.String" itemvalue="Python.Write a software to print triangle made of *s" />
       </list>
     </recent_temporary>
   </component>
@@ -553,7 +525,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="306" y="23" width="1185" height="841" extended-state="0" />
+    <frame x="184" y="102" width="1185" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -564,7 +536,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2529412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23724137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -616,242 +588,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8083832" vertical-offset="1125" max-vertical-offset="1649">
-          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/count inversions in an unordered array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0705036" vertical-offset="70" max-vertical-offset="765">
-          <caret line="6" column="130" selection-start-line="6" selection-start-column="130" selection-end-line="6" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70647484" vertical-offset="920" max-vertical-offset="1615">
-          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73046875" vertical-offset="0" max-vertical-offset="867">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/balanced parenthesis O(1) space.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46341464" vertical-offset="0" max-vertical-offset="697">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Find Peak Element.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50445104" vertical-offset="0" max-vertical-offset="674">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/binarySearch/Given an array of integers. Find a peak element in it. An array element is peak if it is NOT smaller than its neighbors. For corner elements, we need to consider only one neighbor..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46341464" vertical-offset="0" max-vertical-offset="2278">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/5) Given a set of n jobs with [start time, end time, cost] find a subset so that no 2 jobs overlap and the cost is maximum ?.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/counting_sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="502">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test9.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71238095" vertical-offset="0" max-vertical-offset="525">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/BFS_DFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/binary_search_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25904763" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="680">
-          <caret line="11" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32380953" vertical-offset="0" max-vertical-offset="525">
-          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/quickSort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7733333" vertical-offset="342" max-vertical-offset="867">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/singleton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/25, 5, 10, 15.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64761907" vertical-offset="0" max-vertical-offset="663">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/A number is called as a stepping number if the adjacent digits are having a difference of 1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5418327" vertical-offset="0" max-vertical-offset="502">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/An additive sequence number is which when splitted in two different number forms additive seq..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3276191" vertical-offset="0" max-vertical-offset="799">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/strings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/check_Valid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="612">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/clock_We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/colorfulNumber.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5790476" vertical-offset="36" max-vertical-offset="595">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Convert string into new string e.g. &quot;abcD&quot;-&gt;&quot;cdeF&quot; and &quot;plxY&quot; -&gt; &quot;rnzA&quot;.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="525">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Find all the possible passwords, given the length of the password and that it is a well ordered number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71238095" vertical-offset="0" max-vertical-offset="525">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/find longest increasing sub sequence in 2d array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Efficient program to print all prime factors of a given number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034" vertical-offset="663" max-vertical-offset="1819">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/primeNumDecide.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="901">
-          <caret line="35" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/100以内prime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="454">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/epic/generate all possible well-ordered word that can be generated by those numbers of given character sequences.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5079681" vertical-offset="0" max-vertical-offset="595">
@@ -948,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="525">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/sqrt_Please write a function that accepts a floating number and returns its square-root.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
@@ -1004,18 +732,266 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.24843423" vertical-offset="0" max-vertical-offset="479">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4091904" vertical-offset="0" max-vertical-offset="646">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="663">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a software to print triangle made of *s.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51809525" vertical-offset="0" max-vertical-offset="578">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Coin change problem: Find the minimum number of coins required to make change for a given sum (given unlimited cumber of N different denominations coin).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/You are given a grid of numbers. A snake sequence is made up of adjacent numbers such that for each number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2552381" vertical-offset="53" max-vertical-offset="578">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/You can swap only two consecutive elements. You have to show all steps to convert a string into another string (both strings will be anagrams of each other). E.g. GUM to MUG .py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6152381" vertical-offset="0" max-vertical-offset="663">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/FactoryMethod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8857143" vertical-offset="1515" max-vertical-offset="2040">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/a=b=c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/closure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5542857" vertical-offset="1345" max-vertical-offset="1870">
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/comparator_python_cmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="25" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/a list of countries and its corresponding population.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="525">
+          <caret line="9" column="212" selection-start-line="9" selection-start-column="212" selection-end-line="9" selection-end-column="212" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread_lock/thread_lock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread_lock/lock111111.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3847619" vertical-offset="104" max-vertical-offset="629">
+          <caret line="19" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thread_lock/thread_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/dead_lock_Can you design a mechanism to make sure that B is executed after A, and C is ex- ecuted after B_q_16_5_First_second.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="527">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/thread_safe_LRU_Cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8780953" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design a musicaljukebox using object-oriented principles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1980952" vertical-offset="170" max-vertical-offset="1020">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design a parking lot using object-oriented principles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2380953" vertical-offset="2433" max-vertical-offset="2958">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/dead_lock_Chopsticks_philosophy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design the data structures for a generic deck of cards. Explain how you would subclass the data structures to implement blackjack..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5295238" vertical-offset="1736" max-vertical-offset="2261">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Design the data structures for an online book reader system.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48190477" vertical-offset="1328" max-vertical-offset="1853">
+          <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Subsets II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.10095238" vertical-offset="444" max-vertical-offset="969">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Subsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3847619" vertical-offset="376" max-vertical-offset="901">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="46" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/subsets with a specific length.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4741036" vertical-offset="0" max-vertical-offset="502">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Word Ladder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.812749" vertical-offset="476" max-vertical-offset="1751">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Check whether a given graph is Bipartite or not.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7450199" vertical-offset="0" max-vertical-offset="502">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/singleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/singleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain how you would design a chat server. In particular, provide details about the various backend components, classes, and methods. What would be the hardest problems to solve?.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.996016" vertical-offset="2473" max-vertical-offset="2975">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/String_Amazon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Explain the data structures and algorithms that you would use to design an in-memory file system. Illustrate with an example in code where possible.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1139">
+          <caret line="46" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Given an input file with four billion integers, provide an algorithm to generate an integer which is not contained in the file Assume you have 1 GB of memory FOLLOW UP What if you have only 10 MB of memory?.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032380953" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="1" column="114" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="114" />
           <folding />
         </state>
       </provider>
