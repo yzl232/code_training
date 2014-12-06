@@ -1,4 +1,5 @@
 # encoding=utf-8
+#printAllposiibleDate_year
 class Solution:
     def printDate(self, year):
         one = [1, 3, 5, 7, 8, 10, 12]

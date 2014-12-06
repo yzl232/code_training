@@ -3,32 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0520e970-349b-4e5e-87ea-597afa187170" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_training_leet_code/Find Peak Element.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/string/__init__.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/ugly_numbers_Design an algorithm to find the kth number such that the only prime factors are 3,5, and 7.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/Google/Write a method to return first five 10 digit prime numbers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Given a number check whether it is equal to its sum of its factors or not (excluding the number itself).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Given a password in number : Write an algorithm to print all possible combinations of that password..py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a function which takes a number as input, verify if is an even number greater than 2 and also print atleast one pair of prime numbers..py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all prime numbers from 2 to N for any N value_prime_sieve.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/dates_year.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/杂/Count trailing zeroes in factorial of a number.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/List Comprehension.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/How to convert a binary tree to binary search tree in-place.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/How to convert a binary tree to binary search tree in-place.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/An additive sequence number is which when splitted in two different number forms additive seq..py" afterPath="$PROJECT_DIR$/mianJing111111/epic/An additive sequence number is which when splitted in two different number forms additive seq..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Convert string into new string e.g. &quot;abcD&quot;-&gt;&quot;cdeF&quot; and &quot;plxY&quot; -&gt; &quot;rnzA&quot;.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Convert string into new string e.g. &quot;abcD&quot;-&gt;&quot;cdeF&quot; and &quot;plxY&quot; -&gt; &quot;rnzA&quot;.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number..py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Given number of digits of a phone number and number of disallowed digits as input.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Given number of digits of a phone number and number of disallowed digits as input.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/I have a log that consists of more than 100 million lines. Each line is just a data about user login, login time.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/I have a log that consists of more than 100 million lines. Each line is just a data about user login, login time.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py" afterPath="$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/check_Valid.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/check_Valid.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/clock_We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180).py" afterPath="$PROJECT_DIR$/mianJing111111/epic/clock_We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180).py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/colorfulNumber.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/colorfulNumber.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/There is a game they termed as Mingo. A random generator (like a speaker standing in a group housie game calls out a number) generates out any number from 1 to 1000. There is a 10X10 matrix..py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/epic/phoneNumber.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/Print all palindromes of size greater than equal to 3 of a given string. (DP).py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/string/Print all palindromes of size greater than equal to 3 of a given string. (DP).py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/epic/sqrt_Please write a function that accepts a floating number and returns its square-root.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/sqrt_Please write a function that accepts a floating number and returns its square-root.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" afterPath="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/jumper_find the longest ways for each players.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/jumper_find the longest ways for each players.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" afterPath="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -53,21 +43,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py">
+      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49203187" vertical-offset="263" max-vertical-offset="765">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file leaf-file-name="Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.4091904" vertical-offset="0" max-vertical-offset="646">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -86,12 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Shortest _ path _  twon _ nodes _ Find distance between two given keys of a Binary Tree.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a N*N Matrix. All rows are sorted, and all columns are sorted. Find the Kth Largest element of the matrix..py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/flatten array.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/The Celebrity Problem.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/facebook/Give a set of objects and a function. Pass two objects to that function and it can tell you whether one object points to another one..py" />
-        <option value="$PROJECT_DIR$/test9.py" />
         <option value="$PROJECT_DIR$/code_training_leet_code/One Edit Distance.py" />
         <option value="$PROJECT_DIR$/code_training_leet_code/Intersection of Two Linked Lists.py" />
         <option value="$PROJECT_DIR$/code_training_leet_code/Merge Intervals.py" />
@@ -133,15 +117,21 @@
         <option value="$PROJECT_DIR$/mianJing111111/epic/Given number of digits of a phone number and number of disallowed digits as input.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/I have a log that consists of more than 100 million lines. Each line is just a data about user login, login time.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/jumper_find the longest ways for each players.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="410" />
+    <option name="x" value="306" />
     <option name="y" value="23" />
     <option name="width" value="1185" />
     <option name="height" value="841" />
@@ -266,6 +256,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="geeksforgeeks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_training" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_training" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mianJing111111" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="epic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -281,7 +293,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="prime&#9;null&#9;null&#10;rime&#9;null&#9;null&#10;primes&#9;null&#9;null&#10;date&#9;null&#9;null&#10;peak&#9;null&#9;null&#10;decimal&#9;null&#9;null&#10;merge k&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge &#9;null&#9;null&#10;lar&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;Count smaller elements on right side&#9;null&#9;null&#10;largest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;calculate&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Reverse a doubly linked list.py&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/5) Given a set of n jobs with [start time, end time, cost] find a subset so that no 2 jobs overlap and the cost is maximum ?.py&#10;flatten&#9;null&#9;null&#10;gray code&#9;null&#9;null&#10;atof&#9;null&#9;null&#10;search&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Search for a Range.py&#10;majority&#9;null&#9;null&#10;search range&#9;null&#9;null&#10;range&#9;null&#9;null&#10; contain a number from each row&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py&#10;queue&#9;null&#9;null&#10;stack&#9;null&#9;null&#10;sparse&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;insert in&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py&#10;mer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;merge in&#9;null&#9;null&#10;cele&#9;null&#9;null&#10;sorted  matrix&#9;null&#9;null&#10;shortest&#9;null&#9;null&#10;kth&#9;null&#9;null&#10;next &#9;null&#9;null&#10;sink&#9;null&#9;null&#10;delete&#9;null&#9;null&#10;divide&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Divide Two Integers.py&#10;add&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/bit/Add two numbers without using arithmetic operators.py&#10;flatt&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;add tw&#9;null&#9;null&#10;multil&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;flatte&#9;null&#9;null&#10;subset&#9;null&#9;null&#10;rectangle&#9;null&#9;null&#10;itera&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py&#10;inorder&#9;null&#9;null&#10;word break&#9;null&#9;null&#10;move ze&#9;null&#9;null&#10;quick&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py&#10;prime&#9;null&#9;null&#10;rime&#9;null&#9;null&#10;primes&#9;null&#9;null&#10;date&#9;null&#9;null&#10;peak&#9;null&#9;null&#10;decimal&#9;null&#9;null&#10;merge k&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge &#9;null&#9;null&#10;lar&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;Count smaller elements on right side&#9;null&#9;null&#10;largest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;calculate&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Reverse a doubly linked list.py&#10;flatten&#9;null&#9;null&#10;gray code&#9;null&#9;null&#10;atof&#9;null&#9;null&#10;search&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Search for a Range.py&#10;majority&#9;null&#9;null&#10;search range&#9;null&#9;null&#10;range&#9;null&#9;null&#10; contain a number from each row&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py&#10;queue&#9;null&#9;null&#10;stack&#9;null&#9;null&#10;sparse&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;insert in&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py&#10;mer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;merge in&#9;null&#9;null&#10;cele&#9;null&#9;null&#10;sorted  matrix&#9;null&#9;null&#10;shortest&#9;null&#9;null&#10;kth&#9;null&#9;null&#10;next &#9;null&#9;null&#10;sink&#9;null&#9;null&#10;delete&#9;null&#9;null&#10;divide&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Divide Two Integers.py&#10;add&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/bit/Add two numbers without using arithmetic operators.py&#10;flatt&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;add tw&#9;null&#9;null&#10;multil&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;flatte&#9;null&#9;null&#10;subset&#9;null&#9;null&#10;rectangle&#9;null&#9;null&#10;itera&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py&#10;inorder&#9;null&#9;null&#10;word break&#9;null&#9;null&#10;move ze&#9;null&#9;null&#10;quick&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -292,68 +304,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mianJing111111/Google" />
+      <recent name="$PROJECT_DIR$/mianJing111111/facebook" />
+      <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/string" />
       <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree" />
       <recent name="$PROJECT_DIR$/python" />
-      <recent name="$PROJECT_DIR$/algorithms" />
-      <recent name="$PROJECT_DIR$/mianJing111111/facebook" />
-      <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Let the user enter a decimal number_Greatest_Common_Divisor">
-    <configuration default="false" name="Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number." type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number..py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Given a password in number : Write an algorithm to print all possible combinations of that password." type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Given a password in number : Write an algorithm to print all possible combinations of that password..py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Given number of digits of a phone number and number of disallowed digits as input" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Given number of digits of a phone number and number of disallowed digits as input.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY">
     <configuration default="false" name="In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,6 +343,60 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Let the user enter a decimal number_Greatest_Common_Divisor.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="printAllposiibleDate_year" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message." type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -512,19 +524,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number." />
-      <item index="1" class="java.lang.String" itemvalue="Python.Given a password in number : Write an algorithm to print all possible combinations of that password." />
-      <item index="2" class="java.lang.String" itemvalue="Python.Given number of digits of a phone number and number of disallowed digits as input" />
-      <item index="3" class="java.lang.String" itemvalue="Python.In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
+      <item index="0" class="java.lang.String" itemvalue="Python.In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
+      <item index="2" class="java.lang.String" itemvalue="Python.printAllposiibleDate_year" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message." />
+      <item index="4" class="java.lang.String" itemvalue="Python.Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
-        <item index="1" class="java.lang.String" itemvalue="Python.In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Given number of digits of a phone number and number of disallowed digits as input" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Given a password in number : Write an algorithm to print all possible combinations of that password." />
-        <item index="4" class="java.lang.String" itemvalue="Python.Find the seed of a number. Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number." />
+        <item index="0" class="java.lang.String" itemvalue="Python.Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message." />
+        <item index="2" class="java.lang.String" itemvalue="Python.printAllposiibleDate_year" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
+        <item index="4" class="java.lang.String" itemvalue="Python.In 1-9 keypad one key is not working. If some one enters a password then not working key will not be entered" />
       </list>
     </recent_temporary>
   </component>
@@ -541,7 +553,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="410" y="23" width="1185" height="841" extended-state="0" />
+    <frame x="306" y="23" width="1185" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -552,7 +564,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23724137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2529412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -604,69 +616,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Write atof in Java, which converts a string representation of a float (like &quot;342.18E-10&quot;) to an actual float without using any built-in parsing functions..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1054">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Gray Code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="544">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/flatten Convert a given Binary Tree to Double Linked List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="559" max-vertical-offset="1054">
-          <caret line="48" column="69" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0179641" vertical-offset="0" max-vertical-offset="663">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Reverse a doubly linked list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="799">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Maximum sum such that no two elements are adjacent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="649" max-vertical-offset="1173">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Count smaller elements on right side.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="850">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Write a function that calculates input strings with operators +,-,*,.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8816794" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Merge Sorted Array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18762475" vertical-offset="94" max-vertical-offset="595">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8083832" vertical-offset="1125" max-vertical-offset="1649">
@@ -855,14 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Find all the possible passwords, given the length of the password and that it is a well ordered number.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71238095" vertical-offset="0" max-vertical-offset="525">
@@ -959,14 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="714">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/epic/jumper_find the longest ways for each players.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.796" vertical-offset="265" max-vertical-offset="765">
@@ -983,18 +916,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.41714287" vertical-offset="240" max-vertical-offset="765">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner..py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/O(n)array求最大的三个数.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49203187" vertical-offset="263" max-vertical-offset="765">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/string/Print all palindromes of size greater than equal to 3 of a given string. (DP).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/replace all instances of 'a' with 'one' and 'A' with 'ONE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22666667" vertical-offset="0" max-vertical-offset="525">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35619047" vertical-offset="0" max-vertical-offset="525">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/sqrt_Please write a function that accepts a floating number and returns its square-root.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38857144" vertical-offset="0" max-vertical-offset="544">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Two-dimensional array representation of an image can also be represented by a one-dimensional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6055777" vertical-offset="104" max-vertical-offset="629">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/invalid; 1. must be 5-12 characters long 2. must contain atleast one number and one lowercase character 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="714">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a function that takes a string containing input froman old-style phone dialpad and translate it into a text message..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="935">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4091904" vertical-offset="0" max-vertical-offset="646">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
       </provider>

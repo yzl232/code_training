@@ -16,6 +16,7 @@ class Solution:
     # @param word, a string
     # @return a boolean
     def search(self, board, word):
+        if not board or not word: return
         self.m, self.n = len(board), len(board[0])
         self.results = []
         for i in range(self.m):
@@ -37,7 +38,7 @@ class Solution:
                     if board[r][c] == word[0]:
                         tmp, board[r][c] = board[r][c] , '#'
                         self.dfs(board, r, c,word[1:], tmpRoutes+[(r, c)])
-                        board[r][c] = '#'
+                        board[r][c] = tmp
 
 sss = [
 ['a', 'b', 'c'], ['c', 'c', 'c']

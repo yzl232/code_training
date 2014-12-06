@@ -30,6 +30,6 @@ class Solution:
             sub = ''
             for end in range(start, len(s)):
                 sub+=s[end]     #按照这个套路可以降低复杂度
-                if sub not in d:d[sub] = (start, end)
-                elif sub in d and start == d[sub][-1]+1: return False
+                if sub in d and start == d[sub][-1]+1: return False
+                d[sub] = (start, end)
         return True

@@ -11,16 +11,12 @@ Two-dimensional array representation of an image can also be represented by a on
 
 class Solution:
     def isEdge(self, i, j):  #默认不是edge
-        maxDiff = 0
-        iMin = i-1 if i!=0 else i
-        iMax = i+1 if i!=self.m-1 else i
-        jMin = j-1 if j!=0 else j
-        jMax = j+1 if j!=self.n-1 else j
-        for p in range(iMin, iMax+1):
-            for q in range(jMin, jMax+1):
-                maxDiff = max(abs(self.matrix[i][j] - self.matrix[p][q]))
-        if maxDiff>self.X:  return True
-        return False
+        maxD = 0
+        for r in range(i-1, i+2):
+            for c in range(j-1, j+2):
+                if 0<=r<=self.m-1 and 0<=c<=self.n-1:
+                    maxD = max(maxD, abs(self.matrix[i][j]-self.matrix[r][c]))
+        return maxD>self.x
 
     def detectAll(self, matrix, X):
         if not matrix: return
@@ -28,6 +24,5 @@ class Solution:
         self.m = len(matrix); self.n = len(matrix[0])
         for i in range(self.m):
             for j in range(self.n):
-                if self.isEdge(i, j):
-                    result.append((i, j, matrix[i][j]))
+                if self.isEdge(i, j):   result.append((i, j, matrix[i][j]))
         return result
