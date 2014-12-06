@@ -1,23 +1,23 @@
 # encoding=utf-8
 '''
-找钱问题， 不过是简化版的。 就是输入最多是10块钱， 东西最贵是1块钱， 有5
-块1块25c 10c 5c和1c的，输出找钱的组合。 不过只要求输出一种，就是有大的用大的
-那种。相对就简单很多了。 e.g.  付了10块，东西1c, 找1张5 4张1       3个quarter 2个
-dime  4个pennies
+N*N matrix is given with input red or black. You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then point is 2. Find the winner.
 
+Tic-tac-toe game,  N * N board,  红黑两方， 任何横向、竖向、对角线方向连续三个算一分（所以如果连续四个就是两分， 六个就是四分）， 给你一个boolean array, 求谁是winner
 
-The program would take as input the amount the customer
-gives and outputs how many 1 cent coins, 5 cent coins, 10 cent coins , 25 cent coins and $1 bill you need to give out.
+(R,R,R,R) = (R1,R2,R3), (R2,R3,R4). Hence 2 pts. Nothing special about being vertical or 4 tiles long.
 
+ 所以只要考虑三个就可以了。 iterative可以做。
 '''
-
-
-#这道题目自己写的时候可以多复制粘贴
-
-
 class Solution:
-    def printChange(self, receive, actual):
-        change = (receive-actual)*100
-        print change/100
-        change = change%100
-        print change/50
+    def findWinner(self, ):
+        black = self.findCnt('b')
+        red = self.findCnt('r')
+        print 'black cnt: ' + str(black)
+        print 'red cnt: ' + str(red)
+
+    def findCnt(self, matrix, color):
+        if not matrix: return 0
+        cnt =0;  r = len(matrix); c= len(matrix[0])
+        for i in range(r):
+            for j in range(c-2):
+                if matrix[i][j] == matrix[i][j+1] ==

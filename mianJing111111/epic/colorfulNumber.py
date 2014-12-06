@@ -11,14 +11,12 @@ You have to write a function that tells if the given number is a colorful number
 class Solution:
     def isColorFul(self, num):
         candidates = [int(i) for i in sorted(list(str(num)))]
-        print candidates
         if num<10:  return True
-        if 0 in candidates or 1 in candidates or len(candidates)>=9: return False
+        if 0 in candidates or 1 in candidates or len(candidates)>=9 or len(candidates)!=len(set(candidates)): return False
         self.result = []
-        self.dfs(1, candidates)
+        self.dfs(1, candidates)  #1开始，逐个相乘
         p = self.result[1:]
-        if len(p)!= len(set(p)): return False
-        return True
+        return len(self.p) == len(set(self.p))
 
     def dfs(self, tmpResult, candidates):
         self.result.append(tmpResult)
@@ -26,7 +24,5 @@ class Solution:
             self.dfs(tmpResult*candidates[i], candidates[i+1:])
 
 
-
-
-
-#上面这个做法不是很高效啊。遍历了所有。
+s = Solution()
+print s.isColorFul(3245)

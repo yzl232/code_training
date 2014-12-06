@@ -1,4 +1,7 @@
 # encoding=utf-8  #
+'''
+clock_We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180)
+'''
 class Solution:
     def calculateAngle(self, hh, mm):
         if not (0<=hh<=12) or not (0<=mm<=60): return

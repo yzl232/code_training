@@ -18,26 +18,20 @@ Additive numbers are defined to be a positive integer whose
 需要2个种子。然后递归。 如果不成。退出。
 '''
 class Solution:
-    def addtive(self, start, number):
-        self.result = []; self.n = len(str(number)); self.end = number
-        self.start = start
-        self.tmp = '9'*(len(str(number))/2)
-        for i in range(1, int(self.tmp)+1):
-            for j in range(0, int(self.tmp)+1):
-                self.dfs([str(i), str(j)])  #2个种子很重要
-        return self.result
+    def addtive(self, start, end):
+        self.ret = []; self.end = end;  self.start = start
+        self.big = int(10**(len(str(end))/2)+1)  #极端的起点是9981999
+        for i in range(1, self.big):
+            for j in range(0, self.big):
+                self.dfs([str(i), str(j)])  #2个种子很重要。  2个种子范围都是1~999.  1~999.  2个起点定了。后面也就定了
+        return sorted(self.ret)
 
-    def dfs(self, tmpResult):
-        if  int(''.join(tmpResult))>self.end:
-            return
-        for i in range(0, int(self.tmp)+1):
-            tmpSum = int(tmpResult[-1])+int(tmpResult[-2])
-            tmpResult+=[str(tmpSum) ] #核心要义。
-            tmpINT = int(''.join(tmpResult))
-            if tmpINT>self.end:  break
-            if self.start<=tmpINT<=self.end:
-                self.result.append(tmpINT)
-                self.dfs(tmpResult)
+    def dfs(self, tmpR):
+        tmpR.append( str(int(tmpR[-1])+int(tmpR[-2])) ) #核心要义。
+        tmpINT = int(''.join(tmpR))
+        if self.start<=tmpINT<=self.end:
+            self.ret.append(tmpINT)
+            self.dfs(tmpR)  #继续DFS
 
 s = Solution()
 print s.addtive(1, 90000)

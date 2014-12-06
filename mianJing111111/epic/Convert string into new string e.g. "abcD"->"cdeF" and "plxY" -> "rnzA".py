@@ -10,4 +10,3 @@ class Solution:
             if 'a'<=ch<='z':  result+=chr((ord(ch)-ord('a')+shift)%26+ord('a'))
             if 'A'<=ch<='Z': result+=chr((ord(ch)-ord('A')+shift)%26+ord('A'))
         return result
-

@@ -7,15 +7,13 @@ Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed f
 
 class Solution:
     def findseed(self, num):
-        seed = 1
-        product =1
         results = []
         for n in range(num):
-            a = list(str(n))
-            a = [int(i) for i in a]
+            a = [int(i) for i in list(str(n))]
             product = n
             for i in a: product*=i
             if product==num: results.append(n)
         return results
 s = Solution()
 print s.findseed(1716)
+print s.findseed(64)

@@ -1,4 +1,5 @@
 # encoding=utf-8
+#Given a number check whether it is equal to its sum of its factors or not (excluding the number itself)
 class Solution:
     def equalToallFactors(self, n):
         factors = [1]

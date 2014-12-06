@@ -10,6 +10,9 @@ Ex: entered 164, expected 18684 (you need to take care as when u enter 18684 and
 
 
 '''
+#比较像one edit distance
+#看2哥pointer能不能走完
+
 
 class Solution:
     def isMatch(self, actual, expected, faultKey = ''):

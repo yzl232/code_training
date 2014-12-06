@@ -2,7 +2,7 @@
 '''
 Verify if the given password is valid/invalid;
 1. must be 5-12 characters long
-2. must contain atleast one number and one lowercase character
+2. must contain at least one number and one lowercase character
 3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid)
 
 
@@ -15,6 +15,8 @@ hashtable 如果已经存在。 start不能等于之前end+1.
 这一点很巧妙！
 
 '''
+#和leetcode   longest substring有点像
+
 class Solution:
     def valid(self, s):
         if len(s)<5 or len(s)>12: return False
@@ -25,8 +27,9 @@ class Solution:
         if countlow==0 or countlow==0: return False
         d = {}
         for start in range(0, len(s)):
-            for end in range(start+1, len(s)+1):
-                sub = s[start:end]
+            sub = ''
+            for end in range(start, len(s)):
+                sub+=s[end]     #按照这个套路可以降低复杂度
                 if sub not in d:d[sub] = (start, end)
                 elif sub in d and start == d[sub][-1]+1: return False
-        return False
+        return True

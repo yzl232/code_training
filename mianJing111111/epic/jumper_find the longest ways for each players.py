@@ -2,7 +2,7 @@
 '''
 3. jumper game: 一个N*N的棋盘，格子里的数字如果是1表示自己棋子，2表示对方棋子，0表示空。放一个棋子到棋盘的空格中，如果相邻上下左右某方向上有对方的棋子，再 过去是空格，则可以跳过对方棋子。同一棋子不能被重复跳过两次。问棋盘上the number of the jumps in the longest path。
 
-似八皇后的递归，两人下跳棋，给你个位置问你最远能跳多少步。
+    两人下跳棋，给你个位置问你最远能跳多少步。
 
 jumpers
 
@@ -17,6 +17,9 @@ Given a checker board, find the length of the longest path
 N*N的 board， 求最大jump over数，给你一个固定位置
 
 '''
+
+
+#leetcode word search 变种
 class Solution:
     def jumpPath(self, matrix, i, j):
         self.jumpNum = 0; self.matrix = matrix
@@ -26,19 +29,10 @@ class Solution:
 
     def dfs(self, i, j, tmpNum):
         self.jumpNum = max(tmpNum, self.jumpNum)
-        if i-2>=0 and (self.matrix[i-1][j]!='' and self.matrix[i-1][j]!=self.matrix[i][j] ) and self.matrix[i-2][j]=='':
-            tmp, self.matrix[i][j] = self.matrix[i][j], '#'
-            self.dfs(i-2, j, tmpNum+1)
-            self.matrix[i][j] = tmp
-        if j-2>=0 and (self.matrix[i][j-2]!='' and self.matrix[i][j-1]!=self.matrix[i][j] ) and self.matrix[i][j-2]=='':
-            tmp, self.matrix[i][j] = self.matrix[i][j], '#'
-            self.dfs(i, j-2, tmpNum+1)
-            self.matrix[i][j] = tmp
-        if j+2<=self.n and (self.matrix[i][j+2]!='' and self.matrix[i][j+1]!=self.matrix[i][j] ) and self.matrix[i][j+2]=='':
-            tmp, self.matrix[i][j] = self.matrix[i][j], '#'
-            self.dfs(i, j+2, tmpNum+1)
-            self.matrix[i][j] = tmp
-        if i+2<=self.m and (self.matrix[i+2][j]!='' and self.matrix[i+1][j]!=self.matrix[i][j] ) and self.matrix[i+2][j]=='':
-            tmp, self.matrix[i][j] = self.matrix[i][j], '#'
-            self.dfs(i+2, j, tmpNum+1)
-            self.matrix[i][j] = tmp
+        directions = [(i-2, j), (i+2, j), (i, j-2), (i, j+2)]
+        for d in directions:
+            r = d[0]; c=d[1]
+            if 0<=r<=self.m-1 and 0<=c<=self.n-1 and self.matrix[r][c]=='' and self.matrix[(r+i)/2][(c+j)/2] == 'W':
+                tmp, self.matrix[r][c] = self.matrix[r][c], '#'
+                self.dfs(r, c, tmpNum+1)
+                self.matrix[r][c] = '#'

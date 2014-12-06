@@ -23,22 +23,21 @@ print出所有可能的号码。
 
 class Solution:
     def permutations(self, n, n1, n2, n3):
-        forbid = [n1, n2, n3]  # forbid nums
-        self.n = n; self.result = []
+        forbid = [n1, n2, n3]
+        self.n = n; self.ret = []
         candidates = [str(i) for i in range(10) if i not in forbid]
         self.dfs('', candidates)
-        return self.result
+        return self.ret
 
-    def dfs(self, tmpResult, candidates):
-        if len(tmpResult)==self.n:
-            self.result.append(tmpResult)
+    def dfs(self, tmpR, candidates):
+        if len(tmpR)==self.n:
+            self.ret.append(tmpR)
             return
-        else:
-            for i in range(len(candidates)):
-                ch = candidates[i]
-                if len(tmpResult)>0 and ch==tmpResult[-1]: continue
-                if len(tmpResult)>0 and ch=='4': continue
-                self.dfs(tmpResult+ch, candidates)
+        for i in range(len(candidates)):
+            ch = candidates[i]
+            if tmpR and ch==tmpR[-1]: continue
+            if tmpR and ch=='4': continue
+            self.dfs(tmpR+ch, candidates)
 
 s = Solution()
 print s.permutations(3, 1, 3, 2)
