@@ -11,23 +11,25 @@ Example:
 
 etc..
 
+
+39/37 ==>
+ 39=>20=>200=>150=>
+
 括号里的是重复循环的部分
 '''
 #这道题目主要利用了整数mod的思想
 #利用了hashmap保存mod的余数remainder
 class Solution:
-    def divide(self, a, b):
+    def divide(self, a, b):   #才9行！ 帅
         real, remain = a / b,  a % b
-        decimal = []; remainders = {}  #hash是无序的，所以加个有序的decimal
-        i = 0
+        decimal = ''; remainders = {}  #hash是无序的，所以加个有序的decimal
         while remain != 0 and remain not in remainders:
-            remainders[remain] = 1
-            remain *= 10
+            remainders[remain] = 1  #先更新hashmap。再乘以10
+            remain *= 10  #这一步是核心之一。
             digit, remain=remain/b, remain%b
-            decimal.append(str(digit))
-        if remain==0: return str(real) + '.' + ''.join(decimal) +  '(0)'
-        decimal= ['(']+decimal+[')']
-        return str(real) + '.' + ''.join(decimal)
+            decimal+=str(digit)
+        if remain==0:    return str(real) + '.' + decimal +  '(0)'
+        return str(real) + '.' + '('+decimal+')'
 
 s = Solution()
 print  s.divide(1, 3)

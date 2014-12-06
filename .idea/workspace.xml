@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0520e970-349b-4e5e-87ea-597afa187170" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_training_leet_code" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Othello is played as follows: Each Othello piece is white on one side and black on the other. When a piece is surrounded by its opponents on both the left and right sides, or  both the top and bottom, it is said to be captured and its color is flipped.py" afterPath="$PROJECT_DIR$/code_training_leet_code/cracking_the_coding/Othello is played as follows: Each Othello piece is white on one side and black on the other.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/Google/A log of wood has n marks on it. Cost of cutting wood at a particular mark is proportional to the length of the log. The log of wood can be cut at all the marks.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/A log of wood has n marks on it. Cost of cutting wood at a particular mark is proportional to the length of the log. The log of wood can be cut at all the marks.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/Google/count inversions in an unordered array.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/count inversions in an unordered array.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a n by m matrix of bits find the largest X that is formed in the matrix and return the size of the diagonal of that X.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Given a n by m matrix of bits find the largest X that is formed in the matrix and return the size of the diagonal of that X.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/generate Parenthesis &amp; remove minimum Number parentheses.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/generate Parenthesis &amp; remove minimum Number parentheses.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/paper_cut_price_给一张L*W的纸，给一堆 l(i)* w(i)的模板，每个size的模板有各自的price p(i) ，求这张纸所能剪出的最大值。.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/paper_cut_price_给一张L_W的纸_给一堆 l(i)_ w(i)的模板_每个size的模板有各自的price p(i)_求这张纸所能剪出的最大.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/Count the number of positive integers less than N that   does not contains digit 4.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Count the number of positive integers less than N that   does not contains digit 4.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py" afterPath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/balanced parenthesis O(1) space.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/balanced parenthesis O(1) space.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -38,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="给一个unsigned int数组，size为n，数组的sum = a，计算一个k的值，将数组中 所有大于k的数改为k之后，数组的sum变为b。Ex,  [1,2,5,7,7,8] = a = 30, b = 26,                          那么k = 6，因为[1,2,5,6,6,6] = 26。.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mianJing111111/rocket_Fuel/给一个unsigned int数组，size为n，数组的sum = a，计算一个k的值，将数组中 所有大于k的数改为k之后，数组的sum变为b。Ex,  [1,2,5,7,7,8] = a = 30, b = 26,                          那么k = 6，因为[1,2,5,6,6,6] = 26。.py">
+      <file leaf-file-name="Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19428572" vertical-offset="0" max-vertical-offset="918">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.068" vertical-offset="0" max-vertical-offset="1564">
+              <caret line="2" column="55" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -61,8 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/mianJing111111/epic/A number is called as a stepping number if the adjacent digits are having a difference of 1.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/epic/An additive sequence number is which when splitted in two different number forms additive seq..py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/check_Valid.py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/clock_We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180).py" />
         <option value="$PROJECT_DIR$/mianJing111111/epic/colorfulNumber.py" />
@@ -109,14 +98,16 @@
         <option value="$PROJECT_DIR$/mianJing111111/Google/balanced parenthesis O(1) space.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Count the number of positive integers less than N that   does not contains digit 4.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/A log of wood has n marks on it. Cost of cutting wood at a particular mark is proportional to the length of the log. The log of wood can be cut at all the marks.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/A log of wood has n marks on it. Cost of cutting wood at a particular mark is proportional to the length of the log. The log of wood can be cut at all the marks.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="478" />
+    <option name="x" value="120" />
     <option name="y" value="23" />
     <option name="width" value="1185" />
     <option name="height" value="841" />
@@ -209,7 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rocket_Fuel" />
+              <option name="myItemId" value="new_leetcode_new" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -228,28 +219,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="geeksforgeeks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code_training" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code_training" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mianJing111111" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geeksforgeeks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -264,7 +233,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="diagonal of that X&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/decimal representation of the rational number.py&#10;singl&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/python/singleton.py&#10;single&#9;null&#9;null&#10;ladder&#9;null&#9;null&#10;subse&#9;null&#9;null&#10;thre&#9;null&#9;null&#10;change&#9;null&#9;null&#10;date&#9;null&#9;null&#10;prime&#9;null&#9;null&#10;rime&#9;null&#9;null&#10;primes&#9;null&#9;null&#10;peak&#9;null&#9;null&#10;decimal&#9;null&#9;null&#10;merge k&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge &#9;null&#9;null&#10;lar&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;Count smaller elements on right side&#9;null&#9;null&#10;largest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;calculate&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Reverse a doubly linked list.py&#10;flatten&#9;null&#9;null&#10;gray code&#9;null&#9;null&#10;atof&#9;null&#9;null&#10;search&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Search for a Range.py&#10;majority&#9;null&#9;null&#10;search range&#9;null&#9;null&#10;range&#9;null&#9;null&#10; contain a number from each row&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py&#10;queue&#9;null&#9;null&#10;stack&#9;null&#9;null&#10;sparse&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;insert in&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py&#10;mer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;merge in&#9;null&#9;null&#10;cele&#9;null&#9;null&#10;sorted  matrix&#9;null&#9;null&#10;shortest&#9;null&#9;null&#10;kth&#9;null&#9;null&#10;next &#9;null&#9;null&#10;sink&#9;null&#9;null&#10;delete&#9;null&#9;null&#10;divide&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Divide Two Integers.py&#10;add&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/bit/Add two numbers without using arithmetic operators.py&#10;flatt&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;add tw&#9;null&#9;null&#10;multil&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;flatte&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/decimal representation of the rational number.py&#10;diagonal of that X&#9;null&#9;null&#10;singl&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/python/singleton.py&#10;single&#9;null&#9;null&#10;ladder&#9;null&#9;null&#10;subse&#9;null&#9;null&#10;thre&#9;null&#9;null&#10;change&#9;null&#9;null&#10;date&#9;null&#9;null&#10;prime&#9;null&#9;null&#10;rime&#9;null&#9;null&#10;primes&#9;null&#9;null&#10;peak&#9;null&#9;null&#10;decimal&#9;null&#9;null&#10;merge k&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge &#9;null&#9;null&#10;lar&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;Count smaller elements on right side&#9;null&#9;null&#10;largest&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py&#10;calculate&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Reverse a doubly linked list.py&#10;flatten&#9;null&#9;null&#10;gray code&#9;null&#9;null&#10;atof&#9;null&#9;null&#10;search&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Search for a Range.py&#10;majority&#9;null&#9;null&#10;search range&#9;null&#9;null&#10;range&#9;null&#9;null&#10; contain a number from each row&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py&#10;queue&#9;null&#9;null&#10;stack&#9;null&#9;null&#10;sparse&#9;null&#9;null&#10;merge&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;insert in&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py&#10;mer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Merge Intervals.py&#10;merge in&#9;null&#9;null&#10;cele&#9;null&#9;null&#10;sorted  matrix&#9;null&#9;null&#10;shortest&#9;null&#9;null&#10;kth&#9;null&#9;null&#10;next &#9;null&#9;null&#10;sink&#9;null&#9;null&#10;delete&#9;null&#9;null&#10;divide&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Divide Two Integers.py&#10;add&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/bit/Add two numbers without using arithmetic operators.py&#10;flatt&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;add tw&#9;null&#9;null&#10;multil&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/linkedlist/Flatten a multilevel linked list.py&#10;flatte&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -288,25 +257,7 @@
       <recent name="$PROJECT_DIR$/mianJing111111/Google" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.decimal representation of the rational number">
-    <configuration default="false" name="singleton" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_training_leet_code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_training_leet_code/singleton.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -374,6 +325,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -520,19 +489,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.给一个unsigned int数组，size为n，数组的sum = a，计算一个k的值，将数组中 所有大于k的数改为k之后，数组的sum变为b。Ex,  [1,2,5,7,7,8] = a = 30, b = 26,                          那么k = 6，因为[1,2,5,6,6,6] = 26。" />
-      <item index="1" class="java.lang.String" itemvalue="Python.singleton" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Given a number, can you remove k digits from the number so that the new formatted number is smallest possible." />
-      <item index="4" class="java.lang.String" itemvalue="Python.Count the number of positive integers less than N that   does not contains digit 4" />
-      <item index="5" class="java.lang.String" itemvalue="Python.decimal representation of the rational number" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Given a number, can you remove k digits from the number so that the new formatted number is smallest possible." />
+      <item index="3" class="java.lang.String" itemvalue="Python.Count the number of positive integers less than N that   does not contains digit 4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.decimal representation of the rational number" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.decimal representation of the rational number" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Count the number of positive integers less than N that   does not contains digit 4" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Given a number, can you remove k digits from the number so that the new formatted number is smallest possible." />
-        <item index="4" class="java.lang.String" itemvalue="Python.singleton" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.decimal representation of the rational number" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Count the number of positive integers less than N that   does not contains digit 4" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Given a number, can you remove k digits from the number so that the new formatted number is smallest possible." />
       </list>
     </recent_temporary>
   </component>
@@ -549,7 +518,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="478" y="23" width="1185" height="841" extended-state="0" />
+    <frame x="120" y="23" width="1185" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -560,7 +529,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23724137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24571429" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -612,22 +581,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program for a word search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="935">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/printAllposiibleDate_year.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24843423" vertical-offset="0" max-vertical-offset="479">
-          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Write a program to generate all palindrome dates by taking the beginning and the ending dates as an input from the user. The format of the date is given as MMDDYYYY.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="663">
@@ -948,22 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="850">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="867">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="427" max-vertical-offset="952">
@@ -1014,8 +951,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/rocket_Fuel/给一个unsigned int数组，size为n，数组的sum = a，计算一个k的值，将数组中 所有大于k的数改为k之后，数组的sum变为b。Ex,  [1,2,5,7,7,8] = a = 30, b = 26,                          那么k = 6，因为[1,2,5,6,6,6] = 26。.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19428572" vertical-offset="0" max-vertical-offset="918">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29142857" vertical-offset="0" max-vertical-offset="918">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35238096" vertical-offset="138" max-vertical-offset="867">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7447619" vertical-offset="136" max-vertical-offset="833">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Design a class to serialize and deserialize an object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22666667" vertical-offset="0" max-vertical-offset="527">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.068" vertical-offset="0" max-vertical-offset="1564">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="55" />
           <folding />
         </state>
       </provider>

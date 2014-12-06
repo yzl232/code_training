@@ -11,31 +11,30 @@ Example:
 
 etc..
 
+
+39/37 ==>
+ 39=>20=>200=>150=>
+
 括号里的是重复循环的部分
 '''
 #这道题目主要利用了整数mod的思想
-
+#利用了hashmap保存mod的余数remainder
 class Solution:
-    def divide(self, a, b):
-        real = a/b
-        remain = a%b
-        decimal = []
-        remaider = {}
-        i=0
-        while remain and remain not in remaider:
-            remaider[remain] = 1
-            remain *=10
-            digit, remain = divmod(remain, b)
-            decimal.append(str(digit))
-        if remain==0: return str(real) + '.' + '.'.join(decimal) + '(0)'
+    def divide(self, a, b):   #才8行！ 帅
+        real, remain = a/b, a%b
+        decimal = '';  d = {}
+        while remain and remain not in d:
+            d[remain] = 1
+            remain*=10
+            decimal+=str(remain/b)
+            remain = remain%b
+        if not remain: return str(real)+'.'+decimal+'(0)'
+        return str(real)+'.'+'('+decimal+')'
 
 
 s = Solution()
-print  s.divide(1, 3)
-print  s.divide(22, 3)
-print  s.divide(1, 2)
+
 print  s.divide(39, 37)
-print  s.divide(1, 373)
 '''
 #39/37
 remain = 2
