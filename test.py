@@ -1,56 +1,45 @@
 # encoding=utf-8
-import time
-ISOTIMEFORMAT='%Y-%m-%d %X'
-#  date = time.strftime(ISOTIMEFORMAT, time.localtime())
+'''
 
-class Entry:
-    def __init__(self, name, parent):
-        self.name = name
-        self.parent = parent
-        self.created = time.strftime(ISOTIMEFORMAT, time.localtime())
-        self.lastUpdated = self.created
-        self.lastAccessed = self.created
-        
-    def delete(self):
-        if self.parent == None: return False
-        return self.parent.deleteEntry(self)
-        
-    def getFullPath(self):
-        if not self.parent: return self.name
-        return self.parent.getFullPath() + '/' + self.name
-        
-class File(Entry):
-    def __init__(self, name, parent, size, content = None):
-        Entry.__init__(name, parent)
-        self.size = size
-        self.content = content
-        
-        
-class Directory(Entry):
-    def __init__(self, name, parent, contents = []):
-        Entry.__init__(name, parent)
-        self.contents = contents
-        self.size = 0
-        if len(self.contents) >0:
-            for e in self.contents:
-                self.size += e.size
-    
-    def addEntry(self, entry):
-        self.content.append(entry)
-        self.size += entry.size
-        pass
+Write a function which, given two integers (a numerator and a denominator), prints the decimal representation of the rational number "numerator/denominator".
+Since all rational numbers end with a repeating section, print the repeating section of digits inside parentheses; the decimal printout will be/must be
 
-    def deleteEntry(self, entry):
-        self.content.pop(entry)
-        self.size -= entry.size
-        pass
-        
-    def numberOfFiles(self):
-        count = 0
-        for e in self.contents:
-            if isinstance(e, File): count+=1
-            elif isinstance(e, Directory):
-                count += self.numberOfFiles()
-        return count
-        
-    
+Example:
+1 , 3 = 0.(3)
+2 , 4 = 0.5(0)
+22, 7 = 3.(142857)
+
+etc..
+
+括号里的是重复循环的部分
+'''
+#这道题目主要利用了整数mod的思想
+
+class Solution:
+    def divide(self, a, b):
+        real = a/b
+        remain = a%b
+        decimal = []
+        remaider = {}
+        i=0
+        while remain and remain not in remaider:
+            remaider[remain] = 1
+            remain *=10
+            digit, remain = divmod(remain, b)
+            decimal.append(str(digit))
+        if remain==0: return str(real) + '.' + '.'.join(decimal) + '(0)'
+
+
+s = Solution()
+print  s.divide(1, 3)
+print  s.divide(22, 3)
+print  s.divide(1, 2)
+print  s.divide(39, 37)
+print  s.divide(1, 373)
+'''
+#39/37
+remain = 2
+remain = 20
+remain
+当出现重复的remain的时候，循环就开始了。
+'''

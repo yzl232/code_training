@@ -25,17 +25,20 @@ In the leftmost k+1 digits, find the largest one (let us say it is located at it
 先从左到右，如果左边的digit比右边的大，就删除左边的digit，如果删
 除不够k个digit则把最后的几位删掉，
 
+
+因为影响数值大小的在于高位。
+比如k=1时候， 只有前2个数有影响
+k=2的时候，只有1前3个数有影响
 '''
-class Solution:
+class Solution:  #O(n)
     def removeK(self, n, k):
-        arr = list(str(n))
-        length = len(arr)
-        while k>0:
-            small = 0
-            if arr[0]>arr[1]:  small = 1
-            arr = [arr[small]] + arr[2:]
-            k = k - 1  #已经删除了几个
-        return ''.join(arr)
+        stack = list(str(n))[::-1]
+        if len(stack)<k: return
+        for i in range(k):
+            one = stack.pop()
+            two = stack.pop()
+            stack.append(min(one, two))
+        return ''.join(stack[::-1])
 
 s = Solution()
 print s.removeK(1432219, 2)

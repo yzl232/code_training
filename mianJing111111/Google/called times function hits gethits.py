@@ -4,9 +4,13 @@ import random
 import collections
 import threading
 
+#做法的话， 基本上都就是class的全局变量而已
+
+
+#变化很多 。 各有不同
+
 '''
 统计函数调用次数
-
 '''
 class Solution:
     def __init__(self):
@@ -19,10 +23,12 @@ s.f()
 print s.count
 
 
+
+
 '''
 一分钟只能调用一次
 '''
-
+#做法。 lasttime.  大于60才更新
 class Solution2:
     def __init__(self):
         self.lastTime = -1
@@ -30,31 +36,32 @@ class Solution2:
 
     def add_money(self):
         curr_time = int(time.time())
-        if curr_time - self.lastTime > 60:
+        if curr_time - self.lastTime > 60:  #这已经是最好的办法。
             self.lastTime = curr_time
             self.count+=1
             pass
 
 #设计一个function: bool cancall(), 保证每秒钟内return true的数量小于 N,
 
-
+#做法。starttime,  <1的时候只更新cnt， >1的时候重置cnt, startTIme
 class Solution3:
     def __init__(self, N):
-        self.lastTime = -1
+        self.startTime = -1
         self.count = 0
         self.N = N
 
     def add_money(self):
         curr_time = int(time.time())
-        if curr_time - self.lastTime > 1:
-            if self.count>=self.N: return False
-            self.lastTime = curr_time
-            self.count+=1
+        if curr_time - self.startTime < 1 and self.count<self.N:
+            self.count+=1  #不更新startTime
+            pass
+        else:
+            self.count=1
+            self.startTime = curr_time    #到这里更新
             pass
 
-
 '''
-最近一分钟调用了多少次？
+
 类似于circular buffer in C++
 
 
@@ -62,6 +69,7 @@ circular queue
 
 Make a data structure which is supposed to log number of user requests per second. At any point of time your boss can ask you the number of hits for the last 60 seconds.
 
+随时调用，知道最近一分钟多少次？
 
 
 Design a web counter to give how many hits per second, per minute and per hour (i.e., what kind of data structure and algorithm would you use to do this?).
@@ -110,16 +118,16 @@ while True:
 
 用一个HashMap 来记得current minute 的
 Keywords 和它的出现次数。
+
+
 用 一个Queue of
 size of 30 （因为30 分钟，也可以是60分钟）
-来记录 每一分钟的map，构成 一个动态
-leaking buffle Queue，
+来记录 每一分钟的top 10 的10-tuple的hashmap （只保留top10的记录），构成 一个动态leaking buffle Queue，
 这样就可以精确
 算出last 30 minutes, 60 minutes,  24 hours
 
 freq Top K keywords.
 
-每一分钟插入size=10的Minheap
 '''
 
 
@@ -139,6 +147,7 @@ circullar queue
 保留十个调用时间循环数组。最后减去第一个看是不是大于60秒
 也是用queue.每次调用，插入时间按
 '''
+#巧妙
 class Solution5:
     def __init__(self):
         self.q = collections.deque([], maxlen=10)
@@ -146,8 +155,5 @@ class Solution5:
     def foo(self):
         curTime = time.time()
         self.q.append(curTime)
-        if len(self.q)==10 and self.q[-1]-self.q[0]<=60:
-            return 1
+        if len(self.q)==10 and self.q[-1]-self.q[0]<=60:      return 1
         return 0
-
-

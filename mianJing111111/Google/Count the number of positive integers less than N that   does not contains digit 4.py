@@ -15,7 +15,7 @@ Count the number of positive integers less than N that
 (3) Subtract the result by one since we are getting the number of integers strictly less than N.
 
 For example: N=3651, then the result is (3*9^3+6*9^2+5*9+1)-1=2718.
-N=3451, then consider number 3399. The result is (3*9^3+3*9^2+9*9+9)-1=2519.
+N=3451, then consider number 3399.  (因为3400~3451都不算数了)    The result is (3*9^3+3*9^2+9*9+9)-1=2519.
 
 
 直接的O(n)方法就是一个一个看存不存在4. 然后
@@ -24,6 +24,9 @@ N=3451, then consider number 3399. The result is (3*9^3+3*9^2+9*9+9)-1=2519.
 3399
 '''
 
+
+
+#  10-nary   =>  9-nary
 count = 0
 for i in range(1, 40):
     if '4' in str(i): continue
@@ -35,7 +38,7 @@ class Solution:
     def count(self, n):
         s = str(n);  start9 = len(s)-1; result=0
         for i in range(len(s)):
-            if s[i]!='4':   result+=(ord(i)-ord('0'))*(9**(len(s)-1-i))
+            if s[i]!='4':   result+=int(s[i]) *(9**(len(s)-i-1))
             else:
                 start9=i+1
                 result +=3*(9**(len(s)-1-i))

@@ -13,20 +13,20 @@ etc..
 
 括号里的是重复循环的部分
 '''
+#这道题目主要利用了整数mod的思想
+#利用了hashmap保存mod的余数remainder
 class Solution:
     def divide(self, a, b):
-        real = a / b
-        remain = a % b
-        decimal = []
-        remainders = {}  #hash是无序的，所以加个有序的decimal
+        real, remain = a / b,  a % b
+        decimal = []; remainders = {}  #hash是无序的，所以加个有序的decimal
         i = 0
         while remain != 0 and remain not in remainders:
             remainders[remain] = 1
             remain *= 10
-            digit, remain = divmod(remain, b)
+            digit, remain=remain/b, remain%b
             decimal.append(str(digit))
         if remain==0: return str(real) + '.' + ''.join(decimal) +  '(0)'
-        if remain != 0:   decimal= ['(']+decimal+[')']
+        decimal= ['(']+decimal+[')']
         return str(real) + '.' + ''.join(decimal)
 
 s = Solution()
