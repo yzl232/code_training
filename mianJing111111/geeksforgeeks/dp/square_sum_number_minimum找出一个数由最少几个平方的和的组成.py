@@ -5,6 +5,7 @@
 input： 14    output:  9 ,4 , 1  虽然也能由1 +1 +....+1组成 但长度是14 不是最优解
 input:   50     ouput :  25, 25
 '''
+#G家题目
 class Solution:
     def minNum(self, num):
         dp = [i for i in range(num+1)]

@@ -28,16 +28,19 @@ The idea is to find level of one of the nodes. Using the found level, check if �
 Time Complexity of the above solution is O(n) as it does at most three traversals of binary tree.
 
 '''
+#一般都是分成2个部分分别作。 一般做不到并在一起
+#树都是这样子。2种特殊情况，然后一种是root为空。  一种是考虑root值。
 class Solution:
-    def isSibling(self, root, a, b):
+    def isSibling(self, root, a, b): #cousin比较难检查。 但是反过来，sibling很好检查
         if not root: return False
-        return (root.left==a and root.right ==b ) or (root.right ==a and root.left==b) or self.isSibling(root.left, a, b) or self.isSibling(root.right, b, a)
+        if (root.left, root.right) in [(a, b), (b,a)]: return True
+        return self.isSibling(root.left, a, b) or self.isSibling(root.right, a, b)
 
-    def level(self, root, p, lvl):
-        if not root: return 0
-        if root == p: return lvl
+    def level(self, root, p, lvl):  #实际上是一个search的过程
+        if not root: return -1  #特殊情况： 没找到
+        if root == p: return lvl  #特殊情况：  找到
         l = self.level(root.left, p, lvl+1)  #和distance 蛮像的
-        if l!=0: return l
+        if l!=-1: return l
         return self.level(root.right, p, lvl+1)
 
     def isCousin(self, root, a, b):

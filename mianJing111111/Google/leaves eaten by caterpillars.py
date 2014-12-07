@@ -9,6 +9,8 @@ A - Given array of integers
 Output Format:
 An integer denoting the number of uneaten leaves.
 Sample Input:
+
+
 N = 10.     (1~10)
 A = [2,4,5]
 Sample Output:
@@ -23,16 +25,12 @@ Explanation
 '''
 class Solution:
     def countUneaten(self, n, arr):
-        uneaten = 0
-        eaten = 0
-        positionEatenHash = {}
+        d = {}
         for i in arr:
-            for j in range(1, n/i+1):
-                if i*j not in positionEatenHash:
-                    positionEatenHash[i*j] = 1
-        print positionEatenHash
-        return n-len(positionEatenHash)
+            for j in range(i, n+1, i):  #类似于sieve prime那道题目
+                if j not in d:   d[j] = 1
+        print d
+        return n-len(d)
 
 s = Solution()
 print s.countUneaten(10, [2, 4, 5])
-

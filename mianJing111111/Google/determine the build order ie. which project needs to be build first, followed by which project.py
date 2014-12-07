@@ -23,7 +23,8 @@ In DFS, we start from a vertex, we first print it and then recursively call DFS 
 
 
 #http://blog.jupo.org/2012/04/06/topological-sorting-acyclic-directed-graphs/
-
+#而且代码其实比较短。 可以背下。
+#实际上是O(n2).  用DFS可以做到 O(V)+O(E)
 def topolgical_sort(graph_unsorted):
     graph_sorted = []
     graph_unsorted = dict(graph_unsorted)
@@ -41,7 +42,7 @@ def topolgical_sort(graph_unsorted):
             raise RuntimeError("A cyclic dependency occurred")
     return graph_sorted
 
-
+#依赖最少的排在前面
 graph_unsorted = [(2, []),
                   (5, [11]),
                   (11, [2, 9, 10]),
@@ -96,3 +97,67 @@ Sandro fails.
 
 
 '''
+
+
+
+# Simple:
+# a --> b
+#   --> c --> d
+#   --> d
+graph1 = {
+    "a": ["b", "c", "d"],
+    "b": [],
+    "c": ["d"],
+    "d": []
+}
+
+# 2 components
+graph2 = {
+    "a": ["b", "c", "d"],
+    "b": [],
+    "c": ["d"],
+    "d": [],
+    "e": ["g", "f", "q"],
+    "g": [],
+    "f": [],
+    "q": []
+}
+
+# cycle
+graph3 = {
+    "a": ["b", "c", "d"],
+    "b": [],
+    "c": ["d", "e"],
+    "d": [],
+    "e": ["g", "f", "q"],
+    "g": ["c"],
+    "f": [],
+    "q": []
+}
+
+from collections import deque
+
+GRAY, BLACK = 0, 1
+
+def topological(graph):
+    order, enter, state = deque(), set(graph), {}
+
+    def dfs(node):
+        state[node] = GRAY
+        for k in graph.get(node, ()):
+            sk = state.get(k, None)
+            if sk == GRAY: raise ValueError("cycle")
+            if sk == BLACK: continue
+            enter.discard(k)
+            dfs(k)
+        order.appendleft(node)
+        state[node] = BLACK
+
+    while enter: dfs(enter.pop())
+    return order
+
+# check how it works
+print topological(graph1)
+print topological(graph2)
+try: topological(graph3)
+except ValueError: print "Cycle!"

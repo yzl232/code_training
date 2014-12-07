@@ -37,15 +37,15 @@ class Solution:
         o4 = self.orient(q1, q2, p2)
         if o1!=o2 and o3!=o4: return True  #general case  方向不同的时候，一定相交。  包含了所有不在同一直线的case。
         #特殊情况。这里只是同一直线的情况。(colinear)
-        if o1==o2==o3==o4==0 and self.onSegment(p1, q1, p2): return True  #special cases
-        if o1==o2==o3==o4==0 and self.onSegment(p1, q2, p2): return True
-        if o1==o2==o3==o4==0 and self.onSegment(q1, p1, q2): return True
-        if o1==o2==o3==o4==0 and self.onSegment(p1, p2, q2): return True
+        if o1==0 and self.onSegment(p1, p2, q1): return True  #special cases
+        if o2==0 and self.onSegment(p1, p2,q2): return True
+        if o3==0 and self.onSegment(q1, q2, p1): return True
+        if o4==0 and self.onSegment(q1, q2, p2): return True
         return False
 
 #点q在线段pr上。
-    def onSegment(self, p, q, t):
-        if min(p[0], q[0])<=t[0]<=max(p[0], t[0])  and  min(p[1], q[1])<=t[1]<=max(p[1], t[1]): return True
+    def onSegment(self, p1,p2, q):
+        if min(p1[0], p2[0])<=q[0]<=max(p1[0], p2[0])  and  min(p1[1], p2[1])<=q[1]<=max(p1[1], p2[1]): return True
         return False
 
     def isInswide(self, polygon, p):

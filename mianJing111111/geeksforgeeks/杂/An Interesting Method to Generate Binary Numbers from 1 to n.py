@@ -16,7 +16,7 @@ Input: n = 5
 Output: 1, 10, 11, 100, 101
 
 #简单的说，就是去掉了0开始的部分，只有1开始的部分
-
+#1, 2, 4, 8,
 每次在前面的位数上加0加1
 
 A simple method is to run a loop from 1 to n, call decimal to binary inside the loop.
@@ -34,7 +34,7 @@ Following is an interesting method that uses queue data structure to print binar
 '''
 class Solution:
     def biNumbers(self, n):
-        result = ['1']; cur=result
+        ret = ['1']; cur=ret
         k = int(math.log(n, 2))
         for i in range(k):
             old = cur[:]
@@ -42,7 +42,8 @@ class Solution:
             for j in old:
                 cur.append(j+'0')
                 cur.append(j+'1')
-            result+=cur
-        return result[n-1]
+            ret+=cur
+        return ret[:n]
 s = Solution()
 print s.biNumbers(2)
+print s.biNumbers(5)

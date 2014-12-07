@@ -11,7 +11,7 @@ class flatten implements iterator{
 # I am not comfortable wring Java right now.  Do you mind me writing normal python code ?  I feel the idea is the similar.
 
 #用stack肯定是面试官喜欢的做法。 这肯定是正确的。
-class DeepIterator:
+class DeepIterator: #代码不长。可以背下
     def __init__(self, l):
         self.stack = [l]
         self.advanceToNext()
@@ -27,8 +27,7 @@ class DeepIterator:
         return result
 
     def advanceToNext(self):
-        if self.stack:  #加入第一个一直是iterator。就一直解开。
-            if  isinstance(self.stack[-1], list):
+        if self.stack and isinstance(self.stack[-1], list):  #加入第一个一直是iterator。就一直解开。
                 cur = self.stack.pop()
                 self.stack+=cur[::-1]
                 self.advanceToNext()
@@ -56,7 +55,7 @@ class Iterator:
         self.p+=1
         return self.arr[self.p]
 
-
+#这个应当不是面试官喜欢的解法。
 class myIterator(Iterator):
     def __init__(self, iterat):
         self.arr = self.flatten(iterat)
@@ -78,8 +77,7 @@ class Solution:
     def flatten(self, arr):
         result = []
         for i in arr:
-            if isinstance(i, list):
-                result+=self.flatten(i)
+            if isinstance(i, list):  result+=self.flatten(i)
             else:  result.append(i)
         return result
 s = Solution()

@@ -38,7 +38,7 @@ UCS-4 range (hex.) UTF-8 octet sequence (binary)
 
 
 
-
+最多6个byte
 
 UTF-8 encoding scheme is described below:
 
@@ -49,39 +49,30 @@ UTF-8 encoding scheme is described below:
 11110XXX = this is the start of a 4-byte rune.
 111110XX = this is the start of a 5-byte rune.
 1111110X = this is the start of a 6-byte rune.
-11111110 = this is the start of a 7-byte rune.
-11111111 = this is the start of a 8-byte rune.
 
 For example, a 3-byte rune would be 1110XXXX 10XXXXXX 10XXXXXX.
 
 Write a function that decides whether a given byte array (or string) is
 valid UTF-8 encoded text.
 '''
-
+#虽然只是普通的O(n)。 但还是有点难。
 class Solution:
-    def isUTF_8(self, arr):
+    def isUTF_8(self, s):  #string
         nBites = 0
         bAllAscii =True #如果全部都是ASCII, 说明不是UTF-8.  这是一种特殊情况。 单独列出。
-        for i in range(len(arr)):
-            chVal = ord(arr[i])
+        for ch in s:
+            chVal = ord(ch)
             if chVal&0b10000000 !=0: #判断是否ASCII编码,如果不是,说明有可能是UTF-8,ASCII用7位编码,但用一个字节存, 0x80=10000000
                 bAllAscii = False
-            if nBites==0:#如果不是ASCII码,应该是多字节符,重新计算字节数
+            if nBites==0:#如果不是ASCII码,应该是多字节符.  每次完了需要重新计算字节数  后面对应nBites-=1
                 if chVal&0b10000000 ==0: continue
-                if chVal>=0b10000000:   #
-                    if 0b11111100 <=chVal <=  0b11111101:
-                        nBites=6
-                    elif chVal>=0b11111000:
-                        nBites=5
-                    elif chVal>=0b11110000:
-                        nBites=4
-                    elif chVal>=0b11100000:
-                        nBites=3
-                    elif chVal>=0b11000000:
-                        nBites=2
-                    else:
-                        return False
-                    nBites-=1
+                if 0b11111100 <=chVal <=  0b11111101:   nBites=6
+                elif chVal>=0b11111000:   nBites=5
+                elif chVal>=0b11110000:    nBites=4
+                elif chVal>=0b11100000:    nBites=3
+                elif chVal>=0b11000000:    nBites=2
+                else:    return False  #比较奇怪。  0b1xxx不是valid的. 10xxxxxx只能是多字节符的非首字节,
+                nBites-=1   #
             else:
                 if chVal&0b11000000 != 0b10000000: return False#//多字节符的非首字节,应为 10xxxxxx
                 nBites-=1

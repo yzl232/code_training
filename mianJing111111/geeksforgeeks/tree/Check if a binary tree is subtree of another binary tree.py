@@ -92,14 +92,11 @@ class Solution:  #O(n)
     # @param root, a tree node
     # @return a list of integers
     def inorderTraversal(self, a, small):
-        self.inResult = [];  self.preResult = []
-        self.inorder(a)
-        self.preorder(a)
-        aIn = self.inResult[:]
-        aPre = self.preResult[:]
-        self.inResult = [];  self.preResult = []
-        self.inorder(small)
-        self.preorder(small)
+        self.inResult = []; self.preResult = []
+        self.inorder(a); self.preorder(a)
+        aIn = self.inResult[:]; aPre = self.preResult[:]
+        self.inResult =[]; self.preResult=[]
+        self.inorder(small); self.preorder(small)
         return self.inResult in aIn and self.preResult in aPre
 
     def inorder(self, root):
@@ -137,3 +134,5 @@ class Solution92:  #效率不高的做法  O(n2)
         if not a: return False
         if self.isSameTree(a, small): return True
         return self.isSubTree(a.left, small) or self.isSubTree(a.right, small)
+
+#用递归来做，都是特殊case加上recursion

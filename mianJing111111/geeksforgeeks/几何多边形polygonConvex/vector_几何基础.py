@@ -44,9 +44,9 @@ determinant: ad - bc
 '''
 class VectorOperations:
     def dot(self, a, b, c):
-        ba = [a[0]-b[0], a[1] - b[1]]
-        bc = [c[0]-b[0], c[1]-b[1]]
-        return ba[0]*bc[0]+ba[1]*bc[1]
+        ab = [b[0]-a[0], b[1]-a[1]]
+        ac = [c[0]-a[0], c[1]-a[1]]
+        return ab[0]*ac[0]+ab[1]*ac[1]
 
 # AB x AC  注意我这里没有写AB X BC
     def cross(self, a, b, c):
@@ -60,14 +60,14 @@ class VectorOperations:
     def linePointDistance(self, a, b, c, isSegment):
         dis = 1.0*self.cross(a, b, c)/self.distance(a, b)
         if isSegment:
-            dot1 = self.dot(a, b, c)  #a, b, c大于90度
+            dot1 = self.dot(b, a, c)  #a, b, c大于90度
             if dot1<=0: return self.distance(b, c)  #b, c 2点的距离
-            dot2 = self.dot(b, a, c)  #b, a, c 大于90度
+            dot2 = self.dot(a, b, c)  #b, a, c 大于90度
             if dot2<=0: return self.distance(a, c) #a, c   2点距离。  大于90度
         return dis
 
     def polygonArea(self, p):  #求多边形面积。牛逼。
-        return abs(sum(self.cross((p[0], p[i], p[i+1])) for i in range(1, len(p)-1)))/2.0
+        return abs(sum(self.cross((p[0], p[i], p[i+1])) for i in range(1, len(p)-1)))/2.0  #只要求cross就可以了。几行代码
 
 '''
                   b
@@ -85,7 +85,7 @@ Consider the non-convex polygon below, with 5 points. To find its area we are go
 '''
 
 '''
-点乘
+cross product
 ab旋转到ac. 如果是clockwise的角度更近。 就是正。 否则负数
 
          b

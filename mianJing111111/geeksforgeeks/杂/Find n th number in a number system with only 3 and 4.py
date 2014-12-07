@@ -22,9 +22,8 @@ Given a number system with only 3 and 4. Find the nth number in the number syste
 #  log(n)  取决于二进制的位数
 class Solution:
     def find(self, n):  #转换为二进制来做就好。
-        divider =2**(int(math.log(n, 2)))  # math.log(n,2 ) 与 math.log(n, 2)写法一样。
-        remain = n%divider      #转换为二进制来做就好。
-        t= list(bin(remain+1)[2:])
+        r = n-2**(int(math.log(n, 2)))      #转换为二进制来做就好。
+        t= list(bin(r+1)[2:])   # math.log(n,2 ) 与 math.log(n, 2)写法一样。
         return ''.join([chr(ord(ch)+3)  for ch in t])
 s = Solution()
 print s.find(14)

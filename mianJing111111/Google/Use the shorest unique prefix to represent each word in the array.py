@@ -27,32 +27,32 @@ shorest unique prefix
 如果count==1. 找到最短的了。返回。
 '''
 _end = '_end_'
+_cnt = '_count_'
 class Trie:
     def makeTrie(self, words):
-        root = dict()
+        root = {}
         for word in words:
             self.insert(word, root)
         return root
 
-    def insert(self, word, root={}):  #这两个函数用的多
+    def insert(self, word, root):  #这两个函数用的多
         cur = root
         for ch in word:
             if ch not in cur:
                 cur[ch] = {}
-                cur[ch]['count']=0
-            cur[ch]['count']+=1
+                cur[ch][_cnt]=0
+            cur[ch][_cnt]+=1
             cur = cur[ch]
         cur[_end] = _end
 
     def getPrefix(self, trie, word):
-        result = ''
-        cur = trie
+        ret = '';   cur = trie
         for ch in word:
-            if ch not in cur:  return False  #word不在trie中。 异常。
+            if ch not in cur: return
+            ret+=ch
             cur = cur[ch]
-            if cur['count']>=2: result+=ch
-            elif cur['count']==1: return result+ch
-        return result
+            if cur[_cnt]==1: return ret
+
 t = Trie()
 b = t.makeTrie(["the", "a", "there", "answer", "any", "by", "bye", "their"])
 print b

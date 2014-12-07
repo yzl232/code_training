@@ -17,23 +17,22 @@ slow red fox
 slow red dog
 '''
 
-
+#稍微变化
 
 input_list = [['quick', 'slow'], ['brown', 'red'], ['fox', 'dog']]
 class Solution:
-    def printCombinations(self, inputList):
-        self.result = []
-        self.combinations('', input_list)
-        for i in self.result:
+    def printCombinations(self, words):
+        self.ret = []
+        self.dfs('', words)
+        for i in self.ret:
             print i
 
-    def combinations(self, tmpResult, input):
-        if not input:
-            self.result.append(tmpResult[1:])
+    def dfs(self, tmpR, c):
+        if not c:
+            self.ret.append(tmpR[1:])
             return
-        items = input[0]
-        for item in items:
-            self.combinations(tmpResult + ' ' + item, input[1:])
+        for w in c[0]:
+            self.dfs(tmpR + ' ' + w, c[1:])
 
 s = Solution()
 print s.printCombinations(input_list)

@@ -28,19 +28,21 @@ Case 2: n >= 10 Find all factors of n which are between 2 and 9 (both inclusive)
 Store all found factors in an array. The array would contain digits in non-increasing order, so finally print the array in reverse order.
 
 
-数字题目好多brute force
+比暴力法要快很多直接从因子， factor入手。
 
 贪心法：    从9开始，尝试是不是factor
+9~2.  这样子
 '''
 class Solution:
     def finsSmallest(self, n):
+        if n<10: return n+10    #题目的意思看来是最少两位数
         ret = []
-        if n<10: return n+10
         for i in range(9, 1, -1):
             while n%i==0:
                 n /=i
                 ret.append(i)
-        if n>10:  print "Not possible"
+        if n!=0:  print "Not possible"
         return ret[::-1]
 s = Solution()
 print s.finsSmallest(100)
+print s.finsSmallest(1000)

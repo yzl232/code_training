@@ -14,6 +14,8 @@ i 是 starting  pointer
 
 
 #这个方法的牛逼在于2可以直接改成k就能用. . 可以直接改成len(count)>k:
+
+# G家的题目
 '''
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s):

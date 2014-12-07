@@ -21,8 +21,8 @@ class Solution:
 
 class Solution2:
     def find_Ancestor2(self, p, q):
-        h1 = self.getHeight(p)
-        h2 = self.getHeight(q)
+        h1 = self.getH(p)
+        h2 = self.getH(q)
 
         if h1> h2:
             h1, h2 = h2, h1
@@ -37,12 +37,12 @@ class Solution2:
             p = p.parent
             q = q.parent
 
-    def getHeight(self, p):
-        height = 0
+    def getH(self, p):
+        h = 0
         while p:
-            height+=1
+            h+=1
             p = p.parent
-        return height
+        return h
 # O(1) and O(h)
 #直接写最优解就好了。  第一种解法提一下就好。
 
@@ -86,11 +86,11 @@ Given a binary tree (not a binary search tree) and two values say n1 and n2, wri
 
 #最优解
 class SolutionRecursin:
-    def findAncestor(self, root, p, q):
-        if not root: return
-        if root == p or root == q: return root
+    def findAncestor(self, root, p, q):        #和findlevel  search的题目是有点像的, 往下seach x ，  往下search p, q
+        if not root: return  #没找到
+        if root == p or root == q: return root  #没找到
         l = self.findAncestor(root.left, p, q)
         r = self.findAncestor(root.right, p, q)
         if l and r: return root  #2个都找到。在root
-        if l: return l  #找到一个。在左边
-        else: return r  #找到一个。在右边
+        if l: return l  #找到一个。都在左边      .
+        else: return r  #找到一个。都在右边

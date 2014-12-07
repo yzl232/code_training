@@ -28,24 +28,22 @@ class Solution:
     def solve(self, board):
         if board == []: return
         r = len(board); c = len(board[0])
-        candidates = set([])
+        pre = set([])
         for i in range(r):
             for j in range(c):
-                if board[i][j] == 'G': candidates.add((i, j))
+                if board[i][j] == 'G': pre.add((i, j))
         count = 1
-        while len(candidates)>0:
-            current = set([])
-            for can in candidates:
-                i = can[0]; j = can[1]
-                if i>0 and board[i-1][j] == '0': current.add((i-1, j))
-                if i<r-1 and board[i+1][j] == '0': current.add((i+1, j))
-                if j>0 and board[i][j-1] == '0': current.add((i, j-1))
-                if j<c-1 and board[i][j+1] == '0': current.add((i, j+1))
-            for can in current:
-                i = can[0]; j = can[1]
+        while len(pre)>0:
+            cur = set([])
+            for w in pre:
+                i = w[0]; j = w[1]
+                for d in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
+                    if 0<=d[0]<=r-1 and 0<=d[1]<=c-1 and board[d[0]][d[1]]=='0': cur.add(d)
+            for w in cur:
+                i = w[0]; j = w[1]
                 board[i][j] = str(count)
             count+=1
-            candidates = current
+            pre = cur
             print matrix
 
 s = Solution()

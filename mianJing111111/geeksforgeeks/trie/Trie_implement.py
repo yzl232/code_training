@@ -13,23 +13,19 @@ has
 '''
 
 _end = '_end_'
-class Trie:
-    def __init__(self):
-        self.root = {}
-
+class Trie:   #30多行。 主要是hashtable和DFS。   不难
     def makeTrie(self, words):
-        root = self.root
+        root = {}
         for word in words:
-            self.insert(word)
+            self.insert(word, root)
         return root
 
-    def insert(self, word):  #这两个函数用的多
-        cur = self.root
+    def insert(self, word, root):  #这两个函数用的多
+        cur = root
         for ch in word:
             if ch not in cur:   cur[ch] = {}
             cur = cur[ch]
         cur[_end] = _end  #end的value可以用来存储东西。。。
-
 
     def inTrie(self, trie, word):
         branch = self.retrieveBranch(trie, word)
@@ -38,12 +34,12 @@ class Trie:
 
 
     def retrieveBranch(self, trie, word):#这两个函数用的多
-        curDict = trie; result = []
-        for l in word:
-            if l in curDict:
-                curDict = curDict[l]
-            else: return None
-        return curDict
+        cur = trie
+        for ch in word:
+            if ch not in cur: return    #和insert基本上一样
+            cur = cur[ch]
+        return cur
+
 
 
     def startWith(self, trie, prefix):  #太适合用recursion了。 想了半天，用recursion取最合适。 也不用修改原来的结构。
@@ -52,12 +48,11 @@ class Trie:
         self.dfs(branch, prefix)     #dfs寻找所有的。
         return self.result
 
-    def dfs(self, trie, tmpWord):
+    def dfs(self, trie, cur):
         if not trie:  return
         for key in trie:
-            if key == _end:
-                self.result.append(tmpWord)
-            else: self.dfs(trie[key], tmpWord+key)
+            if key == _end:  self.result.append(cur)
+            else:   self.dfs(trie[key], cur+key)
 
 
 
