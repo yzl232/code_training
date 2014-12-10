@@ -9,8 +9,8 @@ Given a number having only one ‘1’ and all other ’0’s in its binary repr
 '''
 class Solution:
     def findPos(self, n):
-        cont = 0
+        pos = 0
         while n:
             n = n>>1
-            cont+=1
-        return cont
+            pos+=1
+        return pos

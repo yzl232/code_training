@@ -16,6 +16,9 @@ Write a function that takes 2 strings , search returns true if any anagram of st
 
 '''
 
+#anagram.  这是与strstr不同的地方
+#G家的题目吧
+
 class Solution:
     def isprime(n):
         if n<=1: return False

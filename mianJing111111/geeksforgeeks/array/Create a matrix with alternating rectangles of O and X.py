@@ -42,34 +42,23 @@ X X X X X X X
 class Solution:
     # @return a list of lists of integer
     def generateMatrix(self, m, n):
-        digit = 'X'
-        result = [[0 for i in range(n)] for j in range(m)]
-        k = 0
+        digit = 'X'; k = 0
+        ret = [[0 for i in range(n)] for j in range(m)]
         while True:
             if n==0 or m==0:
-                return result
+                return ret
             if m==1:
-                for i in range(n):
-                    result[0+k][i+k]= digit
-                return result
+                for i in range(n):    ret[0+k][i+k]= digit
+                return ret
             if n==1:
-                for i in range(m):
-                    result[i+k][0+k]= digit
-                return result
-
-            for i in range(n-1):
-                result[0+k][i+k] = digit
-            for i in range(m-1):
-                result[i+k][n-1+k] = digit
-            for i in range(n-1):
-                result[m-1+k][n-1-i+k] = digit
-            for i in range(m-1):
-                result[m-1-i+k][0+k] = digit
+                for i in range(m):    ret[i+k][0+k]= digit  #彼此对称
+                return ret
+            for i in range(n-1):  ret[ 0+k][ i+k] = digit
+            for i in range(m-1):  ret[ i+k][ n-1+k] = digit
+            for i in range(n-1, 0, -1):  ret[ m-1 +k][ i+k] = digit     #注意到四个的两两对称，可以检查和加速写
+            for i in range(m-1, 0, -1):   ret[ i+k][ 0+k] = digit
             digit = 'O' if digit=="X" else 'X'
-            n-=2
-            m-=2
-            k+=1
-        return result
+            n-=2; m-=2;  k+=1
 s = Solution()
 m = s.generateMatrix(6, 7)
 for i in range(len(m)):

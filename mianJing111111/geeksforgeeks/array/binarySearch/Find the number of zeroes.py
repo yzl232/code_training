@@ -27,15 +27,15 @@ Output: 0
 
 class Solution:
     def isMajority(self, arr):
-        l = self.bs(arr, 0)
-        if l==-1: return 0
-        return len(arr)-l
+        r = self.rightS(arr, 1)
+        if r==-1: return 0
+        return r+1
 
-    def bs(self, arr, x):
+    def rightS(self, arr, x):
         l=0; h = len(arr)-1
         while l<=h:
             m = (l+h)/2
-            if (m==0 or arr[m-1]<x) and arr[m]==x: return m
-            elif arr[m]<x: l = m+1
-            else:  h=m-1    #其他时候，相等的时候，也是在左边
-        return -1
+            if (m==len(arr)-1 or arr[m+1]!=x) and arr[m]==x: return m
+            elif arr[m]>x:  h=m-1
+            else:   l=m+1
+        return -1  #其他时候，相等的时候，也是在右边

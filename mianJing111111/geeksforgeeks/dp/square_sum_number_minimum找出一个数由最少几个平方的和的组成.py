@@ -11,7 +11,7 @@ class Solution:
         dp = [i for i in range(num+1)]
         for i in range(2, num+1):
             if i== (int(i**0.5))**2:  dp[i] = 1
-            else:     dp[i] = min( dp[j]+dp[i-j] for j in range(0, i))
+            else: dp[i]=min(dp[j]+dp[i-j] for j in range(1, i/2+1))
         return dp[-1]
 s = Solution()
 print s.minNum(14)

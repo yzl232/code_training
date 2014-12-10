@@ -42,21 +42,20 @@ Output: A Balanced BST
 另外不用新建node。 修改本身的node
 '''
 class Solution:
-    head = None
     def sortedListToBST(self, head):
-        current, length = head, 0
-        while current != None:
-            current, length = current.right, length + 1
-        self.head = head
-        return self.sortedRecur(0, length - 1)
+        cur, cnt = head, 0
+        while cur != None:
+            cur, cnt = cur.right, cnt + 1
+        self.h = head
+        return self.help(0, cnt - 1)
 
-    def sortedRecur(self, start, end):
+    def help(self, start, end):
         if start > end:
             return None
         mid = (start + end) / 2
-        left = self.sortedRecur(start, mid - 1)  #最左边的left必然是None。  start 与 mid相等
-        root = self.head    #与single list的不同
+        left = self.help(start, mid - 1)  #最左边的left必然是None。  start 与 mid相等
+        root = self.h    #与single list的不同
         root.left = left
-        self.head = self.head.right
-        root.right = self.sortedRecur(mid + 1, end)
+        self.h = self.h.right
+        root.right = self.help(mid + 1, end)
         return root

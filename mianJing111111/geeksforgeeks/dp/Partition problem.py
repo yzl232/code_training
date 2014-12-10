@@ -22,16 +22,18 @@ Following are the two main steps to solve this problem:
 The first step is simple. The second step is crucial, it can be solved either using recursion or Dynamic Programming.
 '''
 #递归
-class Solution:
+#比较像那个找硬币问题. 那个是求种类， +号。 这个求True, False。 用or
+#不过那个可以重复使用。 是self.recur(arr[:], s-arr[0])
+class Solution: #才几行。 背下
     def findPartition(self, arr):
         s = sum(arr)
         if s%2!=0: return False
         return self.recur(arr, s/2)
 
     def recur(self, arr, s):  #找有没有set和为s
+        if s<0: return False
         if s==0: return True
         if not arr: return False
-        if arr[0] > s: return self.recur(arr[1:], s) #last element is greater than sum, then ignore it
         return self.recur(arr[1:], s) or self.recur(arr[1:], s-arr[0])
 '''
 else, check if sum can be obtained by any of the following
@@ -44,11 +46,12 @@ class Solution:
     def findPartition(self, arr):
         s = sum(arr); n=len(arr)
         if s%2!=0: return False  #i表示sum，  j表示arr
-        dp = [[False for i in range(n+1)] for j in range(s/2+1)]
+        s = s/2
+        dp = [[False for i in range(n+1)] for j in range(s+1)]
         for i in range(n):   dp[0][i] = True     #sum 为0都是正确的
-        for i in range(1, s/2+1):
+        for i in range(1, s+1):
             for j in range(1, n+1):
                 dp[i][j] = dp[i][j-1]  # exclude
-                tmp = i-arr[j-1]   #
-                if tmp>=0:   dp[i][j] = dp[i][j] or dp[tmp][j-1]
+                t = i-arr[j-1]   #
+                if t>=0:   dp[i][j] = dp[i][j] or dp[t][j-1]
         return dp[-1][-1]

@@ -3,17 +3,17 @@
 Design an algorithm to find the kth number such that the only prime factors are 3,5, and 7
 '''
 class Solution:
-    def primeN(self, n):
-        count3 = count5 = count7 = 0
-        result = [1]
+    def primeN(self, n):  #用了3个pointer来记录
+        c3 = c5 = c7 = 0
+        ret = [1]
         for i in range(1, n+1):
-            m = min(result[count3]*3, result[count5]*5, result[count7]*7)
-            result.append(m)
-            if m == result[count3]*3: count3+=1
-            if m == result[count5]*5: count5+=1
-            if m== result[count7]*7: count7+=1
-            #print '%d th element, %d, count3:%d, count5:%d, count7: %d' % (i, result[i], count3, count5, count7)
-        return result[n]
+            m = min(ret[c3]*3, ret[c5]*5, ret[c7]*7)
+            ret.append(m)
+            if m == ret[c3]*3: c3+=1
+            if m == ret[c5]*5: c5+=1
+            if m== ret[c7]*7: c7+=1
+            #print '%d th element, %d, c3:%d, c5:%d, c7: %d' % (i, ret[i], c3, c5, c7)
+        return ret[n]
 
 s = Solution()
 print s.primeN(15)

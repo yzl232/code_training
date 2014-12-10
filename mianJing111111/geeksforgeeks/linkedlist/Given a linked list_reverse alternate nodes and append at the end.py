@@ -35,7 +35,7 @@ class Solution:
 
     def reverseAlternate(self, head):
         if not head or not head.next or not head.next.next: return head
-        cur = head; second = None
+        cur = head;  second = None
         while cur and cur.next:
             tmp = cur.next
             cur.next = tmp.next
@@ -43,4 +43,4 @@ class Solution:
             second = tmp
             pre = cur
             cur = cur.next
-        pre.next  = second
+        pre.next  = second    #两个list最后连接上

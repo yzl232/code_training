@@ -18,19 +18,20 @@ Benifits :
 
 '''
 class Solution: #return head
-    def insrt(self, head, node):
-        if not head:   return node
-        cur = head
-        while cur.next != head:  cur = cur.next
-        tail = cur
-        if node.val <= head.val:  #tail也要连上circular
-            node.next = head
+    def insrt(self, h, node):  #circular就是要注意尾巴的连接
+        if not h:
+            node.next = node
+            return node
+        if node.val <=h.val:
+            tail = h
+            while tail.next != h:  tail = tail.next  #找tail
+            node.next = h
             tail.next = node
             return node
         else:
-            cur = head
-            while cur.next != head and cur.next.val<node.val:
+            cur = h
+            while cur.next != h and cur.next.val<node.val:
                 cur = cur.next
             node.next = cur.next
             cur.next = node
-            return head
+            return h

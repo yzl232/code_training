@@ -33,7 +33,7 @@ Output: 122
 
 class Solution:
     def maxPathSum(self, arr1, arr2):
-        result=0; s1=0; s2=0
+        ret=0; s1=s2=0
         m  = len(arr1); n = len(arr2)
         i=j=0
         while i<m and j<n:
@@ -44,21 +44,16 @@ class Solution:
                 s2+=arr2[j]
                 j+=1
             else:
-                result+=max(s1, s2)  #关键是在于s1, s2选择。比较。非常巧妙
-                s1=0
-                s2=0
-                while i<m and j<n and arr1[i]==arr2[j]:
-                    result+=arr1[i]
-                    i+=1
-                    j+=1
+                ret+=max(s1, s2)+arr1[i]  #关键是在于s1, s2选择。比较。非常巧妙
+                s1=s2=0
+                i+=1; j+=1
         while i<m:
             s1+=arr1[i]
             i+=1
         while j<n:
             s2+=arr2[j]
             j+=1
-        result += max(s1, s2)
-        return result
+        return ret + max(s1, s2)
 
 s =Solution()
 print s.maxPathSum([2, 3, 7, 10, 12, 15, 30, 34], [1, 5, 7, 8, 10, 15, 16, 19])

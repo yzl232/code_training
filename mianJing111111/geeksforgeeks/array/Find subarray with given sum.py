@@ -17,12 +17,10 @@ Output: No subarray found
 #cumulative sum 变体
 class Solution:
     def print0S(self, arr, target):  #非常好的代码。    cumulative sum
-        d = {0: [-1]}
-        s = 0
+        d = {0: -1};  s = 0
         for i in range(len(arr)):
             s+=arr[i]
-            if s-target in d:
-                print arr[d[s-target]+1:i+1]  #稍作修改
+            if s-target in d: print arr[d[s-target]+1:i+1]  #稍作修改
             d[s] = i     #key是cumulative sum, value index
 s = Solution()
 print s.print0S([1, 4, 20, 3, 10, 5], 33)

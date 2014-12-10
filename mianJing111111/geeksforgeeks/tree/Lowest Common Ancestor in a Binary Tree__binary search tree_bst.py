@@ -2,6 +2,8 @@
 '''
 这道题目败了很多次，强烈地显示了tree方面的不足
 
+另外变化非常多。 以下5个代码都需要掌握
+
 parent pointer的情况
 '''
 class Solution:
@@ -21,24 +23,17 @@ class Solution:
 
 class Solution2:
     def find_Ancestor2(self, p, q):
-        h1 = self.getH(p)
-        h2 = self.getH(q)
-
-        if h1> h2:
+        h1 = self.getH(p); h2=self.getH(q)
+        if h1<h2:
             h1, h2 = h2, h1
             p, q = q, p
-
-        # h2 is bigger
-        dh = h2 - h1
-        for i in range(dh):
-            q = q.parent
+        for i in range(h2-h1): q=q.parent
         while p and q:
-            if p == q: return p
-            p = p.parent
-            q = q.parent
+            if p==q: return p
+            p = p.parent;  q=q.parent
 
     def getH(self, p):
-        h = 0
+        h = 0   #找特殊情况。比如p==root,  很容易写
         while p:
             h+=1
             p = p.parent
@@ -52,29 +47,25 @@ class Solution2:
 
 '''
 Lowest Common Ancestor in a Binary Search Tree.
-这个是bst的情况  。 时间复杂度只要  O(h)。 用到stack recursion space  O(h)
+这个是bst的情况  。 时间复杂度只要  O(logN)。 用到stack recursion space
 
 只要是与bst相关的题目，就少不了比较val大小， start, end等等
 '''
 class Solution8:
-    def findlca(self, root, n1, n2):
+    def findlca(self, root, v1, v2):
         if not root: return
-        if root.val > n1 and root.val > n2:
-            return self.findlca(root.left, n1, n2)
-        if root.val < n1 and root.val <n2:
-            return self.findlca(root.right, n1, n2)
+        if root.val > v1 and root.val > v2:  return self.findlca(root.left, v1, v2)#都在右边
+        if root.val < v1 and root.val <v2:   return self.findlca(root.right, v1, v2)#都在左边
         return root
 
-#如果用iterative可以做到O(1) space  O(h) time
+#如果用iterative可以做到O(1) space  O(logN) time
 #很巧妙
-
 class Solution9:
-    def findLCA(self, root, n1, n2):
+    def findLCA(self, root, v1, v2):
         while root:
-            if root.val > n1 and root.val > n2:    root=root.left
-            elif root.val < n1 and root.val <n2: root=root.right
-            else: break
-        return root
+            if root.val>v1 and root.val>v2: root=root.left
+            elif root.val <v1 and root.val<v2: root=root.right
+            else: return root
 
 
 '''

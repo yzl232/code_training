@@ -24,9 +24,8 @@ L(“ABCDGH”, “AEDFHR”) = MAX ( L(“ABCDG”, “AEDFHR”), L(“ABCDGH�
 # 递归
 class Solution:
     def lcs(self, x, y):
-        m = len(x);  n = len(y)
-        if m==0 or n==0: return 0
-        if x[-1] == y[-1]: return 1+self.lcs(x[1:], y[1:])
+        if not x or not y: return 0
+        if x[0] == y[0]: return 1+self.lcs(x[1:], y[1:])
         else: return max(self.lcs(x, y[1:]),  self.lcs(x[1:], y))
 
 #dp
@@ -89,15 +88,15 @@ The maximum length Longest Common Suffix is the longest common substring.
 class Solution4:
     def longestCommonSubstring(self, x, y):
         m = len(x);   n = len(y)
-        result = 0
+        ret = 0
         dp = [ [0 for i in range(n+1)] for j in range(m+1)]
         for i in range(1, m+1):
             for j in range(1, n+1):
                 if x[i-1] == y[i-1]:
                     dp[i][j] =  dp[i-1][j-1]+1
-                    result = max(result, dp[i][j])
+                    ret = max(ret, dp[i][j])
                 else:   dp[i][j] = 0  #和 subsequence的不同在于这里
-        return result
+        return ret
 
 
 '''

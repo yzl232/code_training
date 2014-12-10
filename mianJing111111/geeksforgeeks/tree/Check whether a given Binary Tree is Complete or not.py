@@ -45,25 +45,24 @@ The following trees are examples of Non-Complete Binary Trees
 BFS
 
 注意看不通过的定义。 也有很多说complete就是满地意思。
+
+就是加上一个flag。表示不能再有leave了.  然后不需要ret。也不需要vals了，
 '''
 class Solution:
     def isComplete(self, root):
         if not root: return []
-        prev, res = [root], []
-        noMoreLeaves = False
+        prev = [root];  flg = False  # #if f==True, means we can not meet any more leaves.
         while prev:
-            cur, vals = [], []
+            cur = []
             for node in prev:
-                vals.append(node.val)
                 if node.left:
                     cur.append(node.left)
-                    if noMoreLeaves:   return False
-                else: noMoreLeaves = True
+                    if flg:   return False
+                else: flg = True
                 if node.right:
                     cur.append(node.right)
-                    if noMoreLeaves:  return False
-                else: noMoreLeaves = True
-            res.append(vals)
+                    if flg:  return False
+                else: flg = True
             prev = cur
         return True
 

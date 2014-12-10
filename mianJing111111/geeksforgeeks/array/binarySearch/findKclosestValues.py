@@ -29,40 +29,46 @@ sorted array显然要用binary search
 利用binary search 找到临界点。 然后左右扫描延伸。
 
 '''
-class Solution:
-    def bsearch(self, arr, val):
-        l = 0;  h = len(arr)-1
-        while l<h:
+class Solution:  #那个majority也有用到。
+    def leftS(self, arr, x):
+        l=0; h = len(arr)-1
+        while l<=h:
             m = (l+h)/2
-            if arr[m]==val:  return m
-            elif arr[m]>val: h = m-1
-            else:  l = m+1
-        return h
+            if (m==0 or arr[m-1]!=x) and arr[m]==x: return m
+            elif arr[m]<x: l = m+1
+            else:  h=m-1    #其他时候，相等的时候，也是在左边
+        return h   #返回较小德尔
 
-    def pickKclosest(self, arr, x, k):
-        n = len(arr)
-        result = []
-        l = self.bsearch(arr, x)
-        r = l+1
-        count = 0
-        if arr[l]==x:  l-=1
+    def rightS(self, arr, x):
+        l=0; h = len(arr)-1
+        while l<=h:
+            m = (l+h)/2
+            if (m==len(arr)-1 or arr[m+1]!=x) and arr[m]==x: return m
+            elif arr[m]>x:  h=m-1
+            else:   l=m+1
+        return l  #返回较大的
+
+
+    def pickKclosest(self, arr, x, k):   #它的意思是不包括x本身
+        n = len(arr); ret = []; count = 0
+        l = self.leftS(arr, x)
+        r = self.rightS(arr, x)
+        if arr[l]==x: l-=1
+        if arr[r]==x: r+=1
         while l>=0 and r<n and count<k:
             if abs(x-arr[l]) < abs(x-arr[r]):   #就是这一步比较关键。 找到差值更小的。并更新。count. 和pointer
-                result.append(arr[l])
-                l-=1
+                ret.append(arr[l])
+                l-=1; count+=1
             else:
-                result.append(arr[r])
-                r+=1
-            count+=1
+                ret.append(arr[r])
+                r+=1; count+=1
         while count<k and l>=0:
-            result.append(arr[l])
-            count+=1
-            l-=1
-        while count<k and r<len(arr):
-            result.append(arr[r])
-            count+=1
-            r+=1
-        return  result
+            ret.append(arr[l])
+            count+=1; l-=1
+        while count<k and r<n:
+            ret.append(arr[r])
+            count+=1;  r+=1
+        return  ret
 s = Solution()
 print  s.pickKclosest([12, 16, 22, 30, 35, 39, 42,
                45, 48, 50, 53, 55, 56],  35,  4)

@@ -31,14 +31,13 @@ class Solution:
     def findWater(self, r, c, x):
         if c>r: return
         glass = [0 for k in range((r+1)*r/2)]  #等差数列,
-        glass[0] = x; index = 0
+        glass[0] = x; p = 0
         for i in range(r):
-            if x==0: break
             for j in range(c):
-                x = glass[index]
-                glass[index] = 1 if x>=1 else x
+                x = glass[p]
+                glass[p] = 1 if x>=1 else x
                 x = x-1 if x>=1 else 0
-                glass[index+i] += x/2
-                glass[index+i+1] +=x/2
-                index+=1
-        return glass[r*(r-1)/2+c-1]
+                glass[p+i] += x/2
+                glass[p+i+1] +=x/2
+                p+=1
+        return glass[r*(r-1)/2+c-1]  #因为从0开始。所以最后减一

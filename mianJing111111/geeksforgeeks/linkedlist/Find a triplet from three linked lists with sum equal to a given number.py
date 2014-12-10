@@ -10,11 +10,11 @@ Find a triplet from three linked lists with sum equal to a given number
 reverse一下chead
 '''
 class Solution:
-    def findTrip(self, ahead, bhead, chead, target):
-        chead = self.reverse(chead)  #c要逆序排序
-        a = ahead
+    def findTrip(self, h1, h2, h3, target):
+        h3 = self.reverse(h3)  #c要逆序排序
+        a = h1
         while a:
-            b = bhead; c = chead
+            b = h2; c = h3
             while b and c:
                 s = a.val+b.val+c.val
                 if s==target: return True

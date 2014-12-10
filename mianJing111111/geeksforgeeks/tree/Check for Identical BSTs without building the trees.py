@@ -46,26 +46,26 @@ You can use the stack based approach for finding the next greater and smaller el
 class Solution:
     def nge(self, arr):
         if not arr: return
-        stack = [arr[0]];  result = [];  d={}  #顺序是乱得。 用hashmap可以保存好顺序。
-        for i in range(1, len(arr)):
-            cur = arr[i]
-            while stack and stack[-1]<cur: #发现了一个比之前都要大，不断pop
-                d[stack.pop()]=cur  #pop出来的都是
-            stack.append(cur)
-        for i in arr:
-            if i in d: result.append(d[i])
-            else: result.append(None)  #没在hashmap的就是没有更大
-        return result
+        stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
+        for i in range(n):
+            x = arr[i]
+            while stack and stack[-1][0]<x: #发现了一个比之前都要大，不断pop
+                d[stack.pop()[1]]=x  #pop出来的都是
+            stack.append((x, i))   #存index, 以及值
+        ret = [None for i in range(n)]
+        for i in range(n):
+            if i in d:  ret[i]=d[i]
+        return ret
 
-    def nsr(self, arr):
+    def nse(self, arr):
         if not arr: return
-        stack = [arr[0]];  result = [];  d={}  #顺序是乱得。 用hashmap可以保存好顺序。
-        for i in range(1, len(arr)):
-            cur = arr[i]
-            while stack and stack[-1]<cur: #发现了一个比之前都要大，不断pop
-                d[stack.pop()]=cur  #pop出来的都是
-            stack.append(cur)
-        for i in arr:
-            if i in d: result.append(d[i])
-            else: result.append(None)  #没在hashmap的就是没有更大
-        return result
+        stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
+        for i in range(n):
+            x = arr[i]
+            while stack and stack[-1][0]<x: #发现了一个比之前都要大，不断pop
+                d[stack.pop()[1]]=x  #pop出来的都是
+            stack.append((x, i))   #存index, 以及值
+        ret = [None for i in range(n)]
+        for i in range(n):
+            if i in d:  ret[i]=d[i]
+        return ret

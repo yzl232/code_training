@@ -21,24 +21,22 @@ start, end.
 最开始end固定。 增大start， 看start有多少种
 然后end-1,  继续。看start多少种。
 '''
-
+#一个for 循环。一个while， 就是 3 sum的变体
 class Solution:
     def getCountTriangles(self, arr):
-        n = len(arr)
-        if n<3: return
-        arr.sort()
-        totalCount = 0;  curMaxPos = n-1
-        while curMaxPos>=2:
-            start=0; end = curMaxPos-1
-            while start<end:
-                if arr[start] + arr[end] <=arr[curMaxPos]:
-                    start+=1
+        if len(arr)<3: return 0
+        cnt=0; arr.sort()
+        for big in range(len(arr)-1, 1, -1):
+            l=0; r=big-1
+            while l<r:
+                if arr[l]+arr[r]<=arr[big]: i+=1
                 else:
-                    totalCount+= (end-start) #end固定了。 看start的种类
-                    end-=1
-            curMaxPos-=1
-        return totalCount
+                    cnt+=r-l
+                    r-=1
+        return cnt
+
 
 #比较巧妙。
 s = Solution()
 print s.getCountTriangles([10, 21, 22, 100, 101, 200, 300])
+#和那个count  平方数目的也很像

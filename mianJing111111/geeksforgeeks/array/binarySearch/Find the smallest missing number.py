@@ -20,7 +20,7 @@ Output: 8
 
 这道题的关键在于与本身的比较。
 '''
-#leetcode不是sorted, leetcode没有范围
+#leetcode不是sorted,  sorted可以做到logN。 没有sort就是O(n)  leetcode
 #sorted 用binary search
 class Solution:
     def findFirstMissing(self,  arr):
@@ -28,9 +28,8 @@ class Solution:
         while l<=h:
             if l!=arr[l]: return l  #重要
             m = (l+h)/2
-            if arr[m]>m: #在左半
-                h = m   #这里不是减一。
-            else:   l = m+1  #等于的话，在右半。
-        return h+1
+            if arr[m]>m: h = m  #在左半 #这里不是减一。因为arr[m]>m此时有可能是我们求得。
+            else:   l = m+1  #等于的话，在右半。  此时必须不是我们所求的
+        return len(arr)
 s = Solution()
 print s.findFirstMissing([0, 1, 2, 6, 9])

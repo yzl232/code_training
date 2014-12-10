@@ -22,15 +22,15 @@ How does the above algorithm work? Since we use arr[i]%k as index and add value 
 
 class Solution:
     def maxRepeating(self, arr, k):
-        for i in range(len(arr)):
-            arr[arr[i]%k] +=k       #出现次数最多的，加的最多.   利用%和/增加额外信息。  利用%作为index
-
-        big = arr[0]; result = 0
+        if not arr: return
+        for e in arr:   arr[e%k]+=k                      #出现次数最多的，加的最多.   利用%和/增加额外信息。  利用%作为index
+#本身的值来做index
+        big = arr[0]; ret = 0
         for i in range(1, len(arr)):
             if arr[i]>big:
                 big =arr[i]
-                result=i
-        return result
+                ret=i
+        return ret
 
     def findMaxRepeating(self, arr):
         return self.maxRepeating(arr, 8)

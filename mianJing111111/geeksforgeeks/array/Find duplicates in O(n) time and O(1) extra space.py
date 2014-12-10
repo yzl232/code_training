@@ -18,6 +18,6 @@ Use array elements as index
 class Solution:
     def findRep(self, arr):
         for i in range(len(arr)):
-            tmp = abs(arr[i])  #就是利用负号。 增加了信息
-            if arr[tmp]>0:  arr[tmp] = -arr[tmp]
-            else:  print tmp
+            t = abs(arr[i])
+            if arr[t]<0:   print t   #注意是print t.  t重复了。
+            else: arr[t]=-arr[t]

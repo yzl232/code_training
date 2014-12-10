@@ -12,16 +12,16 @@ Output: A1[] = {2, 2, 1, 1, 8, 8, 3, 5, 6, 7, 9}
 The code should handle all cases like number of elements in A2[] may be more or less compared to A1[]. A2[] may have some elements which may not be there in A1[] and vice versa is also possible.
 #和面经看到的有点像
 '''
-class Solution:
+class Solution:  #很简单的count次数就可以了。  然后添加
     def sortN(self, a1, a2):
-        d = {i:0 for  i in a2}; noInDict = []
-        for i in a1:
-            if i in d:  d[i]+=1
-            else: noInDict.append(i)
+        d = {x:0 for x in a2}
+        noInDict = []; ret = []
+        for x in a1:
+            if x in d:  d[x]+=1
+            else: noInDict.append(x)
         noInDict.sort()
-        ret = []
-        for i in a2:
-            ret +=[i]*d[i]
+        for x in a2:
+            ret +=[x]*d[x]
         return ret+noInDict
 s =Solution()
 print s.sortN([2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8], [2, 1, 8, 3] )

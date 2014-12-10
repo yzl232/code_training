@@ -31,6 +31,12 @@ The idea is to store mapping from given tree nodes to clone tre node in hashtabl
 和leetcode  list的题目类似。  hash或者临时改变结构
 
 第二种是最优解。
+
+
+#和leetcode都一样。
+hashmap:  1 复制node  2 连接random
+最优解： 1 复制node并插入  2 连接 random  3 断开
+
 '''
 
 class TreeNode:
@@ -44,23 +50,23 @@ class TreeNode:
 class Solution:
     def cloneTree(self, root):
         if not root:  return
-        self.hashmap = {}
+        self.d = {None:None} #处理空值的情况
         self.copyNode(root)
         self.connect(root)     #和leetcode类似。 两步。 copy, connect
-        return self.hashmap[root]
+        return self.d[root]
 
     def copyNode(self, root):
         if not root: return
-        self.hashmap[root] = TreeNode(root.val)   #复制
+        self.d[root] = TreeNode(root.val)   #复制
         self.copyNode(root.left)
         self.copyNode(root.right)
 
     def connect(self, root):
         if not root: return
-        tmp = self.hashmap[root]
-        if root.left:   tmp.left = self.hashmap[root.left]  #connect
-        if root.right:  tmp.right = self.hashmap[root.right]
-        if root.random:  tmp.random = self.hashmap[root.random]
+        t = self.d[root]
+        t.left = self.d[root.left]  #connect
+        t.right = self.d[root.right]
+        t.random = self.d[root.random]
         self.connect(root.left)
         self.connect(root.right)
 
@@ -68,31 +74,31 @@ class Solution:
 class Solution3:
     def cloneTree(self, root): #和leetcode 类似。 三步 copy, connect ，restore
         if not root: return    #都复制到原本的left
-        root1 = self.copyLRNode(root)
-        self.copyRandom(root, root1)
+        root1 = self.copyInsert(root)
+        self.connectRandom(root, root1)
         self.restore(root, root1)
         return root1
 
-    def copyLRNode(self, root):
+    def copyInsert(self, root):
         if not root: return
-        left = root.left
-        root.left = TreeNode(root.val)
-        root.left.left = left
-        if root.left: self.copyLRNode(left)
-        if root.right:  root.left.right = self.copyLRNode(root.right)
-        return root.left
+        left = root.left  #因为root存到left的位置， 所以要暂存left
+        r1 = TreeNode(root.val)
+        root.left = r1
+        r1.left = self.copyInsert(left)      #其实可以不用if判断
+        r1.right = self.copyInsert(root.right)
+        return r1
 
-    def copyRandom(self, root, root1):
+    def connectRandom(self, root, r1):
         if not root: return
-        if root.random: root1.random = root.random.left
-        if root1.left:  self.copyRandom(root1.left, root1.left.left)
-        if root1.right: self.copyRandom(root.right, root1.right)
+        if root.random: r1.random = root.random.left  #这个if还是必须有的。
+        if r1.left:  self.connectRandom(r1.left, r1.left.left)  #这里注意了！！！！ 必须有这个if
+        self.connectRandom(root.right, r1.right)
 
-    def restore(self, root, root1):
+    def restore(self, root, r1):
         if not root: return
-        if root1.left:
-            root.left = root1.left
-            root1.left = root1.left.left
-        else:   root.left = None
-        self.restore(root.left, root1.left)
-        self.restore(root.right, root1.right)
+        if r1.left:     #这个if还是必须有的。
+            root.left = r1.left
+            r1.left = r1.left.left
+        else:   root.left = None  #必须制空
+        self.restore(root.left, r1.left)
+        self.restore(root.right, r1.right)

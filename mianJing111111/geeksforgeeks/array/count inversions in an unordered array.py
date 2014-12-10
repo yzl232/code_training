@@ -13,7 +13,7 @@ The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
 
 class Solution:
     def merge2(self, part1, part2):#就增加了一行。
-        result = []; cnt=0
+        result = []
         i=j=0
         while i<len(part1) and j<len(part2): #就增加了一行。
             if part1[i]<=part2[j]:

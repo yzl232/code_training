@@ -2,6 +2,9 @@ class Operations:
     def __init__(self):
         pass
 
+    def addOne(self, a):
+        return -(~a)
+
     def negate(self, a):
         return ~a+1  #吊炸天
 

@@ -11,6 +11,8 @@ Suppose tree is represented by a linked list in same way, how do we convert this
 
 
 geeks这道题目是level order的变体.   用BFS
+不需要vals。   区别就在于， 多了建立树，以及连接left, right的过程
+另外while的标准变成了head
 '''
 
 class TreeNode:
@@ -26,7 +28,7 @@ class Solution:
         head = head.next
         prev= [root]
         while head:
-            cur, vals = [], []
+            cur = []
             for node in prev:
                 if head:
                     l = TreeNode(head.val)

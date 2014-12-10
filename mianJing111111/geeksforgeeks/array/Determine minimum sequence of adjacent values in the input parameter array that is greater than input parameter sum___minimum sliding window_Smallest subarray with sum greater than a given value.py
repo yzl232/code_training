@@ -56,7 +56,7 @@ class Solution:
 '''
 
 
-'''
+
 #O(n)的做法很巧妙
 class Solution3:
     def findShortest5(self, arr, target):
@@ -77,7 +77,7 @@ class Solution3:
                 windowLength-=1
             minLen = min(minLen, windowLength)
         return
-'''
+
 
 # sliding window
 '''

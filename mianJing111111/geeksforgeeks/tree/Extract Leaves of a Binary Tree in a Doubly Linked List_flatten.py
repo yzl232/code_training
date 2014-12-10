@@ -33,8 +33,9 @@ We need to traverse all leaves and connect them by changing their left and right
 
 取出所有的叶子。
 '''
+#这是flatteen的变体。 只考虑叶子  not root.left and not root.right
 class Solution:
-    def extractLeafList(self, root, head):
+    def extractLeafList(self, root):
         self.head = None
         self.dfs(root)
         return self.head
@@ -43,12 +44,12 @@ class Solution:
         if not root: return
         if not root.left and not root.right:
             root.right = self.head
-            if self.head:  self.head.left = root
+            if self.head:  self.head.left = root         #先right, 再left
             self.head = root
             return
         root.right = self.dfs(root.right)  #root作为parent的情况。   不好写。 背下吧.  解法简洁。不好写。
         root.left = self.dfs(root.left)
-        return root
+        return root  #只有不是叶子的时候，才返回root
 
 '''
 G算法题
@@ -56,15 +57,13 @@ G算法题
 '''
 class Solution9:
     def removeLeaves(self, root, head):
-        while root:
-            root = self.dfs(root)
-        return self.head
+        while root:  root = self.dfs(root)
 
     def dfs(self, root):
         if not root: return
         if not root.left and not root.right:
             print root.val
             return
-        root.right = self.dfs(root.right)  #root作为parent的情况。   不好写。 背下吧.  解法简洁。不好写。
         root.left = self.dfs(root.left)
+        root.right = self.dfs(root.right)
         return root

@@ -25,37 +25,31 @@ For union of two arrays, follow the following merge procedure.
 
 '''
 
+#union就是merge 2 arrays
 class Solution:
     def printUnion(self, arr1, arr2):
-        result = []
-        m = len(arr1);  n = len(arr2)
-        i=j=0
+        m=len(arr1); n=len(arr2)
+        i=j=0; ret=[]
         while i<m and j<n:
-            if arr1[i] < arr2[j]:
-                result.append(arr1[i])  #要去重复的话，每次append之前加一句if i>0 and result[-1]!=arr1[i]:
+            if arr1[i]<arr2[j]:
+                ret.append(arr1[i])
                 i+=1
-            elif arr2[j] < arr1[i]:
-                result.append(arr2[j])
-                j+=1
             else:
-                result.append(arr1[i])   #union   只要i+=1就可以打破平衡了。 够了。
-                i+=1     #union肯定是每次i+1, 或者j+1。不能同时
-        result+=arr1[i:]
-        result+=arr2[j:]
-        return result
+                ret.append(arr2[j])
+                j+=1
+        return ret+arr1[i:]+arr2[j:]
 
-#要去重复的话，每次append之前加一句if i>0 and result[-1]!=arr1[i]
+#要去重复的话，每次append之前加一句if i>0 and ret[-1]!=arr1[i]
     def printIntersection(self, arr1, arr2):
-        i=j=0; result = []
+        i=j=0; ret = []
         m = len(arr1);  n = len(arr2)
         while i<m and j<n:
             if arr1[i] < arr2[j]:  i+=1
             elif arr1[i]> arr2[j]: j+=1
             else:
-                result.append([arr1[i]])   #intersection, i j 都要+1.
-                i+=1
-                j+=1
-        return result
+                ret.append([arr1[i]])   #intersection, i j 都要+1.
+                i+=1;  j+=1       #相等的时候， i, j同时走。 这是没有错的
+        return ret
 s = Solution()
 print s.printIntersection([1, 2, 2, 4], [2, 2,  5, 8])
 print s.printUnion([1, 2, 2, 4], [2, 2, 5, 8])

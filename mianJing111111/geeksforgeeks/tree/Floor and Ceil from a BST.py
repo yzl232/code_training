@@ -18,6 +18,7 @@ C) Root data > key value, the ceil value may be in left subtree. We may find a n
 
 天花板， 地板
 '''
+#理一下逻辑.  也利用了return的值
 class Solution:
     def ceil(self, root, val):
         if not root: return
@@ -26,7 +27,8 @@ class Solution:
             return self.ceil(root.right, val)
         else:
             c=self.ceil(root.left, val)
-            return max(c, val)
+            if c: return c
+            return root.val
     # floor只是左右变换一下而已
     def floor(self, root, val):
         if not root: return
@@ -35,4 +37,5 @@ class Solution:
             return self.floor(root.left, val)
         else:
             f = self.floor(root.right, val)
-            return min(f, val)
+            if f: return f
+            return root.val

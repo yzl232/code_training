@@ -27,7 +27,7 @@ def isprime(n):
 
 #下面的方法。 O(sqrt(n))   复杂度要更好一些。
 
-class Solution:
+class Solution:  #因为只需要prime的factor。不是所有factors
     def primeFactors(self, n):
         result = []
         while n%2==0:
@@ -57,10 +57,12 @@ e.g. input : 20   output: 1 2 4 5 10 20
 
 class Solution22:
     def allFactors(self, n):
-        result = [1, n]
+        ret = set(1, n)
         for i in range(2, int(n**0.5)+1):
-            if n%i==0:    result+=[i, n/i]
-        return list(set(list(result)))
+            if n%i==0:
+                ret.add(i)
+                ret.add(n/i)
+        return ret
 
 #O(sqrt(n))
 

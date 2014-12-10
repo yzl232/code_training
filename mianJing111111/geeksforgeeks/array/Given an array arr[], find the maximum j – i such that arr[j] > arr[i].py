@@ -16,6 +16,7 @@ Examples:
   Input:  {6, 5, 4, 3, 2, 1}
   Output: -1
 '''
+#index与值。  用auxiliary array
 
 '''
 Method 2 (Efficient)
@@ -29,17 +30,15 @@ Method 2 (Efficient)
 class Solution:
     def find(self, arr):
         n =len(arr)
-        lMin = [None for i in range(n)]
+        lMin = [arr[i] for i in range(n)]
         rMax = lMin[:]
-        lMin[0]=arr[0];  rMax[-1]=arr[-1]
         for i in range(1, n):
             lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
         for i in range(n-2, -1, -1):
             rMax[i] = max(rMax[i+1], arr[i])
-        i=0; j=0; ret=-1
-        while j<n and i<n: #类似merge
-            if lMin[i]>rMax[j]:
-                i+=1
+        i=j=0; ret=-1  # 本来想让i=0,  j=n-1。 似乎还是不可以。必须都从0开始。 此时min是最坏情况。 max是最好情况
+        while j<n and i<n:         #类似  i=0,  j=n-1
+            if lMin[i]>=rMax[j]:  i+=1
             else: #find one
                 ret = max(ret, j-i)
                 j+=1  #找到合适的了。 继续往右。直到没有为止。
@@ -82,9 +81,8 @@ Solution:
 class Solution6:
     def find3(self, arr):
         n =len(arr)
-        lMin = [None for i in range(n)]
+        lMin = [arr[i] for i in range(n)]
         rMax = lMin[:]
-        lMin[0]=arr[0];  rMax[-1]=arr[-1]
         for i in range(1, n):
             lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
         for i in range(n-2, -1, -1):

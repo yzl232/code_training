@@ -1,5 +1,7 @@
 # encoding=utf-8
-
+'''
+Write a function which takes a number as input, verify if is an even number greater than 2 and also print atleast one pair of prime numbers.
+'''
 
 class Solution:
     def isPrime(self, n):

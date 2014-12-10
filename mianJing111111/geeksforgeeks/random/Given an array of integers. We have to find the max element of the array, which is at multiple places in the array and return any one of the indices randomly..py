@@ -66,13 +66,13 @@ import random
 class Solution:
     def randMax(self, arr):
         if not arr: return
-        ret=0;  maxN= arr[0]; count=1
+        ret = 0 ; cnt=0; maxN=arr[0]
         for i in range(1, len(arr)):
             if arr[i]>maxN:
-                maxN = arr[i]
+                cnt=1
                 ret = i
-                count=1
+                maxN = arr[i]
             elif arr[i]==maxN:
-                count+=1
-                if random.randint(1, count)==count:  ret=i  #prob 1/count
-        return ret
+                cnt+=1
+                if random.randint(1, cnt)==1: ret=i
+        return i

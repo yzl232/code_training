@@ -20,19 +20,19 @@ We strongly recommend you to minimize the browser and try this yourself first.
 
 The idea is to recursively traverse the given binary tree and while traversing, maintain a variable “level” which will store the current node’s level in the tree. If current node is leaf then check “level” is odd or not. If level is odd then return it. If current node is not leaf, then recursively find maximum depth in left and right subtrees, and return maximum of the two depths.
 
-就是level order。 比较简单
+就是level order。 比较简单 . 就是必须是leaf
 '''
 
 class Solution:
     # @param root, a tree node
     # @return a list of lists of integers
     def levelOrder(self, root):
-        self.result = -1
+        self.ret = -1
         self.dfs(root, 1)
-        return self.result
+        return self.ret
 
     def dfs(self, root, level):
         if not root: return
-        if level%2==1 and not root.left and not root.right:   self.result = max(self.result, level)
+        if level%2==1 and not root.left and not root.right:   self.ret = max(self.ret, level)
         self.dfs(root.left, level+1)
         self.dfs(root.right, level+1)

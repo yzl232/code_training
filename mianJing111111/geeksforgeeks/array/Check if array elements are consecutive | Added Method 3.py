@@ -36,12 +36,13 @@ class Solution:
 
 arr[arr[i] - min]] as a negative value. If we see a negative value again then there is repetition.
 '''
+#inplace
 class Solution3:  #假定没有负数出现
-    def isCon(self, arr):
+    def isCon(self, arr):  #利用index, 以及正负标记. 来check是否重复
         small = min(arr)
         if max(arr)-small+1!=len(arr): return False  #注意，置为负数时候，必须为arr[i]-minVal
         for i in range(len(arr)):
-            tmp = abs(arr[i])-small  #因为max-min = length。  所以abs(arr[i])-small一定OK
-            if arr[tmp]>0:  arr[tmp]=-arr[tmp]  #置为负数
-            else: return False #发现重复
+            t = abs(arr[i])-small  #因为max-min = length。  所以abs(arr[i])-small一定OK
+            if arr[t]<0: return False
+            arr[t]=-arr[t]
         return True

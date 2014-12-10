@@ -22,7 +22,7 @@ Mind some boundary cases, and hopefully this is clear enough for you guys.
 
 
 '''
-
+#     www.cs.toronto.edu/~robere/csc373h/files/A2-sol.pdf
 class Solution:
     def findSubsets(self, lines):
         n = len(lines)
@@ -32,14 +32,15 @@ class Solution:
             line = lines[i]
             points.append(line[0])
             points.append(line[1])
-        pointToOrder = {}  #hashmap to point and  order index
+        d = {}  #hashmap to point and  order index
         points.sort(self.pointCMP)
         for i in range(len(points)):
-            pointToOrder[points[i]] = i   #order index
+            d[points[i]] = i   #order index
         segs = [None for i in range(2*n)]
         for line in lines:
-            segs[pointToOrder[line[0]]] = pointToOrder[line[1]]
-            segs[pointToOrder[line[1]]] = -1   #这样子完成了另类的转换
+            p = d[line[0]]; q=d[line[1]]
+            segs[p] = d[q]
+            segs[q] = -1   #这样子完成了另类的转换
         return self.maxSetDP(segs)
 
     def maxSetDP(self, segs):
@@ -51,16 +52,15 @@ class Solution:
             if segs[i]==i+1:
                 dp[i][i+1] = 1
 
-        for length in range(2, n):
-            for i in range(n-length):
-                j = i+length
-                for start in range(i+1, j):
+        for j in range(n):
+            for i in range(j-2, -1, -1):
+                for start in range(i, j):  #start, end是一条线段。不能再用了
                     end = segs[start]
-                    if end>=0 and end <j:
-                        tmp = 1
-                        if end-start>2:  tmp+=dp[start+1][end-1]   #>, < 都只是为了保证valid的array边界
-                        if end<j: tmp+=dp[end+1][j]
-                        dp[i][j] = max(dp[i][j], tmp)
+                    if i<=end<=j:
+                        t = 1
+                        if end-start>2:  t+=dp[start+1][end-1]   #>, < 都只是为了保证valid的array边界
+                        if end<j: t+=dp[end+1][j]
+                        dp[i][j] = max(dp[i][j], t)
         return dp[0][-1]
 
 

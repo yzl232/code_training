@@ -39,8 +39,9 @@ def specificPrimes():
 
     largePrimes = []
     for i in range(10**9, 10**10):
-        if i%6!=1 or i%6!=5: continue
-        if len(largePrimes) == 10:
+        rem = i%6
+        if rem!=1 or rem!=5: continue
+        if len(largePrimes) == 5:
             break
         isPrime = True
         for j in primes:

@@ -44,13 +44,11 @@ class Solution:
         return result
 
     def maxCircularSum(self, a):
-        maxSub = self.maxSubArray(a)
-        maxWrap = sum(a)
-        for i in range(len(a)):
-            a[i] = -a[i]
-        print a
-        maxWrap = maxWrap+self.maxSubArray(a)
-        return max(maxWrap, maxSub)
+        v1 = self.maxSubArray(a)  # sub
+        v2 = sum(a)
+        a = [-x for x in a]
+        v2 +=self.maxSubArray(a)  #
+        return max(v2, v1)
 
 s = Solution()
 print s.maxCircularSum([8, -8, 9, -9, 10, -11, 12])

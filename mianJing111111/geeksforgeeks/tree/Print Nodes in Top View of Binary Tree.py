@@ -31,6 +31,7 @@ Top view of the above binary tree is
 
 基本上和vertical  columns一模一样。
 '''
+#hashmap值同时也存lvl的值
 
 class Solution:
     def findVertical(self, root):
@@ -42,12 +43,12 @@ class Solution:
             result.append(top[-1])
         return result
 
-    def dfs(self, root, rowlevel,  colLevel):
+    def dfs(self, root, rlvl,  clvl):
         if not root: return
-        if colLevel not in self.d:  self.d[colLevel] = []
-        self.d[colLevel].append((rowlevel, root.val))
-        self.dfs(root.left,rowlevel+1,  colLevel-1)
-        self.dfs(root.right, rowlevel+1,  colLevel+1)
+        if clvl not in self.d:  self.d[clvl] = []
+        self.d[clvl].append((rlvl, root.val))
+        self.dfs(root.left,rlvl+1,  clvl-1)
+        self.dfs(root.right, rlvl+1,  clvl+1)
 
 
 

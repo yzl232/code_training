@@ -22,7 +22,7 @@ class Solution:
 
     def dfs(self, root, level):
         if not root: return
-        if level not in self.d:
+        if level not in self.d:  #第一次到达深度，必然就是left view
             self.d[level] = True
             print root.val
         self.dfs(root.left, level+1)

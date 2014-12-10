@@ -8,16 +8,17 @@ class Solution:
     def distance(self, a, b):
         return (b[0]-a[0])**2+(b[1]-a[1])**2
 
-    def cost(self, i, j, k, points):
-        p1 = points[i];  p2 = points[j];  p3 = points[k]
+    def cost(self, i, j, k):
+        p1 = self.points[i];  p2 = self.points[j];  p3 = self.points[k]
         return self.distance(p1, p2)+self.distance(p2, p3) + self.distance(p1, p3)
 
-    def getMinimumCut(self, points):
-        return self.helper(points, 0, len(points)-1)
+    def getMinimumCut(self, points):    #points设置为self. 这样子比较clean
+        self.points = points
+        return self.helper( 0, len(points)-1)  #容易背下。 关键的只有2行代码
 
-    def helper(self, points, i, j):
-        if j<i+2: return 0
-        return min(self.helper(points,i, k)+self.helper(points, k, j)+ self.cost(i, k, j) for k in range(i+1, j))
+    def helper(self, i, j):    #因为3点组成一个三角形。 剩下左边，右边的部分用recursion
+        if j<i+2: return 0     # i=0,  j=3   #因为关系关系式，  k>i, k<j 所以j顺序。 i逆序
+        return min(self.helper(i, k)+self.helper(k, j)+ self.cost(i, k, j) for k in range(i+1, j))
 
 
 #递归写法
@@ -31,7 +32,7 @@ class Solution:
     def distance(self, a, b):
         return (b[0]-a[0])**2+(b[1]-a[1])**2
 
-    def cost(self, i, j, k, points):
+    def cost(self, i, j, k):
         p1 = points[i];  p2 = points[j];  p3 = points[k]
         return self.distance(p1, p2)+self.distance(p2, p3) + self.distance(p1, p3)
 

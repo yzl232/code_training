@@ -24,3 +24,6 @@ Modified tree:
        / \  / \  / \  / \
       o  n m  l k  j  i  h
 '''
+
+
+#换成array。再弄回来。

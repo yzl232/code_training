@@ -10,18 +10,20 @@ In this grid, (3, 2, 1, 0, 1) is a snake sequence.
 
 Given a grid, find the longest snake sequences and their lengths (so there can be multiple snake sequences with the maximum length).
 '''
+
+#关于ret。还得看dp关系式。  一般一维的
 class Solution:
-    def snake(self, arr):
-        if not arr: return 1
-        m = len(arr); n = len(arr[0])
+    def snake(self, matrix):
+        if not matrix: return 1
+        m = len(matrix); n = len(matrix[0])
         dp = [[1 for i in range(m)]for j in range(n)]
-        result = 1
-        for i in range(0, m):
-            for j in range(0, n):
-                if j>0 and abs(arr[i][j-1] - arr[i][j]) == 1:
+        ret = 1
+        for i in range(m):
+            for j in range(n):
+                if j>0 and abs(matrix[i][j-1] - matrix[i][j]) == 1:
                     dp[i][j] = max(dp[i][j], dp[i][j-1]+1)
-                if i>0 and abs(arr[i-1][j] - arr[i][j]) == 1:
+                if i>0 and abs(matrix[i-1][j] - matrix[i][j]) == 1:
                     dp[i][j] = max(dp[i][j], dp[i-1][j]+1)
-            result = max(result, dp[i][j])
-        return result
+                ret = max(ret, dp[i][j])
+        return ret
 #下面写出找到所有最大sequence的代码。求所有。只能用DFS。

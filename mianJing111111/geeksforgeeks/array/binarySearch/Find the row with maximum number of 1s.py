@@ -18,16 +18,16 @@ Output: 2
 因为是sorted。所以也是find first
 '''
 class Solution:
-    def isMajority(self, matrix, x):
+    def isMajority(self, matrix):
         if not matrix: return 0
         m = len(matrix); n = len(matrix[0])
-        return   n-min(self.bs(matrix[i], x) for i in range(len(matrix)))
+        return   n-min(self.leftS(matrix[i], 1) for i in range(len(matrix)))
 
-    def bs(self, arr, x):
+    def leftS(self, arr, x):
         l=0; h = len(arr)-1
         while l<=h:
             m = (l+h)/2
-            if (m==0 or arr[m-1]<x) and arr[m]==x: return m
+            if (m==0 or arr[m-1]!=x) and arr[m]==x: return m
             elif arr[m]<x: l = m+1
             else:  h=m-1    #其他时候，相等的时候，也是在左边
-        return len(arr)+1
+        return -1

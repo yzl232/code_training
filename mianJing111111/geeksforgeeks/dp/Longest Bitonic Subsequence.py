@@ -25,15 +25,15 @@ class Solution:
         for i in range(1, n):
             dp[i] = max(1+dp[j] for j in range(i) if arr[j]<arr[i])
             ret = max(ret, dp[i])
-        return ret
+        return dp
 
-    def lds(self, arr):
+    def lds(self, arr):   #也必须从后往前吧~！！
         ret = 0;  n = len(arr)
         dp = [1 for i in range(n)]
-        for i in range(1, n):
-            dp[i] = max(1+dp[j] for j in range(i) if arr[j]>arr[i])
+        for i in range(n-2, -1, -1):
+            dp[i] = max(1+dp[j] for j in range(i+1, n) if arr[j]<arr[i])  #内容一样。就是范围反过来了
             ret = max(ret, dp[i])
-        return ret
+        return dp
 
     def lbs(self, arr):
         if len(arr)==0: return 0

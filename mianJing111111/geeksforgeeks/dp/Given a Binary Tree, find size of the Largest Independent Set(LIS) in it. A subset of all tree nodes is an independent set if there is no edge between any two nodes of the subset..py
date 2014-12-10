@@ -19,13 +19,11 @@ Let LISS(X) indicates size of largest independent set of a tree with root X.
 class Solution:
     def liss(self, root):
         if not root: return 0
-        size_excl = self.liss(root.left)+self.liss(root.right)
-        size_incl = 1
-        if root.left:
-            size_incl+=self.liss(root.left.left) + self.liss(root.left.right)
-        if root.right:
-            size_incl+=self.liss(root.right.left) + self.liss(root.right.right)
-        return max(size_excl, size_incl)
+        excl = self.liss(root.left)+self.liss(root.right)
+        incl = 1
+        if root.left:     incl+=self.liss(root.left.left) + self.liss(root.left.right)
+        if root.right:  incl+=self.liss(root.right.left) + self.liss(root.right.right)
+        return max(excl, incl)
 
 #dp.    {memoization}
 class Solution1:
@@ -36,9 +34,7 @@ class Solution1:
         if root in self.d: return self.d[root]
         size_excl = self.liss(root.left)+self.liss(root.right)
         size_incl = 1
-        if root.left:
-            size_incl+=self.liss(root.left.left) + self.liss(root.left.right)
-        if root.right:
-            size_incl+=self.liss(root.right.left) + self.liss(root.right.right)
+        if root.left:      size_incl+=self.liss(root.left.left) + self.liss(root.left.right)
+        if root.right:    size_incl+=self.liss(root.right.left) + self.liss(root.right.right)
         self.d[root] =  max(size_excl, size_incl)
         return self.d[root]

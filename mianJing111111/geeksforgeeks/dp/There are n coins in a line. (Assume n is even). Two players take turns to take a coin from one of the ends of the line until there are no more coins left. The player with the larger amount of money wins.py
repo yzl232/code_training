@@ -39,20 +39,25 @@ P(i, j) = max { P1, P2 }
 
 http://www.geeksforgeeks.org/dynamic-programming-set-31-optimal-strategy-for-a-game/也有，
 '''
+#类似于triangulation  for循环的范围。.  另外也像 leetcode  palindrome partitioning
+'''
+length一段一段都是这样的
+        for j in range(l):
+            for i in range(j-2, -1, -1):
+'''
 
 class Solution:
     def mMoney(self, arr):
         l = len(arr)
-        result = [[0 for i in range(l)] for j in range(l)]
+        dp = [[0 for i in range(l)] for j in range(l)]
         for i in range(l):
-            result[i][i] = arr[i]
+            dp[i][i] = arr[i]
         for i in range(l-1):
-            result[i][i+1] = max(arr[i], arr[i+1])
-        for length in range(2, l-1):
-            for i in range(l-length):
-                j = i+length
-                a = result[i+2][j]    #我取了i, 对方取了i+1
-                b =  result[i+1][j-1]##我取了i, 对方取了j
-                c = result[i+1][j-1]
-                result[i][j] = max(arr[i]+min(a, b),   arr[j]+min((b, c)))
-        return result[0][l-1]
+            dp[i][i+1] = max(arr[i], arr[i+1])
+        for j in range(l):
+            for i in range(j-2, -1, -1): #取了一轮后，有a,b,c三种结果
+                a = dp[i+2][j]    #我取了i, 对方取了i+1
+                b =  dp[i+1][j-1]##我取了i, 对方取了j。 后者我取了j, 对方取了i
+                c = dp[i][j-2]  #我取了j。对方取了j-1
+                dp[i][j] = max(arr[i]+min(a, b),   arr[j]+min((b, c)))
+        return dp[0][l-1]

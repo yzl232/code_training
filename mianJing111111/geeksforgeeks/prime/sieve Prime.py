@@ -17,15 +17,12 @@ Following is the algorithm to find all the prime numbers less than or equal to a
 class Solution:
     def sieve(self,n):
         noprimes = set()
-        result = []
+        ret = []
         for i in range(2, n+1):
             if i not in noprimes:
-                result.append(i)
+                ret.append(i)
                 noprimes.update(range(i*i, n+1, i))   #对素数，追加 no primes
-        return result
-
-
-
+        return ret
 
 
 

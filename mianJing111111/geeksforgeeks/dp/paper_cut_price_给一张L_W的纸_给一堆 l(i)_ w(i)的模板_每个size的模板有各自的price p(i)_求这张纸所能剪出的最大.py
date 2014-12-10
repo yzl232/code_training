@@ -21,17 +21,16 @@ an get three sub-problems:
 '''
 
 class Solution:
-    def cutProfit(self, l, w, prices, pieces):
-        n = len(prices)
-        dp = [[0 for i in range(w+1)] for j in range(l+1)]
-        for i in range(l):
-            for j in range(w):
-                for k in range(1, n):
-                    pieceW = pieces[k][0];   pieceH = pieces[k][1]
-                    if i>=pieceW and j>=pieceH:
-                        
-                        dp[i][j] = max(dp[i][j],prices[k] + dp[i-pieceW][j] + dp[pieceW][j-pieceH], prices[k] +dp[i][j-pieceH] + dp[i-pieceW][pieceH])
-        return dp[-1][-1]
+    def cutProfit(self, w, h, pieces, prices):
+        n = len(pieces)
+        dp = [[0 for i in range(h+1)] for j in range(w+1)]
+        for i in range(1, w+1):
+            for j in range(1, h+1):
+                for k in range(n):
+                    w1 = pieces[k][0];   h1 = pieces[k][1]
+                    if i>=w1 and j>=h1:  #总共i, j, i-w1, w1, j-h1, h1
+                        dp[i][j] =max(dp[i][j], prices[k] + max(dp[i-w1][j] + dp[w1][j-h1],   dp[i][j-h1] + dp[i-w1][h1]))   #每块piece都要尝试
+        return dp[-1][-1]  #每块剩下的有2种分法
 
 '''
 
@@ -43,7 +42,7 @@ class Solution:
 |     |__
 |____|__|
 
-prices[k] + dp[i-pieceW][j] + dp[pieceW][j-pieceH]
+1 + dp[i-w1][j] + dp[w1][j-h1]
 
 
 
@@ -54,8 +53,7 @@ prices[k] + dp[i-pieceW][j] + dp[pieceW][j-pieceH]
 | ___|__
 |_______|
 
- prices[k] +dp[i][j-pieceH] + dp[i-pieceW][pieceH]
-
+dp[i][j-h1] + dp[i-w1][h1]
 '''
 
 
@@ -64,17 +62,4 @@ prices[k] + dp[i-pieceW][j] + dp[pieceW][j-pieceH]
 
 Google也有此类题目
 
-'''
-
-class Solution:
-    def cutProfit(self, l, w, pieces):
-        n = len(pieces)
-        dp = [[0 for i in range(w+1)] for j in range(l+1)]
-        for i in range(l):
-            for j in range(w):
-                for k in range(1, n):
-                    pieceW = pieces[k][0];   pieceH = pieces[k][1]
-                    if i>=pieceW and j>=pieceH:
-
-                        dp[i][j] = max(dp[i][j],  1 + dp[i-pieceW][j] + dp[pieceW][j-pieceH], 1 +dp[i][j-pieceH] + dp[i-pieceW][pieceH])
-        return dp[-1][-1]
+''' 

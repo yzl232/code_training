@@ -61,14 +61,12 @@ DFS的做法。  有向
 class Solution3:
     def paths(self, nodes):
         for n in nodes:
-            if self.dfs([n], n, {}):
-                return True
+            if self.dfs(n, {}):  return True
         return False
 
-    def dfs(self, tmpPath, node, visited):  #visited传进去。 这是一个特别的地方。
-        visited[node]=1
-        for n in node.candidates:
-                if n in visited:
-                    return True
-                self.dfs(tmpPath+[n], n, visited)
+    def dfs(self, node, visited):  #visited传进去。 这是一个特别的地方。
+        visited[node]=1  #必须放在外面
+        for n in node.neighbors:
+                if n in visited:   return True
+                if self.dfs(n, visited.copy()): return True
         return False

@@ -20,6 +20,9 @@ Else L(i, j) =  L(i + 1, j - 1) + 2
 
 
 '''
+
+#是sequence不是substring
+
 class Solution:
     def lps(self, s):
         n = len(s)

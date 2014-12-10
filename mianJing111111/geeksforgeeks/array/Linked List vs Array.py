@@ -3,6 +3,25 @@
 
 Linked List vs Array
 
+
+
+So Linked list provides following two advantages over arrays
+1) Dynamic size
+2) Ease of insertion/deletion
+
+Linked lists have following drawbacks:
+1) Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
+2) Extra memory space for a pointer is required with each element of the list.
+3) Arrays have better cache locality that can make a pretty big difference in performance.
+
+
+
+
+
+
+
+
+
 Difficulty Level: Rookie
 
 Both Arrays and Linked List can be used to store linear data of similar types, but they both have some advantages and disadvantages over each other.
@@ -21,14 +40,6 @@ And if we want to insert a new ID 1005, then to maintain the sorted order, we ha
 
 Deletion is also expensive with arrays until unless some special techniques are used. For example, to delete 1010 in id[], everything after 1010 has to be moved.
 
-So Linked list provides following two advantages over arrays
-1) Dynamic size
-2) Ease of insertion/deletion
-
-Linked lists have following drawbacks:
-1) Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
-2) Extra memory space for a pointer is required with each element of the list.
-3) Arrays have better cache locality that can make a pretty big difference in performance.
 '''
 
 

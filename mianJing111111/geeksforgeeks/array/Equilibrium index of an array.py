@@ -24,9 +24,8 @@ The idea is to get total sum of array first. Then Iterate through the array and 
 
 class Solution:
     def equi(self, arr):
-        leftS = 0
-        s = max(arr)
+        leftS = 0;   rightS = sum(arr)  #可以想象它随着指针动态移动。
         for i in range(len(arr)):
-            s-= arr[i]
-            if leftS == s: print i
+            rightS-= arr[i]
+            if leftS == rightS: return i
             leftS+=arr[i]

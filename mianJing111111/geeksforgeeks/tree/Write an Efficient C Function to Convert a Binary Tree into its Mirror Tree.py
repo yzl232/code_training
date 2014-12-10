@@ -18,7 +18,7 @@ Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree
 
 
 '''
-class Solution:
+class Solution:  #略类似delete
     def mirror(self, root):
         if not root:
             return

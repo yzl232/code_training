@@ -18,6 +18,7 @@ Examples:
   Output: -1  // No Fixed Point
 
 '''
+#就是把target变成了index （m） 而已
 #是sorted array,  搜索用binary search
 class Solution:
     def bs(self, arr):

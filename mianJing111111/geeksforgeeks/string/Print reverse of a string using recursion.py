@@ -6,14 +6,14 @@ Program:
 '''
 class Solution:
     def reverse(self, s):
-        self.result =''
-        self.recur(s)
-        return self.result
+        self.ret =''
+        self.hp(s)
+        return self.ret
 
-    def recur(self, s):
+    def hp(self, s):
         if not s: return
-        self.recur(s[1:])
-        self.result+=s[0]
+        self.hp(s[1:])   #类似stack
+        self.ret+=s[0]
 
 s = Solution()
 print s.reverse('abc')

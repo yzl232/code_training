@@ -13,13 +13,12 @@ construct a triangle like
 
 '''
 class Solution:
-    def construct(self, array):
-        result =[array]
-        while len(array)>=2:
-            tmp = [array[i]+ array[i-1] for i in range(1, len(array))]
-            result = [tmp]+result
-            array=tmp
-        return result
+    def construct(self, arr):
+        ret =[]
+        while arr:
+            ret = [arr]+ret
+            arr = [arr[i]+ arr[i+1] for i in range(len(arr)-1)]
+        return ret
 s = Solution()
 a =  s.construct([1, 2, 3, 4])
 for  i in a:

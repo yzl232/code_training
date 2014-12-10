@@ -23,4 +23,17 @@ Product of array computed P = 1*2*3*…*n * y / x
 Time Complexity: O(n)
 
 另外用sort之后也可以做。
+
+
+x-y=a
+x/y=b
+
+
+
+x = by
+x=a+y
+y(b-1)=a
+
+
+y=a/(b-1)
 '''

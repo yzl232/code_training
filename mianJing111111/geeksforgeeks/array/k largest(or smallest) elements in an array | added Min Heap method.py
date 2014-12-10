@@ -11,4 +11,8 @@ O(nLogn)
 
 最小用maxheap.   只有比最大的小，才插入。
 median同时用minheap和maxheap
+
+
+
+quick select
 '''

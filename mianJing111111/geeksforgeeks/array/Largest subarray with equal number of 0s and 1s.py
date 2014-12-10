@@ -31,20 +31,16 @@ Let input array be arr[] of size n and maxsize be the size of output subarray.
 7) To handle corner cases (all 1s and all 0s), we initialize maxsize as -1. If the maxsize remains -1, then print there is no such subarray.
 '''
 
-#转化为求cumulative sum 。   求subarray  和为0。  适合cumulative sum
-
+#转化为求cumulative sum 。   求subarray  和为0。  适合cumulative sum.  当cumulative sum相等， subarray sum即为0
+#subarray基本上都和cumulative sum 有关
 class Solution2:
     def findSub(self, arr):  #非常好的代码。    cumulative sum
-        arr1=arr[:]
         for i in range(len(arr)):
             if arr[i]==0: arr[i]=-1
-        d = {0: -1}
-        s = 0
-        ret = 0
+        d = {0: -1}; s = 0;  ret = 0  #各种巧妙
         for i in range(len(arr)):
             s+=arr[i]
-            if s in d:
-                ret = i-d[s] #start index只保留第一次出现的
+            if s in d:  ret = max(i-d[s], ret)    #start index只保留第一次出现的
             else:  d[s] = i      #key是cumulative sum, value index
         return ret
 s = Solution2()

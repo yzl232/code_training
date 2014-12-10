@@ -51,28 +51,24 @@ class Solution:
     def add(self, l1, l2):
         state = self.findLength(l1) - self.findLength(l2)
         self.carry = 0
-        ret = self.add2(l1, l2, state)
+        ret = self.help(l1, l2, state)
         if self.carry>0:
             tmp = ListNode(self.carry)
             tmp.next = ret
             ret = tmp
         return ret
 
-    def add2(self, p1, p2, state):
+    def help(self, p1, p2, state):
         if not p1 and not p2: return
         if state<0:
-            return self.add2(p2, p1, 0-state)
+            return self.help(p2, p1, 0-state)
         ret = ListNode(0)
         if state>0:  # 长度不相等。直接跳过去。
-            ret.next = self.add2(p1.next, p2, state-1)
+            ret.next = self.help(p1.next, p2, state-1)
             ret.val = self.carry+p1.val
         elif state==0:
-            ret.next = self.add2(p1.next, p2.next, 0)
+            ret.next = self.help(p1.next, p2.next, 0)
             ret.val = self.carry+p1.val+p2.val
         self.carry = ret.val/10
         ret.val %=ret.val
         return ret
-
-
-
-

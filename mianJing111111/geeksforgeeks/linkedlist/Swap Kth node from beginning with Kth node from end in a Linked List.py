@@ -14,18 +14,18 @@ class ListNode:
 
 class Solution:
     def swapKth(self, head, k):
-        p1 = p2 = None
+        p1 = p2 = None  #p1, p2记录以前的位置
         dummy = ListNode(0); dummy.next = head
-        p3 = dummy;  cout = 1
-        while p3.next:
-            if cout==k:  #例子 1-2-3   k=2
-                p1 = p3
+        cur = dummy;  cnt = 0
+        while cur.next:
+            if cnt==k-1:  #例子 1-2-3   k=2
+                p1 = cur
                 p2 = dummy
-            elif cout>k:  #保证了p2走 n-k步
+            elif cnt>k-1:  #保证了p2走 n-k步
                 p2 = p2.next
-            p3 = p3.next
-            cout+=1
-        if cout-1<k: return
+            cur = cur.next
+            cnt+=1
+        if cnt<k: return  #因为加上了dummy. cnt-1
         if p1 and p1.next and p2 and p2.next:
             tmp1 = p1.next.next
             tmp2 = p2.next.next

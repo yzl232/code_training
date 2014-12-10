@@ -17,6 +17,8 @@ The given array represents following Binary Tree
          /
         6
 
+利用index来标记的。  index是值。
+值表示parent的值。
 
 Input: parent[] = {-1, 0, 0, 1, 1, 3, 5};
 Output: 5
@@ -46,28 +48,33 @@ class TreeNode:
 
 
 #方法一。重建树.   BFS.  O(n2)
+#利用index来标记的。  index是值。
+#值表示parent的值。
 class Solution:
-    def restore(self, arr):
-        root = TreeNode(arr.index(-1))
-        arr.remove(-1)
+    def restore(self, arr): #与标准level order区别就是在arr找index。 以及每次在arr置None
+        i = arr.index(-1)
+        root = TreeNode(i)
+        arr[i]=None
         pre = [root]
         while pre:
             cur = []
             for node in pre:
                 if node.val in arr:
-                    left = TreeNode(arr.index(node.val))
+                    i =arr.index(node.val)
+                    left = TreeNode(i)
                     node.left = left
-                    arr.remove(node.val)
+                    arr[i] = None
                     cur.append(left)
                 if node.val in arr:
-                    right = TreeNode(arr.index(node.val))
+                    i =arr.index(node.val)
+                    right = TreeNode(i)
                     node.right = right
-                    arr.remove(node.val)
+                    arr[i]=None
                     cur.append(right)
             pre = cur
         return root
 
-# O(n2)
+# O(n)
 class Solution:
     def findHeight(self, arr):
         self.depth = [None for i in range(len(arr))]
@@ -78,11 +85,10 @@ class Solution:
 
     def fillDepth(self, i):
         if self.depth[i]: return   #已经fill
-        if self.arr[i] == -1:
+        parent = self.arr[i]
+        if parent == -1:
             self.depth[i] = 1
             return
-        parent = self.arr[i]
-        if not self.depth[parent]:
-            self.fillDepth(parent)
+        if not self.depth[parent]: self.fillDepth(parent)
         self.depth[i] = self.depth[parent]+1
 #非常的巧妙

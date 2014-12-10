@@ -16,10 +16,8 @@ we take the difference with the minimum element found so far. So we need to keep
 #dp
 class Solution:
     def maxDiff(self, arr):
-        if len(arr)<2: return
-        ret = arr[1]-arr[0]
-        minN = arr[0]
+        ret = 0;  minN = arr[0]
         for i in range(1, len(arr)):
-            ret = max(arr[i]-minN, ret)
             minN = min(arr[i], minN)
+            ret = max(arr[i]-minN, ret)
         return ret

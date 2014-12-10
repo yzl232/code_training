@@ -9,13 +9,15 @@ Write a program to print all the LEADERS in the array. An element is leader if i
 (Scan from right)
 Scan all the elements from right to left in array and keep track of maximum till now. When maximum changes it’s value, print it.
 '''
+#比右边都大。 所以求right max就好了
+
 class Solution:
     def leader(self, arr):
         if not arr: return
-        result = [arr[-1]]; maxN = arr[-1]
+        ret = [arr[-1]]; maxN = arr[-1]
         for i in range(len(arr)-2, -1, -1):
-            if maxN<arr[i]: result.append(arr[i])
+            if maxN<arr[i]: ret.append(arr[i])
             maxN = max(maxN, arr[i])
-        return result[::-1]
+        return ret[::-1]
 s = Solution()
 print s.leader([16, 17, 4, 3, 5, 2])

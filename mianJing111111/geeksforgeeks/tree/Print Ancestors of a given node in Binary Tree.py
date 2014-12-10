@@ -17,14 +17,16 @@ For example, if the given tree is following Binary Tree and key is 7, then your 
     7
 
 '''
-class Solution:
+class Solution:  #和lca 现在很相似了
     def printAncestors(self, root, target):  #返回flag。 在leetcode  sudoku也用到这种技巧
         if not root: return False
         if root.val == target: return True
-        if self.printAncestors(root.left, target) or self.printAncestors(root.right, target):
+        l= self.printAncestors(root.left, target)
+        r = self.printAncestors(root.right, target)
+        if l or r:
             print root.val
             return True
-        return False
+        else: return False
 '''
 有iterative的解法
 

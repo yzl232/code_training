@@ -6,8 +6,8 @@ class Solution:
     def coutBits(self, n):
         count = 0
         while n:
-            count+=n%2   #就是求binary形式那道题      n&1
-            n/=2
+            count+=n&2   #就是求binary形式那道题      n&1
+            n=n>>1
         return count
 
     def countFlip(self, a, b):

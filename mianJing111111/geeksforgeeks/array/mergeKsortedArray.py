@@ -58,6 +58,29 @@ Elements of matrix in sorted order
 
 '''
 
+import heapq
+
+#heap和merge 复杂度一样。 但是heap代码只有8行。 merge代码要三倍
+
+
+class Solution:
+    # @param a list of ListNode
+    # @return a ListNode
+    def mergeKLists(self, arrs):
+        h =[(arrs[i][0], i, 0) for i in range(len(arrs)) if arrs[i]]
+        heapq.heapify(h);  ret = []
+        while h:
+            pop = heapq.heappop(h)
+            val, i, j = pop[0], pop[1], pop[2]
+            ret.append(val)
+            if j+1<len(arrs[i]):  heapq.heappush(h, (arrs[i][j+1], i, j+1))
+        return ret   #复杂度 O(nkLogk) 是最优解
+
+
+
+
+#和heap和merge sort复杂度一样
+'''
 class Solution:
     def mergeK(self, matrix):
         if len(matrix)<=1: return matrix
@@ -85,3 +108,6 @@ class Solution:
         return result
 s = Solution()
 print s.mergeK([[1, 3, 5], [2, 4, 9], [3, 4, 5]])
+'''
+s = Solution()
+print s.mergeKLists([[1, 3, 5], [2, 4, 9], [3, 4, 5]])

@@ -10,4 +10,4 @@ class Solution:
         if not root: return
         if k1<root.val:  self.dfs(root.left, k1, k2)  #左边界在左边， 有必要往左搜寻
         if k1<=root.val <= k2:  print root.val
-        if root.val<k2:   self.dfs(root.right, k1, k2)
+        if k2>root.val:  self.dfs(root.right, k1, k2)

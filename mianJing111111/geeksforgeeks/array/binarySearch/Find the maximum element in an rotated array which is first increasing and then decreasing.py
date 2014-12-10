@@ -43,7 +43,6 @@ class Solution:
             elif arr[m-1]>arr[m]>arr[m+1]: #递减部分,最大在左边
                 h = m-1
             else: l = m+1 #递增部分
-        return arr[-1]
 
 s = Solution()
 print s.findMax([1, 5 , 7, 14 , 2, 1])

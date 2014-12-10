@@ -13,10 +13,9 @@ class Solution:
     def toStr(self, n):
         out = ''
         while n>0:
-            d = (n-1)%26
-            out = chr(ord('A')+d) + out #旧的总在右边
-            n = (n-1)/26  #去除最后一位的部分
-        return out
+            d, n = (n-1)%26,  (n-1)/26
+            out = out+chr(ord('A')+d) #因为我们总是先解决低位的。 所以最后取反
+        return out[::-1]
 
     def toNum(self, s):
         cur = 0  #有点像subset那种iteration.  不断改变自身的recursion
@@ -34,9 +33,8 @@ for i in arr:
     print str(i) +'  convert to:   '+ str( s.toNum(tmp))
 
 '''
-转化成任意的N进制：
+转化成任意的x进制：
 不断while n
-d = n%N
-n = n/N
+n, d = n/x, d%x
 
 '''

@@ -11,11 +11,11 @@ Find the largest sum contiguous sub array. The length of the returned sub array 
 class Solution1:
     def maxSum2(self, a):
         if len(a)<2: return
-        result= maxSofar = a[0]+a[1]
+        ret= maxN = a[0]+a[1]
         for i in range(2, len(a)):
-            maxSofar = max(maxSofar+a[i], a[i-1]+a[i])
-            result = max(maxSofar, result)
-        return result
+            maxN = max(maxN+a[i], a[i-1]+a[i])
+            ret = max(maxN, ret)
+        return ret
 
 
 
@@ -24,11 +24,11 @@ class Solution:
     # @param A, a list of integers
     # @return an integer
     def maxSubArray(self, a):
-        result = maxN = a[0]
+        ret = maxN = a[0]
         for i in range(1, len(a)):
             maxN = max(maxN + a[i],  a[i])
-            result = max(result, maxN)
-        return result
+            ret = max(ret, maxN)
+        return ret
 
 
 class Solution3:

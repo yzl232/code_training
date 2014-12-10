@@ -53,14 +53,13 @@ Quote5 Line2
 class Solution:
 
     def selectRandom(self, stream = [1, 4, 5, 13, 6, 7, 8]):
-        count = 0; result = stream[0]
+        cnt = 1; ret = stream[0]
         n =  len(stream)
         for i in range(n):
             x = stream[i]
-            count += 1
-            if random.random()<1.0/count:    #1/ count  的概率
-                result  =x
-            print "Random number from first " +str(i+1)+" numbers is "+str(result)
+            cnt += 1
+            if random.randint(1, cnt)==1: ret = x
+            print "Random number from first " +str(i+1)+" numbers is "+str(ret)
 
 s = Solution()
 print s.selectRandom()

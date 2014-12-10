@@ -24,4 +24,4 @@ class Solution:
             if arr[i]==x or arr[i]==y:
                 if prev and arr[prev]!=arr[i]:  minD = min(minD, i-prev)
                 prev =i
-        return minD
+        return minD if minD!=n+1 else None

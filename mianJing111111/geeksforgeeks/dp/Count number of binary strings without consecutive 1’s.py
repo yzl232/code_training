@@ -23,7 +23,7 @@ I checked it with n=4,the output should be 8
 '''
 #fibonacci
 #虽然是count number。确实没想到dp
-#a[i] = a[i - 1] + a[i-2],   a[i-1]代表末尾+0，  a[i-2]代表末尾+1(倒数第二位定为0. 倒数第三位随便)
+#a[i] = a[i - 1] + a[i-2],   a[i-1]代表末尾+0，  a[i-2]代表末尾+01.
 #1, 1, 2, 3 ,5, 8
 class Solution:
     def cntS(self, n):

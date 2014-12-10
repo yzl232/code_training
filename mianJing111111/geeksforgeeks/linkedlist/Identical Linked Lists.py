@@ -5,4 +5,7 @@ recursion坏处是用recursion stack space。   好处是简洁。
 '''
 class Solution:
     def iden(self, a, b):
-        return (not a and not b) or (  a and b and a.val == b.val and self.iden(a.next, b.next)   )
+        if not a and not b: return True
+        elif not a or not b: return False
+        elif a.val != b.val: return False
+        return self.iden(a.next, b.next)

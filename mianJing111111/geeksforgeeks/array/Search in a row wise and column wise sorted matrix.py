@@ -30,10 +30,7 @@ class Solution:
         m = len(matrix); n = len(matrix[0])
         i=0;  j=n-1
         while i<m and j>=0:
-            if matrix[i][j]==x:
-                return True
-            elif matrix[i][j]>x:
-                j-=1
-            else:
-                i+=1
+            if matrix[i][j]==x:   return True
+            elif matrix[i][j]>x:    j-=1
+            else:   i+=1
         return False

@@ -6,6 +6,7 @@ Given a Balanced Binary Search Tree and a target sum, write a function that retu
 
 
 '''
+# flatten
 
 class Solution:
     # @param root, a tree node  #注意这道题目不是binary search tree  。
@@ -13,13 +14,13 @@ class Solution:
     def flatten(self, root):  #我们反过来，就是right, root, left
         self.head = None
         self.dfs(root)
+        return self.head
 
     def dfs(self, root):
         if not root: return
-        self.dfs(root.right)
-        if self.head:
-            root.right = self.head  #右边连上
-            self.head.left = root
+        self.dfs(root.right)              #也是三步
+        if self.head:  self.head.left = root  #在这里，还可以设置tail节点。 如果有必要
+        root.right = self.head  #右边连上
         self.head = root    #更新head
         self.dfs(root.left)
 

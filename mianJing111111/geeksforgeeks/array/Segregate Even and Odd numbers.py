@@ -19,14 +19,13 @@ The problem is very similar to our old post Segregate 0s and 1s in an array, and
 和segregate 0 1的题目几乎一样
 '''
 class Solution:
-    def segregateOddEven(self, arr):
+    def segregate0and1(self, arr):
         l=0; r = len(arr)-1
         while l<r:
-            while arr[l]%2==0 and l<r:
-                l+=1
-            while arr[r]%2==1 and l<r:
-                r-=1
-            if l<r:
-                arr[l], arr[r] = arr[r], arr[l]  #交换
-                l+=1
-                r-=1
+            while l<r and arr[l]%2==0 :  l+=1
+            while l<r and arr[r]%2==1 :  r-=1
+            arr[l], arr[r] = arr[r], arr[l]  #交换
+            l+=1;  r-=1
+        return arr
+s = Solution()
+print s.segregate0and1([12, 34, 45, 9, 8, 90, 3])

@@ -54,11 +54,12 @@ class Solution:
         m = self.fact(n)
         rank = 0
         for i in range(len(arr)):
-            m/= n/i
+            m/= n-i
             cnt = self.countSmallerRight(arr, i)
             rank+=cnt*m
-        return rank
-
+        return rank+1
+s = Solution()
+print s.findRank(['c', 'b', 'a'])
 '''
 N2
 

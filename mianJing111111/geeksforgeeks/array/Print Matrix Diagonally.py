@@ -25,15 +25,16 @@ Diagonal printing of the above matrix is
 #从左上角看。 相当于顺时针旋转45度。  这样可以看到是m+n-1
 #The diagonal printing of a given matrix ‘matrix[ROW][COL]’ always has ‘ROW + COL – 1′ lines in output
 #比较难。 可以背下来
+#想象一条虚拟的对角线，左下到右上。 每次 i-=1; j+=1
 class Solution:
     def diag(self, matrix):
         if not matrix:return
-        r= len(matrix); c= len(matrix[0])
-        ret = [[]for i in range(r+c-1)]
-        for rMax in range(r+c-1):
-            i=rMax; j=0 #第一个元素最靠左下。 也就是， 不断往右上
-            while i>=0 and j<=rMax:
-                if i<r and j<c:    ret[rMax].append(matrix[i][j])  #主要是照顾后半部分。
+        m= len(matrix); n= len(matrix[0])
+        ret = [[]for i in range(m+n-1)]
+        for x in range(m+n-1):
+            i=x; j=0 #第一个元素最靠左下。 也就是， 不断往右上
+            while i>=0 and j<=x:
+                if i<m and j<n:    ret[x].append(matrix[i][j])  #主要是照顾后半部分。
                 i-=1; j+=1
         return ret
 

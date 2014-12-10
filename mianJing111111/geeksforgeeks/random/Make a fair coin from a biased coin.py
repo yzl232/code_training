@@ -12,5 +12,5 @@ class Solution:
         val1 = self.foo()
         val2 = self.foo()
         if val1==0 and val2==1: return 0
-        if val2==1 and val1==0: return 1
+        if val1==1 and val2==0: return 1
         return self.myFoo()

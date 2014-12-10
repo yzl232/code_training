@@ -37,18 +37,18 @@ Can we apply Binary Search to find n after finding ‘high’? We can apply Bina
 Number of steps for finding ‘high’ is O(Logn). So we can find ‘high’ in O(Logn) time. What about time taken by Binary Search between high/2 and high? The value of ‘high’ must be less than 2*n. The number of elements between high/2 and high must be O(n). Therefore, time complexity of Binary Search is O(Logn) and overall time complexity is 2*O(Logn) which is O(Logn).
 '''
 #这是integer的做法。相对容易
+#Find the value ‘n’ where f() becomes positive for the first time.
 class Solution:
     def func(self, x):
         pass
 
     def findFirstN(self):
-        if self.func(0)>0: return 0
         i=1
         while self.func(i)<0: i*=2  #logN
         l=i/2; h=i
         while l<=h:
             m = l+(h-l)/2
-            if self.func(m)>0 and (m==l or self.findFirstN(m-1)<0): return m
+            if (m==0 or self.func(m-1)<=0) and self.func(m)>0: return m
             if self.func(m)<0:   l=m+1
             else: h=m-1
 

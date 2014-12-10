@@ -48,6 +48,8 @@ int getMin() // returns the minimum element from Special Stack
 We can see that all above operations are O(1).
 Let us see an example. Let us assume that both stacks are initially empty and 18, 19, 29, 15 and 16 are inserted to the SpecialStack.
 '''
+
+#leetcode
 class MinStack:
     # @param x, an integer
     # @return an integer

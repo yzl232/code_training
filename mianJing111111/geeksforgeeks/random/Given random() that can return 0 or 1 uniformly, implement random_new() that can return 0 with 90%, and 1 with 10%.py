@@ -19,6 +19,6 @@ class Solution:
         ret = ''
         for i in range(4):
             ret+=str(self.rand2())
-        if '0000'<=ret<='1001': return 0
-        elif ret == '1010': return 1
+        if '0000'<=ret<='1000': return 0
+        elif ret == '1001': return 1
         return self.rand10()

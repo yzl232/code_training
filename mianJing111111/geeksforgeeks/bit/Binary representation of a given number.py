@@ -9,14 +9,24 @@ Write a program to print Binary representation of a given number.
 '''
 class Solution:
     def binaryF(self, n):
-        self.result = []
+        self.ret = []
         self.dfs(n)
-        return ''.join(self.result)
+        return ''.join(self.ret)
 
     def dfs(self, n):
         if n==0: return
-        self.dfs(n/2)
-        self.result.append(str(n%2))
+        self.dfs(n>>1)  #还是用位移容易理解。 先搞高位的。
+        self.ret.append(str(n&1))
 
 s = Solution()
-print s.binaryF(5)
+print s.binaryF(12)
+
+class Solution2:
+    def binaryF(self, n):
+        ret = []
+        while n:
+            ret.append(str(n&1))
+            n = n>>1
+        return ''.join(ret[::-1])
+s = Solution2()
+print s.binaryF(19)

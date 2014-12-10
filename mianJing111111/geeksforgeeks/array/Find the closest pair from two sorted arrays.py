@@ -39,6 +39,7 @@ The idea is to start from left side of one array and right side of another array
        (c) Else r--
 4) Print the result.
 '''
+# leetcode 3sum closest 的2个array版本.   target 是x
 
 class Solution:
     def pair(self, arr1, arr2, x):
@@ -49,6 +50,7 @@ class Solution:
             if tmp<diff:
                 ret = (arr1[r], arr2[l])
                 diff = tmp
+            if tmp==0: return ret
             if arr1[r]+arr2[l]>x:  r-=1
             else: l+=1
         return ret

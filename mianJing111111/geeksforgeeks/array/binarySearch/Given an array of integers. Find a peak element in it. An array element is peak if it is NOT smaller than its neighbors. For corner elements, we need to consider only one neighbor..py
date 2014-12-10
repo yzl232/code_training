@@ -30,7 +30,7 @@ valley :   \      /
 class Solution:
     def findPeak(self, arr):
         l=0; h = len(arr)-1
-        while l<h:  #当l==h的时候，找到了
+        while l<h:  #当l==h的时候，找到了, 同时也避免了m+1的边界问题。
             m = (l+h)/2
             if arr[m]<arr[m+1]:  l=m+1  #在右边。 l取更大的。 m+1
             else: h=m  #在左边。 h取更小的。 m

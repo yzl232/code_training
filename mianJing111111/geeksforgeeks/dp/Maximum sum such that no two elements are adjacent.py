@@ -47,14 +47,14 @@ Example:
 IncludeSum = ExcludeSum(i-1) + arr[i]
 ExcludeSum = max (IncludeSum(i-1), ExcludeSum(i-1))
 '''
-
+#Given a Binary Tree, find size of the Largest Independent Set(LIS) in it.
+#有道树的题目有点像
 class Solution:  #比较难。 背下
     def find(self, arr):
+        if not arr:return
         incl=arr[0]; excl=0   #包括自己。 不包括自己。
         for i in range(1, len(arr)):
-            exclNew = max(incl, excl)
-            incl = excl+arr[i]
-            excl = exclNew
+            incl, excl = excl+arr[i], max(incl, excl)
         return max(excl, incl)
 s = Solution()
-print s.find([3 ,2 ,5 ,10 ,7])
+print s.find([3 ,2 ,10 ,7])

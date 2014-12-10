@@ -17,9 +17,9 @@ Output:
 Linked List: 1->2->5->6
 '''
 class Solution:
-    def skipMdeleteN(self, head, m, n):
-        if not head or not head.next: return
-        cur = head
+    def skipMdelN(self, h, m, n):
+        if not h: return
+        cur = h
         for i in range(m-1):
             if cur: cur = cur.next
         if not cur: return
@@ -27,4 +27,4 @@ class Solution:
         for i in range(n):
             if t: t = t.next
         cur.next = t
-        self.skipMdeleteN(t, m, n)
+        self.skipMdelN(t, m, n)

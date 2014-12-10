@@ -25,14 +25,11 @@ The approach is to use two index variables i and j. We move forward in string us
 '''
 class Solution:
     def filterS(self, arr):  #char array
-        preA = False #prev char is not 'a'
         n = len(arr)
         i=j=0
         while i<n:
-            if arr[i]=='b':
-                i+=1
-            elif i+1<n and arr[i:i+2]=='ac':  #有点像decode ways.
-                i+=2
+            if arr[i]=='b':  i+=1
+            elif i+1<=n-1 and arr[i:i+2]=='ac':   i+=2  #有点像decode ways.
             else:
                 arr[j] = arr[i]
                 j+=1

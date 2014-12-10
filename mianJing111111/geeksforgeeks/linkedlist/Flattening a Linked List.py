@@ -52,8 +52,8 @@ class Solution:
         return self.downToright(head)
 
     def downToright(self, head):   #clean所有right,  down
-        if not head.right:return
-        self.downToright(head)
+        if not head.down:return
+        self.downToright(head.down)
         head.right = head.down
         head.down =None
 
@@ -81,23 +81,27 @@ class Solution4: #如果只有2层
                 tail = cur.child
                 while tail.next: tail=tail.next
                 tail.next = cur.next
-                cur.next, cur.child= cur.child, None
+                cur.next, cur.child= cur.child, None #clean next和child
+                cur = tail
             cur = cur.next
 
 #比较难。做了一个小时。 要先形象化想清楚。
 #recur一次后， h由L3, 变成L7，   L6连接L7
 class Solution6:
-    def fill(self, h):
-        if h:  return self.flatten(h, None)
+    def fill(self, h):  #不长。 可以背下
+        if h:
+            cur = h
+            return self.flatten(cur, None)
 
     def flatten(self, h, toConnect):
         if h.child:
-            tmp1, tmp2=h.child, h.next
+            t1, t2=h.child, h.next
             h.child, h.next = None, h.child
-            h = self.flatten(tmp1, tmp2)  #L3, 变成L7.    toConnect变成L7  #碰到child，更新toConnect
-        if not h.next:        #find tail.   L6连接L7
+            h = self.flatten(t1, t2)  #L3, 变成L7.    toConnect变成L7  #碰到child，更新toConnect
+            return h
+        elif not h.next:        #find tail.   L6连接L7
             h.next = toConnect
+            toConnect=None #已经连接上了
             return toConnect
-        else: self.flatten(h.next, toConnect)    #因为不用改变连接
-        return h
+        else: return self.flatten(h.next, toConnect)    #因为不用改变连接
 #想象一下移动linkedlist的过程。 不断从下面往中间插入。     必须用recursion。 必须用tail

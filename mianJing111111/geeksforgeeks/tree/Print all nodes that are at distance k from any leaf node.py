@@ -18,15 +18,14 @@ The idea is to traverse the tree. Keep storing all ancestors till we hit a leaf 
 '''
 class Solution:
     def findK(self, root, k):
-        self.result = set([])
-        self.k = k
+        self.ret = set([]);  self.k = k
         self.dfs(root, [])
-        return self.result
+        return self.ret
 
     def dfs(self, root, path):
         if not root:  return [0]
         if not root.left and not root.right:
-            if len(path)>self.k:   self.result.add(path[-self.k])
-        l = self.dfs(root.left, path+[root.val])
-        r = self.dfs(root.right, path+[root.val])
-        return min(l, r)+1
+            if len(path)>=self.k:   self.ret.add(path[-self.k])
+            return
+        self.dfs(root.left, path+[root.val])
+        self.dfs(root.right, path+[root.val])

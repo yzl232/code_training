@@ -29,19 +29,19 @@ Output: All permutations of ABC with repetition are:
 
 n**n 指数的复杂
 '''
+#因为candidates不变
 class Solution:
     def allPer(self, s):
-        self.result = []; self.n = len(s); self.candidates = list(s)
+        self.ret = []; self.n = len(s); self.c = list(s)
         self.dfs( '')
-        return self.result
+        return self.ret
 
-    def dfs(self, tmpPath):  #还满少见的哈。
-        if len(tmpPath)==self.n:
-            self.result.append(tmpPath)
+    def dfs(self, cur):  #还满少见的哈。
+        if len(cur)==self.n:
+            self.ret.append(cur)
             return
-        else:
-            for ch in self.candidates:
-                self.dfs(tmpPath+ch)
+        for ch in self.c:
+            self.dfs(cur+ch)
 s = Solution()
 print s.allPer('AB')
 print s.allPer('ABC')

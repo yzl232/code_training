@@ -31,7 +31,7 @@ class Solution:
         dec = inc[:]
         for i in range(1, len(arr)):
             inc[i] = 1 if arr[i]<arr[i-1]  else inc[i-1]+1
-        for i in range(len(arr)-2, -1, -1):
+        for i in range(len(arr)-2, -1, -1):  #像这种2个辅助array的。必须从后往前
             dec[i] = 1 if arr[i]<arr[i+1] else dec[i+1]+1
         ret = 1
         for i in range(len(arr)):

@@ -60,22 +60,16 @@ Algorithmic Paradigm: Dynamic Programming
 '''
 class Solution:
     def printMaxSubSquare(self, matrix):
-        r = len(matrix); c = len(matrix[0])
-        s = [[0 for i in range(c)] for j in range(r)]
-        for i in range(r):
-            s[i][0] = matrix[i][0]
-        for  i in range(c):
-            s[0][i] = matrix[0][i]
-        for i in range(1, r):
-            for j in range(1, c):
+        m = len(matrix); n = len(matrix[0]); ret = 0
+        dp = [[0 for i in range(n)] for j in range(m)]
+        for i in range(m):   dp[i][0] = matrix[i][0]
+        for  i in range(n):   dp[0][i] = matrix[0][i]
+        for i in range(1, m):
+            for j in range(1, n):
                 if matrix[i][j] == 1:
-                    s[i][j] = min(s[i][j-1], s[i-1][j], s[i-1][j-1]) + 1
-                else:  s[i][j] = 0
-        result = s[0][0]
-        for i in range(r):
-            for j in range(c):
-                result= max(result, s[i][j])
-        print s
-        return result
+                    dp[i][j] = min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]) + 1
+                else:  dp[i][j] = 0
+                ret = max(dp[i][j], ret)
+        return ret
 s = Solution()
 print s.printMaxSubSquare([[1, 1]])

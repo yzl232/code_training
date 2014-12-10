@@ -1,5 +1,5 @@
 # encoding=utf-8
-'''s
+'''
 flatten a multilevel linked list
 
 Given a linked list where in addition to the next pointer, each node has a child pointer, which may or may not point to a separate list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in below figure.You are given the head of the first level of the list. Flatten the list so that all the nodes appear in a single-level linked list. You need to flatten the list in way that all nodes at first level should come first, then nodes of second level, and so on.
@@ -22,15 +22,13 @@ The problem clearly say that we need to flatten level by level. The idea of solu
 
 '''
 class Solution:
-    def flatten(self, head):
+    def flatten(self, head):  #就几行代码。背下
         if not head: return
-        tail = head
-        cur = head
+        tail = cur = head
         while tail.next:  tail = tail.next
         while cur !=tail:
             if cur.child:  #每次碰到child, flat，并且更新tail
                 tail.next = cur.child
-                tail = cur.child
                 while tail.next: tail = tail.next  #重复了
                 cur.child=None  #g4g忘了这个了 . 这一点比较重要。   搞完了后， cur.child = None
             cur = cur.next

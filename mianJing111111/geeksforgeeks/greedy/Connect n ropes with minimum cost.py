@@ -24,7 +24,7 @@ class Solution:
     def minCost(self, q):
         heapq.heapify(q)
         ret = 0
-        while len(q)>1:
+        while len(q)>=2:
             a1 = heapq.heappop(q)
             a2 = heapq.heappop(q)
             print a1, a2

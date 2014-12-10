@@ -1,5 +1,6 @@
 # encoding=utf-8
 '''
+和subarray不同。 只是subset
 
 Find whether an array is subset of another array | Added Method 3
 
@@ -44,15 +45,13 @@ class Solution:
 
 #如果是sorted array
 class Solution2:
-    def isSubset(self, big, arr):
-        n=len(big); m = len(arr)
-        if m<n: return False
+    def isSubset(self, l, s):  #large, small
+        n=len(l); m = len(s)
+        if m>n: return False
         i=j=0
         while i<n and j<m:
-            if big[j]<arr[i]: j+=1  #大的array可以小
-            elif big[j]==arr[i]:
-                i+=1
-                j+=1
+            if l[j]<s[i]: j+=1  #大的array可以小
+            elif l[j]==s[i]:
+                i+=1; j+=1
             else: return False
-        if j<m: return False
-        return True
+        return j==m   #能不能走完

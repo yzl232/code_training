@@ -39,3 +39,4 @@ class Solution:
 
 s = Solution()
 print s.get2NonRepeatingNos([2, 3, 7, 9, 11, 2, 3, 11])
+#和这道题目重复： Find the two numbers with odd occurrences in an unsorted array

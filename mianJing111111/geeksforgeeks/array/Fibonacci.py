@@ -27,8 +27,7 @@ class Solution:
         a=0; b = 1
         while a<x:
             a, b =b, a+b
-        if a==x: return True
-        return False
+        return a==x
 
 '''
 logN 解法。  利用了leetcode的求power部分
@@ -48,6 +47,8 @@ m*m*m=
 [2 1]
 
 
+所以不会矩阵乘法，可以简单的两行相加
+
 [Fn+1, Fn]
 [Fn, Fn-1]
 
@@ -55,24 +56,21 @@ m*m*m=
 
 class Solution2:
     def fib(self, n):
-        self.x =  [[1, 1], [1, 0]]
+        self.e =  [[1, 1], [1, 0]]
         if n==0: return 0
         result = self.pow(n)
         return result[1][0]
 
-    # @param x, a float
-    # @param n, a integer
-    # @return a float
-    def pow(self, n):
+
+    def pow(self, n):       #n是整数。 可以为负数
+        if n<0: return 1.0/self.pow( -n)
         if n == 0:return 1
-        elif n==1: return self.x
+        if n==1: return self.e
         elif n>1:
             half = self.pow(n/2)
-            square = self.multiply(self.x, self.x)
-            if n%2 == 0 : return square
-            else: return self.multiply(square, self.x)
-        else:
-            return 1.0/self.pow(-n)
+            t = self.multiply(half, half)
+            if n%2 == 0 : return t
+            else: return self.multiply(t, self.e)
 
     def multiply(self, f, m):
         x = f[0][0] * m[0][0] + f[0][1] * m[1][0]

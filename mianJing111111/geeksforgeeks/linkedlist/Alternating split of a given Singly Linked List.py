@@ -20,12 +20,12 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def splitAl(self, head):
-        if not head: return
-        self.recur(head, head.next)
+    def splitAl(self, h):
+        if not h: return
+        self.help(h, h.next)
 
-    def recur(self, head1, head2):
-        if not head1 or not head2: return
-        if head1.next:  head1.next = head1.next.next
-        if head2.next: head2.next = head2.next.next
-        self.recur(head1.next, head2.next)
+    def help(self, h1, h2):
+        if not h1 or not h2: return
+        if h1.next:  h1.next = h1.next.next
+        if h2.next: h2.next = h2.next.next
+        self.help(h1.next, h2.next)

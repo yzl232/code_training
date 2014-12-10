@@ -33,33 +33,33 @@ We can fill LGR[] in O(n) time.
 
 
 '''
+
+
+#用heapq是错误的。 必须用AVL TREE or self-balanced tree
+'''
 import  heapq
 
 class Solution:
     def find3Biggest(self, arr):
         if len(arr)<3: return -1
-        smallForward = [-1 for i in range(len(arr))]
-        smallHeap = [0-arr[0]]
-        heapq.heapify(smallHeap)   #binary search tree
+        l = [arr[i] for i in range(len(arr))]          #就是求了left max 和right max。
+        h = [-arr[0]]
+        heapq.heapify(h)
         for i in range(1, len(arr)):
-            smallForward[i] =0- smallHeap[0]
-            heapq.heappush(smallHeap, 0-arr[i])
-        print smallForward
-        bigBackward = self.nextGreatest(arr)
-        print bigBackward
-        result = arr[0]*arr[1]*arr[2]
+            l[i] =min(l[i], -h[0])
+            heapq.heappush(h, 0-arr[i])
+        r = self.nextGreatest(arr)
+        ret = -10**10
         for i in range(1, len(arr)-1):
-            result = max(result, arr[i]*smallForward[i]*bigBackward[i])
-        return result
+            if l[i]<arr[i]<r[i]: ret = max(ret, arr[i]*l[i]*r[i])
+        return ret
 
     def nextGreatest(self, arr):
-        if len(arr)<2: return -1
-        dp = [-1 for i in range(len(arr))]
-        dp[-1] = -1;  dp[-2] = arr[-1]
-        for i in range(len(arr)-3, -1, -1):
-            dp[i] = max(arr[i+1], dp[i+1])
-        return  dp
-
+        rMax = [arr[i] for i in range(len(arr))]
+        for i in range(len(arr)-2, -1, -1):
+            rMax[i] = max(rMax[i+1], arr[i])
+        return rMax
+'''
 
 class BST:
     pass
@@ -101,15 +101,15 @@ Solution:
 
 class Solution6:
     def find3(self, arr):
-        n =len(arr)
-        lMin = [None for i in range(n)]
+        n =len(arr);
+        lMin = [arr[i] for i in range(n)]
         rMax = lMin[:]
-        lMin[0]=arr[0];  rMax[-1]=arr[-1]
         for i in range(1, n):
             lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
         for i in range(n-2, -1, -1):
             rMax[i] = max(rMax[i+1], arr[i])
         for i in range(n):
-            if lMin[i]!=arr[i] and rMax[i]!=arr[i]:  print lMin[i], arr[i], rMax[i]
+            if lMin[i]<arr[i]<rMax[i]:  print lMin[i], arr[i], rMax[i]
 s = Solution6()
 print s.find3([12, 11, 10, 5, 6, 2, 30])
+print s.find3([2,4, 4, 4, 9, 5])

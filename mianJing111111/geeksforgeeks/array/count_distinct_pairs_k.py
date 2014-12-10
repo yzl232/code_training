@@ -22,15 +22,12 @@ There are 5 pairs with difference 4, the pairs are {0, 4}, {4, 8},
 '''
 class Solution:
     def countDifferenPairs(self, arr, k):
-        hashmap = {}
-        count = 0
+        d = {i:True for i in arr};
+        cnt=0
         for i in arr:
-            hashmap[i] = True
-        for i in arr:
-            if i-k in hashmap: count+=1
-            if i+k in hashmap: count+=1
-            del hashmap[i]
-        print hashmap
-        return  count
+            if i-k in d: cnt+=1
+            if i+k in d: cnt+=1
+            del d[i]
+        return  cnt
 s = Solution()
 print s.countDifferenPairs([1, 5, 3, 4, 2], 3)

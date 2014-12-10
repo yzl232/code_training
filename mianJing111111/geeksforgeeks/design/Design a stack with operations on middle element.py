@@ -24,8 +24,5 @@ Following is C implementation of push(), pop() and findMiddle() operations. Impl
 stack存储pointer to  双链表。  (把node 存进去)
 
 '''
-class middleStack:
-    def __int__(self):
-        self.stack = []
-
+#用一个self.cnt。 push的时候， 如果self.cnt==2,  middle后移， 并且self.cnt=0。
 

@@ -54,6 +54,7 @@ class Solution2:
                     elif e==1 and graph[i][j] != None: dp[e][i][j] = 1
                     elif e>1:
                         for a in range(0, n):
-                            if graph[i][a] != None and i!=a and j!=a and graph[i][j]!=None:
+                            if i==a or j==a: continue
+                            if graph[i][a]:
                                 dp[e][i][j]= min(dp[e-1][a][j]+graph[i][a],  dp[e][i][j]) #1+ k-1 steps   i=>a=>j
         return dp[-1][u][v]

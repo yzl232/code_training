@@ -1,6 +1,6 @@
 # encoding=utf-8
 '''
-etect if two integers have opposite signs
+detect if two integers have opposite signs
 
 Given two signed integers, write a function that returns true if the signs of given integers are different, otherwise false.
 '''

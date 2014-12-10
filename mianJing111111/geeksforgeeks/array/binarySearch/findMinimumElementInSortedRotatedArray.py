@@ -29,15 +29,21 @@ We can do it in O(Logn) using Binary Search. If we take a closer look at above e
 '''
 
 class Solution:
-    def findMin(self, arr):
-        l =0;  h=len(arr)-1
+    # @param num, a list of integer
+    # @return an integer   #2345671      7123456
+    def findMin(self, num):
+        ret = num[0]
+        l, h = 0, len(num)-1
         while l<=h:
             m = (l+h)/2
-            if m<h and arr[m]>arr[m+1]: return arr[m+1]
-            elif m>l and arr[m-1]> arr[m]: return arr[m]
-            elif arr[h]>arr[m]:   h = m-1
-            else: l=m+1
-        return arr[0]
+            ret = min(ret, num[m])
+            if num[m]<num[h]: h = m-1
+            elif num[m]>num[h]: l=m+1
+            else: h-=1
+        return ret
+
+
+#leetcode 不重要。accept不重要。关键是背题
 
 s = Solution()
 print s.findMin([7 , 2, 3, 4, 5, 6])

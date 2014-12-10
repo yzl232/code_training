@@ -19,9 +19,9 @@ class Solution:
     def pushZeroesToEnd(self, arr):
         slow = 0;  n = len(arr)
         for fast in range(n):
-            if arr[fast] !=0:
-                arr[slow] = arr[fast]
-                slow+=1
+            if arr[fast]==0: continue
+            arr[slow] = arr[fast]
+            slow+=1
         while slow<n:
             arr[slow]=0
             slow+=1
@@ -34,24 +34,24 @@ print(s.pushZeroesToEnd([1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9]))
 上面的方法是保证非0数相对顺序。
 
 
-如果没有这个相对顺序要求，
+如果没有这个保留相对顺序要求，
 2个指针swap的方法。 保证了minumum step
 
 荷兰国旗变体
 '''
 
-class Solution:
+
+class Solution5:
     def segregate0and1(self, arr):
         l=0; r = len(arr)-1
         while l<r:
-            while arr[l]!=0 and l<r:
-                l+=1
-            while arr[r]==0 and l<r:
-                r-=1
-            if l<r:
-                arr[l], arr[r] = arr[r], arr[l]  #交换
-                l+=1
-                r-=1
+            while l<r and arr[l]!=0 :  l+=1
+            while l<r and arr[r]==0 :  r-=1
+            arr[l], arr[r] = arr[r], arr[l]  #交换
+            l+=1;  r-=1
+        return arr
+s = Solution5()
+print s.segregate0and1([1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9])
 
 
 
@@ -61,18 +61,14 @@ class Solution:
 '''
 
 
-class Solutio4n:
+class Solution:
     def segregate0and1(self, arr):
         l=0; r = len(arr)-1
         while l<r:
-            while arr[l]==0 and l<r:
-                l+=1
-            while arr[r]==1 and l<r:
-                r-=1
-            if l<r:
-                arr[l], arr[r] = arr[r], arr[l]  #交换
-                l+=1
-                r-=1
+            while l<r and arr[l]==0 :  l+=1
+            while l<r and arr[r]==1 :  r-=1
+            arr[l], arr[r] = arr[r], arr[l]  #交换
+            l+=1;  r-=1
 
 
 '''

@@ -1,3 +1,4 @@
+
 # encoding=utf-8
 '''
 
@@ -8,34 +9,36 @@ For example, for N = 4 and S = {1,2,3}, there are four solutions: {1,1,1,1},{1,1
 
 
 Dynamic programming problem: Coin change problem: Find the minimum number of coins required to make change for a given sum (given unlimited cumber of N different denominations coin)
+
+
+
+#combination sum的数目。 dp
+dfs也可以做。
 '''
 
 
 
-
+#先sort values
 
 class Solution:
     def count(self, values, target):
         if target==0: return 1
         if target<0: return 0
-        if len(values)<=0 and target>0:
-            return 0
-        return self.count(values[1:], target) + self.count(values, target-values[0])
+        if not values and target>0:  return 0
+        return self.count(values[1:], target) + self.count(values[:], target-values[0])
 #不要自己。  要自己，target-values[0]
 
 #dp
 class Solution2:
     def count(self, values, target):
+        values.sort()
         m = len(values); n = target
-        dp = [[0 for i in range(n+1)] for j in range(len(values))]
-        dp[0] = 1
-        for i in range(0, m):
-            dp[0][i] = 1
-
+        dp = [[0 for i in range(n+1)] for j in range(len(values))]  #j代表包含valuesd的部分
+        for j in range(0, m):   dp[0][j] = 1  #i=0情况
         for i in range(1, n+1):
             for j in range(m):
-                val = values[j]
-                x = dp[i-val][j] if i-val>=0 else 0  #用了这种硬币
-                y = dp[i][j-1] if j>=1 else 0 #没用
+                v = values[j]
+                x = dp[i-v][j] if i-v>=0 else 0  #用了这种硬币
+                y = dp[i][j-1] if j!=0 else 0 #没用
                 dp[i][j] = x+y
         return dp[-1][-1]
