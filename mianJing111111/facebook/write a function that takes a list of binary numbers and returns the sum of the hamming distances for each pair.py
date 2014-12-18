@@ -10,11 +10,15 @@
 class Solution:
     def hammingD(self, s1, s2):
         if len(s1)>len(s2): return self.hammingD(s2, s1)
-        return sum(1 for i in range(len(s1), -1,-1) if s1[i]!=s2[i]) + len(s2)-len(s1)
+        s1 = '0'*(len(s2)-len(s1))+s1
+        return sum(1 for i in range(len(s1)) if s1[i]!=s2[i])
     #从右边往高位。
 
+
+
 '''
-Write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair -> O(n) solution.
+Write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair ->
+ O(n) solution.
 '''
 #做法比较巧妙。 统计每一位的1的出现次数cnt。则0的次数为n-cnt.  距离就是cnt*(n-cnt)
 class Solution:
@@ -22,10 +26,11 @@ class Solution:
         d = {}; n=len(arr)
         for i in range(n):
             j=0  # bit location
-            while arr[i]:
+            t = arr[i]
+            while t:
                 if j not in d:d[j]=0
-                if arr[i]&1: d[j]+=1
-                arr[i]>>=1
+                if t&1: d[j]+=1
+                t>>=1
                 j+=1
         return sum(val*(n-val) for key, val in d.items())
 

@@ -13,21 +13,21 @@ aaw // a= 1, a =1, w= 23
 kw // k = 11, w = 23
 
 '''
-
+#  就这样。 求所有解法 。 这样最好了。
 class Solution:
     def decode(self, s):
-        self.result = []
+        if not s: return []
+        self.ret = []
         self.dfs('', s)
-        return self.result
+        return self.ret
 
-    def dfs(self, tmpResult, s):
+    def dfs(self, cur, s):
         if len(s)==0:
-            self.result.append(tmpResult)
+            self.ret.append(cur)
             return
-        if s[0]!='0':
-            self.dfs(tmpResult+chr(int(s[0])-1+ord('a')), s[1:])  #一个非0字符
-        if len(s)>=2 and  '10'<=s[:2]<='26':
-            self.dfs(tmpResult+chr(int(s[:2])-1+ord('a')), s[2:]) #2个字符
+        if s[0]!='0':   self.dfs(cur+chr(int(s[0])-1+ord('a')), s[1:])  #一个非0字符
+        if len(s)>=2 and  '10'<=s[:2]<='26':    self.dfs(cur+chr(int(s[:2])-1+ord('a')), s[2:]) #2个字符
+
 
 s =Solution()
 print s.decode("1123")

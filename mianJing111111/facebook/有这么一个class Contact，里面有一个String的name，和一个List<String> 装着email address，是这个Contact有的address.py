@@ -16,14 +16,14 @@
 '''
 
 #比较tricky。 用hash。  key: email.    val:  自己建立id.
-class Solution:
+class Solution: #自己建立2个hashmap。 一个email-myid,   一个是myid- [email1, email2, ...]
     def sanitizeContacts(self, contacts):
         id = 0; d={};  d2={}  #d1 key 是email。val是id
         for c in contacts:   #d2 key 是 id , val 是emails
             myId = -1 #起了flag的作用
             for email in c[1]: #第一遍找有没有存在
                 if email not in d:  continue
-                if myId==-1:  myId=d[email]    #found group
+                else: myId=d[email]    #found group
             if myId<0:
                 id+=1
                 myId=id

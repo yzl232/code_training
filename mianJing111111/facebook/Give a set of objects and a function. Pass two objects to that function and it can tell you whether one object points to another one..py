@@ -17,17 +17,17 @@ Give a set of objects and a function. Pass two objects to that function and it c
 class Solution:
     def findCelebrity(self, objects):
         stack = objects[:]
-        while len(stack)>1:  #eliminating stage
+        while len(stack)>=2:  #eliminating stage
             u = stack.pop()
             v = stack.pop()
-            if self.compareObjects(u, v):
-                stack.append(v)
+            if self.compareObjects(u, v):     stack.append(v)
             else:   stack.append(u)
         if not self.verify(objects, stack[0]): return False   # no objects.
         return stack[0]
 
     def verify(self, objects, c):
         for p in objects:
+            if p==c: continue
             if not self.compareObjects(p, c): return False
         return True
 

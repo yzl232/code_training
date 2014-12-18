@@ -24,13 +24,14 @@ E
 class Solution:
     def printAllPaths(self, root):
         if not root:return
-        self.result = []
-        self.dfs(root, [(root.val, 0)])
-        return self.result
+        self.ret = []
+        self.dfs(root, [(root.val, 0)])  #就是存入二元组。 column值
+        return self.ret
 
-    def dfs(self, root, tmpPath):
+    def dfs(self, root, cur):
         if not root:
-            self.result.append(tmpPath)
-        mark = tmpPath[-1][-1]
-        self.dfs(root.left, tmpPath+[(root.val, mark-1)])
-        self.dfs(root.right, tmpPath+[(root.val, mark+1)])
+            self.ret.append(cur)
+            return
+        mark = cur[-1][-1]
+        self.dfs(root.left, cur+[(root.val, mark-1)])
+        self.dfs(root.right, cur+[(root.val, mark+1)])

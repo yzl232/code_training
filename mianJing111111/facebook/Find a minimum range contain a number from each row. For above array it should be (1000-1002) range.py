@@ -28,9 +28,9 @@ Merge the arrays and uniquify the values, and then run a sliding window over the
 #比leetcode稍微容易
 class Solution:
     def find(arr, nRow):
-        d={}; i =0;   minWindow = arr[-1][0]-arr[0][0]+10; ret = (None, None)
-        for r in arr:
-            rNum=r[-1]; end=r[0]
+        d={}; i =0;   ret = arr[-1][0]-arr[0][0]+10; x = (None, None)
+        for t in arr:
+            rNum=t[-1]; end=t[0]
             if rNum not in d: d[rNum]=0
             d[rNum]+=1
             if len(d)==nRow: #缩减窗口
@@ -38,8 +38,8 @@ class Solution:
                     d[arr[i][-1]]-=1
                     i+=1
                 start = arr[i][0]
-                if end - start+1<minWindow:
-                    ret =(start, end)
-                    minWindow = end - start+1
+                if end - start+1<ret:
+                    x =(start, end)
+                    ret = end - start+1
         return ret         #O(n)
 #稍微改变的版本

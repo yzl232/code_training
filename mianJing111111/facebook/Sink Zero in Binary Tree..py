@@ -17,22 +17,21 @@ We should use a queue instead of a stack in order to swap always the top-most ze
 
 
 
-一旦看到非0数，我们就看 queue
 
 如果。 电面。 印象不深，可以直接念代码。  basically  dfs,   if root.val ==0:  queue.append.  else  we pop  and swap. and
 
 '''
 from collections import deque
 
-class Solution:
+class Solution:   #q只会增多，不会减少
     def sinkZero(self, root):
         self.q = deque([])
         self.dfs(root)
 
     def dfs(self, root):
         if not root: return
-        if root.val ==0: self.q.append(root)   #queue里边存的是0
-        elif len(self.q)>0:  #之前存在0元素
+        if root.val ==0: self.q.append(root)   #queue里边存的是pointer  to  node。  
+        elif self.q: #之前存在0元素
             tmp = self.q.popleft()
             root.val, tmp.val = tmp.val, root.val
             self.q.append(root) #自己也加进去。

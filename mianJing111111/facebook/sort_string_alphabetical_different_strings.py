@@ -14,17 +14,9 @@
 p = "htarfbp"
 
 class Solution:
-    def sortNew(self,  arr, pattern):
-        d = {}
-        for i in range(len(pattern)):
-            d[pattern[i]] =chr(ord('a')+i)
-        for i in range(len(arr)):
-            word = arr[i]
-            convert = ''
-            for ch in word:
-                convert+=d[ch]
-            arr[i] = (convert, word)
-        arr.sort()
+    def sortNew(self,  arr, pattern):  #牛逼。就三行代码
+        d = {pattern[i]: chr(ord('a')+i)  for i in range(len(pattern))}
+        arr.sort(key=lambda s: [d[ch] for ch in s])
         return arr
 
 s = Solution()

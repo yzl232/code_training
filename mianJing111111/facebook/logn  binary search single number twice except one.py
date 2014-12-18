@@ -16,7 +16,7 @@ binary search
 
 '''
 
-
+#虽然长了一点。 但是逻辑清楚。比较好写
 class Solution:
     def singleNumber(self,  arr):
         l = 0;  h = len(arr)-1
@@ -27,11 +27,11 @@ class Solution:
                 if  m+1<len(arr) and arr[m]==arr[m+1]:    l = m+2   #在右边  -- -- -偶数index
                 elif  m-1>=0 and arr[m] == arr[m-1]:  h = m-2
                 else: return arr[m]
-            if m%2==1:
+            elif m%2==1:
                 if m+1<len(arr) and arr[m]==arr[m+1]:  h = m-1
                 elif m-1>=0 and arr[m] == arr[m-1]: l=m+1
                 else: return arr[m]
 s = Solution()
 print s.singleNumber([1,1,2,2,3,4,4,9,9])
 print s.singleNumber([1,2, 2])
-print s.singleNumber([2,2,4,4,1])
+print s.singleNumber([2,2,4,4,9])

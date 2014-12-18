@@ -28,23 +28,22 @@ output: 1
 Valid Assumptions: Please assume that both the pattern and string input are valid
 
 
- 感觉属于leetcode的简化版
+ 感觉属于leetcode的简化版, 不用考虑'.'了
 '''
 
 class Solution:
     def isMatch(self, s, p):
-        if len(p)==0: return len(s)==0
-        if len(p)==1 or (p[1]!='*' and p[1]!='+' ):
-            if len(s)==0 or (s[0] != p[0]): return False
-            return self.isMatch(s[1:], p[1:])
-        else:
+        if s and p and p[-1] not in ('*', '+', s[-1]): return False
+        return self.dfs(s, p)
+
+    def dfs(self, s, p):
+        if not p: return not s
+        if len(p)>=2 and p[1] in ('*', '+'):
             if p[1]=='*':
-                i = -1
-                while i<len(s) and (i<0 or s[i]==p[0]):
-                    i+=1
-                    if self.isMatch(s[i:], p[2:]): return True
-            if p[1] =='+':
-                i=0
-                while i<len(s) and s[i]==p[0]:
-                    i+=1
-                    if self.isMatch(s[i:], p[2:]): return True
+                if self.dfs(s, p[2:]): return True
+            i=0
+            while i<len(s) and s[i]==p[0]:
+                i+=1
+                if self.dfs(s[i:], p[2:]): return True
+            return False
+        else: return s!='' and p[0]==s[0] and self.dfs(s[1:], p[1:])

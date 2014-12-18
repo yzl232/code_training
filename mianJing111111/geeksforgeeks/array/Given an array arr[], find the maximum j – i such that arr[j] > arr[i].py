@@ -40,7 +40,7 @@ class Solution:
         while j<n and i<n:         #类似  i=0,  j=n-1
             if lMin[i]>=rMax[j]:  i+=1
             else: #find one
-                ret = max(ret, j-i)
+                ret = max(ret, j-i+1)
                 j+=1  #找到合适的了。 继续往右。直到没有为止。
         return ret
 s = Solution()

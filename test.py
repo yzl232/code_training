@@ -1,11 +1,14 @@
-# encoding=utf-8
-'''
-Given a number x, less than 100. How will you generate true with probability x/100. So if x = 65, how will you generate true with probability 65/100. You can represent true by 1 and false by 0.
-'''
+def triple_free_combinations(n, k=2):
+    """Return the number of ways to choose n items (with k choices for
+    each item), subject to the constraint that no colour appears three
+    times in a row.
 
-import random
-class Solution:
-    def myRand(self, x):
-        y = random.randint(1, 100)
-        if y<x: return 1
-        return 0
+    """
+    if n == 0:
+        return 1
+    a, b = 2, 2 * 2
+    for _ in range(n - 1):
+        a, b = b, (a + b)
+    return a
+
+print triple_free_combinations(3, 2)

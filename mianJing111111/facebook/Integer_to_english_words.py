@@ -6,7 +6,9 @@
 500234 -> five hundred thousand two hundred thirty four
 1232232 -> 1 million two hundred .....
 '''
-NUMBER_WORDS = {
+#naive 方法就是1~99 全部存到hashmap。  这个是存了30个。 我觉得存99个没问题。
+
+numToWords = {
     1 : "one",
     2 : "two",
     3 : "three",
@@ -36,26 +38,24 @@ NUMBER_WORDS = {
     90 : "ninety"
 }
 def int_to_english(n):
-    english_parts = []
-    ones = n % 10
-    tens = n % 100
-    hundreds = (n / 100) % 10
+    ret = []
+    ones = n % 10;   tens = n % 100   #0~9,   11~99
+    hundreds = (n / 100) % 10  #因为只考虑100到900  ， 1-9
     thousands = (n / 1000)
-
     if thousands:
-        english_parts.append(int_to_english(thousands))
-        english_parts.append('thousand')
-        if not hundreds and tens: english_parts.append('and')    #可以省略
+        ret.append(int_to_english(thousands))
+        ret.append('thousand')
+        if not hundreds and tens: ret.append('and')    #可以省略     and就是在几十几前面加上去的。
     if hundreds:
-        english_parts.append(NUMBER_WORDS[hundreds])
-        english_parts.append('hundred')
-        if tens: english_parts.append('and')
-    if tens:
-        if tens < 20 or ones == 0:
-            english_parts.append(NUMBER_WORDS[tens])
+        ret.append(numToWords[hundreds])
+        ret.append('hundred')
+        if tens: ret.append('and')
+    if tens:  #如果存99个数字到hashmap。 这下面三行不需要了。
+        if tens < 20 or ones == 0:    ret.append(numToWords[tens])
         else:
-            english_parts.append(NUMBER_WORDS[tens - ones])
-            english_parts.append(NUMBER_WORDS[ones])
-    return ' '.join(english_parts)
+            ret.append(numToWords[tens - ones])
+            ret.append(numToWords[ones])
+    return ' '.join(ret)
 
 print int_to_english(93256)
+

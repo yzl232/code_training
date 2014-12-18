@@ -7,16 +7,26 @@ Following is a simple algorithm to find out whether a given graph is Birpartite 
 4. This way, assign color to all vertices such that it satisfies all the constraints of m way coloring problem where m = 2.
 5. While assigning colors, if we find a neighbor which is colored with same color as current vertex, then the graph cannot be colored with 2 vertices (or graph is not Bipartite)
 '''
+#思想就是所有node和它的邻居颜色必须不同
 class Solution:
     def isBiparty(self, graph, src):
-        colors = {node:None for node in graph}
-        colors[src] = 0
-        candidates = set([])
-        while candidates:
-            current = set([])
-            for n in candidates:
-                for neighbor in n:
-                    current.add(neighbor)
-                    if not colors[neighbor]:   colors[neighbor]=1-colors[n]  #neighbor一定相反
-                    elif colors[neighbor] == colors[n]: return False
-            candidates = current
+        colors = {src: 0}
+        pre = set([src])
+        while pre:
+            cur = set([])
+            for n in pre:
+                for x in n.neighbors:
+                    if x not in colors:
+                        cur.add(x)
+                        colors[x]=1-colors[n]
+                    else:
+                        if colors[x]==colors[n]: return False
+            pre = cur
+        return True
+
+'''
+#graph。 BFS都是用一个hashmap代替visited。   然后
+for n in pre:
+for n in x.neigbors.
+ if not in map
+'''

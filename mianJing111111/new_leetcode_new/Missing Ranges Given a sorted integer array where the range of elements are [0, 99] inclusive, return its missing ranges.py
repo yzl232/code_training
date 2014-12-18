@@ -14,8 +14,12 @@ As it turns out, if we could add two “artificial” elements, –1 before the 
 '''
 
 class Solution:
-    def findRange(self, values, start, end ):
-        results = [];  values = [start-1]+values+[end+1]   #补上两个多余的量。 来处理边界。
+    # @param A, a list of integers
+    # @param lower, an integer
+    # @param upper, an integer
+    # @return a list of strings
+    def findMissingRanges(self, values, start, end ):
+        results = [];  values = [start-1]+values+[end+1]   #补上两个多余的量。 来处理边界
         for i in range(1, len(values)):
             a = values[i];  b = values[i-1]
             if a-b>=2:  results.append(self.getRange(b+1, a-1))

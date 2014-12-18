@@ -28,6 +28,6 @@ class Solution:
         ret = arr[1]-arr[0]
         minN = arr[0]
         for i in range(1, len(arr)):
-            ret = max(arr[i]-minN, ret)
             minN = min(arr[i], minN)
+            ret = max(arr[i]-minN, ret)
         return ret

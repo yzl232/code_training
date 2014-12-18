@@ -16,15 +16,15 @@ class TreeNode:
 
 class Solution:
     def serializae(self, root):
-        self.result = []  #就是preorder加上特殊符号而已
+        self.ret = []  #就是preorder加上特殊符号而已
         self.dfs(root)
-        return self.result
+        return self.ret
 
     def dfs(self, root):
         if not root:
-            self.result.append('#')
+            self.ret.append('#')
             return
-        self.result.append(root.val)
+        self.ret.append(root.val)
         self.dfs(root.left)
         self.dfs(root.right)
 
@@ -45,12 +45,10 @@ class Solution2:
     def dfs(self):
         if self.index>=len(self.arr): return
         rootVal = self.arr[self.index]
-        if rootVal == '#':
-            self.index+=1
-            return
+        self.index+=1
+        if rootVal == '#':    return
         else:
             root = TreeNode(rootVal)  #尝试从pre-order+符号来 还原
-            self.index+=1
             root.left = self.dfs()
             root.right = self.dfs()
             return root

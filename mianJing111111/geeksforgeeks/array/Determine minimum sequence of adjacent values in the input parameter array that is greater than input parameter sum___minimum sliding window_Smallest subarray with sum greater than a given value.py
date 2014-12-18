@@ -56,29 +56,22 @@ class Solution:
 '''
 
 
-
+# sliding window的套路。  l, r。   for r in range,   if s>targe:  while : l+=1
 #O(n)的做法很巧妙
 class Solution3:
     def findShortest5(self, arr, target):
-        minLen = 10**10
-        s = arr[0];  l=r=0; windowLength = 1
-        while s<target:
-            r+=1
-            windowLength+=1
+        ret = len(arr)+1
+        s = arr[0];  l=0
+        for r in range(len(arr)):
             s+=arr[r]
-        minLen = min(minLen, windowLength)
-        while r<len(arr):
-            r+=1;
-            s+=arr[r]
-            windowLength+=1
-            while s-arr[l]>=target:
-                l+=1
-                s-=arr[l]
-                windowLength-=1
-            minLen = min(minLen, windowLength)
-        return
+            if s>target:
+                while s-arr[l]>target:
+                    l+=1; s-=arr[l]
+                ret = min(r-l+1, ret)
+        return ret
 
-
+s=  Solution3()
+print s.findShortest5([ 2,1,1,4,3,6], 8)
 # sliding window
 '''
 This takes O(n) since the window is always sliding into 1 direction (left to right), which stops at most 2n steps.  which is  O(n) steps. #

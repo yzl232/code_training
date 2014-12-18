@@ -63,7 +63,7 @@ class Solution:
         m = len(arr);  n = len(arr[0])
         if m==1: return n
         if n==1: return m
-        if m%2==0: return n*2   #m偶数。 堵在左下角。
+        if m%2==0: return m*2   #m偶数。 堵在左下角。
         if m%2 and n%2: return m*n  #都是奇数。全部走完
         if m%2 and n%2==0:  return n*m-(n-2)*(m-2)   #m 为奇数， n为偶数。
 

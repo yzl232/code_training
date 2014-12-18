@@ -66,14 +66,12 @@ class Solution:
             for start in range(n+1-length):
                 end = start+length  #exclusive
                 if s[end-1] =='*':  #不用改。 直接找
-                    dp[start][end] = min ( dp[start][ start+k]+dp[start+k][end-1] for k in range(length-1) )
+                    dp[start][end] = min ( dp[start][ start+k]+dp[start+k][end-1] for k in range(1, length-1) )  #当k==0就是删除了。
                 elif s[end-1] == 'x':
-                    tmp1 = min ( dp[start][ start+k]+dp[start+k][end-1]+1 for k in range(length-1) ) #replace
-                    tmp2 = dp[start][end-1] + 1      #delete x in the end, 插入*和删除x是等效的。  只考虑删除就好
-                    dp[start][end] = min(tmp1, tmp2)
-        return dp[0][-1]
+                    dp[start][end] =min ( dp[start][ start+k]+dp[start+k][end-1]+1 for k in range(length-1) )  #replace
+        return dp[0][-1]  #delete x in the end, 插入*和删除x是等效的。  只考虑删除就好
 
-
+#O(n cube)
 s = Solution()
 print s.getMinEdit("*x*")
 print s.getMinEdit("xxx**")
@@ -82,3 +80,4 @@ print s.getMinEdit('x')
 print s.getMinEdit('*xx')
 print s.getMinEdit('**xx')
 print s.getMinEdit('x*xxx')
+print s.getMinEdit('*x**x*xx**x***xx*xx**x***xxxxxxxx**xxxxxxx*xx****xxx*x***x**x*******xx**x*xx**x*xx***xx**xx*xxxx')

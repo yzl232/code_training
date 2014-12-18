@@ -12,9 +12,6 @@ deQueue(q)
        While stack1 is not empty, push everything from satck1 to stack2.
   3) Pop the element from stack2 and return it.
 
-
-
-
 '''
 
 
@@ -31,6 +28,5 @@ class queue:
         if not self.stack1 and not self.stack2:
             return
         if not self.stack2:
-            while self.stack1:
-                self.stack2.append(self.stack1.pop())
+            while self.stack1:    self.stack2.append(self.stack1.pop())
         return self.stack2.pop()

@@ -52,6 +52,7 @@ Overall complexity is O(k*n^3) since each dist() takes O(n).
 
 
 '''
+
 class Solution:
     def minMoves(self, arr, k):
         n = len(arr);

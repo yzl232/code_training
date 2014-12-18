@@ -1,4 +1,11 @@
 # encoding=utf-8
+'''
+有一个流输入的文件，要求实时输出根据输入的等概率数字，比如输入1，输出1，输入12，输出1或者2（1和2各占50%），输入1112，输出1(75%概率)或者2(25%概率)。输入的数列是一直在实时输入的流，会非常大，不能离线记录。
+
+
+Google有考这道题目。 面经
+'''
+
 import random
 '''
 
@@ -71,3 +78,4 @@ To simplify proof, let us first consider the last element, the last element repl
 
 Let us now talk about second last element. When second last element processed first time, the probability that it replaced the previous result is 1/(n-1). The probability that previous result stays when nth item is considered is (n-1)/n. So probability that the second last element is picked in last iteration is [1/(n-1)] * [(n-1)/n] which is 1/n.
 '''
+

@@ -10,7 +10,7 @@ A和B做一个DFS或者BFS来找出B中对应x的节点。面试官说可以，�
 
 '''
 class Solution:
-    def find(self, x, bRoot):
+    def find(self, x, bRoot):  #路径。  左代表-1.  右边代表1
         stack = []
         while x.parent:
             t = x.parent

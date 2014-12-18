@@ -23,8 +23,8 @@ class Solution:#很巧妙。背下
         arr.sort(key = lambda x:x.end)  #以end来排列。 很特别
         dp = [arr[i].cost for i in range(len(arr))]
         for i in range(1, len(arr)):
-            pI = self.find(arr, arr[i].start)    #搜索start
-            dp[i] = max(dp[pI+1]+arr[i].cost, dp[i-1])   #小于end的interval的总和
+            x = self.find(arr, arr[i].start)    #搜索start
+            dp[i] = max(dp[x]+arr[i].cost, dp[i-1])   #小于end的interval的总和   #前者是include,  后者 exclude
         return dp[-1]
 
     def find(self, arr, target):

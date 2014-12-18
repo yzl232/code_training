@@ -31,17 +31,14 @@ We can change the model of this problem to the following. Considering there are 
 
 
 
- 解法是O(n)
+ 解法是O(logN)
+ #非常的巧妙啊。。
 '''
 class Solution:
     def selectWinner(self, n):
-        total = 0
-        numZeros = 0
-
+        total = 0;    cnt0 = 0
         while n!=0:
-            if n&1:  #二进制最右边一位是不是1
-                total += numZeros
-            else:
-                numZeros+=1
+            if n&1:     total += cnt0   #二进制最右边一位是不是1
+            else:     cnt0+=1
             n = n>>1  #右移一位。
         return total%2

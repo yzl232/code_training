@@ -13,11 +13,12 @@
 * Edit is: insertion, removal, replacement
 */
 '''
+#aa,  aab
+#aba  aaa
+#aa,   baa
 #总共就差1和长度相等2种情况。  长度相等很好解决。  差一也好解决。
-
-#背它的答案。 我的答案始终通不过。
-#艹。 leetcode要求  one pass,  in place
-class Solution:
+#差1得两种情况:在末尾。 在前面或者中间。
+class Solution: #关键就是背下后面4行
     # @param s, a string
     # @param t, a string
     # @return a boolean
@@ -25,48 +26,9 @@ class Solution:
         m=len(s); n=len(t)  #保持n比较大
         if m>n: return self.isOneEditDistance(t, s)
         if n-m>1: return False
-        i=0; shift = n-m
+        i=0; dif = n-m
         while i<m and s[i]==t[i]: i+=1
-        if i==m: return shift==1     #aaa,   aaab这种情况
-        if shift==0: i+=1    #替换,跳过
-        while i<m and s[i]==t[i+shift]: i+=1
+        if i==m: return dif==1     #aaa,   aaab这种情况
+        if dif==0: i+=1    #替换,跳过  diff==1不能跳过。 要检查 #aa,   aba
+        while i<m and s[i]==t[i+dif]: i+=1
         return i==m
-
-
-
-
-
-
-'''
-
-
-
-
-
-        else:
-            for i in range(len(big)):
-                if big[i] == small[i]: continue
-                else:
-                    if small == big[:i]+big[i+1:]: return True
-                    return False
-'''
-
-class Solution58:
-    def isOneEditDistance(self, a, b):
-        small = a;  big = b
-        if len(small)>len(big):   return self.isOneEditDistance(b, a)
-        operations = 0
-        if len(big) - len(small)>1: return False
-        elif len(big) == len(small): #长度相等。
-            for i in range(len(small)):
-                if big[i] != small[i]:
-                    if operations >0: return False
-                    operations+=1
-        else:  #长度不等
-            for i in range(len(small)):
-                if small[i] != big[i+operations]:
-                    if operations >0: return False
-                    operations+=1
-        return True
-s = Solution58()
-print s.isOneEditDistance('a', '')

@@ -58,6 +58,17 @@ Now reverse that you will get final result : 4->7->4->0->4->6 Read more at: http
 这道题目难度太大。 看懂乘法的式子就好。
 
 '''
+#leetcode那个是逆转了。 从低位到高位。  不能逆转，可以改成double linked list.  用
+#如果可以用extra space。 存到array里边
+
+
+
+
+
+
+
+
+'''
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -126,3 +137,4 @@ class Solution:
             l2, cur = l2.next, cur.next
         if carry==1: cur.next=ListNode(1)
         return self.reverse(dummy.next)
+'''

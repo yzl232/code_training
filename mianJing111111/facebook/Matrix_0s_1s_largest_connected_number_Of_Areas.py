@@ -26,7 +26,7 @@ class Solution:
         for i in range(self.m):
             for j in range(self.n):
                 if board[i][j] == 1:       #每次找到一个匹配，就迅速把它替换掉。然后DFS
-                    board[i][j] = '#'
+                    board[i][j] = '#'      #比word search要简单。  只要替换过去。 不用替换回来
                     self.size = 0
                     self.dfs(board, i, j)
                     sizeArea.append(self.size)
@@ -35,9 +35,7 @@ class Solution:
 
     def dfs(self, board, i, j):
         self.size+=1
-        directions = [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]
-        for d in directions:
-            r = d[0]; c=d[1]
+        for r, c in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
             if 0<=r<=self.m-1 and 0<=c<=self.n-1:
                 if board[r][c] == 1:
                     board[r][c] = '#'

@@ -33,21 +33,21 @@ Other than the odd edge case, this problem seems to be straightforward enough. A
 #面经出现了2次！！！
 
 class Solution:
-    def remove_Comments(self, s):
-        isCommenting = False
+    def remove_Comments(self, s):    #其实不是很容易写。  有点tricky
+        flag = False  # is commenting
         rets = []
         for line in s:
-            processed = '';  i=-1
+            processed = '';  i=0
             while i<len(line):
-                i+=1
-                if not isCommenting:
-                    processed+=line[i]
-                    if i+1<=len(line)-1 and line[i:i+2] =='/*':
-                        isCommenting = True
+                if not flag:
+                    if i+1<len(line) and line[i:i+2] =='/*':
+                        flag = True
                         i+=1
+                    else: processed+=line[i]
                 else:
-                    if i+1<=len(line)-1 and line[i:i+2] =='*/':
-                        isCommenting = False
+                    if i+1<len(line) and line[i:i+2] =='*/':
+                        flag = False
                         i+=1
-            rets.append(line)
+                i+=1
+            rets.append(processed)
         return rets

@@ -26,13 +26,9 @@ class Solution:
     # @param two ListNodes
     # @return a ListNode
     def mergeTwoLists(self, l1, l2):
-        dummy = ListNode(0)
-        prev = dummy
-        while l1 and l2:
-            tmp1 = l1.next
-            tmp2 = l2.next
-            l1.next = l2
-            l2.next = tmp1
-            l1 = tmp1
-            l2 = tmp2
-        return dummy.next
+        h=l1
+        while l1 and l2:   #每次只处理一个node
+            t1 = l1.next;   t2 = l2.next
+            l1.next = l2;   l2.next = t1
+            l1 = t1;   l2 = t2
+        return h

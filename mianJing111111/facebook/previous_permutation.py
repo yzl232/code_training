@@ -9,20 +9,20 @@
 class Solution:
     # @param num, a list of integer
     # @return a list of integer
-    def nextPermutation(self, num):
-        n = len(num)
+    def nextPermutation(self, arr):
+        n = len(arr)
         for i in range(n-1, 0, -1):
-            if num[i]<num[i-1]:
+            if arr[i]<arr[i-1]:  #就是大于号变成小于号的过程
                 for j in range(n-1, i-1, -1):
-                    if num[j]<num[i-1]: break
-                num[j], num[i-1] = num[i-1], num[j]
+                    if arr[j]<arr[i-1]: break
+                arr[j], arr[i-1] = arr[i-1], arr[j]
                 l = i; r = n-1
                 while l<r:
-                    num[l], num[r] = num[r], num[l]
+                    arr[l], arr[r] = arr[r], arr[l]
                     l+=1; r-=1
-                return num
-        num.reverse()
-        return num
+                return arr
+        arr.reverse()
+        return arr
 #是O(n)的
 s = Solution()
 print s.nextPermutation([2, 1, 5, 6, 7])

@@ -39,13 +39,27 @@ i之后的乘积    都不包括i
 '''
 class Solution:
     def specialProduct(self, arr):
-        result = left = right = [1 for i in range(len(arr))]
+        ret= [1 for i in range(len(arr))]
+        left=ret[:]; right = ret[:]
         for i in range(1, len(arr)):
             left[i] = left[i-1] * arr[i-1]
         for i in range(len(arr)-2, -1, -1):
             right[i] = right[i+1]*arr[i+1]
         for i in range(len(arr)):
-            result[i] = left[i] * right[i]
-        return result
+            ret[i] = left[i] * right[i]
+        return ret
 
-#有O(1),  one pass的算法
+#有 not extra space 的做法
+class Solution3:
+    def product(self, arr):
+        cur=1; ret = [1 for i in range(len(arr))]
+        for i in range(len(arr)):
+            ret[i]*=cur
+            cur *=arr[i]
+        cur = 1
+        for i in range(len(arr)-1, -1, -1):
+            ret[i]*=cur
+            cur *=arr[i]
+        return ret
+s = Solution3()
+print s.product([2,3,1,4])

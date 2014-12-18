@@ -23,10 +23,10 @@ class Solution:
             adds[i] = adds[i].split('*')
         ret = 0
         for p1 in adds:
-            tmp = 1
+            t = 1
             for p2 in p1:
-                tmp*=int(p2)
-            ret+=tmp
+                t*=int(p2)
+            ret+=t
         return ret
 
         print adds

@@ -17,6 +17,7 @@ N- (N/(M +1))
 
 4个数 m=1.  临界情况
 
+m=2
 [1,1,1,1,1,1,4,4]
 6/2 - 1<=8-6
 x/m-1=n-x
@@ -26,27 +27,39 @@ x =   m(n+1)/(m+1)
 the results comes from if you have N objects then the min number of separators required is N/(M+1)
 
 '''
+ #感觉用heap比较好做。
+
+#I asked if I could use another structure to store some data and the answer was "I don't think you need it".
+
+#我目前的想法是用hashmap统计频率。存到heap。  然后greedy。 max heap. min heap。 然后开始放频率高的element
+
+#Rearrange a string so that all same characters become d distance away
+
+
+
+
+#这个是in place的做法。 效率较低。  更好的做法是用greedy. heap。
+#
 class Solution:
     def rearrange(self, a, m):
         a = self.trans(a, m)  #从左到右， 再从右往左也弄一遍
-        a = self.trans(a[::-1], m) #也可以inplace。就是代码多一些。
-        return a[::-1]
+        print a
+        a.reverse()
+        a = self.trans(a, m) #  in place
+        a.reverse()
+        return a
 
     def trans(self, a, m):
-        i=1; count=1
+        cnt=1
         for i in range(1, len(a)):
-            if count>m:
-                pre= i-1
-                j = i
-                while j<len(a)-1 and a[j]==a[pre]:
-                    j+=1 #找到第一个不等的点, 然后swap
+            if cnt>m:
+                pre= i-1;     j = i
+                while j<len(a)-1 and a[j]==a[pre]:     j+=1 #找到第一个不等的点, 然后swap
                 a[j], a[pre] = a[pre], a[j]
-                count=1
+                cnt=1
                 continue
-            if a[i]!=a[i-1]:
-                count=1
-            else:
-                count+=1
+            if a[i]!=a[i-1]:    cnt=1
+            else:     cnt+=1
         return a
 
 
@@ -54,3 +67,5 @@ s = Solution()
 print s.rearrange([2,1,1,1,3,4,4,4,5], 2)
 print s.rearrange([2,1,1,1,3,4,4,4], 2)
 print s.rearrange([4,4,1,1,1,1,1,1] ,2)
+
+#感觉可以用贪心算法。 这个是O(n2)的算法。 效率低。

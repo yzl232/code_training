@@ -15,9 +15,12 @@ class Solution:
         ret = 0;  n = len(arr)
         dp = [1 for i in range(n)]
         for i in range(1, n):
-            dp[i] = max(1+dp[j] for j in range(i) if arr[j]<arr[i])
+            dp[i] = max([1+dp[j] for j in range(i) if arr[j]<arr[i]] +[1])
             ret = max(ret, dp[i])
         return ret
+
+s = Solution()
+print s.lis([1, 2, 5, 2, 1, 7, 4, 10])
 '''
 We have discussed Dynamic Programming solution for Longest Increasing Subsequence problem in this post and a O(nLogn) solution in this post. Following are commonly asked variations of the standard LIS problem.
 

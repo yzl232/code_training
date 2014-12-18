@@ -20,16 +20,18 @@ etc..
 #这道题目主要利用了整数mod的思想
 #利用了hashmap保存mod的余数remainder
 class Solution:
-    def divide(self, a, b):   #才9行！ 帅
+    # @return a string
+    def fractionToDecimal(self, a, b):   #才9行！ 帅
         real, remain = a / b,  a % b
-        decimal = ''; remainders = {}  #hash是无序的，所以加个有序的decimal
+        decimal = ''; i=0; remainders = {}  #hash是无序的，所以加个有序的decimal
         while remain != 0 and remain not in remainders:
-            remainders[remain] = 1  #先更新hashmap。再乘以10
+            remainders[remain] = i  #先更新hashmap。再乘以10. hashmap存的是循环开始位置
             remain *= 10  #这一步是核心之一。
             digit, remain=remain/b, remain%b
-            decimal+=str(digit)
-        if remain==0:    return str(real) + '.' + decimal +  '(0)'
-        return str(real) + '.' + '('+decimal+')'
+            decimal+=str(digit); i+=1
+        if remain==0:    return str(real) + '.' + decimal if decimal else str(real)
+        start = remainders[remain]
+        return str(real) + '.' +decimal[:start]+ '('+decimal[start:]+')'
 
 s = Solution()
 print  s.divide(1, 3)

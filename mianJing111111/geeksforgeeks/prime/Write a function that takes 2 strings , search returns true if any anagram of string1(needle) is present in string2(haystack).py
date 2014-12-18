@@ -14,6 +14,8 @@ Write a function that takes 2 strings , search returns true if any anagram of st
 
 用素数是更好的方法:  O(m)
 
+
+把每个ch。 hash。 然后求和。
 '''
 
 #anagram.  这是与strstr不同的地方

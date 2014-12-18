@@ -26,26 +26,18 @@ class Solution:
     # Capture all regions by modifying the input board in-place.
     # Do not return any value.
     def solve(self, board):
-        if board == []: return
-        r = len(board); c = len(board[0])
-        pre = set([])
-        for i in range(r):
-            for j in range(c):
-                if board[i][j] == 'G': pre.add((i, j))
-        count = 1
-        while len(pre)>0:
+        if not board: return
+        m = len(board); n = len(board[0]); cnt = 1
+        pre = set([(i, j) for i in range(m) for j in range(n) if board[i][j]=='G'])
+        while pre:
             cur = set([])
-            for w in pre:
-                i = w[0]; j = w[1]
-                for d in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-                    if 0<=d[0]<=r-1 and 0<=d[1]<=c-1 and board[d[0]][d[1]]=='0': cur.add(d)
-            for w in cur:
-                i = w[0]; j = w[1]
-                board[i][j] = str(count)
-            count+=1
+            for i, j in pre:
+                for r, c in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
+                    if 0<=r<=m-1 and 0<=c<=n-1 and board[r][c]=='0':
+                        cur.add((r, c))
+                        board[r][c] = str(cnt)
+            cnt+=1
             pre = cur
-            print matrix
-
 s = Solution()
 matrix = [[ '0', '0', '0'],[ 'B', 'G', 'G'], [ 'B', '0', '0'] ]
 s.solve(matrix)

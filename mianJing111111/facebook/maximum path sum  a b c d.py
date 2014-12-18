@@ -10,7 +10,7 @@
 
 
 leetcode maximum  path sum改变而来。
-换了公式。 加了
+换了公式。 加了cur path ,
 '''
 
 # Definition for a  binary tree node
@@ -24,16 +24,16 @@ class Solution:
     # @param root, a tree node
     # @return an integer
     def maxPathSum(self, root):
-        self.maxD = -10**10
-        self.dfs(root, -10**10, 0)
-        return self.maxD
+        self.ret = -10**10
+        self.dfs(root, 0)
+        return self.ret
 
-    def dfs(self, root, curSum):
+    def dfs(self, root, curS):
         if not root: return 0
-        vLeft = self.dfs(root.left, curSum+root.val)
-        vRight = self.dfs(root.right,curSum+root.val)
-        self.maxD = max(self.maxD, vLeft+vRight - curSum - root.val)
-        return max(root.val+vLeft, root.val+vRight)
+        vL = self.dfs(root.left, curS+root.val)
+        vR = self.dfs(root.right,curS+root.val)
+        self.ret = max(self.ret, vL+vR - curS - root.val)
+        return max(vL, vR)+root.val
 
 '''
 对比一下原题
@@ -49,13 +49,13 @@ class Solution:
     # @param root, a tree node
     # @return an integer
     def maxPathSum(self, root):
-        self.maxSum = -10**10
+        self.ret = -10**10
         self.dfs(root)
-        return self.maxSum
+        return self.ret
 
     def dfs(self, root):
         if not root: return 0
-        vLeft = self.dfs(root.left)
-        vRight = self.dfs(root.right)
-        self.maxSum = max(self.maxSum, vLeft+vRight+root.val)
-        return max(root.val+vLeft, root.val+vRight, 0)  #pass value up   # since (vLeft+vRight+root.val) can not be passed up,  it is updated before return..       since vLeft, vRight >=0, we do not need to add a single root.val here
+        vL = self.dfs(root.left)
+        vR = self.dfs(root.right)
+        self.ret = max(self.ret, vL+vR+root.val)
+        return max(root.val+vL, root.val+vR, 0)  #pass value up   # since (vL+vR+root.val) can not be passed up,  it is updated before return..       since vL, vR >=0, we do not need to add a single root.val here

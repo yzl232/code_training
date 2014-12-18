@@ -10,6 +10,7 @@ Given an array, remove the duplicates and return a unique array keeping the firs
 如果是sorted。 可以constant space。
 
 '''
+#keep order 一般用fast, slow在前面。
 class Solution:
     def removeDuplicates(self, arr):
         d = {}; slow = 0

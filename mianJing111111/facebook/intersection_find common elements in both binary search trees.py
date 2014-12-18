@@ -1,6 +1,6 @@
 # encoding=utf-8
 '''
-find common elements in both
+find common elements in both  BST
 
 
 暴力法。 遍历 。存到hashmap.

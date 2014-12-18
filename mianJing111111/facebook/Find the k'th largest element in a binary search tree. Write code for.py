@@ -24,13 +24,13 @@ class Solution:
     def largest(self, root, k):
         return self.dfs(root,  k)
 
-    def dfs(self, root, count):
+    def dfs(self, root, cnt):
         if not root: return
-        right = self.dfs(root.right,  count)
-        if right: return right       #在右边。
-        count-=1  #弄完一个右边子树。count -1  看root是不是。  #每次在root 加-就好。 root代表一个节点。
-        if count==0: return root
-        return self.dfs(root.left,  count)
+        r = self.dfs(root.right,  cnt)
+        if r: return r       #在右边。
+        cnt-=1  #弄完一个右边子树。count -1  看root是不是。  #每次在root 加-就好。 root代表一个节点。
+        if cnt==0: return root
+        return self.dfs(root.left,  cnt)
 '''
 跟findlevel有点像。 设置flag.  if left,  return left
 '''
@@ -43,13 +43,13 @@ class Solution2:
     def smallestK(self, root, k):
         return self.dfs(root, k)
 
-    def dfs(self, root, count):  #  (O(n))
+    def dfs(self, root, cnt):  #  (O(n))
         if not root: return
-        left = self.dfs(root.left, count)
-        if left: return left  #这里可以优化很多了
-        count-=1
-        if count==0:   return root
-        return self.dfs(root.right, count)
+        l = self.dfs(root.left, cnt)
+        if l: return l  #这里可以优化很多了
+        cnt-=1
+        if cnt==0:   return root
+        return self.dfs(root.right, cnt)
 
 
 #如果用augmented data structure.  O(logN)
@@ -80,6 +80,8 @@ class Solution:
         if not root or root.size<k: return
         if root.left:
             n = root.left.size
-            if n ==k-1: return root.val
+            if n ==k-1: return root
             elif n <k-1: return self.find(root.right, k-1-n)
             else: return self.find(root.left, k)
+        else:
+            return self.find(root.right, k-1)

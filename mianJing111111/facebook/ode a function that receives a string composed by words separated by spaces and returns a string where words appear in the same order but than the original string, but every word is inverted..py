@@ -13,29 +13,23 @@ the output would be
 
 Tell the complexity of the solution.
 '''
-class Solution:
-    def re(self, s):
-        words = s.split()
-        for i in len(words):
-            words[i].reverse()
-        return ' '.join(words)
+#这是leetcode的一部分
+class Solution:#input is a char array.
+    def reverseWords(self, arr):     #in place
+        i=0
+        for j in range(len(arr)+1):
+            if j==len(arr) or arr[j] == ' ':  #结尾
+                self.reverse(arr, i, j-1)
+                i = j+1 #更新start
+        return arr
 
+    def reverse(self, arr, i, j):
+        while i<j:
+            arr[i], arr[j] = arr[j], arr[i]
+            i+=1;  j-=1
 
-class Solution3:
-    def reverseWords(self, charArr):
-        start=j=0  #比leetcode少了一步
-        while j<=len(charArr)-1:
-            if  charArr[j] == ' ':
-                self.reverse(charArr, start, j-1)
-                start = j+1
-            j+=1
-        return charArr
-
-    def reverse(self, charArr, begin, end):
-        while begin<end:
-            charArr[begin], charArr[end] = charArr[end], charArr[begin]
-            begin+=1;  end-=1
-
+s = Solution()
+print s.reverseWords(list('the sky is blue'))
 
 
 # leetcode in place 做法

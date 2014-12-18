@@ -9,24 +9,22 @@ class Operations:
         return ~a+1  #吊炸天
 
     def minus(self, a, b):
-        return a +(~b+1)
+        return a +self.negate(b)
 
     def abs(self, a):
         if a<0: return self.negate(a)
         return a
 
-    def addBi(self, x, y):   #比较简短。 背下。
+    def addBi(self, x, y):
         while y:
-            share = x&y  #求进位.  common bits， 左移也是和
-            x = x^y  #求和.    求和。   不是common的bits和在x。
-            y = share<<1     #common bits和在y
+            x, y = x^y, (x&y)<<1     #  都是1. 要向左进位。  x, y的和一直都是恒定不变。
         return x
 
     def multiplication(self, a, b):
         if abs(a)<abs(b): return self.multiplication(b, a)
-        result = sum( i for i in range(0, abs(b)))
-        if a^b<0:  return self.negate(result)
-        return result
+        ret = sum(abs(a) for i in range(abs(b)))
+        if a^b<0:  return self.negate(ret)
+        return ret
 
 class Solution:
     # @return an integer
@@ -35,11 +33,11 @@ class Solution:
         a = abs(a);  b = abs(b)
         ret = 0
         while a >= b:
-            k = 1; tmp = b
-            while a >= tmp+tmp:
-                tmp += tmp
+            k = 1; t = b
+            while a >= t+t:
+                t += t
                 k+=k
             ret += k
-            a -= tmp
+            a -= t
         if sign == -1: return 0-ret
-        return ret   #dividend剩下的部分就是mod的值
+        return max(min(ret, 2147483647 ), -2147483648)  #dividend剩下的部分就是mod的值

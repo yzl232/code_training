@@ -12,24 +12,20 @@ import math
 
 class Solution:
     def log2(self, val):
-        if 0<1<val: return -self.log2(1.0/val)
-        hx = 0
-        while (2**hx) < val:
-            hx+=1
-        lx = hx-1  #如果是求整数， 已经求得结果了。
-        accuracy = 0.00001
-        lval = 1<<lx;  hval = 1<<hx
-        l = lx; h = hx
+        if 0<val<1: return -self.log2(1.0/val)
+        h = 0;   accuracy = 0.001
+        while 1<<h  < val:  h+=1
+        l = h-1       #如果是求整数， 已经求得结果了。
+        lval = 1<<l;  hval = 1<<h
+        l+=0.0
         while l<h:
-            m =1.0* (l+h)/2
+            m =  (l+h)/2
             midVal = math.sqrt(lval * hval)
-            if abs(midVal- val)<0.00001:   return m
+            if abs(midVal- val)<accuracy:   return m
             elif midVal> val:
-                h = m
-                hval = midVal
+                h = m;    hval = midVal
             else:
-                l = m
-                lval = midVal
+                l = m;    lval = midVal
         return l
 s = Solution()
 print s.log2(13)

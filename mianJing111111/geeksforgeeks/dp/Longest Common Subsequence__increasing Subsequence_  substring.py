@@ -59,7 +59,7 @@ class Solution:
         ret = 0;  n = len(arr)
         dp = [1 for i in range(n)]
         for i in range(1, n):
-            dp[i] = max(1+dp[j] for j in range(i) if arr[j]<arr[i])
+            dp[i] = max([1+dp[j] for j in range(i) if arr[j]<arr[i]] +[1])
             ret = max(ret, dp[i])
         return ret
 

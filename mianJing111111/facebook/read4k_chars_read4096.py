@@ -31,22 +31,22 @@ Todo: Use above API to Implement API
 净了……
 
 '''
-
+#buf 是我们的目标。 我们的目的是把读到buf里边。
 class Solution:
     def __init__(self):
         pass
 
-    def read4k(self, readchars):
+    def read4k(self, tmpBuffer):
         pass
 
 #buf 保存读得结果.  没有考虑buffer留下的部分。  可以针对这点问面试官。
     def read(self, buf, n):
         tmpBuffer = [None for i in range(4096)]
-        count = 0; tmpN = 4096; flag = True
+        count = 0; flag = True
         while n > count and flag:#tmp的作用就是判断是不是4096。
             tmpN = self.read4k(tmpBuffer)
-            if tmpN<4096:  flag=False
-            byteN = min(tmpN, n-count)
+            if tmpN<4096:  flag=False   #end of file
+            byteN = min(tmpN, n-count)    #我们需要的值
             buf[count:count+byteN]= tmpBuffer[:byteN]  #结束2个指标 : 1 tmp!=4096.   或者n<=count 完成目标是读n个。或者read4k读完了。
             count+=byteN
         return count
@@ -58,6 +58,13 @@ but the read function may be called multiple times.
 '''
 
 
+'''
+
+    Implement a function char* readLine(); which returns single
+      lines from a buffer. To read the buffer, you can makes use of a function int read(char* buf, int len) which fills buf with upto len chars and returns the actual number of chars filled in. Function readLine can be called as many times as desired. If there is no valid data or newline terminated string available, it must block. In order to block, it can use read function which in turn will block when it doesn't have anything to fill the buf.
+'''
+
+
 class Solution2:
     def __init__(self):
         self.offset = 0
@@ -65,49 +72,54 @@ class Solution2:
         self.tmpBuffer = [None for i in range(4096)]
         pass
 
-    def read4k(self, readchars):
+    def read4k(self, tmpBuffer):
         pass
 
 #buf 保存读得结果
     def read(self, buf, n):
-        count = 0; tmpN = 4096; flag = True
-        while n > count and flag:#tmp的作用就是判断是不是4096。
-            if self.bufsize!=0:  tmpN = self.bufsize
+        cnt = 0;flag = True
+        while n>cnt and flag:#tmp的作用就是判断是不是4096。
+            if self.bufsize!=0:  tmpN = self.bufsize   #还有残留必须读完。 不然新的会覆盖的。。
             else:
                 tmpN = self.read4k(self.tmpBuffer)
                 if tmpN<4096: flag = False
-            byteN = min(tmpN, n-count)
-            buf[count:count+byteN]= self.tmpBuffer[self.offset:self.offset+byteN]  #结束的2个指标 。  1 tmp!=4096.   或者n<=count 读完了。 因为我们目标是读n个。
+            byteN = min(tmpN, n-cnt)
+            buf[cnt:cnt+byteN]= self.tmpBuffer[self.offset:self.offset+byteN]  #结束的2个指标 。  1 tmp!=4096.   或者n<=count 读完了。 因为我们目标是读n个。
             self.offset = (self.offset+byteN) % 4096
             self.bufsize = tmpN - byteN  #就是判断有没有残余。   也就是n-count < tmpN吗？
-            count+=byteN
-        return count
+            cnt+=byteN
+        return cnt
 
 '''
 实现 readline，假设提供read4k可以读取4k个字符
 还是建议写好class variable版本的
 '''
-
-class Solution:
+class Solution2:
     def __init__(self):
+        self.offset = 0
+        self.bufsize = 0 #If bufsize > 0, that means there is partial data left in buffer .我们直接复制这里就好。不用call read4k
+        self.tmpBuffer = [None for i in range(4096)]
+
+    def read4k(self, tmpBuffer):
         pass
 
-    def read4k(self, readchars):
-        pass
-
-#buf 保存读得结果
-    def readline(self, buf):
-        tmpBuffer = [None for i in range(4096)]
-        count = 0; tmpN = 4096; flag = True
+#    #基本上就是用 '\n'    代替   n-cnt.    另外不需要count， 自己生成新的line变量。 不用buffer了
+    def readline(self):
+        flag = True;  line = []
         while flag:#tmp的作用就是判断是不是4096。
-            tmpN = self.read4k(tmpBuffer)
-            if tmpN<4096 or '\n' in tmpBuffer: flag = False
-            byteN = tmpN
-            if '\n' in tmpBuffer:
-                byteN = tmpBuffer.index('\n')
-            buf[count:count+byteN]= tmpBuffer[:byteN]  #结束2个指标 : 1 tmp!=4096.   或者n<=count 完成目标是读n个。或者read4k读完了。
-            count+=byteN
-        return count
+            if self.bufsize!=0: tmpN=self.bufsize
+            else:
+                tmpN = self.read4k(self.tmpBuffer)
+                if tmpN<4096 : flag = False       #如果<4096或者是'\n'找到了。 那么停止。
+            byteN = tmpN   #默认是全部读
+            t = self.tmpBuffer[self.offset:self.offset+byteN][:]  #用了临时变量。来普安段'\n'的存在
+            if '\n' in t:
+                byteN= t.index('\n')
+                flag = False
+            line= self.tmpBuffer[self.offset:self.offset+byteN][:]  #结束2个指标 : 1 tmp!=4096.   read4k读完了.或者找到'\n'
+            self.bufsize = tmpN-byteN
+            self.offset = (self.offset+byteN)%4096
+        return
 
 
 '''
@@ -129,6 +141,51 @@ buff读入的byte数，然后做移动。
 
 顺便求个bless面l和g的时候别再碰到烙印
 ===============================================
+
+
+第一题，我把我当时面试的代码贴上来，可能还有问题，但面试官说可以了
+class File {
+    static String buffer = "";
+
+  String readLine() {
+      if(!buffer.equals("")) {    // we have characters left last time
+          StringBuilder sb = new StringBuilder();
+          int i = 0;
+          while(buffer.charAt(i) != '\n' && i < buffer.length()) {    //
+read one line
+              sb.append(buffer.charAt(i));
+              i++;
+          }
+          buffer = buffer.substring(i + 1);
+          if(i == buffer.length()) {    // we have some caharcters in next
+4k
+              return sb.toString() + readLine();    // <----
+          }
+          else {
+              return sb.toString();    // return current line
+          }
+      }
+      else {    // buffer is empty, we need call read4k
+          buffer = read4k();
+          if(!buffer.equals())
+              return readLine();
+          else
+              return "";
+      }
+  }
+
+  String read4k() {
+
+  }
+
+}
+
+
+
+
+
+
+
 
 发信人: will5 (绽放), 信区: JobHunting
 标  题: FB临门一脚挂了,那种郁闷悔恨的感觉.

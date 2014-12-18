@@ -26,6 +26,7 @@ class Solution:
         return max(excl, incl)
 
 #dp.    {memoization}
+# memoization思想在于return的时候先不return。 而是存到hashmap里边去。
 class Solution1:
     d ={}
 

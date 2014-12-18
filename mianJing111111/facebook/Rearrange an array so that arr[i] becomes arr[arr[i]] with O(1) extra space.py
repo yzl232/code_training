@@ -43,8 +43,8 @@ class Solution:
     def relocate(self, arr):
         n = len(arr)
         for i in range(n):
-            tmp = arr[arr[i]]
-            arr[i] += tmp%n * n       #符号%有必要。 可能在后面取前面的数。 而前面的数已经更新比较大了。
+            t = arr[arr[i]]   #把t移动到arr[i]来。
+            arr[i] += t%n * n       #符号%有必要。 可能在后面取前面的数。 而前面的数已经更新比较大了。
         print arr  #此时用%取回以前的数。
         for i in range(n):
             arr[i]/=n

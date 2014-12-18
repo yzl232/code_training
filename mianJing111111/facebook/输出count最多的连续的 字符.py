@@ -17,15 +17,15 @@ class Solution:  #注意一些细节。比如用set。 比如prev更新。 比�
         arr = list(s)
         ret = set(); prev = None; cnt = 0; maxCnt=0
         for ch in arr:
-            if ch >'z' or ch<'a':
+            if ch ==' ':  #检查空格
                 cnt=0
                 prev=None  #记住更新prev
                 continue
-            if ch==prev: cnt+=1
+            if ch==prev: cnt+=1  #更具pre的比较，更新cnt, prev
             else:
                 cnt=1
                 prev=ch  #记住更新prev
-            if cnt>maxCnt:
+            if cnt>maxCnt:  #每回合都研究cnt的值。
                 ret=set([ch])
                 maxCnt=cnt
             elif cnt==maxCnt:  ret.add(ch)

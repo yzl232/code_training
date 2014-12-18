@@ -22,7 +22,7 @@ The question is then: given a number, you need to return if it is in any bucket 
 
 基本上就是binary search .     O( sqrt(N) +  logN)  = O( sqrt(N) ).   slightly better than brute force O(n)
 '''
-class Solution:
+class Solution: #还是挺巧妙的。
     def find(self,arr, x):
         l=0; h=len(arr)
         while l<=h:

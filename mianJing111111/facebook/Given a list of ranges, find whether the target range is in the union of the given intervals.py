@@ -1,6 +1,7 @@
 # encoding=utf-8
 '''
 Given a list of ranges, find whether the target range is in the union of the given intervals.
+在不在union后的结果里边
 e.g: Input: a list of intervals, e.g. [-10, 10], [50, 100], [0, 20]
                  & a target range
     Output: true if target can be covered by the union of all intervals

@@ -32,7 +32,7 @@ class Iterator:
     # @return a list of integers
     def __init__(self, root):
         self.stack = []
-        self.pushLeftChildren(root)
+        self.pushL(root)
 
     def hasNext(self):
         if  not self.stack: return False
@@ -40,11 +40,11 @@ class Iterator:
 
     def next(self):
         if not self.hasNext():  return
-        res = self.stack.pop()
-        self.pushLeftChildren(res.right)
-        return res.val
+        cur = self.stack.pop()
+        self.pushL(cur.right)
+        return cur.val
 
-    def pushLeftChildren(self, cur):
+    def pushL(self, cur):
         while cur:
             self.stack.append(cur)
             cur = cur.left

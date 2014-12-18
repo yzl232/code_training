@@ -16,7 +16,7 @@ Write code to print all different paths in an undirected graph from a given sour
 class Solution3:
     def paths(self, start, end):
         self.paths = []; self.end = end
-        self.dfs([start], start, {})
+        self.dfs([], start, {})
         a = set()
         for path in self.paths:
             for n in path:
@@ -24,14 +24,15 @@ class Solution3:
         return len(a)
 
 #[1, 2],  [2, 8],  [1,  8]
-    def dfs(self, tmpPath, node, visited):  #visited传进去。 这是一个特别的地方。
+    def dfs(self, cur, node, visited):  #visited传进去。 这是一个特别的地方。
         visited[node]=1
-        if tmpPath[-1] ==self.end:
-            self.paths.append(tmpPath)
+        if cur[-1] ==self.end:
+            self.paths.append(cur)
             return
-        for n in node.candidates:
-                if n in visited: continue   #不能再这里操作。 因为每个循环for。 visited是相互独立的。
-                self.dfs(tmpPath+[n], node, visited.copy())
+        for x in node.neighbors:
+                if x in visited: continue   #不能再这里操作。 因为每个循环for。 visited是相互独立的。
+                self.dfs(cur+[node], x, visited.copy())
+#比环还要容易很多。比较单纯
 '''
 
 例子  1--2---3
