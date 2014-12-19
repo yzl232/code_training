@@ -3,7 +3,7 @@
 Finding log2() using sqrt()
 
 
-原理： sqrt( 2**a *  2**b )  =  2**(  (a+b)/2  )
+原理： sqrt( 2**l *  2**h )  =  2**(  (l+h)/2  )
 而 a+b  /2  正好是binary  search,  与sqrt对应上了
 
 题目应当是要求

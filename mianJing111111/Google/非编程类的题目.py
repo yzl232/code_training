@@ -31,3 +31,29 @@ set rightmost 1 to 0
 
  归并的时候，比如2个sorted  10G文件。merge过程 count。 先获得最大的2g文件，存起来。 再继续过程
 '''
+
+
+
+'''
+The third question is a brain teaser: if 1000 couples are to give birth to male and female babies(50% change each), and they would keep giving birth until they have a girl, what's the boy to girl ratio in 20 years
+
+50:50
+
+Yes, that's what makes it a brain teaser, that facepalm moment when you realize no calculation is necessary; each birth is an independent Bernoulli trial and half of all children born will be boys, no matter what each couple's criterion is for stopping.
+'''
+
+
+'''
+
+Table 1: Parents -> (int id, int age)
+Table 2: Children -> (int id, int age, int parent_id)
+Get the parent id, his/her oldest and youngest children ids.
+'''
+
+
+'''
+How to delete two rows from the table in database ?
+Note: Delete only first two rows from the Database.
+
+delete from table_name limit 2;
+'''

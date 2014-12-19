@@ -29,16 +29,15 @@ print s.count
 一分钟只能调用一次
 '''
 #做法。 lasttime.  大于60才更新
+#一次比较特别。 只要比较上一次就好。  下面这个是N次。 除了比较lasttime,还要cnt
 class Solution2:
     def __init__(self):
         self.lastTime = -1
-        self.count = 0
 
     def add_money(self):
         curr_time = int(time.time())
         if curr_time - self.lastTime > 60:  #这已经是最好的办法。
             self.lastTime = curr_time
-            self.count+=1
             pass
 
 #设计一个function: bool cancall(), 保证每秒钟内return true的数量小于 N,
@@ -55,9 +54,10 @@ class Solution3:
         if curr_time - self.startTime < 1 and self.count<self.N:
             self.count+=1  #不更新startTime
             pass
-        else:
+        elif curr_time-self.startTime>=1:
             self.count=1
             self.startTime = curr_time    #到这里更新
+        else:  #过多了。 啥也不做
             pass
 
 '''

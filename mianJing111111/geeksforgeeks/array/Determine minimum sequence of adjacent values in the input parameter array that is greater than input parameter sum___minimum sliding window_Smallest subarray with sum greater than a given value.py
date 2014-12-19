@@ -58,6 +58,7 @@ class Solution:
 
 # sliding window的套路。  l, r。   for r in range,   if s>targe:  while : l+=1
 #O(n)的做法很巧妙
+#sliding window就是满足条件的时候，加入一个while循环。 不断尝试移动left pointer。 不难。
 class Solution3:
     def findShortest5(self, arr, target):
         ret = len(arr)+1

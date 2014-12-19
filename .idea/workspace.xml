@@ -2,20 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0520e970-349b-4e5e-87ea-597afa187170" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Array of size (n-m) with numbers from 1..n with m of them missing. Find one all of the missing numbers in O(log). Array is sorted.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Design a two player battleship game to be played over internet.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Extend. If you can remove three walls, then what is the shortest path from start to the target.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Find the 90th percentile of a stream of numbers between 1 and 10^6.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Find the longest words in a given list of words that can be constructed from a given list of letters..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Find the peakRAM when the input is a collection of LogEntry objects.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Give efficient implementation of the following problem.  An item consist of different keys say k1, k2, k3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a Binary Search tree of integers, you need to return the number of nodes having values between two given integers. You can assume that you already have some extra information at each node.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a NxN matrix which contains all distinct 1 to n^2 numbers, write code to print sequence of increasing adjacent sequential numbers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a number M (N-digit integer) and K-swap operations(a swap operation can swap 2 digits), devise an algorithm to get the maximum possible integer?.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a string (1-d array) , find if there is any sub-sequence that repeats itself. Here, sub-sequence can be a non-contiguous pattern, with the same relative order..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given an array of object A, and an array of object B. All A's have different sizes, and all B's have different sizes. Any object A is of the.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/In an unsorted array of numbers that occurs an odd number of times except one that occurs an even number of times, find the number that occurs an even number of times.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Interviewer expected the list of system-calls made, file-descriptors involved etc..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Output top N positive integer in string comparison order. For example, let's say N=1000, then you need to output in string comparison order as below.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Sets the rate, from 1 to 1000000 queries per second.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Swap 2 nodes in a Binary tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Traveler wants to travel from city “A” to city “D”. There is a path from city “A” to city “D.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Search.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/flip Coin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/stream of strings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/strstr using recursion.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/一个题是给一个序列，从中选一些pair，这些 pair的要求是index相邻的距离为k，那么就会存在有些元素不能选之类的问题。比如共三个元素，k为2，那么只能选第一个和第三个。每个元素都有一 个value，求选出的所有元素的value和最大.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/facebook/给一个整数，求二进制1的个数.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given a Binary Tree (balanced or not) write a method that transforms the tree in a degenerate tree (basically a data structure like a sorted linked list where each node has the left child null.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/facebook/__init__.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/You need to develop the game Snake. What data structures will you use? Code your solution..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/5) Given a set of n jobs with [start time, end time, cost] find a subset so that no 2 jobs overlap and the cost is maximum ?.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/5) Given a set of n jobs with [start time, end time, cost] find a subset so that no 2 jobs overlap and the cost is maximum ?.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write a program to implement Double Linked List from Stack with min. complexity..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/at most eight servers in a data center. Each server has got a capacity memory limit. There can be at most 8 tasks that need to be scheduled on those servers. Each task requires certain capacity.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/You are given information about hotels in a country/city. X and Y coordinates of each hotel are known. You need to suggest the list of nearest hotels to a user who is querying from a particular point.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/given 10 files (text files) each of size of 900 Mb. givena another file named &quot;hello&quot;. match the contents of this file with other 10 file and return the.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/left growing tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Add Binary.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Add Binary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Add Two Numbers .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Add Two Numbers .py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Alex is standing on the top left cell (1,1) of a n*m table. The table has n rows and m columns. Initially, he is facing its right cell. He moves on the table in the following way.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Alex is standing on the top left cell (1,1) of a n*m table. The table has n rows and m columns. Initially, he is facing its right cell. He moves on the table in the following way.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Anagrams.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Anagrams.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Balanced Binary Tree.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Balanced Binary Tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Best Time to Buy and Sell Stock II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Best Time to Buy and Sell Stock II.py" />
@@ -25,7 +39,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Binary Tree Maximum Path Sum.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Binary Tree Maximum Path Sum.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Binary Tree Postorder Traversal.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Binary Tree Postorder Traversal.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Binary Tree Preorder Traversal.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Binary Tree Preorder Traversal.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Check whether a given graph is Bipartite or not.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Check whether a given graph is Bipartite or not.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Climbing Stairs.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Climbing Stairs.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Combination Sum II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Combination Sum II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Combination Sum.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Combination Sum.py" />
@@ -37,38 +50,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Evaluate Reverse Polish Notation.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Evaluate Reverse Polish Notation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Gas Station.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Gas Station.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Generate Parentheses.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Generate Parentheses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Give a set of objects and a function. Pass two objects to that function and it can tell you whether one object points to another one..py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Give a set of objects and a function. Pass two objects to that function and it can tell you whether one object points to another one..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given - a number (n) and a sorted array Find a number in the array having least difference with the given number (n)..py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given - a number (n) and a sorted array Find a number in the array having least difference with the given number (n)..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Given a Binary Tree, find size of the Largest Independent Set(LIS) in it. A subset of all tree nodes is an independent set if there is no edge between any two nodes of the subset..py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Given a Binary Tree, find size of the Largest Independent Set(LIS) in it. A subset of all tree nodes is an independent set if there is no edge between any two nodes of the subset..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given a list of ranges, find whether the target range is in the union of the given intervals.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i].py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i].py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given an array of numbers, they are arranged so that the a[0] is in the 1st bucket, a[1]a[2] are in the 2nd bucket, a[3]a[4]a[5] is in the 3rd bucket and so o.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given an array of numbers, they are arranged so that the a[0] is in the 1st bucket, a[1]a[2] are in the 2nd bucket, a[3]a[4]a[5] is in the 3rd bucket and so o.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given an array, remove the duplicates and return a unique array keeping the first occurrence of the duplicates and the order.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given an array, remove the duplicates and return a unique array keeping the first occurrence of the duplicates and the order.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given an unordered array of positive integers, create an algorithm that makes sure no group of integers of size bigger than M have the same integers.  Input: 2,1,1,1,3,4,4,4,5 M = 2 Output: 2,1,1,3,1,4,4,5,4.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given an unordered array of positive integers, create an algorithm that makes sure no group of integers of size bigger than M have the same integers.  Input: 2,1,1,1,3,4,4,4,5 M = 2 Output: 2,1,1,3,1,4,4,5,4.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Given two extremely large numbers - each number is stored in a Singly Linked list, with the MSB at the head. You are not allowed to reverse the Linked lists. Write a program to multiply them in optimum space and time..py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Given two extremely large numbers - each number is stored in a Singly Linked list, with the MSB at the head. You are not allowed to reverse the Linked lists. Write a program to multiply them in optimum space and time..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Imagine x is an operand and * is a binary operator. We say a string of x and * follows Reverse Polish notation if it is a postfix notation.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Imagine x is an operand and * is a binary operator. We say a string of x and * follows Reverse Polish notation if it is a postfix notation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Implement Queue using Stacks.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Implement Queue using Stacks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py" afterPath="$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Implement strStr().py" afterPath="$PROJECT_DIR$/code_training_leet_code/Implement strStr().py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Initially there is a number n written on board. Two players start playing a game turn by turn.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Initially there is a number n written on board. Two players start playing a game turn by turn.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Insertion Sort List.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Insertion Sort List.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Integer to Roman.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Integer to Roman.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Integer_to_english_words.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Integer_to_english_words.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/LRU Cache.py" afterPath="$PROJECT_DIR$/code_training_leet_code/LRU Cache.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Largest Rectangle in Histogram.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Largest Rectangle in Histogram.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Length of Last Word.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Length of Last Word.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Let's say there is a double square number X, which can be expressed as the sum of two perfect squares, for example, 10 is double square because.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Let's say there is a double square number X, which can be expressed as the sum of two perfect squares, for example, 10 is double square because.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Longest Common Prefix&#10;Longest Common Prefix.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Longest Common Prefix&#10;Longest Common Prefix.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Common Subsequence__increasing Subsequence_  substring.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Common Subsequence__increasing Subsequence_  substring.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Increasing Subsequence.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Increasing Subsequence.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Palindromic Subsequence.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Palindromic Subsequence.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Longest Valid Parentheses.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Longest Valid Parentheses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Matrix_0s_1s_largest_connected_number_Of_Areas.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Matrix_0s_1s_largest_connected_number_Of_Areas.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Max Points on a Line.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Max Points on a Line.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Maximal Rectangle.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Maximal Rectangle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Maximum Product Subarray.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Maximum Product Subarray.py" />
@@ -77,13 +71,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Merge Sorted Array.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Merge Sorted Array.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Minimum Depth of Binary Tree.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Minimum Depth of Binary Tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Minimum Window Substring&#10;Minimum Window Substring.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Minimum Window Substring&#10;Minimum Window Substring.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/new_leetcode_new/Missing Ranges Given a sorted integer array where the range of elements are [0, 99] inclusive, return its missing ranges.py" afterPath="$PROJECT_DIR$/mianJing111111/new_leetcode_new/Missing Ranges Given a sorted integer array where the range of elements are [0, 99] inclusive, return its missing ranges.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Multiply Strings.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Multiply Strings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Multiply all fields except it's own position__Product Array Puzzle.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Multiply all fields except it's own position__Product Array Puzzle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/N-Queens II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/N-Queens II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/N-Queens.py" afterPath="$PROJECT_DIR$/code_training_leet_code/N-Queens.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Next Permutation.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Next Permutation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/OneEditDistance.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/OneEditDistance.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Partition List.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Partition List.py" />
@@ -95,9 +86,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Populating Next Right Pointers in Each Node II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Populating Next Right Pointers in Each Node II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Populating Next Right Pointers in Each Node.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Populating Next Right Pointers in Each Node.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Pow(x, n).py" afterPath="$PROJECT_DIR$/code_training_leet_code/Pow(x, n).py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Print all palindromes of size greater than equal to 3 of a given string. (DP).py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Print all palindromes of size greater than equal to 3 of a given string. (DP).py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Question was on Arithmetic progression  Example : Given the AP :- 1 3 7 9 11 13 find the missing value &quot;which would be 5 here&quot;.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Question was on Arithmetic progression  Example : Given the AP :- 1 3 7 9 11 13 find the missing value &quot;which would be 5 here&quot;.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Rearrange an array so that arr[i] becomes arr[arr[i]] with O(1) extra space.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Rearrange an array so that arr[i] becomes arr[arr[i]] with O(1) extra space.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Recover Binary Search Tree.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Recover Binary Search Tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Regular Expression Matching.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Regular Expression Matching.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Remove Duplicates from Sorted List&#10;Remove Duplicates from Sorted List.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Remove Duplicates from Sorted List&#10;Remove Duplicates from Sorted List.py" />
@@ -106,18 +94,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Restore IP Addresses&#10;Restore IP Addresses.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Restore IP Addresses&#10;Restore IP Addresses.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Reverse Integer.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Reverse Integer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Reverse Linked List II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Reverse Linked List II.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/new_leetcode_new/Reverse Words in a String II.py" afterPath="$PROJECT_DIR$/mianJing111111/new_leetcode_new/Reverse Words in a String II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Roman to Integer.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Roman to Integer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Rotate List .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Rotate List .py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Scramble String.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Scramble String.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Search a 2D Matrix.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Search a 2D Matrix.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Serialize and Deserialize a Binary Tree.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Serialize and Deserialize a Binary Tree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Serialize and Deserialize an N-ary Tree.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Serialize and Deserialize an N-ary Tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Set Matrix Zeroes.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Set Matrix Zeroes.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Simplify Path.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Simplify Path.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Single Number II .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Single Number II .py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Single Number.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Single Number.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Sink Zero in Binary Tree..py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Sink Zero in Binary Tree..py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Sort Colors.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Sort Colors.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Sqrt(x).py" afterPath="$PROJECT_DIR$/code_training_leet_code/Sqrt(x).py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/String to Integer (atoi).py" afterPath="$PROJECT_DIR$/code_training_leet_code/String to Integer (atoi).py" />
@@ -129,10 +113,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Swap Nodes in Pairs .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Swap Nodes in Pairs .py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Symmetric Tree.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Symmetric Tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Text Justification.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Text Justification.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/The Celebrity Problem.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/The Celebrity Problem.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/There are N objects kept in a row.   You want to move all objects belonging to the same group to the same position. Objects in two different groups may be placed at the same position.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/There are N objects kept in a row.   You want to move all objects belonging to the same group to the same position. Objects in two different groups may be placed at the same position.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Trapping Rain Water.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Trapping Rain Water.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Trapping Rain Water.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Trapping Rain Water.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Unique Binary Search Trees II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Unique Binary Search Trees II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Unique Binary Search Trees.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Unique Binary Search Trees.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Valid Number.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Valid Number.py" />
@@ -144,41 +125,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Word Break.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Break.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Word Ladder ii.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Ladder ii.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Word Ladder.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Ladder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Write a function that calculates input strings with operators +,-,*,.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Write a function that calculates input strings with operators +,-,*,.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Write code to print all different paths in an undirected graph from a given source to destination with no loop.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Write code to print all different paths in an undirected graph from a given source to destination with no loop.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Write methods to implement the multiply, subtract, and divide operations for integers. Use only the add operator.q_7_4_oprations.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Write methods to implement the multiply, subtract, and divide operations for integers. Use only the add operator.q_7_4_oprations.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/ZigZag Conversion.py" afterPath="$PROJECT_DIR$/code_training_leet_code/ZigZag Conversion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/biggest_Drop_寻找数列中下降最大的差值，举个例子：[2, 3, 7, 4, 6, 1, 10] 输出 (7 - 1) = 6.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/biggest_Drop_寻找数列中下降最大的差值，举个例子：[2, 3, 7, 4, 6, 1, 10] 输出 (7 - 1) = 6.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/catch the thief.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/catch the thief.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/decode_ways.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/decode_ways.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/flatten array.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/flatten array.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/generate Parenthesis &amp; remove minimum Number parentheses.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/generate Parenthesis &amp; remove minimum Number parentheses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/interleave two linked-list_merge _alternative.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/interleave two linked-list_merge _alternative.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/intersection_find common elements in both binary search trees.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/intersection_find common elements in both binary search trees.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/logn  binary search single number twice except one.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/logn  binary search single number twice except one.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/matrix_guard_barrier_保安_障碍.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/matrix_guard_barrier_保安_障碍.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/maximum path sum  a b c d.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/maximum path sum  a b c d.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/determine the build order ie. which project needs to be build first, followed by which project.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/determine the build order ie. which project needs to be build first, followed by which project.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/min stack.py" afterPath="$PROJECT_DIR$/code_training_leet_code/min stack.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/ode a function that receives a string composed by words separated by spaces and returns a string where words appear in the same order but than the original string, but every word is inverted..py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/ode a function that receives a string composed by words separated by spaces and returns a string where words appear in the same order but than the original string, but every word is inverted..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/pattern_matching_expression_.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/pattern_matching_expression_.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/previous_permutation.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/previous_permutation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/print all paths of a binary tree from root to leaf.  Later, extend the solution to work with graphs, careful  attention to cycles which you should print as paths as well (without printing visited nodes twice).py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/print all paths of a binary tree from root to leaf.  Later, extend the solution to work with graphs, careful  attention to cycles which you should print as paths as well (without printing visited nodes twice).py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/print path binary tree.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/print path binary tree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/randomInStream.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/randomInStream.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/read4k_chars_read4096.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/read4k_chars_read4096.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/remove_comments.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/remove_comments.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/reverseArray_ Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/reverseArray_ Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/sort_string_alphabetical_different_strings.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/sort_string_alphabetical_different_strings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/quickSort.py" afterPath="$PROJECT_DIR$/algorithms/quickSort.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test9.py" afterPath="$PROJECT_DIR$/test9.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/有两个一样的树A和B，每个节点都有父指针，要求写一个 函数，参数是A的一个子节点x，和B的根节点，要求返回B中对应x的那个节点.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/有两个一样的树A和B，每个节点都有父指针，要求写一个 函数，参数是A的一个子节点x，和B的根节点，要求返回B中对应x的那个节点.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/有这么一个class Contact，里面有一个String的name，和一个List&lt;String&gt; 装着email address，是这个Contact有的address.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/有这么一个class Contact，里面有一个String的name，和一个List&lt;String&gt; 装着email address，是这个Contact有的address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/给TreeNode写Iterator，使得以上代码可以in order traversal.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/输出count最多的连续的 字符.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/输出count最多的连续的 字符.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/非编程类的题目.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/非编程类的题目.py" />
     </list>
     <ignored path="code_training.iws" />
@@ -201,7 +157,18 @@
     <favorites_list name="code_training" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Interviewer expected the list of system-calls made, file-descriptors involved etc..py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Interviewer expected the list of system-calls made, file-descriptors involved etc..py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -214,43 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/code_training_leet_code/N-Queens II.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Valid Sudoku.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Permutation Sequence .py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Sudoku Solver.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Climbing Stairs.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Remove Duplicates from Sorted List&#10;Remove Duplicates from Sorted List.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Fibonacci.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Remove Duplicates from Sorted List II.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Add Binary.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i].py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Length of Last Word.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Count and Say.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Implement strStr().py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Longest Common Prefix&#10;Longest Common Prefix.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Reverse Integer.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Roman to Integer.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Integer to Roman.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/ZigZag Conversion.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Insertion Sort List.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Reorder List.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Evaluate Reverse Polish Notation.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Single Number.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Gas Station.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Reverse Linked List II.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Partition List.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Sqrt(x).py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Rotate List .py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Pow(x, n).py" />
-        <option value="$PROJECT_DIR$/test9.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Add Two Numbers .py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Swap Nodes in Pairs .py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Simplify Path.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Single Number II .py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Anagrams.py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Max Points on a Line.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" />
-        <option value="$PROJECT_DIR$/code_training_leet_code/Scramble String.py" />
         <option value="$PROJECT_DIR$/code_training_leet_code/Text Justification.py" />
         <option value="$PROJECT_DIR$/code_training_leet_code/Valid Number.py" />
         <option value="$PROJECT_DIR$/code_training_leet_code/Wildcard Matching.py" />
@@ -259,19 +189,56 @@
         <option value="$PROJECT_DIR$/mianJing111111/Google/flip Coin.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/strstr using recursion.py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/randomInStream.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/非编程类的题目.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/stream of strings.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/You need to develop the game Snake. What data structures will you use? Code your solution..py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Given a set of busy time intervals of two people as in a calendar, find the free time intervals of both the people so as to arrange a new meeting.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given an array of object A, and an array of object B. All A's have different sizes, and all B's have different sizes. Any object A is of the.py" />
+        <option value="$PROJECT_DIR$/algorithms/quickSort.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Sets the rate, from 1 to 1000000 queries per second.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/left growing tree.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Common Subsequence__increasing Subsequence_  substring.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a string (1-d array) , find if there is any sub-sequence that repeats itself. Here, sub-sequence can be a non-contiguous pattern, with the same relative order..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Write a program to implement Double Linked List from Stack with min. complexity..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Find the 90th percentile of a stream of numbers between 1 and 10^6.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/You are given a string S. Each character of S is either ‘a’, or ‘b’..py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/test9.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a number M (N-digit integer) and K-swap operations(a swap operation can swap 2 digits), devise an algorithm to get the maximum possible integer?.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Extend. If you can remove three walls, then what is the shortest path from start to the target.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/at most eight servers in a data center. Each server has got a capacity memory limit. There can be at most 8 tasks that need to be scheduled on those servers. Each task requires certain capacity.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Find the longest words in a given list of words that can be constructed from a given list of letters..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/determine the build order ie. which project needs to be build first, followed by which project.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Output top N positive integer in string comparison order. For example, let's say N=1000, then you need to output in string comparison order as below.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a NxN matrix which contains all distinct 1 to n^2 numbers, write code to print sequence of increasing adjacent sequential numbers.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Swap 2 nodes in a Binary tree.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Give efficient implementation of the following problem.  An item consist of different keys say k1, k2, k3.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/In an unsorted array of numbers that occurs an odd number of times except one that occurs an even number of times, find the number that occurs an even number of times.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Traveler wants to travel from city “A” to city “D”. There is a path from city “A” to city “D.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a Binary Search tree of integers, you need to return the number of nodes having values between two given integers. You can assume that you already have some extra information at each node.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/You are given information about hotels in a country/city. X and Y coordinates of each hotel are known. You need to suggest the list of nearest hotels to a user who is querying from a particular point.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a complete binary tree, Find a Max element.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Design a two player battleship game to be played over internet.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/非编程类的题目.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/given 10 files (text files) each of size of 900 Mb. givena another file named &quot;hello&quot;. match the contents of this file with other 10 file and return the.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Find the peakRAM when the input is a collection of LogEntry objects.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Interviewer expected the list of system-calls made, file-descriptors involved etc..py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="239" />
-    <option name="y" value="58" />
-    <option name="width" value="1199" />
+    <option name="x" value="182" />
+    <option name="y" value="31" />
+    <option name="width" value="1069" />
     <option name="height" value="841" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -362,7 +329,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="rocket_Fuel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_training" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_training" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mianJing111111" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Google" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_training" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code_training" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mianJing111111" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Google" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="You are given information about hotels in a country" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,7 +384,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="Count number of binary strings without consecutive 1’s&#9;null&#9;null&#10;fibonacci&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/Fibonacci.py&#10;justi&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Text Justification.py&#10;decimal&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/decimal representation of the rational number.py&#10;concat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Substring with Concatenation of All Words.py&#10;minimum&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Minimum Window Substring&#10;implement log&#9;null&#9;null&#10;mer sorted array&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Wildcard Matching.py&#10;wild&#9;null&#9;null&#10;valid number&#9;null&#9;null&#10;justifi&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Text Justification.py&#10;scramble&#9;null&#9;null&#10;window&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Minimum Window Substring&#10;anagram of string 1&#9;null&#9;null&#10;words   &#9;null&#9;null&#10;line&#9;null&#9;null&#10;anag&#9;null&#9;null&#10;reverse&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Reverse Linked List II.py&#10;evaluat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Evaluate Reverse Polish Notation.py&#10;gas stat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Gas Station.py&#10;single&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Single Number.py&#10;Max Points on a Line&#9;null&#9;null&#10;Add Two Numbers&#9;null&#9;null&#10;swap nodes&#9;null&#9;null&#10;pow(&#9;null&#9;null&#10;Rotate List&#9;null&#9;null&#10;sqrt&#9;null&#9;null&#10;sqrt(x&#9;null&#9;null&#10;simpl&#9;null&#9;null&#10;partition &#9;null&#9;null&#10;Reverse Linked List II&#9;null&#9;null&#10;gas sta&#9;null&#9;null&#10;single nu&#9;null&#9;null&#10;single &#9;null&#9;null&#10;Evaluate Reverse Polish Notation&#9;null&#9;null&#10;reorder &#9;null&#9;null&#10;insertion &#9;null&#9;null&#10;zigz&#9;null&#9;null&#10;roman&#9;null&#9;null&#10;reverse &#9;null&#9;null&#10;prefix&#9;null&#9;null&#10;strstr&#9;null&#9;null&#10;cou&#9;null&#9;null&#10;last &#9;null&#9;null&#10;Given an array arr[], find the maximum&#9;null&#9;null&#10;add binary&#9;null&#9;null&#10;sorted list&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Remove Duplicates from Sorted List II.py&#10;stair&#9;null&#9;null&#10;fibo&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="sequence of adjacent values&#9;null&#9;null&#10;meeting&#9;null&#9;null&#10;reverse words&#9;null&#9;null&#10;reverse&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Reverse Words in a String.py&#10;reverse wor&#9;null&#9;null&#10;log2&#9;null&#9;null&#10;cycle&#9;null&#9;null&#10;mirror&#9;null&#9;null&#10;snake&#9;null&#9;null&#10;longest incres&#9;null&#9;null&#10;two sum&#9;null&#9;null&#10;first five 10 digit prime numbers.&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/prime/Write a method to return first five 10 digit prime numbers.py&#10;project&#9;null&#9;null&#10;trie&#9;null&#9;null&#10;positive nega&#9;null&#9;null&#10;merge&#9;null&#9;null&#10;longest &#9;null&#9;null&#10;coin&#9;null&#9;null&#10;hit&#9;null&#9;null&#10;nuts&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py&#10;quick&#9;null&#9;null&#10;Count number of binary strings without consecutive 1’s&#9;null&#9;null&#10;fibonacci&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/Fibonacci.py&#10;justi&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Text Justification.py&#10;decimal&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/decimal representation of the rational number.py&#10;concat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Substring with Concatenation of All Words.py&#10;minimum&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Minimum Window Substring&#10;implement log&#9;null&#9;null&#10;mer sorted array&#9;null&#9;null&#10;wild&#9;null&#9;null&#10;valid number&#9;null&#9;null&#10;justifi&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Text Justification.py&#10;scramble&#9;null&#9;null&#10;window&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Minimum Window Substring&#10;anagram of string 1&#9;null&#9;null&#10;words   &#9;null&#9;null&#10;line&#9;null&#9;null&#10;anag&#9;null&#9;null&#10;evaluat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Evaluate Reverse Polish Notation.py&#10;gas stat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Gas Station.py&#10;single&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/code_training_leet_code/Single Number.py&#10;Max Points on a Line&#9;null&#9;null&#10;Add Two Numbers&#9;null&#9;null&#10;swap nodes&#9;null&#9;null&#10;pow(&#9;null&#9;null&#10;Rotate List&#9;null&#9;null&#10;sqrt&#9;null&#9;null&#10;sqrt(x&#9;null&#9;null&#10;simpl&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -401,62 +408,8 @@
       <recent name="$PROJECT_DIR$/mianJing111111/facebook" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。">
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="lambda_map" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/lambda_map.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="flip Coin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Find the peakRAM when the input is a collection of LogEntry objects">
+    <configuration default="false" name="Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values." type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -468,13 +421,31 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/flip Coin.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values..py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="ImplementLog2UsingSqrt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/facebook" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -486,7 +457,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Find the peakRAM when the input is a collection of LogEntry objects" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Find the peakRAM when the input is a collection of LogEntry objects.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -652,19 +659,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.Sliding Window Maximum_Maximum element of all subarrays of size k" />
       <item index="1" class="java.lang.String" itemvalue="Python.给一个unsigned int数组，size为n，数组的sum = a，计算一个k的值，将数组中 所有大于k的数改为k之后，数组的sum变为b。Ex,  [1,2,5,7,7,8] = a = 30, b = 26,                          那么k = 6，因为[1,2,5,6,6,6] = 26。" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value" />
-      <item index="4" class="java.lang.String" itemvalue="Python.lambda_map" />
-      <item index="5" class="java.lang.String" itemvalue="Python.flip Coin" />
-      <item index="6" class="java.lang.String" itemvalue="Python.有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values." />
+      <item index="3" class="java.lang.String" itemvalue="Python.ImplementLog2UsingSqrt" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1" />
+      <item index="6" class="java.lang.String" itemvalue="Python.Find the peakRAM when the input is a collection of LogEntry objects" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.flip Coin" />
-        <item index="3" class="java.lang.String" itemvalue="Python.lambda_map" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Find the peakRAM when the input is a collection of LogEntry objects" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ImplementLog2UsingSqrt" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values." />
       </list>
     </recent_temporary>
   </component>
@@ -681,26 +688,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="239" y="58" width="1199" height="841" extended-state="0" />
-    <editor active="false" />
+    <frame x="182" y="31" width="1069" height="841" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32444444" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16553481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1860687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24551724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2537931" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32551724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -717,9 +724,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17663044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2557143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2557143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -744,364 +751,391 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Implement strStr().py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/有一个gym，用block表示。里面有健身器材，还有障碍物。让找一个最佳的位 置放置椅子，使得椅子到所有健身器材的曼哈顿距离最短.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5365854" vertical-offset="0" max-vertical-offset="697">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="519">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Longest Common Prefix&#10;Longest Common Prefix.py">
+    <entry file="file://$PROJECT_DIR$/algorithms/quickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state vertical-scroll-proportion="-0.7398721" vertical-offset="432" max-vertical-offset="901">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Reverse Integer.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compare Nut with Nut and a Bolt with Bolt. Now ,how would you figure out matching pairs of nut and bolt from the given N Nuts and Bolts..py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75609756" vertical-offset="0" max-vertical-offset="697">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state vertical-scroll-proportion="2.4515367" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Roman to Integer.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Sets the rate, from 1 to 1000000 queries per second.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4878049" vertical-offset="0" max-vertical-offset="697">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state vertical-scroll-proportion="1.3429673" vertical-offset="0" max-vertical-offset="850">
+          <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Integer to Roman.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="697">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.55684006" vertical-offset="527" max-vertical-offset="2771">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="60" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/ZigZag Conversion.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/There are n coins in a line. (Assume n is even). Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68292683" vertical-offset="0" max-vertical-offset="697">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Insertion Sort List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2682927" vertical-offset="0" max-vertical-offset="697">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Reorder List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4390244" vertical-offset="153" max-vertical-offset="850">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/sqrt_Please write a function that accepts a floating number and returns its square-root.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test9.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="697">
-          <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Swap Nodes in Pairs .py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Pow(x, n).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="3" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Rotate List .py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="29" column="16" selection-start-line="7" selection-start-column="0" selection-end-line="29" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Sqrt(x).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="15" column="30" selection-start-line="5" selection-start-column="0" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Simplify Path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <caret line="33" column="3" selection-start-line="7" selection-start-column="0" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Partition List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.52080345" vertical-offset="516" max-vertical-offset="1241">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Add Two Numbers .py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Single Number II .py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="21" column="19" selection-start-line="10" selection-start-column="0" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Single Number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Evaluate Reverse Polish Notation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024390243" vertical-offset="0" max-vertical-offset="697">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Gas Station.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="25" column="20" selection-start-line="11" selection-start-column="0" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Reverse Linked List II.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29268292" vertical-offset="17" max-vertical-offset="714">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Anagrams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="697">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Max Points on a Line.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63414633" vertical-offset="0" max-vertical-offset="697">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Find the pair of words in a dictionary that don't share no same letter and the product of these two words' length is maximum0.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15133531" vertical-offset="0" max-vertical-offset="674">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Scramble String.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1445">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Valid Number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="100" column="36" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Wildcard Matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8034682" vertical-offset="246" max-vertical-offset="765">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Merge Sorted Array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22928709" vertical-offset="0" max-vertical-offset="527">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0655106" vertical-offset="0" max-vertical-offset="629">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Minimum Window Substring&#10;Minimum Window Substring.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04238921" vertical-offset="80" max-vertical-offset="731">
-          <caret line="6" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/lambda_map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Substring with Concatenation of All Words.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024390243" vertical-offset="1003" max-vertical-offset="2074">
-          <caret line="59" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/FactoryMethod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/List Comprehension.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/decimal representation of the rational number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3429673" vertical-offset="0" max-vertical-offset="935">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Text Justification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5722543" vertical-offset="357" max-vertical-offset="1428">
-          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/flip Coin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78612715" vertical-offset="0" max-vertical-offset="519">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/strstr using recursion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2947977" vertical-offset="0" max-vertical-offset="519">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/randomInStream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3757225" vertical-offset="816" max-vertical-offset="1598">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="13" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Fibonacci.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
+        <state vertical-scroll-proportion="-1.0564516" vertical-offset="745" max-vertical-offset="1241">
+          <caret line="11" column="162" selection-start-line="11" selection-start-column="162" selection-end-line="11" selection-end-column="162" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/Google/有一堆黑格子和白格子，摆成一排，颜色相同的相邻的格子不能超过两个，问有多少种组合方法。.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="728" max-vertical-offset="1224">
+        <state vertical-scroll-proportion="-1.0635839" vertical-offset="705" max-vertical-offset="1224">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/left growing tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8362235" vertical-offset="212" max-vertical-offset="748">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a string (1-d array) , find if there is any sub-sequence that repeats itself. Here, sub-sequence can be a non-contiguous pattern, with the same relative order..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9129511" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Longest Common Subsequence__increasing Subsequence_  substring.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="2516">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="41" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Write a program to implement Double Linked List from Stack with min. complexity..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7591093" vertical-offset="254" max-vertical-offset="748">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Find the 90th percentile of a stream of numbers between 1 and 10^6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4473684" vertical-offset="0" max-vertical-offset="494">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Merge Intervals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/rocket_Fuel/Given a number, can you remove k digits from the number so that the new formatted number is smallest possible..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="969">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a number M (N-digit integer) and K-swap operations(a swap operation can swap 2 digits), devise an algorithm to get the maximum possible integer?.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0467092" vertical-offset="289" max-vertical-offset="2890">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="628" max-vertical-offset="1122">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Extend. If you can remove three walls, then what is the shortest path from start to the target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Count number of binary strings without consecutive 1’s.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Rearrange array in alternating positive &amp; negative items with O(1) extra space.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="122" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1802">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/at most eight servers in a data center. Each server has got a capacity memory limit. There can be at most 8 tasks that need to be scheduled on those servers. Each task requires certain capacity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.08742" vertical-offset="0" max-vertical-offset="816">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Find the longest words in a given list of words that can be constructed from a given list of letters..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9268293" vertical-offset="136" max-vertical-offset="884">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/trie/Trie_implement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.036437247" vertical-offset="254" max-vertical-offset="1513">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/determine the build order ie. which project needs to be build first, followed by which project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7591093" vertical-offset="2498" max-vertical-offset="2992">
+          <caret line="159" column="24" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Write a method to return first five 10 digit prime numbers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Output top N positive integer in string comparison order. For example, let's say N=1000, then you need to output in string comparison order as below.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73570323" vertical-offset="0" max-vertical-offset="647">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Two Sum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15544872" vertical-offset="73" max-vertical-offset="697">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/You are given a grid of numbers. A snake sequence is made up of adjacent numbers such that for each number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/find longest increasing sub sequence in 2d array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07311828" vertical-offset="0" max-vertical-offset="476">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a NxN matrix which contains all distinct 1 to n^2 numbers, write code to print sequence of increasing adjacent sequential numbers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8606557" vertical-offset="277" max-vertical-offset="799">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55737704" vertical-offset="0" max-vertical-offset="527">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Swap 2 nodes in a Binary tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4282787" vertical-offset="0" max-vertical-offset="799">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Give efficient implementation of the following problem.  An item consist of different keys say k1, k2, k3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1935484" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/In an unsorted array of numbers that occurs an odd number of times except one that occurs an even number of times, find the number that occurs an even number of times.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51403886" vertical-offset="0" max-vertical-offset="510">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Traveler wants to travel from city “A” to city “D”. There is a path from city “A” to city “D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26565874" vertical-offset="404" max-vertical-offset="1037">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/graph/Detect Cycle in a Directed Graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07343412" vertical-offset="272" max-vertical-offset="1326">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given an unsorted array of integers, you need to return maximum possible n such that the array consists at least n values greater than or equals to n. Array can contain duplicate values..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a Binary Search tree of integers, you need to return the number of nodes having values between two given integers. You can assume that you already have some extra information at each node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="731">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/You are given information about hotels in a country/city. X and Y coordinates of each hotel are known. You need to suggest the list of nearest hotels to a user who is querying from a particular point.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22030237" vertical-offset="0" max-vertical-offset="463">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/ImplementLog2UsingSqrt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4639376" vertical-offset="0" max-vertical-offset="629">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Design a two player battleship game to be played over internet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Reverse Linked List II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/new_leetcode_new/Reverse Words in a String II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.795082" vertical-offset="870" max-vertical-offset="1360">
+          <caret line="69" column="24" selection-start-line="43" selection-start-column="0" selection-end-line="69" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32903227" vertical-offset="0" max-vertical-offset="465">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a string (for example: &quot;a?bc?def?g&quot;), write a program to generate all the possible strings by replacing ? with 0 and 1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34615386" vertical-offset="68" max-vertical-offset="510">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_training_leet_code/Reverse Words in a String.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.045082" vertical-offset="0" max-vertical-offset="969">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/Google/非编程类的题目.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.982659" vertical-offset="0" max-vertical-offset="646">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.42307693" vertical-offset="612" max-vertical-offset="1139">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/String_Amazon.py">
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/given 10 files (text files) each of size of 900 Mb. givena another file named &quot;hello&quot;. match the contents of this file with other 10 file and return the.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state vertical-scroll-proportion="0.43870968" vertical-offset="0" max-vertical-offset="465">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Find the peakRAM when the input is a collection of LogEntry objects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5836735" vertical-offset="360" max-vertical-offset="850">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="2856">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="619" max-vertical-offset="1479">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Interviewer expected the list of system-calls made, file-descriptors involved etc..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="467">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/You need to develop the game Snake. What data structures will you use? Code your solution..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3603083" vertical-offset="0" max-vertical-offset="519">
-          <caret line="10" column="236" selection-start-line="10" selection-start-column="236" selection-end-line="10" selection-end-column="236" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/stream of strings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9344894" vertical-offset="93" max-vertical-offset="680">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
           <folding />
         </state>
       </provider>

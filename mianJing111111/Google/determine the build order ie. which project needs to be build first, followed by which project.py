@@ -137,24 +137,22 @@ graph3 = {
 
 from collections import deque
 
-GRAY, BLACK = 0, 1
-
 def topological(graph):
-    order, enter, state = deque(), set(graph), {}
+    stack, enter, state = [], set(graph), {}
 
     def dfs(node):
-        state[node] = GRAY
+        state[node] = False
         for k in graph.get(node, ()):
             sk = state.get(k, None)
-            if sk == GRAY: raise ValueError("cycle")
-            if sk == BLACK: continue
+            if sk == False: raise ValueError("cycle")  #发现了一个back edge。
+            if sk == True: continue
             enter.discard(k)
             dfs(k)
-        order.appendleft(node)
-        state[node] = BLACK
+        stack.append(node)
+        state[node] = True
 
     while enter: dfs(enter.pop())
-    return order
+    return stack
 
 # check how it works
 print topological(graph1)

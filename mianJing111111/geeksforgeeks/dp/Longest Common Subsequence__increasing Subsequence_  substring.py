@@ -38,7 +38,8 @@ class Solution1:
                 if x[i-1]==y[j-1]: dp[i][j] = dp[i-1][j-1]+1
                 else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])
         return dp[-1][-1]
-
+s = Solution1()
+print s.lcs('abcdgh', 'aedfhr')
 # encoding=utf-8
 
 
