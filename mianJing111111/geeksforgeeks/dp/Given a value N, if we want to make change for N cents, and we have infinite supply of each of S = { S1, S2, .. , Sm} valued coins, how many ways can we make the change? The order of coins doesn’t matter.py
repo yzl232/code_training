@@ -34,11 +34,11 @@ class Solution2:
         values.sort()
         m = len(values); n = target
         dp = [[0 for i in range(n+1)] for j in range(len(values))]  #j代表包含valuesd的部分
-        for j in range(0, m):   dp[0][j] = 1  #i=0情况
+        for j in range(m):   dp[0][j] = 1  #i=0情况
         for i in range(1, n+1):
-            for j in range(m):
+            for j in range(1, m):
                 v = values[j]
                 x = dp[i-v][j] if i-v>=0 else 0  #用了这种硬币
-                y = dp[i][j-1] if j!=0 else 0 #没用
+                y = dp[i][j-1] #没用
                 dp[i][j] = x+y
         return dp[-1][-1]

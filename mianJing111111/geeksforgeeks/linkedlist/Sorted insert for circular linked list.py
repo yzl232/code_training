@@ -17,6 +17,9 @@ Benifits :
 3) New node is to be  inserted somewhere after the head:
 
 '''
+
+
+#Google 考过这道题目
 class Solution: #return head
     def insrt(self, h, node):  #circular就是要注意尾巴的连接
         if not h:

@@ -1,4 +1,7 @@
 # encoding=utf-8
+
+#implement hasNext and next for a list of lists
+
 '''
 给出一个二维vector，实现 flatten类
 class flatten implements iterator{

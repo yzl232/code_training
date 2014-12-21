@@ -37,3 +37,5 @@ class Solution:
 
 s = Solution()
 print s.printQueue( [(6, 2, 'a'),(1, 4, 'B'),(11, 0 ,"C"),(5, 1, 'D'), (10, 0, 'E'),(4, 0, 'F')])
+
+

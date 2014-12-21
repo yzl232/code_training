@@ -41,5 +41,9 @@ class Solution2:
     def rotate(self, d, arr):
         self.reverse(0, d-1, arr)       #先reverse 2小片
         self.reverse(d, len(arr)-1, arr)
-        self.reverse(0, len(arr)-1, arr)  #再全部reverse
+        self.reverse(0, len(arr)-1, arr)
+        return arr#再全部reverse
 #和leetcode Reverse Words in a String II  比较像
+
+s = Solution2()
+print  s.rotate(2, [1,2,3,4,5,6, 7])

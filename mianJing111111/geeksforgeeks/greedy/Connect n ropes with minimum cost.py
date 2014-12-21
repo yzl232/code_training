@@ -19,6 +19,7 @@ Time complexity of the algorithm is O(nLogn) assuming that we use a O(nLogn) sor
 
 这道题目做法是用了Greedy Algorithm
 '''
+
 import heapq
 class Solution:
     def minCost(self, q):
