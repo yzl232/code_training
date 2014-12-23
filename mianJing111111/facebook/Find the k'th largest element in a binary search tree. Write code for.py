@@ -14,6 +14,9 @@ Node * kth_largest(Node *root, unsigned int k);
 
 '''
 
+#本题是google的高频题目
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -39,6 +42,29 @@ class Solution:
 #这就是反向的traversal嘛。。。。right, root, left
 # kth smallest number
 
+
+
+# in order traversal
+
+#这个方法也很好
+class Solution:
+    # @param root, a tree node
+    # @return a list of integers
+    def inorderTraversal(self, root, k):
+        stack = [];  cur = root
+        while True:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+            if not stack: break
+            cur = stack.pop()
+            k-=1
+            if k==0:  return cur
+            cur = cur.right
+        return
+
+
+#递归法。
 class Solution2:
     def smallestK(self, root, k):
         return self.dfs(root, k)

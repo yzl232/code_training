@@ -2,6 +2,9 @@
 '''
 Design an algorithm to find the kth number such that the only prime factors are 3,5, and 7
 '''
+
+#G家最近考过
+
 class Solution:
     def primeN(self, n):  #用了3个pointer来记录
         c3 = c5 = c7 = 0

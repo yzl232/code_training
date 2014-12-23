@@ -2,6 +2,32 @@
 
 #implement hasNext and next for a list of lists
 
+#G家高频
+'''
+实现一个FlattenIterator，构造函数的传入参数是Iterator<Iterator<T>>.
+
+class FlatternIterator<T>{
+     public FlatternIterator(Iterator<Iterator<T>> iterators){
+
+     }
+    public boolean hasNext(){
+
+    }
+    public T next(){
+
+   }
+}
+
+例如传入的是
+{
+    {1,2,3}
+    {4,5}
+    {6,7}
+}
+则如果一直next输出，则输出 1,2,3,4,5,6,7
+'''
+
+
 '''
 给出一个二维vector，实现 flatten类
 class flatten implements iterator{

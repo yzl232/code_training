@@ -17,15 +17,15 @@ Write a function that takes 2 strings , search returns true if any anagram of st
 
 把每个ch。 hash。 然后求和。
 '''
-#用sliding window 应当是期待的解法 O(n )
-
+#确认用sliding window 是最优 O(n )
+# leetcode Minimum Window Substring  ，不同在于length要一样。 leetcode在于length可以更长一些
 
 '''
 Given two strings a and b, find whether any anagram of string a is a sub-string of string b. For eg:
 if a = xyz and b = afdgzyxksldfm then the program should return true.
 '''
 
-#prime也是很妙的想法。 但是应当不是主流。 主流是sliding window
+#prime也是很妙的想法。 但不是主流。 主流是sliding window
 
 #facebook也有考过
 

@@ -38,8 +38,9 @@ list了
 #每个node过一次，看看有几个node.next不存在。
 #有点像leetcode的一道用hashmap找consecutive的题目.
 #理解了以后，就几行代码
+#甚至都不需要head node
 class Solution:
-    def findC(self, node, arr):
+    def findC(self, arr):
         ret = 0; targets = {i:False for i in arr}
         for i in targets:
             if i.next not in targets: ret+=1

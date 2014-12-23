@@ -2,7 +2,7 @@
 import time
 import random
 import collections
-import threading
+import threadin
 
 #做法的话， 基本上都就是class的全局变量而已
 

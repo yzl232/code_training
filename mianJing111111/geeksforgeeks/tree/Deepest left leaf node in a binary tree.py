@@ -21,6 +21,8 @@ The idea is to recursively traverse the given binary tree and while traversing, 
 比较巧妙
 '''
 
+#G家考过这道题目
+
 class Solution:
     def find(self, root):
         self.maxLvl = -1

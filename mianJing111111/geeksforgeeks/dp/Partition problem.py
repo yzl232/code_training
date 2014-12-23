@@ -14,6 +14,9 @@ The array cannot be partitioned into equal sum sets.
 
 '''
 
+
+# G家考过原题
+
 '''
 Following are the two main steps to solve this problem:
 1) Calculate sum of the array. If sum is odd, there can not be two subsets with equal sum, so return false.

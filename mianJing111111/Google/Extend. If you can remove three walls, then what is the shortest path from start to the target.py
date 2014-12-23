@@ -8,3 +8,10 @@ Extend. If you can remove three walls, then what is the shortest path from start
 #The first one is easily solved by BFS. The second one is easily solved by BFS which can go through a wall up to 3 times.
 
 #keep record off the min walls went through. while BFS.   If min wallls > =4.   It is not valid
+
+
+'''
+http://www.meetqun.com/forum.php?mod=viewthread&tid=2054&fromuid=12
+'''
+
+#http://www.meetqun.com/thread-2066-1-12.html

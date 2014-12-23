@@ -15,7 +15,7 @@ Sort the interval endpoints. Keep track of the active segments. When reaching a 
 numIntersections[interval] = StartedEventsTill[end[interval]] - EndedEventsTill[start[interval]]-1
 '''
 
-#非常牛逼的解法。
+#非常牛逼的解法。  排序用了O(nlogN)。 其他O(n)
 class Solution:
     def findNumConference(self, intervals):
         affairs = [];  cnt = 0; ret = 0; d={}
