@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0520e970-349b-4e5e-87ea-597afa187170" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Consider in Java arraylist we have mix of int, double, float, string, etc. How will you find if a given index of arraylist have string. No need to worry about generics and type safe..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Does a given file name match a single-star pattern? (can't use regex I assume.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Generate MAX_INT (Max signed int value) using bitwise operators. Should work in 32 and 64 bit processors.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a board made of 2 x n squares, and boards made of 2 x 1 squares, write a function that will calculate the number of possible ways to arrange the 2 x 1 boards on the 2 x n board, in a way that will fill it completely..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a kernal code in &quot;0&quot;th machine. How soon you can replicate the kernal across N machines. Now if the machines has upload and download bandwidth constraints, how can you impove the copy time..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a rope of length n meters, cut the rope in different parts of integer lengths in a way that maximizes product of lengths of all parts. You must make at least one cut. Assume that the length of rope is more than 2 meters..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a timer time() with nanosecond accuracy and given the interface.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given inputs from Google Search, you have K chunks. Each chunk is individually alphabetically ordered (apple, banana, cat) ... (*apple, *banan, *cat). You want to merge all chunks into a single list. How would you do it?.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given two Binary trees. these trees &quot;may&quot; have right and left branches swapped. Now compare it..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/How do you add two numbers that are larger_longer than Integer datatype? I said I would use BigInteger , then he asked how will you add if the number is larger than BigInteger.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/How to remove duplicate lines in a large text file? I think it's easy to find duplicate lines, but how do we efficiently remove them from the file?.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/How would you synchronize a linked list across multiple computers. If nodes are added removed to a linked list on one computer, all others must reflect this change.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Implement a circular queue of integers of user-specified size using a simple array. Provide routines to initialize(), enqueue() and dequeue() the queue. Make it thread safe..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Next higher number with same number of set bits.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/The commit number is unique and is generated in synchronous order. There is exactly 1 unique author.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/There are 10,000 balls and may be 500 different colors of ball.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/We have a list of N nodes with each node pointing to one of the N nodes..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Design a component that will implement web browser history. the user goes to different site and once he press on history button you should display the last 5.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a huge N*N matrix, we need to query the GCD of numbers in any given submatrix range（x1,y1,x2,y2）. Design a way to preprocess the matrix to accelerate the query speed..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given an input file and any criteria write a function that will find the best score line and return it..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given the array of digits (0 is also allowed), what is the minimal sum of two integers that are made of the digits.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given two log files, each with a billion usernames (each username appended to the log file), find the usernames existing in both documents?.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Question: You are given a CSV file with 3 columns -- all integers:  id,parent,weight.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Suppose you have N machines connected to a network. Now you generate a new file on one machine, and want to sync up across all machines. please design a system to accomplish this task and also analyze the error tolerance issue..py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Search.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write a routine that does secret santa in O(N) time.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write code to give the character sequence given a word, For example, if the word is &quot;CON&quot;, the function will print this.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/You are given an array, divide it into 2 equal halves such that the sum of those 2 halves are equal..py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/exception_raise.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/given 2 Dimensional array P -- String[][] input = { { &quot;abc&quot;, &quot;def&quot;, &quot;gh&quot; }.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/how to write a connection pool (i.e, a class that returns connections to the user, and if the user is done, returns them back to the pool).py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/iven a list of integers that fall within a known short but unknown range of values, how to find the median value? Some say we could use selection algorithm..py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write a function that receives three integer inputs for the lengths of the sides of a triangle and returns one of four values to determine the triangle type (1=scalene, 2=isosceles, 3=equilateral, 4=error).py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/design a system to return an unique ID for each request. For most of requests, the ID value should increase as time goes, the system should handle 1000 requests per second at least..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/given a dictionary of wrods,find the pair of word with following property: 1,the two word don't have same letter. 2,the multiple of the two word's length is maximum..py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mianJing111111/Google/suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c..py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Add Binary.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Add Binary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Add Two Numbers .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Add Two Numbers .py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Anagrams.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Anagrams.py" />
@@ -50,14 +34,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Construct Binary Tree from Preorder and Inorder Traversal .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Construct Binary Tree from Preorder and Inorder Traversal .py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Count and Say.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Count and Say.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Decode Ways.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Decode Ways.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Deepest left leaf node in a binary tree.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/tree/Deepest left leaf node in a binary tree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Divide Two Integers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Evaluate Reverse Polish Notation.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Evaluate Reverse Polish Notation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/Extend. If you can remove three walls, then what is the shortest path from start to the target.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Extend. If you can remove three walls, then what is the shortest path from start to the target.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py" afterPath="$PROJECT_DIR$/mianJing111111/facebook/Find the k'th largest element in a binary search tree. Write code for.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Gas Station.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Gas Station.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Generate Parentheses.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Generate Parentheses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/Given a set of intervals, find the interval which has the maximum number of intersections.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Given a set of intervals, find the interval which has the maximum number of intersections.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Implement strStr().py" afterPath="$PROJECT_DIR$/code_training_leet_code/Implement strStr().py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Insertion Sort List.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Insertion Sort List.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Integer to Roman.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Integer to Roman.py" />
@@ -81,7 +62,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Palindrome Partitioning.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Partition List.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Partition List.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Partition problem.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Partition problem.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Path Sum.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Path Sum.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Permutation Sequence .py" afterPath="$PROJECT_DIR$/code_training_leet_code/Permutation Sequence .py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Permutations II.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Permutations II.py" />
@@ -129,14 +109,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Word Break.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Break.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Word Ladder ii.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Ladder ii.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/Word Ladder.py" afterPath="$PROJECT_DIR$/code_training_leet_code/Word Ladder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/Write code to return a random line from a file of unknown size and variable length rows.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/Write code to return a random line from a file of unknown size and variable length rows.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/ZigZag Conversion.py" afterPath="$PROJECT_DIR$/code_training_leet_code/ZigZag Conversion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" afterPath="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/flatten iterator Flatten an iterator of iterators in Java..py" afterPath="$PROJECT_DIR$/mianJing111111/Google/flatten iterator Flatten an iterator of iterators in Java..py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/Google/given a double linked list and an array of nodes in that dll，output number of clusters  example: dll: n1 n2 n3 n4 n5; array: n1 n4 n5; output 2( (n1) (n4 n5)).py" afterPath="$PROJECT_DIR$/mianJing111111/Google/given a double linked list and an array of nodes in that dll，output number of clusters  example: dll: n1 n2 n3 n4 n5; array: n1 n4 n5; output 2( (n1) (n4 n5)).py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_training_leet_code/min stack.py" afterPath="$PROJECT_DIR$/code_training_leet_code/min stack.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/ugly_numbers_Design an algorithm to find the kth number such that the only prime factors are 3,5, and 7.py" afterPath="$PROJECT_DIR$/mianJing111111/geeksforgeeks/prime/ugly_numbers_Design an algorithm to find the kth number such that the only prime factors are 3,5, and 7.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="code_training.iws" />
@@ -172,22 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/mianJing111111/Google/compress Strings.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/we have a random list of people. each person knows his own height and the number of tall people in front of him. write a code to make the equivalent queue.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a preorder traversal, create a binary search tree   in optimized time.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Construct BST from given preorder traversal_Given a preorder traversal, create a binary search tree   in optimized time.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a circle with N defined points and a point M outside the circle, find the point that is closest to M among the set of N. O(LogN).py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/largest number that an int variable can fit given a memory of certain size.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/You have two sorted list. Write code for returning the first k elements. K may be a large number like 10 million..py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/You have a lists with integers. Find all the pairs of numbers that sum less than or equal to to a particular number k. The list contains minimum 5 Million number.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/非编程类的题目.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/What happens during and after a query is being typed (autocomplete) in a search box whether the user is trying to go to a website or asking a question etc,.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Write code to return a random line from a file of unknown size and variable length rows.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/How to remove duplicate lines in a large text file? I think it's easy to find duplicate lines, but how do we efficiently remove them from the file?.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Given inputs from Google Search, you have K chunks. Each chunk is individually alphabetically ordered (apple, banana, cat) ... (*apple, *banan, *cat). You want to merge all chunks into a single list. How would you do it?.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/given 2 Dimensional array I/P -- String[][] input = { { &quot;abc&quot;, &quot;def&quot;, &quot;gh&quot; }.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/The commit number is unique and is generated in synchronous order. There is exactly 1 unique author.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/given a double linked list and an array of nodes in that dll，output number of clusters  example: dll: n1 n2 n3 n4 n5; array: n1 n4 n5; output 2( (n1) (n4 n5)).py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Given a timer time() with nanosecond accuracy and given the interface.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Write a routine that does secret santa in O(N) time.py" />
@@ -215,7 +174,6 @@
         <option value="$PROJECT_DIR$/mianJing111111/Google/You are given an array, divide it into 2 equal halves such that the sum of those 2 halves are equal..py" />
         <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/dp/Partition problem.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Next higher number with same number of set bits.py" />
-        <option value="$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions..py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Given a board made of 2 x n squares, and boards made of 2 x 1 squares, write a function that will calculate the number of possible ways to arrange the 2 x 1 boards on the 2 x n board, in a way that will fill it completely.py" />
@@ -223,11 +181,28 @@
         <option value="$PROJECT_DIR$/mianJing111111/Google/Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game.py" />
         <option value="$PROJECT_DIR$/mianJing111111/facebook/thread_safe_LRU_Cache.py" />
         <option value="$PROJECT_DIR$/mianJing111111/Google/Implement a circular queue of integers of user-specified size using a simple array. Provide routines to initialize(), enqueue() and dequeue() the queue. Make it thread safe..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given two sorted array in ascending order with same length N, calculate the first K min.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml, then given a number range [min, max], tell if all the numers of water in the range can be generated..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given a huge N*N matrix, we need to query the GCD of numbers in any given submatrix range（x1,y1,x2,y2）. Design a way to preprocess the matrix to accelerate the query speed..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Write a function that receives three integer inputs for the lengths of the sides of a triangle and returns one of four values to determine the triangle type (1=scalene, 2=isosceles, 3=equilateral, 4=error).py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given an input file, find the line with the most vowels ( Easy)  Followup: Given an input file and any criteria write a function that will find the best score line and return it. (He told me the best score can be anything, min/max/(anything that can be measured) of the criteria)..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Question: You are given a CSV file with 3 columns -- all integers:  id,parent,weight.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Suppose you have N machines connected to a network. Now you generate a new file on one machine, and want to sync up across all machines. please design a system to accomplish this task and also analyze the error tolerance issue..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given two log files, each with a billion usernames (each username appended to the log file), find the usernames existing in both documents?.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/design a system to return an unique ID for each request. For most of requests, the ID value should increase as time goes, the system should handle 1000 requests per second at least..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given the array of digits (0 is also allowed), what is the minimal sum of two integers that are made of the digits contained in the array.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Given the array of digits (0 is also allowed), what is the minimal sum of two integers that are made of the digits.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c..py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/Design a component that will implement web browser history. the user goes to different site and once he press on history button you should display the last 5.py" />
+        <option value="$PROJECT_DIR$/mianJing111111/Google/given a dictionary of wrods,find the pair of word with following property: 1,the two word don't have same letter. 2,the multiple of the two word's length is maximum..py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="510" />
+    <option name="x" value="558" />
     <option name="y" value="23" />
     <option name="width" value="795" />
     <option name="height" value="841" />
@@ -335,7 +310,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="thread&#9;null&#9;null&#10;dict&#9;null&#9;null&#10;&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions..py&#10;major&#9;null&#9;null&#10;majori&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/binarySearch/Check for Majority Element in a sorted array.py&#10;anagram&#9;null&#9;null&#10;url&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Design Short URL..py&#10;snake&#9;null&#9;null&#10;set bit&#9;null&#9;null&#10;longest comm&#9;null&#9;null&#10;partition&#9;null&#9;null&#10;iterat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/flatten iterator Flatten an iterator of iterators in Java..py&#10;single number&#9;null&#9;null&#10;flatten&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/flatten iterator Flatten an iterator of iterators in Java..py&#10;deepest&#9;null&#9;null&#10;kth bst&#9;null&#9;null&#10;wall&#9;null&#9;null&#10;ugly&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Given a set of intervals, find the interval which has the maximum number of intersections.py&#10;equil&#9;null&#9;null&#10;intersect&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/几何多边形polygonConvex/How to check if two given line segments intersect__Vector__slope.py&#10;hit&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/called times function hits gethits.py&#10;timer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Given a timer time() with nanosecond accuracy and given the interface.py&#10;clust&#9;null&#9;null&#10;merge k sor&#9;null&#9;null&#10;circle&#9;null&#9;null&#10;flatten &#9;null&#9;null&#10;given preorder traversal &#9;null&#9;null&#10;two sorted &#9;null&#9;null&#10;height&#9;null&#9;null&#10;meeting&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py&#10;big small&#9;null&#9;null&#10;diago&#9;null&#9;null&#10;reverse&#9;null&#9;null&#10;excel&#9;null&#9;null&#10;guard&#9;null&#9;null&#10;succes&#9;null&#9;null&#10;circular&#9;null&#9;null&#10;rope&#9;null&#9;null&#10;coin&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Given a value N, if we want to make change for N cents, and we have infinite supply of each of S = { S1, S2, .. , Sm} valued coins, how many ways can we make the change? The order of coins doesn’t matter.py&#10;coin change&#9;null&#9;null&#10;subset sum&#9;null&#9;null&#10;Determine minimum sequence of adjacent&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py&#10;square&#9;null&#9;null&#10;rectangle&#9;null&#9;null&#10;minimum &#9;null&#9;null&#10;cycle&#9;null&#9;null&#10;sliding &#9;null&#9;null&#10;sliding wi&#9;RUN_CONFIGURATION&#9;Sliding Window Maximum_Maximum element of all subarrays of size k&#10;sequence of adjacent values&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py&#10;merge  array&#9;null&#9;null&#10;first non &#9;null&#9;null&#10;first non r&#9;null&#9;null&#10;first re&#9;null&#9;null&#10;short&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Design Short URL..py&#10;gcd&#9;null&#9;null&#10;thread&#9;null&#9;null&#10;dict&#9;null&#9;null&#10;major&#9;null&#9;null&#10;majori&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/binarySearch/Check for Majority Element in a sorted array.py&#10;anagram&#9;null&#9;null&#10;url&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Design Short URL..py&#10;snake&#9;null&#9;null&#10;set bit&#9;null&#9;null&#10;longest comm&#9;null&#9;null&#10;partition&#9;null&#9;null&#10;iterat&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/flatten iterator Flatten an iterator of iterators in Java..py&#10;single number&#9;null&#9;null&#10;flatten&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/flatten iterator Flatten an iterator of iterators in Java..py&#10;deepest&#9;null&#9;null&#10;kth bst&#9;null&#9;null&#10;wall&#9;null&#9;null&#10;ugly&#9;null&#9;null&#10;interval&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Given a set of intervals, find the interval which has the maximum number of intersections.py&#10;equil&#9;null&#9;null&#10;intersect&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/几何多边形polygonConvex/How to check if two given line segments intersect__Vector__slope.py&#10;hit&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/called times function hits gethits.py&#10;timer&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/Google/Given a timer time() with nanosecond accuracy and given the interface.py&#10;clust&#9;null&#9;null&#10;merge k sor&#9;null&#9;null&#10;circle&#9;null&#9;null&#10;flatten &#9;null&#9;null&#10;given preorder traversal &#9;null&#9;null&#10;two sorted &#9;null&#9;null&#10;height&#9;null&#9;null&#10;meeting&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/facebook/Given an array of meetings, find out the minimum number of conference rooms requiredGiven n intervals  , find the maximum number of overlapping intervals.py&#10;big small&#9;null&#9;null&#10;diago&#9;null&#9;null&#10;reverse&#9;null&#9;null&#10;excel&#9;null&#9;null&#10;guard&#9;null&#9;null&#10;succes&#9;null&#9;null&#10;circular&#9;null&#9;null&#10;rope&#9;null&#9;null&#10;coin&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/dp/Given a value N, if we want to make change for N cents, and we have infinite supply of each of S = { S1, S2, .. , Sm} valued coins, how many ways can we make the change? The order of coins doesn’t matter.py&#10;coin change&#9;null&#9;null&#10;subset sum&#9;null&#9;null&#10;Determine minimum sequence of adjacent&#9;FILE&#9;file:///Users/zhenglinyu/PycharmProjects/code_training/mianJing111111/geeksforgeeks/array/Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum___minimum sliding window_Smallest subarray with sum greater than a given value.py&#10;square&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
   </component>
@@ -359,79 +334,7 @@
       <recent name="$PROJECT_DIR$/mianJing111111/geeksforgeeks/graph" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game">
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Write code to give the character sequence given a word, For example, if the word is &quot;CON&quot;, the function will print this" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Write code to give the character sequence given a word, For example, if the word is &quot;CON&quot;, the function will print this.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Next higher number with same number of set bits" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Next higher number with same number of set bits.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions." type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="code_training" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions..py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c.">
     <configuration default="false" name="Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -445,6 +348,78 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="code_training" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Let the user enter a decimal number_Greatest_Common_Divisor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/epic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/epic/Let the user enter a decimal number_Greatest_Common_Divisor.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="mergeKsortedArray" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c." type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mianJing111111/Google" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="code_training" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mianJing111111/Google/suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c..py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -612,19 +587,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.Sliding Window Maximum_Maximum element of all subarrays of size k" />
       <item index="1" class="java.lang.String" itemvalue="Python.给一个unsigned int数组，size为n，数组的sum = a，计算一个k的值，将数组中 所有大于k的数改为k之后，数组的sum变为b。Ex,  [1,2,5,7,7,8] = a = 30, b = 26,                          那么k = 6，因为[1,2,5,6,6,6] = 26。" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Write code to give the character sequence given a word, For example, if the word is &quot;CON&quot;, the function will print this" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Next higher number with same number of set bits" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions." />
-      <item index="6" class="java.lang.String" itemvalue="Python.Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
+      <item index="4" class="java.lang.String" itemvalue="Python.A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml" />
+      <item index="5" class="java.lang.String" itemvalue="Python.mergeKsortedArray" />
+      <item index="6" class="java.lang.String" itemvalue="Python.suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c." />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions." />
-        <item index="2" class="java.lang.String" itemvalue="Python.Next higher number with same number of set bits" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Write code to give the character sequence given a word, For example, if the word is &quot;CON&quot;, the function will print this" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c." />
+        <item index="1" class="java.lang.String" itemvalue="Python.mergeKsortedArray" />
+        <item index="2" class="java.lang.String" itemvalue="Python.A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Let the user enter a decimal number_Greatest_Common_Divisor" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Write a program to return list of words (from the given list of words) that can be formed from the list of given characters. This is like Scribble game" />
       </list>
     </recent_temporary>
   </component>
@@ -641,7 +616,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="510" y="23" width="795" height="841" extended-state="0" />
+    <frame x="558" y="23" width="795" height="841" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -704,142 +679,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Write code to return a random line from a file of unknown size and variable length rows.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/How to remove duplicate lines in a large text file? I think it's easy to find duplicate lines, but how do we efficiently remove them from the file?.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given inputs from Google Search, you have K chunks. Each chunk is individually alphabetically ordered (apple, banana, cat) ... (*apple, *banan, *cat). You want to merge all chunks into a single list. How would you do it?.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="204" selection-start-line="7" selection-start-column="204" selection-end-line="7" selection-end-column="204" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3199404" vertical-offset="887" max-vertical-offset="2040">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/given 2 Dimensional array P -- String[][] input = { { &quot;abc&quot;, &quot;def&quot;, &quot;gh&quot; }.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49635038" vertical-offset="0" max-vertical-offset="680">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/The commit number is unique and is generated in synchronous order. There is exactly 1 unique author.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.240876" vertical-offset="0" max-vertical-offset="799">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/given a double linked list and an array of nodes in that dll，output number of clusters  example: dll: n1 n2 n3 n4 n5; array: n1 n4 n5; output 2( (n1) (n4 n5)).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7518248" vertical-offset="268" max-vertical-offset="1224">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a timer time() with nanosecond accuracy and given the interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7518248" vertical-offset="200" max-vertical-offset="748">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/called times function hits gethits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18582375" vertical-offset="1416" max-vertical-offset="2771">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Write a routine that does secret santa in O(N) time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9379562" vertical-offset="472" max-vertical-offset="1088">
-          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/random/Shuffle a given array_random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7992701" vertical-offset="438" max-vertical-offset="1088">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/We have a list of N nodes with each node pointing to one of the N nodes..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0076481835" vertical-offset="1075" max-vertical-offset="1598">
-          <caret line="62" column="127" selection-start-line="62" selection-start-column="127" selection-end-line="62" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Generate MAX_INT (Max signed int value) using bitwise operators. Should work in 32 and 64 bit processors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/几何多边形polygonConvex/How to check if two given line segments intersect__Vector__slope.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1394">
-          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Equilibrium index of an array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="680">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a kernal code in &quot;0&quot;th machine. How soon you can replicate the kernal across N machines. Now if the machines has upload and download bandwidth constraints, how can you impove the copy time..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="442">
-          <caret line="13" column="404" selection-start-line="13" selection-start-column="404" selection-end-line="13" selection-end-column="404" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Consider in Java arraylist we have mix of int, double, float, string, etc. How will you find if a given index of arraylist have string. No need to worry about generics and type safe..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/Google/How would you synchronize a linked list across multiple computers. If nodes are added removed to a linked list on one computer, all others must reflect this change.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
@@ -1026,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2108">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Write a function that takes 2 strings , search returns true if any anagram of string1(needle) is present in string2(haystack).py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="1887">
@@ -1110,6 +941,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.31034482" vertical-offset="714" max-vertical-offset="1207">
           <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given a huge N*N matrix, we need to query the GCD of numbers in any given submatrix range（x1,y1,x2,y2）. Design a way to preprocess the matrix to accelerate the query speed..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30289534" vertical-offset="0" max-vertical-offset="449">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Write a function that receives three integer inputs for the lengths of the sides of a triangle and returns one of four values to determine the triangle type (1=scalene, 2=isosceles, 3=equilateral, 4=error).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1440678" vertical-offset="0" max-vertical-offset="472">
+          <caret line="2" column="205" selection-start-line="2" selection-start-column="205" selection-end-line="2" selection-end-column="205" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/epic/Let the user enter a decimal number_Greatest_Common_Divisor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.39361703" vertical-offset="185" max-vertical-offset="680">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given an input file and any criteria write a function that will find the best score line and return it..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="578">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/A soda water machine,press button A can generate 300-310ml, button B can generate 400-420ml and button C can generate 500-515ml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8377282" vertical-offset="80" max-vertical-offset="646">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Question: You are given a CSV file with 3 columns -- all integers:  id,parent,weight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9310345" vertical-offset="374" max-vertical-offset="969">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Suppose you have N machines connected to a network. Now you generate a new file on one machine, and want to sync up across all machines. please design a system to accomplish this task and also analyze the error tolerance issue..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9310345" vertical-offset="136" max-vertical-offset="714">
+          <caret line="22" column="288" selection-start-line="22" selection-start-column="288" selection-end-line="22" selection-end-column="288" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given two log files, each with a billion usernames (each username appended to the log file), find the usernames existing in both documents?.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/design a system to return an unique ID for each request. For most of requests, the ID value should increase as time goes, the system should handle 1000 requests per second at least..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.88438135" vertical-offset="584" max-vertical-offset="1139">
+          <caret line="45" column="119" selection-start-line="45" selection-start-column="119" selection-end-line="45" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Find the first repeating element in an array of integers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/stream/Given a string, find its first non-repeating character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/Given a string, find its first non-repeating character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Design Short URL..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1938" max-vertical-offset="2873">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/geeksforgeeks/array/mergeKsortedArray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="2040">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Given the array of digits (0 is also allowed), what is the minimal sum of two integers that are made of the digits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8453039" vertical-offset="0" max-vertical-offset="561">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/suppose a string is consists of a, b, and c Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1724138" vertical-offset="153" max-vertical-offset="901">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/Design a component that will implement web browser history. the user goes to different site and once he press on history button you should display the last 5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mianJing111111/Google/given a dictionary of wrods,find the pair of word with following property: 1,the two word don't have same letter. 2,the multiple of the two word's length is maximum..py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31034482" vertical-offset="1326" max-vertical-offset="1819">
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
           <folding />
         </state>
       </provider>

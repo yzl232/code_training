@@ -14,6 +14,31 @@ So, it is not compress the URL A, but build a URL mapping service.
 #所以google的search suggest, //goo.gl/是一定要研究的
 
 #超高频。看到不下5次。
+
+
+#http://www.hiredintech.com/app#the-system-design-process
+
+'''
+Consider the question about the URL-shortening service ("Design a URL shortening service like bit.ly"). There are so many things that are unclear about it! Without knowing more, it will be impossible to design an appropriate solution. Actually, many candidates forget about this and start designing a solution immediately.
+
+Don’t make this mistake!
+
+The very first thing you should do with any system design question is to clarify the system's constraints and to identify what use cases the system needs to satisfy. Spend a few minutes questioning your interviewer and agreeing on the scope of the system.
+'''
+
+
+
+
+
+'''
+For example, the URL-shortening service could be meant to serve just a few thousand users, but each could be sharing millions of URLs. It could be meant to handle millions of clicks on the shortened URLs, or dozens. The service may have to provide extensive statistics about each shortened URL (which will increase your data size), or statistics may not be a requirement at all.
+
+You will also have to think about the use cases that are expected to occur. Your system will be designed based on what it's expected to do. Don't forget to make sure you know all the requirements the interviewer didn't tell you about in the beginning.
+'''
+
+
+
+
 '''
 While shortening the URL:
 

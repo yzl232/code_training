@@ -61,7 +61,7 @@ Elements of matrix in sorted order
 import heapq
 
 #heap和merge 复杂度一样。 但是heap代码只有8行。 merge代码要三倍
-
+#三元tuple。存了本身array的位置，以及目前array的pointer。
 
 class Solution:
     # @param a list of ListNode
@@ -70,12 +70,11 @@ class Solution:
         h =[(arrs[i][0], i, 0) for i in range(len(arrs)) if arrs[i]]
         heapq.heapify(h);  ret = []
         while h:
-            pop = heapq.heappop(h)
-            val, i, j = pop[0], pop[1], pop[2]
+            val, i, j = heapq.heappop(h)
             ret.append(val)
             if j+1<len(arrs[i]):  heapq.heappush(h, (arrs[i][j+1], i, j+1))
         return ret   #复杂度 O(nkLogk) 是最优解
-
+#好处是代码特别短。
 
 
 
