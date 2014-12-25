@@ -25,7 +25,7 @@ A Simple Solution is to run two loops. The outer loop goes for all possible valu
 class Solution:
     def brute(self, n):
         ret = 0
-        x = y = 0
+        x = 0
         while x*x<n:
             y = 0
             while x*x + y*y<n:
@@ -50,3 +50,4 @@ class Solution:
 s = Solution()
 print s.brute(6)
 print s.countAll(6)
+#Count the number of possible triangles  类似

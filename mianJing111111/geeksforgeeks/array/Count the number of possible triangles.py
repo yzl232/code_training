@@ -29,7 +29,7 @@ class Solution:
         for big in range(len(arr)-1, 1, -1):
             l=0; r=big-1
             while l<r:
-                if arr[l]+arr[r]<=arr[big]: i+=1
+                if arr[l]+arr[r]<=arr[big]: l+=1
                 else:
                     cnt+=r-l
                     r-=1
@@ -40,3 +40,4 @@ class Solution:
 s = Solution()
 print s.getCountTriangles([10, 21, 22, 100, 101, 200, 300])
 #和那个count  平方数目的也很像
+#Count Distinct Non-Negative Integer Pairs (x, y) that Satisfy the Inequality

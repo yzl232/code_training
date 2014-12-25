@@ -30,6 +30,38 @@ The idea is to create a graph of characters and then find topological sorting of
 …..b) Create an edge in g from mismatching character of word1 to that of word2.
 '''
 
+
+class Solution:
+    def topolgical_sort(self, words):
+        s = set(''.join(words))
+        g = {}
+        for ch in s:  g[ch] = set()    #第一步： 为所有的ch建立node
+        for i in range(len(words)-1):
+            word1 = words[i]; word2 = words[i+1]
+            for j in range(min(len(word1), len(word2))):
+                if word1[j] != word2[j]:  #发现了一个edge,  加入graph
+                    g[word2[j]].add(word1[j])
+                    break
+        print g
+        self.graph = g
+        self.ret,  self.visited = [], {}
+        for k in g.keys():  self.dfs(k)
+        return self.ret
+    def dfs(self, node):
+        if node in self.visited:   #已经visit过了
+            if self.visited[node]==False: raise ValueError("cycle")  #发现了一个back edge。
+            return
+        self.visited[node] = False  #这就是与普通dfs的唯一不同。 用False标记
+        for k in self.graph[node]:  self.dfs(k)
+        self.ret.append(node)
+        self.visited[node] = True
+
+s = Solution()
+print s.topolgical_sort(["baa", "abcd", "abca", "cab", "cad"])
+print s.topolgical_sort(["caa", "aaa", "aab"])
+
+
+'''
 class Solution:
     def topolgical_sort(self, words):
         s = set(''.join(words))
@@ -62,3 +94,5 @@ class Solution:
 s = Solution()
 print s.topolgical_sort(["baa", "abcd", "abca", "cab", "cad"])
 print s.topolgical_sort(["caa", "aaa", "aab"])
+
+'''
