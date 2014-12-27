@@ -110,21 +110,20 @@ class Solution:
         self.ret,  self.visited = [], {}
         for k in graph.keys():  self.dfs(k)
         return self.ret
-    def dfs(self, node):
-        if node in self.visited:   #已经visit过了
-            if self.visited[node]==False: raise ValueError("cycle")  #发现了一个back edge。
+    def dfs(self, x):
+        if x in self.visited:   #已经visit过了
+            if self.visited[x]==False: raise ValueError("cycle")  #发现了一个back edge。
             return
-        self.visited[node] = False  #这就是与普通dfs的唯一不同。 用False标记
-        for k in self.graph[node]:  self.dfs(k)
-        self.ret.append(node)
-        self.visited[node] = True
+        self.visited[x] = False  #这就是与普通dfs的唯一不同。 用False标记
+        for k in self.graph[x]:  self.dfs(k)
+        self.ret.append(x)
+        self.visited[x] = True
 
 s = Solution()
 # check how it works
 print s.topological(graph1)
 print s.topological(graph2)
-try: s.topological(graph3)
-except ValueError: print "Cycle!"
+s.topological(graph3)
 
 
 

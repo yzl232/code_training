@@ -8,15 +8,15 @@ parent pointer的情况
 '''
 class Solution:
     def find_Ancestor(self, p, q):
-        hashtable = {}
+        d = set()     #set就是hashtable。
         while p or q:
             if p:
-                if p in hashtable: return p
-                hashtable[p] = 1
+                if p in d: return p
+                d.add(p)
                 p = p.parent
             if q:
-                if q in hashtable: return q
-                hashtable[q] = 1
+                if q in d: return q
+                d.add(q)
                 q = q.parent
         return
 #O(n) and O(h)

@@ -23,6 +23,37 @@ Diagonal printing of the above matrix is
    20
 '''
 #做法：对角线。特点是i+j ==x
+
+
+#从左上角看。 相当于顺时针旋转45度。  这样可以看到是m+n-1
+#The diagonal printing of a given matrix ‘matrix[ROW][COL]’ always has ‘ROW + COL – 1′ lines in output
+#想象一条虚拟的对角线，左下到右上。 每次 i-=1; j+=1
+
+class Solution:
+    def diag(self, matrix):
+        if not matrix:return
+        m= len(matrix); n= len(matrix[0])
+        ret = [[]for i in range(m+n-1)]
+        for x in range(m+n-1):
+            for i in range(x, -1, -1):     #i从最大开始     x=>0
+                j=x-i    #特点是i+j ==x
+                if i<m and j<n: ret[x].append(matrix[i][j])  #后半
+        return ret
+
+
+
+
+
+matrix = [[1, 2, 3, 4],
+                       [5, 6, 7, 8],
+                       [9, 10, 11, 12],
+                       [13, 14, 15, 16],
+                       [17, 18, 19, 20],
+                      ]
+s = Solution()
+ret =  s.diag(matrix)
+for l in ret: print l
+
 '''
 Google有考这道题目
 Give a N*N matrix, print it out diagonally.
@@ -40,31 +71,25 @@ print:
 '''
 
 
-#从左上角看。 相当于顺时针旋转45度。  这样可以看到是m+n-1
-#The diagonal printing of a given matrix ‘matrix[ROW][COL]’ always has ‘ROW + COL – 1′ lines in output
-#比较难。 可以背下来
-#想象一条虚拟的对角线，左下到右上。 每次 i-=1; j+=1
-class Solution:
+
+
+class Solution2:
     def diag(self, matrix):
         if not matrix:return
         m= len(matrix); n= len(matrix[0])
         ret = [[]for i in range(m+n-1)]
         for x in range(m+n-1):
-            i=x; j=0 #第一个元素最靠左下。 也就是， 不断往右上
-            while i>=0 and j<=x:  #做法：对角线。特点是i+j ==x
-                if i<m and j<n:    ret[x].append(matrix[i][j])  #主要是照顾后半部分。
-                i-=1; j+=1
+            for i in range(x+1):    #i从最小开始    0=>x
+                j=x-i   #特点是i+j ==x
+                if i<m and j<n: ret[x].append(matrix[i][j])
         return ret
-
-matrix = [[1, 2, 3, 4],
-                       [5, 6, 7, 8],
-                       [9, 10, 11, 12],
-                       [13, 14, 15, 16],
-                       [17, 18, 19, 20],
-                      ]
-s = Solution()
+#Google面经的部分
+#把i从最大开始变成从最小开始
+s = Solution2()
 ret =  s.diag(matrix)
 for l in ret: print l
+
+
 
 
 '''
@@ -84,30 +109,3 @@ I feel It will be easier if we print from the left.
 
 I can do it from the left and then modify the approach a little bit to finish the problem
 '''
-
-
-
-
-#Google面经的部分
-#把上面的i, j,    调换一下。以及m,n 调换。   就是这个解法了。
-
-class Solution:
-    def diag(self, matrix):
-        if not matrix:return
-        m= len(matrix); n= len(matrix[0])
-        ret = [[]for j in range(m+n-1)]
-        for x in range(m+n-1):
-            j=x; i=0 #第一个元素最靠左下。 也就是， 不断往右上
-            while j>=0 and i<=x:
-                if j<n and i<m:    ret[x].append(matrix[i][j])  #主要是照顾后半部分。
-                j-=1; i+=1
-        return ret
-matrix =         [[1, 2, 3, 4],
-                       [5, 6, 7, 8],
-                       [9, 10, 11, 12],
-                       [13, 14, 15, 16],
-                       [17, 18, 19, 20],
-                      ]
-s = Solution()
-ret =  s.diag(matrix)
-for l in ret: print l

@@ -18,6 +18,8 @@ C) Root data > key value, the ceil value may be in left subtree. We may find a n
 
 天花板， 地板
 '''
+#可以用暴力法。O(n).  就是in order 。 if not self.ceil:  找第一个大于等于的值。
+#最佳的是下面的，O(logN)
 #理一下逻辑.  也利用了return的值
 class Solution:
     def ceil(self, root, val):

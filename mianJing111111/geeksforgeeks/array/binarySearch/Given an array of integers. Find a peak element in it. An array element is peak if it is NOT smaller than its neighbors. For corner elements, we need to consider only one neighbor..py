@@ -38,6 +38,9 @@ class Solution:
 #非常简洁巧妙。
 
 
+
+
+'''
 class Solution:
     def finPeak(self, arr):
         l = 0;  h = len(arr)-1
@@ -49,7 +52,7 @@ class Solution:
                 h = m-1
             else:  h = m+1  #右边肯定有个peak
         return l
-
+'''
 
 #下面是2D。 如果套用1D的。 可以做到O(nlogN)
 #. It's n+n/2+n/4+...<2n

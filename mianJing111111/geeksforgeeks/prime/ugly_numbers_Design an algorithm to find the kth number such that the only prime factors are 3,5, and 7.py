@@ -14,8 +14,7 @@ class Solution:
             ret.append(m)
             if m == ret[c3]*3: c3+=1
             if m == ret[c5]*5: c5+=1
-            if m== ret[c7]*7: c7+=1
-            #print '%d th element, %d, c3:%d, c5:%d, c7: %d' % (i, ret[i], c3, c5, c7)
+            if m== ret[c7]*7: c7+=1    #print '%d th element, %d, c3:%d, c5:%d, c7: %d' % (i, ret[i], c3, c5, c7)
         return ret[n]
 
 s = Solution()
@@ -72,3 +71,25 @@ Fifth iteration
 Will continue same way till I < 150
 
 '''
+
+#G家这么考的。
+'''
+Given an equation in the form 2^i * 3^j * 5^k * 7^l where i,j,k,l >=0 are integers.write a program to generate numbers from that equation in sorted order efficiently.
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12
+'''
+
+class Solution2:
+    def primeN(self, n):  #用了3个pointer来记录
+        c2 = c3 = c5 = c7 = 0
+        ret = [1]
+        for i in range(1, n+1):
+            m = min(ret[c2]*2, ret[c3]*3, ret[c5]*5, ret[c7]*7)
+            ret.append(m)
+            if m== ret[c2]*2: c2+=1
+            if m == ret[c3]*3: c3+=1
+            if m == ret[c5]*5: c5+=1
+            if m== ret[c7]*7: c7+=1
+        return ret
+s = Solution2()
+print s.primeN(10)

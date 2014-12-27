@@ -11,14 +11,21 @@ Imagine you have a parking place with n slots and n-1 cars numbered from 1..n-1.
 Example:
 src={1,0,2,3}; tgt={0,2,3,1};
 '''
+
+'''
+The special case for this is when you swap ZERO into its correct position. In this case, you can't swap the correct number in, because it is already there -- it just happens to be ZERO. Instead, you can swap some other incorrect number into ZERO's position. (just move misplaced number into a different misplaced position -- ZERO's position) In the next iteration after doing this fix, it is guaranteed that you will swap some number into its correct place. So even when this special case occurs, it will still only take 2 swaps to move 1 misplaced number.
+'''
+
+
 def rearrage_swap0(src, tgt):
     tgt_0 =tgt.index(0)    #基本上就是0所在的位置。  每次都修正这个位置的value.   直到0也归位。
     print src
     i = src.index(0)
-    if tgt_0 == i:  #0已经在正确位置上了。。
-        j = (i+1)%len(src)
+    if tgt_0 == i:  #0已经在正确位置上了。。随便找一个不match的位置。 交换
+        for j in range(len(src)):
+            if src[j]!=tgt[j]: break
         src[i], src[j] = src[j], src[i]
-        print i, '<->', j, src
+        print src[i], '<->', src[j], src
         i = j
 
     while i != tgt_0:
@@ -31,4 +38,4 @@ rearrage_swap0([1, 0, 2, 3], [0, 2, 3, 1])
 print '========'
 rearrage_swap0([1, 0, 2, 3], [2, 0, 3, 1])
 print '========'
-rearrage_swap0([1, 2, 3, 0], [2, 3, 1, 0])
+rearrage_swap0([1, 2, 3, 0], [1, 3, 2, 0])

@@ -1,10 +1,7 @@
 # encoding=utf-8
 '''
-You have been given a series of 'n' numbers and the series is in a random order. Write a program to find the median of the series with minimum complexity.
+How to find medium of 1 billion numbers across N distributed machines efficiently?
 '''
-# quick select
-# 如果是海量数据。 用median
-
 
 
 '''

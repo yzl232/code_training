@@ -38,7 +38,7 @@ class Solution:
 
     def validW(self, wordD, charD):
         for ch in wordD:
-            if ch not in charD or wordD[ch]>charD[ch]: return False
+            if [ch not in charD or wordD[ch]>charD[ch]]: return False
         return True
 
     def solve(self,words,  charSet ):
