@@ -7,6 +7,22 @@ output 2( (n1) (n4 n5))
 '''
 #最多是len(array) 个。 如果黏在一起，就不是了。
 
+'''
+You are given a doubly linked list and an array of references to nodes on the linked list. How many "blocks" are there present in the linked list?
+
+A "block" is defined as a group of nodes on the list with references directed at them and adjacent to eachother.
+
+For example
+
+[node #0] -><-[node#1] -><-[node#2] -><-[node#3]
+
+node[] nodes = {ref_to_node#0, ref_to_node#2, ref_to_node#3};
+
+Is two blocks because the first block is at node #0.
+Node #1 has no incomming reference. Node #2 and Node #3 have references are are adjacent so it's just one block.
+'''
+
+
 
 '''
 题目觉得不难  但是脑子很不给力  想了好半天也没想好  发出来大家看看
@@ -45,22 +61,3 @@ class Solution:
         for i in targets:
             if i.next not in targets: ret+=1
         return ret
-
-
-'''
-暴力法，比较烂
-class Solution:
-    def getNumCluster(self, node, arr):
-        d = {i:1 for i in arr}
-        n = len(arr)     #array里边的。
-        prevInD = False
-        result = 0
-        while n>0 and node:
-            if node in d:
-                n-=1
-                if not prevInD: result+=1
-                prevInD = True
-            else:  prevInD = False
-            node = node.next
-        return result
-'''

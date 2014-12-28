@@ -14,10 +14,9 @@ class Solution():
         if 0<n<1: return 1.0/self.sqrt(1/n)
         l =0; h=n+1
         accuracy = 0.001
-        while l<=h:
+        while (h-l)>accuracy:  #float型的binary search。 可以把accuracy提前到前面。 少了一行
             m =(l+h)/2.0
-            if abs(m*m-n)<accuracy: return m
-            elif m*m>n:  h = m
+            if m*m>n:  h = m
             else: l=m
         return h
 s = Solution()
@@ -35,10 +34,9 @@ class Solution:
 
     def invert(self, y, start, end):
         l = start;  h =end; accuracy = 0.0001
-        while l<=h:
+        while (h-l)>accuracy:
             m = (l+h)/2
-            if abs(self.func(m)-y)<=accuracy:  return accuracy
-            elif self.func(m)>y:  h = m
+            if self.func(m)>y:  h = m
             else:  l = m
 
 
@@ -63,16 +61,13 @@ class Solution:
         accuracy = 0.00001
         lval = 1<<lx;  hval = 1<<hx
         l = lx; h = hx
-        while l<h:
+        while (h-l)>accuracy:
             m =1.0* (l+h)/2
             midVal = math.sqrt(lval * hval)
-            if abs(midVal- val)<0.00001:   return m
-            elif midVal> val:
-                h = m
-                hval = midVal
+            if midVal> val:
+                h = m;   hval = midVal
             else:
-                l = m
-                lval = midVal
+                l = m;   lval = midVal
         return l
 s = Solution()
 print s.log2(13)

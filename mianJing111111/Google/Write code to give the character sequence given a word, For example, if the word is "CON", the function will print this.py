@@ -64,3 +64,38 @@ if __name__ == '__main__':
     print '#####'
     print
     trace_word('cozmo')
+
+
+
+#g家很喜欢本题。有变体。
+'''
+Given the English alphabet, 'a' through 'z' (lowercase), and an imaginary onscreen keyboard with the letters laid out in 6 rows and 5 columns:
+
+a b c d e
+f g h i j
+k l m n o
+p q r s t
+u v w x y
+z
+
+Using a remote control - (up - 'u', down 'd', left 'l', right 'r' and enter '!'), write a function that given a word will produce the sequence of key presses required to type out the word on the onscreen keyboard. The function should return the sequence string.
+
+NOTE: This was an actual question. I didn't pull this from TopCoder.
+
+
+
+'''
+
+
+class Solution:
+    def move(self, word):
+        word.lower()
+        curX=curY=0; ret=''
+        for ch in word:
+            loc = ord(ch)-ord('a')
+            x, y = loc%5, loc/5
+            horizontal = 'r' if curX<x else 'l'
+            vertical = 'd' if curY<y else 'u'
+            ret+=horizontal*abs(curX-x) + vertical*abs(curY-y)
+            curX, curY = x, y
+        return ret

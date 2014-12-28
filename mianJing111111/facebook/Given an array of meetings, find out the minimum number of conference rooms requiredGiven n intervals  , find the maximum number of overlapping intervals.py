@@ -62,7 +62,7 @@ class Solution:
     def findNumConference(self, intervals):
         affairs = [];  cnt = 0; ret = 0
         for i in intervals:
-            affairs.append((i[0], 1))
+            affairs.append((i[0], 1))  #其实如果要sort正确，也就是start==end要sort正确时候， 应当 (i[0], -1)，   （i[0], 1）
             affairs.append((i[1], -1))
         affairs.sort()
         for i in affairs:

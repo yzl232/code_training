@@ -12,6 +12,10 @@ has
   for a large, scalable trie, nested dictionaries might become cumbersome -- or at least space inefficient
 '''
 
+
+#trie主要用于prefix相关。 与prefix无关，用普通的hashtable来count即可
+
+
 _end = '_end_'
 class Trie:
 

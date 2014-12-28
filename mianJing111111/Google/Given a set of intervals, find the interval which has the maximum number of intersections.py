@@ -18,7 +18,7 @@ numIntersections[interval] = StartedEventsTill[end[interval]] - EndedEventsTill[
 #非常牛逼的解法。  排序用了O(nlogN)。 其他O(n)
 class Solution:
     def findNumConference(self, intervals):
-        affairs = [];  cnt = 0; ret = 0; d={}
+        affairs = [];   ret = 0; d={}
         for i in intervals:
             affairs.append((i[0], 1, i))
             affairs.append((i[1], -1, i))
@@ -26,7 +26,6 @@ class Solution:
         affairs.sort()
         sCnt = 0;     eCnt=0
         for x in affairs:
-            cnt+=x[1]
             if x[1]==1:
                 sCnt+=1
                 d[x[-1]]=-eCnt

@@ -15,21 +15,22 @@ i 是 starting  pointer
 
 #这个方法的牛逼在于2可以直接改成k就能用. . 可以直接改成len(count)>k:
 
-# G家的题目
+# G家的题目.  看过几次
+# sliding window的做法.   就是sliding window。
 '''
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s):
-        tail=0;  count = {};   maxLen = 0
-        for head in range(0, len(s)):
-            ch = s[head]
+        l=0;  count = {};   maxLen = 0
+        for r in range(0, len(s)):
+            ch = s[r]
             if ch not in count :   count[ch] = 0
             count[ch]+=1
             while len(count)>2:
-                ch = s[tail]
+                ch = s[l]
                 count[ch]-=1
                 if count[ch] ==0:     del count[ch]
-                tail +=1
-            maxLen = max(head-tail+1, maxLen)
+                l +=1
+            maxLen = max(r-l+1, maxLen)
         return maxLen
 
 s = Solution()

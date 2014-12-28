@@ -46,6 +46,8 @@ length一段一段都是这样的
             for i in range(j-2, -1, -1):
 '''
 
+#本题目G家考过
+
 class Solution:
     def mMoney(self, arr):
         l = len(arr)
@@ -61,3 +63,18 @@ class Solution:
                 c = dp[i][j-2]  #我取了j。对方取了j-1
                 dp[i][j] = max(arr[i]+min(a, b),   arr[j]+min((b, c)))
         return dp[0][l-1]
+
+# memoization
+class Solution2:
+    def mCo(self, arr):
+        self.d = {}; self.arr = arr
+        return self.dfs(0, len(arr))
+
+    def dfs(self, start, end):
+        if start>end: return 0
+        if (start, end) in self.d: return self.d[(start, end)]
+        a = self.arr[start]+min(self.dfs(start+2, end),  self.dfs(start+1, end-1))
+        b = self.arr[end]+min(self.dfs(start+1, end-1), self.dfs(start, end-2))
+        self.d[(start, end)] = max(a, b)
+        return max(a, b)
+

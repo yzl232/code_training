@@ -40,7 +40,7 @@ class Solution:
             processed = '';  i=0
             while i<len(line):
                 if not flag:
-                    if i+1<len(line) and line[i:i+2] =='/*':
+                    if i+1<len(line) and line[i:i+2] =='/*':  #正斜杠，别误以为是反斜杠了。
                         flag = True
                         i+=1
                     else: processed+=line[i]

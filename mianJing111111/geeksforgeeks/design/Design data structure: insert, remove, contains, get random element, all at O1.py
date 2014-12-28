@@ -1,5 +1,6 @@
 # encoding=utf-8
 '''
+#G家超超高频的题目
 
 Data structure: insert, remove, contains, get random element, all at O(1)
 
@@ -53,3 +54,9 @@ This has amortized O(1) time for all three functions.
 
 
 # RF居然考G家的题目
+
+
+'''
+换汤不换药。  G家又考了一次
+Implementation of Advanced set which have the functionality as "Set" in c++ along with extra functionality-Random number generator.Returns the random number from the set.
+'''

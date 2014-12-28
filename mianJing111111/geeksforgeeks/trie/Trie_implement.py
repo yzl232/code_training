@@ -12,6 +12,9 @@ has
   for a large, scalable trie, nested dictionaries might become cumbersome -- or at least space inefficient
 '''
 
+#trie用到的没有那么多。 主要就是prefix相关的题目
+
+
 _end = '_end_'
 class Trie:   #30多行。 主要是hashtable和DFS。   不难
     def makeTrie(self, words):
