@@ -32,7 +32,7 @@ class Solution:
     def distance(self, a, b):
         return (b[0]-a[0])**2+(b[1]-a[1])**2
 
-    def cost(self, i, j, k):
+    def cost(self, i, j, k, points):
         p1 = points[i];  p2 = points[j];  p3 = points[k]
         return self.distance(p1, p2)+self.distance(p2, p3) + self.distance(p1, p3)
 
@@ -41,5 +41,5 @@ class Solution:
         results  =[[0 for i in range(n)]for j in range(n)]
         for j in range(n):
             for i in range(j-3, -1, -1):  # i=0,  j=3
-                results[i][j] = min(results[i][k]+results[k][j]+ self.cost(i, k, j) for k in range(i+1, j))
+                results[i][j] = min(results[i][k]+results[k][j]+ self.cost(i, k, j, points) for k in range(i+1, j))
         return results[0][n-1]  #长度n-1。这是最后一步了。

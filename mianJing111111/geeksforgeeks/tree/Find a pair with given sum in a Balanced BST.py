@@ -6,6 +6,7 @@ Given a Balanced Binary Search Tree and a target sum, write a function that retu
 
 
 '''
+# 因为是balanced BST.所以可以达到LogN space.
 # flatten
 
 class Solution:
@@ -31,3 +32,41 @@ class Solution3:
             if cur == target: return True
             elif cur<target:  head=head.next
             else: tail = tail.prev
+
+#  第二种不能改结构
+
+'''
+Given a BST and a value x. Find two nodes in the tree whose sum is equal x. Additional space: O(height of the tree). It is not allowed to modify the tree
+'''
+# http://www.geeksforgeeks.org/find-a-pair-with-given-sum-in-bst/
+#原理： in order traversal 用stack的做法。 stack只存logN数目的node。 所以空间是logN
+#用2个stack
+class Solution5:
+    def find(self, root, target):
+        s1 = []; s2=[]
+        done1=done2=False
+        cur1 = root;  cur2= root.right
+        val1=val2=None
+        while True:
+            while done1:
+                while cur1:
+                    s1.append(cur1)
+                    cur1 = cur1.left
+                if not s1:  done1=True
+                cur1 = s1.pop()
+                val1 = cur1.val
+                cur1 = cur1.right
+                done1 =True
+            while done2:
+                while cur2:
+                    s2.append(cur2)
+                    cur2 = cur2.right
+                if not s2:  done2 = True
+                cur2 = s2.pop()
+                val2 = cur2.val
+                cur2 = cur2.left
+                done2=True
+            if val1+val2==target:  return val1, val2
+            elif val1+val2<target:   done1=False
+            else: done2=False
+            if val1>=val2: return False

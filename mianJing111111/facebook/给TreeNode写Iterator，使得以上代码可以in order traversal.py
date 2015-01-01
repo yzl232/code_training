@@ -20,6 +20,8 @@ facebook考过好多次
 回最大的，以后返回null.
 '''
 
+# O(h)  space
+
 # Definition for a  binary tree node
 # class TreeNode:
 #     def __init__(self, x):

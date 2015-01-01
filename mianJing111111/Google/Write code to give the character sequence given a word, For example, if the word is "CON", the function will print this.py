@@ -24,6 +24,8 @@ note: Be careful when you're at Z. if you go to the right, you will get stuck.
 Afterwards, the interviewer adds a space to the right of 'Z' to test the code.
 '''
 
+#不同的帖子Convex看到了四次。 超高频。
+
 a=[['a','b','c','d','e'],
     ['f','g','h','i','j'],
     ['k','l','m','n','o'],
@@ -83,7 +85,7 @@ Using a remote control - (up - 'u', down 'd', left 'l', right 'r' and enter '!')
 NOTE: This was an actual question. I didn't pull this from TopCoder.
 
 
-
+#非常牛逼。都不需要把矩阵摆出来。
 '''
 
 
@@ -99,3 +101,36 @@ class Solution:
             ret+=horizontal*abs(curX-x) + vertical*abs(curY-y)
             curX, curY = x, y
         return ret
+
+
+'''
+Question 3: 26 letter in a m*n matrix. Given m, n and key word. Starting
+with 'a', print shortest key-press sequence.
+For example:
+Input: 5 * 6, good
+
+a b c d e f
+g h i j k l
+m n o p q r
+s t u v w x
+y z
+
+output: down enter down right right enter enter up up right enter
+'''
+#注意。 从这里enter down right ， 可以看出， 上下，优先于左右。9
+
+#非常牛逼。都不需要把矩阵摆出来。
+class Solution:
+    def move(self, word):
+        word.lower()
+        curX=curY=0; ret=[]
+        for ch in word:
+            loc = ord(ch)-ord('a')
+            x, y = loc%6, loc/5
+            horizontal = 'right' if curX<x else 'left'
+            vertical = 'down' if curY<y else 'up'
+            ret+=[vertical]*abs(curY-y)+ [horizontal]*abs(curX-x) +['enter']
+            curX, curY = x, y
+        return ' '.join(ret)
+s = Solution()
+print s.move('good')

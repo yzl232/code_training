@@ -5,6 +5,7 @@
 
 Google有考这道题目。 面经
 '''
+#G家题
 
 import random
 '''

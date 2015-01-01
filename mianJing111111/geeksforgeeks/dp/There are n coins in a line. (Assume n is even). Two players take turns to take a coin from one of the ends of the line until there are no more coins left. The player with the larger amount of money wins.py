@@ -46,7 +46,7 @@ length一段一段都是这样的
             for i in range(j-2, -1, -1):
 '''
 
-#本题目G家考过
+#本题目G家考过。 好几次。
 
 class Solution:
     def mMoney(self, arr):
@@ -77,4 +77,3 @@ class Solution2:
         b = self.arr[end]+min(self.dfs(start+1, end-1), self.dfs(start, end-2))
         self.d[(start, end)] = max(a, b)
         return max(a, b)
-

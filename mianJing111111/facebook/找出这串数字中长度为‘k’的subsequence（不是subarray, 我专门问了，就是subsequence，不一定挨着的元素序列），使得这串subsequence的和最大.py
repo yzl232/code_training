@@ -6,5 +6,7 @@
 
 找出这串数字中长度为‘k’的subsequence（不是subarray, 我专门问了，就是subsequence，不一定挨着的元素序列），使得这串subsequence的和最大。
 
-实际上是求最大的k个数。  因为不是increasing sequenc这种限制。 就是任意了。  用quick select做。
+实际上是求最大的k个数。  因为不是increasing sequenc这种限制。 就是任意了。   
+
+如果是非负小于9的整数，可以建个0-9的数组，然后类似counting sort，找出前k大的数
 '''

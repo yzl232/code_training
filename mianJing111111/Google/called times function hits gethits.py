@@ -1,13 +1,15 @@
 # encoding=utf-8
 import time
 import random
-import collections
-import threadin
+from collections import  deque
+import threading
 
 #做法的话， 基本上都就是class的全局变量而已
 
 
 #变化很多 。 各有不同
+
+
 
 '''
 统计函数调用次数
@@ -87,9 +89,12 @@ foo():
     counts+=1
 
 '''
+#随时调用，知道最近一分钟多少次？
+#G家的题目.
+#可以进一步优化， 见Implement a counter that returns the number of function calls in the past minute
 class Solution():
     def __init__(self):
-        self.q = collections.deque(maxlen = 60)
+        self.q = deque(maxlen = 60)
         self.curCount = 0
     def foo(self):
         self.curCount+=1
@@ -150,7 +155,7 @@ circullar queue
 #巧妙
 class Solution5:
     def __init__(self):
-        self.q = collections.deque([], maxlen=10)
+        self.q = deque([], maxlen=10)
 
     def foo(self):
         curTime = time.time()

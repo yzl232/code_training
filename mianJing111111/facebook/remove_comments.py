@@ -34,20 +34,33 @@ Other than the odd edge case, this problem seems to be straightforward enough. A
 
 class Solution:
     def remove_Comments(self, s):    #其实不是很容易写。  有点tricky
-        flag = False  # is commenting
-        rets = []
-        for line in s:
-            processed = '';  i=0
-            while i<len(line):
-                if not flag:
-                    if i+1<len(line) and line[i:i+2] =='/*':  #正斜杠，别误以为是反斜杠了。
-                        flag = True
-                        i+=1
-                    else: processed+=line[i]
-                else:
-                    if i+1<len(line) and line[i:i+2] =='*/':
-                        flag = False
-                        i+=1
-                i+=1
-            rets.append(processed)
+        commenting = False  # is commenting
+        rets = '';  i=0
+        while i<len(s):
+            if not commenting:
+                if i+1<len(s) and s[i:i+2] =='/*':  #正斜杠，别误以为是反斜杠了。
+                    commenting = True
+                    i+=1
+                else: rets+=s[i]
+            else:
+                if i+1<len(s) and s[i:i+2] =='*/':
+                    commenting = False
+                    i+=1
+            i+=1
         return rets
+
+'''
+似乎可以用split
+用split做不了
+
+有点问题
+
+class Solution2:
+    def removeC(self, s):
+        content = s.split('/*')
+        for i in range(len(content)):
+            t= content[i].index('/*')
+            if t!=-1: content[i] = content[i][t+2:]
+        return ''.join(content)
+
+'''

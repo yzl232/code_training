@@ -16,6 +16,20 @@ would return: A AA APE PEA PARE PEAR SPARE APPEARS
 # For example, given the dictionary {hello, world, is, my, first, program},
 
 
+'''
+考过好几次。  也是简化版
+
+. 给一个char[]和一个字典，求所有在字典中并且由char数组里字母构成的单词，假
+设isWord()可以直接判断某个单词在不在字典里。
+
+
+ 你会怎么设计1中的字典？
+
+我觉得可能是预处理吧。  就是key: word, value: hashtable
+
+'''
+
+
 
 class Solution:
     def cntW(self, word):
@@ -40,4 +54,3 @@ class Solution:
         ret = []
         for w in words:  #每次使用的时候。prune出valid words
             if self.validW(w, charD): ret.append(w)
-

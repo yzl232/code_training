@@ -32,3 +32,6 @@ a) This is sending all urls over the network but not to a single computer. In or
 
 b) This is similar to MapReduce. I think that by saying "using MapReduce directly is not allowed", the interviewer meant that we have to give a detailed explanation about how the work is distributed among the network of computers, instead of just saying "the MapReduce framework will distribute and combine the work for us".
 '''
+
+
+

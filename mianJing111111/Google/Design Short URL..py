@@ -142,3 +142,30 @@ db index方法可以解决冲突问题哦 而且还可以保证 这个全局inde
 
 #http://blog.codinghorror.com/url-shortening-hashes-in-practice/
 #一篇文章
+
+
+#http://stackoverflow.com/questions/742013/how-to-code-a-url-shortener
+
+
+
+'''
+ 267 down vote favorite
+322
+
+
+I want to create a URL shortener service where you can write a long URL into an input field and the service shortens the URL to "http://www.example.org/abcdef". Instead of "abcdef" there can be any other string with six characters containing a-z, A-Z and 0-9. That makes 56~57 billion possible strings.
+
+Edit: Due to the ongoing interest in this topic, I've uploaded the code that I used to GitHub, with implementations for Java, PHP and JavaScript. Add your solutions if you like :)
+
+My approach:
+
+I have a database table with three columns:
+
+    id, integer, auto-increment
+    long, string, the long URL the user entered
+    short, string, the shortened URL (or just the six characters)
+
+I would then insert the long URL into the table. Then I would select the auto-increment value for "id" and build a hash of it. This hash should then be inserted as "short". But what sort of hash should I build? Hash algorithms like MD5 create too long strings. I don't use these algorithms, I think. A self-built algorithm will work, too.
+
+
+'''

@@ -16,6 +16,8 @@ def ifib(n):
 print ifib.__doc__
 
 
+#只要熟悉矩阵乘法。 很容易推出矩阵的
+
 '''
 判断一个数是不是fibonacci
 
@@ -29,22 +31,16 @@ class Solution:
             a, b =b, a+b
         return a==x
 
+
+
 '''
 logN 解法。  利用了leetcode的求power部分
 
-使用了matrix得power.
-m=
-[1 1]
-[1 0]
+很容易推导出来的。
 
-m*m=
-[2 1]
-[1 1]
+[0   1]
+[1  1]
 
-
-m*m*m=
-[3 2]
-[2 1]
 
 
 所以不会矩阵乘法，可以简单的两行相加
@@ -56,7 +52,8 @@ m*m*m=
 
 class Solution2:
     def fib(self, n):
-        self.e =  [[1, 1], [1, 0]]
+#        self.e =  [[1, 1], [1, 0]]
+        self.e = [[0, 1], [1, 1]]
         if n==0: return 0
         result = self.pow(n)
         return result[1][0]
@@ -82,3 +79,6 @@ class Solution2:
 Time Complexity: O(Logn)
 Extra Space: O(Logn) if we consider the function call stack size, otherwise O(1).
 '''
+s = Solution2()
+print s.fib(10)
+print ifib(10)

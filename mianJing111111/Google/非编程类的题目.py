@@ -20,7 +20,8 @@ set rightmost 1 to 0
 
 
 如何在计算机与计算机之间传送一个二叉搜索树 （传一个先序和一个中序的数组，传过去再恢复树）
- 或者serialize。 deserialize
+ 或者serialize。 deserialize.
+ 我感觉serialize更好一点。
 
 
 
@@ -29,7 +30,7 @@ set rightmost 1 to 0
  hash.  成100个文件。  然后分别排序。 归并排序100个文件
 
 
- 归并的时候，比如2个sorted  10G文件。merge过程 count。 先获得最大的2g文件，存起来。 再继续过程
+ 归并的时候，用heap
 '''
 
 
