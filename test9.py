@@ -2,19 +2,33 @@
 # brute force。  check every ch if it is an vowel
 #  xor。 然后check only one bit of the 8 bits is different.
 
+#直接就说， 有2种方法。
+def removeVowels(charArr):
+    vowels = set('aeiouAEIOU')
+    return [ch for ch in charArr if ch not in vowels]
+#第二种inplace
+def removeVowels(charArr):
+    vowels = set('aeiouAEIOU')
+    if not charArr: return []
+    slow =1
+    for fast in range(1, len(charArr)):
+        if charArr[fast] in vowels: continue
+        charArr[slow] = charArr[fast]
+        slow+=1
+    for i in range(slow, len(charArr)): charArr[i]=None
 
-def removeVowels(s):
-    return ''.join(ch for ch in s if ch not in 'aeiouAEIOU')
-
+#直接就说， 有2种方法。
 def grayCode(byte1, byte2):
     return (byte1 ^ byte2)  in [1<<i for i in range(7)]
+
 #方法2
-'''
-n =byte1 ^ byte2
-return n!=0 and n&(n-1)==0
+def grayCode2(byte1, byte2):
+    n =byte1 ^ byte2
+    return n!=0 and n&(n-1)==0
 '''
 
 
+'''
 '''
 # stringBuilder 不可变长度。 string可变长度。
 

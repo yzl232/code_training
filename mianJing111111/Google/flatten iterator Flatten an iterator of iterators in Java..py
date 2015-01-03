@@ -27,6 +27,22 @@ class FlatternIterator<T>{
 则如果一直next输出，则输出 1,2,3,4,5,6,7
 '''
 
+class FlatIterator:
+    def __init__(self, iters):
+        self.i = 0
+        self.iters = iters
+
+    def hasNext(self):
+        if self.i>=len(self.iters): return False
+        if self.iters[self.i].hasNext(): return True
+        self.i+=1
+        return self.hasNext()  #递归
+
+    def next(self):
+        return self.iters[self.i].next()
+
+
+
 
 '''
 给出一个二维vector，实现 flatten类
@@ -35,11 +51,18 @@ class flatten implements iterator{
   boolean hasNext();
   iterator next();
 '''
+
+#Program an iterator for a List which may include nodes or List  i.e.  * {0,
+# {1,2}, 3 ,{4,{5, 6}}} Iterator returns 0 - 1 - 2 - 3 - 4 - 5 - 6"
 #Flatten an iterator of iterators in Java. If the input is [ [1,2], [3,[4,5]], 6], it should return [1,2,3,4,5,6]. Implement hasNext()
 #
 # I am not comfortable wring Java right now.  Do you mind me writing normal python code ?  I feel the idea is the similar.
 
 #用stack肯定是面试官喜欢的做法。 这肯定是正确的。
+
+
+#下面这个实际上是iterator of list or just nodes .  并不是an iterator of iterators。
+#下面是linkedin的 deep     iterator
 class DeepIterator: #代码不长。可以背下
     def __init__(self, l):
         self.stack = [l]
@@ -69,38 +92,6 @@ while d.hasNext():
 
 
 
-'''
-'''
-
-class Iterator:
-    def __init__(self, arr):
-        self.arr = arr
-        self.p = -1
-
-    def hasNext(self):
-        return self.p>=len(self.arr)-1
-
-    def next(self):
-        self.p+=1
-        return self.arr[self.p]
-
-#这个应当不是面试官喜欢的解法。
-class myIterator(Iterator):
-    def __init__(self, iterat):
-        self.arr = self.flatten(iterat)
-        Iterator.__init__()
-
-    def flatten(self, iterat):
-        result = []
-        while iterat.hasNext():
-            i = iterat.next()
-            if isinstance(i, list):
-                result+=self.flatten(i)
-            else:  result.append(i)
-        return result
-
-
-'''
 
 class Solution:
     def flatten(self, arr):
@@ -111,5 +102,3 @@ class Solution:
         return result
 s = Solution()
 print s.flatten( [ [1,2], [3,[4,5]], 6])
-
-'''

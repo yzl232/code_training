@@ -8,6 +8,8 @@ class TreeNode:
 
 #注意是BST啊! 必须有parent。 没有parent根本没法更新parent
 
+# G家考过这道题目
+
 #都有parent  node
 '''
 作为基础。 就是从特殊情况考虑。然后递归。

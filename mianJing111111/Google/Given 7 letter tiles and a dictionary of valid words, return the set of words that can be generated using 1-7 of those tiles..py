@@ -54,3 +54,50 @@ class Solution:
         ret = []
         for w in words:  #每次使用的时候。prune出valid words
             if self.validW(w, charD): ret.append(w)
+
+'''
+出现好几次了
+
+given Set<String> set, List<Character> chars, return Set<String> which has longest be covered by the List<Character>
+           e.g. dgg cat naioe lot
+           1st case: dcnlggatio -> return [dgg,cat,lot]  #长度为3
+           2st case: dcnlggatioe -> return [naive]  #长度5
+           当时我想的是一个基本的线型算法，然后他开始follow up了；
+            但是他要的答案是对input进行预处理。
+           最后他提示说用tries来预处理，我依然没有想法。希望有人能详细解答一下。
+
+
+ 非常拽。。。 给一个dictionary, 一个string,找出dict 里能全部用
+string里的letter 表示的所有最长的词。给了算法，死活不满意，不让我写code. 估
+计被黑了。
+
+
+ 那就是先预处理每个字符出现了多少次，在trie上dfs扫描一边就行了吧，边dfs边判断下路径上的字符出现的次数够不够
+
+
+
+
+比如set里的单词是abc, abcg, abccx, abef, 然后那个串是abcdef，
+你的trie的形状的话，         a
+                                       |
+                                       b
+                                       |  \.
+                                       c    e
+                                       | \   |
+                                       c  g  f
+                                       |
+                                       x
+dfs的顺序是a->b>c(发现长度为3的)->c(c不够了)->g(没有g)->e->f(发现长度为4的）
+
+
+
+
+明白了，就是比一个个比较快在
+       减去了重复的比较。
+这样在Big O上似乎并没有实际的提高？
+我记得他当时follow up要求使得每次搜索一个新的string能做到在Big O上有提高
+
+也可能是我记错了，不是这个follow up要我提高Big O。.
+很好的办法，非常感谢
+
+'''

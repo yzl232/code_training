@@ -10,11 +10,12 @@ import random
 class Solution:
     def randK(self, arr, minV, maxV):
         arr.sort();  n=maxV-minV+1-len(arr)
-        x = random.randint(0, n)
-        print 'random', x
-        for jump in range(len(arr)):
-            if jump+x+minV<arr[jump]:   return jump+x+minV  #临界  jump+x  ==arr[jump]
-        return len(arr)+x+minV
+        x = random.randint(0, n-1)
+        x = minV+x  #多了这一步而已
+        for y in arr:
+            if y>x: return x
+            x+=1
+        return x
 #极端情况0, 1, 2 ,3
  #   def cntLessOrEqual(self, ):
 

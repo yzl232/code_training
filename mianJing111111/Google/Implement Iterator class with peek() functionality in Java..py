@@ -5,6 +5,8 @@
 那题在板上说过，一个iterator，有next和hasNext，现在要你加个wrapper，使得
 支持peek操作
 '''
+#非常高频的一道题目
+
 
 class IteratorPeek: #代码不长。可以背下
     def __init__(self, iterator):

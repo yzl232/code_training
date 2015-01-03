@@ -19,6 +19,10 @@ Output: 0 to 3 Or 1 to 4
 
 '''
 
+#G家考过这道题目
+
+
+
 '''
 Following is a solution that uses O(n) extra space and solves the problem in O(n) time complexity.
 Let input array be arr[] of size n and maxsize be the size of output subarray.
@@ -35,8 +39,7 @@ Let input array be arr[] of size n and maxsize be the size of output subarray.
 #subarray基本上都和cumulative sum 有关
 class Solution2:
     def findSub(self, arr):  #非常好的代码。    cumulative sum
-        for i in range(len(arr)):
-            if arr[i]==0: arr[i]=-1
+        arr = [1 if x==1 else -1  for x in arr]
         d = {0: -1}; s = 0;  ret = 0  #各种巧妙
         for i in range(len(arr)):
             s+=arr[i]
