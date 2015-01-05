@@ -40,6 +40,11 @@ The tree can be constructed recursively by first searching the current root, the
 
 
 '''
+
+#考虑一个n叉树，将所有node存在一个数组tree中，node编号从0到n(n为数组大小)
+#。 arr[i]表示第i个node的parent，请找出该树的深度(即最长的根到叶的路径长度)
+# G家考过
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -52,7 +57,7 @@ class TreeNode:
 #值表示parent的值。
 class Solution:
     def restore(self, arr): #与标准level order区别就是在arr找index。 以及每次在arr置None
-        i = arr.index(-1)
+        i = arr.index(-1)  #看看就好
         root = TreeNode(i)
         arr[i]=None
         pre = [root]

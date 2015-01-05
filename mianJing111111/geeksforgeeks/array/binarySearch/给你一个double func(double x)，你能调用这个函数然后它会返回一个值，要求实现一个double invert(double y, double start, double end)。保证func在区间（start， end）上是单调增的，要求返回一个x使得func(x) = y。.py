@@ -2,6 +2,8 @@
 '''
  给你一个double func(double x)，你能调用这个函数然后它会返回一个值，要求实现一个double invert(double y, double start, double end)。保证func在区间（start， end）上是单调增的，要求返回一个x使得func(x) = y。
 '''
+
+#facebook的题目
 class Solution:
     def func(self, x):
         pass

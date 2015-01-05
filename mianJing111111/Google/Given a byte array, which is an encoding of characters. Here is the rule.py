@@ -15,51 +15,27 @@ Otherwise it will be very trivial.
 
 
 
-Agree 这个算法。
-解释一下：
-从后向前，如果某一位是0了
-那么可以肯定，0后面的不会是2 bytes的第二位。
-因为后面都是1，也就是说，0后面的那位必然是2 bytes的第一位。
-这个问题就是数有多少个1，如果1是奇数，那么这个就是2bytes的第二位，
-否者1byte
-
-
-没问题.
-
 本题的关键就是从后往前看到第一个0开始的点是个断点.
 无论那个0开头自己解释自己还是跟它前面的那个走,(不可能跟后面走)
 
 都不影响0开头的后面的那个是个起始字节这个结论.
 所以就变成了奇偶问题了.
 
-
-
-bool IsLastOneByteChar(unsigned char * bytes, int len)
-{
-    int leadCount = 0;
-    len--;
-    bool lastByteIsLead = bytes[len] & 0x80;
-
-    while(len > 0)
-    {
-        if (bytes[len] & 0x80) leadCount++;
-        if (!(bytes[len] & 0x80)) break;
-    }
-
-    if (leadCount/2 == 0)
-    {
-        if (lastByteIsLead)
-            return true; //second byte of a 2-byte char
-        else
-            return false; //single byte char;
-    }
-    else
-    {
-        if (lastByteIsLead)
-            throw new Exception("invalid string");
-        else
-            return true; //second byte of a 2-byte char
-    }
-}
-
 '''
+#比如所有char都是1开头。 那么非常难以判断。
+#  01110
+#11110
+class Solution:
+    def firstBit(self):
+        pass
+
+    def odd(self, arr):
+        n = len(arr)
+        if self.firstBit(arr[-1])==1:  return 'two-byte'
+        start = 0
+        for i in range(n-2, -1, -1):
+            if self.firstBit(arr[i])==0:
+                start=i+1
+                break
+        if (n-start)%2==1: return '1 byte'
+        return '2-byte'

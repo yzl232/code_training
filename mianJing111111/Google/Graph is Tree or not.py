@@ -19,3 +19,36 @@ For each edge, we find the parent of both vertices.
 '''
 #每次都找root(没有ingoing edge 的node)。 多于一个node。不是.    然后BFS。 如果已经出现过了。 不是tree
 #If number of vertices is n and number of edges is not n-1, it can not be a tree.
+
+#和这道题目像。build_tree_from_array
+class Relation:
+    def __init__(self, parent, child):
+        self.parent = parent
+        self.child = child
+
+class Solution:  #可以用hashmap  build 简单的node: children属性。
+    def buildTree(self, relations):
+        d = {};  notRoot = set()
+        for rs in relations:
+            if d[rs[0]] not in d:  d[rs[0]] = []
+            d[rs[0]].append(rs[1])
+            notRoot.add(rs[1])
+        roots=[]    #找root
+        for k in d.keys():
+            if k not in notRoot:  roots.append(k)
+        if len(roots)!=1: return False
+        root = roots[0]
+        self.d = d
+        self.bfs(root)
+
+    def bfs(self, root):
+        pre, found = [root], set([root])   # 除了pre, cur之外，还用了第三个vals
+        while pre:
+            cur, vals = [], []     #必须用array。 因为是有序的。 并且不会有重复
+            for node in pre:
+                if node not in self.d: continue
+                for x in self.d[node]:
+                    if x in found: return False
+                    found.add(x);  cur.append(x)
+            pre = cur
+        return True

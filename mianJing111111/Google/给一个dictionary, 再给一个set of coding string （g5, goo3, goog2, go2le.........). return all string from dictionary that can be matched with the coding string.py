@@ -154,3 +154,13 @@ language
 依次可以缩写为 hello -> 4o or h4 world -> 2r2 would -> 2u2 lord -> l3 or 3d
 hell -> 3l or h3 language -> 8
 '''
+
+
+'''
+ 有一种压缩方式，把food->f2d, tea->t1a，这种，然后现在要搞一个dictionary，
+问你咋设计，还要实现判断isUnique方法. 我用了trie的变种，用level表示当中那个
+数字，应该有更好的方法
+
+
+Trie.  f2d=> f**d
+'''

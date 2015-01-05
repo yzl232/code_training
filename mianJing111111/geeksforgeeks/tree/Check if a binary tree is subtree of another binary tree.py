@@ -136,3 +136,9 @@ class Solution92:  #效率不高的做法  O(n2)
         return self.isSubTree(a.left, small) or self.isSubTree(a.right, small)
 
 #用递归来做，都是特殊case加上recursion
+
+
+#G家题目
+'''
+给一个二叉树，让找出所有相同的子树。
+'''
