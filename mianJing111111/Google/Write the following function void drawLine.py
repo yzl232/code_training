@@ -16,6 +16,8 @@ ByteArray is an extremely powerful Class that can be used for many things relate
 
 #比较难的。  byte array都比较难
 
+#看到几次了
+
 class Solution:
     def drawLine(self, byte, wid, r, x1, x2):
         startBit = (r-1)*wid+x1
@@ -29,3 +31,8 @@ class Solution:
         for i in range(y2):
             byte[x2] |=1<<i
 #考的是bit运算
+'''
+mitbbs
+在2D的screen上划线(x1, y) 到 (x2,y)，其中知道screen的宽W，高H。每
+个坐标(x, y)对应memory的一个bit，给定memory的初始地址，写代码实现。
+'''

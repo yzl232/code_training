@@ -7,6 +7,8 @@ Design and implement a hash table which uses chaining (linked lists) to handle c
 
 
 '''
+#G家考过好几次
+
 
 MAX_SIZE = 15
 

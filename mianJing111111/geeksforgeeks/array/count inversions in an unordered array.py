@@ -1,5 +1,5 @@
 # encoding=utf-8
-#G家有考
+#G家有考.  找逆序对数目
 '''
 
 Count Inversions in an array
@@ -50,7 +50,7 @@ class Solution6:
         result = []
         i=j=0
         while i<len(part1) and j<len(part2): #就增加了一行。
-            if part1[i]<=part2[j]:
+            if part1[i]<part2[j]:
                 result.append(part1[i])
                 self.cnt+=len(part2)-j   #第2个序列右边的都符合。       关键.
                 i+=1
@@ -71,3 +71,8 @@ class Solution6:
         self.cnt = 0
         self.mSort(arr)
         return self.cnt
+
+s = Solution()
+print s.incnt([2, 4, 1, 9])
+s = Solution6()
+print s.incnt([2, 4, 1,9])

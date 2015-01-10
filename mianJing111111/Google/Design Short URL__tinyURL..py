@@ -54,6 +54,8 @@ essentially we want to say that the shortened URL would contain a-z; A-Z and/or 
 //Check if URL exists in Table; if so fetch that id from DB and process; if not then insert URL in DB and process
 
 
+hash后，转换为62进制
+
 String APPLICABLE_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 	public String getShortURLFromID(int dbID){

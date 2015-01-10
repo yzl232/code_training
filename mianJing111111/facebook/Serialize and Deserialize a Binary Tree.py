@@ -8,6 +8,16 @@ Given a normal binary tree, write a function to serialize the tree into a string
 
 '''
 
+
+
+#. What if we need to store strings that can contain any characters (including the sentinel) in the binary tree? Could you come up with a solution to overcome this shortcoming?
+
+#可以依然用数字。
+# 另一个file存string。 数字代表行数。 （array）
+#Because a binary tree can be serialized with their unique keys(integer). And each key is can be mapped to a string in a file or memory.
+
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x

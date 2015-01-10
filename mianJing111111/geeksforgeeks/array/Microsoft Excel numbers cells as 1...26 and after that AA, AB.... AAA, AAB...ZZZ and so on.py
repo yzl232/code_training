@@ -13,7 +13,7 @@ class Solution:
     def toStr(self, n):
         out = ''
         while n>0:
-            d, n = (n-1)%26,  (n-1)/26
+            d, n = (n-1)%26,  (n-1)/26  #因为以1为base。  每次减去1
             out = out+chr(ord('A')+d) #因为我们总是先解决低位的。 所以最后取反
         return out[::-1]
 

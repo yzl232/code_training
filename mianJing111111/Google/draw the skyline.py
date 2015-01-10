@@ -17,8 +17,15 @@ rectangle(2, 5, 10)
 
 http://www.mitbbs.com/article_t/JobHunting/32809753.html
 '''
-class Solution:
-    def printSkyline(self, rects):
-        points = {}
-        pointsList = []
-        pass
+
+'''
+一个先将endpoint排序，另外用一个BST维护当前的最大高度，然后结束时就删除相应
+的节点，这个感觉很难想，代码简洁一点。
+
+
+碰到start point就放入。 碰到end  point就删除。  保持一个 binay search tree
+可以加上一个hashtable。
+
+用ordered dict。  可以的。
+
+'''

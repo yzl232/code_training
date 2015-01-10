@@ -5,7 +5,7 @@ How to find if a number is power of 4 in O(loglogn).
 '''
 
 #O(1)
-
+# G家考过几次。
 '''
 bool isPowerof4(int i) {
     return ((i & 0xAAAAAAAA) == 0 && (i&(i-1)) == 0);

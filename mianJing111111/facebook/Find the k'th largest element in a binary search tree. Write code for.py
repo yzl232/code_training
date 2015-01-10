@@ -14,9 +14,36 @@ Node * kth_largest(Node *root, unsigned int k);
 
 '''
 
+
+'''
+ Nth largest from tree. Given a binary search tree where the left node is
+smaller and the right node is larger. Calculate the Nth largest number in
+the tree throwing exception when there is less than N elements in the tree.
+'''
+
+
 #本题是google的高频题目
 
+# 用inorder  travsersal 比较简单。
 
+class Solution:
+    # @param root, a tree node
+    # @return a list of integers
+    def inorderTraversal(self, root, n):
+        self.cnt=n;  self.ret = None
+        self.dfs(root)
+        return self.ret
+
+    def dfs(self, root):
+        if not root or self.ret:       return  #已经找到了。 不用管了。
+        self.dfs(root.right)
+        self.cnt-=1
+        if self.cnt==0:   self.ret = root.val
+        self.dfs(root.left)
+
+
+'''
+#下面这个太复杂了。
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -34,6 +61,10 @@ class Solution:
         cnt-=1  #弄完一个右边子树。count -1  看root是不是。  #每次在root 加-就好。 root代表一个节点。
         if cnt==0: return root
         return self.dfs(root.left,  cnt)
+
+'''
+
+
 '''
 跟findlevel有点像。 设置flag.  if left,  return left
 '''
@@ -101,7 +132,7 @@ Now, suppose we are at node T:
 
 This is O(log N) on average (assuming a balanced tree).
 '''
-class Solution:
+class Solution7:
     def find(self, root, k): #BST.是平衡的。
         if not root or root.size<k: return
         if root.left:

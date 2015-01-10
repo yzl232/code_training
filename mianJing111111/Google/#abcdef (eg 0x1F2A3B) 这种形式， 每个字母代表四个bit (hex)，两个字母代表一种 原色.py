@@ -23,6 +23,9 @@ a < b时 x = a, a + 1
 
 
 '''
+#出现过几次
+
+
 #x=只能是a, a-1, a+1 三种
 
 '''
@@ -53,11 +56,37 @@ otherwise we should choose x = a.
 #结论如下。 注意是For RGB, ab is 16*a + b; xx is 16*x + x
 '''
 if a<b:
-   compare a,  a+1
+   compare x=a,  x=a+1
 elif a>b:
-    compare a, a-1
+    compare x=a, x=a-1
 else: return a
 
+#优先考虑高位。
+
+'''
 
 
+class Solution:
+    def solve(self, arr):
+        assert len(arr)%2==0
+        ret = arr[:]
+        for i in range(len(arr), 2):
+            a=arr[i]; b=arr[i+1]
+            t = min(  (self.cal(a, b, x), x) for x in [a-1, a, a+1]  )
+            ret[i]=ret[i+1]=t[1]
+
+    def cal(self, a, b,x ):
+        return abs(16*a+b-17*x)
+
+
+
+'''
+. 有某种颜色的表示为6位十六进制数组成的数，比如ABCDEF。两个颜色间的“距离”定义如下：
+ABCDEF 和 HIJKMN的距离为：
+-(AB-HI)^2 - (CD-JK)^2 - (EF-MN)^2
+
+那么，给定一个颜色A，比如123456，求离该颜色最近的颜色B，“最近”意思是两个颜色距离最接近零。
+B的形式必须为XXYYZZ，即12,34,56位要分别相等。
+
+比如，A = 123456，那么B = 113355。
 '''

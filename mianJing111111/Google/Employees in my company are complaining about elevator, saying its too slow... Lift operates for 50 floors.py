@@ -11,6 +11,35 @@ You can't get a new elevator as its too costly.
 Get 5 matrices you would collect and how would you use them.
 '''
 
+#设计elevator    youtube有视频。。。
+# who will use the elevators?  children, adults, old people.? disabled?
+# 状态 up, down,  loading, idle, on,   beep,...   可以是一个finite state machine
+# max flow.   average flow.
+#  多少层。  决定多少elevator
+# speed
+# passenger  exit, enter time
+#  max_passenger
+#  https://www.youtube.com/watch?v=fITuhLSwbt8
+
+'''
+class Elevator,
+    id   .
+   direction, state.    passengers. capacity . speed.
+
+class Passenger:
+        name, age.  destination.
+
+
+class Floor:
+       number,
+
+
+private elevator,  staff elevator,  passenger elevator ,
+
+'''
+
+
+
 
 '''
 Matrices gathered can be:

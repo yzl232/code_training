@@ -55,85 +55,18 @@ board[i][j] = 0 if cell at i,j is dead
 #Any dead cell with exactly three live neighbours becomes a live cell,
 #as if by reproduction.
 
-
-class Grid(object):
-
-    def __init__(self,size):
-        self.size=size
-        coordlist=[]
-        for count in range(size):
-            coordlist.append(0)
-        self.coordlist=[]
-        for count in range(size):
-            self.coordlist.append(coordlist[:])
-
-    def __str__(self):
-        retstringlist=[]
-        for row in self.coordlist:
-            for cell in row:
-                retstringlist.append("|" + str(cell))
-            retstringlist.append("\n")
-        return "".join(retstringlist)
-
-    def step_turn(self):
-        next_coordlist=[]
-        for count in range(self.size):
-            next_coordlist.append(0)
-        next_coordlist1=[]
-        for count in range(self.size):
-            next_coordlist1.append(next_coordlist[:])
-        for x in range(self.size):
-            for y in range(self.size):
-                next_coordlist2=self.calc_rules(x,y,next_coordlist1)
-        self.coordlist=next_coordlist2
-
-    def calc_rules(self,x,y,newcoords):
-        neighbours = self.calc_number_neighbours(x,y)
-        if neighbours < 2:
-            newcoords[x][y]=0
-        if neighbours == 2 and self.coordlist[x][y]==1:
-            newcoords[x][y]=1
-        if neighbours == 3:
-            newcoords[x][y]=1
-        if neighbours > 3:
-            newcoords[x][y]=0
-        return newcoords
-
-    def calc_number_neighbours(self,x,y):
-        neighbourcount=0
-        for a in range(3):
-            for b in range(3):
-                #print "a=" + str(a) + " b=" + str(b) + " coords checking: " + str(x+a-1) + " and " + str(y+b-1)
-                if not  (a==1 and b==1):
-                    checka=x+a-1
-                    checkb=y+b-1
-                    if checka==self.size:
-                        checka=0
-                    if checkb==self.size:
-                        checkb=0
-                    if self.coordlist[checka][checkb]==1:
-                        #print "found a neighbour at " + str(checka) + "and" + str(checkb)
-                        neighbourcount+=1
-        #print str(x) + "," + str(y) + ", " + str(neighbourcount)
-        return neighbourcount
-
-grid1 = Grid(10)
-grid1.coordlist[1][2]=1
-grid1.coordlist[2][2]=1
-grid1.coordlist[3][2]=1
-grid1.coordlist[3][1]=1
-grid1.coordlist[2][0]=1
-
-print grid1
-grid1.step_turn()
-print grid1
-grid1.step_turn()
-print grid1
-grid1.step_turn()
-print grid1
-grid1.step_turn()
-print grid1
-grid1.step_turn()
-print grid1
-grid1.step_turn()
-print grid1
+#质量很高的代码
+N_iter = 3
+m, n = 3,3
+trans = { (1, 2): 1, (1, 3): 1, (0, 3): 1, }#很赞
+pre = {(1, 0):1, (1,1):1, (1,2):1, (0, 0):1}
+for i in range(N_iter):
+    print "\nGeneration %3i:" % ( i, )
+    for r in range(m):
+        print "  ", ''.join(str(pre.get((r,col), 0)  ) for col in range(n))
+    cur = {}
+    for r in range(m):
+        for c in range(n):
+            t = sum(pre.get((x,y), 0)for x in range(r-1,r+2) for y in range(c-1, c+2) if x!=r or y!=c)
+            cur[(r,c)] = trans.get(( pre.get((r,c),  0),  t ) ,  0)
+    pre = cur

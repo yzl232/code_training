@@ -13,7 +13,50 @@
 ＊ ＃       ＃＊
 ＊＊ ＊＊＊＊
 '''
+#G家非常高频
+#有障碍BFS。  没障碍求x,y 的median就可以。
+#有障碍也可以用median+heap
+'''
+complexity k*n^2
 
+k次BFS。求和就是得出了总距离矩阵。  每次都是独立的。
+
+
+迷宫寻宝。一个grid表示的地图，上面有宝物，有障碍，要求找出图上一个点到所有宝物的总距离最短。
+
+
+
+有一个gym，用block表示。里面有健身器材，还有障碍物。让找一个最佳的位 置放置椅子，使得椅子到所有健身器材的曼哈顿距离最短
+'''
+
+#有障碍。 用BFS
+#简单版本在这里   matrix_guard_barrier_保安_障碍
+class Solution:
+    # @param board, a 9x9 2D array
+    # Capture all regions by modifying the input board in-place.
+    # Do not return any value.
+    def solve(self, board):
+        if board == []: return
+        m = len(board); n = len(board[0])
+        self.cnt = [[0 if board[i][j]=='0' else None for j in range(n)] for i in range(m)]
+        for i in range(m):
+            for j in range(n):
+                if board[i][j]=='G':  self.bfs(board.copy(), i, j)
+
+    def bfs(self, board, i, j):
+        m = len(board); n = len(board[0])
+        cntMatrix =  [[0 for j in range(n)] for i in range(m)]
+        cnt = 1
+        while pre:
+            cur = set([])
+            for i, j in pre:
+                for r, c in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
+                    if 0<=r<=m-1 and 0<=c<=n-1 and board[r][c]=='0':
+                        cur.add((r, c))
+                        board[r][c] = '#'
+                        cntMatrix[r][c] = min(cnt, cntMatrix[r][c])
+            cnt+=1
+            pre = cur
 
 '''
 find a intersection to build office so that the sum of all employees’
@@ -48,7 +91,19 @@ the
 '''
 
 #这里的距离采用曼哈顿距离——|x0-x1| + |y0-y1|
-#因为采用曼哈顿距离，所以可以分开考虑x坐标和y坐标。将k个点的x坐标排序，可以知道要求的x坐标一定在这k个点的x坐标上，扫描一遍并统计到各个点的x坐标距离和，找到使得距离和最小的x坐标。这一步只需要O(k)的时间复杂度，而不是O(k^2)，怎么优化这里不多赘述。对y坐标做同样的操作，从而得到答案。时间复杂度O(klogk)，排序的复杂度。
+#因为采用曼哈顿距离，所以可以分开考虑x坐标和y坐标。将k个点的x坐标排序，可以知道要求的x坐标一定在这k个点的x坐标上，
+
+#实际上是取x坐标的中位数。   需要排好序
+# 。对y坐标做同样的操作，从而得到答案。时间复杂度O(klogk)，排序的复杂度。
+# 基于qiuck select的方法找median可以吧
+'''
+On a given axis, the medium meeting place will
+yield the shortest combined distance because if you go either direction by 1
+from the medium, half of the people will travel 1 less block, and half plus
+one people will travel 1 more block (For even number of people, any point
+between the two middle will yield optimal result)
+'''
+
 
 
 #如果要求这个点与所给的k个点不重合，该怎么办？
@@ -61,4 +116,31 @@ the
 pass
 '''
 本题的最优算法较难想到。所以如果公司要求不高，答出O(nm)的方法即可。O(nm)的方法是因为假设我们知道在(x,y)这个位置的距离和为S，那么当(x,y)移动到(x+1,y)和(x,y+1)的时候，我们可以在O(1)的时间更新S。方法是预处理每一行上方/下方有多少个k个点中的点，每一列左侧/右侧有多少个k个点中的点。上面的解答基于nm>>klogk，如果k比较大，则还是O(nm)的方法更好。答题时需要答出对于给定参数不同情况下采用不用算法这一点。
+'''
+
+
+
+
+'''
+Meeting place. You have a city with streets running parallel both
+horizonally and vetically creating a giant grid. The dimension of each grid
+is 1 X 1. All street corners in the city can be represented by a coordinate
+(int x, int y). Given an array of people represented by their closest street
+corner, calculate a street corner to meet where their combined traveling
+distance is the shortest. Assume everyone can only travel on road. For
+example, the traveling distance from [1,1] to [2,2] is 2.
+
+
+G家超高频。
+
+4. Again, the key is to understanding how to minimize the combined distance
+travelled. First of all, since you have to travel on the grid, x and y axis
+are completely independent. On a given axis, the medium meeting place will
+yield the shortest combined distance because if you go either direction by 1
+from the medium, half of the people will travel 1 less block, and half plus
+one people will travel 1 more block (For even number of people, any point
+between the two middle will yield optimal result). In terms of
+implementation, I'm not aware of a way to calculate the medium that's better
+than O(N logN) which you can get by sorting (this is your opportunity to
+shire with your sorting knowledge).
 '''

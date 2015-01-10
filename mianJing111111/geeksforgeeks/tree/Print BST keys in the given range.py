@@ -4,10 +4,22 @@ Given two values k1 and k2 (where k1 < k2) and a root pointer to a Binary Search
 
 For example, if k1 = 10 and k2 = 22, then your function should print 12, 20 and 22.
 '''
-#可以看出是inorder
+#可以看出是inorder,  多了2个优化的条件
+
 class Solution:
     def dfs(self, root, k1, k2):
         if not root: return
         if k1<root.val:  self.dfs(root.left, k1, k2)  #左边界在左边， 有必要往左搜寻
         if k1<=root.val <= k2:  print root.val
         if k2>root.val:  self.dfs(root.right, k1, k2)
+
+
+
+'''
+class Solution:
+    def dfs(self, root, k1, k2):
+        if not root: return
+        self.dfs(root.left, k1, k2)  #左边界在左边， 有必要往左搜寻
+        if k1<=root.val <= k2:  print root.val
+        self.dfs(root.right, k1, k2)
+'''

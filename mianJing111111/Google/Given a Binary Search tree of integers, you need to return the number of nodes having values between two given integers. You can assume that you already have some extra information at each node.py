@@ -31,3 +31,4 @@ class Solution:
         return self.getLess(root, end+1)-self.solve(root, start)
 
 #比较巧妙。比较难。
+#因为是augmented data structure

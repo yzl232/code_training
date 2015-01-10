@@ -25,3 +25,15 @@ class Solution:
             ret = str(s)+ret if s<10 else chr(s-11+ord('a')) +ret   #稍微注意一下这一句, 换算成字母。
             i-=1; j-=1
         return ret
+'''
+G家题目。  改成任意进制
+'''
+# 1. convert(int num, int base) 将数字num转化成base进制的形式，convert(8,2) => 1000
+#无法应付超过36的。
+class Solution3:
+    def to18(self, n, base):
+        ret = ''
+        while n:
+            n, d = n/base, n%base     #背下这一句加上while就好。
+            ret = chr(d-11+ord('a'))+ ret if d>9 else str(d)+ret
+        return ret

@@ -5,6 +5,7 @@ http://openmymind.net/High-Concurrency-LRU-Caching/
 '''
 
 import threading
+mylock = threading.RLock()
 class ListNode:
     def __init__(self, key, val):
         self.val = val
@@ -36,7 +37,7 @@ class LRUCache:
         self.cache = LinkedList()
         self.d = {}
         self.capacity = capacity
-        self.mylock = threading.RLock()   #Allocate a lock
+        mylock = threading.RLock()   #Allocate a lock
 
     def _insert(self, key, val):
         node = ListNode(key, val)
@@ -44,22 +45,22 @@ class LRUCache:
         self.d[key] = node
 
     def get(self, key):
-        self.mylock.acquire()   #运行前放mylock.acquire()
+        mylock.acquire()   #运行前放mylock.acquire()
         if key in self.d:
             val = self.d[key].val
             self.cache.delete(self.d[key])
             self._insert(key, val)
-            self.mylock.release()  #运行后放mylock.release()
+            mylock.release()  #运行后放mylock.release()
             return val
-        self.mylock.release()#运行后放mylock.release()
+        mylock.release()#运行后放mylock.release()
         return -1
 
     def set(self, key, val):
-        self.mylock.acquire()   #运行前放mylock.acquire()
+        mylock.acquire()   #运行前放mylock.acquire()
         if key in self.d:
             self.cache.delete(self.d[key])
         elif len(self.d) == self.capacity:
             del self.d[self.cache.tail.key] #注意这 里的先后顺序。。。先DEL然后再removelast#######################
             self.cache.delete(self.cache.tail)
         self._insert(key, val)
-        self.mylock.release() #运行后放mylock.release()
+        mylock.release() #运行后放mylock.release()

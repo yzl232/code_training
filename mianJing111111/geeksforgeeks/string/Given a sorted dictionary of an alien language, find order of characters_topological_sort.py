@@ -31,6 +31,10 @@ The idea is to create a graph of characters and then find topological sorting of
 '''
 
 
+#G家考过这道题目。
+
+
+
 class Solution:
     def topolgical_sort(self, words):
         s = set(''.join(words))

@@ -28,7 +28,7 @@ class Solution:
                 for i, j in [(r+1, c), (r-1, c), (r, c+1), (r, c-1)]:
                     if 0<=i<=m-1 and 0<=j<=n-1 and matrix[i][j] in (1, 3):
                         self.preW[(i, j)].append((r, c))
-                        matrix[i][j] = -matrix[i][j]
+                        matrix[i][j] = -matrix[i][j] #用负号标记
             pre = cur
         if pre:    self.dfs([m-1, n-1], (m-1, n-1))
         return self.ret

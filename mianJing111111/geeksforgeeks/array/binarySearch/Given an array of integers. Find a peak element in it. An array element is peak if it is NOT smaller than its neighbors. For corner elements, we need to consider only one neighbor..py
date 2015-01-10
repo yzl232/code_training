@@ -39,7 +39,6 @@ class Solution:
 
 
 
-
 '''
 class Solution:
     def finPeak(self, arr):
@@ -57,7 +56,43 @@ class Solution:
 #下面是2D。 如果套用1D的。 可以做到O(nlogN)
 #. It's n+n/2+n/4+...<2n
 #O(n)  solution
+
+
 '''
+首先找出在中間行即中間列的最小值x，令y為x的鄰居中x小的元素。如果不存在y，那x即為所求。否則，在y所位於的象限遞迴搜尋區域極小值。因為每次遞迴都可以把問題縮小一半，時間複雜度為O(n)。
+'''
+
+'''
+The simplest fix is to find the smallest element among the middle row, middle column, and boundary before you "roll downhill".
+
+
+
+
+
+通过找到最小的。 然后判断在左半边还是右半边。
+通过最小的判断在上半还是下半
+
+Getting to 3n + 4log n is somewhat easy:
+
+Query all elements on the middle column. Find the minimum on this column, look at it's two horizontal neighbors recurse on the half of the matrix that contains the smaller of the two neighbors. Then do the same thing after querying the middle row. In n + 2 + n/2 + 2 steps, we've reduced the problem from an nxn size to an n/2xn/2 one. The total number of queries will be 3n + 4 log n.
+
+The intuition behind why this works came to me from the steepest descent algorithm that searches for a local minimum.
+
+At each point we keep the half of the problem that contains the minimum element we've seen so far. That element might be a local minimum, or one of it's neighbors may be smaller than it, but the path from it to a smaller element will always be in the half we've chosen because all the elements on the border are larger.
+
+'''
+
+
+
+#上面的解法是正确的。
+#下面的感觉都不大正确。。
+
+
+
+
+'''
+
+
 
     Let's assume that width of the array is bigger than height, otherwise we will split in another direction.
     Split the array into three parts: central column, left side and right side.
@@ -79,7 +114,6 @@ step #3 takes less than or equal to max_dimension iterations and max_dimension a
 
 
 n+n/2+n/4+... which is O(n)
-'''
 class Solution1:
     def  findPeak2D(self, matrix):
         self.helper(matrix)
@@ -124,3 +158,4 @@ class Solution1:
                 if matrix[i][j]<matrix[r][c]:
                     return False
         return True
+'''

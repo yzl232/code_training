@@ -15,6 +15,9 @@ geeks这道题目是level order的变体.   用BFS
 另外while的标准变成了head
 '''
 
+#和这道题目是兄弟   check whether a given binary tree is complete or not
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x

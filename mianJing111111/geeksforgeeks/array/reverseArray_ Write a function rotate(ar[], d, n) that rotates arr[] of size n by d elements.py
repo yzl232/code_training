@@ -1,4 +1,4 @@
-# encoding=utf-8
+ # encoding=utf-8
 '''
 比我上次写的代码好看多了。
 
@@ -30,7 +30,7 @@ Reverse A, we get ArB = [2, 1, 3, 4, 5, 6, 7]
 Reverse B, we get ArBr = [2, 1, 7, 6, 5, 4, 3]
 Reverse all, we get (ArBr)r = [3, 4, 5, 6, 7, 1, 2]
 '''
-
+#G家考过
 
 class Solution2:
     def reverse(self, start, end, arr):
