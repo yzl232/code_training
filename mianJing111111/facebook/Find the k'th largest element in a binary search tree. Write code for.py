@@ -142,3 +142,17 @@ class Solution7:
             else: return self.find(root.left, k)
         else:
             return self.find(root.right, k-1)
+
+    def dfs(self, root):  #更新size。  复制自更新sum  value那道。
+        if not root: return 0
+        root.size = 1
+        if root.left: root.size+=self.dfs(root.left)
+        if root.right: root.size +=self.dfs(root.right)
+        return root.size
+
+'''
+# G家题目
+
+刚开始我用global variable做的
+后来小哥说不用额外空间，然后这里卡住了。。最后他提示让用不断求子树size的方法做，然后写求子树size的地方也卡了一段时
+'''

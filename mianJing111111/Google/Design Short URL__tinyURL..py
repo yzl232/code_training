@@ -10,11 +10,15 @@ So, it is not compress the URL A, but build a URL mapping service.
 '''
 #G家超高频
 
+#/Users/zhenglinyu/dwhelper/Design_tiny_url_3_abstract_design.mp4
+
 
 #所以google的search suggest, //goo.gl/是一定要研究的
 
 #超高频。看到不下5次。
 
+#简单的说， shorten:  就是hashed url,  dbID 转换为62进制。
+#  redirection:  还原为10进制。
 
 #http://www.hiredintech.com/app#the-system-design-process
 

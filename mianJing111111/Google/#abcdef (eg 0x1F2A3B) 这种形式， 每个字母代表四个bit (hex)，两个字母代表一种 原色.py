@@ -74,6 +74,7 @@ class Solution:
             a=arr[i]; b=arr[i+1]
             t = min(  (self.cal(a, b, x), x) for x in [a-1, a, a+1]  )
             ret[i]=ret[i+1]=t[1]
+        return ret
 
     def cal(self, a, b,x ):
         return abs(16*a+b-17*x)

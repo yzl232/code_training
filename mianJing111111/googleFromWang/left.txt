@@ -1,0 +1,315 @@
+1. 给你一棵树，找出树中value连续的路径max 长度.
+2.给一个string，返回含有word 的list。word 的定义是空格(大于等于一个）之间的或者引号
+之间的，如果引号里面有空格要做为一个word 返回。比如string 是 I have a "faux coat"
+要返回[I, have, a, faux coat]
+3.题目是给一个n*m 的二维数组返回一个一维数组，这个数组包含之前数组的对角线的和。
+下面是例子：
+[1, 2, 3
+4, 5, 6
+7, 8, 9] 要返回 [7, 12, 15, 8, 3]
+4.给一个text file， 里面是按行分割的各种单词，让找到频率第k 大的那个单词。尽可能的优
+化。
+5．一段代码，用string 表示的，写一个函数，返回所有的注释里面的内容，返回//和/* */里
+的内容。
+6.给个n 乘n 矩阵，写set 和getSum (of a sub-matrix)。本来写这个也不难吧结果handling error
+的时候不太记得java 的try/catch 怎么写了（快一年没怎么用过java 了泪千行……然后问时
+间复杂度，然后说给我一个large memory 怎么能够让getSum 的时间复杂度变为O(1)。。。想
+不出来问了提示，然后他就提示了一句"the memory is really huge"我就有点懂了，先是说把
+所有sub-matrix 都存到memory 里头。然后问空间复杂度，我就当场一个一个把这个矩阵有
+多少个sub matrix 给手算出来了，然后听到面试官夸我your maths is impressive!!! 然后又问
+我如何在时间复杂度还是O(1)的情况下减少空间复杂度
+7.八乘八的棋盘，给我一个初始位置和目标位置，然后我只能走对角线（同一条对角线一直走
+算一步），让我写个算法求走多少步。。。然后我死也想不出来怎么算，最后他一解释，说最
+多只能有两步，两步都走不到就永远都走不到了。所以查一查到底走不走的到，再看看能不
+能一步走到，这题就搞掂了。
+8.假设有一个dictionary 和一个字符的set，找到从该字符集中能组成的存在于dictionary 中的
+最长的word。
+9.有个List<String>,里面有duplicates，比如[A,B,B,A,C].现在有另一个input 是一个int 存放
+minimal distance。
+要求return 的list 里让duplicate 之间的最小距离大于等于输入的minimal distance。
+example 是
+[A, B, B], 2 -> [B, A, B] (2 - 0 >= 2)
+[A, B, B], 1 -> (any permutation)
+[A, B, B], 3 -> (no solution; throw exception, return error code, etc)
+10.给一个2d grid，给p 个人的坐标，人只能横着走/竖着走。找出optimal meeting point（所有
+人走的路程总和最短），同样没让写code, 只说思路。 一开始除了暴力没啥想法，面试官很
+nice 地把问题简化成1d 的情况...然后跟着他一起分析了一下...最后感觉他还比较满意。。。
+11.本来想问BITMAP，的位运算，应该是怎么左右对调。
+12.Give you an array which has n integers, t has both positive and negative integers. Now you need
+sort this array in a special way. After that, the negative integers should in the front, and the positive
+integers should in the back. Also the relative position should not be changed.
+eg. -1 1 3 -2 2 ans: -1 -2 1 3 2.
+o(n)time complexity and o(1) space complexity is required.
+13.问给你millions of documents，如何sort 这些string。之前还问我map reduce 里sorting 是怎
+么实现的。我就说数据这么大，用外排序呗，分成一个block 一个block 的排序，然后in place
+合并。他问了又些细节，我虽然见过这个问题，但是没有想得那么深入，感觉他对有些细节
+问题的回答不太满意。
+他还问了一个问题，说如果输出的数据也要分块的话，你是如何进行分块操作的。我当时随
+口一说，可以对每个string 加一个data field 叫size，做成类似于prefix sum 的东西，不过这
+样肯定不够高效。
+他说嗯，这个可以吧，没让我多想。不过事后想了下，发现这个问题太简单了，之前自己还
+在project 中实现过对文本文件的partitioin。就是先等长划分，然后再调整划分点的位置即
+可，通过寻找类似于'\0'这样的字符就可以了。后悔死了，不过也怪他没给我时间多想，直
+接转到下个问题了
+14.一个M*N 的格子棋盘 每个格子里面有个字母 然后给你一个单词 你可以任意选择起点 每
+次可以上下左右移动 格子可以重复走 要计算在这种规则下 走过的格子恰好能拼出给定单
+词几次
+15.一个文件里是一条条短信<time_stamp,senderID, receiverID>记录，按time_stamp 排好序了。
+a) 给一个senderID 找出所有他发的短信
+b) 如果A 给B 发了短信（A->B）那么B 是A 的1 degree friend，如果B->C，那么C 是A 的
+2 degree，给一个N 返回所有小于等于degree 的friend
+c) 给上面那个写testcase
+16.Given an String, add an empty space to the String such that the word before the empty space and after the empty space is valid word. ie: i/o "goodmorning" output: "good morning"
+Given an String, add empty space between every valid word in the String (We have dictionary input to show valid word). ie: i/o "goodafternoon", output "good after noon"
+17.remove duplicate lines of a file(what if the file is very large which could not be held in the main memory)
+18.how many (m, n) pairs such that m*m+n*n<N
+19.判断一个点是否在一个凸多边形内, O(n), O(logn)
+20.group items(BFS)
+21.MapReduce(filter a collection of documents, the words which occur more than 5000 times)
+22.要求是算出一个浮点数组去掉最大数和最小数的平均值。在和面试官的交流中我回想了浮点
+数的表示方法，还讨论了如何处理数组中的无穷大，溢出以及如果最大（小）数本身就是无
+穷大的情况应该输出的结果等等，最后随口一提的long double 也被面试官指出某些编译器
+可能不支持，可以说对体系知识的综合考察。
+23.内容是给定一个单词的缩写，格式是“前缀+中间字母个数+后缀”，然后确定这种缩写能否
+唯一的表示一本字典里的某个单词，最后得到一个所有能一一对应的这种缩写的集合。我首
+先想到了用哈希表来统计一种缩写可以表示的单词个数，但是对接下来面试官提出的更复杂
+的情况（比如将一个单词分成两段，每段用以上格式表示缩写）
+24.插入整数，然后计算最近五个数的平均数。然后问了一下如果是web application 这个需要注
+意什么？想想办法提高performance，还有提高存储效率，还扯了一些其他网络的知识。
+25.n 台机器做web crawler，如何保证每个网页只被download 一次，就是n 台机器里面只
+能有一个机器访问某网页一次。要求系统效率高，communication 负荷小。
+26.1 million urls from last hour are stored in
+the file, find the top K url in terms of the frequency. minute 怎么办？
+http://stackoverflow.com/questions/17928158/find-top-10-most-frequent-visited-url-data-isstored-
+accross-network
+27.有一个robot 有可能前移或者后移,maybeMoveForward 会返回一个false ,true,然后写一个
+mustMoveForward 然后implement 一下dynamic array
+28.在一个single circular sorted linked list 里面添加新的数，开始只记得检查比tail 大的情况，忘
+了检查比head 小的情况，被提醒了一下补上。
+29.写了个String 的基本操作。问如果append()的操作要extend array 的话复杂度很大。改进...
+30.设计一个ascii 和utf-8 hybrid 的编码方式，open ended。发挥的不是很好，dig 的比较深的情
+况就有点跟不上了。
+31.最小窗口问题Given an input array of integers of size n, and a query array of integers of size k,
+find the smallest window of input array that contains all the elements of query array and also in
+the same order.
+32.找丑数:包含一个或多个{2,3,5}因子的叫丑数，比如2，4，5，15 都是，17 不是.找出第n 个
+丑数。
+33.Find the sole number in triple number array: You are given an array that contains integers. The
+integers content is such that every integer occurs 3 times in that array leaving one integer that
+appears only once
+Fastest way to find that single integer
+-- not using any external memory (except a few trivial variables).
+eg: [2,1,4,5,1,4,2,2,4,1]
+34.Paint houses in the cheapest way
+There are a row of houses, each house can be painted with three colors red, blue and green. The
+cost of painting each house with a certain color is different.
+You have to paint all the houses such that no two adjacent houses have the same color. You have
+to paint the houses with minimum cost. How would you do it?
+Note: Painting house-1 with red costs different from painting house-2 with red. The costs are
+different for each house and each color.
+35.find reverse pair in two arrays
+There are two arrays A1 and A2. Find out the pairs of numbers in A2 which were in reverse order
+in A1. For ex.
+A1 = 2 6 5 8 1 3 A2 = 1 2 3 4 5 6 Answer: 1 & 2 5 & 6
+36.Fill tank
+you are given following:
+1. An empty tank
+2. Unlimited source of water.
+3. Some container of certain measurements and a container of 1 litre is always given.
+Your job is to fill the tank from source of water using the containers in minimum number of steps.
+You cant fill the container with a small amount of water than its size (filling partially is not allowed).
+Find the number of steps and print the solution.
+e.g.
+Tank Size: 80 litre
+Containers: 1,3,5,6,25 litre
+Solution:
+4
+5,25,25,25
+Tank Size: 71 litre
+Containers: 1,3,5,6,25 litre
+Solution:
+6
+3,6,6,6,25,25
+37. find the largest possible number combination
+Given an array of elements find the largest possible number that can
+be formed by using the elements of the array.
+eg: 10 9
+ans: 910
+2 3 5 78
+ans: 78532
+100 9
+ans: 9100
+38. 马戏团人塔问题
+A circus is designing a tower routine consisting of people standing atop one another’s
+shoulders. For practical and aesthetic reasons, each person must be both shorter and lighter than
+the person below him or her. Given the heights and weights of each person in the circus, write a
+method to compute the largest possible number of people
+in such a tower.
+EXAMPLE:
+Input (ht, wt): (65, 100) (70, 150) (56, 90) (75, 190) (60, 95) (68, 110)
+Output: The longest tower is length 6 and includes from top to bottom: (56, 90) (60,95) (65,100)
+(68,110) (70,150) (75,190)
+39. 求1 到n 个数中，1 出现的个数
+比如当n 为5 时，1，2，3，4，5，1 出现的次数为1
+n 为15 时，1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+1 出现的次数为7 次
+40. Write a program to return the longest repeating substring in a string.
+Write a program to return the longest repeating substring in a string.
+eg. for "ababab", "abab" is the longest repeating substring.
+41. Find the best meeting point
+there is a town which is a square grid.. every point can be reached from any other point..
+there are N people in the grid.. find a common meeting
+ground for them such that the total distance traveled by those 10 people are the least..
+补充:
+就是一个尔维矩阵, 各个点只能横着走和竖着走. meeting place 指一个单元block,对应于二
+位数组的一个坐标
+42. Write a function to reverse digits of an integer
+Write a function to reverse digits of an integer. E.g. 123 --> 321, -890 --> -98
+43. Re-order data packets
+应用程序的re-order 的buffer 的设计,如果满了可以丢弃
+大概是应用程序需要in order 的数据包，但是收到的数据可能是乱序的
+（类似于IP 分片，每一个数据片有一个序列号，但是不同的数据片
+到达应用程序的顺序可能和发送的顺序不一样，引起乱序, 但是不会太夸张的乱序, 第一个
+数据包不会跑到第一万个以后）。如何设计算法通过这个buffer
+把数据片变成有序。
+44. 找出单词排序规律
+给你一组排好序的单词,最大程度的推导出排序规律
+比如:bc bb ac ab ax xs => c > b > a > x
+45. 随机生成圆中的点
+Given a perfect random generator Random(n) which can generate number between
+[0,1], write a program to generate a random pair of (x, y) within a circle
+of radius 1, and with (0,0) center with uniform distribution inside the
+circle. What is the expect probability of values fall into the circle?
+46.calculate volume
+Given a non-negative integer array representing an elevation map whereas
+the width of each bar is 1, compute how much water it can contain after
+raining. For example, given [0,1,0,2,1,0,1,3,2,1,2,1], returns 6. What is
+the complexity of your solution?
+47. 位逆序
+给你一个32 位的number,把它按位逆序 ： 1101001 ==> 1001011
+48. Find node in skip list
+给你一个skip list 的图，design skip list 的structure 并写出skip list 的查找算法
+图：http://en.wikipedia.org/wiki/Skip_list
+49. 实现 int anysize_reader(char *buf, int size)
+有个封装好的函数 int block_reader(char *buf)
+内部有个静态文件指针，只能向文件末尾移动，不能rewind
+每次只能读取4K 的block 到buf 里，返回读取的字节数（除非到文件尾，否则总是4K）
+要求实现 int anysize_reader(char *buf, int size)
+从文件的当前位置读取任意大小的数据存入buf，并返回实际读到的数据字节数
+50. 找相同的文件
+有一堆文件, 把它们分组,就是说内容完全相同的文件归类到一组
+G51. Find whether a word is composed by two words
+I had interview at Google.It was goog experince
+If there is dictionary of words and you want to add new word into that
+dictionary and u have to find whether that new word is combination of
+two words which are already in dictionary
+e.g you want to add newspaper then there are words news and paper
+in dictionary you have find it with minimum compexity. I answered trie
+structure but stucked with complexity then hash but he didn't satisfied
+52. Random Shuffle
+实现Random Shuffle 的功能，就是说给你一个随机数发生器把一个数组里的元素乱序。有几
+种方法说几种方法。
+53. 计算二进制1 的个数
+给100 万个数(32 位整型)，设计一个方案来计算着100 万个数含二进制1 的个数，综合时间
+和空间复杂度的考量
+int Methods(int m, int n)
+54. 计算a[0]*a[1]*...*a[n-1]/a[i]
+Given an array a[n], build another array b[n], b[i] = a[0]*a[1]*...*a[n-1]/a[i]
+no division can be used, O(n) time complexity
+Google : 关于函数调用的loop 的一个问题
+Q: Given a function that takes in an integer input and gives out an integer:
+int func(int input);
+This function is deterministic. It always gives the same output value for a given input. Say func(8)
+= 7 whenever it is called.
+Now this function is called multiple times in a loop. This would generate a stream of integers, what
+is the length of this loop ? give me the count of how many numbers are repeated and how many
+numbers are not repeated. He said there is very limited memory: you can store only a certain
+number of integers at a time, but not all of them.
+就是说有一个函数 int func(int input), 给一个输入值，返回一个输出，新的输出会成为下一
+个的输入。在函数的调用过程中总会进入一个loop，判断对于一个给定的输入值，这样循环
+调用产生的loop 的长度
+55. Make a 5 number generator from a 3 number generator
+given a 3 number discrete random number generator {1,2,3} , how can you design a 5 number
+random generator ? What is the average number of trials necessary?
+56. 记电话号码
+You are given a String number containing the digits of a phone number (the number of digits, n,
+can be any positive integer) . To help you memorize the number, you want to divide it into groups
+of contiguous digits. Each group must contain exactly 2 or 3 digits. There are three kinds of groups:
+? Excellent: A group that contains only the same digits. For example, 000 or 77.
+? Good: A group of 3 digits, 2 of which are the same. For example, 030, 229 or 166.
+? Usual: A group in which all the digits are distinct. For example, 123 or 90.
+The quality of a group assignment is defined as
+2 × (number of excellent groups) + (number of good groups)
+Divide the number into groups such that the quality is maximized. Design an efficient
+algorithm to return the solution that maximizes the quality.
+57. 搜索提示功能实现
+这个问题我见过Google 问了好几次了：
+就是像Google 和百度那种搜索关键字输入的框框，你输入一半字符串它会在下拉列表里按
+搜索频率高低显示关键词。比如你输入"hel",下拉框显示"hello","hell","hellokitty", "hellokitty
+藏尸案"....设计一个系统，实现这个提示功能
+58. find the number of ways the students could be ranked
+Given N students, find the number of ways the students could be ranked
+59. 句子分割
+给你一个没有间隔的字符串“thisisasentence”，如何将他分割成如下的句子：“this is a
+sentence”。
+提供一个函数用来检验一个字符串是不是单词：bool dic(const char* beg, const char* end)；
+完成下列的函数。要求效率尽可能快。bool Detect(char* str)
+60. Design a class to get average area of sub rectangle in O(1)
+Design a class to process a matrix, and it needs to be able to return the average
+for the elements of arbitrary sub-rectangle inside that matrix, in constant time.
+61. Inplace rotate picture
+Given an image represented by an NxN matrix, where each
+pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in
+place?
+62. 打印机排版算法
+Consider the problem of neatly printing a paragraph on a printer. The input ext is a sequence of n
+words of lengths l1, l2, . . . , ln, measured in haracters. We want to print this paragraph neatly on a
+number of lines that old a maximum of M characters each. Our criterion of “neatness” is as
+follows. If a given line contains words i through j, where i ≤ j , and we eave exactly one space
+between words, the number of extra space characters t the end of the line is M ? j +i ? Sum(lk)(from
+k = i to j) , which must e nonnegative so that the words fit on the line. We wish to minimize the
+sum, over all lines except the last, of the cubes of the numbers of extra pace characters at the ends
+of lines. Give a dynamic-programming algorithm o print a paragraph of n words neatly on a printer.
+Analyze the running ime and space requirements of your algorithm
+Google : Eliminate duplicated bit arrays
+Given a binary matrix of N X N of integers ,
+you need to return only unique rows of binary arrays
+eg:
+0 1 0 0 1
+1 0 1 1 0
+0 1 0 0 1
+1 1 1 0 0
+1 1 1 0 1
+ans:
+0 1 0 0 1
+1 0 1 1 0
+1 1 1 0 0
+63. Find intersected circles
+Given an array A of N integers we draw N discs in a 2D plane, such that i-th disc has center in (0,i)
+and a radius A[i]. We say that k-th disc and j-th disc intersect, if $k\not =j$ and k-th and j-th discs
+have at least one common point.
+Write a function
+class Solution { public int number_of_disc_intersections(int[] A); }which given an array A describing
+N discs as explained above, returns the number of pairs of intersecting discs. For example, given
+N=6 and begin{displaymath}A[0]=1 A[1]=5 A[2]=2 A[3]=1 A[4]=4 A[5]=0\end{displaymath}
+there are 11 pairs of intersecting discs:
+0th and 1st
+0th and 2nd
+0th and 4th
+1st and 2nd
+1st and 3rd
+1st and 4th
+1st and 5th
+2nd and 3rd
+2nd and 4th
+3rd and 4th
+4th and 5th
+so the function should return 11.
+The function should return -1 if the number of intersecting pairs exceeds 10,000,000.
+The function may assume that N does not exceed 10,000,000.
+64. Find Fibonacci combinations
+If the Fibonacci series is 1,2,3,5,8,13,….. then 10 can be written as 8 + 2 ==> 10010
+and 17 can be written as 13 + 3 + 1 ==> 100101. Got it?? The Question was, given n,
+I need to get all possible representations of n in
+Fibonacci Binary Number System. as 10 = 8 + 2 ==> 10010 also 10 = 5 + 3 + 2 ==> 1110
+类似coin change problem, 不同的是每种面额你只能用一次 :)

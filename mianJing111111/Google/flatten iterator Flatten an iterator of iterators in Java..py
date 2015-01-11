@@ -26,6 +26,25 @@ class FlatternIterator<T>{
 }
 则如果一直next输出，则输出 1,2,3,4,5,6,7
 '''
+from collections import  deque
+class FlatIterator:
+    def __init__(self, iters):
+        self.q= deque(iters)
+
+    def hasNext(self):
+        while self.q:
+            if self.q[0].hasNext(): return True
+            self.q.popleft()
+        return False
+
+    def next(self):
+        return self.q[0].next()
+
+
+#用queue也可以做。
+
+
+
 
 class FlatIterator:
     def __init__(self, iters):

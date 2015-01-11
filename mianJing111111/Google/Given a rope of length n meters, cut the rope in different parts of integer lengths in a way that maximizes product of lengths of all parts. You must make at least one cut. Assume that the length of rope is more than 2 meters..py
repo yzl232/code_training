@@ -30,3 +30,17 @@ maxProd(n) = max(i*(n-i), maxProdRec(n-i)*i) for all i in {1, 2, 3 .. n}
 2) Overlapping Subproblems
 Following is simple recursive C++ implementation of the problem. The implementation simply follows the recursive structure mentioned above.
 '''
+
+#http://www.geeksforgeeks.org/dynamic-programming-set-36-cut-a-rope-to-maximize-product/
+
+
+# maxProd(n) = max(i*(n-i), maxProdRec(n-i)*i) for all i in {1, 2, 3 .. n}
+
+#和之前这道题目有一点点像
+#Given a rod of length n inches and an array of prices that contains prices of all pieces of size smaller than n
+class Solution:
+    def curRod(self, n):
+        dp = [1 for i in range(n+1)]
+        for i in range(1, n+1):
+            dp[i] =max (  max(j*dp[i-j], (i-j)*j)   for j in range(1, i/2+1))  #j代表size
+        return dp[-1]

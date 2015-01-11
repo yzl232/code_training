@@ -57,6 +57,8 @@ Algorithmic Paradigm: Dynamic Programming
 和leetcode不同在于这个是正方形。
 还是leetcode更加通用一些
 
+
+
 '''
 class Solution:
     def printMaxSubSquare(self, matrix):

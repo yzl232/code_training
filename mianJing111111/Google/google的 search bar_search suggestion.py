@@ -10,4 +10,6 @@ cat,
 应的
           search的结果， 这样会快一点。
 
+
+没记错的话这中搜索引擎的auto completion都是用的trie+hashtable+TOP K算法办到的$
 '''

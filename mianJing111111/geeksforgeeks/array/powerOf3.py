@@ -10,6 +10,9 @@ while (n % 3 == 0) {
 }
 return n == 1;
 
+How large is your input? With O(log(N)) memory you can do faster, O(log(log(N)). Precompute the powers of 3 and then do a binary search on the precomputed values.
+
+
 
 网上搜了下，一个思路是把这个数的每一位想加用和除以3，再将得数相加，继续除3，直到得数为1，如果在这个过程中没有余数，也就是说可以一直都除尽那么这个数就是3的幂。
 

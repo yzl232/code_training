@@ -5,7 +5,35 @@ You need to find the inorder successor and predecessor of a given key. In case t
 无所谓哪种traversal都可以做。
 '''
 
+#其实有类似于binary search的方法。  是iterative的
 #O(logN)实际上就可以做.  找一个，可以logN。类似binary search
+class Solution:
+    def successor(self, root, target):   # binary search 的思想.  binary search val
+        ret = None
+        while root:
+            if root.val>target:
+                ret = root.val
+                root=root.left
+            else:  root=root.right
+        return ret
+
+    def predessor(self, root, target):
+        ret = None
+        while root:
+            if root.val>target:  root=root.left
+            else:
+                ret = root.val
+                root=root.right
+        return ret
+
+
+
+
+
+
+
+
+'''
 class Solution:
     def findPreSuc(self, root, val):
         self.suc =self.prev =  None
@@ -31,7 +59,8 @@ class Solution:
             self.prev = root
             self.dfs(root.right)
 #基本上就是binary search
-'''
+
+
 def bs(arr, x):
     l=0; h=len(arr)-1
     while l<=h:
