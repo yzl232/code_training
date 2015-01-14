@@ -16,6 +16,7 @@ would return: A AA APE PEA PARE PEAR SPARE APPEARS
 # For example, given the dictionary {hello, world, is, my, first, program},
 
 
+# trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
 '''
 考过好几次。  也是简化版
 
@@ -100,4 +101,17 @@ dfs的顺序是a->b>c(发现长度为3的)->c(c不够了)->g(没有g)->e->f(发�
 也可能是我记错了，不是这个follow up要我提高Big O。.
 很好的办法，非常感谢
 
+'''
+
+
+
+'''
+ 猜词游戏
+ 有个字典hashset存着备用词
+ 有一堆备用字母，存在List里[aaabcdkl]
+ 要猜的词的长度是n（不是很长）
+ 每个备用字母最多用一次
+ （备用字母出现了三个a可以至多用三次a）
+ 输出所有的可能词
+ 字典非常大，可用的字母不是很多（好像最多20个）
 '''

@@ -33,6 +33,46 @@ class Solution:
 
 
 
+#  logN的解法
+class Solution:
+    # @param n, an integer
+    # @return an integer
+    def climbStairs(self, n):
+        a,b,x,y = 1,1,1,0
+        while n>0:
+            if n&1: x, y = a*x + b*y, b*x + y*(a-b)
+            a,b = a*a + b*b, 2*a*b - b*b
+            n/=2
+        return x
+
+'''
+class Solution:
+    # @param n, an integer
+    # @return an integer
+    def climbStairs(self, n):
+        a, b = 1, 1
+        for i in range(n):
+            a, b = b, a + b
+        return a
+'''
+
+#有个logN的解法  Fibonacci
+
+
+
+'''
+power()
+[x, y]
+
+
+[a, b]
+[b, a-b]
+
+平方。
+[a*a+b*b, a*b+b(a-b)  ]
+[  ]
+'''
+
 '''
 logN 解法。  利用了leetcode的求power部分
 
@@ -46,9 +86,9 @@ logN 解法。  利用了leetcode的求power部分
 所以不会矩阵乘法，可以简单的两行相加
 
 [Fn+1, Fn]
-[Fn, Fn-1]
+[Fn, Fn+1-Fn]
 
-'''
+
 
 class Solution2:
     def fib(self, n):
@@ -75,7 +115,7 @@ class Solution2:
         z =  f[1][0]*m[0][0] + f[1][1]*m[1][0]
         w = f[1][0]*m[0][1] +f[1][1]*m[1][1]
         return [[x, y], [z, w]]
-'''
+
 Time Complexity: O(Logn)
 Extra Space: O(Logn) if we consider the function call stack size, otherwise O(1).
 '''

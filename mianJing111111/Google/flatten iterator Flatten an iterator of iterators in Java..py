@@ -45,8 +45,8 @@ class FlatIterator:
 
 
 
-
-class FlatIterator:
+# 比较精妙。
+class FlatIterator5:
     def __init__(self, iters):
         self.i = 0
         self.iters = iters
@@ -58,6 +58,7 @@ class FlatIterator:
         return self.hasNext()  #递归
 
     def next(self):
+        if not self.hasNext(): raise ValueError()
         return self.iters[self.i].next()
 
 

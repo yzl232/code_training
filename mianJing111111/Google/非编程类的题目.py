@@ -148,3 +148,15 @@ D A R W I N
 Hence D+A+R+W+I+N = 1+0+3+4+7+8 =23
 
 '''
+
+
+
+'''
+3. search BST的worst case， 原因
+    答： O(n), BST不balanced
+4. 怎么改善
+    答： reconstruct BFS。
+我问小哥，你会怎么做？
+答： 你的方法可以，或者AVL tree。
+
+'''

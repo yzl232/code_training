@@ -7,6 +7,15 @@ Trapping Rain Water
 
 '''
 
+
+'''
+Trapping Rain Water
+
+面试中见到lc 原题并不奇怪，而面试官在原题基础上给你一个此题的follow up也并不新鲜， 这个题的一个follow up是若某一个bar的高度是0， 代表这个bar漏水， 不能存水， 那你的代码该如何改动去计算储水量？
+面试官只是想吓唬你，看你应变能力，根本就是同一个题。 在计算left 和right 时，判断一下 A是否为0， 若为0， 也为0 便是...
+
+'''
+
 class Solution:
     # @param A, a list of integers
     # @return an integer

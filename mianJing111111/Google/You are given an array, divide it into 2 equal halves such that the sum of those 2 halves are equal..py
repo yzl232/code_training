@@ -32,3 +32,8 @@ class Solution:
                 inc.append(arr[j-1])
                 j-=1; i-=arr[j-1]
         return exc, inc
+
+'''
+给一个int[] array, e.g {1,5,0,6}和一个int target，e.g. target = 21;
+问是否存在某种分法把array分成几部分，每部分看成一个int，这几部分加起来等于target。e.g. {1,5}{0}{6},三部分加起来是21。{1,5}{0,6}也是21。target=25则false
+'''

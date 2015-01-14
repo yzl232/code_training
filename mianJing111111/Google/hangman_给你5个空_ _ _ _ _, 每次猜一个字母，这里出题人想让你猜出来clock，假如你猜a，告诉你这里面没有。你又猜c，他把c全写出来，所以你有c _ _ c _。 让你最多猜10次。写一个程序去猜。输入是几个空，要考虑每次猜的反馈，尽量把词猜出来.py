@@ -26,9 +26,11 @@ class Game:
             d[ch].append(i)
         return d
 
-    def play(self, n=10):
+    def play(self, n=5):
         while True:
-            if n==0: print "you lose the game"
+            if n==0:
+                print "you lose the game"
+                break
             x = raw_input(''.join(self.cur)+"\n")
             if x in self.d:
                 for i in self.d[x]:
@@ -37,6 +39,7 @@ class Game:
                 print ''.join(self.word)
                 print "you win the game"
                 break
+            n-=1
 
 s = Game("banana")
 s.play()

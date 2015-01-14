@@ -15,7 +15,7 @@
 '''
 #G家非常高频
 #有障碍BFS。  没障碍求x,y 的median就可以。
-#有障碍也可以用median+heap
+#有障碍也可以用  median+heap
 '''
 complexity k*n^2
 
@@ -27,7 +27,17 @@ k次BFS。求和就是得出了总距离矩阵。  每次都是独立的。
 
 
 有一个gym，用block表示。里面有健身器材，还有障碍物。让找一个最佳的位 置放置椅子，使得椅子到所有健身器材的曼哈顿距离最短
+
+    xxxx
+  *x    x *
+    xxxx
+对于这个例子。  还是bfs最好吧~~
+
 '''
+
+
+
+
 
 #有障碍。 用BFS
 #简单版本在这里   matrix_guard_barrier_保安_障碍

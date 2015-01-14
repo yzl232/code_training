@@ -18,6 +18,9 @@ The problem is very similar to our old post Segregate 0s and 1s in an array, and
 
 和segregate 0 1的题目几乎一样
 '''
+
+#G家考过此题
+
 class Solution:
     def segregate0and1(self, arr):
         l=0; r = len(arr)-1

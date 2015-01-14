@@ -1,6 +1,6 @@
 # encoding=utf-8
 '''
-
+# G家题目。    有考变体
     A long array A[] is given to you. There is a sliding window of size w which is moving from the very left of the array to the very right. You can only see the w numbers in the window. Each time the sliding window moves rightwards by one position. Following is an example:
     The array is [1 3 -1 -3 5 3 6 7], and w is 3.
 
@@ -50,3 +50,24 @@ class Solution:
         return ret
 s = Solution()
 print s.find([1, 2, 3, 1, 24, 5, 2, 3, 6], 3)
+
+
+
+
+
+
+#  给一个list和k（number）。找一个区域k，使得这个区域里k的最大值和最小值的差值最大，返回这个值。用heap或priority queue做dp
+
+# G家题目。
+import collections as c
+class Solution:
+    def find(self, arr, k):  #比较难。 8行。 背下
+        q1 = c.deque(maxlen=k); q2=c.deque(maxlen=k)  #必须限制k
+        a = max(arr[:k]); ret=0
+        q1.append(a); q2.append(a)
+        for i in range(k, len(arr)):  #结果有n-k+1个
+            while q1 and arr[i]>=q1[0]:  q1.popleft()   #remove all that 比现在的小的,, 也就是没必要存的元素   #关键一步
+            while q2 and arr[i]<=q2[0]:  q2.popleft()
+            q1.append(arr[i]); q2.append(arr[i])
+            ret = max(q1[0]-q2[0], ret)
+        return ret

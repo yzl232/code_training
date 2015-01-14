@@ -12,4 +12,7 @@ cat,
 
 
 没记错的话这中搜索引擎的auto completion都是用的trie+hashtable+TOP K算法办到的$
+
+每个词用hashtable存频率。
+用trie拿出所有符合的prefix,  以及频率， 然后存到heap
 '''
