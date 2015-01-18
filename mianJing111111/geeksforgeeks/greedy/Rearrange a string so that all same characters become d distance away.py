@@ -52,3 +52,8 @@ class Solution:
 
 s = Solution()
 print s.rearrange("geeksforgeeks", 3)
+
+
+'''
+Time complexity of above implementation is O(n + mLog(MAX)). Here n is the length of str, m is count of distinct characters in str[] and MAX is maximum possible different characters.
+'''

@@ -19,14 +19,14 @@ The question is then: given a number, you need to return if it is in any bucket 
  in the m-th bucket, there are m element and in the (m+1)-th bucket, there are r elements where 1<=r<=m+1. So we have m(m+1)/2 + r = n. In O notation, we have m = O(sqrt(n)).
 
 
-
-基本上就是binary search .     O( sqrt(N) +  logN)  = O( sqrt(N) ).   slightly better than brute force O(n)
+m*(m+1)/2 = N
+基本上就是binary search .     O( m +  log(m))  = O( sqrt(N) ).   slightly better than brute force O(m2)
 '''
 class Solution: #还是挺巧妙的。
     def find(self,arr, x):
         l=0; h=len(arr)
         while l<=h:
-            if h-l<=1: break  ##当m=l的时候，可能永远不会再动了。 停止
+            if h==l+1: break  ##当m=l的时候，可能永远不会再动了。 停止
             m = (l+h)/2
             if arr[m][-1]==x: return True
             elif arr[m][-1]<x:  l=m     #这里是稍微不一样    #当m=l的时候，可能永远不会再动了。 停止

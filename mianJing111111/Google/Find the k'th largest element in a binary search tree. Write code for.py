@@ -135,14 +135,14 @@ This is O(log N) on average (assuming a balanced tree).
 class Solution7:
     def find(self, root, k): #BST.是平衡的。
         if not root or root.size<k: return
-        if root.left:
-            n = root.left.size
-            if n ==k-1: return root
-            elif n <k-1: return self.find(root.right, k-1-n)
-            else: return self.find(root.left, k)
-        else:
-            return self.find(root.right, k-1)
+        n = root.left.size if root.left else 0
+        if n ==k-1: return root
+        elif n <k-1: return self.find(root.right, k-1-n)
+        else: return self.find(root.left, k)
 
+
+
+#下面是建立size的方法
     def dfs(self, root):  #更新size。  复制自更新sum  value那道。
         if not root: return 0
         root.size = 1
@@ -156,3 +156,26 @@ class Solution7:
 刚开始我用global variable做的
 后来小哥说不用额外空间，然后这里卡住了。。最后他提示让用不断求子树size的方法做，然后写求子树size的地方也卡了一段时
 '''
+
+
+
+'''
+#又是G家题目。
+You have a binary tree where each node knows the number of nodes in its sub-tree (including itself).
+
+Given a node n and an int k,
+write a function to return the kth
+node in an in order traversal.
+Can you do this non recursively
+'''
+
+def find(root, k): #和递归一样的
+    if not root or root.size<k: return
+    while root:
+        n = root.left.size if root.left else 0
+        if n ==k-1: return root
+        elif n <k-1:
+            root = root.right
+            k=k-1-n
+        else:
+            root=root.left

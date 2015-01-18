@@ -10,10 +10,8 @@ The security has decided to allow one digit error for a person but that digit sh
 # encoding=utf-8
 class Solution:
     def checkDigit(self, ch1, ch2):
-        row1 = (ch1-1)/3         #这样子写的比较优雅~
-        col1 = (ch1-1)%3
-        row2= (ch2-1)/3
-        col2 = (ch2-1)%3
+        row1 , col1= (ch1-1)/3, (ch1-1)%3  #这样子写的比较优雅~
+        row2, col2= (ch2-1)/3, (ch2-1)%3
         return abs(row1-row2)+abs(col1-col2)
 
     def SecurityCheck(self, right, usrInput):

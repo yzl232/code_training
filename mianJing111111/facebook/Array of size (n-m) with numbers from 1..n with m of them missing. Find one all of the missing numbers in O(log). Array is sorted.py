@@ -7,10 +7,12 @@ Array of size (n-m) with numbers from 1..n with m of them missing. Find one all 
 Example:
 n = 8
 arr = [1,2,4,5,6,8]
+
 m=2
 Result has to be a set {3, 7}.
 '''
-#好像是这道题目的变体  Find the smallest missing number
+#好像是这道题目的变体  Find the smallest missing number   .   基本一样。 看那边的code
+
 '''
 I liked your idea to check whether there are missing numbers in each half (by subtracting one end from another and comparing to the number of elements). Clever and simple.
 

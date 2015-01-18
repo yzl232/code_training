@@ -26,7 +26,7 @@ output : 4 5 6 7 8 9 10 11 12
 #可以做到O(n) 。 比较巧妙。
 class Solution:
     def solve(self, matrix):
-        self.m= len(matrix);  self.n=len(matrix[0])
+        self.m=m= len(matrix);  self.n=n=len(matrix[0])
         self.dp = [[None for i in range(self.n)] for j in range(self.m)]
         self.matrix = matrix
         self.ret = (0, -1, -1)
@@ -55,3 +55,4 @@ class Solution:
         self.dp[i][j] = t
         if t>self.ret[0]: self.ret=(t, i, j)
         return t
+# 之所以能够实现fill。在于increase是单向的。   所以一定不会无限循环。

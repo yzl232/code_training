@@ -1,3 +1,6 @@
+# Write methods to implement the multiply, subtract, and divide operations for integers. Use only the add operator.q_7_4_oprations
+
+# F家题目
 class Operations:
     def __init__(self):
         pass

@@ -18,6 +18,27 @@ Given a number system with only 3 and 4. Find the nth number in the number syste
 结果为第七个数。  也就是111
 
 '''
+
+
+# 和上面拿到题目一样的   An Interesting Method to Generate Binary Numbers from 1 to n
+class Solution:
+    def biNumbers(self, n):
+        ret = ['3', '4']; cur=ret
+        k = int(math.log(n, 2))
+        for i in range(k):
+            old = cur[:]
+            cur = []
+            for j in old:
+                cur.append(j+'3')
+                cur.append(j+'4')
+            ret+=cur
+        return ret[n-1]
+s = Solution()
+print s.biNumbers(14)
+print s.biNumbers(5)
+
+
+'''
 #2+4+8+16
 #  log(n)  取决于二进制的位数
 class Solution:
@@ -28,8 +49,9 @@ class Solution:
 s = Solution()
 print s.find(14)
 print s.find(5)
+print s.find(8)
 
-'''
+
 以前的方法：
 class Solution:
     def find(self, n):  #转换为二进制来做就好。

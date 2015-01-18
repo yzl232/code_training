@@ -21,7 +21,7 @@ class Solution2:
     def reverse(self, head):    #更简单一些。因为有pre, next。 不需要last, pre
         while head:
             head.pre, head.next = head.next, head.pre
-            if not head.pre: break  # finished         #因为没有do while。 所以只能这样写
+            if not head.pre: return head # finished         #因为没有do while。 所以只能这样写
             head=head.pre #本来是next. 调换了。
         return head
 

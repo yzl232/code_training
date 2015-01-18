@@ -5,18 +5,18 @@ Find all the possible passwords, given the length of the password and that it is
 '''
 class Solution:
     def genAll(self, n):
-        self.result = []; self.n = n
+        self.ret = []; self.n = n
         candidates = [str(i) for i in range(10)]
         self.dfs([], candidates)
-        return [''.join(i) for i in self.result]
+        return self.ret
 
-    def dfs(self, tmpResult, candidates):
-        if len(tmpResult)==self.n:
-            self.result.append(tmpResult)
+    def dfs(self, cur, candidates):
+        if len(cur)==self.n:
+            self.ret.append(''.join(cur))
             return
         else:
             for i in range(len(candidates)):
-                self.dfs(tmpResult+[candidates[i]], candidates[i+1:])
+                self.dfs(cur+[candidates[i]], candidates[i+1:])
 
 s = Solution()
 print s.genAll(2)

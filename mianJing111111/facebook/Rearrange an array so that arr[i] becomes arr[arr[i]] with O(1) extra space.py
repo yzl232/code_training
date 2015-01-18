@@ -42,6 +42,8 @@ After second step, array becomes {1, 0, 3, 2}
 class Solution:
     def relocate(self, arr):
         n = len(arr)
+        for x in arr:
+            if not 0<=x<=n-1:  raise  ValueError()
         for i in range(n):
             t = arr[arr[i]]   #把t移动到arr[i]来。
             arr[i] += t%n * n       #符号%有必要。 可能在后面取前面的数。 而前面的数已经更新比较大了。

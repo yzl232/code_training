@@ -7,5 +7,5 @@ import random
 class Solution:
     def myRand(self, x):
         y = random.randint(1, 100)
-        if y<x: return 1
+        if y<=x: return 1
         return 0

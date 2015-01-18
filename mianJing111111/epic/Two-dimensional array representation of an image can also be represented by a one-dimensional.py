@@ -12,15 +12,15 @@ Two-dimensional array representation of an image can also be represented by a on
 class Solution:
     def isEdge(self, i, j):  #默认不是edge
         maxD = 0
-        for r in range(i-1, i+2):
-            for c in range(j-1, j+2):
+        for r in [i-1, i, i+1]:
+            for c in [j-1, j, j+1]:
                 if 0<=r<=self.m-1 and 0<=c<=self.n-1:
                     maxD = max(maxD, abs(self.matrix[i][j]-self.matrix[r][c]))
         return maxD>self.x
 
-    def detectAll(self, matrix, X):
+    def detectAll(self, matrix, x):
         if not matrix: return
-        result = [];  self.X = X; self.matrix = matrix
+        result = [];  self.x = x; self.matrix = matrix
         self.m = len(matrix); self.n = len(matrix[0])
         for i in range(self.m):
             for j in range(self.n):

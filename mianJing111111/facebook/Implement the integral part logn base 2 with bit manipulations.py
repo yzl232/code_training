@@ -17,8 +17,8 @@ int integralPartOfLog(unsigned int n)
 '''
 class Solution:
     def integralPartOfLog(self, n):
-        ret = 0
-        while n>0:
+        ret = 0  #n^0 = 1
+        while n>1:
             n = n>>1
             ret+=1
-        return ret-1
+        return ret

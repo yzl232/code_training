@@ -9,6 +9,7 @@ class TreeNode:
 #注意是BST啊! 必须有parent。 没有parent根本没法更新parent
 
 # G家考过这道题目
+#G家好几次
 
 #都有parent  node
 '''

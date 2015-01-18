@@ -24,15 +24,17 @@ S- real Sum.   如果为0 。 则第一个或者最后一个。
 O(logN)    binary search
 
 '''
+# F家
 class Solution:
     def missing(self, arr):
+        assert len(arr)>=3
         diff = min(arr[2]-arr[1], arr[1]-arr[0])
         l=0; h=len(arr)-1
         while l<h:
             if h-l==1: return (arr[h]+arr[l])/2  #核心在这句。  找到左右边界。 就找到了
             m=(l+h)/2
             leftDiff = arr[m]-arr[l]
-            if leftDiff>diff*(m-l):  h=m  #左边  不是+1.  比如  1 5 7    边界可能就是m
+            if abs(leftDiff)>abs(diff*(m-l)):  h=m  #左边  不是+1.  比如  1 5 7    边界可能就是m
             else: l=m  #右边
         return -1
 s = Solution()

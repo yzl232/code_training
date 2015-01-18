@@ -30,14 +30,12 @@ give another (or the same) data structure optimized for the dot product of any s
 
 
 #facebook这道题目。 可以这样。只储存非0的value.    (val, index). sort by index
-class Solution:
+class Solution:  #  (val, index).
     def multip(self, v1, v2):
-        result =[]
-        i=j=0
+        ret =[];  i=j=0
         while i<len(v1) and j<len(v2):
-            if v1[i][-1]==v2[j][-1]:
-                result.append(   (v1[i][0]*v2[j][0], v1[i][-1]   )    )
-            elif v1[i][-1]<v2[j][-1]:
-                i+=1
+            x1, x2 = v1[i][-1], v2[j][-1]
+            if x1==x2:    ret.append(   (v1[i][0]*v2[j][0], x1  )    )
+            elif x1<x2:  i+=1
             else: j+=1
-        return result
+        return ret

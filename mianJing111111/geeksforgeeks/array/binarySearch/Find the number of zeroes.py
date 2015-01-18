@@ -37,5 +37,5 @@ class Solution:
             m = (l+h)/2
             if (m==len(arr)-1 or arr[m+1]!=x) and arr[m]==x: return m
             elif arr[m]>x:  h=m-1
-            else:   l=m+1
-        return -1  #其他时候，相等的时候，也是在右边
+            else:   l=m+1    #其他时候，相等的时候，也是在右边
+        return -1   #没找到返回一个flag

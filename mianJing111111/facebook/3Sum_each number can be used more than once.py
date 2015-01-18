@@ -26,9 +26,9 @@ class Solution:
         res = set()
         for i in range(len(num)-2):
             if i>0 and num[i] == num[i-1]: continue
-            left = i #改了这里
+            left = i #改了这里 于是第一个数可与第二个相同。
             right = len(num)-1; target = 0 - num[i]
-            while left <= right:  #改了这里
+            while left <= right:  #改了这里。  于是第二个可与第三个相同
                 if num[left] + num[right] == target:
                     res.add((num[i], num[left], num[right]))
                     left+=1; right -=1

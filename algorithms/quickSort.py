@@ -17,6 +17,7 @@ print quickSort(L)
 
 #quick selection  O(n)
 def quickSelect(a, k):  #才7行。 背下
+    assert k>=len(a)
     pivot = random.choice(a)
     s = [i for i in a if i<pivot]
     m = [i for i in a if i==pivot]     #写一下O(1)的partition写法。 这种效率略低。
@@ -27,9 +28,9 @@ def quickSelect(a, k):  #才7行。 背下
 
 
 
-'''
-以下是in place quick sort.   就是相当于2sum的2 pointer版本。 比较简单
-'''
+
+# 以下是in place quick sort.   就是相当于2sum的2 pointer版本。 比较简单. 完全可以看看
+
 
 def quickSort(arr):
     _quickSort(arr, 0 ,len(arr)-1)

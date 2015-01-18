@@ -34,9 +34,9 @@ class Solution: #才几行。 背下
         return self.recur(arr, s/2)
 
     def recur(self, arr, s):  #找有没有set和为s
-        if s<0: return False
         if s==0: return True
-        if not arr: return False
+        if s<0: return False
+        if not arr: return False  #注意顺序
         return self.recur(arr[1:], s) or self.recur(arr[1:], s-arr[0])
 '''
 else, check if sum can be obtained by any of the following
@@ -45,7 +45,7 @@ else, check if sum can be obtained by any of the following
 '''
 
 #dp
-class Solution:
+class Solution4:
     def findPartition(self, arr):
         s = sum(arr); n=len(arr)
         if s%2!=0: return False  #i表示sum，  j表示arr

@@ -27,12 +27,10 @@ class Solution:
         self.dfs(i, j, 0)
         return self.jumpNum
 
-    def dfs(self, i, j, tmpNum):
-        self.jumpNum = max(tmpNum, self.jumpNum)
-        directions = [(i-2, j), (i+2, j), (i, j-2), (i, j+2)]
-        for d in directions:
-            r = d[0]; c=d[1]
-            if 0<=r<=self.m-1 and 0<=c<=self.n-1 and self.matrix[r][c]=='' and self.matrix[(r+i)/2][(c+j)/2] == 'W':
-                tmp, self.matrix[r][c] = self.matrix[r][c], '#'
-                self.dfs(r, c, tmpNum+1)
-                self.matrix[r][c] = '#'
+    def dfs(self, i, j, curN):
+        self.jumpNum = max(curN, self.jumpNum)
+        for r, c in [(i-2, j), (i+2, j), (i, j-2), (i, j+2)]:
+            if 0<=r<=self.m-1 and 0<=c<=self.n-1 and self.matrix[r][c]=='' and self.matrix[(r+i)/2][(c+j)/2] == 'W': # 中间位置是对方
+                self.matrix[r][c] ='#'
+                self.dfs(r, c, curN+1)
+                self.matrix[r][c] = ''

@@ -25,8 +25,8 @@ class Solution:
         if len(s)==0:
             self.ret.append(cur)
             return
-        if s[0]!='0':   self.dfs(cur+chr(int(s[0])-1+ord('a')), s[1:])  #一个非0字符
-        if len(s)>=2 and  '10'<=s[:2]<='26':    self.dfs(cur+chr(int(s[:2])-1+ord('a')), s[2:]) #2个字符
+        if s[0]!='0':    self.dfs(cur+chr( int(s[0])-1 +97), s[1:])  #一个非0字符
+        if len(s)>=2 and  '10'<=s[:2]<='26':    self.dfs(cur+chr(int(s[:2])-1+97), s[2:])  #2个字符
 
 
 s =Solution()

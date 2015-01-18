@@ -39,7 +39,7 @@ class Solution:
     def dfs(self, root,  colLevel):
         if not root: return
         if colLevel not in self.d:  self.d[colLevel] = [] ##可以看出，注意8, 7, 9的顺序，  是inorder, root,   left, ，  right
-        self.d[colLevel].append((root.val))
+        self.d[colLevel].append(root.val)
         self.dfs(root.left,colLevel-1)
         self.dfs(root.right,  colLevel+1)
 

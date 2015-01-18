@@ -54,6 +54,8 @@ axdba
 #给一个字符串，给出最少插入多少次可以使字符串变为palindrome, 比如abcda就返
 # 回1, 因为可以插入d使得字符串变为abdcda
 
+
+
 class Solution:
     def ModifiedEditDistance(self, word):
         target = word[::-1];  n = len(word)

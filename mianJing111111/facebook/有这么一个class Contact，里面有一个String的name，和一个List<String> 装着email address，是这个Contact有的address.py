@@ -14,21 +14,20 @@
 能有相同名字的人，或者同一个人有可能有不同的名字来注册之类的。我给出了一个类
 似graph的解法。时间不够，就没有写code，只是把逻辑解释了一遍。
 '''
-
+# name完全没有用上
 #比较tricky。 用hash。  key: email.    val:  自己建立id.
 class Solution: #自己建立2个hashmap。 一个email-myid,   一个是myid- [email1, email2, ...]
     def sanitizeContacts(self, contacts):
-        id = 0; d={};  d2={}  #d1 key 是email。val是id
+        id = 0; d={};  ret={}  #d1 key 是email。val是id
         for c in contacts:   #d2 key 是 id , val 是emails
             myId = -1 #起了flag的作用
             for email in c[1]: #第一遍找有没有存在
-                if email not in d:  continue
-                else: myId=d[email]    #found group
+                if email in d:  myId=d[email]    #found group
             if myId<0:
                 id+=1
                 myId=id
-                d2[myId] = set()
+                ret[myId] = set()
             for email in c[1]:  #主要在第二遍赋值
-                if email not in d:  d[email]=myId
-                d2[myId].add(email)
-        return d2
+                d[email]=myId
+                ret[myId].add(email)
+        return ret

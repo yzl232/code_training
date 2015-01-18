@@ -15,17 +15,15 @@ Ex: entered 164, expected 18684 (you need to take care as when u enter 18684 and
 
 
 class Solution:
-    def isMatch(self, actual, expected, faultKey = ''):
+    def isMatch(self, actual, expected, faultKey):
         i=j=0
         while i<len(actual) and j<len(expected):
-            if actual[i] != expected[j]:
-                if faultKey=='': faultKey=expected[j]
-                elif faultKey!=expected[j]: return False
-            else:  i+=1
-            j+=1
+            if expected[j]==faultKey: j+=1
+            elif actual[i]!=expected[j]: return False
+            else:       i+=1; j+=1
         while j<len(expected) and expected[j] ==faultKey: j+=1
         return i==len(actual) and j==len(expected)
 
 s = Solution()
-print s.isMatch('164', '186848')
-print s.isMatch('164', '186847')
+print s.isMatch('164', '186848', '8')
+print s.isMatch('164', '186847', '7')

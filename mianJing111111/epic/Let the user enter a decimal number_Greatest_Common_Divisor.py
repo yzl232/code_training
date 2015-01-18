@@ -23,8 +23,8 @@ class Solution:
         return str(n/gcd) +'/'+str(10000/gcd)
 
     def getGCD(self, a, b):
-        while a%b!=0:
-            a, b = b, a%b   #大概就想想b是较小的数。 a是较大的数。。  当a%b===0, 返回b
+        while a%b!=0:    #大概就想想b是较小的数。 a是较大的数。。  当a%b===0, 返回b
+            a, b = b, a%b     #很容易记忆， 因为和fibonacci是一样的。
         return b
 s =Solution()
 print s.getIrreducibleFraction(0.15)

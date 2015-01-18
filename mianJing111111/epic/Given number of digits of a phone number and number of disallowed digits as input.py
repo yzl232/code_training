@@ -25,19 +25,18 @@ class Solution:
     def permutations(self, n, n1, n2, n3):
         forbid = [n1, n2, n3]
         self.n = n; self.ret = []
-        candidates = [str(i) for i in range(10) if i not in forbid]
-        self.dfs('', candidates)
+        self.nums = [str(i) for i in range(10) if i not in forbid]
+        self.dfs('')
         return self.ret
 
-    def dfs(self, tmpR, candidates):
-        if len(tmpR)==self.n:
-            self.ret.append(tmpR)
+    def dfs(self, cur,):
+        if len(cur)==self.n:
+            self.ret.append(cur)
             return
-        for i in range(len(candidates)):
-            ch = candidates[i]
-            if tmpR and ch==tmpR[-1]: continue
-            if tmpR and ch=='4': continue
-            self.dfs(tmpR+ch, candidates)
+        for x in self.nums:
+            if cur and x==cur[-1]: continue
+            if cur and x=='4': continue
+            self.dfs(cur+x)
 
 s = Solution()
 print s.permutations(3, 1, 3, 2)

@@ -27,22 +27,20 @@ so, 164 - 156 = 8
 
 '''
 
+
+
 class Solution:
     def findK(self, arr, target):
-        if not arr: return
-        n = len(arr);  index = 0
+        if not arr: raise ValueError()    #空得话，一般raise  valueError。  其他的assert就好
+        n = len(arr); cur = 0
         arr.sort()  #先排序。 然后找那个值。
-        curSum = 0
         for i in range(n):
-            if arr[i]*(n-i) + curSum>target:   #curSum + 找到了这个值！！！
-                index = i
-                break
-            curSum+=arr[i]
-        return (target-sum(arr[:index]))/(n-index)
+            if arr[i]*(n-i) + cur>target:  break
+            cur+=arr[i]   #curSum + 找到了这个值！！！
+        return (target-cur)/(n-i)     #上面这行反过来而已。
 s = Solution()
 print s.findK([4,6,87,93,46,8], 164)
 print s.findK( [1,2,5,7,7,8], 26)
 print s.findK([1,2,5,7,7,8],   29)
 print s.findK([4, 4, 4, 4, 3],  15)
 print s.findK([50, 50, 2],   10)
-

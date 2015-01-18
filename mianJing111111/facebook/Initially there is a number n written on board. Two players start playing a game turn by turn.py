@@ -42,3 +42,4 @@ class Solution:
             else:     cnt0+=1
             n = n>>1  #右移一位。
         return total%2
+#和求pow()太像了.  比pow多了一个n&1

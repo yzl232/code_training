@@ -14,7 +14,7 @@ deQueue(q)
 
 '''
 
-
+#  G家考过。
 
 class queue:
     def __init__(self):

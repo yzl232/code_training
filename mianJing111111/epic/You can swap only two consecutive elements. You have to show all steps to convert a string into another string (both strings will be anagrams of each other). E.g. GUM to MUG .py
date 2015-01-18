@@ -17,8 +17,8 @@ while每次都检查一下i+1,  j-1
 
 class Solution:
     def transition(self, a, b):
-        if sorted(a)!=sorted(b): return
-        n = len(a);  j=i=0
+        assert sorted(a)==sorted(b)
+        n = len(a);  j=0
         a = list(a); b = list(b)
         while j<n:
             i = j

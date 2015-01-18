@@ -11,6 +11,10 @@ Determine the number of ways which it can be written as the sum of two squares
 
 '''
 #注意这里并没有overlapping 不是DP
+
+
+#就是2 sum找上限下限
+
 class Solution:
     def numWays(self, n):
         i=0;  j=int(n**0.5);  cnt=0

@@ -26,9 +26,7 @@ O(n) space
 '''
 class Solution:
     def find(self, arr):
-        if max(arr)-min(arr)+1!=len(arr): return False
-        if len(set(arr))!=len(arr): return False  #这一步  O(n) space
-        return True
+        return max(arr)-min(arr)+1==len(arr) == len(set(arr))   # set实质是hashtable。用了 O(n) space
 
 #方法2
 '''
@@ -36,6 +34,8 @@ class Solution:
 
 arr[arr[i] - min]] as a negative value. If we see a negative value again then there is repetition.
 '''
+# Find duplicates in O(n) time and O(1) extra space
+
 #inplace
 class Solution3:  #假定没有负数出现
     def isCon(self, arr):  #利用index, 以及正负标记. 来check是否重复
@@ -44,5 +44,5 @@ class Solution3:  #假定没有负数出现
         for i in range(len(arr)):
             t = abs(arr[i])-small  #因为max-min = length。  所以abs(arr[i])-small一定OK
             if arr[t]<0: return False
-            arr[t]=-arr[t]
+            else: arr[t]=-arr[t]
         return True

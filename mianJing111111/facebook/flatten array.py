@@ -1,6 +1,6 @@
 # encoding=utf-8
 '''
-
+flatten array
 '''
 class Solution:
     def flatten(self, arr):

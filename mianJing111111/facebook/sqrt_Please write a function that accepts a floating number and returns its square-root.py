@@ -10,7 +10,6 @@ float区别不大。 就是l, h相差只有0.001了。 基本上就差不多了
 
 class Solution():
     def sqrt(self, n):
-        if n<0: return 0-self.sqrt(0-n)
         if 0<n<1: return 1.0/self.sqrt(1/n)
         l =0; h=n+1
         accuracy = 0.001
@@ -50,27 +49,26 @@ Finding log2() using sqrt()
 
 题目应当是要求
 '''
-import math
 
 class Solution:
     def log2(self, val):
-        hx = 0
-        while (1<<hx) < val:
-            hx+=1
-        lx = hx-1  #如果是求整数， 已经求得结果了。
-        accuracy = 0.00001
-        lval = 1<<lx;  hval = 1<<hx
-        l = lx; h = hx
-        while (h-l)>accuracy:
-            m =1.0* (l+h)/2
-            midVal = math.sqrt(lval * hval)
-            if midVal> val:
-                h = m;   hval = midVal
+        if 0<val<1: return -self.log2(1.0/val)
+        if val==1: return 0
+        h = 1;   accuracy = 0.001     #val>1 才是普通情况
+        while 2**h  < val:  h+=1
+        l = h-1       #如果是求整数， 已经求得结果了。
+        lval = 2**l;  hval = 2**h
+        while l<h:
+            m =  (l+h)/2.0
+            midVal = (lval * hval)**0.5
+            if abs(midVal- val)<accuracy:   return m
+            elif midVal> val:
+                h = m;    hval = midVal
             else:
-                l = m;   lval = midVal
-        return l
+                l = m;    lval = midVal
 s = Solution()
 print s.log2(13)
+
 
 
 '''

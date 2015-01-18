@@ -23,7 +23,7 @@ class Solution:
         l=0; h = len(arr)-1
         while l<=h:
             m = (l+h)/2
-            if (m==0 or arr[m-1]<x) and arr[m]==x: return m
+            if (m==0 or arr[m-1]!=x) and arr[m]==x: return m
             elif arr[m]<x: l = m+1
             else:  h=m-1    #其他时候，相等的时候，也是在左边
         return -1

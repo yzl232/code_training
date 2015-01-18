@@ -9,7 +9,7 @@ class Solution:
         for i in range(2**n):
             cur = 0;  x=0; cnt=0
             for j in range(n+1):
-                cur = cur*10+int(s[j])
+                cur = cur*10+int(s[j])  #1<<j作用是， 在第k位设置一个set bit
                 if (1<<j) & i:
                     x+=cur
                     cnt+=1

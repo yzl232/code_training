@@ -25,10 +25,10 @@ Output: 8
 class Solution:
     def findFirstMissing(self,  arr):
         l =0;  h = len(arr)-1
-        while l<=h:
-            if l!=arr[l]: return l  #重要
+        while l<=h:   #因为要找的数并不在arr。 所以略不一样
+            if l!=arr[l]: return l     #重要
             m = (l+h)/2
-            if arr[m]>m: h = m  #在左半 #这里不是减一。因为arr[m]>m此时有可能是我们求得。
+            if arr[m]>m: h = m  #在左半 #这里不是减一。因为arr[m]>m,  此时m有可能是我们求得。
             else:   l = m+1  #等于的话，在右半。  此时必须不是我们所求的
         return len(arr)
 s = Solution()

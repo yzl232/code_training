@@ -85,7 +85,7 @@ The above algorithm can be extended to handle such cases by adding a special cha
 '''
 #本来只用serialization来做。 发现不行。  subtree必须包括all of its descendants。   serialize可能只有一小部分
 #然后必须用preorder+inorder+serialization
-
+#  G家考过本题
 
 
 class Solution:  #O(n)
@@ -123,16 +123,16 @@ class Solution92:  #效率不高的做法  O(n2)
     # @param p, a tree node
     # @param q, a tree node
     # @return a boolean
-    def isSameTree(self, p, q):  #和symmitric tree题目一模一样
+    def same(self, p, q):  #和symmitric tree题目一模一样
         if not p and not q: return  True
         if not p or not q: return False
         if p.val != q.val: return False
-        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        return self.same(p.left, q.left) and self.same(p.right, q.right)
 
     def isSubTree(self, a, small):
         if not small: return True
         if not a: return False
-        if self.isSameTree(a, small): return True
+        if self.same(a, small): return True
         return self.isSubTree(a.left, small) or self.isSubTree(a.right, small)
 
 #用递归来做，都是特殊case加上recursion

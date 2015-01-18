@@ -23,6 +23,8 @@ Mind some boundary cases, and hopefully this is clear enough for you guys.
 
 '''
 #     www.cs.toronto.edu/~robere/csc373h/files/A2-sol.pdf
+# F家的题目。 很难。 封存。。
+
 class Solution:
     def findSubsets(self, lines):
         n = len(lines)

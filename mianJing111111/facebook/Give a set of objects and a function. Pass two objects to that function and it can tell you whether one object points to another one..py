@@ -13,6 +13,7 @@ Give a set of objects and a function. Pass two objects to that function and it c
 '''
 
 #和celebrity problem解法一模一样，也有O(n)解法。 celebrity problem理解更加巧妙。
+# 基本上都是，每次比较必定可以eliminate掉一个
 
 class Solution:
     def findCelebrity(self, objects):
@@ -20,15 +21,15 @@ class Solution:
         while len(stack)>=2:  #eliminating stage
             u = stack.pop()
             v = stack.pop()
-            if self.compareObjects(u, v):     stack.append(v)
-            else:   stack.append(u)
+            if self.compareObjects(u, v):     stack.append(u)
+            else:   stack.append(v)
         if not self.verify(objects, stack[0]): return False   # no objects.
         return stack[0]
 
     def verify(self, objects, c):
         for p in objects:
             if p==c: continue
-            if not self.compareObjects(p, c): return False
+            if self.compareObjects(p, c): return False
         return True
 
     def compareObjects(self, o1, o2):

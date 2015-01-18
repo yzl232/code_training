@@ -14,19 +14,17 @@ class Solution:
     # @param target, integer
     # @return a list of lists of integers
     def combinationSum(self, target):
-        candidates = [i for i in range(1, target)]
-        self.result = []; self.candidates = candidates
+        self.ret = []; self.c = [x for x in range(1, target)]
         self.dfs(0, target, [])
-        return self.result
+        return self.ret
 
-    def dfs(self, curNum, target, tmpResult):
+    def dfs(self, n1, target, cur):
         if target ==0:
-            if tmpResult in self.result: return
-            self.result.append(tmpResult)
-        elif target>0:
-            for i in range(curNum, len(self.candidates)):
-                c = self.candidates[i]
-                if target>=c:
-                    self.dfs(i, target-c, tmpResult+[c])
+            if cur in self.ret: return
+            self.ret.append(cur)
+            return
+        for i in range(n1, len(self.c)):
+            x = self.c[i]
+            if target>=x:              self.dfs(i, target-x, cur+[x])
 s = Solution()
 print s.combinationSum(4)

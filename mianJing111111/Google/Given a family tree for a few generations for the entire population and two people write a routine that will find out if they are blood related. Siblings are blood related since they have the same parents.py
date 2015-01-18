@@ -6,8 +6,7 @@ class Person:
     def __init__(self, p1, p2):
         self.p1=p1
         self.p2 = p2
-        self.name = None
-        self.children = []
+
 # find lca.
 #有2个parent节点的lca。
 #同时BFS.  放hashtable。

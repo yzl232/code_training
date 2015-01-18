@@ -33,7 +33,44 @@ class Solution:
                 j-=1; i-=arr[j-1]
         return exc, inc
 
+
+
+
+
+#下面理解错了题意。
+
 '''
 给一个int[] array, e.g {1,5,0,6}和一个int target，e.g. target = 21;
 问是否存在某种分法把array分成几部分，每部分看成一个int，这几部分加起来等于target。e.g. {1,5}{0}{6},三部分加起来是21。{1,5}{0,6}也是21。target=25则false
+
+找到了k个不同的sum都是s/k。 成功
+
+一个优化。 如果sum不是k的倍数。  return False
+
+# np hard
+
+以下优化
+Sort the vector, v.
+Eliminate elements bigger than k. They can't be part of any solution.
+
+
+
+
+# 做法。 做k次  dfs。  每次dfs以后 ，  除去发现的sum为s/k的数
+# 做k次 dfs。 （subset sum）
+
+class Solution:
+    def solve(self, arr, k):
+        s = sum(arr)
+        if s/k!=0: return False
+        y = s/k;
+        arr = [x for x in arr if x<=y]  #filter掉不合适的。
+        for i in range(k):  pass
+            # 做k次 dfs。  每次dfs后， remove掉， 再找。
+
+    def dfs(self, arr, target):
+        if target==0: return True
+        if not arr: return False  #s不为0. 又为空。 False
+        if arr[0]>target: return self.dfs(arr[1:], target)
+        return self.dfs(arr[1:], target-arr[0]) or self.dfs(arr[1:], target)
 '''

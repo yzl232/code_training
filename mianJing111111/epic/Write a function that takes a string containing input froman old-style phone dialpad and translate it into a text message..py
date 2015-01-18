@@ -10,6 +10,24 @@ Enter a key multiple times in a row prints the next character in the sequence, s
 class Solution:
     def text(self, s):
         if not s: return ''
+        d = {'0':[''], '1':[''], '2':['a', 'b', 'c', '2'], '3':['d', 'e', 'f', '3'], }
+        i=0;  ret=''
+        while i<len(s):
+            ch = s[i]; cnt=1
+            while i+1<len(s) and s[i+1]==s[i]:
+                i+=1; cnt+=1
+            cnt=(cnt-1)%4
+            if ch!='#' and ch!='0': ret +=d[ch][cnt]
+            i+=1
+        return ret
+s = Solution()
+print s.text("222#22323#3")
+
+
+'''
+class Solution:
+    def text(self, s):
+        if not s: return ''
         d = {0:[''], 1:[''], 2:['a', 'b', 'c', '2'], 3:['d', 'e', 'f', '3']}
         prev = s[0]; count=1
         result = ''
@@ -24,3 +42,4 @@ class Solution:
         return result
 s = Solution()
 print s.text("222#22323#3")
+'''

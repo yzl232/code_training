@@ -12,24 +12,22 @@
 one pass
 
 '''
+
 class Solution:  #注意一些细节。比如用set。 比如prev更新。 比如continue
     def find(self, s):
-        arr = list(s)
-        ret = set(); prev = None; cnt = 0; maxCnt=0
-        for ch in arr:
-            if ch ==' ':  #检查空格
-                cnt=0
-                prev=None  #记住更新prev
-                continue
-            if ch==prev: cnt+=1  #更具pre的比较，更新cnt, prev
-            else:
-                cnt=1
-                prev=ch  #记住更新prev
+        ret = set(); i=0; maxCnt=1
+        while i<len(s):
+            cnt=1;
+            while i+1<len(s) and s[i]==s[i+1]:
+                i+=1; cnt+=1
+            if s[i]==' ': cnt=0
             if cnt>maxCnt:  #每回合都研究cnt的值。
-                ret=set([ch])
+                ret=set([s[i]])
                 maxCnt=cnt
-            elif cnt==maxCnt:  ret.add(ch)
+            elif cnt==maxCnt:  ret.add(s[i])
+            i+=1
+            
         return ret, maxCnt
 s = Solution()
 print s.find('thiis iss a senntencee')
-print s.find("thiisss iss a senntttenceee")
+print s.find("thiisss iss a senntttenceee")  

@@ -16,8 +16,8 @@ Making it clear, when the input size is odd, we take the middle element of sorte
 Note that output is effective median of integers read from the stream so far. Such an algorithm is called online algorithm. Any algorithm that can guarantee output of i-elements after processing i-th element, is said to be online algorithm. Let us discuss three solutions for the above problem.
 
 
-
-Method 2: Augmented self balanced binary search tree (AVL, RB, etc…)
+BST加上一个size （AVL tree）
+Method 2: Augmented self balanced binary search tree (AVL, RB, etc…)  （BST====）
 
 At every node of BST, maintain number of elements in the subtree rooted at that node. We can use a node as root of simple binary tree, whose left child is self balancing BST with elements less than root and right child is self balancing BST with elements greater than root. The root element always holds effective median.
 
@@ -43,7 +43,18 @@ Given below is implementation of above method. For algorithm to build these heap
 
 
 '''
-We need to maintain 1 max heap and 1 min heap. Max heap will contain lower half of the numbers and min the upper half. Whenever, a new number comes:
+We need to maintain 1 max heap and 1 min heap. 
+
+Max heap will contain lower half of the numbers and min the upper half. 
+
+maxHeap存较小的一半。  minHeap存较大的一半。  很容易记忆。 相反。
+
+如果大于minHeap Min,存进去。
+else： 村左边
+
+if size相差大于2：  平衡一下
+
+Whenever, a new number comes:
 1) if its less than root of max heap, it is inserted into max heap.
 2) if its higher than root of min heap, it is inserted into min heap.
 3) after insertion if the size difference of two heaps is greater than 1, the root of the larger heap is transferred to the other heap to balance their size.
@@ -51,4 +62,4 @@ We need to maintain 1 max heap and 1 min heap. Max heap will contain lower half 
 At any point, the median will be:
 1) (root of max heap + root of min heap) / 2 if size of both heap are equal.
 2) root of larger heap otherwise.
-'''
+'''   

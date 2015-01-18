@@ -43,23 +43,22 @@ the results comes from if you have N objects then the min number of separators r
 class Solution:
     def rearrange(self, a, m):
         a = self.trans(a, m)  #从左到右， 再从右往左也弄一遍
-        print a
         a.reverse()
         a = self.trans(a, m) #  in place
         a.reverse()
         return a
 
-    def trans(self, a, m):
-        cnt=1
-        for i in range(1, len(a)):
-            if cnt>m:
-                pre= i-1;     j = i
-                while j<len(a)-1 and a[j]==a[pre]:     j+=1 #找到第一个不等的点, 然后swap
-                a[j], a[pre] = a[pre], a[j]
-                cnt=1
-                continue
-            if a[i]!=a[i-1]:    cnt=1
-            else:     cnt+=1
+    def trans(self, a, m):  #就是count and say
+        i=0
+        while i<len(a):
+            cnt=1
+            while i+1<len(a) and a[i]==a[i+1] and cnt<=m:
+                i+=1; cnt+=1
+            if cnt>m:  #说明i还是跟以前相等。 只是cnt超过了
+                j = i
+                while j<len(a)-1 and a[j]==a[i]:     j+=1 #找到第一个不等的点, 然后swap
+                a[j], a[i] = a[i], a[j]
+            i+=1
         return a
 
 

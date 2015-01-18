@@ -53,3 +53,8 @@ class Solution:
 s = Solution()
 print s.printIntersection([1, 2, 2, 4], [2, 2,  5, 8])
 print s.printUnion([1, 2, 2, 4], [2, 2, 5, 8])
+
+
+# O(m+n)
+# 如果m很大， n很小。   O(nlogm)
+#如果一个array特别长， 1个特别短， 的话，用binary search。找最左边的出现的。

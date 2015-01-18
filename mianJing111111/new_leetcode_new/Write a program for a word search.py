@@ -31,7 +31,6 @@ class Solution:
         if len(word) == 0:
             self.results.append(tmpRoutes)
             return
-
         for r in [i-1, i, i+1]:
             for c in [j-1, j, j+1]:
                 if 0<=r<=self.m-1 and 0<=c<=self.n-1:

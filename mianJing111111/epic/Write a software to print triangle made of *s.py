@@ -14,16 +14,15 @@ given you have to use 3 stars or the height is 3 stars.
 '''
 class Solution:
     def pTriangle(self, h, w):
-        result = [1]
-        diffe = (w-1)*1.0/(h-1)
-        for i in range(1, h):
-            result +=[int(1+i*diffe)]
-        for i in result:
-            print '*' * i
-        print
+        assert h>0
+        print '*'; cur=1;
+        dif =  (w-1) *1.0/(h-1)
+        for i in range(h-1):
+            cur+=dif
+            print '*'*int(cur)
 
 s = Solution()
-s.pTriangle(3, 6)
-s.pTriangle(3, 3)
-s.pTriangle(3, 9)
-s.pTriangle(5, 9)
+print s.pTriangle(3, 6)
+print s.pTriangle(3, 3)
+print s.pTriangle(3, 9)
+print s.pTriangle(5, 9)

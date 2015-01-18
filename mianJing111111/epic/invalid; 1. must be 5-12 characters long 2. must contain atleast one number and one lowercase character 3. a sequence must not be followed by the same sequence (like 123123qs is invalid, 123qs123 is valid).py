@@ -26,10 +26,10 @@ class Solution:
             if '0'<=ch <='9': countNum+=1
         if countlow==0 or countlow==0: return False
         d = {}
-        for start in range(0, len(s)):
+        for l in range(0, len(s)):
             sub = ''
-            for end in range(start, len(s)):
-                sub+=s[end]     #按照这个套路可以降低复杂度
-                if sub in d and start == d[sub][-1]+1: return False
-                d[sub] = (start, end)
+            for r in range(l, len(s)):
+                sub+=s[r]     #按照这个套路可以降低复杂度
+                if sub in d and l == d[sub][-1]+1: return False
+                d[sub] = (l, r)
         return True

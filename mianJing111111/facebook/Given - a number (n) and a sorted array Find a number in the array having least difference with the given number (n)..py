@@ -12,3 +12,4 @@ class Solution:
             elif target > a[m]:   l = m+1
             else:     h = m-1
         return a[l] if abs(a[l]-target)<abs(a[h]-target) else a[h]
+#因为停止的时候，必定是l=h+1. 而且  arr[h] < x <arr[l]

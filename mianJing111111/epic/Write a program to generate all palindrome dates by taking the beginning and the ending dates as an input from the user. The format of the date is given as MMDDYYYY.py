@@ -16,14 +16,14 @@ class Solution:
         mDays = [31, 28, 31, 30,  31 , 30,  31,  31 , 30, 31, 30, 31 ]
         startYear = int(start[-4:]);  endYear = int(end[-4:])
         for year in range(startYear, endYear+1):   #年代可以直接判定
+            sYear = str(year)
+            if len(sYear)<4: sYear = '0'*(4-len(sYear))+sYear   #补齐长度
             for m in range(1, 13):
                 sMonth = str(m)
-                if len(sMonth)==1: sMonth='0'+sMonth
+                if len(sMonth)==1: sMonth='0'+sMonth  #补齐长度
                 daysN = mDays[m-1]
-                sYear = str(year)
-                if len(sYear)<4: sYear = '0'*(4-len(sYear))+sYear
-                if m==2 and (year%400==0 or (year%4==0 and year%100!=0)): daysN=29
-                for d in range(1, daysN):
+                if m==2 and (year%400==0 or (year%100!=0 and year%4==0)): daysN=29
+                for d in range(1, daysN+1):
                     sDay = str(d)
                     if len(sDay)==1: sDay = '0'+sDay  #补齐长度
                     if self.isPalindrome(sMonth+sDay+sYear): results.append(sMonth+sDay+sYear) #月，日可以转换为数字，进行判定

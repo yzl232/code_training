@@ -4,7 +4,7 @@ seed = 0
 class Solution:
     def generateRandom(self, n):
         global seed
-        seed +=int(time.time())
-        return seed%n
+        seed =(seed+int(time.time()) ) %n
+        return seed
 s= Solution()
 

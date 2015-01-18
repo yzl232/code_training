@@ -70,3 +70,5 @@ class Solution5:
             root.sw = self.merge(root1.sw, root2.sw)
         elif root1.color == root2.color =='white':  return QuadTree('white', root1.size)
         else: return QuadTree('Black', root1.size)
+
+# G家高频了。 如果是求重叠的1的个数。 就是merge之后， 然后cnt

@@ -29,6 +29,9 @@ sorted array显然要用binary search
 利用binary search 找到临界点。 然后左右扫描延伸。
 
 '''
+#因为题目要求比较奇怪。
+
+
 class Solution:  #那个majority也有用到。
     def leftS(self, arr, x):
         l=0; h = len(arr)-1

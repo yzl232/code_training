@@ -23,8 +23,7 @@ class Solution:
         while l<=h:
             m = (l+h)/2
             if arr[m]==x:return [x, x]
-            elif arr[m]<x:
-                l = m+1
+            elif arr[m]<x:   l = m+1
             else: h=m-1
         result = [None, None]
         if l<len(arr): result[1]= arr[l]

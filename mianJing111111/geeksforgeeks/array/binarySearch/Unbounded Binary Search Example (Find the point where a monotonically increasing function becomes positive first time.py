@@ -1,3 +1,4 @@
+
 # encoding=utf-8
 '''
 Given a function ‘int f(unsigned int x)’ which takes a non-negative integer ‘x’ as input and returns an integer as output. The function is monotonically increasing with respect to value of x, i.e., the value of f(x+1) is greater than f(x) for every input x.
@@ -11,7 +12,7 @@ A simple solution is to start from i equals to 0 and one by one calculate value 
 
 Can we apply Binary Search to find n in O(Logn) time? We can’t directly apply Binary Search as we don’t have an upper limit or high index. The idea is to do repeated doubling until we find a positive value, i.e., check values of f() for following values until f(i) becomes positive.
 '''
-#艹。 面经里边考过。
+#艹。 F家。 面经里边考过。
 '''
 Can we apply Binary Search to find n in O(Logn) time? We can’t directly apply Binary Search as we don’t have an upper limit or high index. The idea is to do repeated doubling until we find a positive value, i.e., check values of f() for following values until f(i) becomes positive.
 
@@ -43,9 +44,9 @@ class Solution:
         pass
 
     def findFirstN(self):
-        i=1
-        while self.func(i)<0: i*=2  #logN
-        l=i/2; h=i
+        h=1
+        while self.func(h)<0: h*=2  #logN
+        l=h/2
         while l<=h:
             m = l+(h-l)/2
             if (m==0 or self.func(m-1)<=0) and self.func(m)>0: return m

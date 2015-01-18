@@ -14,3 +14,5 @@ NSArray* input = @[
 
 多次merge sort就好了。
 '''
+
+# heap

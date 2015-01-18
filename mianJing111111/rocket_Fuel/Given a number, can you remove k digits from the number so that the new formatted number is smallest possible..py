@@ -30,10 +30,12 @@ In the leftmost k+1 digits, find the largest one (let us say it is located at it
 比如k=1时候， 只有前2个数有影响
 k=2的时候，只有1前3个数有影响
 '''
+#没有想到解法。 关于特殊情况      # 6666692, 2       从前往后找最大的digit。删去
+
+
 class Solution:  #O(n)
     def removeK(self, n, k):
-        stack = list(str(n))[::-1]
-        if len(stack)<k: return
+        stack = list(str(s))[::-1]
         for i in range(k):
             one = stack.pop()
             two = stack.pop()
@@ -48,3 +50,5 @@ print s.removeK(7454982641, 3)
 print s.removeK(7459282641, 3)
 print s.removeK(7451982641, 3)
 print s.removeK(7459282641, 4)
+print s.removeK(559, 1)
+print s.removeK(6666692, 2)

@@ -21,6 +21,9 @@ We should use a queue instead of a stack in order to swap always the top-most ze
 如果。 电面。 印象不深，可以直接念代码。  basically  dfs,   if root.val ==0:  queue.append.  else  we pop  and swap. and
 
 '''
+# queue存的是val为0的node。
+
+
 from collections import deque
 
 class Solution:   #q只会增多，不会减少

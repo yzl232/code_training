@@ -21,6 +21,7 @@ If A doesn’t know B, then B can’t be celebrity. Discard B, and A may be cele
 class Solution:
     def findCelebrity(self, peoples):
         stack = peoples[:]
+        assert len(stack)>=2
         while len(stack)>=2:  #eliminating stage
             u = stack.pop()
             v = stack.pop()

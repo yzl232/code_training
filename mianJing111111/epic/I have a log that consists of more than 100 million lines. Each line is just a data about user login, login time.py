@@ -1,9 +1,19 @@
 # encoding=utf-8
 '''
-I have a log that consists of more than 100 million lines. Each line is just a data about user login, login time, etc. I want to sort them based on user login, and then if there is a tie based on login time, etc. However, I have limited memory, so don't think of storing all of them in an array. The memory can only hold n data where n is much smaller than 100 millions. You can access the disk though although it is much slower. How will you do it so that it is as efficient as possible?
+I have a log that consists of more than 100 million lines. Each line is just a data about user login, login time, etc. I want to sort them based on user login, and then if there is a tie based on login time, etc.
+
+
+However, I have limited memory, so don't think of storing all of them in an array.
+
+The memory can only hold n data where n is much smaller than 100 millions. You can access the disk though although it is much slower. How will you do it so that it is as efficient as possible?
 
 这个有点意思。 稍有变化。 全部sort掉。
 '''
+
+
+#按照range来划分范围， 比如1~1000第一个file. 1001~2000第二个file。。。
+# 分成1000个范围 。  1000个file。  每个file  sort即可。
+
 
 
 '''

@@ -1,3 +1,4 @@
+
 # encoding=utf-8
 '''
 Imagine x is an operand and * is a binary operator. We say a string of x and * follows Reverse Polish notation if it is a postfix notation.
@@ -62,13 +63,10 @@ class Solution:
             elif tmp =='**':dp[i][i+2] = 2
             elif tmp == '*x':dp[i][i+2] = 1
 #
-        for length in range(3, n+1):
-            for start in range(n+1-length):
-                end = start+length  #exclusive
-                if s[end-1] =='*':  #不用改。 直接找
-                    dp[start][end] = min ( dp[start][ start+k]+dp[start+k][end-1] for k in range(1, length-1) )  #当k==0就是删除了。
-                elif s[end-1] == 'x':
-                    dp[start][end] =min ( dp[start][ start+k]+dp[start+k][end-1]+1 for k in range(length-1) )  #replace
+        for j in range(3, n+1):
+            for i in range(j-3, -1, -1):  #不用改。 直接找   #注意，j-1不能用了！！为*
+                if s[j-1] =='*':    dp[i][j] = min ( dp[i][ k]+dp[k][j-1] for k in range(i+1, j-1) )  #当k==0就是删除了。
+                elif s[j-1] == 'x':  dp[i][j] =min ( dp[i][ k]+dp[k][j-1]+1 for k in range(i+1, j-1) )  #replace
         return dp[0][-1]  #delete x in the end, 插入*和删除x是等效的。  只考虑删除就好
 
 #O(n cube)
@@ -81,3 +79,6 @@ print s.getMinEdit('*xx')
 print s.getMinEdit('**xx')
 print s.getMinEdit('x*xxx')
 print s.getMinEdit('*x**x*xx**x***xx*xx**x***xxxxxxxx**xxxxxxx*xx****xxx*x***x**x*******xx**x*xx**x*xx***xx**xx*xxxx')
+
+
+# 证明了所有length的dp都可以改成  for j in range,  for i in range .  先从end。 再从start。 start要反过来

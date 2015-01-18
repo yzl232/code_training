@@ -151,7 +151,7 @@ class Solution2: #比较难写
         pCnt=cnt; pre = 0
         while i<len(affairs):
             now =affairs[i][0]
-            while i<len(affairs) and affairs[i][0]==now: #碰到同一时间的特殊情况
+            while i<len(affairs) and affairs[i][0]==now: #碰到同一时间的特殊情况    i最少增加了1
                 cnt+= affairs[i][-1]
                 i+=1
             if cnt!=pCnt:

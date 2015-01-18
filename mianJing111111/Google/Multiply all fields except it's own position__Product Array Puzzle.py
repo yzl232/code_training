@@ -63,3 +63,19 @@ class Solution3:
         return ret
 s = Solution3()
 print s.product([2,3,1,4])
+
+# G家考过类似的。 求和版本
+'''
+You are given an array of integers 'a' that can fit in a memory. Write a method that retuns an array of the same lenght such that each element 'i' of this array is a sum of 'a' except the element a[i]. You are not allowed to use '-' operator.
+'''
+class Solution3:
+    def product(self, arr):
+        cur=0; ret = [1 for i in range(len(arr))]
+        for i in range(len(arr)):
+            ret[i]+=cur
+            cur +=arr[i]
+        cur = 0
+        for i in range(len(arr)-1, -1, -1):
+            ret[i]+=cur
+            cur +=arr[i]
+        return ret
