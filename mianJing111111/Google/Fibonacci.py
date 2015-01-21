@@ -119,6 +119,6 @@ class Solution2:
 Time Complexity: O(Logn)
 Extra Space: O(Logn) if we consider the function call stack size, otherwise O(1).
 '''
-s = Solution2()
+s = Solution()
 print s.fib(10)
 print ifib(10)

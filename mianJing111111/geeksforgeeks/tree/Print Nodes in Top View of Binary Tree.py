@@ -32,7 +32,23 @@ Top view of the above binary tree is
 基本上和vertical  columns一模一样。
 '''
 #hashmap值同时也存lvl的值
+# top view是最难的。 同时要rlvl, clvl
 
+class Solution:
+    def findVertical(self, root):
+        self.d = {}  #用hashtable是因为不知道最左边index有多左。
+        self.dfs(root, 0,  0)
+        k1 = min(self.d); k2 = max(self.d)
+        return [min(self.d[x])[-1] for x in range(k1, k2+1)]
+
+    def dfs(self, root, rlvl,  clvl):
+        if not root: return
+        if clvl not in self.d:  self.d[clvl] = []
+        self.d[clvl].append((rlvl, root.val))
+        self.dfs(root.left,rlvl+1,  clvl-1)
+        self.dfs(root.right, rlvl+1,  clvl+1)
+
+'''
 class Solution:
     def findVertical(self, root):
         self.d = {}  #用hashtable是因为不知道最左边index有多左。
@@ -49,7 +65,7 @@ class Solution:
         self.d[clvl].append((rlvl, root.val))
         self.dfs(root.left,rlvl+1,  clvl-1)
         self.dfs(root.right, rlvl+1,  clvl+1)
-
+'''
 
 
 

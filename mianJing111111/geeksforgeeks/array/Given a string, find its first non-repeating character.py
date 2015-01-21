@@ -10,13 +10,16 @@ Given a string, find the first non-repeating character in it. For example, if th
 #如果是元素， 就用 for x in arr:
 
 
+
+# first non-repeating  意思就是~ 寻找第一个只出现一次的。
+
 class Solution:
     def findNonRepeating(self, arr):
         d = {};  a = []   #d的缺点是无序。  这是同时用一个a。就可以保证有序了。。。
         for x in arr:
             if x not in d:
                 d[x]=0
-                a.append(x)
+                a.append(x)  #a最多长256. a是有限制的。
             d[x]+=1
         for x in a:
-            if d[x]==1: return x
+            if d[x]==1: return x  #出现一次的。

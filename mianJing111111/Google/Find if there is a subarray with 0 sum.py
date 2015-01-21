@@ -20,6 +20,7 @@ Output: false
 There is no subarray with zero sum.
 
 '''
+# G家
 # cumulative sum.    one pass
 class Solution:
     def print0S(self, arr):  #非常好的代码。    cumulative sum

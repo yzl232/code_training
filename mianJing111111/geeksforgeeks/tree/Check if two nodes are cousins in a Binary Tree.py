@@ -34,8 +34,25 @@ class Solution:
     def isSibling(self, root, a, b): #cousin比较难检查。 但是反过来，sibling很好检查
         if not root: return False
         if (root.left, root.right) in [(a, b), (b,a)]: return True
-        return self.isSibling(root.left, a, b) or self.isSibling(root.right, a, b)
+        return self.isSibling(root.left, a, b) or self.isSibling(root.right, a, b)   #寻找一个root， 左右subling是a, b
 
+    def findLevel(self, root, node):
+        self.ret = None; self.node = node
+        self.dfs(root, 1)
+        return self.ret
+
+    def dfs(self, root, level): #找一个子节点到root得距离
+        if not root: return
+        if self.ret: return
+        if root == self.node:     self.ret = level
+        self.dfs(root.left, level+1)
+        self.dfs(root.right,  level+1)
+
+    def isCousin(self, root, a, b):
+        if not a or not b: raise ValueError
+        return self.findLevel(root, a) == self.findLevel(root, b) and not (self.isSibling(root, a, b))  #总共traverse 3 次   O(n)
+
+'''
     def level(self, root, p, lvl):  #实际上是一个search的过程
         if not root: return -1  #特殊情况： 没找到
         if root == p: return lvl  #特殊情况：  找到
@@ -43,5 +60,4 @@ class Solution:
         if l!=-1: return l
         return self.level(root.right, p, lvl+1)
 
-    def isCousin(self, root, a, b):
-        return self.level(root, a, 1) == self.level(root, b, 1) and not (self.isSibling(root, a, b))  #总共traverse 3 次   O(n)
+'''

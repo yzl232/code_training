@@ -14,6 +14,8 @@ For example, in the below tree, 4, 5 & 8 are at distance 2 from root.
     4     5  8
 
 '''
+# print all nodes at distance k from a given node  . 这道题目 down的部分。
+
 class Solution:
     def findKDist(self, root, k):
         self.result = []

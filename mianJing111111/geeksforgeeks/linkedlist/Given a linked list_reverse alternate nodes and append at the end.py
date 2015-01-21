@@ -26,21 +26,21 @@ The idea is to maintain two linked lists, one list of all odd positioned nodes (
 2) Append the even node list at the end of odd node list.
 '''
 # Definition for singly-linked list.
+# one pass
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
 class Solution:
-
     def reverseAlternate(self, head):
         if not head or not head.next or not head.next.next: return head
         cur = head;  second = None
         while cur and cur.next:
-            tmp = cur.next
-            cur.next = tmp.next
-            tmp.next = second
-            second = tmp
+            t = cur.next
+            cur.next = t.next
+            t.next = second
+            second = t
             pre = cur
             cur = cur.next
         pre.next  = second    #两个list最后连接上

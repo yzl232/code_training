@@ -13,9 +13,9 @@ This problem is a variation of standard Longest Increasing Subsequence (LIS) pro
 class Solution:
     def lis(self, arr):
         ret = 0;  n = len(arr)
-        dp = [1 for i in range(n)]
+        dp = arr[:]
         for i in range(1, n):
-            dp[i] = max(arr[i]+dp[j] for j in range(i) if arr[j]<arr[i])  #只是把1+dp[i] 改成了arr[i] + dp[i]
+            dp[i] = max([arr[i]+dp[j] for j in range(i) if arr[j]<arr[i]] +[arr[i]])  #只是把1+dp[i] 改成了arr[i] + dp[i]
             ret = max(ret, dp[i])
         return ret
 s = Solution()

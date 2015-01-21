@@ -27,33 +27,24 @@ Input:  ar1[] = {2, 3, 7, 10, 12, 15, 30, 34}
         ar2[] = {1, 5, 7, 8, 10, 15, 16, 19}
 Output: 122
 122 is sum of 1, 5, 7, 8, 10, 12, 15, 30, 34
-
-
 '''
+#非常巧妙
+
 
 class Solution:
     def maxPathSum(self, arr1, arr2):
         ret=0; s1=s2=0
-        m  = len(arr1); n = len(arr2)
+        m= len(arr1); n=len(arr2)
         i=j=0
         while i<m and j<n:
             if arr1[i]<arr2[j]:
-                s1+=arr1[i]  #取较小的数。这样子达到平衡。  在共同数时会同时遇到。
-                i+=1
+                s1+=arr1[i];     i+=1  #取较小的数。这样子达到平衡。  在共同数时会同时遇到。
             elif arr1[i]>arr2[j]:
-                s2+=arr2[j]
-                j+=1
+                s2+=arr2[j];  j+=1
             else:
                 ret+=max(s1, s2)+arr1[i]  #关键是在于s1, s2选择。比较。非常巧妙
-                s1=s2=0
-                i+=1; j+=1
-        while i<m:
-            s1+=arr1[i]
-            i+=1
-        while j<n:
-            s2+=arr2[j]
-            j+=1
-        return ret + max(s1, s2)
+                i+=1; j+=1; s1=s2=0
+        return ret + max(s1+sum(arr1[i:]), s2+sum(arr2[j:]))
 
 s =Solution()
 print s.maxPathSum([2, 3, 7, 10, 12, 15, 30, 34], [1, 5, 7, 8, 10, 15, 16, 19])

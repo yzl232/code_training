@@ -4,14 +4,17 @@ Function to check if a singly linked list is palindrome
 
 分成两半。  reverse后半
 '''
+#如果复制一个一样的list。 再reverse。 效果也好。
+# Function to check if a singly linked list is palindrome
+
 class Solution:
     def isPalindrome(self, h):
         if not h or not h.next: return h
         fast = slow = h
         while fast.next and fast.next.next:  #因为要对前面的节点进行裂开操作。 着了是 fast.next and fast.next.next:
-            fast = fast.next.next
+            fast = fast.next.next    #用2， 3两个例子判断， h2可嫩比h1大一
             slow = slow.next
-        h2 = slow.next
+        h2 = slow.next; slow.next = None
         h2 = self.reverse(h2)
         while h and h2:  #其中某个可能会长一点点。 无所谓
             if h.val !=h2.val: return False

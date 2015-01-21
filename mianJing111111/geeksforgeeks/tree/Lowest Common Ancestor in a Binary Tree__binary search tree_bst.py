@@ -21,13 +21,15 @@ class Solution:
         return
 #O(n) and O(h)
 
+
+# 和那道linkedlist的类似。
 class Solution2:
     def find_Ancestor2(self, p, q):
         h1 = self.getH(p); h2=self.getH(q)
         if h1<h2:
             h1, h2 = h2, h1
             p, q = q, p
-        for i in range(h2-h1): q=q.parent
+        for i in range(h1-h2): p=p.parent
         while p and q:
             if p==q: return p
             p = p.parent;  q=q.parent
@@ -51,20 +53,28 @@ Lowest Common Ancestor in a Binary Search Tree.
 
 只要是与bst相关的题目，就少不了比较val大小， start, end等等
 '''
+
+
+
+
+'''
 class Solution8:
     def findlca(self, root, v1, v2):
         if not root: return
         if root.val > v1 and root.val > v2:  return self.findlca(root.left, v1, v2)#都在右边
         if root.val < v1 and root.val <v2:   return self.findlca(root.right, v1, v2)#都在左边
         return root
+'''
+
 
 #如果用iterative可以做到O(1) space  O(logN) time
 #很巧妙
+# BST  O(logN)的题目一般都是可以while来做
 class Solution9:
     def findLCA(self, root, v1, v2):
         while root:
-            if root.val>v1 and root.val>v2: root=root.left
-            elif root.val <v1 and root.val<v2: root=root.right
+            if root.val>max(v1, v2): root=root.left      #偏大就往右。 偏小就往左
+            elif root.val <min(v1, v2): root=root.right
             else: return root
 
 
@@ -77,11 +87,11 @@ Given a binary tree (not a binary search tree) and two values say n1 and n2, wri
 
 #最优解
 class SolutionRecursin:
-    def findAncestor(self, root, p, q):        #和findlevel  search的题目是有点像的, 往下seach x ，  往下search p, q
+    def anc(self, root, p, q):        #和findlevel  search的题目是有点像的, 往下seach x ，  往下search p, q
         if not root: return  #没找到
-        if root == p or root == q: return root  #没找到
-        l = self.findAncestor(root.left, p, q)
-        r = self.findAncestor(root.right, p, q)
-        if l and r: return root  #2个都找到。在root
+        if root in (p, q): return root  #没找到
+        l = self.anc(root.left, p, q)
+        r = self.anc(root.right, p, q)
+        if l and r: return root  #2个都找到。在root   # 这一行只会运行一次。
         if l: return l  #找到一个。都在左边      .
         else: return r  #找到一个。都在右边

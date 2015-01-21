@@ -23,7 +23,15 @@ r:0,1,2,3,4,5
 只能为1,5，第一种就是6q+1,第二种是6q+5 = 6(q+1)-1
 
 '''
+# G家
 
+
+#每6个数中。 。  去掉偶数。 去掉各位数字和为3的数。  还剩下2个奇数。
+
+
+
+#剩下的就是暴力。  实质上还是暴力法。
+'''
 def specificPrimes():
     primes = [2]
     for i in range(3, 10**5, 2):
@@ -56,5 +64,5 @@ def specificPrimes():
     return largePrimes
 
 print specificPrimes()
-
+'''
 

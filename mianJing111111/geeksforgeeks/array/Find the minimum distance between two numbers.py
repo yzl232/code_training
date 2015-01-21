@@ -19,9 +19,9 @@ Output: Minimum distance between 3 and 2 is 1.
 '''
 class Solution:
     def findMinD(self, arr, x, y):
-        n = len(arr); minD = n+1;  prev = None  #巧妙，只用了一个prev
+        n = len(arr); ret = n+1;  prev = None  #巧妙，只用了一个prev
         for i in range(n):
             if arr[i]==x or arr[i]==y:
-                if prev and arr[prev]!=arr[i]:  minD = min(minD, i-prev)
+                if prev and arr[prev]!=arr[i]:  ret = min(ret, i-prev)
                 prev =i
-        return minD if minD!=n+1 else None
+        return ret if ret!=n+1 else None

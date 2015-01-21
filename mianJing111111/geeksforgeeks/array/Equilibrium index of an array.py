@@ -16,16 +16,17 @@ Write a function int equilibrium(int[] arr, int n); that given a sequence arr[] 
 #O(n).
 
 #因为是连续的，  可以用2个auxiliary array，  left sum, right sum。
-
+#不包括恩深
 # 可以优化到in place
 '''
 The idea is to get total sum of array first. Then Iterate through the array and keep updating the left sum which is initialized as zero. In the loop, we can get right sum by subtracting the elements one by one.
 '''
+#题目例子。 意思就是不包括本身的leftSum,  right Sum
 
-class Solution:
+class Solution: #0~n-1
     def equi(self, arr):
         leftS = 0;   rightS = sum(arr)  #可以想象它随着指针动态移动。
         for i in range(len(arr)):
             rightS-= arr[i]
-            if leftS == rightS: return i
+            if leftS == rightS: return i+1
             leftS+=arr[i]

@@ -9,6 +9,8 @@ Find a triplet from three linked lists with sum equal to a given number
 就是简单地3sum.
 reverse一下chead
 '''
+#没有见过的题目。 不过和leetcode联系紧密
+
 class Solution:
     def findTrip(self, h1, h2, h3, target):
         h3 = self.reverse(h3)  #c要逆序排序

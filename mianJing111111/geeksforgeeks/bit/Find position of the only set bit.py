@@ -7,6 +7,8 @@ Given a number having only one ‘1’ and all other ’0’s in its binary repr
 
 其实直接用log2就好了。
 '''
+#只有一个， 意思就是2的power数了。
+
 class Solution:
     def findPos(self, n):
         pos = 0

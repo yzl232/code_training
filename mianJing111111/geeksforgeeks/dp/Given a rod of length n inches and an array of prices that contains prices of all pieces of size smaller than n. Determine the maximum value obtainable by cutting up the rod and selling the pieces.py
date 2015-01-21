@@ -29,7 +29,7 @@ cutRod(n) = max(price[i] + cutRod(n-i-1)) for all i in {0, 1 .. n-1}
 # dp
 class Solution:
     def curRod(self, prices, n):
-        dp = [0 for i in range(n+1)]
+        dp = [0]*(n+1)
         for i in range(1, n+1):
-            dp[i] =max (prices[j] + dp[i-j]   for j in range(1, i+1))  #j代表size
+            dp[i] =max (prices[x] + dp[i-x]   for x in range(1, i+1))  #j代表size
         return dp[-1]

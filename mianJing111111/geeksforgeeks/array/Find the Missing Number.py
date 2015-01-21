@@ -31,3 +31,4 @@ METHOD 2(Use XOR)
   3) XOR of X1 and X2 gives the missing number.
 
 '''
+

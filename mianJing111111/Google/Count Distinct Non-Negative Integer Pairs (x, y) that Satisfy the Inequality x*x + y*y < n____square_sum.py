@@ -35,6 +35,8 @@ class Solution:
             x+=1
         return ret
 
+
+
     def countAll(self, n):
         c = 0
         while c*c<n:  #先令x=0; 找到此时的y值。

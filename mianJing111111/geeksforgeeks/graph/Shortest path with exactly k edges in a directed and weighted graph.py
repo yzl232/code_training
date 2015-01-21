@@ -17,24 +17,26 @@ The idea is to browse through all paths of length k from u to v using the approa
 这里我假定没有graph[u][v]就是权值。  权值为空，则没有path
 '''
 
+# # graph[u][v]代表weight
+
+
 class Solution:
     def countWalks(self, graph, u, v, k):
-        self.result = 10**10
+        self.ret = 10**10
         self.dfs(graph, u, v, k, 0)
-        return self.result
+        return self.ret
 
-    def dfs(self, graph, u, v, k, tmpResult):
+    def dfs(self, graph, u, v, k, cur):
         if k==0 and u==v:
-            self.result = min(self.result, tmpResult)
+            self.ret = min(self.ret, cur)
             return
-        if k==1 and graph[u][v] != None:
-            self.result = min(self.result, tmpResult+ graph[u][v])
+        if k==1 and graph[u][v] != None:  #这道题目似乎0， 和None不一样的意思。
+            self.ret = min(self.ret, cur+ graph[u][v])
             return
         if k<=0: return None  #注意确实要放在这里比较好
         for i in range(len(graph)):
-            if graph[u][i] != None:
-                if u!=i and v!=i:
-                    self.dfs(graph, i, v, k-1, tmpResult+graph[u][i]) #u=>i=>v         1+ k-1 steps
+            if i!=u and i!=v and graph[u][i]!=None:
+                    self.dfs(graph, i, v, k-1, cur+graph[u][i]) #u=>i=>v         1+ k-1 steps
 
 
 

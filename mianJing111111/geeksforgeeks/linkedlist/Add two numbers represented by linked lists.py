@@ -35,6 +35,9 @@ Following are the steps.
 
 '''
 
+#很蛋疼。 一般来说reverse， 然后从最低的digit开始弄。
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -42,33 +45,31 @@ class ListNode:
 
 class Solution:
     def findLength(self, n):
-        count = 0
+        cnt = 0
         while n:
-            count +=1
+            cnt +=1
             n = n.next
-        return count
+        return cnt
 
     def add(self, l1, l2):
         state = self.findLength(l1) - self.findLength(l2)
         self.carry = 0
         ret = self.help(l1, l2, state)
         if self.carry>0:
-            tmp = ListNode(self.carry)
-            tmp.next = ret
-            ret = tmp
+            t = ListNode(self.carry)
+            t.next = ret
+            ret = t
         return ret
 
     def help(self, p1, p2, state):
         if not p1 and not p2: return
-        if state<0:
-            return self.help(p2, p1, 0-state)
-        ret = ListNode(0)
+        if state<0:   return self.help(p2, p1, 0-state)   #确保l1更长。
+        x = ListNode(0)
         if state>0:  # 长度不相等。直接跳过去。
-            ret.next = self.help(p1.next, p2, state-1)
-            ret.val = self.carry+p1.val
+            x.next = self.help(p1.next, p2, state-1)
+            x.val = self.carry+p1.val
         elif state==0:
-            ret.next = self.help(p1.next, p2.next, 0)
-            ret.val = self.carry+p1.val+p2.val
-        self.carry = ret.val/10
-        ret.val %=ret.val
-        return ret
+            x.next = self.help(p1.next, p2.next, 0)  # l2不动。 只移动l1.
+            x.val = self.carry+p1.val+p2.val
+        self.carry, x.val= x.val/10, x.val%10
+        return x

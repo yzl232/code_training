@@ -13,16 +13,18 @@ O(n**k)
 
 '''
 
+# 用memoization 就好。
+
 class Solution:
     def countWalks(self, graph, u, v, k):
-        if k==0 and u==v: return 1
+        if k==0 and u==v: return 1  #
         if k==1 and graph[u][v]: return 1
         if k<=0: return 0  #注意确实要放在这里比较好
-        count = 0
+        cnt = 0
         for i in range(len(graph)):
             if i==u or i==v: continue
-            if graph[u][i]: count+=self.countWalks(graph, i, v, k-1) #u=>i=>v         1+ k-1 steps
-        return count
+            if graph[u][i]: cnt+=self.countWalks(graph, i, v, k-1) #u=>i=>v         1+ k-1 steps
+        return cnt
 
 
 '''

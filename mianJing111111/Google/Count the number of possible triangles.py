@@ -22,6 +22,10 @@ start, end.
 然后end-1,  继续。看start多少种。
 '''
 #一个for 循环。一个while， 就是 3 sum的变体
+#实质上是3sum
+#不是G家。 但是很像的那道是G家。
+
+
 class Solution:
     def getCountTriangles(self, arr):
         if len(arr)<3: return 0
@@ -41,3 +45,4 @@ s = Solution()
 print s.getCountTriangles([10, 21, 22, 100, 101, 200, 300])
 #和那个count  平方数目的也很像
 #Count Distinct Non-Negative Integer Pairs (x, y) that Satisfy the Inequality
+# Let's say there is a double square number X

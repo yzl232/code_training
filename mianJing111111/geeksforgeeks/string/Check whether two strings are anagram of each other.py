@@ -5,4 +5,5 @@ Write a function to check whether two given strings are anagram of each other or
 sort简单
 
 可以用hash的办法。 count 。  O(n)
+或者arr[26]
 '''

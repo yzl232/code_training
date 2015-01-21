@@ -30,22 +30,20 @@ Method 2 (Efficient)
 class Solution:
     def find(self, arr):
         n =len(arr)
-        lMin = [arr[i] for i in range(n)]
-        rMax = lMin[:]
-        for i in range(1, n):
-            lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
-        for i in range(n-2, -1, -1):
-            rMax[i] = max(rMax[i+1], arr[i])
+        lMin = arr[:]; rMax = arr[:]
+        for i in range(1, n):   lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
+        for i in range(n-2, -1, -1):    rMax[i] = max(rMax[i+1], arr[i])
         i=j=0; ret=-1  # 本来想让i=0,  j=n-1。 似乎还是不可以。必须都从0开始。 此时min是最坏情况。 max是最好情况
         while j<n and i<n:         #类似  i=0,  j=n-1
             if lMin[i]>=rMax[j]:  i+=1
             else: #find one
-                ret = max(ret, j-i+1)
+                ret = max(ret, j-i)
                 j+=1  #找到合适的了。 继续往右。直到没有为止。
         return ret
 s = Solution()
 print s.find([34, 8, 10, 3, 2, 80, 30, 33, 1])
 
+# 起始点的选择：  必须是大于，就一定这边走， 小于，就一定要那样走的点。
 
 
 '''
@@ -81,8 +79,7 @@ Solution:
 class Solution6:
     def find3(self, arr):
         n =len(arr)
-        lMin = [arr[i] for i in range(n)]
-        rMax = lMin[:]
+        lMin = arr[:];   rMax = arr[:]
         for i in range(1, n):
             lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
         for i in range(n-2, -1, -1):

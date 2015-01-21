@@ -11,14 +11,14 @@ hashtable + double linkedlist   艹。我的想法是正确的。
 
 伪代码是这样：
 
- d[key] = (value, pointerToNode)
+ d[key] = (cnt, pointerToNode)
 
 双链表只保存出现了一次的东东。
 
 if a not in d:
     node = Node(a)
     doublLinkedList.addNodeToTail()
-    d[key] = (value, node)
+    d[key] = (cnt, node)
 else:
     node = d[key][1]
     doubleLinkedList.remove()

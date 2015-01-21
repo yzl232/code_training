@@ -1,6 +1,6 @@
 # encoding=utf-8
 '''
-rint all nodes at distance k from a given node
+print all nodes at distance k from a given node
 
 Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node. No parent pointers are available.
 
@@ -32,10 +32,13 @@ Finding the first type of nodes is easy to implement. Just traverse subtrees roo
 How to find nodes of second type? For the output nodes not lying in the subtree with the target node as the root, we must go through all ancestors. For every ancestor, we find its distance from target node, let the distance be d, now we go to other subtree (if target was found in left subtree, then we go to right subtree and vice versa) of the ancestor and find all nodes at k-d distance from the ancestor.
 '''
 #来自   Print nodes at k distance from root
+
+#太难了。 决定放弃此题。
+
 class Solution:
     def findKDist(self, root, target, k):
         self.ret =[]
-        self.down(target, k)
+        self.down(target, k)  #从target往下搜。
         self.up(root, target, k)
         return self.ret
 
@@ -53,7 +56,7 @@ class Solution:
         n1 = self.up(root.left, target, k)  #target要么在n1, 要么在n2
         if n1 !=-1:  #Check if target node was found in left subtree
             if (n1+1)==k:  self.ret.append(root.val)  #左子树是n1,  parent是n1+1
-            else:  self.down(root.right, k-n1-2)    #右子树是n1+2
+            else:  self.down(root.right, k-n1-2)    #右子树是n1+2.      n1+1<k
             return 1+n1
         n2 = self.up(root.right, target, k)
         if n2!=-1:
@@ -70,3 +73,19 @@ class Solution:
         d = self.findLevel(root.left, level+1)
         if d !=-1: return d
         return self.findLevel(root.right,  level+1)
+#下面次啊是findLevel最好的办法
+'''
+#shortest path 里面有用到。
+class Solution:
+    def findLevel(self, root, node):
+        self.ret = None; self.node = node
+        self.dfs(root, 1)
+        return self.ret
+
+    def dfs(self, root, level): #找一个子节点到root得距离
+        if not root: return
+        if self.ret: return
+        if root == self.node:     self.ret = level
+        self.dfs(root.left, level+1)
+        self.dfs(root.right,  level+1)
+'''

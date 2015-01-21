@@ -16,7 +16,7 @@ Following are the steps to find all prime factors.
 
 '''
 
-
+# 见 primeNumDecide这个文件
 def isprime(n):
     if n<=1: return False
     if n==2 or n==3: return True
@@ -27,21 +27,18 @@ def isprime(n):
 
 #下面的方法。 O(sqrt(n))   复杂度要更好一些。
 
-class Solution:  #因为只需要prime的factor。不是所有factors
+class Solution:  #因为只需要prime的factor。不是所有factors    #核心就是一个while 循环
     def primeFactors(self, n):
-        result = []
+        ret = []
         while n%2==0:
-            result.append(2)
-            n = n/2
+            ret.append(2)
+            n/=2
         for i in range(3, int(n**0.5)+1, 2):
-            while n%i==0:
+            while n%i==0:  #里面那个while循环就是可以研究本身是不是prime。  也去除了比如3的倍数。 去除了9。去除了合数
                 n/=i
-                result.append(i)
-        if n>2:   #里面那个while循环就是可以研究本身是不是prime。  也去除了比如3的倍数。 去除了9
-            result.append(n) # 除完了居然还大于2，说明本身是素数。
-        return result
-
-
+                ret.append(i)
+        if n>=3:    ret.append(n) # 一般的数除完 n==1.         除完了居然还大于2，说明本身是素数。   #由上面的 isPrime函数也可以判断。
+        return ret
 
 s = Solution()
 print s.primeFactors(315)
@@ -57,15 +54,10 @@ e.g. input : 20   output: 1 2 4 5 10 20
 
 class Solution22:
     def allFactors(self, n):
-        ret = set(1, n)
-        for i in range(2, int(n**0.5)+1):
-            if n%i==0:
-                ret.add(i)
-                ret.add(n/i)
-        return ret
-
-#O(sqrt(n))
-
+        ret = [1, n]
+        for i in range(2, int(n**0.5)+1):        #不仅仅是质数。 合数的因子也需要。  实际上第一个isPrime()函数也可以这样。
+            if n%i==0:    ret+=[i, n/i]
+        return set(ret)                     #O(sqrt(n))
 
 s2 = Solution22()
 print s2.allFactors(20)
@@ -82,21 +74,22 @@ print s2.allFactors(2*3*7)
 
 也可以用DFS做。不难。 和subsets leetcode一样的。
 
-'''
 
+依稀记得是G家的题目
+'''
 print s2.allFactors(2*3*7)
 
 class SolutionDFS:
     def all237(self, arr):
         arr.sort()
-        self.result = []
+        self.ret = []
         self.dfs(1, arr)
-        return self.result
+        return self.ret
 
-    def dfs(self, tmp, candidates):
-        self.result.append(tmp)
-        for i in range(len(candidates)):
-            self.dfs(tmp*candidates[i], candidates[i+1:])
+    def dfs(self, cur, cands):
+        self.ret.append(cur)
+        for i in range(len(cands)):
+            self.dfs(cur*cands[i], cands[i+1:])
 
 d = SolutionDFS()
 print d.all237([2, 3, 7])

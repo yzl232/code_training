@@ -22,14 +22,14 @@ class Solution:
         while len(stack)>1:  #eliminating stage
             u = stack.pop()
             v = stack.pop()
-            if self.hasLinkTo(u, v):
-                stack.append(v)
+            if self.hasLinkTo(u, v):   stack.append(v)
             else:   stack.append(u)
         if not self.verify(nodes, stack[0]): return False   # no celebrity.
         return stack[0]
 
     def verify(self, peoples, c):
         for p in peoples:
+            if p==c: continue
             if not self.hasLinkTo(p, c): return False
         return True
 

@@ -35,3 +35,4 @@ A Self Balancing Binary Search Tree (AVL, Red Black,.. etc) can be used to get t
 
 从后往前走，每次插入bst
 '''
+#如果是求总数目。 那就是count inversions in sorted array

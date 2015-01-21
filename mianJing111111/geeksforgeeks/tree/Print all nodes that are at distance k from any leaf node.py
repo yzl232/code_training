@@ -16,6 +16,8 @@ The idea is to traverse the tree. Keep storing all ancestors till we hit a leaf 
 保存所有的ancestor， 也就是path.  然后从path反向数数
 
 '''
+
+#而且它都说了， k< height 。  完全没有前面那道题目的复杂情况
 class Solution:
     def findK(self, root, k):
         self.ret = set([]);  self.k = k
@@ -23,7 +25,7 @@ class Solution:
         return self.ret
 
     def dfs(self, root, path):
-        if not root:  return [0]
+        if not root:  return
         if not root.left and not root.right:
             if len(path)>=self.k:   self.ret.add(path[-self.k])
             return

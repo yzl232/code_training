@@ -35,5 +35,5 @@ class Solution:
         dp  =[[0 for i in range(n+1)]for j in range(n+1)]
         for j in range(n+1):
             for i in range(j-2, -1, -1):
-                dp[i][j] = min(dp[i][k]+dp[k][j]+ length[k] for k in range(i+1, j))
+                dp[i][j] = min(dp[i][k]+dp[k][j]+ length[j-i] for k in range(i+1, j))
         return dp[0][-1]  #长度n-1。这是最后一步了。

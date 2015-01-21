@@ -20,11 +20,11 @@ class Solution:
     def skipMdelN(self, h, m, n):
         if not h: return
         cur = h
-        for i in range(m-1):
+        for i in range(m-1):   #有点corner case。 拿简单例子m=2, n=2试验一下。
             if cur: cur = cur.next
         if not cur: return
         t = cur.next
         for i in range(n):
             if t: t = t.next
         cur.next = t
-        self.skipMdelN(t, m, n)
+        self.skipMdelN(t, m, n)     #continue the same till end of the linked list.

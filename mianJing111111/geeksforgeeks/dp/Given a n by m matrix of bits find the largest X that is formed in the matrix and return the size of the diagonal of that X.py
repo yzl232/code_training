@@ -71,53 +71,30 @@ time complexity O(n*m), space Complexity O(n*m).
 
 #这个毫无疑问最优解。
 '''
-class Solution:
-    def findX(self, matrix):
+class Solution:    #写出了左上。 全部相反就是右下。
+    def findX(self, matrix):    #然后各去一半就是右上
         if not matrix: return 0
-        m = len(matrix); n = len(matrix[0])
-        topLeft = [[ 0  for j in range(n)] for i in range(m)]
-        topRight = topLeft[:]
-        botLeft =  topLeft[:]
-        botRight =  topLeft[:]
+        m = len(matrix); n = len(matrix[0]); ret = 0
+        def cp():   return [x[:] for x in matrix]
+        topL = cp();    topR = cp();  botL =  cp();   botRight =  cp()
 
-        #写出了左上。 全部相反就是右下。
-        #然后各去一半就是右上
-
-
-        for i in range(m):  #第一行
-            topLeft[i][0] = matrix[i][0]
-        for i in range(n):# 第一列
-            topLeft[0][j] = matrix[0][j]
         for i in range(1, m):
             for j in range(1, n):
-                topLeft[i][j]  = topLeft[i-1][j-1]+1 if matrix[i][j] else 0
+                topL[i][j]  = topL[i-1][j-1]+1 if matrix[i][j] else 0
 
-        for i in range(m):  #右边的边界
-            topRight[i][n-1] = matrix[i][n-1]  #与第一个只有一半是相反的。也可以照抄
-        for i in range(n):
-            topRight[0][i] = matrix[0][i]
-        for i in range(1, m):  #右上角开始
+        for i in range(1, m):  #右上角开始   #右边的边界  #与第一个只有一半是相反的。也可以照抄
             for j in range(n-2, -1,  -1):
-                topRight[i][j] = topRight[i-1][j+1]+1 if matrix[i][j] else 0
+                topR[i][j] = topR[i-1][j+1]+1 if matrix[i][j] else 0
 
-        for i in range(m):  #左边界
-            botLeft[i][0] = matrix[i][0]
-        for i in range(n):  #如果怕搞混淆，记住。 右上和左下相反。    左上，右下相反。  写了两个，另2个照抄
-            botLeft[m-1][i] = matrix[m-1][i]
-        for i in range(m-2, -1, -1): #左下角开始
+        for i in range(m-2, -1, -1): #左下角开始   #左边界   #如果怕搞混淆，记住。 右上和左下相反。    左上，右下相反。  写了两个，另2个照抄
             for j in range(1, n):
-                botLeft[i][j] = botLeft[i+1][j-1]+1  if matrix[i][j] else 0
+                botL[i][j] = botL[i+1][j-1]+1  if matrix[i][j] else 0
 
-        for i in range(m):
-            botRight[i][n-1] = matrix[i][n-1]
-        for i in range(n):
-            botRight[m-1][i] = matrix[m-1][i]
         for i in range(m-2, -1, -1):
             for j in range(n-2, -1, -1):
                 botRight[i][j] = botRight[i+1][j+1] if matrix[i][j] else 0
 
-        res = 0
         for i in range(m):
             for j in range(m):
-                res = max(res,  min(botRight[i][j], botLeft[i][j], topRight[i][j], topLeft[i][j]))
-        return res
+                ret = max(ret,  min(botRight[i][j], botL[i][j], topR[i][j], topL[i][j]))
+        return ret

@@ -37,21 +37,21 @@ class Solution:
         else: return r  #找到一个。在右边
 
     def findShortestPath(self, root, a, b):
-        self.path = []
+        self.rets = []
         lca = self.findAncestor(root, a,b)
         self.a = a; self.b = b
         self.shortestPath(lca, [])
-        path1 = self.path[0][::-1] #逆转一下path
-        path2 = self.path[1][1:]   #多了一个root
+        path1 = self.rets[0][::-1] #逆转一下path
+        path2 = self.rets[1][1:]   #多了一个root
         return path1+path2
 
-    def shortestPath(self, root, tmpPath):    #然后就是普通的DFS从ancester找path
+    def shortestPath(self, root, cur):    #然后就是普通的DFS从ancester找path
         if not root: return
-        if root.val == self.a.val or root.val == self.b.val:
-            self.path.append(tmpPath+[root.val])
+        if root in (self.a, self.b):
+            self.rets.append(cur+[root.val])
             return
-        self.shortestPath(root.left,tmpPath+[root.val])
-        self.shortestPath(root.right,tmpPath+[root.val])
+        self.shortestPath(root.left,cur+[root.val])    #path这种都是晚一步。  因为不知道left是不是有val值
+        self.shortestPath(root.right,cur+[root.val])
 
 #如果只是求距离
 
@@ -61,19 +61,24 @@ class Solution5:
         if root == p or root == q: return root
         l = self.findAncestor(root.left, p, q)
         r = self.findAncestor(root.right, p, q)
-        if l and r: return root  #2个都找到。在root
-        if l: return l  #找到一个。在左边
-        else: return r  #找到一个。在右边
+        if l and r: return root      #2个都找到。在root
+        if l: return l        #找到一个。在左边
+        else: return r      #找到一个。在右边
 
-    def findLevel(self, root, node, level): #找一个子节点到root得距离
-        if not root: return -1  #没找到，就是-1
-        if root == node: return level
-        d = self.findLevel(root.left, level+1)
-        if d !=-1: return d
-        return self.findLevel(root.right,  level+1)
+    def findLevel(self, root, node):
+        self.ret = None; self.node = node
+        self.dfs(root, 1)
+        return self.ret
+
+    def dfs(self, root, level): #找一个子节点到root得距离
+        if not root: return
+        if self.ret: return
+        if root == self.node:     self.ret = level
+        self.dfs(root.left, level+1)
+        self.dfs(root.right,  level+1)
 
     def findDistance(self, root, n1, n2):
         lca = self.findAncestor(root, n1, n2)
-        d1 = self.findLevel(lca, n1, 0)
-        d2 = self.findLevel(lca, n2, 0)
+        d1 = self.findLevel(lca, n1)
+        d2 = self.findLevel(lca, n2)
         return d1+d2

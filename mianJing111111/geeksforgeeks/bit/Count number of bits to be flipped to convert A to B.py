@@ -3,12 +3,22 @@
 Count number of bits to be flipped to convert A to B
 '''
 class Solution:
-    def coutBits(self, n):
-        count = 0
+    def cntBits(self, n):
+        cnt=0
         while n:
-            count+=n&2   #就是求binary形式那道题      n&1
-            n=n>>1
-        return count
+            n&=n-1
+            cnt+=1
+        return cnt
 
     def countFlip(self, a, b):
-        return self.coutBits(a^b)
+        return self.cntBits(a^b)
+
+'''
+Solution:
+
+  1. Calculate XOR of A and B.
+        a_xor_b = A ^ B
+  2. Count the set bits in the above calculated XOR result.
+        countSetBits(a_xor_b)
+
+'''

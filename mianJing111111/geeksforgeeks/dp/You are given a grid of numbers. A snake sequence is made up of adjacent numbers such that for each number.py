@@ -13,17 +13,15 @@ Given a grid, find the longest snake sequences and their lengths (so there can b
 
 #关于ret。还得看dp关系式。  一般一维的
 class Solution:
-    def snake(self, matrix):
-        if not matrix: return 1
-        m = len(matrix); n = len(matrix[0])
+    def snake(self, mtx):
+        if not mtx: return 1
+        m = len(mtx); n = len(mtx[0]);  ret = 1
         dp = [[1 for i in range(m)]for j in range(n)]
-        ret = 1
         for i in range(m):
             for j in range(n):
-                if j>0 and abs(matrix[i][j-1] - matrix[i][j]) == 1:
-                    dp[i][j] = max(dp[i][j], dp[i][j-1]+1)
-                if i>0 and abs(matrix[i-1][j] - matrix[i][j]) == 1:
-                    dp[i][j] = max(dp[i][j], dp[i-1][j]+1)
+                if j>0 and abs(mtx[i][j-1] - mtx[i][j]) == 1:     dp[i][j] = max(dp[i][j], dp[i][j-1]+1)
+                if i>0 and abs(mtx[i-1][j] - mtx[i][j]) == 1:     dp[i][j] = max(dp[i][j], dp[i-1][j]+1)
                 ret = max(ret, dp[i][j])
         return ret
 #下面写出找到所有最大sequence的代码。求所有。只能用DFS。
+#因为是+1， -1， 所以无向。 。  如果是increse sequence, 要考虑从下往上的sequence， 就会比较麻烦。 ，

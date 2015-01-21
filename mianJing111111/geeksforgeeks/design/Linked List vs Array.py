@@ -45,3 +45,9 @@ Deletion is also expensive with arrays until unless some special techniques are 
 
 # insert   delete 不贵
 # random access  没有
+
+
+#关于locality cache的解释
+'''
+ arrays are contiguous memory blocks, so large chunks of them will be loaded into the cache upon first access. This makes it comparatively quick to access future elements of the array. Linked lists on the other hand aren't necessarily in contiguous blocks of memory, and could lead to more cache misses, which increases the time it takes to access them.
+'''

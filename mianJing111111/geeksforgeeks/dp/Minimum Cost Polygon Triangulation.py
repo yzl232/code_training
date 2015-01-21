@@ -28,7 +28,7 @@ dp写法。
 O(n3)
 '''
 
-class Solution:
+class Solution6:
     def distance(self, a, b):
         return (b[0]-a[0])**2+(b[1]-a[1])**2
 
@@ -40,6 +40,6 @@ class Solution:
         n = len(points)
         dp  =[[0 for i in range(n)]for j in range(n)]
         for j in range(n):
-            for i in range(j-3, -1, -1):  # i=0,  j=3
-                dp[i][j] = min(dp[i][k]+dp[k][j]+ self.cost(i, k, j, points) for k in range(i+1, j))
+            for i in range(j-2, -1, -1):  # i=0,  j=3
+                dp[i][j] = min(dp[i][k]+dp[k][j]+ self.cost(i, k, j, points) for k in range(i+1, j))  #
         return dp[0][n-1]  #长度n-1。这是最后一步了。

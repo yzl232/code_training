@@ -35,9 +35,9 @@ We can solve this problem in O(n) time using a simple loop. Let the input array 
 class Solution:  #因为sorted。才会这么巧妙
     def find(self, arr):
         ret = 1   #必须从1开始。因为smallest positive int 就是1
-        for i in range(len(arr)):
-            if arr[i]>ret: break #find a gap
-            ret+=arr[i]
+        for x in arr:
+            if x>ret: return ret      #find a gap
+            ret+=x
         return ret
 s = Solution()
 print s.find([1, 2, 5, 10, 20, 40])

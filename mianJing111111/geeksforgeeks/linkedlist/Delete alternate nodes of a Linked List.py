@@ -10,7 +10,7 @@ python有垃圾回收，不用考虑垃圾回收
 有iterative还有recursion两种。
 '''
 class Solution:
-    def delAl(self, h):
+    def delAl(self, h):    #背下  h.next = h.next.next  就可以了
         if not h: return
-        if h.next:  h.next = h.next.next
+        h.next = h.next.next
         self.delAl(h.next)

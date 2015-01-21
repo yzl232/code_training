@@ -20,7 +20,7 @@ Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree
 '''
 class Solution:  #略类似delete
     def mirror(self, root):
-        if not root:    return
+        if not root: return
         self.mirror(root.left)
-        self.mirror(root.right) #先recursion  子树以后，再弄父节点。
-        root.left, root.right =  root.right, root.left
+        self.mirror(root.right)
+        root.left, root.right = root.right, root.left

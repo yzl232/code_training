@@ -10,11 +10,10 @@ The idea is to maintain two states: IN and OUT. The state OUT indicates that a s
 '''
 class Solution:
     def cont(self, s):
-        flg = False;  cnt = 0
-        for i in range(len(s)):
-            if s[i]==' ' or s[i]=='\n' or s[i]=='\t':
-                flg = False
-            elif flg==False:   #这个flag用得好 。 由False变成True的时候，cnt+1
-                flg=True
+        isW = False;  cnt = 0
+        for ch in s:
+            if ch in [' ', '\n', '\t']:     isW = False           #s[i]==' ' or s[i]=='\n' or s[i]=='\t':
+            elif isW==False:   #这个flag用得好 。 由False变成True的时候，cnt+1
+                isW=True
                 cnt+=1
         return cnt

@@ -32,7 +32,7 @@ class Solution:
         for ch in s:
             if ch not in d: d[ch]=0
             d[ch]+=1
-        arr = [None for i in range(n)]
+        arr = [None] * n
         h = [(0-d[ch], ch) for ch in d]
         heapq.heapify(h)     #我这里用负数。解决了max Heap.   min Heap 的问题
         for i in range(len(h)):
@@ -40,9 +40,7 @@ class Solution:
             freq = 0-p[0]; ch =p[1]
             while arr[start]: start+=1    #找到填充的起点。
             for k in range(freq):  
-                if start+k*dist >=n:
-                    print "Cannot be rearranged"
-                    return
+                if start+k*dist >=n:  raise ValueError("can not be arranged")
                 arr[start+k*dist] = ch
         return ''.join(arr)
 

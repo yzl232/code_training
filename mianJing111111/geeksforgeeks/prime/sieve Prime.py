@@ -13,7 +13,13 @@ Following is the algorithm to find all the prime numbers less than or equal to a
     Find the first number greater than p in the list that is not marked. If there was no such number, stop. Otherwise, let p now equal this number (which is the next prime), and repeat from step 3.
 
 '''
+class Solution:
+    def sieve(self,n):
+        noprimes = set(j for i in range(2, int(n**0.5)+1) for j in range(i*i, n+1, i))   #比如2是prime。  2*2却必然不是。  比如3是。
+        return [x for x in range(2, 100) if x not in noprimes]
 
+
+'''
 class Solution:
     def sieve(self,n):
         noprimes = set()
@@ -23,10 +29,12 @@ class Solution:
                 ret.append(i)
                 noprimes.update(range(i*i, n+1, i))   #对素数，追加 no primes
         return ret
-
+'''
 
 
 noprimes = set(j for i in range(2, 8) for j in range(i*i, 100, i)) #就是返回2，3， 4， 5， 6， 7的倍数.  8, 9不需要
 print noprimes
 primes = [x for x in range(2, 100) if x not in noprimes]
 print primes
+s = Solution()
+print s.sieve(100)

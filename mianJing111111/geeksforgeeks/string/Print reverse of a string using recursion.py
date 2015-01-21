@@ -7,12 +7,12 @@ Program:
 class Solution:
     def reverse(self, s):
         self.ret =''
-        self.hp(s)
+        self.help(s)
         return self.ret
 
-    def hp(self, s):
+    def help(self, s):
         if not s: return
-        self.hp(s[1:])   #类似stack
+        self.help(s[1:])   #类似stack
         self.ret+=s[0]
 
 s = Solution()

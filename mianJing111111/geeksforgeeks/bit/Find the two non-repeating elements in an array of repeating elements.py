@@ -16,27 +16,23 @@ We have chosen the rightmost set bit of the xor as it is easy to find out.
 
 
 第一道题，是说你知道(n&(n-1))得出什么结果吗？
-  “n&(n-1)”改变最后一位digit 是1得
-
+  “n&(n-1)”改变最后一位digit 是1得.  最后一个set bit 设置为0
 
 举个例子就好。 3&(3-1)
-
 '''
 
 class Solution:
     def get2NonRepeatingNos(self, arr):
         xor = 0
-        for i in arr:
-            xor ^= i
-        bit = xor & ~(xor-1)  #Get the rightmost set bit in    set_bit_no
+        for i in arr:    xor ^= i      # 完成后,  x^y = xor
+        bit = xor & ~(xor-1)  #Get the rightmost set bit in    set_bit_no.
         x = y =0
         for i in arr:
-            if bit & i:
-                x ^=i
-            else:
-                y ^=i
+            if bit & i:   x ^=i
+            else:   y ^=i
         return x, y
 
 s = Solution()
 print s.get2NonRepeatingNos([2, 3, 7, 9, 11, 2, 3, 11])
 #和这道题目重复： Find the two numbers with odd occurrences in an unsorted array
+# leetcode single number 变体

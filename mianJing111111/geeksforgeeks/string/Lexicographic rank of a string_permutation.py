@@ -54,9 +54,8 @@ class Solution:
         m = self.fact(n)
         rank = 0
         for i in range(len(arr)):
-            m/= n-i
-            cnt = self.countSmallerRight(arr, i)
-            rank+=cnt*m
+            m/= n-i     #n, n-1, n-2, ...
+            rank+=m*(self.countSmallerRight(arr, i))        #在它前面的有多少个。
         return rank+1
 s = Solution()
 print s.findRank(['c', 'b', 'a'])

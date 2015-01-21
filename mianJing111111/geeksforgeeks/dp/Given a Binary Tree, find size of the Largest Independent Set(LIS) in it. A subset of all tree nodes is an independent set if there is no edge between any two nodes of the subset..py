@@ -13,7 +13,7 @@ Let LISS(X) indicates size of largest independent set of a tree with root X.
 
 
 '''
-
+# excl 有2个。  incl有5个。
 
 #递归
 class Solution:

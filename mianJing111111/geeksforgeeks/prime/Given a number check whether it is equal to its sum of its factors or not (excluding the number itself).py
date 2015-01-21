@@ -13,3 +13,4 @@ class Solution:
 
 s = Solution()
 print s.equalToallFactors(40)
+

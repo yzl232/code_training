@@ -32,6 +32,7 @@ class Solution:
                         dp[i][j] =max(dp[i][j], prices[k] + max(dp[i-w1][j] + dp[w1][j-h1],   dp[i][j-h1] + dp[i-w1][h1]))   #每块piece都要尝试
         return dp[-1][-1]  #每块剩下的有2种分法
 
+
 '''
 
 

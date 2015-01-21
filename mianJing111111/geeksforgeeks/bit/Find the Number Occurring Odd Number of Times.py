@@ -18,7 +18,7 @@ xor是O(n)
 class Solution:
     def findOnlyNumOdd(self, arr):
         s = 0
-        for i in arr:   s ^=i
+        for x in arr:   s ^=x
         return s
 s = Solution()
 print s.findNumOdd([1, 2, 3, 2, 3, 1, 3])

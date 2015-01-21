@@ -16,8 +16,11 @@ we take the difference with the minimum element found so far. So we need to keep
 #dp
 class Solution:
     def maxDiff(self, arr):
+        if not arr: raise  ValueError
         ret = 0;  minN = arr[0]
         for i in range(1, len(arr)):
             minN = min(arr[i], minN)
             ret = max(arr[i]-minN, ret)
         return ret
+
+# 比那道largest j-i要简单多了

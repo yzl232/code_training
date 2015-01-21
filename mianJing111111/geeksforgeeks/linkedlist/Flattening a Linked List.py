@@ -80,28 +80,36 @@ class Solution4: #如果只有2层
             if cur.child:   #如果有child。找到tail。连上
                 tail = cur.child
                 while tail.next: tail=tail.next
-                tail.next = cur.next
-                cur.next, cur.child= cur.child, None #clean next和child
-                cur = tail
+                tail.next = cur.next  #又是一个小连环
+                cur.next = cur.child  #clean next和child
+                cur.child = None
+                cur = tail  #连环因为是有序有逻辑，更好记忆。
             cur = cur.next
 
+
+
+
+
+#下面这道题目多次浪费大量时间。 别看了。
+'''
 #比较难。做了一个小时。 要先形象化想清楚。
 #recur一次后， h由L3, 变成L7，   L6连接L7
 class Solution6:
     def fill(self, h):  #不长。 可以背下
         if h:
-            cur = h
-            return self.flatten(cur, None)
+            self.flatten(h, None)
+            return h
 
     def flatten(self, h, toConnect):
         if h.child:
             t1, t2=h.child, h.next
-            h.child, h.next = None, h.child
+            h.next, h.child = h.child, None
             h = self.flatten(t1, t2)  #L3, 变成L7.    toConnect变成L7  #碰到child，更新toConnect
-            return h
+            return h   # 返回 toConnect 作为 新的h
         elif not h.next:        #find tail.   L6连接L7
             h.next = toConnect
             toConnect=None #已经连接上了
-            return toConnect
+            return None
         else: return self.flatten(h.next, toConnect)    #因为不用改变连接
 #想象一下移动linkedlist的过程。 不断从下面往中间插入。     必须用recursion。 必须用tail
+'''

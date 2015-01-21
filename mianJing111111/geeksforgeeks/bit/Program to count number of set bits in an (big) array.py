@@ -7,12 +7,12 @@ Program to count number of set bits in an (big) array
  The idea is to generate a look up for first 256 numbers (one byte)
 '''
 class Solution:
-    table = {}
     def cnt(self, x):
-        table = self.table
-        return table[(x) & 0xff]+table[(x>>8) & 0xff] + table[(x>>16) & 0xff]+table[(x>>27) & 0xff]
+        t = self.table
+        return t[(x) & 0xff]+t[(x>>8) & 0xff] + t[(x>>16) & 0xff]+t[(x>>27) & 0xff]
 
 #fill table   #dp
-    def fill(self):
-        for i in range(256):
+    def __init__(self):
+        self.table = {0:0}
+        for i in range(1, 256):
             self.table[i] = i&1+self.table[i>>1]

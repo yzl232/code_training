@@ -29,7 +29,7 @@ We can fill LGR[] in O(n) time.
 有相似处，也有不同处。左边是最大的小于自己的量。 本题都是正数。 右边也是最大的大于自己的量。
 
 
-
+# left array超级蛋疼。。
 
 
 '''
@@ -63,8 +63,7 @@ class Solution:
 
 class BST:
     pass
-s = Solution()
-print s.find3Biggest([6, 7, 8, 1, 2, 3, 9, 10])
+
 
 #-1, 6, 7, -1, 1, 2, 8, 10
 #10, 10, 10, 10, 10, 10, 10, 10, 10, -1
@@ -102,14 +101,14 @@ Solution:
 class Solution6:
     def find3(self, arr):
         n =len(arr);
-        lMin = [arr[i] for i in range(n)]
-        rMax = lMin[:]
+        lMin = arr[:]
+        rMax = arr[:]
         for i in range(1, n):
             lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
         for i in range(n-2, -1, -1):
             rMax[i] = max(rMax[i+1], arr[i])
         for i in range(n):
-            if lMin[i]<arr[i]<rMax[i]:  print lMin[i], arr[i], rMax[i]
+            if lMin[i]<arr[i]<rMax[i]:  print lMin[i], arr[i], rMax[i]  #写法很赞
 s = Solution6()
 print s.find3([12, 11, 10, 5, 6, 2, 30])
 print s.find3([2,4, 4, 4, 9, 5])

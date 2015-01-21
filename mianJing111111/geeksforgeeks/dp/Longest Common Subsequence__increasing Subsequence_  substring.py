@@ -32,7 +32,7 @@ class Solution:
 class Solution1:
     def lcs(self, x, y):
         m = len(x);  n= len(y)
-        dp = [[0 for i in range(n+1)] for j in range(m+1)]
+        dp = [[0 for i in range(n+1)] for j in range(m+1)]   #m+1是考虑了''空得字符。 这样初始化会更加容易一些。
         for i in range(1, m+1):
             for j in range(1, n+1):
                 if x[i-1]==y[j-1]: dp[i][j] = dp[i-1][j-1]+1
@@ -55,10 +55,10 @@ To get LIS of a given array, we need to return max(L(i)) where 0 < i < n
 
 '''
 
-class Solution:
+class Solution9:
     def lis(self, arr):
         ret = 0;  n = len(arr)
-        dp = [1 for i in range(n)]
+        dp = [1]*n
         for i in range(1, n):
             dp[i] = max([1+dp[j] for j in range(i) if arr[j]<arr[i]] +[1])
             ret = max(ret, dp[i])
@@ -93,31 +93,31 @@ class Solution4:
         dp = [ [0 for i in range(n+1)] for j in range(m+1)]
         for i in range(1, m+1):
             for j in range(1, n+1):
-                if x[i-1] == y[i-1]:
-                    dp[i][j] =  dp[i-1][j-1]+1
-                    ret = max(ret, dp[i][j])
-                else:   dp[i][j] = 0  #和 subsequence的不同在于这里
+                if x[i-1] == y[i-1]:   dp[i][j] =  dp[i-1][j-1]+1
+                ret = max(ret, dp[i][j])     # else:   dp[i][j] = 0 和 subsequence的不同在于这里
         return ret
 
 
 '''
 leetcode distinct subsequence
 '''
+
+
 class Solution:
     # @return an integer    http://blog.csdn.net/abcbc/article/details/8978146
     #if S[i-1] == T[j-1]:  dp[i][j] = dp[i-1][j-1] + dp[i-1][j]
     # else:  dp[i][j] = dp[i-1][j]
     #  initial:  0 for all    .    dp[i][0] = 1    dp[0][i] = 0 (delete all)   dp[0][0] = 1   注意到当最后的字符串相等的时候，我们可以让S匹配T[-1]或者不匹配TT[-t]
     def numDistinct(self, s, t):
-        lenS = len(s)
-        lenT = len(t)
-        dp = [[0 for j in range(lenT+1)] for i in range(lenS+1)]
-        for i in range(lenS+1):
+        m = len(s);  n = len(t)
+        dp = [[0 for j in range(n+1)] for i in range(m+1)]
+        for i in range(m+1):
             dp[i][0] = 1
-        for i in range(1, lenS+1):
-            for j in range(1, lenT+1):
+        for i in range(1, m+1):
+            for j in range(1, n+1):
                 dp[i][j] = dp[i-1][j-1] + dp[i-1][j] if s[i-1] == t[j-1] else dp[i-1][j]
         return dp[-1][-1]
+
 
 '''
 class Solution:
@@ -126,11 +126,10 @@ class Solution:
     # else:  dp[i][j] = dp[i-1][j]
     #  initial:  0 for all    .    dp[i][0] = 1    dp[0][i] = 0 (delete all)   dp[0][0] = 1
     def numDistinct(self, s, t):
-        if t=='': return 1
-        elif s=='': return 0
-        temp = self.numDistinct(s[:-1], t)
-        if s[-1] == t[-1]:
-            return self.numDistinct(s[:-1], t[:-1]) + temp
-        else:
-            return temp
+        if not t: return 1   #s必须match t. t一旦match完了，就是匹配
+        if not s: return 0
+        tmp = self.numDistinct(s[1:], t)
+        if s[0]==t[0]: return self.numDistinct(s[1:], t[1:])+tmp
+        else: return tmp
+
 '''

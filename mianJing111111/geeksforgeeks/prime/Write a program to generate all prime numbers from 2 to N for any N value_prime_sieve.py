@@ -3,6 +3,14 @@
 Write a program to generate all prime numbers from 2 to N for any N value
 '''
 
+#O(n**1.5)
+
+class Solution:
+    def sieve(self,n):
+        noprimes = set(j for i in range(2, int(n**0.5)+1) for j in range(i*i, n+1, i))   #比如2是prime。  2*2却必然不是。  比如3是。
+        return [x for x in range(2, 100) if x not in noprimes]
+
+'''
 class Solution:
     def primes(self, n):
         return [i for i in range(2, n+1) if self.isprime(i)]
@@ -15,7 +23,7 @@ class Solution:
         return True
 s = Solution()
 print s.primes(100)
-
+'''
 
 '''
 http://leetcode.com/2010/04/finding-prime-numbers.html

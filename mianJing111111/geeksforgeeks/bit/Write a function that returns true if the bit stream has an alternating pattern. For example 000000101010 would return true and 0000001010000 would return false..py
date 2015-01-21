@@ -3,14 +3,7 @@
 Write a function that returns true if the bit stream has an alternating pattern. For example 000000101010 would return true and 0000001010000 would return false.
 '''
 
-
 #直接这样：  b=a>>1;      if a&b==0 and a!=0: returnTrue
-
-
-
-
-
-
 
 '''
 bool patternCheck(int a)
@@ -23,3 +16,9 @@ if(n & (n-1)) == 0) return true;
 return false;
 }
 '''
+
+def check(a):
+    b = a>>1
+    n = a^b+1  # n=a&b
+    if n&(n-1)==0: return True  #简单的说，就是是不是2^n次方？  只有一个set bit
+    return False

@@ -23,10 +23,30 @@ C) Root data > key value, the ceil value may be in left subtree. We may find a n
 #理一下逻辑.  也利用了return的值
 class Solution:
     def ceil(self, root, val):
+        ret = None
+        while root:
+            if root.val==val: return val
+            elif root.val<val:root=root.right
+            else:
+                ret = root.val
+                root = root.left
+        return ret
+    
+    def floor(self, root, val):
+        ret = None
+        while root:
+            if root.val==val: return val
+            elif root.val>val:root=root.left
+            else:
+                ret = root.val
+                root = root.right
+        return ret
+    
+    '''
+    def ceil(self, root, val):
         if not root: return
         if root.val == val: return val
-        elif root.val < val:
-            return self.ceil(root.right, val)
+        elif root.val < val:   return self.ceil(root.right, val)
         else:
             c=self.ceil(root.left, val)
             if c: return c
@@ -41,3 +61,4 @@ class Solution:
             f = self.floor(root.right, val)
             if f: return f
             return root.val
+    '''

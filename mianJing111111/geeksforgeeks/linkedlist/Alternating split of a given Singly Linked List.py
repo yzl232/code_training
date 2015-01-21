@@ -14,15 +14,17 @@ Question is to split the list into two parts. We are supposed to modify the orig
 
 
 '''
-class ListNode:
+class ListNode:    #背下 h2.next = h2.next.next  就可以了
     def __init__(self, x):
         self.val = x
         self.next = None
 
 class Solution:
     def splitAl(self, h):
-        if not h: return
+        if not h: raise ValueError()
+        ret = (h, h.next)
         self.help(h, h.next)
+        return ret
 
     def help(self, h1, h2):
         if not h1 or not h2: return

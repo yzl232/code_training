@@ -11,14 +11,14 @@ We strongly recommend to minimize the browser and try this yourself first.
 This is a typical tree traversal question. We start from root and check if the node has one child, if yes then print the only child of that node. If node has both children, then recur for both the children.
 '''
 class Solution:
-    def printSingles(self, root):
+    def dfs(self, root):
         if not root: return
         if root.left and root.right:
-            self.printSingles(root.left)
-            self.printSingles(root.right)
+            self.dfs(root.left)
+            self.dfs(root.right)
         elif root.left:
             print root.left.val
-            self.printSingles(root.left)
+            self.dfs(root.left)
         elif root.right:
             print root.right.val
-            self.printSingles(root.right)
+            self.dfs(root.right)

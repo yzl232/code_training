@@ -19,6 +19,8 @@ Time complexity of the algorithm is O(nLogn) assuming that we use a O(nLogn) sor
 
 这道题目做法是用了Greedy Algorithm
 '''
+#贪心用heap用的多
+
 
 import heapq
 class Solution:
@@ -26,7 +28,7 @@ class Solution:
         heapq.heapify(q)
         ret = 0
         while len(q)>=2:
-            a1 = heapq.heappop(q)
+            a1 = heapq.heappop(q)    #和那个用stack的类似。
             a2 = heapq.heappop(q)
             print a1, a2
             ret+=a1+a2

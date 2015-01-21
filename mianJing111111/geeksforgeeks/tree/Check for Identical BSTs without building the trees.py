@@ -43,16 +43,19 @@ The idea is to check of if next smaller and greater elements are same in both ar
 '''
 You can use the stack based approach for finding the next greater and smaller elements , and then simply compare. Complexity : O(n) for both space and time.
 '''
+#它给的array. 建立tree的方式：     left child == next smaller.    right child == next greater.
+
+
+
 class Solution:
     def nge(self, arr):
         if not arr: return
         stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
         for i in range(n):
             x = arr[i]
-            while stack and stack[-1][0]<x: #发现了一个比之前都要大，不断pop
-                d[stack.pop()[1]]=x  #pop出来的都是
+            while stack and stack[-1][0]<x:  d[stack.pop()[1]]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
             stack.append((x, i))   #存index, 以及值
-        ret = [None for i in range(n)]
+        ret = [None] *n
         for i in range(n):
             if i in d:  ret[i]=d[i]
         return ret
@@ -62,10 +65,9 @@ class Solution:
         stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
         for i in range(n):
             x = arr[i]
-            while stack and stack[-1][0]<x: #发现了一个比之前都要大，不断pop
-                d[stack.pop()[1]]=x  #pop出来的都是
+            while stack and stack[-1][0]>x:    d[stack.pop()[1]]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
             stack.append((x, i))   #存index, 以及值
-        ret = [None for i in range(n)]
+        ret = [None ] *n
         for i in range(n):
             if i in d:  ret[i]=d[i]
         return ret

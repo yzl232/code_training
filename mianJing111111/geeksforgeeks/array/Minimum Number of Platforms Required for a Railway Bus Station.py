@@ -19,10 +19,8 @@ class Solution:
         i=j=0
         while i<n and j<n:
             if arr[i]<dep[j]:
-                cnt+=1
-                i+=1
+                cnt+=1;  i+=1
             else:
-                cnt-=1
-                j+=1
+                cnt-=1;  j+=1
             ret = max(cnt, ret)
         return ret

@@ -37,13 +37,14 @@ The idea is to find the maximum sized subarray such that 2*min > max. We run two
 class Solution:
     def dpremoval(self, arr):
         ret = (0, -1);  n = len(arr)
-        for start in range(n):
-            minN=maxN = arr[start]
-            for end in range(start+1, n):
-                minN = min(arr[end], minN)
-                maxN = max(arr[end], maxN)
+        for b in range(n):
+            minN=10**10; maxN=-10**10
+            for e in range(b, n):
+                minN = min(arr[e], minN)
+                maxN = max(arr[e], maxN)
                 if 2*minN <=maxN: break
-                if end-start>ret[-1]-ret[0]: ret = (start,  end)
+                if e-b>ret[-1]-ret[0]: ret = (b,  e)
+        if ret==(0, -1): return
         return arr[ret[0]:ret[1]+1]
 s = Solution()
 print s.dpremoval([4, 5, 100, 9, 10, 11, 12, 15, 200])

@@ -12,6 +12,7 @@ Determine the number of ways which it can be written as the sum of two squares
 '''
 #注意这里并没有overlapping 不是DP
 
+#Count Distinct Non-Negative Integer Pairs (x, y)  和这道题目不一样。   那道是 x*x+y*y<n.  小于。
 
 #就是2 sum找上限下限
 

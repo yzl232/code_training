@@ -43,31 +43,27 @@ Output: No
 
 就是有向图的circle修改版本
 '''
-class Solution:
-    def findCycle(self, words):
-        graph = []
-        for word in words:  graph.append((word[0], word[-1]))
-        print graph
-        self.results = []
-        self.d = {}    #主要是查重复的环。
-        for edge in graph:
-            candidates = graph[:] #注意冒号。 更新candidates
-            candidates.remove(edge) #注意remove不返回值的。
-            self.dfs(list(edge), candidates)
-        return self.results
+# 可以把visited变成self.visited。 然后visieted.add,  visited.remove()
+#空间上更节省一点。
 
-#[1, 2],  [2, 8],  [1,  8]
-    def dfs(self, tmpPath, candidates):
-        if tmpPath[-1]==tmpPath[0] and len(candidates)==0:    #只有一个不同，就是len(candidates)==0
-            a = tmpPath[:-1]; ta = tuple(sorted(a))
-            if ta not in self.d:
-                self.d[ta] = 1
-                self.results.append(a)
-            return
-        for edge in candidates:
-            if tmpPath[-1] == edge[0]:
-                tmpCan= candidates[:]
-                tmpCan.remove(edge)
-                self.dfs(tmpPath+[edge[-1]], tmpCan)
+
+class Solution:
+    def solve(self, arr):   #这道题目必须用到所有的string
+        if not arr: raise ValueError
+        return  self.dfs( [arr[0]], arr[1:])
+
+    def dfs(self, cur, words):
+        if not words:
+            if cur[0][0]==cur[-1][-1]:   return True
+            return False
+        for x in words:
+            if x[0]==cur[-1][-1]:
+                t = words[:]; t.remove(x)
+                if self.dfs(cur+[x] ,t): return True
+        return False
+
+
+
+#pass
 s = Solution()
-print s.findCycle(["for", "geek", "rig", "kaf"])
+print s.solve(["for", "geek", "rig", "kaf"])

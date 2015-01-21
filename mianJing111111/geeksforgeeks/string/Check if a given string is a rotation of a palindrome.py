@@ -15,6 +15,7 @@ s = S1+S2
 check if
 
 '''
+# s1, s2实际上是对称的。
 class Solution:
     def isRotate(self, s1, s2):
         return s2 in (s1+s1)

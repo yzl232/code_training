@@ -1,11 +1,10 @@
 # encoding=utf-8
 def countingSort(array, maxVal):
     m = maxVal + 1
-    cnt = [0]*m
+    cnt = [0]*m; ret=[]
     for a in array: cnt[a]+=1
-    k=0
-    for val in range(len(cnt)):
-        for j in range(cnt[val]):
-            array[k]=val
-            k+=1
-    return array
+    for i in range(len(cnt)):
+        ret+=[i]*cnt[i]
+    return ret
+
+print countingSort( [1, 4, 7, 2, 1, 3, 2, 1, 4, 2, 3, 2, 1], 7 )

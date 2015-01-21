@@ -32,8 +32,8 @@ class Solution:
 
         for j in range(n):
             for i in range(j-2, -1, -1):
-                if s[i] == s[j]:  dp[i][j] = dp[i+1][j-1]+2
-                else: dp[i][j] = max(dp[i][j-1], dp[i+1][j])
+                if s[i] == s[j]:  dp[i][j] = dp[i+1][j-1]+2  #i+1, 与 i的逆序是对应
+                else: dp[i][j] = max(dp[i][j-1], dp[i+1][j])   #如果是substring。 else这里就是0了。
         return dp[0][-1]
 s = Solution()
 print s.lps("GEEKS FOR GEEKS")

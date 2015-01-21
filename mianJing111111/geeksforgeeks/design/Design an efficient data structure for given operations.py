@@ -101,3 +101,35 @@ The main challenge is, while deleting an item, we need to delete from both min-h
 
  就是说，相互之间存了对方的address, pointer
 '''
+
+
+
+#如果用ordered  dict。  全部都是O(1).
+
+'''
+
+
+You an simply use a tree map (stl map or multimap if duplicates).
+Since the data is sorted you get the min and max in O(1) and can delete them in O(1). Insert/Delete takes log n.
+
+和答案的复杂度一样。
+'''
+
+#  因为heap的存在。 insert, delete都要logN
+
+
+#最终答案： （比geeks得答案要好）
+'''
+ordered dict: find O(1), 后面四个 insert, delete都是 O(logN)
+
+或者用  2 个 heap以及 hashtable。
+heap存折hashtable的pointer。
+hashtable存了两个heap的pointer。   find O(1), 后面四个 insert, delete都是 O(logN)
+'''
+
+
+
+
+#http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/9-BinTree/heap-delete.html
+
+#查了一下heap的删除任意元素方法， 就是用最下层最右边的元素替换， 然后re-organize .  logN

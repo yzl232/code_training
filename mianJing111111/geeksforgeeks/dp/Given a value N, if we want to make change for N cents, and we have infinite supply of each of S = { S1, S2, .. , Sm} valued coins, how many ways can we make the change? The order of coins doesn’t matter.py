@@ -16,8 +16,6 @@ Dynamic programming problem: Coin change problem: Find the minimum number of coi
 dfs也可以做。
 '''
 
-
-
 #先sort values
 
 class Solution:
@@ -27,13 +25,15 @@ class Solution:
         if not values and target>0:  return 0
         return self.count(values[1:], target) + self.count(values[:], target-values[0])
 #不要自己。  要自己，target-values[0]
+#就使用memoization算了。
+# dp不是很常规
 
 #dp
 class Solution2:
     def count(self, values, target):
         values.sort()
         m = len(values); n = target
-        dp = [[0 for i in range(n+1)] for j in range(len(values))]  #j代表包含valuesd的部分
+        dp = [[0 for j in range(m)] for i in range(n+1)]  #j代表包含valuesd的部分
         for j in range(m):   dp[0][j] = 1  #i=0情况
         for i in range(1, n+1):
             for j in range(1, m):

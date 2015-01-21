@@ -18,23 +18,23 @@ Kadane’s algorithm for 1D array can be used to reduce the time complexity to O
 #leetcode是只有0和1. 找全部是1的。
 
 class Solution:
-    def findMaxS(self, matrix):
-        if not matrix: return
-        ret = -10**10; c = len(matrix[0]); r =len(matrix)
-        for top in range(r):
-            colSum = [0 for i in range(c)]        #必须放在这里  . 理解成一直压缩, 压扁成一行colSum
-            for bottom in range(top, r):
-                for i in range(c):
-                    colSum[i]+=matrix[bottom][i]       #新的一行。 压扁。
-                ret = max(ret, self.maxSubArray(colSum))
+    def findMaxS(self, mtx):
+        if not mtx: return
+        ret = -10**10; n = len(mtx[0]); m =len(mtx)
+        for top in range(m):
+            colS = [0]*n       #必须放在这里  . 理解成一直压缩, 压扁成一行colSum
+            for bottom in range(top, m):
+                row = mtx[bottom]
+                for i in range(n):  colS[i]+=row[i]       #新的一行。 压扁。
+                ret = max(ret, self.maxSubArray(colS))
         return ret
 
     def maxSubArray(self, a):  #leetcode
-        result = maxN = a[0]
+        ret = maxN = a[0]
         for i in range(1, len(a)):
             maxN = max(maxN + a[i],  a[i])
-            result = max(result, maxN)
-        return result
+            ret = max(ret, maxN)
+        return ret
 
 matrix =  [[1, 2, -1, -4, -20],
                        [-8, -3, 4, 2, 1],

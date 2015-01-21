@@ -26,13 +26,10 @@ Extreme Examples
 
 class Solution:
     def bit(self, arr):
-        if not arr: return
-        inc = [1 for i in range(len(arr))]  #默认值是1
-        dec = inc[:]
+        if not arr: return 0
+        dp1 = [1] *len(arr);  dp2 = dp1[:]  #默认值是1
         for i in range(1, len(arr)):
-            inc[i] = 1 if arr[i]<arr[i-1]  else inc[i-1]+1
+            dp1[i] = 1 if arr[i]<arr[i-1]  else dp1[i-1]+1
         for i in range(len(arr)-2, -1, -1):  #像这种2个辅助array的。必须从后往前
-            dec[i] = 1 if arr[i]<arr[i+1] else dec[i+1]+1
-        ret = 1
-        for i in range(len(arr)):
-            ret = max(ret,  inc[i]+dec[i]-1)
+            dp2[i] = 1 if arr[i]<arr[i+1] else dp2[i+1]+1
+        return max( dp1[i]+dp2[i]-1 for i in range(len(arr)))

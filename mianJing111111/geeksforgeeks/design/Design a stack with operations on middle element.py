@@ -21,8 +21,14 @@ Following is C implementation of push(), pop() and findMiddle() operations. Impl
 
 
 就是用双链表和stack.
-stack存储pointer to  双链表。  (把node 存进去)
-
-'''
+stack存储pointer to  双链表。  (把node 存进去)。
+#middle pointer的的移动
 #用一个self.cnt。 push的时候， 如果self.cnt==2,  middle后移， 并且self.cnt=0。
 
+'''
+
+
+
+
+# hasttable  优势： find 是O(1)
+#  linkedlist优势： del, insert  O(1)

@@ -14,3 +14,5 @@ unsigned int swapBits(unsigned int x)
     return (even_bits | odd_bits); // Combine even and odd bits
 }
 '''
+def swapOddEvenBits(x):
+    return  ((x&0xaaaaaaaa)>>1) | ((x&0x55555555)<<1)

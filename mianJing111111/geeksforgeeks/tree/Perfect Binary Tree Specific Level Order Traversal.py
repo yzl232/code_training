@@ -26,4 +26,6 @@ Modified tree:
 '''
 
 
-#换成array。再弄回来。
+#  lvl order traversal.
+## 换成array。再弄回来。
+# 重建tree

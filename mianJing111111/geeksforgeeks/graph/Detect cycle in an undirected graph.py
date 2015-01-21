@@ -16,11 +16,11 @@
 
 '''
 
-
+# 看看就好。第一部分是我自创的题目。。。
 class Solution:
     def findCycle(self, graph):
         graph.sort()
-        self.results = []
+        self.results =set([])
         self.d = {}    #主要是查重复的环。
         for edge in graph:
             candidates = graph[:] #注意冒号。 更新candidates
@@ -61,19 +61,20 @@ neigbours
 DFS的做法。  无向
 '''
 
-
+# 可以把visited变成self.visited。 然后visieted.add,  visited.remove()
+#空间上更节省。
 
 class Solution3:
     def paths(self, nodes):
         for n in nodes:
-            if self.dfs([n], n, {}):  return True
+            if self.dfs([n], n, set([n])):  return True
         return False
 
-    def dfs(self, tmpPath, node, visited):  #visited传进去。 这是一个特别的地方。
-        visited[node]=1 #必须放在外面
-        if len(tmpPath)>2: tmpPath=tmpPath[-2:] #我只需要ppre
+    def dfs(self, cur, node, visited):  #visited传进去。 这是一个特别的地方。
+        if len(cur)>2: cur=cur[-2:] #我只需要ppre
         for n in node.neighbors:
-                if n==tmpPath[-2]: continue  #因为长度必须大于2.  这是与有向图的唯一区别
+                if n==cur[-2]: continue  #因为长度必须大于2.  这是与有向图的唯一区别
                 if n in visited:  return True
-                if self.dfs(tmpPath+[n], n, visited.copy()): return True
+                t = visited.copy(); t.add(n)
+                if self.dfs(cur+[n], n,t): return True
         return False

@@ -28,3 +28,7 @@ Together with k queues, a stack of free slots in arr[] is also maintained. The t
 
 All entries in front[] are initialized as -1 to indicate that all queues are empty. All entries next[i] are initialized as i+1 because all slots are free initially and pointing to next slot. Top of free stack, ‘free’ is initialized as 0.
 '''
+
+
+
+# space efficient> 动态。

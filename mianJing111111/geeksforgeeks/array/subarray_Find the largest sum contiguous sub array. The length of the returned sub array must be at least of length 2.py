@@ -2,7 +2,7 @@
 '''
 Find the largest sum contiguous sub array. The length of the returned sub array must be at least of length 2
 
-这道题目挺难。 珍藏一下。
+
 '''
 
 '''
@@ -11,14 +11,14 @@ Find the largest sum contiguous sub array. The length of the returned sub array 
 class Solution1:
     def maxSum2(self, a):
         if len(a)<2: return
-        ret= maxN = a[0]+a[1]
+        ret= maxN = a[0]+a[1]         
         for i in range(2, len(a)):
             maxN = max(maxN+a[i], a[i-1]+a[i])
             ret = max(maxN, ret)
         return ret
 
 
-
+'''
 #对比一下最普通的结果。
 class Solution:
     # @param A, a list of integers
@@ -50,3 +50,4 @@ class Solution3:
 s = Solution()
 print s.maxSubArray([1,2,3,-7,1,1,2])
 print s.maxSubArray([-2, -3, 4, -1, -2, 1, 5, -3])
+'''

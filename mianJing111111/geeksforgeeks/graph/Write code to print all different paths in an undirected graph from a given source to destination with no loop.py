@@ -13,27 +13,46 @@ Write code to print all different paths in an undirected graph from a given sour
 '''
 # F家题目
 
+
+
+
+
+#复制了有向图， 稍微修改
+class Solution3:
+    def paths(self, root):
+        self.rets = []
+        self.dfs(root, set([root]), [root])
+        return self.rets
+
+    def dfs(self, node, visited, cur):  #visited传进去。 这是一个特别的地方。
+        if node.neighbors:   #空， 或者visited过了
+            self.rets.append(cur)
+            return
+        for n in node.neighbors:
+            if n in visited: continue
+            t= visited.copy(); t.add(n)
+            self.dfs(n, t, cur+[n])
+
+
+
+'''
 class Solution3:
     def paths(self, start, end):
         self.paths = []; self.end = end
         self.dfs([], start, {})
-        a = set()
-        for path in self.paths:
-            for n in path:
-                a.add(n)
-        return len(a)
+        return len(set(tuple(self.paths)))
 
 #[1, 2],  [2, 8],  [1,  8]
     def dfs(self, cur, node, visited):  #visited传进去。 这是一个特别的地方。
-        visited[node]=1
         if cur[-1] ==self.end:
             self.paths.append(cur)
             return
         for x in node.neighbors:
                 if x in visited: continue   #不能再这里操作。 因为每个循环for。 visited是相互独立的。
-                self.dfs(cur+[node], x, visited.copy())
+                t = visited.copy(); t[node]=1
+                self.dfs(cur+[node], x, t)
 #比环还要容易很多。比较单纯
-'''
+
 
 例子  1--2---3
         1---2----9----3  都是合法的。 如果是self.visited， 就不合适。

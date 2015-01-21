@@ -33,6 +33,25 @@ class Solution:
         else: return   # already sorted
         for e in range(n-1, 0, -1):  #从右往左  step 1b
             if arr[e-1]>arr[e]: break        #2个里， e选右边的那个
+        big, small = max(arr[s:e+1]), min(arr[s:e+1])     # python is smart
+        for i in range(s):     #因为剩下的部分是排好序的。
+            if arr[i]>small:
+                s=i;  break
+        for i in range(n-1, e, -1):
+            if arr[i]<big:
+                e=i;   break
+        return (s, e)
+
+'''
+#O(n)      很巧妙   in place
+class Solution:
+    def findUnsorted(self, arr):
+        n = len(arr)
+        for s in range(n-1):  #从左往右  step 1a
+            if arr[s]>arr[s+1]: break        #2个里， s选左边的那个
+        else: return   # already sorted
+        for e in range(n-1, 0, -1):  #从右往左  step 1b
+            if arr[e-1]>arr[e]: break        #2个里， e选右边的那个
         big = small = arr[s]#step 2
         for i in range(s+1, e+1):
             big = max(arr[i], big)
@@ -46,3 +65,4 @@ class Solution:
                 e=i
                 break
         return (s, e)
+'''

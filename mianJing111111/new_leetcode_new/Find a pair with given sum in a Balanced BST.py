@@ -28,9 +28,9 @@ class Solution:
 class Solution3:
     def twoSum(self, head, tail, target):
         while head.val < tail.val:
-            cur = head.val + tail.val
-            if cur == target: return True
-            elif cur<target:  head=head.next
+            s = head.val + tail.val
+            if s == target: return True
+            elif s<target:  head=head.next
             else: tail = tail.prev
 
 #  第二种不能改结构

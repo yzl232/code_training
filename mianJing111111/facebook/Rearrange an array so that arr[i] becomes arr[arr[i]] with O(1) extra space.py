@@ -40,16 +40,15 @@ After second step, array becomes {1, 0, 3, 2}
 '''
 
 class Solution:
-    def relocate(self, arr):
-        n = len(arr)
+    def relocate(self, arr, k):  # 区分一下这个k。   0~k这个条件必不可少。
         for x in arr:
-            if not 0<=x<=n-1:  raise  ValueError()
-        for i in range(n):
-            t = arr[arr[i]]   #把t移动到arr[i]来。
-            arr[i] += t%n * n       #符号%有必要。 可能在后面取前面的数。 而前面的数已经更新比较大了。
+            if not 0<=x<=k-1:  raise  ValueError()
+        for x in arr:
+            t = arr[x]   #把t移动到arr[i]来。
+            arr[t] += t%k * k       #符号%有必要。 可能在后面取前面的数。 而前面的数已经更新比较大了。
         print arr  #此时用%取回以前的数。
-        for i in range(n):
-            arr[i]/=n
+        for i in range(len(arr)):
+            arr[i]/=k
         return arr
 s = Solution()
 print s.relocate([2, 3, 1, 0])

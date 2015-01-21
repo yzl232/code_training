@@ -11,9 +11,24 @@ For example, consider the following tree. If the input key is 3, then your funct
 '''
 #shortest path 里面有用到。
 class Solution:
+    def findLevel(self, root, node):
+        self.ret = None; self.node = node
+        self.dfs(root, 1)
+        return self.ret
+
+    def dfs(self, root, level): #找一个子节点到root得距离
+        if not root: return
+        if self.ret: return
+        if root == self.node:     self.ret = level
+        self.dfs(root.left, level+1)
+        self.dfs(root.right,  level+1)
+
+
+'''
     def findLevel(self, root, node, level): #找一个子节点到root得距离
         if not root: return -1  #没找到，就是-1
         if root == node: return level
         d = self.findLevel(root.left, level+1)
         if d !=-1: return d
         return self.findLevel(root.right,  level+1)
+'''

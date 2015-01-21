@@ -48,8 +48,8 @@ X – Y = 2
 #leetcode是find first missing positive  也就是说，找missing 。 没范围。 有负数
 '''
 class Solution:
-    def findRep(self, arr):
+    def findRep(self, arr):  # 1~n。 不是0~n
         for i in range(len(arr)):
-            tmp = abs(arr[i])  #就是利用负号。 增加了信息
-            if arr[tmp]>0:  arr[tmp] = -arr[tmp]
-            else:  print tmp
+            t = abs(arr[i])-1  #就是利用负号。 增加了信息
+            if arr[t]>0:  arr[t] = -arr[t]
+            else:  print t+1

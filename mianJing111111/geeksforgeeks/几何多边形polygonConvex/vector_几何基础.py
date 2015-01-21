@@ -27,8 +27,8 @@ cos的值。
 For a more visual explanation:
 
 matrix:
-a b
-c d
+u = (a, b)
+v = (c, d)
 
 determinant: ad - bc
 
@@ -42,11 +42,18 @@ determinant: ad - bc
   3 points, A, B, and C,
   (AB x AC)/|AB|.
 '''
+
+'''
+
+'''
+
+
 class VectorOperations:
     def dot(self, a, b, c):
         ab = [b[0]-a[0], b[1]-a[1]]
         ac = [c[0]-a[0], c[1]-a[1]]
         return ab[0]*ac[0]+ab[1]*ac[1]
+        #  return (b[0]-a[0])*(c[0]-a[0])+(b[1]-a[1])*(c[1]-a[1])
 
 # AB x AC  注意我这里没有写AB X BC
     def cross(self, a, b, c):

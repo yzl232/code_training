@@ -11,6 +11,8 @@ Output: 30 39 42 45
 '''
 An Optimized Solution is to find k elements in O(Logn + k) time. The idea is to use Binary Search to find the crossover point. Once we find index of crossover point, we can print k closest elements in O(k) time.
 '''
+
+#假如包括相等的数的话~~~。 就是这样。  否则就是另一个文件   #### findKclosestValues
 class Solution:
     def bs(self, arr, x):
         l=0; h=len(arr)-1

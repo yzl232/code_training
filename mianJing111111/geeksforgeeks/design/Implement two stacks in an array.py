@@ -11,3 +11,5 @@ To check for overflow, all we need to check is for space between top elements of
 '''
 
 # top1, top2  .    记录顶部就可以   反方向
+
+# space efficient

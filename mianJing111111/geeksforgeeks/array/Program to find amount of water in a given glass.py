@@ -29,15 +29,15 @@ Each glass contributes to the two glasses down the glass. Initially, we put all 
 '''
 class Solution:
     def findWater(self, r, c, x):
-        if c>r: return
+        assert c<r
         glass = [0 for k in range((r+1)*r/2)]  #等差数列,
         glass[0] = x; p = 0
-        for i in range(r):
-            for j in range(c):
+        for i in range(1, r+1):
+            for j in range(1, c+1):
                 x = glass[p]
-                glass[p] = 1 if x>=1 else x
-                x = x-1 if x>=1 else 0
+                glass[p] = min(x, 1)  #一班是1. 也可能是x
+                x -=glass[p]
                 glass[p+i] += x/2
                 glass[p+i+1] +=x/2
                 p+=1
-        return glass[r*(r-1)/2+c-1]  #因为从0开始。所以最后减一
+        return glass[r*(r-1)/2+c-1]  #因为从0开始。所以最后减一.  可以拿r=c=0测试下

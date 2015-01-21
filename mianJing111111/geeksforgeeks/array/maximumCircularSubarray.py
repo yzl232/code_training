@@ -28,7 +28,9 @@ so find out the sum of non contributing elements and subtract this sum from the 
 Our array is like a ring and we have to eliminate the maximum continuous negative that implies maximum continuous positive in the inverted arrays.
 那个东西反用就是求最小值了。 也就是会贡献负数的值。 sum, 去掉这部分贡献负数的值。就是circular结果了
 
-
+举例子就好。
+[1, 3, -1, 5]
+[-1, -3, 1, -5]
 
 '''
 
@@ -37,11 +39,11 @@ class Solution:
     # @param A, a list of integers
     # @return an integer
     def maxSubArray(self, a):
-        result = maxN = a[0]
+        ret = maxN = a[0]
         for i in range(1, len(a)):
             maxN = max(maxN + a[i],  a[i])
-            result = max(result, maxN)
-        return result
+            ret = max(ret, maxN)
+        return ret
 
     def maxCircularSum(self, a):
         v1 = self.maxSubArray(a)  # sub

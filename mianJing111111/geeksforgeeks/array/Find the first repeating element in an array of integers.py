@@ -12,6 +12,8 @@ We can Use Hashing to solve this in O(n) time on average. The idea is to travers
 必须全部扫完一遍才能知道。
 
 '''
+#和2sum一样。 也是先查后存的思想
+
 class Solution:
     def findFirs(self, arr):
         ret = None; d = {}

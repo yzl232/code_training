@@ -52,32 +52,22 @@ Let us see an example. Let us assume that both stacks are initially empty and 18
 #leetcode
 class MinStack:
     # @param x, an integer
-    # @return an integer
     def __init__(self):
-        self.stack = []
-        self.minStack = []
+        self.stack1 = [];  self.stack2 = []
 
+    # @return an integer
     def push(self, x):
-        if len(self.stack)==0:
-            self.stack.append(x)
-            self.minStack.append(x)
-        else:
-            self.stack.append(x)
-            tmp = self.minStack[-1]
-            self.minStack.append(min(x, tmp))
-    # @return nothing
+        self.stack1.append(x)  #小于或者等于。才push stack2
+        if not self.stack2 or x <= self.stack2[-1]:   self.stack2.append(x)
 
+    # @return nothing
     def pop(self):
-        tmp = self.stack.pop()
-        self.minStack.pop()
-        return tmp
+        if self.stack1.pop() == self.stack2[-1]:    self.stack2.pop()  #cur与最小值相等。 pop stack2
 
     # @return an integer
     def top(self):
-        if len(self.stack)>0: return   self.stack[-1]
-
+        return self.stack1[-1]
 
     # @return an integer
     def getMin(self):
-        if len(self.stack)==0: return
-        return self.minStack[-1]
+        return self.stack2[-1]
