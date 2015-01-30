@@ -39,11 +39,19 @@ For example, the URL-shortening service could be meant to serve just a few thous
 
 You will also have to think about the use cases that are expected to occur. Your system will be designed based on what it's expected to do. Don't forget to make sure you know all the requirements the interviewer didn't tell you about in the beginning.
 '''
-
+# most websites:  2 main challenges:  first:traffic(400 requests/sec)       second: lots of data.   (6 TB for 5 years)
+# 每秒钟的。 vs。  总时间。
 
 
 
 '''
+# 标准答案 。 三栏。  3 columns。
+hree columns:
+
+    id, integer, auto-increment。  （实际上hash这个id）
+    long, string, the long URL the user entered
+    short, string, the shortened URL (or just the six characters)
+
 While shortening the URL:
 
 Store the Long URL in a DB table which has an auto-generated identity column (increments by 1 each record)
@@ -54,6 +62,9 @@ A-Z are mapped to 26-51
 and 0-9 are mapped to 52-61
 
 essentially we want to say that the shortened URL would contain a-z; A-Z and/or 0-9 characters only
+hash后，转换为62进制
+
+hashed_url = convert_to_base62( hashed Val % 62  )[:6] 取前6位。
 
 //Check if URL exists in Table; if so fetch that id from DB and process; if not then insert URL in DB and process
 

@@ -17,11 +17,10 @@ class TreeNode:
 class Solution1:
     def serialize(self, root):
         self.ret = []
-        self.dfs(root)
+        if root: self.dfs(root)
         return self.ret
 
-    def dfs(self, root):
-        if not root:   return   #不能在这里append '#'。因为for loop。 几乎不会 not root
+    def dfs(self, root):    #不能在这里append '#'。因为for loop。 几乎不会 not root
         self.ret.append(root.val)
         for c in root.children:
             self.dfs(c)
@@ -39,7 +38,7 @@ class Solution:
         if rootVal == '#':  return
         else:
             root = TreeNode(rootVal)
-            while True:    #这里和binary不同
+            while True:    #这里和binary不同...
                 tmp = self.dfs()
                 if not tmp: break
                 root.children.append(tmp)

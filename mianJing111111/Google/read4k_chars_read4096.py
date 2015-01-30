@@ -12,7 +12,7 @@ Todo: Use above API to Implement API
 每次从stream里面读4Kbytes，如果stream小于4K就读到stream末尾，读出结果放在buf
 里面
 返回值是读了多少bytes，比如buf长度1Kbytes， 那么返回值就是1024
-大于4K的stream连续调用就能自动读到
+大于4K的stream连续调用就能自动读到...
 
 
 

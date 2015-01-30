@@ -13,7 +13,6 @@ print s2.allFactors(2*3*7)
 
 依稀记得是G家的题目
 '''
-print s2.allFactors(2*3*7)
 
 class SolutionDFS:
     def all237(self, arr):
@@ -22,10 +21,10 @@ class SolutionDFS:
         self.dfs(1, arr)
         return self.ret
 
-    def dfs(self, cur, cands):
-        self.ret.append(cur)
-        for i in range(len(cands)):
-            self.dfs(cur*cands[i], cands[i+1:])
+    def dfs(self, cur, nums):
+        for i in range(len(nums)):
+            self.ret.append(cur*nums[i])
+            self.dfs(cur*nums[i], nums[i+1:])
 
 d = SolutionDFS()
 print d.all237([2, 3, 7])

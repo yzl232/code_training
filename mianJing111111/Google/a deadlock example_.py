@@ -11,6 +11,8 @@ while True:
     l2.release()
     l1.release()
 
+
+#thread 2
 while True:
     l2.acquire()
     l1.acquire()

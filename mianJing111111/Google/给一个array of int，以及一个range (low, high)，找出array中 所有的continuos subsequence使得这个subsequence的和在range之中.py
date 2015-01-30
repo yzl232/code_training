@@ -4,5 +4,5 @@
 '''
 明显是sliding window.   并不是累计和，
 while cur-arr[l]>low:
-    cur-=low
+    cur-=arr[l]
 '''

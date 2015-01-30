@@ -21,7 +21,7 @@ To shuffle an array a of n elements (indices 0..n-1):
 Following is C++ implementation of this algorithm.
 
 
-O(n), assuming that the function rand() takes O(1) time.
+O(n), assuming that the function rand() takes O(1) time..
 '''
 class Solution:
     def randomize(self, arr):
@@ -30,6 +30,7 @@ class Solution:
             j = random.randint(0, i)
             arr[i], arr[j] = arr[j], arr[i]
 
+#证明任意元素在任意位置的概率都是1/n
 
 '''
 How does this work?

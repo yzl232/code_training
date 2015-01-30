@@ -40,17 +40,16 @@ The idea is to start from left side of one array and right side of another array
 4) Print the result.
 '''
 # leetcode 3sum closest 的2个array版本.   target 是x
+#等价于那个sorted matrix  search的题目
+
 
 class Solution:
     def pair(self, arr1, arr2, x):
-        l=0; r=len(arr1)-1
-        diff = 10**10; ret = (None, None)
-        while l<=len(arr2)-1 and r>=0:
-            tmp = abs(arr1[r]+arr2[l]-x)
-            if tmp<diff:
-                ret = (arr1[r], arr2[l])
-                diff = tmp
-            if tmp==0: return ret
-            if arr1[r]+arr2[l]>x:  r-=1
-            else: l+=1
+        i=len(arr1)-1; j=0;  ret = (None, None, 10**10)
+        while i>=0 and  j<len(arr2):
+            diff = abs(arr1[i]+arr2[j]-x)
+            if diff<ret[-1]: ret=(arr1[i], arr2[j], diff)
+            if diff==0: return ret
+            if arr1[i]+arr2[j]>x:  i-=1
+            else: j+=1
         return ret

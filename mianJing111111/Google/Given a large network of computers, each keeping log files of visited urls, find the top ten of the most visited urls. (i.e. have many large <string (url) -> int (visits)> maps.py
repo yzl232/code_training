@@ -6,7 +6,9 @@ Given a large network of computers, each keeping log files of visited urls, find
 The result list must be exact, and the maps are too large to transmit over the network (especially sending all of them to a central server or using MapReduce directly, is not allowed)
 '''
 
-#hash  mod的方法。
+#hash  mod  的方法。  先各个机器统计好。 然后重新安排
+#  MOD   1000.  1000为machine number>
+
 '''
 Denote N as the number of computers in our network.
 

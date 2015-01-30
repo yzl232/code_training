@@ -13,6 +13,9 @@ has
 '''
 
 
+# Design a phonebook dictionary which on input any characters gives names and phone number of all the matching names(prefix)
+
+
 #trie主要用于prefix相关。 与prefix无关，用普通的hashtable来count即可
 
 

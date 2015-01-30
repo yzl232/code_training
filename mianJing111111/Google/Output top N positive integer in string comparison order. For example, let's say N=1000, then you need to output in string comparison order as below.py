@@ -4,17 +4,18 @@ Output top N positive integer in string comparison order. For example, let's say
 1, 10, 100, 1000, 101, 102, ... 109, 11, 110, ...
 '''
 class Solution:
-    def dfs(self,s,  n):
-        if int(s)>n: return
+    def dfs(self,s):
+        if int(s)>self.n: return
         print s
         for i in range(10):  # 0~9都可以
-            self.dfs(s+str(i), n)
+            self.dfs(s+str(i))
 
-    def printMain(self, n=1000):
+    def solve(self, n=1000):
+        self.n = n
         for i in range(1, 10):  #1~9
-            self.dfs(''+str(i), n)
+            self.dfs(''+str(i))
 s = Solution()
-print s.printMain(100)
+print s.solve(1000)
 
 #感觉很牛逼的样子。 还没有看懂
 

@@ -9,29 +9,29 @@ Formally speaking, two elements a[i] and a[j] form an inversion if a[i] > a[j] a
 
 Example:
 The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
+
+#inversion个数从0~ C(n, 2) 都有可能
+
 '''
 
+#因为是排好序的。
+# 另外因为调用merge的时候  part1前半。 part2后半。 这是保证的
 class Solution:
     def merge2(self, part1, part2):#就增加了一行。
-        result = []
-        i=j=0
+        ret = [];   i=j=0
         while i<len(part1) and j<len(part2): #就增加了一行。
             if part1[i]<=part2[j]:
-                result.append(part1[i])
-                i+=1
-            else:
-                result.append(part2[j])
+                ret.append(part1[i]);   i+=1
+            else:   #发现逆序！！！
+                ret.append(part2[j])
                 self.cnt+=len(part1)-i   #第一个序列右边的都符合。       关键.
-                j+=1
-        if i<len(part1): result+=part1[i:]      #j=length, 之前都加过了比part2[-1]大的数。
-        if j<len(part2):result+=part2[j:]    #i=length  右边的数目为0
-        return result
+                j+=1    #j=length, 之前都加过了比part2[-1]大的数。  #i=length  右边的数目为0
+        return ret+part1[i:]+part2[j:]
+
     def mSort(self, arr):
         if len(arr)<2:    return arr
         m = len(arr)/2
-        left = self.mSort(arr[:m])
-        right = self.mSort(arr[m:])
-        return self.merge2(left, right)
+        return self.merge2(self.mSort(arr[:m]), self.mSort(arr[m:]))  #先写好( self.msort(),  self.msort()  ) 再填上就好
 
     def incnt(self, arr):    #用了一个全局变量
         self.cnt = 0
@@ -47,25 +47,20 @@ class Solution:
 '''
 class Solution6:
     def merge2(self, part1, part2):#就增加了一行。
-        result = []
-        i=j=0
+        ret = [];   i=j=0
         while i<len(part1) and j<len(part2): #就增加了一行。
             if part1[i]<part2[j]:
-                result.append(part1[i])
+                ret.append(part1[i])
                 self.cnt+=len(part2)-j   #第2个序列右边的都符合。       关键.
                 i+=1
             else:
-                result.append(part2[j])
-                j+=1
-        if i<len(part1): result+=part1[i:]      #j=length, 之前都加过了比part2[-1]大的数。
-        if j<len(part2):result+=part2[j:]    #i=length  右边的数目为0
-        return result
+                ret.append(part2[j]);   j+=1    #j=length, 之前都加过了比part2[-1]大的数。  #i=length  右边的数目为0
+        return ret+part1[i:]+part2[j:]
+
     def mSort(self, arr):
         if len(arr)<2:    return arr
         m = len(arr)/2
-        left = self.mSort(arr[:m])
-        right = self.mSort(arr[m:])
-        return self.merge2(left, right)
+        return self.merge2(self.mSort(arr[:m]), self.mSort(arr[m:]))
 
     def incnt(self, arr):    #用了一个全局变量
         self.cnt = 0

@@ -6,7 +6,7 @@ Hailstone 数列，从一个数n开始，如果n是奇数 乘3 +1， 如果是�
 比如， 2 -- 1， 输出是1  ； 3 -- 10 -- 5 -- 16 -- 8 -- 4 -- 2 -- 1，输出是7
 
 2.
-给你一个n，打印所有从1-n中 number whose hailstone value isgreater than that for any smaller number.. 1point 3acres 璁哄潧
+给你一个n，打印所有从1-n中 number whose hailstone value is greater than that for any smaller number..
 比如n = 6
 1 -- 0
 2 -- 1
@@ -24,24 +24,24 @@ Hailstone 数列，从一个数n开始，如果n是奇数 乘3 +1， 如果是�
 '''
 
 def hailStone(n):
-	cnt=0;	skip=set([]);  orig=n
-	while n>1:
-		if n%2==0:	n/=2
-		else: 	n=n*3+1
-		if n>orig:	skip.add(n)    #碰到更大的数， 肯定不满足条件 。  (cnt会更小)
-		cnt+=1
-	return cnt,skip
+    cnt=0;	skip=set();  orig=n
+    while n>1:
+        if n%2==0:	n/=2
+        else: 	n=n*3+1
+        if n>orig:	skip.add(n)    #碰到更大的数， 肯定不满足条件 。  (cnt会更小)
+        cnt+=1
+    return cnt,skip
 
 
 
 def allHail(n):
-	skipS={}
-	res=[]
-	for i in range(1,n+1):
-		if i in skipS:	continue
-		count,skip=hailStone(i)
-		res.append((i,count))
-		skipS.update(skip)   #省略重复运算。
-	return res
+    skipS=set()
+    res=[]
+    for i in range(1,n+1):
+        if i in skipS:	continue
+        count,skip=hailStone(i)
+        res.append((i,count))
+        skipS.update(skip)   #省略重复运算。
+    return res
 
 print allHail(6)

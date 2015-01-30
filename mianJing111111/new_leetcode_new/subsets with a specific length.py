@@ -3,18 +3,19 @@
 class Solution:
     # @param S, a list of integer
     # @return a list of lists of integer
-    def subsets(self, S, size):
-        S.sort(); self.size = size
-        self.result = []
-        self.dfs([], S)
-        return self.result
+    def subsets(self, cands, size):
+        cands.sort(); self.size = size
+        self.ret = []
+        self.dfs([], cands)
+        return self.ret
 
-    def dfs(self, tmp, candidates):
-        if len(tmp)==self.size:
-            self.result.append(tmp)
+    def dfs(self, cur, cands):
+        if len(cur)==self.size:
+            self.ret.append(cur)
             return
-        for i in range(len(candidates)):
-            self.dfs(tmp+[candidates[i]], candidates[i+1:])
+        for i in range(len(cands)):
+            if i>0 and cands[i]==cands[i-1]: continue
+            self.dfs(cur+[cands[i]], cands[i+1:])
 
 
 

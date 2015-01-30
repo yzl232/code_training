@@ -35,21 +35,17 @@ then the problem becomes checking overlapping intervals.
 just sort them on the base of starting point and binary search each end point in the sorted list
 '''
 class Solution:
-    def cnt(self, arr):
-        affairs = [];   ret = 0; d={}
-        for i in range(len(arr)):
-            affairs.append((i-arr[i], 0, i))
-            affairs.append((i+arr[i], 1, i))
-            d[i] = 0
+    def findNumConference(self, intervals):  #假设每个都是tuple
+        affairs = [];     d={x:0 for x in affairs}
+        for i in intervals:
+            affairs+=[ (i[0], 1, i), (i[1], -1, i)]
         affairs.sort()
         sCnt = 0;     eCnt=0
         for x in affairs:
-            if x[1]==0:
-                sCnt+=1
-                d[x[-1]]=-eCnt
-            elif x[1]==1:
-                eCnt+=1
-                d[x[-1]]+=sCnt-1
+            if x[1]==1:
+                sCnt+=1;   d[x[-1]]=-eCnt
+            elif x[1]==-1:
+                eCnt+=1;   d[x[-1]]+=sCnt-1  #不包括自己。-1.
         return sum(d.values())/2        #end
 
 

@@ -3,7 +3,7 @@
 Given a huge N*N matrix, we need to query the GCD of numbers in any given submatrix range（x1,y1,x2,y2）. Design a way to preprocess the matrix to accelerate the query speed. extra space should be less than O(N^2) and the preprocess time complexity should be as litte as possible.
 '''
 # logN * logM
-#太过分了 用二维线段树。  还碰到了好几次。。。
+#不需要写。  。  。  大概的理解就好了。
 '''
 For each row A[i] in the matrix A, we build a segment tree.The tree allows us to query GCD(A[i][a..b]) 第i行第a到b列（不包括b)的最大公约数in O(log n) time . The memory complexity of each segment tree is O(n), which gives us O(n^2) total memory complexity.
 时间复杂度，O(n2)建立线段树， log(N) log(M)查找，其中r and c are the number of rows and columns in the query.
@@ -14,9 +14,10 @@ For each row A[i] in the matrix A, we build a segment tree.The tree allows us to
 This is just a 2D segment tree.  Break the rows up into segments as you would in the 1D case except their associated values are another segment tree on the columns.  This takes O(NM) memory and time to preprocess with O(log(N) log(M)) time to query.  This approach has an advantage over the following approaches in that it's dynamic; you can modify the values of the matrix in O(log(N) log(M)) time as well.
 '''
 
+# update比较快。 优势在这里
 
-
-
+# 2-d  segment tree
+ #  第一层。 segment tree每个node的val也是一个segment tree.
 
 
 #好几道G家这种题目

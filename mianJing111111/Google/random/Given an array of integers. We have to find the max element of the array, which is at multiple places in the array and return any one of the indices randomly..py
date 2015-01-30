@@ -60,19 +60,16 @@ If we can modify array - better in terms of space complexity:
 time: O(N)
 space: O(1)
 '''
-
+# facebook考过。
 #这个做法是最优解。 返回index
 import random
 class Solution:
     def randMax(self, arr):
-        if not arr: return
-        ret = 0 ; cnt=0; maxN=arr[0]
-        for i in range(1, len(arr)):
+        ret = None ; cnt=0; maxN=-10**10
+        for i in range( len(arr)):
             if arr[i]>maxN:
-                cnt=1
-                ret = i
-                maxN = arr[i]
+                cnt=1;   ret = i;  maxN = arr[i]
             elif arr[i]==maxN:
                 cnt+=1
                 if random.randint(1, cnt)==1: ret=i
-        return i
+        return ret

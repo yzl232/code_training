@@ -28,15 +28,14 @@ we can define the concept of a "forest" as a
 '''
 #基本上一样。就改了一句
 class Solution:
-    def levelOrder(self, roots):
+    def levelOrder(self, roots):   # pre = cur这行 容易忘。 先写好这行。
         if not roots: return []
-        pre, ret =roots, []   # 除了pre, cur之外，还用了第三个vals
+        pre, ret = [roots], [[roots.val]]   # 除了pre, cur之外
         while pre:
-            cur, vals = [], []     #必须用array。 因为是有序的。 并且不会有重复
+            cur = []     #必须用array。 因为是有序的。 并且不会有重复
             for n in pre:
-                vals.append(n.val)
                 if n.left:  cur.append(n.left)
                 if n.right:  cur.append(n.right)
-            ret.append(vals)
+            if cur: ret.append([x.val for x in cur])
             pre = cur
         return ret

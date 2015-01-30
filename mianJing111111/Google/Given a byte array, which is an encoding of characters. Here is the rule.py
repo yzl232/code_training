@@ -6,8 +6,10 @@ Given a byte array, which is an encoding of characters. Here is the rule:
 character
     b. If the first bit of a byte is 1, that byte and its following byte
 together stand for a two-byte character
+
 Now implement a function to decide if the last character is a one-byte
 character or a two-byte character
+
 Constraint: You must scan the byte array from the end to the start.
 Otherwise it will be very trivial.
 
@@ -31,11 +33,8 @@ class Solution:
 
     def odd(self, arr):
         n = len(arr)
-        if self.firstBit(arr[-1])==1:  return 'two-byte'
-        start = 0
+        if self.firstBit(arr[-1])==1:  return '2-byte'
         for i in range(n-2, -1, -1):
-            if self.firstBit(arr[i])==0:
-                start=i+1
-                break
-        if (n-start)%2==1: return '1 byte'
+            if self.firstBit(arr[i])==0:   break
+        if (n-1-i)%2==1: return '1 byte'
         return '2-byte'

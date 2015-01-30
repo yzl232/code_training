@@ -9,6 +9,9 @@ O(n)
 
 #居然是leetcode原题。
 #leetcode longest consecutive sequence. 区别在于leetcode求长度。 这个返回具体的区间。
+
+
+
 class Solution:
     # @param num, a list of integer
     # @return an integer
@@ -22,5 +25,5 @@ class Solution:
                     d[a] = True; a += 1
                 while b in d and not d[b]:
                     d[b] = True; b -= 1
-                if (a-b-1)>ret[1]-ret[0]+1:  ret = (b, a)
+                if (a-b-1)>ret[1]-ret[0]+1:  ret = (b, a)  #
         return ret

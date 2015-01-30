@@ -68,12 +68,12 @@ else: return a
 
 class Solution:
     def solve(self, arr):
-        assert len(arr)%2==0
-        ret = arr[:]
-        for i in range(len(arr), 2):
+        assert len(arr)==6
+        ret = []
+        for i in [0, 2, 4]:
             a=arr[i]; b=arr[i+1]
             t = min(  (self.cal(a, b, x), x) for x in [a-1, a, a+1]  )
-            ret[i]=ret[i+1]=t[1]
+            ret+=[t[1], t[1]]
         return ret
 
     def cal(self, a, b,x ):

@@ -20,23 +20,23 @@ Benifits :
 
 
 #Google 考过类似。  Double Circular Sorted Linked List Insert
+# 尾部的判定不是x！=None。 而是x！= h
+# 前2种特殊情况return都是x
 class Solution: #return head
-    def insrt(self, h, node):  #circular就是要注意尾巴的连接
+    def insrt(self, h, x):  #circular就是都要注意尾巴的连接。
         if not h:
-            node.next = node
-            return node
-        if node.val <=h.val:
+            x.next = x
+            return x
+        if x.val <=h.val:
             tail = h
             while tail.next != h:  tail = tail.next  #找tail
-            node.next = h
-            tail.next = node
-            return node
+            tail.next = x;  x.next = h
+            return x
         else:
-            cur = h
-            while cur.next != h and cur.next.val<node.val:
-                cur = cur.next
-            node.next = cur.next
-            cur.next = node
+            pre = h
+            while pre.next != h and pre.next.val<x.val:   pre = pre.next
+            x.next = pre.next  # 逻辑。连环
+            pre.next = x
             return h
 
 
@@ -46,21 +46,20 @@ Double Circular Sorted Linked List Insert
 区别不大。 一个是找tail用pre就可以找了。 一个是要注意更新pre节点。
 '''
 class Solution: #return head
-    def insrt(self, h, node):  #circular就是要注意尾巴的连接
+    def insrt(self, h, x):  #circular就是要注意尾巴的连接
         if not h:
-            node.next = node
-            node.pre = node
-            return node
-        if node.val <=h.val:
+            x.next = x
+            x.pre = x
+            return x
+        if x.val <=h.val:
             tail = h.pre  #找tail
-            node.next = h; tail.next = node
-            node.pre = tail; h.pre = node
-            return node
+            x.next = h; h.pre = x   #前后的逻辑
+            x.pre = tail; tail.next = x
+            return x
         else:
-            cur = h
-            while cur.next != h and cur.next.val<node.val:
-                cur = cur.next
-            nextN = cur.next
-            node.next = nextN;   cur.next = node
-            nextN.pre = node; node.pre = cur
+            pre = h
+            while pre.next != h and pre.next.val<x.val:    pre = pre.next
+            nextN = pre.next
+            x.next = nextN; nextN.pre = x
+            pre.next = x; x.pre = pre
             return h

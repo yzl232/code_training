@@ -26,18 +26,14 @@ We can write a 3 level for loop body directly as follows:
 class Solution:
     def solve(self, arr, n):
         if n==0: return
-        i=0
-        cnt = [0]*(n)
+        i=0;   cnt = [0]*(n)
         while i>=0:
-            if i==n or cnt[i] == arr[i]:   #本层满了。开始上一层。
-                i-=1
-                if i>=0:  cnt[i]+=1
+            if i==n or cnt[i] == arr[i]:  i-=1        #本层满了。开始上一层。
             else:
                 self.doSomething(i)
+                if 0<=i<n:  cnt[i]+=1  #边界
                 i+=1
-                if i<n: cnt[i]=0
-            #print cnt, i
-
+                if 0<=i<n: cnt[i]=0    #边界
     def doSomething(self, x):
         print x
 

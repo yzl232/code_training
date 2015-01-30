@@ -41,7 +41,6 @@ class Iterator:
         return True
 
     def next(self):
-        if not self.hasNext():  return
         cur = self.stack.pop()
         self.pushL(cur.right)
         return cur.val
@@ -50,6 +49,8 @@ class Iterator:
         while cur:
             self.stack.append(cur)
             cur = cur.left
+# 像这种iterator都是那种把while 循环 分拆成一步一步的。  只要把while循环的几句抄到Next即可。
+# while的条件就是 has Next
 
 '''
 # Definition for a  binary tree node

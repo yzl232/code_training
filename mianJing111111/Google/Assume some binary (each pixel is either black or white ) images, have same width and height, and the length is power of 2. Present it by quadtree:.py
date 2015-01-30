@@ -52,7 +52,7 @@ class Solution:
         if not root:   return 0     #混合的话。 就是color = "mixed"
         if root.color == "white":    return 0
         elif root.color == "black":    return  root.size**2
-        else:   return self.cntB(root.se)+ self.cntB(root.sw)+ self.cntB(root.ne)+ self.cntB(root.nw)
+        elif root.color=='mixed':   return self.cntB(root.se)+ self.cntB(root.sw)+ self.cntB(root.ne)+ self.cntB(root.nw)
 
 #(c ) merge two image( actually it's to "and" two image with same size since
 #all pixels are boolean)
@@ -60,15 +60,16 @@ class Solution:
 
 class Solution5:
     def merge(self, root1, root2):
-        assert  root1.size == root2.size  #assert比raise value error更加简短
         if not root1 or not root2: return
+        assert  root1.size == root2.size  #assert比raise value error更加简短
         if root1.color or root2.color =='mixed':
             root = QuadTree('mixed', root1.size)
             root.ne = self.merge(root1.ne, root2.ne)
             root.nw = self.merge(root1.nw, root2.nw)
             root.se = self.merge(root1.se, root2.se)
             root.sw = self.merge(root1.sw, root2.sw)
-        elif root1.color == root2.color =='white':  return QuadTree('white', root1.size)
-        else: return QuadTree('Black', root1.size)
+        elif root1.color!=root2.color: return QuadTree('white', root1.size)
+        else: return QuadTree(root1.color, root1.size)
+        # 根据我的定义。  不是mixed
 
-# G家高频了。 如果是求重叠的1的个数。 就是merge之后， 然后cnt
+# G家高频了。 如果是求重叠的1的个数。 (&) 就是merge之后， 然后cnt

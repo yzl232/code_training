@@ -56,29 +56,25 @@ Write a function that decides whether a given byte array (or string) is
 valid UTF-8 encoded text.
 '''
 #虽然只是普通的O(n)。 但还是有点难。
-class Solution:
+class Solution:  #比较大小
     def isUTF_8(self, s):  #string
-        nBites = 0
-        bAllAscii =True #如果全部都是ASCII, 说明不是UTF-8.  这是一种特殊情况。 单独列出。
+        nBites = 0;     bAllAscii =True #如果全部都是ASCII, 说明不是UTF-8.  这是一种特殊情况。 单独列出。
         for ch in s:
             chVal = ord(ch)
-            if chVal&0b10000000 !=0: #判断是否ASCII编码,如果不是,说明有可能是UTF-8,ASCII用7位编码,但用一个字节存, 0x80=10000000
-                bAllAscii = False
+            if chVal>>7==1:    bAllAscii = False   #判断是否ASCII编码,如果不是,说明有可能是UTF-8,ASCII用7位编码,但用一个字节存, 0x80=10000000
             if nBites==0:#如果不是ASCII码,应该是多字节符.  每次完了需要重新计算字节数  后面对应nBites-=1
-                if chVal&0b10000000 ==0: continue
-                if 0b11111100 <=chVal <=  0b11111101:   nBites=6
-                elif chVal>=0b11111000:   nBites=5
-                elif chVal>=0b11110000:    nBites=4
-                elif chVal>=0b11100000:    nBites=3
-                elif chVal>=0b11000000:    nBites=2
-                else:    return False  #比较奇怪。  0b1xxx不是valid的. 10xxxxxx只能是多字节符的非首字节,
+                if chVal>>7 ==0:  continue
+                elif chVal>>6==0b10:    return False   #比较奇怪。  0b10xxxxx不是valid的. 10xxxxxx只能是多字节符的非首字节,
+                elif chVal>>5==0b110:    nBites=2
+                elif chVal>>4==0b1110:    nBites=3
+                elif chVal>>3==0b11110:    nBites=4
+                elif chVal>>2==0b111110:   nBites=5
+                elif chVal>>1==0b1111110:   nBites=6
                 nBites-=1   #
             else:
-                if chVal&0b11000000 != 0b10000000: return False#//多字节符的非首字节,应为 10xxxxxx
+                if chVal>>6!=0b10: return False#//多字节符的非首字节,应为 10xxxxxx
                 nBites-=1
-        if nBites>0: return False  #违返规则
-        if bAllAscii: return False  #如果全部都是ASCII, 说明不是UTF-8
-        return True
+        return nBites==0 and not bAllAscii  #如果全部都是ASCII, 说明不是UTF-8   #违返规则
 s = Solution()
 print s.isUTF_8("sfewfwef")
 print s.isUTF_8("sssewfew的萨芬")

@@ -11,7 +11,7 @@ Return the max result value can be gotten from a given polygon.
 
 '''
 A variation of the matrix chain multiplication should work.
-Let the number at each vertex and the (clockwise) next edge be a single element.
+Let the number at each vertex and the (clockwise) next edge be a single element....
 
 struct element {
       int num;
@@ -62,22 +62,18 @@ class Solution:
     def distance(self, a, b):
         return (b[0]-a[0])**2+(b[1]-a[1])**2
 
-    def compute(self,k, x1, x2, op):
+    def compute(self, x1, x2, op):
         if op=='*': return x1*x2
         elif op=='+': return x1+x2
 
-
     def solve(self, arr, ops):
-        n = len(arr);  self.arr = arr;  self.ops = ops; self.n = n
-        dp  =[[0 for i in range(n)]for j in range(n)]; ret = 0
-        for i in range(n):
-            dp[i][0] = arr[i]
+        n = len(arr);  ret = 0
+        dp  =[[0]*n for i in range(n)]
+        for i in range(n):  dp[i][i] = arr[i]  # length 为0
         for length in range(1, n):
             for i in range(n):
                 j = (i+length)%n
-                for k in range(i+1, i+length):
-                    k = k%n
-                    dp[i][j] = max(dp[i][j], self.compute(k, dp[i][k], dp[k+1][j]), ops[k])  #compute代表最后一次运算
-            if length==n-1: ret =max(ret, dp[i][j])
+                dp[i][j] = max(self.compute(  dp[i][k%n], dp[k%n+1][j], ops[k%n])  for k in range(i+1, i+length))  #compute代表最后一次运算
+                if length==n-1: ret =max(ret, dp[i][j])
         return ret
 #和triangulation   那道题目基本上一样了。 不同在于这里比较关心circular.   于是加上了%n

@@ -13,8 +13,8 @@
 class Solution:
     def valid(self, s):
         cnt = 0
-        for i in s:
-            if i=='(': cnt+=1
+        for x in s:
+            if x=='(': cnt+=1
             else: cnt-=1
             if cnt<0: return False    #小于0则不平衡
         return cnt==0         #和为0则平衡

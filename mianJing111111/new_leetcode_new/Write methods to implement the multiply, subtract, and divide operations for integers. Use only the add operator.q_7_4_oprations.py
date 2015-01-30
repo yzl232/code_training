@@ -26,13 +26,14 @@ class Operations:
     def multiplication(self, a, b):
         if abs(a)<abs(b): return self.multiplication(b, a)
         ret = sum(abs(a) for i in range(abs(b)))
-        if a^b<0:  return self.negate(ret)
-        return ret
+        if (a>0 and b>0) or (a<0 or b<0):  return ret
+        return self.negate(ret)
 
 class Solution:
     # @return an integer
     def divide(self, a, b):  # obvious we can only use plus/minus operation
-        sign = 1 if a^b>=0 else -1
+        assert b!=0
+        sign = 1 if (a>0 and b>0) or (a<0 or b<0) else -1
         a = abs(a);  b = abs(b)
         ret = 0
         while a >= b:

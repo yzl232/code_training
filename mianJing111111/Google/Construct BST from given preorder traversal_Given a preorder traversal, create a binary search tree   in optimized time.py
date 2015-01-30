@@ -15,7 +15,7 @@ For example, if the given traversal is {10, 5, 1, 7, 40, 50}, then the output sh
 
 '''
 
-#暴力的方法。 sort。 然后leetcode  Convert Sorted array to Binary Search Tree
+#暴力的方法。 sort。 然后leetcode  Convert Sorted list to Binary Search Tree
 #O（nlogn）
 
 '''
@@ -39,13 +39,13 @@ class Solution:
     # @param num, a list of integers
     # @return a tree node
     def sortedArrayToBST(self, arr):  #用了start, end.  start>end return.  注意连接。 root.left = dfs()
-        self.n = len(arr)-1; self.arr = arr; self.i=0
+        self.arr = arr; self.i=0
         return self.dfs( INT_MIN, INT_MAX)  #然后就是mid
 
-    def dfs(self, minV, maxV):
-        if self.i>=self.n:   return None
+    def dfs(self, minV, maxV):  #leetcode 是inorder。 要用mid作 rootVal.    Pre order不需要的。第一个就是root
+        if self.i>len(self.arr)-1:   return None
         val = self.arr[self.i]
-        if not (minV<val<maxV): return None
+        if not (minV<val<maxV): return 
         self.i+=1
         root = TreeNode(val)
         root.left = self.dfs(minV, val)   #正好也是按照preOrder来的

@@ -27,17 +27,21 @@ class FlatternIterator<T>{
 则如果一直next输出，则输出 1,2,3,4,5,6,7
 '''
 from collections import  deque
+
+# 一堆iterator的题目，用queue比较合适
+
 class FlatIterator:
     def __init__(self, iters):
         self.q= deque(iters)
 
-    def hasNext(self):
+    def hasNext(self):       #很特别。 hasNext就已经搞定一切了。
         while self.q:
-            if self.q[0].hasNext(): return True
-            self.q.popleft()
+            if self.q[0].hasNext(): return True  #和interleaving的一模一样。
+            self.q.popleft()     # pop和array用一个i作为指针是一样。
         return False
 
     def next(self):
+        assert self.hasNext()   #以后都可以加一句这个
         return self.q[0].next()
 
 
@@ -46,6 +50,7 @@ class FlatIterator:
 
 
 # 比较精妙。
+'''
 class FlatIterator5:
     def __init__(self, iters):
         self.i = 0
@@ -58,9 +63,9 @@ class FlatIterator5:
         return self.hasNext()  #递归
 
     def next(self):
-        if not self.hasNext(): raise ValueError()
+        assert self.hasNext()   #以后都可以加一句这个
         return self.iters[self.i].next()
-
+'''
 
 
 
@@ -75,14 +80,17 @@ class flatten implements iterator{
 #Program an iterator for a List which may include nodes or List  i.e.  * {0,
 # {1,2}, 3 ,{4,{5, 6}}} Iterator returns 0 - 1 - 2 - 3 - 4 - 5 - 6"
 #Flatten an iterator of iterators in Java. If the input is [ [1,2], [3,[4,5]], 6], it should return [1,2,3,4,5,6]. Implement hasNext()
-#
-# I am not comfortable wring Java right now.  Do you mind me writing normal python code ?  I feel the idea is the similar.
 
 #用stack肯定是面试官喜欢的做法。 这肯定是正确的。
 
 
 #下面这个实际上是iterator of list or just nodes .  并不是an iterator of iterators。
 #下面是linkedin的 deep     iterator
+'''
+奇奇怪怪。 直接初始化就直接flatten算了。
+'''
+
+
 class DeepIterator: #代码不长。可以背下
     def __init__(self, l):
         self.stack = [l]
@@ -93,7 +101,7 @@ class DeepIterator: #代码不长。可以背下
         return True
 
     def next(self):
-        if not self.hasNext(): return
+        assert self.hasNext()   #以后都可以加一句这个
         result = self.stack.pop()
         self.advanceToNext()
         return result
@@ -115,10 +123,10 @@ while d.hasNext():
 
 class Solution:
     def flatten(self, arr):
-        result = []
-        for i in arr:
-            if isinstance(i, list):  result+=self.flatten(i)
-            else:  result.append(i)
-        return result
+        ret = []
+        for x in arr:
+            if isinstance(x, list):  ret+=self.flatten(x)
+            else:  ret.append(x)
+        return ret
 s = Solution()
 print s.flatten( [ [1,2], [3,[4,5]], 6])

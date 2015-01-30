@@ -12,19 +12,19 @@
 
 '''
 import threading
+myLock = threading.RLock()
 #肯定用recursion的。 递归调用delete
 class File:
     def __init__(self):
         self.contents = None
-        self.myLock = threading.RLock()
+        global myLock
 
     def isDir(self):
         pass
 
     def delete(self):
-        self.myLock.acquire()
-        if self.isDir():  #注意先后
-            for e in self.contents:
-                e.delete()
-        self.myLock.release()
+        myLock.acquire()
+        if self.isDir():  #注意先后     Post-order traverse
+            for e in self.contents:  e.delete()
         del self
+        myLock.release()

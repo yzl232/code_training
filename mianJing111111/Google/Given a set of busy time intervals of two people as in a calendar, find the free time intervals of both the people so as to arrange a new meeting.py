@@ -7,6 +7,8 @@ per2: (3,5) (12,15) (18, 21) (23, 24)
 ouput: (6,9) (16,17)  (25,26)
 '''
 #一个简单做法。  calendar总共才30。  用2个hashtable存就好。
+
+
 class Solution:
     def find(self, arr1, arr2):
         d1, d2, free= self.getSet(arr1), self.getSet(arr2), []
@@ -18,8 +20,8 @@ class Solution:
             start=free[i]
             while i+1<len(free) and free[i]==free[i+1]-1:     i+=1
             end=free[i]
-            i+=1
             ret.append((start,end))
+            i+=1
         return ret
 
     def getSet(self, arr):
@@ -43,5 +45,5 @@ def intersect(arr1, arr2):  # intersection of 2 sorted array变体
         else:
             i+=1; j+=1
             ret.append((max(s1, s2), min(e1, e2)))
-    return ret+arr1[i:]+arr2[j:]
+    return ret  #ret+arr1[i:]+arr2[j:]  merge才是都加上。
 print intersect([(1,5) ,(10, 14), (19,20), (21,24), (27,30)],  [(3,5), (12,15), (18, 21), (23, 24)])

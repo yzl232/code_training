@@ -35,15 +35,14 @@ O(n) time, O(n) space.
 #四个辅助矩阵
 class Solution:
     def solve(self, arr):
-      if len(arr)<=1: raise ValueError('not valid input')
+      assert len(arr)>=2
       lMin, lMax = self.left_min_max(arr)
       rMin, rMax = self.left_min_max(arr[::-1])  #这一招巧妙
       rMin, rMax = rMin[::-1], rMax[::-1]
       return  max(max(lMax[i-1]-rMin[i], rMax[i] - lMin[i-1]) for i in range(1, len(arr)))  #要么左边比右边大。要么右边比左边大
-
+#边界， i-1, i  。 所以是从1~len(arr)
     def left_min_max(self, a):
-        s1 = [0]*len(a); s2=s1[:]
-        s1[0] = a[0]; s2[0]=a[0]
+        s1 = a[:]; s2=a[:]
         for i in range(1, len(a)):
             s1[i] = max(s1[i-1]+a[i],  a[i])
             s2[i] = min(s2[i-1]+a[i], a[i])

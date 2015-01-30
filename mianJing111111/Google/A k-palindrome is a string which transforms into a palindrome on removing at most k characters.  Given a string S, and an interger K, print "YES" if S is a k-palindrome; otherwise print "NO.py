@@ -60,11 +60,7 @@ class Solution:
     def ModifiedEditDistance(self, word):
         target = word[::-1];  n = len(word)
         if word==target: return 0
-        dp = [[n+n for i in range(n+1)] for j in range(n+1)]
-        for i in range(n+1):
-            dp[i][0] = i
-        for i in range(n+1):
-            dp[0][i] = i
+        dp = [[i+j for i in range(n+1)] for j in range(n+1)]
         for i in range(1, n+1):
             for j in range(1, n+1):  #允许插入，删除。不允许替换
                 dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1) if word[i-1] != target[j-1] else dp[i-1][j-1]

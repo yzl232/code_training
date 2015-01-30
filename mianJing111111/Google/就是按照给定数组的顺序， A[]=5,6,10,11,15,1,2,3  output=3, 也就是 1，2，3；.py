@@ -3,6 +3,10 @@
 #longest consecutive sequence
 #就是最大的consecutive subarray
 
+
+
+
+'''
 class Solution:
     # @param A, a list of integers
     # @return an integer
@@ -12,3 +16,17 @@ class Solution:
             cur = cur + 1 if a[i]==a[i-1]+1 else 1
             ret = max(ret, cur)
         return ret
+'''
+# 用while 贪心的做法也是可以的。
+class Solution:
+    # @param A, a list of integers
+    # @return an integer
+    def maxSubArray(self, arr):
+        if not arr: return
+        i=0; n=len(arr); ret=(0, None, None)
+        while i<n:
+            pre=i
+            while i+1<n and arr[i+1]==arr[i]+1: i+=1
+            i+=1; ret=max(ret, (i-pre, pre, i))
+        cnt, pre, i=ret
+        return arr[pre:i]

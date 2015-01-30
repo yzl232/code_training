@@ -5,17 +5,17 @@ Design an algorithm to find the kth number such that the only prime factors are 
 
 #G家最近考过
 
-class Solution:
+class Solution: #思想简单。 就是每次比较3， 5， 7的倍数哪个最小。  然后每次更新pointer
     def primeN(self, n):  #用了3个pointer来记录
         c3 = c5 = c7 = 0
         ret = [1]
-        for i in range(1, n+1):
+        for i in range(n):
             m = min(ret[c3]*3, ret[c5]*5, ret[c7]*7)
             ret.append(m)
             if m == ret[c3]*3: c3+=1
             if m == ret[c5]*5: c5+=1
             if m== ret[c7]*7: c7+=1    #print '%d th element, %d, c3:%d, c5:%d, c7: %d' % (i, ret[i], c3, c5, c7)
-        return ret[n]
+        return ret[-1]
 
 s = Solution()
 print s.primeN(15)

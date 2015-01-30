@@ -21,4 +21,4 @@ class Solution():
         self.curCount=0
 
     def get(self):
-        return self.s     #可以进一步优化60倍的。 略去。
+        return self.s     #可以进一步优化60倍的。 略去。..

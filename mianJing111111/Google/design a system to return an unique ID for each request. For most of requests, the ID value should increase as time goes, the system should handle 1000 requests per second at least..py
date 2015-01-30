@@ -8,12 +8,25 @@ timestamps alone is not valid since there might be multiple requests with same t
 http://www.careercup.com/question?id=5169800024162304
 '''
 
+
+# http://blog.tompawlak.org/generate-unique-identifier-nodejs-javascript
+# 上面的链接比较好
+
+# str(time)+ str(id)
+# 时间不一样时。  id重置。
+
+# 或者加上mac address
+
+
+# UUIDs may be generated from a combination of system time stamp, CPU / system unique ID, NIC MAC addresses, HBA WWNs etc.
 '''
-This question is quite open-ended.
-
-For starter, how about appending random(N) to the timestamp? N can be large enough to make collisions unlikely. If each server has an ID we can also include it to further reduce collisions.
-
-If IDs must be unique, then I suppose you can design a counter that will return an ID and increment it at the same time. You will then need mutex to access this counter.
+Let's assume the following parameters:
+What's the min length of the ID? <= 128 bits
+In that case I'll choose the standard 128 bit UUID format.
+The requirement states the system should handle 1000 request/s at least.
+What's the average request rate? 1000 < avg req. rate < 10,000
+What's the max. burst rate the system must handle? < 1,000,000
+What's the max. latency (wait time) for a request? 1 ms
 '''
 
 
@@ -28,13 +41,9 @@ What's the average request rate?
 What's the max. burst rate the system must handle?
 What's the max. latency (wait time) for a request?
 
-Let's assume the following parameters:
-What's the min length of the ID? <= 128 bits
-In that case I'll choose the standard 128 bit UUID format.
-The requirement states the system should handle 1000 request/s at least.
-What's the average request rate? 1000 < avg req. rate < 10,000
-What's the max. burst rate the system must handle? < 1,000,000
-What's the max. latency (wait time) for a request? 1 ms
+
+
+#生产者。 消费者问题。
 
 It's a classical consumer-producer problem.
 In this case we have many consumers of UUIDs and one producer.
@@ -44,4 +53,13 @@ First Pre-allocate 2 Mio UUIDs into an array / stack/ heap (depending on impleme
 (If no overhead 2 Mio UUIDs would take ~ 32MB of RAM)
 Again, not a problem on today's server system with many GB of RAM, but may be a problem on an embedded system.)
 The solution needs to ensure that its pool of UUIDs doesn't run out as consumers request them and they are replenished.
+'''
+
+
+'''
+This question is quite open-ended.
+
+For starter, how about appending unique numbers to the timestamp?  If each server has an ID we can also include it to further reduce collisions.
+
+If IDs must be unique, then I suppose you can design a counter that will return an ID and increment it at the same time. You will then need mutex to access this counter.
 '''

@@ -8,8 +8,8 @@ Now you generate a new file on one machine, and want to sync up across all machi
 '''
 We had this problem at the office. The best way to do it is to order your nodes as a binary tree (a heap representation will do)
 
-Node1
-Node2      Node3
+              Node1
+      Node2      Node3
 Node4 Node5 Node6 Node7
 
 at T-0 Node1 pases the data to Node2, at T-1 Node1 passes data to Node3 and Node2 passes data to Node4, at T-3 Node2 passes data to Node5, Node3 passes data to Node6, at T-4 Node3 passes data to Node7.
@@ -22,3 +22,6 @@ There's even an optimization in which not all data is passed in each step but ju
 '''
 wouldn't that cause retransmission, how about divide file into smaller fixed size segments then main computer uses UDP datagram and broadcast each segment along with sequential incrementing id. Once all packets done transmission clients may ask for missing segment, and it can retransmit.
 '''
+
+
+#想法比较赞。   极大prevent congestion.

@@ -47,7 +47,7 @@ class Solution1:
                 if x[i-1]==y[j-1]: dp[i][j] = dp[i-1][j-1]+1
                 else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])
         l = dp[-1][-1]
-        lcsIndex = [None for i in range(l)]
+        lcsIndex = [None]*l
         i=len(x);  j=len(y)  #由dp的值逆推的一个过程。 就是之前的反向
         while i>0 and j>0:
             if x[i-1]==y[j-1]:  #从dp公式看。 是一致的

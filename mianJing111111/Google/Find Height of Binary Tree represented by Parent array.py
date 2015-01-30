@@ -44,6 +44,7 @@ The tree can be constructed recursively by first searching the current root, the
 #考虑一个n叉树，将所有node存在一个数组tree中，node编号从0到n(n为数组大小)
 #。 arr[i]表示第i个node的parent，请找出该树的深度(即最长的根到叶的路径长度)
 # G家考过
+# O(n)的做法并不在乎是不是N叉树
 
 class TreeNode:
     def __init__(self, x):
@@ -82,18 +83,17 @@ class Solution:
 # O(n)
 class Solution:
     def findHeight(self, arr):
-        self.depth = [None for i in range(len(arr))]
+        self.depth = [None] *(len(arr))
         self.arr = arr
-        for i in range(len(arr)):
-            self.fillDepth(i)
+        for i in range(len(arr)):    self.fill(i)
         return max(self.depth)
 
-    def fillDepth(self, i):
+    def fill(self, i):
         if self.depth[i]: return   #已经fill
         parent = self.arr[i]
         if parent == -1:
-            self.depth[i] = 1
-            return
-        if not self.depth[parent]: self.fillDepth(parent)
-        self.depth[i] = self.depth[parent]+1
+            self.depth[i] = 1;  return
+        self.fill(parent)
+        self.depth[i] = self.depth[parent]+1   #parent深度+1
 #非常的巧妙
+# 递归形式的dp。类似于 memoization

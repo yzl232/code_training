@@ -17,10 +17,23 @@ For each edge, we find the parent of both vertices.
     Otherwise, join these two components by changing the parent of one of the vertex, of edge, to the parent of other vertex.
 
 '''
+
+
+
+# 1是没有cycle。 2是BFS能够遍历所有的node
+
+#  BFS .   找root。 然后BFS
+
+
+
 #每次都找root(没有ingoing edge 的node)。 多于一个node。不是.    然后BFS。 如果已经出现过了。 不是tree
 #If number of vertices is n and number of edges is not n-1, it can not be a tree.
 
 #和这道题目像。build_tree_from_array
+
+# union find 一般也就是建图， 然后从root BFS的过程
+
+
 class Relation:
     def __init__(self, parent, child):
         self.parent = parent

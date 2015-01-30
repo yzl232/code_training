@@ -58,9 +58,7 @@ class Solution:
     # @param matrix, a list of lists of integers
     # @return a list of lists of integers
     def rotate(self, matrix):
-        n = len(matrix)
-        for i in range(len(matrix)):
-            matrix[i].reverse()
+        for i in range(len(matrix)):  matrix[i].reverse()
         for j in range(len(matrix[0])):
             start=0; end=len(matrix)-1
             while start<end:

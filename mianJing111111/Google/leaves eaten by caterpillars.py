@@ -34,3 +34,5 @@ class Solution:
 
 s = Solution()
 print s.countUneaten(10, [2, 4, 5])
+
+#素数题目。  解法用sieve prime

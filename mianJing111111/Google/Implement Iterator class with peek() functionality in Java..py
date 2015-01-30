@@ -7,10 +7,10 @@
 '''
 #非常高频的一道题目
 
-
+# 提前一步
 class IteratorPeek: #代码不长。可以背下
     def __init__(self, iterator):
-        self.iterator = iterator
+        self.iter = iterator
         self.top = None
         self.getTop()
 
@@ -20,11 +20,16 @@ class IteratorPeek: #代码不长。可以背下
     def next(self):
         if not self.hasNext():   raise ValueError("End of iterator")
         ret = self.top
-        self.getTop()
+        self.getTop()  #更新一个新的top
         return ret
 
     def getTop(self):
-        if not self.top: self.top = self.iterator.next()
+        self.top=None  #必须先置为空.  非常关键。 之前少了这个。
+        if self.iter.hasNext: self.top = self.iter.next()  #提前一步。 注意是自己的iter
+
+    def peek(self):
+        if not self.hasNext(): raise ValueError
+        return self.top
 
 
 '''
@@ -46,6 +51,10 @@ class IteratorMerge: #代码不长。可以背下
         val, i, j = heapq.heappop(self.h)
         if j+1<len(self.arrs[i]):  heapq.heappush(self.h, (self.arrs[i][j+1], i, j+1))
         return val
+
+# 像这种iterator都是那种把while 循环 分拆成一步一步的。  只要把while循环的几句抄到Next即可。
+# while的条件就是 has Next
+
 #和下面的k way merge一模一样。。。
 
 

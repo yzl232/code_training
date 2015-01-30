@@ -32,7 +32,7 @@ n**n 指数的复杂
 #因为candidates不变
 class Solution:
     def allPer(self, s):
-        self.ret = []; self.n = len(s); self.c = list(s)
+        self.ret = []; self.n = len(s); self.c =list(s)  #list(set(s))
         self.dfs( '')
         return self.ret
 

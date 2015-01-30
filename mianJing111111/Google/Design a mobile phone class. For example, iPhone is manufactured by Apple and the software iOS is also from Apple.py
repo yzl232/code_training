@@ -3,9 +3,11 @@
 Design a mobile phone class. For example, iPhone is manufactured by Apple and the software iOS is also from Apple. Samsung GALAXY is produced by Samsung but the software is Android from Google. Also take into account the version of the software, ex., iOS 7.1, 8.0.
 '''
 class Phone:
-    def __init__(self,  os, manufacturer):
+    def __init__(self,  os, manufacturer, model, productionDate):
         self.os = os
         self.manufacturer = manufacturer
+        self.phoneType = model  #手机型号
+        self.productionDate=productionDate
 
 class Company:
     def __init__(self, name):

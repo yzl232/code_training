@@ -9,12 +9,11 @@ allowed to call other.doHeartbeat(). Java doesn't provide a way to limit
 access to a per object level. Why not?
 '''
 
-
+# 2个time。 一个是 compile time .  一个是runtime>      compile time施加access restriction.   runtime才run  method。  顺序在后面。  如果在runtime check。 too costly
 '''
 In java, access restriction is enforced during compilation time.
 
-If a class
-try to access the private method of a different class, it wouldn't compile.
+If a class try to access the private method of a different class, it wouldn't compile.
 On the other hand, objects are created during runtime.
 
 

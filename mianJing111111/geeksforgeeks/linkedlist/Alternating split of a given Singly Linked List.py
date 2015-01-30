@@ -31,3 +31,18 @@ class Solution:
         if h1.next:  h1.next = h1.next.next
         if h2.next: h2.next = h2.next.next
         self.help(h1.next, h2.next)
+
+
+'''
+# clone list with random node 用到了
+class Solution:
+    def splitAl(self, h):
+        cur = h
+        h2 = h.next
+        while cur:  # choose next pointers . decouple the list
+            t = cur.next
+            cur.next = t.next
+            if t.next:   t.next = t.next.next     # 1, 2, 3, (4)  .   1=3,  2=4
+            cur = cur.next
+        return h2
+'''

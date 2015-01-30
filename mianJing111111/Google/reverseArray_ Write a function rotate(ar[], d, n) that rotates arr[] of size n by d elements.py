@@ -34,7 +34,7 @@ Reverse all, we get (ArBr)r = [3, 4, 5, 6, 7, 1, 2]
 
 class Solution2:
     def reverse(self, start, end, arr):
-        while start<end:
+        while start<end:  #都是这种限定start, end的reverse
             arr[start], arr[end] = arr[end], arr[start]
             start+=1
             end-=1

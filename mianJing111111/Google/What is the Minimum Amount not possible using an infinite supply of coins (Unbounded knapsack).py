@@ -32,13 +32,11 @@ class Solution:
             i+=1
 
     def dfs(self, n1, c, cur):
-        if c ==0:
-            if cur in self.ret: return
-            self.ret.add(cur)
-            return
+        self.ret.add(cur)
         for i in range(n1, len(self.vals)):
             x = self.vals[i][0]; y=self.vals[i][1]
-            if c>=y:              self.dfs(i, c-x, cur+[x])
+            if c>=y:
+                self.dfs(i, c-x, cur+[x])
 
 
 

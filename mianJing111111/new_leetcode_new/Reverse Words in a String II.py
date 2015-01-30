@@ -23,14 +23,14 @@ This can be done without any additional space in 2 pass
 # he is nice
 # eh si ecin
 # nice is he
-
+# 老是记不住。  这里是假设只有一个single空格的情况。
 class Solution:#input is a char array.
     def reverseWords(self, arr):     #in place
-        i=0
-        for j in range(len(arr)+1):
-            if j==len(arr) or arr[j] == ' ':  #结尾
-                self.reverse(arr, i, j-1)
-                i = j+1 #更新start
+        l=0
+        for r in range(len(arr)+1):
+            if r==len(arr) or arr[r] == ' ':  #结尾
+                self.reverse(arr, l, r-1)
+                l = r+1 #更新start
         self.reverse(arr, 0, len(arr)-1)  #逐个reverse。最后整体reverse
         return arr
 
@@ -42,6 +42,8 @@ class Solution:#input is a char array.
 s = Solution()
 print s.reverseWords(list('the sky is blue'))
 
+
+'''
 #自己实现split.  #只有一个space的情况
 class Solution:  #O(n) space
     def reverseWords(self, s):
@@ -54,10 +56,10 @@ class Solution:  #O(n) space
 s = "the sky is blue"
 s1 = Solution()
 print s1.reverseWords(s)
+'''
 
 
-
-#和上面不同。 这个是多个space的情况。 以及边界space的情况
+#和上面不同。 这个是多个space的情况。 以及边界space的情况, revverse words解法
 class Solution:  #O(n) space
     def reverseWords(self, s):
         ret = '';   j = len(s)

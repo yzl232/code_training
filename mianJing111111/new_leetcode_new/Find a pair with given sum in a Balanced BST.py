@@ -41,6 +41,22 @@ Given a BST and a value x. Find two nodes in the tree whose sum is equal x. Addi
 # http://www.geeksforgeeks.org/find-a-pair-with-given-sum-in-bst/
 #原理： in order traversal 用stack的做法。 stack只存logN数目的node。 所以空间是logN
 #用2个stack
+
+#也可以使用binary tree  in order iterator。 space也是O(h)
+
+# iterator1 是 In order 的
+# iterator2 是相反方向的。
+'''
+while True:
+    if not v1 or not v2: break
+    if v1+v2==target: return v1, v2
+    elif v1+v2>target: v2=iterator2.next()
+    else: v1=iterator1.next()
+
+
+'''
+
+'''
 class Solution5:
     def find(self, root, target):
         s1 = []; s2=[]
@@ -48,7 +64,7 @@ class Solution5:
         cur1 = root;  cur2= root.right
         val1=val2=None
         while True:
-            while done1:
+            while not done1:
                 while cur1:
                     s1.append(cur1)
                     cur1 = cur1.left
@@ -57,7 +73,7 @@ class Solution5:
                 val1 = cur1.val
                 cur1 = cur1.right
                 done1 =True
-            while done2:
+            while not done2:
                 while cur2:
                     s2.append(cur2)
                     cur2 = cur2.right
@@ -70,3 +86,4 @@ class Solution5:
             elif val1+val2<target:   done1=False
             else: done2=False
             if val1>=val2: return False
+'''

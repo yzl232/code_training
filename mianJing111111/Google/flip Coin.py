@@ -17,7 +17,7 @@ class Solution:
         if h+t==self.n:
             self.ret.append(cur)
             return
-        if h+t<self.n:    self.dfs(h+1, t, cur+'H')
+        if h+t<self.n:    self.dfs(h+1, t, cur+'H')   #类似这种。 这两行的顺序是等价的。
         if h+t<self.n:    self.dfs(h, t+1, cur+'T')
 s = Solution()
 print s.generateParenthesis(3)

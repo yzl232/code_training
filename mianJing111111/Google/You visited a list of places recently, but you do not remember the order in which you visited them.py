@@ -13,19 +13,21 @@ If there is loop, more than one solution.
 We should first start with no loop situation.
 '''
 
+# tickets 就是 edges。  根据ticktes建立图：  from的hashmap
+
 class Solution:
-    def topological(self, graph):
+    def topological(self, graph):   # 按题目输入，应当建一个hashmap.:    fromD = {}
         self.graph = graph
-        self.ret,  self.visited = [], {}
-        for k in graph.keys():  self.dfs(k)
+        self.ret,  self.visited = [], {}  # visited最开始为空。
+        for k in graph:  self.dfs(k)
         return self.ret
-    def dfs(self, node):
-        if node in self.visited:   #已经visit过了
-            if self.visited[node]==False: raise ValueError("cycle")  #发现了一个back edge。
+    def dfs(self, x):
+        if x in self.visited:   #已经visit过了
+            if self.visited[x]==False: raise ValueError("cycle")  #发现了一个back edge。
             return
-        self.visited[node] = False  #这就是与普通dfs的唯一不同。 用False标记
-        for k in self.graph[node]:  self.dfs(k)
-        self.ret.append(node)
-        self.visited[node] = True
+        self.visited[x] = False  #这就是与普通dfs的唯一不同。 用False标记
+        for y in self.graph[x]:  self.dfs(y)
+        self.ret.append(x)
+        self.visited[x] = True
 
 

@@ -14,7 +14,7 @@ Google, I'm not sure I know the right answer to this one to this day)
 分析：任何时候内存状态都不能相同，否则进入死循环：假设某2个时刻t1,t2满足t1小
 于t2，内存的状态完全相同，那么到达t2时刻又想当于回到了t1的执行位置。1k的内存
 共有状态 2^(1024*8)个（相当大）每秒cpu为1m，一秒钟改变1m次，所以两者相除即可
-得CPU的最长运行时
+得CPU的最长运行时...
 '''
 
 

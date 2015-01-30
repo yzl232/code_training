@@ -28,4 +28,4 @@ class Solution:
     def getRange(self, l, r):
         return str(l) if l==r else str(l)+'->'+str(r)
 s = Solution()
-print s.findRange( [0, 1, 3, 50, 75], 0, 99)
+print s.findMissingRanges( [0, 1, 3, 50, 75], 0, 99)

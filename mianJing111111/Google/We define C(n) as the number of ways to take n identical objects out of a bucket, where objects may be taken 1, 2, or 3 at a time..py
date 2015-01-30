@@ -39,16 +39,16 @@ This is okay, but still slow if n is very large. Faster algorithms can be found 
 [0 0 1]
 [1 0 1]
 [0 1 1]
-So what we are really doing is computing the first entry of (M^n)*L. Fast algorithms for matrix exponentiation can accelerate this much faster than just repeatedly multiplying (on the left) by M, n times in a row.
+So what we are really doing is computing the first entry of (M^n)*L. Fast algorithms for matrix exponentiation can accelerate this much faster than just repeatedly multiplying (on the left) by M, n times in a row..
 '''
 
 # dp[n] = dp[n-1]+dp[n-2]+dp[n-3]
 
 class Solution:
     def cnt(self, n):
-        if n<1: return 0
-        a, b, c = 1, 1, 2
-        for i in range(n):
+        assert n>0
+        a, b, c = 1,2, 4
+        for i in range(n-1):
             a, b, c = b, c, a+b+c
         return a
 # fibonacci
@@ -57,6 +57,7 @@ class Solution:
 x=[1,1,2]
 
 复习一下推导过程。很容易得出
+行乘以列
 m=
 [0 0 1]
 [1 0 1]

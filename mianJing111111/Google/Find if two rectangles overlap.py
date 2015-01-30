@@ -17,7 +17,8 @@ r2: Bottom Right coordinate of second rectangle.
 
 #只要2个点就可以表示一个矩形了。。。
 #l代表左上, topleft。  r代表右下.  bottom right
-def overLap(l1, r1, l2, r2):
-    if l1.x>r2.x or l2.x>r1.x:  return False #1， 2互换一下
-    if l1.y<r2.y or l2.y<r1.y: return False
+# 一个是x坐标没重叠。 一个是y坐标不重叠。    再每次1， 2互换一下。  共4种
+def overLap(p1L, p1R, p2L, p2R):
+    if p1R.x<p2L.x or p2R.x<p1L.x:  return False   # 每次1， 2互换一下
+    if p1R.y > p2L.y or p2R.y>p1L.y: return False
     return True

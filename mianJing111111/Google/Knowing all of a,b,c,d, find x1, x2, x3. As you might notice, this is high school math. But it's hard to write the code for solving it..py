@@ -25,15 +25,15 @@ X[2] = ?
 
 # encoding=utf-8
 def myGauss(m):
-    for i in range(len(m[0])): #基准在对角线，也就是m[col][col]， 并以m[col]
-        for row in range(i+1, len(m)):   #row比col大。 也就是左下角。 而且是一列一列解决。
-            t = [(1.0*rowValue * (-(m[row][i] / m[i][i]))) for rowValue in m[i]]
-            m[row] = [t[j]+m[row][j]  for j in range(len(t))]
-    ret = [1.0*m[-1][-1] / m[-1][-2]]   #-1是最后一列。 直接除就可以
+    for i in range(len(m[0])): #基准在对角线，也就是m[i][i]， 并以m[i]
+        for r in range(i+1, len(m)):   #r比i大。 也就是左下角。 而且是一列一列解决。
+            t = [(1.0*rowValue * (-(m[r][i] / m[i][i]))) for rowValue in m[i]]
+            m[r] = [t[j]+m[r][j]  for j in range(len(t))]
     m.reverse() #makes it easier to backsolve
+    ret = [1.0*m[0][-1] / m[0][-2]]   #-1是最后一列。 直接除就可以
     for i in range(1, len(m)):
-            val = sum(ret[j]*m[i][-2-j]  for j in range(i))  ##substitute in all known coefficients 代入
-            ret.append((m[i][-1]-val)/m[i][-i-2])
+            val =m[i][-1]- sum(ret[j]*m[i][-2-j]  for j in range(i))  ##substitute in all known coefficients 代入
+            ret.append(val/m[i][-2-i])   # 上一行一样的。 上一行j=i-1
     return ret[::-1]
 
 #懂了以后就没有那么难了。

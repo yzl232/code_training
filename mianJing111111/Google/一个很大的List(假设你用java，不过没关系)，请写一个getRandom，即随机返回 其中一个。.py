@@ -3,4 +3,6 @@
 #其中一个。
 '''
 resevoir sampling
+
+# 一个cnt。  一个resuilt
 '''

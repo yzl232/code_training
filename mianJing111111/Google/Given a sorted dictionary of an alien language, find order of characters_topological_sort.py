@@ -35,22 +35,21 @@ The idea is to create a graph of characters and then find topological sorting of
 
 
 
-class Solution:
+class Solution:  # build graph有技巧。 必须相邻比较words.
     def topolgical_sort(self, words):
-        s = set(''.join(words))
         g = {}
-        for ch in s:  g[ch] = set()    #第一步： 为所有的ch建立node
+        for ch in set(''.join(words)):  g[ch] = set()    #第一步： 为所有的ch建立node
         for i in range(len(words)-1):
-            word1 = words[i]; word2 = words[i+1]
-            for j in range(min(len(word1), len(word2))):
-                if word1[j] != word2[j]:  #发现了一个edge,  加入graph
-                    g[word2[j]].add(word1[j])
-                    break
+            w1 = words[i]; w2 = words[i+1]
+            for j in range(min(len(w1), len(w2))):
+                if w1[j] != w2[j]:  #发现了一个edge,  加入graph
+                    g[w2[j]].add(w1[j]);   break
         print g
         self.graph = g
         self.ret,  self.visited = [], {}
-        for k in g.keys():  self.dfs(k)
+        for k in g:  self.dfs(k)
         return self.ret
+
     def dfs(self, x):
         if x in self.visited:   #已经visit过了
             if self.visited[x]==False: raise ValueError("cycle")  #发现了一个back edge。

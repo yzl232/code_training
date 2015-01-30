@@ -26,7 +26,7 @@ class Solution:
         if abs(x1-x2)!=abs(y1-y2):  #都是有2种走法。不妨取一种
             x = (y2-y1+x1+x2)/2
             y = x2+y2-x
-            if x < 0 or y<0:   #如果符号不对。  就是x1, y1,     x2,y2换个位子
+            if not (0<=x<7) or not (0<=y<7):   #如果超过了棋盘。  符号不对。  就是x1, y1,     x2,y2换个位子
                 x =(y1-y2+x1+x2)/2
                 y = x1+y1-x
             print (x, y)

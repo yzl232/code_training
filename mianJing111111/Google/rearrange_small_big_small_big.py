@@ -15,7 +15,7 @@ s1 <= s2, s2 >=s3, s3 <= s4, s4 >= s5,.....
 
 class Solution:
     def reorder(self, s):
-        for i in range(1, len(s)-1):
+        for i in range(1, len(s)):
             if (i%2) ^ (s[i-1] < s[i]):   s[i-1], s[i] = s[i], s[i-1]  #   4种情况。 随便写一种。然后举例修正。
         return s
 

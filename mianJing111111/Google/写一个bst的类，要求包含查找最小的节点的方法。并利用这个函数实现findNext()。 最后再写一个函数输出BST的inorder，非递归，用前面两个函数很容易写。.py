@@ -7,3 +7,5 @@
 
 # 最小的函数。  while root.left: root = root.left
 #  findNext:  root.right, 然后left most node.
+
+# in-order .  stack

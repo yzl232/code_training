@@ -6,10 +6,20 @@
 开放性问题，如何设计广告推荐算法，从基本的如何利用log，到如何针对不同的用户优化，到加入machine learning。感觉实在乱扯
 '''
 
+
+#  subscribed.     liked.
+
 #比如看过taylor的音乐视频。  也会喜欢其它泰勒的视频
 #比如看过婴儿学走路的视频。 可能有小孩。 可能喜欢其它与婴儿相处的视频。
+#(上面就是content-based filtering) . 自己的 like, suscribe
 
-#社交网络。  中国人。
+
+#社交网络。  中国人 。  这些人的suscribe. liked
+# (colloborative filtering ) 别人的 like, suscribe
+
+
+
+
 
 '''
 
@@ -66,11 +76,18 @@ Did that help at all? Hope that give you a little bit of insight how this works 
 # 于是乎
 
 '''
-Recommender systems typically produce a list of recommendations in one of two ways - through collaborative or content-based filtering.[5] Collaborative filtering approaches building a model from a user's past behavior (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users; then use that model to predict items (or ratings for items) that the user may have an interest in.[6] Content-based filtering approaches utilize a series of discrete characteristics of an item in order to recommend additional items with similar properties.[7] These approaches are often combined (see Hybrid Recommender Systems).
+Recommender systems typically produce a list of recommendations in one of two ways -
+
+through collaborative or content-based filtering.[5] Collaborative filtering approaches building a model from a user's past behavior (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users; then use that model to predict items (or ratings for items) that the user may have an interest in.[6]
+
+
+Content-based filtering approaches utilize a series of discrete characteristics of an item in order to recommend additional items with similar properties.[7] These approaches are often combined (see Hybrid Recommender Systems).
 
 The differences between collaborative and content-based filtering can be demonstrated by comparing two popular music recommender systems - Last.fm and Pandora Radio.
 
     Pandora uses the properties of a song or artist (a subset of the 400 attributes provided by the Music Genome Project) in order to seed a "station" that plays music with similar properties. User feedback is used to refine the station's results, deemphasizing certain attributes when a user "dislikes" a particular song and emphasizing other attributes when a user "likes" a song. This is an example of a content-based approach.
+
+
     Last.fm creates a "station" of recommended songs by observing what bands and individual tracks that the user has listened to on a regular basis and comparing those against the listening behavior of other users. Last.fm will play tracks that do not appear in the user's library, but are often played by other users with similar interests. As this approach leverages the behavior of users, it is an example of a collaborative filtering technique.
 
 Each type of system has its own strengths and weaknesses. In the above example, Last.fm requires a large amount of information on a user in order to make accurate recommendations. This is an example of the cold start problem, and is common in collaborative filtering systems.[8] While Pandora needs very little information to get started, it is far more limited in scope (for example, it can only make recommendations that are similar to the original seed).

@@ -32,6 +32,24 @@ Valid Assumptions: Please assume that both the pattern and string input are vali
 '''
 
 class Solution:
+    # @param s, an input string
+    # @param p, a pattern string
+    # @return a boolean
+    def isMatch(self, s, p):
+        if s and p and p[-1] not in (s[-1], '*', '+'): return False  #这一行是为了通过leetcode.  其实要删掉
+        return self.dfs(s, p)
+
+    def dfs(self, s, p):
+        if not p: return not s
+        if len(p)>=2 and p[1] in ('*', '+'):
+             if p[1]=='*' and self.dfs(s, p[2:]): return True
+             if s and p[0] ==s[0] and self.dfs(s[1:], p): return True
+             return False
+        else: return s!='' and p[0] ==s[0] and self.dfs(s[1:], p[1:])
+
+
+'''
+class Solution:
     def isMatch(self, s, p):
         if s and p and p[-1] not in ('*', '+', s[-1]): return False
         return self.dfs(s, p)
@@ -47,3 +65,4 @@ class Solution:
                 if self.dfs(s[i:], p[2:]): return True
             return False
         else: return s!='' and p[0]==s[0] and self.dfs(s[1:], p[1:])
+'''

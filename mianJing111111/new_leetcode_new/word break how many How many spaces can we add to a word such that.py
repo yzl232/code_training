@@ -33,11 +33,11 @@ class Solution:
     # dp[i] = any of ( dp[j] and s[j+1:i] )  0<=j<i
     def wordBreak(self, s, dict):
         n = len(s)
-        dp = [-1 for i in range(n+1)]  #不为-1
+        dp = [-1 for j in range(n+1)]  #不为-1
         dp[0] = 0
-        for i in range(1, n+1):
-            for j in range(0, i):
-                if dp[j]!=-1 and (s[j:i] in dict):  dp[i] =max(dp[j]+1, dp[i])
+        for j in range(1, n+1):
+            for i in range(0, j):
+                if dp[i]!=-1 and (s[i:j] in dict):  dp[j] =max(dp[i]+1, dp[j])
         return dp[n]
 
 '''

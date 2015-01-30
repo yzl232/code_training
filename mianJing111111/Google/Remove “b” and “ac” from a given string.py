@@ -29,7 +29,7 @@ The approach is to use two index variables i and j. We move forward in string us
 class Solution:
     def filterS(self, arr):  #char array
         n = len(arr)
-        i=j=0
+        i=j=0  # 类似slow和fast。 因为有i+=2这种。 用while合适。
         while i<n:
             if arr[i]=='b':  i+=1
             elif i+1<=n-1 and arr[i:i+2]=='ac':   i+=2  #有点像decode ways.

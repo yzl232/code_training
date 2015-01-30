@@ -127,7 +127,7 @@ Keywords 和它的出现次数。
 
 用 一个Queue of
 size of 30 （因为30 分钟，也可以是60分钟）
-来记录 每一分钟的top 10 的10-tuple的hashmap （只保留top10的记录），构成 一个动态leaking buffle Queue，
+来记录 每一分钟的top 10 的10-tuple的hashmap （只保留top10的记录???????????），构成 一个动态leaking buffle Queue，
 这样就可以精确
 算出last 30 minutes, 60 minutes,  24 hours
 
@@ -155,7 +155,7 @@ circullar queue
 #巧妙
 class Solution5:
     def __init__(self):
-        self.q = deque([], maxlen=10)
+        self.q = deque([], maxlen=10)  #不大一样。 这里queue长度是10
 
     def foo(self):
         curTime = time.time()

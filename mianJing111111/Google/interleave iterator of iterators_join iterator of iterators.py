@@ -60,7 +60,8 @@ class FlatIterator:
         return False
 
     def next(self):
+        assert self.hasNext()   #以后都可以加一句这个
         t = self.q.popleft()
         val = t.next()
-        if t.hasNext(): self.q.append(t)
+        if t.hasNext():self.q.append(t)       # if t.hasNext()   这句不需要。  因为hasNext 已经判断了
         return val

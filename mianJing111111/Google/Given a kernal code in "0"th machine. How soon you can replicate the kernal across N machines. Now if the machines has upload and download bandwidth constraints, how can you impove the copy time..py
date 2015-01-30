@@ -1,8 +1,11 @@
 # encoding=utf-8
+# Given a kernal code in "0"th machine. How soon you can replicate the kernal across N machines. Now if the machines has upload and download bandwidth constraints, how can you impove the copy time.
 '''
 I can think of three basic mechanisms for accelerating the content distribution to N nodes:
 1. compression: data is compressed before transmission and decompressed before deployment. we'll need the compression factor in order to calculate its impact.
 2. pipelining: intermediate nodes starts transmitting to the next machine before getting the full content. this is mainly effective when download speed is greater-equal to upload speed, so after some initial buffering period each machine transmits at the same rate it receives.
+(如果文件大， 分拆成较小的部分。一个一个传)
+
 3. sprinkling: transmit to more than one machine simultaneously. this puts an interesting trade-off, because a single transmission becomes slower, but the number of transmitting machines grows exponentially.
 
 Let's put all this in one model:

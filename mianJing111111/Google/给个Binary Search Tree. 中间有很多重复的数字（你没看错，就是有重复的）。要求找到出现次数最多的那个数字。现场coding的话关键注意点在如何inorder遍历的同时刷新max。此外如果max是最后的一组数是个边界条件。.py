@@ -5,22 +5,19 @@
 
 
 class Solution4:
-    def findSucPre(self, root, v):
-        self.pre = None; self.suc=None; self.cnt=0
+    def findSucPre(self, root):
+        self.pre = None; self.cnt=0
         self.ret = (0, None)
-        self.dfs(root, v)
-        if self.cnt>self.ret[0]: self.ret = (self.cnt, self.pre)
-        return self.ret[1]
+        self.dfs(root)
+        return self.ret
 
-    def dfs(self, root, v):
+    def dfs(self, root):
         if not root: return
-        self.dfs(root.left, v)
-        if not self.pre:
-            self.ret = (1, root.val)
-            self.cnt=1
-        if root.val==self.pre:    self.cnt+=1
-        else:
-            if self.cnt>self.ret[0]: self.ret = (self.cnt, self.pre)
-            self.cnt=1
+        self.dfs(root.left)
+        if not self.pre: self.pre = root.val;
+        if root.val==self.pre:
+            self.cnt+=1
+            self.ret = max(self.ret, (self.cnt, root))
+        else:    self.cnt=1
         self.pre=root.val
-        self.dfs(root.right, v)
+        self.dfs(root.right)

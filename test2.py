@@ -1,37 +1,20 @@
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-
+# encoding=utf-8
 '''
-class TreeNode:
-    def __init__(self, x, next = None):
-        self.val = x
-        self.next = next
-
-class Interval:
-    def __init__(self, s=0, e=0):
-        self.start = s
-        self.end = e
-
-#Definition for a undirected graph node
-class UndirectedGraphNode:
-    def __init__(self, x):
-        self.label = x
-        self.neighbors = []
-
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two leaves in the tree. The diagram below shows two trees each with diameter nine, the leaves that form the ends of a longest path are shaded (note that there is more than one path in each tree of length nine, but no path longer than nine nodes).
 '''
+#来自geeksforgeeks
+#果然好解法。  类似于leetcode  :   Binary Tree Maximum Path Sum
+# http://www.geeksforgeeks.org/diameter-of-a-binary-tree/
+# 意思任意2个叶子之间。
+class Solution:
+    def diameter(self, root):
+        self.ret = 0
+        self.dfs(root)
+        return self.ret
 
-
-class Point:
-    def __init__(self, a=0, b=0):
-         self.x = a
-         self.y = b
+    def dfs(self, root):
+        if not root: return 0
+        l = self.dfs(root.left)
+        r= self.dfs(root.right)
+        self.ret = max(self.ret, l+r+1)
+        return max(l, r)+1

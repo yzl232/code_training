@@ -20,10 +20,23 @@ read_sync_byte():
 00 0f 42 17 00 00 74 00 00 00 00 14 ...
 '''
 
-
+# 和string没有区别
 #在stream里边删除03.  可以用finite state machine。 也可以用count
 # count 00数目要更加简单一些
 #另外注意这个是byte。 每个byte如题目所说是2个数字.  看来意思是十六进制了。
+
+class Solution:
+    def arr(self, bytes):
+        ret = ''; i=0
+        while i<len(bytes):
+            if bytes[i]=='00':
+                cnt=0
+                while i<len(bytes) and bytes[i]=='00':
+                    i+=1; cnt+=1
+                if i<len(bytes) and cnt>=2 and bytes[i]=='03': i+=1
+            else:  i+=1
+
+'''
 class Solution:
     def arr(self, arr):
         cnt=0; ret = ''
@@ -36,3 +49,4 @@ class Solution:
                 cnt=0
                 ret+=byte
         return ret
+'''

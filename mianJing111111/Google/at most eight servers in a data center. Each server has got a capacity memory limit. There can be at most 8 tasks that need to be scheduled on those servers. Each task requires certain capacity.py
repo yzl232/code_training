@@ -18,22 +18,20 @@ Got some idea that this needs to be solved using dynamic programming concept, bu
 #和leetcode  sudoku特别像
 class Solution:
     def canArrange(self, servers, tasks):
-        self.used = [False for i in range(len(tasks))]
-        self.servers=servers
-        self.tasks = tasks
-        return  self.dfs()
+        ok = [False]*len(tasks)
+        return self.dfs(servers, tasks, ok)
 
-    def dfs(self):
-        if False not in self.used: return True
-        for i in range(len(self.tasks)):  #尝试每个servers都试试每个tasks
-            if not self.used[i]:
-                self.used[i] = True
-                for j in range(len(self.servers)):
-                    if self.servers[j]>=self.tasks[i]:
-                        self.servers[j]=self.servers[j]-self.tasks[i]
-                        if self.dfs(): return True
-                        self.servers[j]=self.servers[j]+self.tasks[i]
-                self.used[i] = False
+    def dfs(self, servers, tasks, ok):
+        if False not in ok: return True
+        for i in range(len(tasks)):  #尝试每个servers都试试每个tasks
+            if not ok[i]:
+                ok[i] = True
+                for j in range(len(servers)):
+                    if servers[j]>=tasks[i]:
+                        servers[j]-=tasks[i]
+                        if self.dfs(servers, tasks, ok): return True
+                        servers[j]+=tasks[i]
+                ok[i] = False
         return False
 
 s = Solution()

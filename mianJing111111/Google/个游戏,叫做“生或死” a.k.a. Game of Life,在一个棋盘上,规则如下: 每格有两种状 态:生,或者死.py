@@ -58,8 +58,8 @@ board[i][j] = 0 if cell at i,j is dead
 #质量很高的代码
 N_iter = 3
 m, n = 3,3
-trans = { (1, 2): 1, (1, 3): 1, (0, 3): 1, }#很赞
-pre = {(1, 0):1, (1,1):1, (1,2):1, (0, 0):1}
+trans = { (1, 2): 1, (1, 3): 1, (0, 3): 1, }#很赞. 如果要活着。邻居数目只能是 2<=n<=3.   也就是n=2 or n=3        # (val, cnt) => val
+pre = {(1, 0):1, (1,1):1, (1,2):1, (0, 0):1}  #类似于稀疏矩阵的存储
 for i in range(N_iter):
     print "\nGeneration %3i:" % ( i, )
     for r in range(m):
@@ -67,6 +67,7 @@ for i in range(N_iter):
     cur = {}
     for r in range(m):
         for c in range(n):
-            t = sum(pre.get((x,y), 0)for x in range(r-1,r+2) for y in range(c-1, c+2) if x!=r or y!=c)
-            cur[(r,c)] = trans.get(( pre.get((r,c),  0),  t ) ,  0)
+            cnt = sum(pre.get((x,y), 0)for x in[r-1, r, r+1] for y in [c-1, c, c+1] if x!=r or y!=c)  #不算自己
+            val = pre.get((r,c),  0)
+            cur[(r,c)] = trans.get(( val,  cnt ) ,  0)
     pre = cur

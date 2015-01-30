@@ -17,11 +17,12 @@ dec1(dec2(test(arg)))
 
 
 
-def makeitalic(fn):
-    def wrapped():
+def italic(fn):
+    def wrap():
         return "<i>" + fn() + "</i>"
-    return wrapped
+    return wrap
 
-@makeitalic
-def hello():
+@italic
+def hi():
     return "hello world"
+print hi()

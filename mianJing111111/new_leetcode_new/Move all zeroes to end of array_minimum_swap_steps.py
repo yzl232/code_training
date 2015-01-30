@@ -15,6 +15,7 @@ fast, slow
 这里的做法是覆盖法。 用一个指针覆盖。 O(1),  space.  O(n) time
 '''
 
+# leetcode      remove element
 class Solution:
     def pushZeroesToEnd(self, arr):
         slow = 0;  n = len(arr)

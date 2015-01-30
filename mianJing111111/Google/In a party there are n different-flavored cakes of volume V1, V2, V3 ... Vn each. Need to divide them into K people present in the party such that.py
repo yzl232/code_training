@@ -6,17 +6,17 @@ In a party there are n different-flavored cakes of volume V1, V2, V3 ... Vn each
 - Minimum volume of cake gets wasted after distribution so that means a maximum distribution policy
 '''
 # find largest possible x for each person
-#O(n * log((sum(Vi)/m)/eps) )
+#O(n * log((sum(Vi)/m)/eps) )   # O(nlogh) = O(nlog  Sum(v))
 class Solution:  #因为l基本上是越小越可以符合。 比如 0.0001
     def solve(self, k, v):
         l=0; h=sum(v)+1; accuracy = 0.00001
-        while (h-l)>accuracy:
+        while l<h:
+            if abs(h-l)<accuracy:  return l
             m = (l+h)/2.0
             if self.works(m, v, k): l=m
             else: h=m
-        return l
 
-    def works(self, m, v, k):
+    def works(self, m, v, k):  # k个人。
         return sum(int(val/m) for val in v)>=k  #注意是int(val/m)。因为不能出现0.5这种情况,.  另外是>=k
 s = Solution()
 print s.solve(4, [6, 5, 12])

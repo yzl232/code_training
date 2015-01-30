@@ -20,6 +20,9 @@ Write two functions
 '''
 # F家
 
+#面试者说面试官暗示它用trie...
+
+
 
 _end = '_end_'
 class Trie:

@@ -26,6 +26,19 @@ the next pseudorandom, uniformly distributed int value between 0 (inclusive) and
 Throws:
 IllegalArgumentException - if n is not positive
 '''
+
+# cumulative sum.
+# 2 pass。 O(1) space
+import random
+
+
+class Solution:
+    def solve(self, arr):
+        s = 0;  x = random.randint(1, sum(arr))
+        for i in range(len(arr)):
+            s+=arr[i]
+            if x<s: return i, arr[i]
+'''
 #典型概率题。cumulative sum
 import  random
 class Solution:
@@ -38,3 +51,4 @@ class Solution:
         randV = random.randint(1, val)
         for i in range(len(arr)):
             if arr[i]>=randV: return i
+'''

@@ -8,13 +8,12 @@ Given a sorted array of integers, write a function that will return the number w
 
 class Solution:
     def find(self, arr):
-        ret = None; maxF = 0; cnt=1
+        if not arr: raise ValueError
+        ret = (1, arr[0]); cnt=1
         for i in range(1, len(arr)):
             if arr[i] == arr[i-1]:  cnt+=1
             else:
-                if cnt>maxF:
-                    ret = arr[i-1]
-                    maxF = cnt
+                ret = max(ret, (cnt, arr[i-1]))
                 cnt=1
         return ret
 
@@ -24,3 +23,5 @@ print s.find([1, 1, 2, 2, 3, 3, 3, 4])
 
 
 #想到一个解法是klogN的。   k是unique number数量。  就是每个元素cnt的时候用binary search。 然后重新设置。 当unique number很少的时候， N很大的时候比较优秀。
+
+# 比如地球上的人。 找某个年龄的人最多。

@@ -18,9 +18,9 @@ Approach:
 ##  然后2 pointer  2 sum.
 class Solution:
     def findP(self, arr, target):
-        arr.sort()
+        arr.sort(); minV=arr[0]
         l=0;  r = len(arr)-1
-        while l<=r:
+        while l<=r:   # #然后第一个数。minV.    search   target-minV.      就是 h   Index
             if arr[l]+arr[r]<target:
                 print arr[l], arr[r]
                 l+=1

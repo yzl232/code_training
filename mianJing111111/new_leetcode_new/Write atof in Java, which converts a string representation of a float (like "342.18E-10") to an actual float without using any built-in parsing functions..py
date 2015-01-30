@@ -24,19 +24,19 @@ Write atof in Java, which converts a string representation of a float (like "342
 class Solution:
 
     def atof(self, s):
-        s = s.lower()
+        s=s.lower()
         if 'e' in s:
-            i = s.index('e')
-            s1 = s[:i];  s2 = s[i+1:]
-        else:  s1=s;  s2 = ''
-        ten10 =10** self.atoi(s2)
+            i=s.index('e')
+            s1=s[:i]; s2=s[i+1:]
+        else: s1=s; s2=''
+        ten10=10**self.atoi(s2)
         s = s1
         if '.' in s:
-            i = s.index('.')
-            s1 = s[:i] ;  s2 = s[i+1:]
-        else:  s1= s; s2 = ''
-        intPart = self.atoi(s1);   fPart = 1.0*self.atoi(s2)*((0.1)**len(s2))
-        return (intPart+fPart)*ten10
+            i=s.index('.')
+            s1=s[:i]; s2=s[i+1:]
+        else:  s1=s; s2=''
+        intPart=self.atoi(s); floatP= 1.0*self.atoi(s2)*(0.1)**len(s2)  # 很容易忘记 (0.1)**len(s2)
+        return (intPart+floatP  )*ten10
 
     # @return an integer
     def atoi(self, s):

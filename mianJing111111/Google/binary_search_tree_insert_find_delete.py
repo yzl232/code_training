@@ -26,6 +26,7 @@ class BinarySearchTree:
         else:
             if not root.right: root.right = TreeNode(value, root)
             else: self.insert(root.right, value)  #必须背下。 很常规的！！！
+        return root
 
 #非常常规的递归
     def find(self, root, val):
@@ -35,21 +36,22 @@ class BinarySearchTree:
         else: return self.find(root.right, val)
 
 #delete的时候，我们要用上parent  .  因为要补上node。 所以难得多
-    def delete(self, node):
-        if not node.left and not node.right:  self.replaceInParent(node, None)
-        elif node.left and not node.right:  self.replaceInParent(node, node.left)
-        elif node.right and not node.left: self.replaceInParent(node, node.right)
+    def delete(self, x):
+        if not x.left and not x.right:  self.replace(x, None)
+        elif x.left and not x.right:  self.replace(x, x.left)
+        elif x.right and not x.left: self.replace(x, x.right)
         else: # 2 children.  稍微复杂。 要有while.  右子树的最左边
-            succ = self.find(node.right)
-            succ.parent.left = None
-            self.replaceInParent(node, succ)
+            suc = self.findMin(x.right)
+            if suc.parent: suc.parent.left = None
+            self.replace(x, suc)
 
 # delete的用了2个辅助函数~~简洁了很多
-    def replaceInParent(self, node, newNode):  #减少了很多代码      #4行。背下。
-        newNode.parent = node.parent
-        if node.parent:
-            if node==node.parent.left: node.parent.left = newNode
-            else: node.parent.right = newNode
+    def replace(self, x, x1):  #减少了很多代码      #4行。背下。
+        t = x.parent
+        if x1: x1.parent = t
+        if t:
+            if x==t.left: t.left = x1
+            else: t.right = x1
 
     def findMin(self, node):
         cur = node

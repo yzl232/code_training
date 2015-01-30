@@ -25,13 +25,11 @@ class Solution:  # time stamp
             if ts[i]<0:
                 x=i
                 while 0<=x<n and ts[x]<0:
-                    ts[x]=now
-                    now+=1
-                    x = arr[x]
+                    ts[x]=now;  now+=1;   x = arr[x]
                 if 0<=x<n and ts[x]>=ts[i]:   ret=max(ret, now-ts[x])   # ts[x]>=ts[i]代表是本轮循环。
         print ts
-        # ts[x]<ts[i], 代表是以前visited，跳过。ts[x]==ts[i]代表正好起点也在环内。  ts[x]>ts[i]起点不在环内
         return ret
+# ts[x]<ts[i], 代表是以前visited，跳过。ts[x]==ts[i]代表正好起点也在环内。  ts[x]>ts[i]起点不在环内
 
 s = Solution()
 print s.solve([2, 2, 1])

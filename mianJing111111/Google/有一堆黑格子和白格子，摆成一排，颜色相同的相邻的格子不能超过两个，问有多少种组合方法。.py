@@ -7,7 +7,10 @@
 #典型的dp
 
 '''
-dp[i] = dp[i-1]+dp[i-2]  几乎是fibonacci的表达式 。我再想想
+same【i】 = differ[i-1];
+differ【i】 = same[i-1] + differ[i-1];
+
+dp[i] = dp[i-1]+dp[i-2]  几乎是fibonacci的表达式 。我再想想.
 
  dp[i-1]：x[i]与x[i-1]不同。    与前一位不同
  dp[i-2] : x[i]与x[i-1]相同, 但与x[i-2]不同   比如    与前一位相同
@@ -17,9 +20,7 @@ dp[i] = dp[i-1]+dp[i-2]  几乎是fibonacci的表达式 。我再想想
 
 
 def triple_free_combinations(n):
-    """Return the number of ways to choose n items , subject to the constraint that no colour appears three
-    times in a row.    """
-    if n == 0:     return 1
+    assert n>0
     a, b = 2, 2 * 2  #初始化
     for i in range(n - 1):
         a, b = b, a + b

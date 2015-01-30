@@ -23,6 +23,7 @@ class Solution:
         return self.p<len(self.arr)-1  #举特例。 P=-2时候， len至少要是2. 也就是
 
     def next(self):
+        assert self.hasNext()
         t= [self.arr[self.p+1]] * self.arr[self.p]
         self.p+=2
         return t

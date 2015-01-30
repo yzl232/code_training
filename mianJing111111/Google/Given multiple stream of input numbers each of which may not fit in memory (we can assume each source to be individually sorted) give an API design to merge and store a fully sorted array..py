@@ -7,6 +7,10 @@ Given multiple stream of input numbers each of which may not fit in memory (we c
 #用heap
 #向N个stream读数的时候。 先每个stream读N个。 然后每次pop一个, 并读对应地stream一个。
 import heapq
+
+#heap和merge 复杂度一样。 但是heap代码只有8行。 merge代码要三倍
+#三元tuple。存了本身array的位置，以及目前array的pointer。
+
 class Solution:
     # @param a list of ListNode
     # @return a ListNode
@@ -15,7 +19,8 @@ class Solution:
         heapq.heapify(h);  ret = []
         while h:
             val, i, j = heapq.heappop(h)
-            ret.append(val)
-            if j+1<len(arrs[i]):  heapq.heappush(h, (arrs[i][j+1], i, j+1))
+            ret.append(val);  j+=1
+            if j<len(arrs[i]):  heapq.heappush(h, (arrs[i][j], i, j))
         return ret   #复杂度 O(nkLogk) 是最优解
+#好处是代码特别短。7行
 #好处是代码特别短。# 。

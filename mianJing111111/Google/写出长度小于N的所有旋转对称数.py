@@ -40,10 +40,10 @@ number.
 2N+1 digit: 3 * 4 * 5 ^ (N-1)
 
 '''
-
+# 现生产N的部分。 对于2N, 2N+1可以此推出
 #对于2N：只要处理前一半。后一半出来了
 #对于2N+1:  就是2N中间插入0， 1， 8
-
+# 因为这种递推关系， 每个位数有一个单独的array
 class Solution:
     def solve(self, n):
         self.d ={'0':'0', '1':'1', '6':'9', '9':'6', '8':'8'}
@@ -51,14 +51,11 @@ class Solution:
         ret = [[] for i in range(digitsN+1)]
         ret[1]=['0','1', '8']
         for i in range(2, digitsN, 2):    # 2N digits
-            ret[i] = self.get(i/2)
-            for x in ret[i]:
-                n = len(x)/2
-                for ch in '018':
-                    ret[i+1].append(x[:n]+ch+x[n:])
+            ret[i] = self.gen(i/2);
+            ret[i+1] = [ x[:i/2]+ch+x[i/2:]  for ch in '018' for x in ret[i]]
         return ret
 
-    def get(self, n):
+    def gen(self, n):
         self.nums = []
         for cur in '1689':    self.dfs(cur, n-1)
         return self.nums

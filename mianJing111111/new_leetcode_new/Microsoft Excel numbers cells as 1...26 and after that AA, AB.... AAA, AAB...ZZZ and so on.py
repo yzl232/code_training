@@ -8,14 +8,18 @@ AA- ZZ:   后面的26*26
 AAA-ZZZ:  后面的26*26*26
 
 '''
+
+
+
 #就是十进制与26进制转换。  变成了26进制计数。
 class Solution:
     def toStr(self, n):
         out = ''
         while n>0:
-            d, n = (n-1)%26,  (n-1)/26  #因为以1为base。  每次减去1
-            out = out+chr(ord('A')+d) #因为我们总是先解决低位的。 所以最后取反
-        return out[::-1]
+            n-=1
+            d, n = n%26,  n/26  #因为以1为base。  每次减去1
+            out = chr(ord('A')+d)+out #因为我们总是先解决低位的。 所以最后取反
+        return out
 
     def toNum(self, s):
         cur = 0  #有点像subset那种iteration.  不断改变自身的recursion

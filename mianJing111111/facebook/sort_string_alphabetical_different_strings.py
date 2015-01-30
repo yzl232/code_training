@@ -15,7 +15,7 @@ p = "htarfbp"
 
 class Solution:
     def sortNew(self,  arr, p):  #牛逼。就三行代码
-        d = {p[i]: chr(97+i)  for i in range(len(p))}
+        d = {p[i]: chr(ord('a')+i)  for i in range(len(p))}
         arr.sort(key=lambda s: [d[x] for x in s])
         return arr
 

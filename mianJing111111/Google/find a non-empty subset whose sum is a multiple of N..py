@@ -11,13 +11,11 @@ Compare the solutions of the two questions.
 class Solution:
     def solve(self, arr, m):
         n = len(arr); self.m=m
-        self.rets = []
+        self.rets = []; arr.sort()
         self.dfs(arr, 0)
         return self.rets
 
     def dfs(self, arr, cur):
-        if not arr: return
-        if cur%self.m==0:
-            self.rets.append(cur)
+        if cur%self.m==0:   self.rets.append(cur)
         for i in range(len(arr)):
             self.dfs(arr[i+1:], cur+arr[i])

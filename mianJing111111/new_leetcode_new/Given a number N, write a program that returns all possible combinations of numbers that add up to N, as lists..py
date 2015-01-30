@@ -4,7 +4,7 @@ Given a number N, write a program that returns all possible combinations of numb
 
 For example, if N=4 return {{1,1,1,1},{1,1,2},{2,2},{1,3}}
 
-和combination  sum 基本一样的。
+和leetcode    combinations  基本一样的。
 
 
 
@@ -14,17 +14,16 @@ class Solution:
     # @param target, integer
     # @return a list of lists of integers
     def combinationSum(self, target):
-        self.ret = []; self.c = [x for x in range(1, target)]
-        self.dfs(0, target, [])
+        self.ret = []; self.n = target
+        self.dfs(1, target, [])
         return self.ret
 
-    def dfs(self, n1, target, cur):
+    def dfs(self, start, target, cur):
         if target ==0:
             if cur in self.ret: return
             self.ret.append(cur)
             return
-        for i in range(n1, len(self.c)):
-            x = self.c[i]
-            if target>=x:              self.dfs(i, target-x, cur+[x])
+        for x in range(start, self.n):
+            if target>=x:              self.dfs(x, target-x, cur+[x])
 s = Solution()
 print s.combinationSum(4)

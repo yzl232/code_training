@@ -68,20 +68,16 @@ class Solution:
         d = {}; ret = []; i=0
         while i<len(s)-1:
             two = tuple(s[i:i+2])
-            if two not in d:  d[two] = i
+            if two not in d:
+                d[two] = i
+                ret.append(['#', s[i]])
+                i+=1
             else:
                 pre = s[d[two]: i]
-                n = len(pre)
-                x=0; cnt=0
-                while i<len(s):
-                    if pre[x]==s[i]:
-                        i+=1; cnt+=1
-                        x = cnt%n
-                    else: break
+                n = len(pre); j=0; cnt=0
+                while i<len(s) and pre[j]==s[i]:
+                        i+=1; cnt+=1;  j = cnt%n
                 ret.append([str(n), str(cnt)])
-                continue
-            ret.append(['#', s[i]])
-            i+=1
         if i<len(s): ret.append(['#', s[i]])  #最后一位
         return ret
 s =Solution()

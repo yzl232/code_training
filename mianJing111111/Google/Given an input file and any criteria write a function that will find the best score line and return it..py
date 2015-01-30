@@ -16,11 +16,9 @@ class Solution:
         return cnt
 
     def bestScoreLine(self, content, scoreFunction=vowels):
-        ret = None; bestScore = -10**10
+        ret = (-10**10, None)
         for line in content:
             cur= scoreFunction(line)
-            if cur>bestScore:
-                bestScore = cur
-                ret = line
+            ret = max(ret, (cur, line))
         return ret
 

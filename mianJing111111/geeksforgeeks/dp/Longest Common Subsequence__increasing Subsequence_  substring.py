@@ -32,7 +32,7 @@ class Solution:
 class Solution1:
     def lcs(self, x, y):
         m = len(x);  n= len(y)
-        dp = [[0 for i in range(n+1)] for j in range(m+1)]   #m+1是考虑了''空得字符。 这样初始化会更加容易一些。
+        dp = [[0]*(n+1) for i in range(n+1)]  #m+1是考虑了''空得字符。 这样初始化会更加容易一些。
         for i in range(1, m+1):
             for j in range(1, n+1):
                 if x[i-1]==y[j-1]: dp[i][j] = dp[i-1][j-1]+1

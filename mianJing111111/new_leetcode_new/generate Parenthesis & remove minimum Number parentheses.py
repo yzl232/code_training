@@ -47,7 +47,7 @@ class Solution:
         for i in range(len(s)):
             if s[i] == ')' and stack[-1][1] == '(':    stack.pop()  # stack[-1] means stack top (right most)
             else:     stack.append((i, s[i]))
-        d= {i[0]:True  for i in stack[1:] } #剩下的是所有invalid的index.
+        d= set([x[0] for x in stack[1:]]) #剩下的是所有invalid的index.
         s = [  s[i] for i in range(len(s)) if i not in d]
         return ''.join(s)
 s = Solution()

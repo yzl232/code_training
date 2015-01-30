@@ -10,25 +10,26 @@ class Solution:
     def solve(self, s, n):
         if n==0: return s
         if n>0: return self.plus(s, n)
-        if n<0: return self.minus(s, -n)
+        return self.minus(s, -n)
 
 
-    def plus(self, s, n):
+    def countAndSay(self, n):
+        s = '1'
         for i in range(n-1):
-            s1='';  pre = s[0];   cnt=1
-            for j in range(1, len(s)):
-                if s[j]==pre: cnt+=1
-                else:
-                    s1+=str(cnt)+pre
-                    cnt=1;   pre = s[j]
-            s1+=str(cnt)+pre
+            s1=''; j=0
+            while j<len(s):
+                cnt=1
+                while (j+1)<len(s) and s[j]==s[j+1]: #先写容易错的j+1<len(s)
+                    j+=1;  cnt+=1   #先写容易忘的j+=1
+                s1+=str(cnt)+s[j]
+                j+=1 #先写容易忘的j+=1
             s=s1
         return s
 
     def minus(self, s, n):
         for i in range(n):
             s1=''
-            for j in range(0,  len(n)-1, 2):
+            for j in range(0,  len(n)-1, 2):   # 就是分割成2个2个一组。 arr[i]是数目。 arr[i+1]是元素
                 s1+=   s[j+1]*int(s[j])
             s = s1
         return s

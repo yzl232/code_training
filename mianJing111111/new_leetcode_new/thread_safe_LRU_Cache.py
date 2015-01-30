@@ -5,13 +5,14 @@ http://openmymind.net/High-Concurrency-LRU-Caching/
 '''
 
 import threading
-mylock = threading.RLock()
+mylock = threading.RLock()  #应当是global  variable 。 而不是class variable
 class ListNode:
     def __init__(self, key, val):
         self.val = val
         self.key = key
         self.next = None
         self.prev = None
+
 
 class LinkedList:
     def __init__(self):
@@ -37,7 +38,7 @@ class LRUCache:
         self.cache = LinkedList()
         self.d = {}
         self.capacity = capacity
-        mylock = threading.RLock()   #Allocate a lock
+        global mylock   #Allocate a lock
 
     def _insert(self, key, val):
         node = ListNode(key, val)

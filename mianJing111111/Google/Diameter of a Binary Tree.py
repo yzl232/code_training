@@ -4,6 +4,8 @@ The diameter of a tree (sometimes called the width) is the number of nodes on th
 '''
 #来自geeksforgeeks
 #果然好解法。  类似于leetcode  :   Binary Tree Maximum Path Sum
+# http://www.geeksforgeeks.org/diameter-of-a-binary-tree/
+# 意思任意2个叶子之间。
 class Solution:
     def diameter(self, root):
         self.ret = 0

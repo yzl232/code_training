@@ -12,24 +12,20 @@
 
   如果已存在，就把hashmap里的那个node的id改一下
 '''
+
+
+#怎样做到一个pass给所有都标上unique的ID。  先标上一个没出现的。  如果后来发现出现了。。于是hashmap找到它。重新标。
 class Solution:
     N=1
     def solve(self, graph):
         self.d=d={}
         for x in graph:
-            id = x.getID
+            id = x.getID()
             if id:
-                if id in d:
-                    y = d[id]
-                    newID=self.idGenerater()  #冲突了。 重新设置
-                    y.setID(newID)
-                    d[newID]=y
+                if id in d:  self.idGenSet(d[id])  #冲突了。 重新设置
                 d[id]=x
-            else:
-                newID = self.idGenerater()
-                x.setID(newID)
-                d[newID]=y
+            else:  self.idGenSet(x)
 
-    def idGenerater(self):
+    def idGenSet(self, x):
         while self.N in self.d:   self.N+=1
-        return self.N
+        self.d[self.N]=x

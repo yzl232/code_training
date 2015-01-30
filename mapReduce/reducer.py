@@ -6,10 +6,24 @@
 #!/usr/bin/env python
 
 
+# 用到一个pre key
 
-#代码都几乎一样
 import sys
+preKey = None;  total = 0
+for line in sys.stdin:
+   curKey, val = line.strip().split()
+   val = int(val)
+   if preKey == curKey:     total += val
+   else:
+       if preKey:     print preKey, total
+       total = val;   preKey = curKey
+if preKey:   print preKey, total   ##上上面那行代码一样
+# 就是类似count and say
 
+
+
+
+'''
 preKey = None
 total = 0
 
@@ -25,3 +39,4 @@ for line in sys.stdin:
        preKey = curKey
 
 if preKey:   print( "%s\t%d" % (preKey, total) )
+'''

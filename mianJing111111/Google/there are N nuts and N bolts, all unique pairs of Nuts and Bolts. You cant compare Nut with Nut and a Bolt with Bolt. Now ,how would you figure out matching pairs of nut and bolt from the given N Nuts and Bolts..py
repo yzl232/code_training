@@ -4,7 +4,6 @@ there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compa
 
 '''
 
-import random
 '''
 方法就是类似快排，随便找一个螺母a，用它把所有螺栓分成小于a、大于a和等于a（只有一个）。再用那个等于a的螺栓把所有螺母也划分一遍。于是就得到了一对匹配和“大于a的螺母螺栓”、“小于a的螺母螺栓”两部分，递归处理。复杂度和随机选取pivot的快排的复杂度一样。
 '''
@@ -24,7 +23,7 @@ import random
 class Solution:
     def partition(self, v, pv, start, end):
         p = v[start:end].index(pv) + start
-        v[p], v[end-1] = v[end-1], v[p]   #pivot存到最后
+        v[p], v[end-1] = v[end-1], v[p]   #pivot存到最后......
         evict_idx = i =start
         while i<end:
             if v[i] < pv:
@@ -61,8 +60,9 @@ print("n = ", n)
 '''
 
 #我还是适合简单版本
-
+import random
 def quickSort(arr1, arr2):
+    assert len(arr1)==len(arr2)
     if len(arr1) <=1: return arr1, arr2
     pivot = random.choice(arr1)
     s2, m2, b2 = partition(arr2, pivot)
@@ -78,9 +78,6 @@ def partition(arr, pivot):
     b = [i for i in arr if i>pivot]
     return s, m, b
 
-
-
-random.seed(1)
 
 N = 10
 

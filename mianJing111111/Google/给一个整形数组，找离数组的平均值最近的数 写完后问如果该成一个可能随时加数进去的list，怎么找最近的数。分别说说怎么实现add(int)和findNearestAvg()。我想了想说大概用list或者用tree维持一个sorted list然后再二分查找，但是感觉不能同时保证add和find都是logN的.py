@@ -6,3 +6,4 @@
 
 
 #要随时的话， 可以用 binary search tree.
+#保证一个cnt, 一个sum。  就得到了平均值  、  bst搜索是O(logN)

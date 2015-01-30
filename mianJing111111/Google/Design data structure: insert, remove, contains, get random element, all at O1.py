@@ -11,7 +11,7 @@ remove:  hash找到。 然后找到pointer。 然后用最后一个数替代。�
 contain:  hash表
  get  random:   random()%size.      array里面保存的是值。 也就是hashtable的key。
 
-
+# 如果考虑重复的值。 那么hashtable key仍然是值。 val存的是 [index1,  index2 ,  ...]
     insert(value): append the value to array and let i be it's index in A. Set H[value]=i.
     remove(value): 这个替代很巧妙。
     We are going to replace the cell that contains value in A with the last element in A.

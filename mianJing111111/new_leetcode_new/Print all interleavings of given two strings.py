@@ -32,14 +32,16 @@ leetcode的变体题目
 '''
 class Solution:
     def interLeave(self, s1, s2):
-        self.result = []
+        self.ret = []
         self.dfs(s1, s2, '')
-        return self.result
+        return self.ret
 
-    def dfs(self, s1, s2, pathS):
-        if not s1 and not s2: self.result.append(pathS)
-        if s1: self.dfs(s1[1:], s2, pathS+s1[0])
-        if s2: self.dfs(s1, s2[1:], pathS+s2[0])
+    def dfs(self, s1, s2, cur):
+        if not s1 and not s2:
+            self.ret.append(cur)
+            return
+        if s1: self.dfs(s1[1:], s2, cur+s1[0])
+        if s2: self.dfs(s1, s2[1:], cur+s2[0])
 
 s = Solution()
 print s.interLeave('AB', 'C')

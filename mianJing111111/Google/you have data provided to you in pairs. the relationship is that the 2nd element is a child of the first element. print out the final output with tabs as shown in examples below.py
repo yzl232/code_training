@@ -20,7 +20,7 @@ b
 d
 '''
 
-#因为不是graph。实际上有更简单的办法。  就是以下。  用BFS
+#假如不是graph。实际上有更简单的办法。  就是以下。  用BFS
 #直接就说我有2种办法。  一种topoligical sort, 一种找root， 再BFS
 
 
@@ -45,7 +45,7 @@ class Solution:
         self.visited[x] = True
 
 
-
+'''
 #
 class Solution56:  #可以用hashmap  build 简单的node: children属性。
     def buildTree(self, relations):
@@ -64,3 +64,5 @@ class Solution56:  #可以用hashmap  build 简单的node: children属性。
         if not root: return 0
         for x in root.children:   root.val +=self.dfs(x)
         return root.val
+
+'''

@@ -5,6 +5,15 @@ implement the method generate(), which return the next integer based on the prob
 '''
 import random
 # 就是cumulative sum
+# 2 pass   O(1) space
+
+class Solution:
+    def solve(self, arr):
+        s = 0;  x = random.randint(1, sum(arr))
+        for i in range(len(arr)):
+            s+=arr[i]
+            if x<s: return i, arr[i]
+'''
 class Solution:
     def solve(self, arr):
         if not arr: raise ValueError
@@ -14,3 +23,4 @@ class Solution:
         x = random.randint(1, sArr[-1])
         for i in range(len(sArr)):
             if x<=sArr[i]: return arr[i]
+'''

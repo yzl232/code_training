@@ -71,10 +71,11 @@ class Solution:
         heapq.heapify(h);  ret = []
         while h:
             val, i, j = heapq.heappop(h)
-            ret.append(val)
-            if j+1<len(arrs[i]):  heapq.heappush(h, (arrs[i][j+1], i, j+1))
+            ret.append(val);  j+=1
+            if j<len(arrs[i]):  heapq.heappush(h, (arrs[i][j], i, j))
         return ret   #复杂度 O(nkLogk) 是最优解
-#好处是代码特别短。
+#好处是代码特别短。7行
+# 稍微注意while里边的三行就可以=
 
 
 

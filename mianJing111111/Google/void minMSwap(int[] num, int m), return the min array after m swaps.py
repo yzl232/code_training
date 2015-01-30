@@ -22,17 +22,33 @@ min = (m, len(arr))
 
 #和冒泡排序像。 O(n2)
 class Solution:
-    def minMSwap(self, arr, m):
-        self.arr2 = sorted(arr)
-        if arr==self.arr2: return arr
-        self.arr = arr
-        self.dfs(0, m)
-        return self.arr
+    def minMSwap(self, arr, x):
+        minArr = sorted(arr);  l=0
+        while x>0 and arr!=minArr:
+            r = x+l+1
+            minV=min(arr[l:r]); minIdx = arr[l:r].index(minV)
+            arr[l+1:minIdx+1], arr[l]=arr[l:minIdx], arr[minIdx]
+            x-=minIdx-l;  l+=1
+        return arr
+s = Solution()
+print s.minMSwap([4, 2, 1, 3], 2)
 
-    def dfs(self, start, m):
-        if m==0 or self.arr==self.arr2 : return
-        minI = start;  end = min(m+start+1, len(self.arr))
-        for i in range(start, end):
-            if self.arr[i]<self.arr[minI]:  minI=i
-        self.arr[start+1:minI+1], self.arr[start] = self.arr[minI], self.arr[start:minI]
-        self.dfs(start+1, m-(minI-start))
+'''
+class Solution:
+    def minMSwap(self, arr, m):
+        self.minArr = sorted(arr)
+        self.dfs(0, m, arr)
+        return arr
+
+    def dfs(self, l, m, arr):
+        if m==0 or arr==self.minArr : return
+        r = min(m+l+1, len(arr))  #右边界比较赞
+        minV=min(arr[l:r]);  minIdx = arr[l:r].index(minV)
+        arr[l+1:minIdx+1], arr[l] = arr[l:minIdx], arr[minIdx]   #右移一位。
+        self.dfs(l+1, m-(minIdx-l))
+'''
+'''
+        minIdx = l;  r = min(m+l+1, len(self.arr))  #右边界比较赞
+        for i in range(l, r):
+            if self.arr[i]<self.arr[minIdx]:  minIdx=i
+'''

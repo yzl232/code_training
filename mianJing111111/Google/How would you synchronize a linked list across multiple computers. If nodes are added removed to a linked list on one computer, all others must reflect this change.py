@@ -14,9 +14,12 @@ Q) How would you synchronize a linked list across multiple computers. If nodes a
 (a)if already no one (any node) has exclusive hold on this lock
 and no-one has Read hold as well then
 allows exclusive permission to requesting node. and update lock accounting.
+
 else if any/multiple nodes holds read lock then
 Send revoke request to every lock holder.
 once it receives ACK (release) from all the nodes allow exclusive permission to requesting node.
+
+
   (b) if any node already holds the exclusive lock
 Then based on lock request wait or return.
 If wait then.

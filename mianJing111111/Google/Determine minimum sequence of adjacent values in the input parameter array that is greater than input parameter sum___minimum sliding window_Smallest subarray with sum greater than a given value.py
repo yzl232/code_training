@@ -34,7 +34,7 @@ UpdateMinimumSequenceLength();
 1) in the initialization phase.
 2) There is no solution to the question, (minimum_sequence_length == INT_MAX)
 '''
-
+'''
 class Solution:
     #暴力  . O(n2).  贪心。  跟jump game很像。
     def findShortest(self, arr, target):
@@ -47,6 +47,8 @@ class Solution:
                 if s>target: ret=min(ret, end-start)
         return ret
 '''
+
+'''
         for length in range(1, len(arr)+1):
             s = sum(arr[:length])
             for start in range(1, len(arr)-length+1):
@@ -58,16 +60,16 @@ class Solution:
 
 # sliding window的套路。  l, r。   for r in range,   if s>targe:  while : l+=1
 #O(n)的做法很巧妙
-#sliding window就是满足条件的时候，加入一个while循环。 不断尝试移动left pointer。 不难。
+#sliding window就是满足条件的时候，加入一个while循环。 不断尝试移动left pointer。 不难。.
 class Solution3:
     def findShortest5(self, arr, target):
-        ret = len(arr)+1
-        s = arr[0];  l=0
+        ret = 10**10
+        s = 0;  l=0
         for r in range(len(arr)):
             s+=arr[r]
             if s>target:
                 while s-arr[l]>target:
-                    l+=1; s-=arr[l]
+                    s-=arr[l];  l+=1
                 ret = min(r-l+1, ret)
         return ret
 

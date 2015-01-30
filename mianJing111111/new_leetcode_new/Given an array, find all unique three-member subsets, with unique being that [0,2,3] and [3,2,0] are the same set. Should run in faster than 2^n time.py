@@ -10,7 +10,7 @@ Given an array, find all unique three-member subsets, with unique being that [0,
 第一反应用recursion.
 
 
-# leetcode  permutation II
+# leetcode  combination II
 
 复杂度符合要求。
 '''
@@ -18,16 +18,16 @@ Given an array, find all unique three-member subsets, with unique being that [0,
 class Solution:
     def allSets(self, arr):
         arr.sort()
-        self.result = []
+        self.ret = []
         self.dfs([], arr)
-        return self.result
+        return self.ret
 
-    def dfs(self, tmpResult, candidates):
-        if len(tmpResult)==3:
-            self.result.append(tmpResult)
+    def dfs(self, cur, nums):
+        if len(cur)==3:
+            self.ret.append(cur)
             return
-        for i in range(len(candidates)):
-            if i>0 and candidates[i]==candidates[i-1]: continue
-            self.dfs(tmpResult+[candidates[i]], candidates[i+1:])
+        for i in range(len(nums)):
+            if i>0 and nums[i]==nums[i-1]: continue
+            self.dfs(cur+[nums[i]], nums[i+1:])
 s = Solution()
 print s.allSets([1, 1, 2, 1, 3])

@@ -7,13 +7,16 @@
 
 
 '''
+visited = set(
  while pre:
     cur = set([])
     for i in pre:
         # do something    可以在这里print.  调用某个函数， 做其他事情。
-        search i. content and get urls
-        for j in urls:
-            cur.add(j)
+        for url in i.content.urls:
+            if url not in visited:
+                cur.add(url)
+                visied.add(url)
+    pre = cur
 '''
 
 

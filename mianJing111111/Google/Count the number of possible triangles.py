@@ -44,5 +44,5 @@ class Solution:
 s = Solution()
 print s.getCountTriangles([10, 21, 22, 100, 101, 200, 300])
 #和那个count  平方数目的也很像
-#Count Distinct Non-Negative Integer Pairs (x, y) that Satisfy the Inequality
+#Count Distinct Non-Negative Integer Pairs (x, y) that Satisfy the Inequality。。。
 # Let's say there is a double square number X

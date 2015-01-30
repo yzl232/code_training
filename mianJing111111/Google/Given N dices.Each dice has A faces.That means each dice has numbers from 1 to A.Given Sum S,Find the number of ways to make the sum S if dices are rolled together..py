@@ -34,8 +34,8 @@ Sum(m, n, X) = Sum(m, n - 1, X - 1) +
 '''
 
 class Solution:
-    def findWays(self, m, n, x):  #m算是固定值。 主要是x, n
-        dp = [[0 for i in range(x+1)] for j in range(n+1)]
+    def findWays(self, m, n, x):  #m算是固定值. 比如6。 主要是x, n
+        dp = [[0]*(x+1) for i in range(n+1)]
         for j in range(1, m+1):
             if j>x: break  #防止越界
             dp[1][j] = 1

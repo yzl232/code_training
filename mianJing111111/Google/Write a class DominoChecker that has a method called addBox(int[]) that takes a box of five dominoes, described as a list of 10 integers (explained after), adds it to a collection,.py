@@ -8,17 +8,20 @@ Note that we're given 10 integers, each from 0 to 9. If we concatenate the 10 nu
 Also note that having dominoes (0,2) and (2,0) is the same, as having boxes [(0,2); (9,1); (3,3); (7,4); (5,6)] or [(0,2); (3,3); (5,6); (7,4); (9,1)] is also the same, the order does not matter.
 '''
 
+# 每次添加一个n=10的array
+
 class DominoChecker:
     def __init__(self):
         self.d = {}
 
     def addBox(self, arr):
-        for i in range(len(arr)):
-            arr[i].sort()
-        arr.sort()
-        key =tuple(arr)  #或者改成string来hash
-        if key in self.d: return False
-        self.d[key]=1
+        t=[]
+        for i in range(0, len(arr), 2):
+            t.append( tuple(sorted([arr[i], arr[i+1]])))   #或者改成string来hash
+        t.sort()
+        t = tuple(t)
+        if t in self.d: return False
+        self.d[t]=1
         return True
 
     pass

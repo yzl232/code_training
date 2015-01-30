@@ -10,6 +10,7 @@ Score each file's contents on several parameters:
 3) no. of spaces
 4) count of each of the letters  #hashmap
 5) count of each words   #hashmap
+6) no. of lines
 etc
 
 Give weightage to each of the properties and arrive at a number (score). The closest of the scores is the answer.

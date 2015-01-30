@@ -37,14 +37,13 @@ class Photo:
 
 class Solution:
     def arrange(photos):
-        albums = [[] for i in range(26)]
+        albums = [[] for i in range(26)]    #名字命名
         for x in photos:
             n = ord(x.name[0].lower()) - ord('a')
             albums[n].append(x)
         ret = []
         for y in albums:
-            y.sort()
-            n = len(y)
+            y.sort();  n = len(y)
             for i in range(n/100):  ret.append(y[i*100:i*100+100])
             if n%100!=0:  ret.append(y[n-n%100:])
         return ret

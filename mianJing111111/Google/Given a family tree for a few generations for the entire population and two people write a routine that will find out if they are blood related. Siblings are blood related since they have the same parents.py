@@ -2,6 +2,9 @@
 '''
 Given a family tree for a few generations for the entire population and two people write a routine that will find out if they are blood related. Siblings are blood related since they have the same parents. Cousins are blood related since one of their parents have the same parents etc. Design the data structure first and then write the routine.
 '''
+
+#一个图。 有点像tree的反向 。  每个child有2个parent
+
 class Person:
     def __init__(self, p1, p2):
         self.p1=p1
@@ -18,19 +21,17 @@ class Solution:
         pre1 = []; pre2=[]
         while pre1 or pre2:
             if pre1:
-                cur1 = []
+                cur = []
                 for x in pre1:
                     if x.p1 in anc2 or x.p2 in anc2: return True
-                    cur1.append(x.p1); cur1.append(x.p2)
-                    anc1.add(x.p1); anc1.add(x.p2);
-                pre1 = cur1
+                    cur+=[x.p1, x.p2];   anc1.update([x.p1, x.p2])
+                pre1 = cur  # 先写这一句。 容易忘。
             if pre2:
-                cur2 = []
+                cur = []
                 for x in pre2:
                     if x.p1 in anc1 or x.p2 in anc1: return True
-                    cur2.append(x.p1); cur2.append(x.p2)
-                    anc2.add(x.p1); anc2.add(x.p2)
-                pre2 = cur2
+                    cur+=[x.p1, x.p2];   anc2.update([x.p1, x.p2])
+                pre2 = cur  # 先写这一句。 容易忘。
         return False
 
 
@@ -51,3 +52,5 @@ class Solution3:
                 d[q] = 1
                 q = q.parent
         return
+
+

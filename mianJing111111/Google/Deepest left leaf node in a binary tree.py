@@ -25,16 +25,12 @@ The idea is to recursively traverse the given binary tree and while traversing, 
 
 class Solution:
     def find(self, root):
-        self.maxLvl = -1
-        self.ret = None
+        self.ret = (-1, None)
         self.dfs(root, 0,  False)
         return self.ret
 
     def dfs(self, root,lvl, isLeft):
         if not root: return   #如果root 为空。 什么都不做。 return
-        if isLeft and not root.left and not root.right and lvl>self.maxLvl:
-            self.ret = root.val
-            self.maxLvl = lvl
-            return
+        if isLeft and not root.left and not root.right:  self.ret=max(self.ret, (lvl, root))
         self.dfs(root.left,lvl+1,  True)
         self.dfs(root.right, lvl+1,  False)

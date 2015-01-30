@@ -38,15 +38,17 @@
 #想，一个值比较旧，来了比它大的新值之后，它永远不会是窗口内最大值了，这种没前途的值就没必要存了……
 #所以当来一个新值的时候，我们把队尾这端的不大于它（小于或等于）的值都踢出去，再把这个值入队
 
-import collections as c
+# 和那道题用stack求next greater number 很像的。 基本一样。就是最大q[0]. q的最左边。 stack最大的是arr[i].栈的顶部  for循环里边就2行。
+#
+
+from collections import deque
 class Solution:
-    def find(self, arr, k):  #比较难。 8行。 背下
-        q = c.deque(maxlen=k)   #必须限制k
+    def find(self, arr, k):  #比较难。 6行。 for循环里边才2行
+        q = deque(maxlen=k)   #必须限制k
         a = max(arr[:k]); ret=[a]; q.append(a)
         for i in range(k, len(arr)):  #结果有n-k+1个
             while q and arr[i]>=q[0]:  q.popleft()   #remove all that 比现在的小的,, 也就是没必要存的元素   #关键一步
-            q.append(arr[i])
-            ret.append(q[0])
+            q.append(arr[i]);   ret.append(q[0])   #先加q。  后加ret。
         return ret
 s = Solution()
 print s.find([1, 2, 3, 1, 24, 5, 2, 3, 6], 3)
@@ -56,15 +58,14 @@ print s.find([1, 2, 3, 1, 24, 5, 2, 3, 6], 3)
 
 
 
-#  给一个list和k（number）。找一个区域k，使得这个区域里k的最大值和最小值的差值最大，返回这个值。用heap或priority queue做dp
+#  给一个list和k（number）。找一个区域k，使得这个区域里k的最大值和最小值的差值最大，返回这个值。
 
 # G家题目。
-import collections as c
 class Solution:
     def find(self, arr, k):  #比较难。 8行。 背下
-        q1 = c.deque(maxlen=k); q2=c.deque(maxlen=k)  #必须限制k
-        a = max(arr[:k]); ret=0
-        q1.append(a); q2.append(a)
+        q1 = deque(maxlen=k); q2=deque(maxlen=k)  #必须限制k
+        a1 = max(arr[:k]); a2=min(arr[:k]); ret=a1-a2
+        q1.append(a1); q2.append(a2)
         for i in range(k, len(arr)):  #结果有n-k+1个
             while q1 and arr[i]>=q1[0]:  q1.popleft()   #remove all that 比现在的小的,, 也就是没必要存的元素   #关键一步
             while q2 and arr[i]<=q2[0]:  q2.popleft()

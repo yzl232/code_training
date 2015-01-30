@@ -4,8 +4,8 @@ String compressor that turns "123abkkkkkc" to "123ab5xkc". Decompressor
 is already written and must remain unchanged. take into account of strings
 like: "123xk", "123xx" ...etc as input
 '''
-
-#按照微软的思路。 x=> -ord(x)
+# 普通的话。 就是如果cnt==1。  就不加上cnt了。
+#按照微软的思路。 x=> -ord(x)   .  用正负标记比如5个k。  变成-5
 class Solution:
     # @return a string
     def countAndSay(self, chArr):

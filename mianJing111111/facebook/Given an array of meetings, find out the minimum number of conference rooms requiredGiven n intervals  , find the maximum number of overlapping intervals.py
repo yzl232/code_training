@@ -61,9 +61,8 @@ output:
 class Solution:
     def findNumConference(self, intervals):
         affairs = [];  cnt = 0; ret = 0
-        for i in intervals:
-            affairs.append((i[0], 1))  #其实如果要sort正确，也就是start==end要sort正确时候， 应当 (i[0], -1)，   （i[0], 1）
-            affairs.append((i[1], -1))
+        for i in intervals:   #其实如果要sort正确，也就是start==end要sort正确时候， 应当 (i[0], -1)，   （i[0], 1）
+            affairs+=[(i[0], 1), (i[1], -1)]
         affairs.sort()
         for i in affairs:
             cnt+=i[-1]
@@ -141,8 +140,7 @@ class Solution2: #比较难写
     def findNumConference(self, intervals):
         affairs = []
         for i in intervals:
-            affairs.append((i[0], 1))
-            affairs.append((i[1], -1))
+            affairs+=[(i[0], 1), (i[1], -1)]
         affairs.sort()
         i =cnt= 0
         while i<len(affairs) and affairs[i][0]==0:       #因为0增加，不用打印。 所以无所谓

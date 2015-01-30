@@ -42,7 +42,4 @@ class Solution:
             if c==0: return arr[m]
             elif c>0:  l=m+1
             else: h=m-1
-        c1 = self.cross(zero, x, arr[l])
-        c2 = self.cross(zero, x, arr[h])
-        if abs(c1)>abs(c2): return l
-        else: return h
+        # calculate distance of both

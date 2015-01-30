@@ -30,18 +30,19 @@ class Solution:
         root = TreeNode(head.val)
         head = head.next
         prev= [root]
-        while head:
+        while prev:
+            if not head: break
             cur = []
             for node in prev:
                 if head:
-                    l = TreeNode(head.val)
+                    x = TreeNode(head.val)
                     head = head.next
-                    node.left = l
-                    cur.append(l)
+                    node.left = x
+                    cur.append(x)
                 if head:
-                    r = TreeNode(head.val)
+                    x = TreeNode(head.val)
                     head = head.next
-                    node.right = l
-                    cur.append(l)
+                    node.right = x
+                    cur.append(x)
             prev = cur
         return root

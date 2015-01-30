@@ -31,8 +31,7 @@ class Solution:
 class Solution5:
     # @return a list of lists of length 3, [[val1,val2,val3]]
     def threeSum(self, head, tail):
-        i = head; tail = head
-        while tail.next: tail=tail.next
+        i = head;
         while i and i.next and i.next.next:
             l = i.next;  r = tail; target = 0-i.val
             while l.val < r.val:

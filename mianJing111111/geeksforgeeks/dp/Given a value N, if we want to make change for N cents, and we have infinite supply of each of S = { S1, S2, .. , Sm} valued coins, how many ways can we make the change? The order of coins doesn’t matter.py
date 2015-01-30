@@ -21,8 +21,7 @@ dfs也可以做。
 class Solution:
     def count(self, values, target):
         if target==0: return 1
-        if target<0: return 0
-        if not values and target>0:  return 0
+        if target<0 or not values: return 0
         return self.count(values[1:], target) + self.count(values[:], target-values[0])
 #不要自己。  要自己，target-values[0]
 #就使用memoization算了。

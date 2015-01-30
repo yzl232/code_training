@@ -7,7 +7,7 @@
 set rightmost 1 to 0
 
 
-
+make rightmost set bit 0
 
 第二题是问我两个 collection 的 object 问 这两个 collection 里面的东西是不是相同的。
 我一开始就说把第一个collection object都放到 hashset里面，check 第二里面是不是都包含第一个里面的object
@@ -74,7 +74,7 @@ The question looks a little incomplete in terms of the problem statement. Hashma
 
 
 '''
-onsider a scenario where you open a file with your favorite editor (emacs on Linux or Microsoft Word on Windows).
+consider a scenario where you open a file with your favorite editor (emacs on Linux or Microsoft Word on Windows).
 You notice that the application has a performance hit due to a recent fix made to the Editor application.
 What will your testing Matrix look like that will convey the information that the performance of the application has degraded (or improved after bug fixes and re-design)?
 

@@ -17,21 +17,17 @@ numIntersections[interval] = StartedEventsTill[end[interval]] - EndedEventsTill[
 
 #非常牛逼的解法。  排序用了O(nlogN)。 其他O(n)
 class Solution:
-    def findNumConference(self, intervals):
-        affairs = [];   ret = 0; d={}
+    def findNumConference(self, intervals):  #假设每个都是tuple
+        affairs = [];     d={x:0 for x in affairs}
         for i in intervals:
-            affairs.append((i[0], 1, i))
-            affairs.append((i[1], -1, i))
-            d[i] = 0
+            affairs+=[ (i[0], 1, i), (i[1], -1, i)]
         affairs.sort()
         sCnt = 0;     eCnt=0
         for x in affairs:
             if x[1]==1:
-                sCnt+=1
-                d[x[-1]]=-eCnt
+                sCnt+=1;   d[x[-1]]=-eCnt
             elif x[1]==-1:
-                eCnt+=1
-                d[x[-1]]+=sCnt-1
+                eCnt+=1;   d[x[-1]]+=sCnt-1  #不包括自己。-1.
         return d        #end
 
 s = Solution()

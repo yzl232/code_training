@@ -8,3 +8,4 @@ You also have to make sure that you are not using extra memory. For example: FOO
 #微软考过。
 #FOOFII    F2FI2
 #对于只出现一个的ch， 我们可以反转符号，来标记只出现一次。 对于多次的，可以加上出现次数
+# byte array

@@ -21,19 +21,40 @@ The special case for this is when you swap ZERO into its correct position. In th
 shuffle. 输入是[0,2,_,3] 输出是[0,_,2,3].  就是一个乱序数组, 其中缺少了一个值, 然后输出, 每个数值都在自己对应的index上面. 但是移动的时候, 只能把数字放在空缺的位置上, 要求移动的次数最少. (这个我也不知道OPTimal的方法是什么)
 '''
 
+def rearrage_swap567(src, tgt):
+    x, i =tgt.index(0), src.index(0)    #基本上就是0所在的位置。  每次都修正这个位置的value.   直到0也归位。
+
+    if x == i:  #0已经在正确位置上了。。随便找一个不match的位置。 交换
+        for j in range(len(src)):
+            if src[j]!=tgt[j]: break
+        src[i], src[j] = src[j], src[i]    #这两行和下面的两行是一样的。 先写下面这段。 然后照抄
+        i = j
+
+    while i != x:   #先写这一段
+        j = src.index(tgt[i])    #不断操作src。  我们只是在搜索tgt
+        src[j], src[i] = src[i], src[j]
+        i = j
+
+
+
+
+
+
+
+
 
 def rearrage_swap0(src, tgt):
-    tgt_0 =tgt.index(0)    #基本上就是0所在的位置。  每次都修正这个位置的value.   直到0也归位。
     print src
-    i = src.index(0)
-    if tgt_0 == i:  #0已经在正确位置上了。。随便找一个不match的位置。 交换
+    x, i =tgt.index(0), src.index(0)    #基本上就是0所在的位置。  每次都修正这个位置的value.   直到0也归位。
+
+    if x == i:  #0已经在正确位置上了。。随便找一个不match的位置。 交换
         for j in range(len(src)):
             if src[j]!=tgt[j]: break
         src[i], src[j] = src[j], src[i]
         print src[i], '<->', src[j], src
         i = j
 
-    while i != tgt_0:
+    while i != x:
         j = src.index(tgt[i])
         src[j], src[i] = src[i], src[j]
         print src[i], '<->', src[j], src

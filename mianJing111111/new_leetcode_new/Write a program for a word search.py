@@ -22,21 +22,20 @@ class Solution:
         for i in range(self.m):
             for j in range(self.n):
                 if board[i][j] == word[0]:
-                    tmp, board[i][j] = board[i][j] , '#'
+                    t, board[i][j] = board[i][j] , '#'
                     self.dfs(board, i, j, word[1:], [(i, j)])
-                    board[i][j] = tmp
+                    board[i][j] = t
         return  self.results
 
-    def dfs(self, board, i, j, word, tmpRoutes):
-        if len(word) == 0:
-            self.results.append(tmpRoutes)
+    def dfs(self, board, i, j, word, cur):
+        if not word:
+            self.results.append(cur)
             return
         for r in [i-1, i, i+1]:
             for c in [j-1, j, j+1]:
-                if 0<=r<=self.m-1 and 0<=c<=self.n-1:
-                    if board[r][c] == word[0]:
+                if 0<=r<=self.m-1 and 0<=c<=self.n-1 and board[r][c] == word[0]:
                         tmp, board[r][c] = board[r][c] , '#'
-                        self.dfs(board, r, c,word[1:], tmpRoutes+[(r, c)])
+                        self.dfs(board, r, c,word[1:], cur+[(r, c)])
                         board[r][c] = tmp
 
 sss = [

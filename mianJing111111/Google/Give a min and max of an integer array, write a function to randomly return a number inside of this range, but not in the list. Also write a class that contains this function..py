@@ -2,7 +2,8 @@
 '''
 Give a min and max of an integer array, write a function to randomly return a number inside of this range, but not in the list. Also write a class that contains this function.
 '''
-#和 这道题目像
+#和 这道题目像  Implement below function.
+# int getRandom(int N, int K[])
 #与之前的区别在于加了一个minV, 变成 jump+x+minV
 
 #背下。不大理解
@@ -10,8 +11,8 @@ import random
 class Solution:
     def randK(self, arr, minV, maxV):
         arr.sort();  n=maxV-minV+1-len(arr)
-        x = random.randint(0, n-1)
-        x = minV+x  #多了这一步而已
+        assert n>0
+        x = random.randint(0, n-1)+minV    #多了这一步而已
         for y in arr:
             if y>x: return x
             x+=1

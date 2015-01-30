@@ -3,6 +3,10 @@
 Suppose the sub-requests can be queued at each server, and the servers are running all the time. Discuss feasible on-line algorithms that can achieve sub-optimal solutions with N ~ 10000
 '''
 
+
+#很多重复 cache
+# 都不一样。  load balancing
+# 容许错误： consistent hashing.
 '''
 Here interviewer is expecting you to ask different questions
 1) Is those request are entirely different?

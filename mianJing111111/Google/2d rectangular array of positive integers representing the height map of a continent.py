@@ -45,21 +45,24 @@ class Solution:
     def solve(self, board):   # 这道题只考虑   1<=r<m-1 and 1<=c<n-1
         if not board: return
         m = len(board); n = len(board[0])
-        visited = {};  pre = set(); ret = set()
-        for i in range(1, m-1):
-            pre.add((i, 1))
-            visited[(i, 1)] = 'pacific'
-        for j in range(1, n-1):
-            pre.add((1, j))
-            visited[(1, j)] = 'pacific'
+        pre = set()
+        for i in range(1, m-1): pre.add((i, 1))
+        for j in range(1, n-1):  pre.add((1, j))
+        visited1 = pre.copy()
         while pre:
-            cur = set([])
+            cur = set()
             for i, j in pre:
                 for r, c in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-                    if (r, c) in visited: continue
+                    if (r, c) in visited1: continue
                     if 1<=r<m-1 and 1<=c<n-1 and board[r][c]>board[i][j]:
-                        cur.add((r, c))
-                        visited[(r, c)] = 'pacific'
+                        cur.add((r, c));  visited1.add((r, c))
             pre = cur
+        #...
+        #.... ....  if (i, j) in visited1 and (i, j) in visited2: .
+'''
+伪代码：
 
-        #.... ....
+for i in range(m):
+    for j in range(n):
+        if (i, j) in visited1 and (i, j) in visited2: .......
+'''

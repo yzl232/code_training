@@ -17,6 +17,7 @@ We don’t know the range of any ball and number of color balls, but the minimum
 
 
 '''
+arr[500]
 for ball in balls:
   aux_array[ball.color].append(ball)
 '''

@@ -23,16 +23,22 @@ index = 1000, result = 3
 '''
 
 # 先是1~9， 10~99， 100~999
+
+# 先是1~9， 10~99， 100~999
 # #规律。 1*9， 2*90， 3*900， 。。。。。
+
 def getDigit(n):
     x = 0
     while True:
         x += 1
-        size = (10**x-10**(x-1)) * x
+        size = (10**x-10**(x-1)) * x   #规律。 1*9， 2*90， 3*900， 。。。。。
         if size > n:   break
         n -= size
     number, digit = 10**(x-1) + n / x, n % x
     return int(str(number)[digit])
+
+for i in range(17):
+    print getDigit(i)
 
 for i in range(17):
     print getDigit(i)

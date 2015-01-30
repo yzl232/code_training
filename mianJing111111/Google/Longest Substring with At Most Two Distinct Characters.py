@@ -20,18 +20,18 @@ i 是 starting  pointer
 '''
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s):
-        l=0;  count = {};   maxLen = 0
-        for r in range(0, len(s)):
-            ch = s[r]
-            if ch not in count :   count[ch] = 0
-            count[ch]+=1
-            while len(count)>2:
-                ch = s[l]
-                count[ch]-=1
-                if count[ch] ==0:     del count[ch]
+        l=0;  cnt = {};   ret = 0
+        for r in range(len(s)):
+            x = s[r]
+            if x not in cnt :   cnt[x] = 0
+            cnt[x]+=1
+            while len(cnt)>2:
+                x = s[l]
+                cnt[x]-=1
+                if cnt[x] ==0:     del cnt[x]
                 l +=1
-            maxLen = max(r-l+1, maxLen)
-        return maxLen
+            ret = max(r-l+1, ret)
+        return ret
 
 s = Solution()
 print s.lengthOfLongestSubstringTwoDistinct("eeceba")

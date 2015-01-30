@@ -11,6 +11,9 @@ output: all the source nodes: (A1, A3, A4)
 '''
 
 
+# 像union find。  # union find 一般也就是建图， 然后从root BFS的过程
+
+#建图后BFS即可
 #  不是leetcode能到达最远那道题，这里面只能走这些步数，而且可以多跳跳到也算
 #  只要看出是个图就是水水的了
 #  可以理解为反着建图。。。就是临接表（反向） 每个位置存 能到它的所有位置

@@ -22,3 +22,4 @@ class Solution:
         if r<=px: return x
         elif r<=px+py: return y
         else: return z
+# cumulative

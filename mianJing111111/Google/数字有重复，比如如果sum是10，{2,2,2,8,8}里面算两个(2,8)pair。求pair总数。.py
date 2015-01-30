@@ -28,8 +28,7 @@ class Solution3:
             cur = num[i]+num[j]
             if cur == target:
                 cnt+=1
-                i+=1
-                j-=1          #{2,2,2,8,8}里面算两个(2,8)pair.  所以同时i+1, j-1
+                i+=1;  j-=1          #{2,2,2,8,8}里面算两个(2,8)pair.  所以同时i+1, j-1
             elif cur > target:  j-=1
             else: i+=1
         return cnt

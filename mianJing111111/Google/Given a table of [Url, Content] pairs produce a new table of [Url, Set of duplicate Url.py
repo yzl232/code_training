@@ -16,10 +16,7 @@ c.com => []
 '''
 class Solution:
     def solve(self, arr):
-        d = {}
+        d = {c:[] for x, c in arr}   #题目输出只有a, b, c。 没有d， e  说明是以html  val作为指标。
         for x, c in arr:
-            if c not in d: d[c]=[]
-            d[c].append(x)
-        for x in d:
-            d[x].pop(0)
+            if c!=x:  d[c].append(x)   #除去本身
         return d

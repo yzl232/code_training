@@ -6,6 +6,9 @@
 ，对于一个totally random的array，长度为n，这个min平均会被reassign多少次。
 '''
 
+#想象一个无限长的线段被平均分成2段， 4段， 5段。。。
+
+
 # 解释。  就是random来说，
 #http://stackoverflow.com/questions/6735701/number-of-assignments-necessary-to-find-the-minimum-value-in-an-array
 
@@ -17,3 +20,5 @@ The chance that the second number is larger than the first is 1/2. Regardless of
 '''
 
 #对于本题。 则是1/1+1/2 + 1/3 + 1/4 + .. + 1/n
+
+

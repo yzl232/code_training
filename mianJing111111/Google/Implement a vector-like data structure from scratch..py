@@ -8,6 +8,8 @@ Discussion topics:
 3. How many copies does the structure perform to insert n elements? That is, n calls to vector.push_back
 '''
 
+# logN
+
 '''
 Vector is implemented base on array, say size m.
 1. If the array is full, create a new array of size 2m, copy the elements from original array to the new one, and put the to-be-inserted element into the new array

@@ -10,6 +10,8 @@ For the following tree nodes are deleted in order – 4, 5, 2, 3, 1
 后序
 '''
 
+# # 基本上什么mirror tree,  delete tree，  trim 这种改变树的结构的题目， 做法都是用post order 的
+
 class Solution:
     def deleteTree(self, root):
         if not root: return

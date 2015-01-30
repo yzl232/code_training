@@ -9,8 +9,8 @@ class Solution:
         pass
 
     def myFoo(self):
-        val1 = self.foo()
-        val2 = self.foo()
-        if val1==0 and val2==1: return 0
-        if val1==1 and val2==0: return 1
+        v1 = self.foo()
+        v2 = self.foo()
+        if v1==0 and v2==1: return 0
+        if v1==1 and v2==0: return 1
         return self.myFoo()

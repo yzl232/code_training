@@ -30,7 +30,7 @@ class Solution6:
         return self.merge2(left, right)
 
     def incnt(self, arr):    #用了一个全局变量
-        self.cnt = [0 for i in range(len(arr))]
+        self.cnt = [0]*(len(arr))
         arr = [ (arr[i], i)  for i in range(len(arr)) ]
         self.mSort(arr)
         print self.cnt

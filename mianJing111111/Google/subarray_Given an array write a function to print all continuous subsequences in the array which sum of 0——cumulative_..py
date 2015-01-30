@@ -49,6 +49,6 @@ class Solution:
             if s in d:
                 for start in d[s]:   print arr[start+1:i+1]  #稍作修改
                 d[s].append(i)
-            else:  d[s] = [i]      #key是cumulative sum, value index
+            else:  d[s] = [i]      #key是cumulative sum, value index...
 s = Solution()
 print s.print0S([-1, -3, 4, 5, 4, -2, -2, 0,  4])

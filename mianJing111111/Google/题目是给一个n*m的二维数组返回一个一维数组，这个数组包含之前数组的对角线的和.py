@@ -29,18 +29,16 @@
 class Solution:
     def solve(self, mtr):
         if not mtr: return
-        ret = []; n=len(mtr)
-        i, j=n-1, 0;  s=0
-        while 0<=i<n and 0<=j<n:
+        ret = []; n=len(mtr); s=0
+        for i in range(n-1, -1, -1):
+            j =n-1-i
             s+=mtr[i][j]
             ret.append(s)
-            i-=1; j+=1
-        i, j=n-1, 0
-        while 0<=i<n and 0<=j<n:
+        for i in range(n-1, 0, -1):
+            j =n-1-i
             s-=mtr[i][j]
             ret.append(s)
-            i-=1; j+=1
-        return ret[:-1]  #多了一个0
+        return ret  #多了一个0
 
 s= Solution()
 print s.solve(

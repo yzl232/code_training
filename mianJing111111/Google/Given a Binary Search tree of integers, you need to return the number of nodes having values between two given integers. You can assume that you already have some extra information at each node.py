@@ -12,7 +12,7 @@ Interesting, this was one of the questions of my second interview. This was my a
 2a) If the value we search is less or equal to current node value. Then this node and all values to the right are larger or equal to this value and we can ignore them. Recurse on the left subtree
 2b) The value we search is larger than the current node value. Then this node and all values in the left subtree are less than this value. Recurse on the right subtree.
 
-On a balanced BST, this algorithm takes O(log N) time.
+On a balanced BST, this algorithm takes O(log N) time...
 '''
 class TreeNode:
     def __init__(self):
@@ -20,7 +20,21 @@ class TreeNode:
         self.right = None
         self.leftN = 0
 
+class Solution:
+    def getLess(self, root, v):
+        ret =0
+        while root:
+            if root.val>=v: root=root.left
+            else:
+                ret+=1+root.leftN
+                root=root.right
+        return ret
 
+    def solve(self, root, start,end):
+        return self.getLess(root, end+1)-self.getLess(root, start)   # start, end.  inclusive。  所以是end+1
+
+
+'''
 class Solution:
     def getLess(self, root, v):
         if not root: return 0
@@ -29,6 +43,7 @@ class Solution:
 
     def solve(self, root, start,end):
         return self.getLess(root, end+1)-self.solve(root, start)
+'''
 
 #比较巧妙。比较难。
 #因为是augmented data structure

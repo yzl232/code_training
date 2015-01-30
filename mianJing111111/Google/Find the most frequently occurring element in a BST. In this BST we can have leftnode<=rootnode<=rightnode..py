@@ -10,8 +10,8 @@ class Solution:
     # @param root, a tree node
     # @return a list of integers
     def inorderTraversal(self, root):
-        self.retCn=self.curCnt=0
-        self.preV=self.ret=None
+        self.cnt=0; self.ret = (0, None)
+        self.preV=None
         self.dfs(root)
         return self.ret
 
@@ -19,10 +19,7 @@ class Solution:
         if not root:    return
         self.dfs(root.left)
         if root.val != self.preV:
-            self.curCnt=0
-            self.preV = root.val
-        self.curCnt+=1
-        if self.curCnt>self.retCnt:
-            self.retCnt = self.curCnt
-            self.ret = root.val
+            self.cnt=0;  self.preV = root.val
+        self.cnt+=1
+        self.ret= max(self.ret, (self.cnt, root.val))
         self.dfs(root.right)

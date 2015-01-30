@@ -92,27 +92,28 @@ class Solution:  #O(n)
     # @param root, a tree node
     # @return a list of integers
     def inorderTraversal(self, a, small):
-        self.inResult = []; self.preResult = []
-        self.inorder(a); self.preorder(a)
-        aIn = self.inResult[:]; aPre = self.preResult[:]
-        self.inResult =[]; self.preResult=[]
-        self.inorder(small); self.preorder(small)
-        return self.inResult in aIn and self.preResult in aPre
+        aIn, aPre = self.inorder_Preorder(a)
+        sIn, sPre = self.inorder_Preorder(a)
+        return sIn in aIn and sPre in aPre
+
+    def inorder_Preorder(self, root):
+        self.inRet = []; self.preRet = []
+        self.inorder(root); self.preorder(root)
+        return self.inRet, self.preRet
 
     def inorder(self, root):
         if not root:
-            self.inResult.append('#')
+            self.inRet.append('#')
             return
-
         self.inorder(root.left)
-        self.inResult.append(root.val)
+        self.inRet.append(root.val)
         self.inorder(root.right)
 
     def preorder(self, root):
         if not root:
-            self.preResult.append('#')
+            self.preRet.append('#')
             return
-        self.preResult.append(root.val)
+        self.preRet.append(root.val)
         self.preorder(root.left)
         self.preorder(root.right)
 

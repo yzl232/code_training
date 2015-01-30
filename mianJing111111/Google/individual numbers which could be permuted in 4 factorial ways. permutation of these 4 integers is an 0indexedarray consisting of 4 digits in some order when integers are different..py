@@ -23,12 +23,10 @@ summ[3] = 3
 '''
 class Solution:
     def answer(self, w, x, y, z):
-        val1=max(w, x, y, z)
-        val2 = min(w, x, y, z)
+        val1=max(w, x, y, z);     val2 = min(w, x, y, z)
         remain = [w, x, y, z]
         remain.remove(val1); remain.remove(val2)
-        val3 = max(remain)
-        val4 = min(remain)
+        val3 = max(remain);      val4 = min(remain)
         return (val1, val2, val3, val4)
 '''
 summ[0]=first maximum,

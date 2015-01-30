@@ -102,20 +102,20 @@ graph3 = {
     "q": []
 }
 
-#基本上就是DFS而已
+#基本上就是DFS而已。 10几行。
 
 class Solution:
-    def topological(self, graph):
+    def topological(self, graph):   # 按题目输入，应当建一个hashmap.:    fromD = {}
         self.graph = graph
-        self.ret,  self.visited = [], {}
-        for k in graph.keys():  self.dfs(k)
+        self.ret,  self.visited = [], {}  # visited最开始为空。
+        for k in graph:  self.dfs(k)
         return self.ret
     def dfs(self, x):
         if x in self.visited:   #已经visit过了
             if self.visited[x]==False: raise ValueError("cycle")  #发现了一个back edge。
             return
         self.visited[x] = False  #这就是与普通dfs的唯一不同。 用False标记
-        for k in self.graph[x]:  self.dfs(k)
+        for y in self.graph[x]:  self.dfs(y)
         self.ret.append(x)
         self.visited[x] = True
 

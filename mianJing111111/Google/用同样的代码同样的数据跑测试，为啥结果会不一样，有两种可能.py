@@ -7,7 +7,7 @@ You are given the source to an application which crashes when it is run. After r
 '''
 
 
-
+# random,  time variable
 
 
 '''

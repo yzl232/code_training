@@ -34,5 +34,5 @@ class Solution:
         while stack:
             cur = stack.pop()
             ret.append(cur.val)
-            for x in cur.children:  stack.append(x)
+            stack+=cur.children
         return ret[::-1]

@@ -5,7 +5,7 @@ input: ["zebra", "dog", "duck",”dot”]
 output: {zebra: z, dog: do, duck: du}
 
 [zebra, dog, duck, dove]
-{zebra:z, dog: dog, duck: du, dove: dov}
+{zebra:z, dog: dog, duck: du, dove: dov}...
 
 [bearcat, bear]
 {bearcat: bearc, bear: ""}

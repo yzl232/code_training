@@ -9,7 +9,8 @@ Restriction: no Java collections classes
 
 What if you knew the vector has 99.99% T and only 0.01% False. How would you change the approach?
 '''
-
+# 第一个就是bit map.  并且动态增加array. size.   类似heap 。  不够就乘以2
+# followup就是 类似稀疏矩阵。  Hashset存False的index就可以了。  set的话， 从set里边remove掉。
 
 '''
 

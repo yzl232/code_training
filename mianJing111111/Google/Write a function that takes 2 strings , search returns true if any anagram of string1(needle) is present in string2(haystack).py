@@ -44,24 +44,22 @@ pass
 class Solution:
     # @return a string
     def minWindow(self, s, t):
-        ls = len(s); lt = len(t); ret = ''
-        if ls<lt: return ''  #到达了长度，就一直尝试缩减窗口
-        st = 0;    #关键是用了2个hashtable。 另外缩减窗口。
-        fdN = 0; tcnt ={}; fnd = {}
+        m = len(s); n = len(t); ret = ''    #关键是用了2个hashtable。 另外缩减窗口。
+        fdN = 0; tcnt ={}; fnd = {}; l = 0
         for ch in t:
             if ch not in tcnt: tcnt[ch]=0
             tcnt[ch]+=1
-        for end in range(ls):
-            ch = s[end]
+        for r in range(m):
+            ch = s[r]
             if ch not in tcnt: continue
             if ch not in fnd or tcnt[ch] > fnd[ch]: fdN+=1    #fndC之后不会再动了
             if ch not in fnd:  fnd[ch]=0
             fnd[ch]+=1    #这两行照抄上面tcnt部分的
-            if fdN == lt:  #has
-                while s[st] not in tcnt or fnd[s[st]] > tcnt[s[st]]:
-                    if s[st] in t: fnd[s[st]] -=1
-                    st +=1
-                if len(t)==end-st+1: return True
+            if fdN == n:  #has
+                while s[l] not in tcnt or fnd[s[l]] > tcnt[s[l]]:
+                    if s[l] in t: fnd[s[l]] -=1
+                    l +=1
+                if len(t)==r-l+1: return True
         return False
 #O(n)
 s = Solution()

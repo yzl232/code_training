@@ -27,4 +27,4 @@ class Solution:
         vLeft = self.dfs(root.left)
         vRight = self.dfs(root.right)
         self.maxSum = max(self.maxSum, vLeft+vRight+root.val)
-        return max(root.val+vLeft, root.val+vRight)  #pass value up   # since (vLeft+vRight+root.val) can not be passed up,  it is updated before return..       since vLeft, vRight >=0, we do not need to add a single root.val here
+        return max(vLeft, vRight)+root.val  #pass value up   # since (vLeft+vRight+root.val) can not be passed up,  it is updated before return..       since vLeft, vRight >=0, we do not need to add a single root.val here

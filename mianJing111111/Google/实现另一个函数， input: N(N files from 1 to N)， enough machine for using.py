@@ -25,9 +25,31 @@ long getAllSum(int N){
 
 同一个machine多线程的话，blockingQueue里面放fileId，sum设为static的
 atomicInteger
-多个machine的话，就是IPC，一个machine做coordinator，往message queue里面放
+多个machine的话，就是IPC，
+
+
+
+一个machine做coordinator，往message queue里面放
 fileID。其他machine从message queue里面拿fileID，统计完把结果放到另外一个
 message queue里面，coordinator取出结果然后sumAll.
 
 其实就是mapper + reducer
+'''
+
+#一个global machine
+#
+'''
+
+mapper:
+for file in files:
+    print fileID, sum
+
+
+reducer:
+sum of all
+
+......
+
+
+
 '''

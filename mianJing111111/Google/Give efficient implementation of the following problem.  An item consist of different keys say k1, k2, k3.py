@@ -58,3 +58,6 @@ Method orderedIterator(keytype): Iterator
     iterate using the ordered dict.
 
 '''
+
+
+# ordered dict我记得做不到O(1)  。  排序的话用bst吧 O(logN)

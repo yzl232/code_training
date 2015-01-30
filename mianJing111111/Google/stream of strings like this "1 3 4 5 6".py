@@ -10,7 +10,7 @@ stream of strings like this
  这两个不能合并，因为里面元素不完全相同。必须元素以及个数都一样才能合并。
 最后表示对我的优化结果不满意
 '''
-
+# 用一个array[10]统计。 然后hash。
 '''
 这个是anagram的变体，用anagram的解法即可。
 
@@ -30,3 +30,8 @@ hashSet。
 #解法2效率稍微高。
 
 #保持顺序的话，除了hashtable,  还要加上array
+
+
+
+
+#解法2：  用一个array[10]统计。 然后hash。

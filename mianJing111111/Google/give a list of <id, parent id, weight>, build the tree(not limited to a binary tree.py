@@ -29,14 +29,17 @@ class Solution:
 #因为不是graph。实际上有更简单的办法。  就是以下。  用BFS
 #直接就说我有2种办法。  一种topoligical sort, 一种找root
 
-
+class TreeNode:
+    def __init__(self, x, ):
+        self.val = x
+        self.children = []
 
 class Relation:
     def __init__(self, parent, child):
         self.parent = parent
         self.child = child
 
-class Solution:  #可以用hashmap  build 简单的node: children属性。
+class Solution:  #可以用hashmap  build 简单的node: children属性。   #也就是hashtable based..    tree
     def buildTree(self, relations):
         d = {};  notRoot = set()
         for rs in relations:
@@ -46,18 +49,17 @@ class Solution:  #可以用hashmap  build 简单的node: children属性。
         roots=[]    #找root
         for k in d.keys():
             if k not in notRoot:  roots.append(k)
-        root = roots[0]
+
+
 
 # 第二部分。 更新为sum of decendents
     def dfs(self, root):
-        if not root: return 0
         for x in root.children:   root.val +=self.dfs(x)
         return root.val
 
 '''
     def dfs(self, root):
         if not root: return 0
-        if root.left: root.val+=self.dfs(root.left)
-        if root.right: root.val +=self.dfs(root.right)
+        root.val+=self.dfs(root.left)+self.dfs(root.right)
         return root.val
 '''

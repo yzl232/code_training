@@ -50,19 +50,19 @@ BFS
 '''
 class Solution:
     def isComplete(self, root):
-        if not root: return []
-        prev = [root];  flg = False  # #if f==True, means we can not meet any more leaves.
+        if not root:  raise  ValueError
+        prev = [root];  stop = False  # #if f==True, means we can not meet any more leaves.
         while prev:
             cur = []
             for node in prev:
                 if node.left:
                     cur.append(node.left)
-                    if flg:   return False
-                else: flg = True
+                    if stop:   return False
+                else: stop = True
                 if node.right:
                     cur.append(node.right)
-                    if flg:  return False
-                else: flg = True
+                    if stop:  return False
+                else: stop = True
             prev = cur
         return True
 
@@ -75,6 +75,17 @@ Given a Binary tree,find the level at which the tree is complete.
 Complete Binary tree-All leaves should be at same level and every internal node should have two children.
 Asked to write both Recursive and iterative code.
 '''
+#误以为是  Minimum Depth of Binary Tree， 结果差很多。 那个是任意tree， 求最浅的叶子。
+
+
+class Solution6:
+    def checkLevel(self, root):
+        return self.dfs(root, 0)
+
+    def dfs(self, root, lvl):
+        if not root: return lvl
+        return min(self.dfs(root.left, lvl+1), self.dfs(root.right, lvl+1))
+'''
 class Solution6:
     def checkLevel(self, root):
         return self.dfs(root, 0)
@@ -82,4 +93,5 @@ class Solution6:
     def dfs(self, root, lvl):
         if not root: return lvl
         if root.left and root.right: return min(self.dfs(root.left, lvl+1), self.dfs(root.right, lvl+1))
-        return lvl+1
+        return lvl+1    #加上root这一层.  若
+'''

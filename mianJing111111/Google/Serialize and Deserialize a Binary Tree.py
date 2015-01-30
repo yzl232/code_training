@@ -26,7 +26,7 @@ class TreeNode:
 
 class Solution:
     def serializae(self, root):
-        self.ret = []  #就是preorder加上特殊符号而已
+        self.ret = []  #就是preorder加上特殊符号(none node)而已
         self.dfs(root)
         return self.ret
 

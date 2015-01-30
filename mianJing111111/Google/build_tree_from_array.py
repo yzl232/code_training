@@ -40,6 +40,7 @@ line 7: fish
 
 #关键在于找到root
 
+
 class Relation:
     def __init__(self, parent, child):
         self.parent = parent
@@ -52,12 +53,9 @@ class Solution:  #可以用hashmap  build 简单的node: children属性。
             if d[rs[0]] not in d:  d[rs[0]] = []
             d[rs[0]].append(rs[1])
             notRoot.add(rs[1])
-        roots=[]    #找root
-        for k in d.keys():
-            if k not in notRoot:  roots.append(k)
-        root = roots[0]
-        self.d = d
-        self.dfs(root)
+        roots=[ x  for x in d if x not in notRoot ]   # 找root
+        self.d = d #build  tree   有了roots。 有了图。 算是已经建好了hashmap形式的tree了。
+        for x in roots: self.dfs(x)
 
     def dfs(self, root):
         print root.val

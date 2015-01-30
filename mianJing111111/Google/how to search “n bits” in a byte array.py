@@ -17,7 +17,7 @@ output:
 '''
 You could always XOR the first N bits and if you get 0 as a result you have a match. Then shift the searched bit "stream" one bit to the left and repeat. That is assuming you want to get matches if those sub-patterns overlap. Otherwise you should shift by pattern length on match.
 '''
-
+# 因为是暴力法 。比印象中容易许多，
 
 #先来简单的。假设只考虑一个byte
 class Solution:
@@ -25,16 +25,16 @@ class Solution:
         pattern>>=(8-len2)
         i = 0; ret=[]
         for i in range(8-len2+1):
-            if byte>>(8-i)==pattern: ret.append(i)
+            if ( byte>>i ) & (1<<len2-1)==pattern: ret.append(i)
         return ret
 
 
 #general case  假设 len1,     len2都大于8
 #复杂度是O(n2)
 # 每次判断。 之后byte全体左移一位。
-class Solution3:
+class Solution3:   # 复杂度不大好。 但是是可行的。
     def solve(self, byte, len1, pattern, len2):
-        byte.append(0); pattern.append(0)  #避免edge case
+        byte.append(0); pattern.append(0)  #避免edge case， 防止左移额时候没有i+1
         ret = []; idx=0
         while len1>=len2:
             m, n = len2/8, len2%8

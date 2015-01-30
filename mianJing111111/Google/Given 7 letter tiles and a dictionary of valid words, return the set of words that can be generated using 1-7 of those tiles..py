@@ -17,6 +17,7 @@ would return: A AA APE PEA PARE PEAR SPARE APPEARS
 
 
 # trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
+# pre Compute hashtables for words
 '''
 考过好几次。  也是简化版
 
@@ -29,24 +30,30 @@ would return: A AA APE PEA PARE PEAR SPARE APPEARS
 我觉得可能是预处理吧。  就是key: word, value: hashtable
 
 '''
-
-
+# 三个minor的可以稍微优化。   都是pre-process
+# #1      trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
+# 2      pre compute the hashmap.   这样子每次check就是O(num of distinct char.  which is less than 26 ) * O(n)
+# 3     按word7长度从长的到段排序（预处理）。 从长到短来找， 可以优化。
+#  4  prune， 跳过长度超过charList的单词
+# 第5个优化。  预存所有车牌查好后的结果。
+#
+#
+# 如果dictionary有上百萬個字，然後給你上千個車牌號碼，要你回傳相對應的最短字串，該如何optimize?
+# 对应的一个arr[62].   preprocesss保存。 对应的最短的字串。。  然后如果车牌号对应的cnt array相同。 就不用重复找了。
+# 或者sort车牌的字母。 作为key。 hashtable value储存结果
 
 class Solution:
     def cntW(self, word):
         d = {}
-        for ch in word:
+        for ch in word:     #经常用到。 单独拿出来吧。
             if ch not in d: d[ch]=0
             d[ch]+=1
         return d
 
-    def validW(self, word, charD):
-        wCnt = {}
-        for ch in word:
-            if ch not in charD: return False
-            if ch not in wCnt: wCnt[ch]=0
-            wCnt[ch]+=1
-            if wCnt[ch]>charD[ch]: return False
+    def valid(self, word, chCnt):   #实际上pre Compute好了
+        wCnt = self.cntW(word)
+        for ch in wCnt:
+            if ch not in chCnt or chCnt[ch]<wCnt[ch]: return False
         return True
 
     def solve(self,words,  charSet ):
@@ -54,7 +61,17 @@ class Solution:
         charD = self.cntW(charSet)     #这个dicts视为永久量。  因为只有26ch。 所以charD会比较小。可以视作constant
         ret = []
         for w in words:  #每次使用的时候。prune出valid words
-            if self.validW(w, charD): ret.append(w)
+            if self.valid(w, charD): ret.append(w)
+'''
+    def validW(self, word, charD):  #实际上都是preCompute了的。。。
+        wCnt = {}
+        for ch in word:
+            if ch not in charD: return False
+            if ch not in wCnt: wCnt[ch]=0
+            wCnt[ch]+=1
+            if wCnt[ch]>charD[ch]: return False
+        return True
+'''
 
 '''
 出现好几次了

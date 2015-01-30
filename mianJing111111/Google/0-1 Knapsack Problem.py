@@ -10,18 +10,20 @@ Given weights and values of n items, put these items in a knapsack of capacity C
 '''
 
 class Solution:
-    def dfs(self, weight, vals, c):
+    def solve(self, weight, vals, c):
         self.weight = weight;  self.vals = vals
-        return self.dfs(len(weight)-1, c)
+        return self.dfs(0, c)
 
     def dfs(self, i, c):
-        if i<0: return 0
-        if self.weight[i]>c:  return self.dfs(i-1, c)
-        return max(self.dfs(i-1, c),  self.dfs(i-1, c-self.weight[i]))
+        if i>len(self.weight): return 0
+        if self.weight[i]>c:  return self.dfs(i+1, c)
+        return max(self.dfs(i+1, c),  self.dfs(i+1, c-self.weight[i])+self.vals[i] )
+
+#简单就是取和不取2种情况。   递归 memoization
 
 
 #dp
-class Solution:
+class Solution5:
     def knapSack(self, weight, vals, c):
         m = len(vals);  n=len(weight)
         dp = [[0 for i in range(n+1)] for j in range(m+1)]

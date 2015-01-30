@@ -55,9 +55,16 @@ list了
 #有点像leetcode的一道用hashmap找consecutive的题目.
 #理解了以后，就几行代码
 #甚至都不需要head node
+
 class Solution:
     def findC(self, arr):
-        ret = 0; targets = {i:False for i in arr}
+        t = set(arr)
+        return sum(1 for x in t if x.next not in t)
+'''
+class Solution:
+    def findC(self, arr):
+        ret = 0; targets = set(arr)
         for i in targets:
             if i.next not in targets: ret+=1
         return ret
+'''

@@ -29,8 +29,8 @@ class Solution:
         while x*x<n:
             y = 0
             while x*x + y*y<n:
+                #print x, y
                 ret+=1
-                print  x, y
                 y+=1
             x+=1
         return ret
@@ -38,14 +38,11 @@ class Solution:
 
 
     def countAll(self, n):
-        c = 0
-        while c*c<n:  #先令x=0; 找到此时的y值。
-            c+=1   #正好。  第一次是3. 正好是数目。   big是数目。 c-1正好是最大值
-        ret = 0
-        yCnt=c
-        for x in range(c):
-            while yCnt>0 and (yCnt-1)*(yCnt-1)+x*x>=n:
-                yCnt -=1   #yCnt-1就是最大的数。
+        c = 0     #例子。 n=4.   .  c=3
+        while c*c<n:   c+=1         #先令x=0; 找到此时的y值。   这里不能用sqrt。 因为我们找>=
+        ret = 0;  yCnt=c   #正好。  第一次是3. 正好是数目。   big是数目。 c-1正好是最大值
+        for x in range(c):  # 类似于minimum window substring
+            while yCnt>0 and (yCnt-1)**2+x*x>=n:  yCnt -=1   #yCnt-1就是最大的数。
             ret+=yCnt
         return ret
 #总的complexity是O(√n) . 因为yCOunt-1 最多O(√n)
@@ -53,3 +50,4 @@ s = Solution()
 print s.brute(6)
 print s.countAll(6)
 #Count the number of possible triangles  类似
+# 也类似3 sum的count

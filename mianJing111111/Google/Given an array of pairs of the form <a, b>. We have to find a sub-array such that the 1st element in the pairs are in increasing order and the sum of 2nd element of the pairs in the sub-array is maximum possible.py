@@ -5,13 +5,12 @@ Given an array of pairs of the form <a, b>. We have to find a sub-array such tha
 
 def max_sum_sorted(arr):
     if not arr: raise ValueError("empty array")  #一般就是raise ValueError
-    ret= 0;   maxN = arr[0][1];  preX = arr[0][0]
+    ret= maxN = arr[0][1]
     for i in range(1, len(arr)):
-        x, y = arr[i]
-        if x <= preX:   maxN = y      #主要是多了这一句
-        maxN = max(y, maxN+y)
+        x, y =arr[i];
+        if x <= arr[i-1][0]:   maxN = y      #主要是多了这一句
+        else: maxN = max(y, maxN+y)
         ret = max(maxN, ret)
-        preX = x
     return ret
 
 

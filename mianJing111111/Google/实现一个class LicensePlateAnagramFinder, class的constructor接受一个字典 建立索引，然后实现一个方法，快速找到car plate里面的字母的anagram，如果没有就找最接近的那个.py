@@ -9,6 +9,17 @@
 直接对字典里的所有词做个trie， 然后对于plate里字母的所有anagram进行查询。因为短，所以anagram数目不多。预处理做的多一些但是查询快吧，
 '''
 
+# 三个minor的可以稍微优化。   都是pre-process
+# #1      trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
+# 2      pre compute the hashmap.   这样子每次check就是O(num of distinct char.  which is less than 26 ) * O(n)
+# 3     按word7长度从长的到段排序（预处理）。 从长到短来找， 可以优化。
+#  4  prune， 跳过长度超过charList的单词
+# 第5个优化。  预存所有车牌查好后的结果。
+#
+#
+# 如果dictionary有上百萬個字，然後給你上千個車牌號碼，要你回傳相對應的最短字串，該如何optimize?
+# 对应的一个arr[62].   preprocesss保存。 对应的最短的字串。。  然后如果车牌号对应的cnt array相同。 就不用重复找了。
+# 或者sort车牌的字母。 作为key。 hashtable value储存结果
 
 #另外就是和之前相同。 hashtable  赤裸裸暴力。
 #和这道题一样。
@@ -43,8 +54,9 @@ follow up:
 (1) 如果dictionary裡有上百萬個字，該如何加速?
 (2) 如果dictionary有上百萬個字，然後給你上千個車牌號碼，要你回傳相對應的最短字串，該如何optimize?
 '''
-
+# 第二个优化。
 # 对应的一个arr[62].   preprocesss保存。 对应的最短的字串。。  然后如果车牌号对应的cnt array相同。 就不用重复找了。
+# 或者sort车牌的字母。 作为key。 hashtable value储存结果
 # 比如如果word的length比res的length长,就skip这个word,
 
 '''

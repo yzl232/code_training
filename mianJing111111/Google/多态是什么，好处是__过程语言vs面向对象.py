@@ -9,7 +9,7 @@
  7.java 传值还是引用？
 '''
 
-# ，接口的多种不同的实现方式即为多态。
+# ，接口的多种不同的实现方式即为多态Polymorphism。
 # present the same interface for differing underlying forms (data types).
 class Animal:
     def __init__(self, name):    # Constructor of the class
@@ -39,25 +39,16 @@ for animal in animals:
 '''
 
 
-'''
- 10 down vote accepted
-
-
-The primary benefit of polymorphism is freedom.
-
-When an object has a reference to another, it can invoke methods on that object reference without knowing, or caring, what the implementation is.
-
-So it allows you to make the powerful statement: Don't know, don't care.
-'''
+'''Polymorphism'''
 
 #  an interface may have multiple different implementations
 
 # OOP vs Functional Programming vs Procedural
 
 '''
-n a purely procedural style, data tends to be highly decoupled from the functions that operate on it.
+n a purely procedural style, data tends to be highly decoupled from the functions that operate on it. data和functio没有很紧密的关系
 
-In an object oriented style, data tends to carry with it a collection of functions.
+In an object oriented style, (the data and related functions are bundled together into an "object".)  data tends to carry with it a collection of functions.
 
 In a functional style, function is a data type.
 Algorithms tend also to be defined in terms of recursion and composition rather than loops and iteration.

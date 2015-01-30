@@ -11,7 +11,6 @@ cc150上类似的题目
 '''
 
 
-
 '''
 Write a method to count the number of 2s that appear in all the numbers between 0 and n (inclusive).
 EXAMPLE
@@ -19,7 +18,7 @@ Input: 25
 Output: 9 (2,12,20,21,22,23, 24 and 25. Note that 22 counts for two 2s.)
 
 
-f(513) = 5 * f(99) + f(13) + 100
+f(513) = 5 * f(99) + f(13) + 100            # (首位。 200~299 一共100个)
 f(279) = 2 * f(99) + f(79) + 79 + 1
 '''
 
@@ -29,8 +28,8 @@ class Solution:
         if n==0: return 0
         power = 1
         while 10*power<n: power*=10
-        first, remainder  = n/power, n%power
+        first, rem  = n/power, n%power
         cnt = 0
-        if first>2: cnt+=power
-        elif first==2: cnt+=remainder+1
-        return cnt + first*self.count2s(power-1)+self.count2s(remainder)
+        if first>2: cnt=power
+        elif first==2: cnt=rem+1   #+1, -1就是inclusize, exclusive的区别
+        return cnt + first*self.count2s(power-1)+self.count2s(rem)

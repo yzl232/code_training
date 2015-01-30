@@ -8,8 +8,9 @@ Write a function which takes an array and emits the majority element (if it exis
 
 '''
 
-#G家考过
-
+#G家考过   O(1) space, O(n)
+# sort 后，  arr[n/2]就是。。 O（nlogn）
+# hash则要O(n)
 
 '''
 算法的基本思想非常简洁: 每次都找出一对不同的元素，从数组中删掉，直到数组为空或只有一种元素。 不难证明，如果存在元素e出现频率超过半数，那么数组中最后剩下的就只有e。当然，最后剩下的元素也可能并没有出现半数以上。比如说数组是[1, 2, 3]，最后剩下的3显然只出现了1次，并不到半数。排除这种false positive情况的方法也很简单，只要保存下原始数组，最后扫描一遍验证一下就可以了。
@@ -35,9 +36,9 @@ Write a function which takes an array and emits the majority element (if it exis
 class Solution:
     def findMajority(self, arr):
         maj = self.findCandidate(arr)
-        if arr.count(maj)<len(arr)/2: return   ## verify  arr[x] really appears more than half  .  O(n)
+        if arr.count(maj)<=len(arr)/2: raise ValueError  ## verify  arr[x] really appears more than half  .  O(n)
         return maj    
-    
+
     def findCandidate(self, arr):
         x =0; cnt=1
         for i in range(1, len(arr)):

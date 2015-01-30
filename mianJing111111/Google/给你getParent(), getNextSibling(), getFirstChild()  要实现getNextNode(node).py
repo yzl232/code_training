@@ -39,4 +39,4 @@ class Solution:
             t = t.getSibling()
             if t: return t
             t = t.getParent()
-        return None
+        return

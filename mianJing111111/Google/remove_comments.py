@@ -33,10 +33,9 @@ Other than the odd edge case, this problem seems to be straightforward enough. A
 #面经出现了2次！！！
 class Solution:
     def remove_Comments(self, s):    #其实不是很容易写。  有点tricky
-        if not s: raise ValueError
         rets = '';  i=0; n=len(s)
         while i<n:
-            pre = i
+            pre = i    # pre=i   比count要万能多了 。而且还简洁
             while i+1<n and s[i:i+2] !='/*':    i+=1
             rets+=s[pre:i]
             if i==n-1:
@@ -97,10 +96,9 @@ class Solution2:
 
 class Solution:
     def remove_Comments(self, s):    #其实不是很容易写。  有点tricky
-        if not s: raise ValueError
         rets = [];  i=0; n=len(s)
         while i<n:
-            while i+1<n and s[i:i+2] !='/*' and  s[i:i+2] !='//': i+=1
+            while i+1<n and s[i:i+2] not in ['/*', '//']: i+=1
             if i==n-1: break
             elif s[i:i+2] =='//':
                 pre = i = i+2

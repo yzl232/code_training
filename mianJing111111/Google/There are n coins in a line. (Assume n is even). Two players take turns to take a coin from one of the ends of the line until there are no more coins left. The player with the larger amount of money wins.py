@@ -51,29 +51,32 @@ length一段一段都是这样的
 class Solution:
     def mMoney(self, arr):
         l = len(arr)
-        dp = [[0 for i in range(l)] for j in range(l)]
-        for i in range(l):
-            dp[i][i] = arr[i]
-        for i in range(l-1):
-            dp[i][i+1] = max(arr[i], arr[i+1])
+        dp = [[0]*l for i in range(l)]
+        for i in range(l):   dp[i][i] = arr[i]
+        for i in range(l-1):  dp[i][i+1] = max(arr[i], arr[i+1])
         for j in range(l):
             for i in range(j-2, -1, -1): #取了一轮后，有a,b,c三种结果
                 a = dp[i+2][j]    #我取了i, 对方取了i+1
-                b =  dp[i+1][j-1]##我取了i, 对方取了j。 后者我取了j, 对方取了i
+                b =  dp[i+1][j-1]##我取了i, 对方取了j。 or 我取了j, 对方取了i
                 c = dp[i][j-2]  #我取了j。对方取了j-1
                 dp[i][j] = max(arr[i]+min(a, b),   arr[j]+min((b, c)))
         return dp[0][l-1]
 
+
+'''
 # memoization
 class Solution2:
     def mCo(self, arr):
         self.d = {}; self.arr = arr
-        return self.dfs(0, len(arr))
+        return self.dfs(0, len(arr)-1)
 
     def dfs(self, start, end):
         if start>end: return 0
         if (start, end) in self.d: return self.d[(start, end)]
+        if end==start+1: return max(self.arr[start], self.arr[end])
+        if end==start: return self.arr[start]
         a = self.arr[start]+min(self.dfs(start+2, end),  self.dfs(start+1, end-1))
         b = self.arr[end]+min(self.dfs(start+1, end-1), self.dfs(start, end-2))
         self.d[(start, end)] = max(a, b)
         return max(a, b)
+'''

@@ -3,7 +3,7 @@
 How do you make sure an API does not leak memory?
 '''
 
-
+# 比如hashtable之类。 不用的话， 删除。
 #Creating a memory leak with Java
 
 '''

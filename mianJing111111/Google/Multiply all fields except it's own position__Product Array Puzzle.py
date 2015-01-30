@@ -39,10 +39,10 @@ i之后的乘积    都不包括i
 '''
 class Solution:
     def specialProduct(self, arr):
-        ret= [1 for i in range(len(arr))]
+        ret= [1 ]*(len(arr))
         left=ret[:]; right = ret[:]
         for i in range(1, len(arr)):
-            left[i] = left[i-1] * arr[i-1]
+            left[i] = left[i-1] * arr[i-1]   #都是i-1。 不大一样。
         for i in range(len(arr)-2, -1, -1):
             right[i] = right[i+1]*arr[i+1]
         for i in range(len(arr)):
@@ -52,10 +52,10 @@ class Solution:
 #有 not extra space 的做法
 class Solution3:
     def product(self, arr):
-        cur=1; ret = [1 for i in range(len(arr))]
+        cur=1; ret =[1]*len(arr)
         for i in range(len(arr)):
             ret[i]*=cur
-            cur *=arr[i]
+            cur *=arr[i]  # cur放在后面
         cur = 1
         for i in range(len(arr)-1, -1, -1):
             ret[i]*=cur
@@ -70,7 +70,7 @@ You are given an array of integers 'a' that can fit in a memory. Write a method 
 '''
 class Solution3:
     def product(self, arr):
-        cur=0; ret = [1 for i in range(len(arr))]
+        cur=0; ret =[0]*len(arr)
         for i in range(len(arr)):
             ret[i]+=cur
             cur +=arr[i]

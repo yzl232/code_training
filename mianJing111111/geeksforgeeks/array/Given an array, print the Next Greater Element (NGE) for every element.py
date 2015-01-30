@@ -30,15 +30,14 @@ Thanks to pchild for suggesting following approach.
 ….g) If next is smaller than the popped element, then push the popped element back.
 3) After the loop in step 2 is over, pop all the elements from stack and print -1 as next element for them.
 '''
-#O(n)    比较难。 不大懂    背下.  才10行代码
-class Solution:
+#O(n)    比较难。 不大懂    背下.  才10行代码。  循环里就2行。
+class Solution:    #存的是tuple   (val, i)
     def nge(self, arr):
         if not arr: return
         stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
-        for i in range(n):
-            x = arr[i]    #发现了一个比之前都要大，不断pop
-            while stack and stack[-1][0]<x:    d[stack.pop()[1]]=x  #pop出来的都是
-            stack.append((x, i))           #存index, 以及值
+        for i in range(n):    #发现了一个比之前都要大，不断pop
+            while stack and stack[-1][0]<arr[i]:    d[stack.pop()[1]]=arr[i]  #pop出来的都是
+            stack.append((arr[i], i))           #存index, 以及值
         ret = [None]*n
         for i in range(n):
             if i in d:  ret[i]=d[i]
@@ -48,3 +47,4 @@ print s.nge([4, 2, 5,6, 2, 4])
 print s.nge([11, 13, 21, 3])
 print s.nge([ 9, 2, 1, 4, 8])
 print s.nge([2, 4, 5, 2, 9])
+# 如果求next greatest。 就是从右边往左dp

@@ -10,8 +10,7 @@ Google有考这道题目。 面经
 import random
 '''
 
-看不大懂。 准备弃掉。
-Select a random number from stream, with O(1) space
+ Select a random number from stream, with O(1) space
 
 Given a stream of numbers, generate a random number from the stream. You are allowed to use only O(1) space and the input is in the form of stream, so can’t store the previously seen numbers.
 
@@ -59,14 +58,12 @@ Quote5 Line2
 '''
 
 class Solution:
-
-    def selectRandom(self, stream = [1, 4, 5, 13, 6, 7, 8]):
-        cnt = 1; ret = stream[0]
-        n =  len(stream)
-        for i in range(n):
-            x = stream[i]
+    def selectRandom(self, arr = [1, 4, 5, 13, 6, 7, 8]):
+        if not arr:  raise  ValueError
+        cnt = 0; ret = arr[0]
+        for i in range(len(arr)):
             cnt += 1
-            if random.randint(1, cnt)==1: ret = x
+            if random.randint(1, cnt)==1: ret = arr[i]
             print "Random number from first " +str(i+1)+" numbers is "+str(ret)
 
 s = Solution()

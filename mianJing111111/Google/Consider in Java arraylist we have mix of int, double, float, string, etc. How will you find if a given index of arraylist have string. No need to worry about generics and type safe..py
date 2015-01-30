@@ -4,5 +4,5 @@ Consider in Java arraylist we have mix of int, double, float, string, etc. How w
 '''
 class Solution:
     def isString(self, arr, i):
-        if not arr or i<0 or i>=len(arr): return False
+        assert 0<=i<len(arr)
         return isinstance(arr[i], str)

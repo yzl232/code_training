@@ -21,6 +21,10 @@ smaller and the right node is larger. Calculate the Nth largest number in
 the tree throwing exception when there is less than N elements in the tree.
 '''
 
+#给定了val。  求predecessor, successor， 。 可以用while logN
+#本题只有O(N)..  因为不能从root起点找。 于是只有全部遍历的O(n)
+
+
 
 #本题是google的高频题目
 
@@ -94,7 +98,7 @@ class Solution:
             cur = cur.right
         return
 
-
+'''
 #递归法。
 class Solution2:
     def smallestK(self, root, k):
@@ -107,7 +111,7 @@ class Solution2:
         cnt-=1
         if cnt==0:   return root
         return self.dfs(root.right, cnt)
-
+'''
 
 #如果用augmented data structure.  O(logN)
 
@@ -132,22 +136,21 @@ Now, suppose we are at node T:
 
 This is O(log N) on average (assuming a balanced tree).
 '''
-class Solution7:
-    def find(self, root, k): #BST.是平衡的。
-        if not root or root.size<k: return
+def find(root, k): #和递归一样的
+    if not root or root.size<k: return
+    while root:
         n = root.left.size if root.left else 0
         if n ==k-1: return root
-        elif n <k-1: return self.find(root.right, k-1-n)
-        else: return self.find(root.left, k)
+        elif n <k-1:
+            root = root.right;    k-=n+1
+        else:   root=root.left
 
 
 
-#下面是建立size的方法
-    def dfs(self, root):  #更新size。  复制自更新sum  value那道。
+class Solu3:
+    def dfs(self, root):  #更新size。  复制自更新sum  value那道。   #下面是建立size的方法
         if not root: return 0
-        root.size = 1
-        if root.left: root.size+=self.dfs(root.left)
-        if root.right: root.size +=self.dfs(root.right)
+        root.size= 1+self.dfs(root.left)+self.dfs(root.right)
         return root.size
 
 '''
@@ -170,12 +173,10 @@ Can you do this non recursively
 '''
 
 def find(root, k): #和递归一样的
-    if not root or root.size<k: return
+    if not root or root.size<k: raise ValueError
     while root:
         n = root.left.size if root.left else 0
         if n ==k-1: return root
         elif n <k-1:
-            root = root.right
-            k=k-1-n
-        else:
-            root=root.left
+            root = root.right;    k-=n+1
+        else:   root=root.left

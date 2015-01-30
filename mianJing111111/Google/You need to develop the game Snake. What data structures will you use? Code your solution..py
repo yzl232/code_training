@@ -7,7 +7,7 @@ You need to develop the game Snake. What data structures will you use? Code your
 
 
 Two parts:
-1. 2D plate: 2D array of short, 0 for free, 1 for items to eat, 2 for blocks (including snake body);
+1. 2D plate: 2D array of short, 0 for free, 1 for blocks (including snake body);,   2 for items to eat,
 2. Snake body: Queue of int pair indicating position like (x, y), every move enqueue new head position and dequeue tail position. Enqueue two nodes if a item eaten. Enqueue and dequeue operation includes set flag in its pixel (isBody = True False). 放进队列后，变成2
 
 For every move, only constant time (O(1)) needed.
@@ -22,11 +22,12 @@ For every move, only constant time (O(1)) needed.
 
 第二题，设计贪吃蛇的数据结构，queue + 二维boolean数组。然后写一个每次移动的函数。很快写完之后，面试官说好像没啥题了，然后又现编了一道概率题，随便说说就结束了。
 '''
+
+#我怎么觉得自己的代码超赞。
+
 class Singleton(object):
     def __new__(cls, *args, **kw):  #override new
-        if not hasattr(cls, '_instance'):
-            orig = super(Singleton, cls)  #cls : class
-            cls._instance = orig.__new__(cls, *args, **kw)  #call the original __new__ method
+        if not hasattr(cls, '_instance'):  cls._instance = object.__new__(cls, *args, **kw)  #call the original __new__ method
         return cls._instance
 
 
@@ -45,30 +46,30 @@ class Board(Singleton):
 class Snake(Singleton):
     def __init__(self):  #头部在queue[-1]。 尾部在queue[0]
         self.board = Board().matrix
-        self.body = deque((0, 0))
-        self.n = len(self.board)
+        self.q = deque((0, 0))  #有一个初始点。
+        self.m = len(self.board); self.n = len(self.board[0])
 
     def move(self, x, y):
         mt = self.board
-        if not (0<=x<=self.n-1 and 0<=y<=self.n-1) or mt[x][y] ==1:  raise ValueError("Dead!")
+        if not (0<=x<=self.m-1 and 0<=y<=self.n-1) or mt[x][y] ==1:  raise ValueError("Dead!")
         if mt[x][y]==0:  # 0  pop and append.   enqueue, dequeue
-            i, j = self.body.popleft()
-            mt[i][j] = 0
-        self.body.append((x, y))  #eat到东西了 , just enqueue
-        mt[x][y] = 1
+            i, j = self.q.popleft()
+            mt[i][j] = 0   #注意更新matrix
+        self.q.append((x, y))  #eat到东西了 , just enqueue
+        mt[x][y] = 1   #注意更新matrix
 
     def moveUp(self):
-        i, j =self.body[-1]
+        i, j =self.q[-1]
         self.move(i-1, j)
 
     def moveDown(self):
-        i, j =self.body[-1]
+        i, j =self.q[-1]
         self.move(i+1, j)
 
     def moveLeft(self):
-        i, j =self.body[-1]
+        i, j =self.q[-1]
         self.move(i, j-1)
 
     def moveRight(self):
-        i, j =self.body[-1]
+        i, j =self.q[-1]
         self.move(i, j+1)

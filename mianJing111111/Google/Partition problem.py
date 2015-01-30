@@ -29,14 +29,13 @@ The first step is simple. The second step is crucial, it can be solved either us
 #不过那个可以重复使用。 是self.recur(arr[:], s-arr[0])
 class Solution: #才几行。 背下
     def findPartition(self, arr):
-        s = sum(arr)
+        s = sum(arr); arr.sort()
         if s%2!=0: return False
         return self.recur(arr, s/2)
 
     def recur(self, arr, s):  #找有没有set和为s
         if s==0: return True
-        if s<0: return False
-        if not arr: return False  #注意顺序
+        if s<0 or not arr: return False#注意顺序
         return self.recur(arr[1:], s) or self.recur(arr[1:], s-arr[0])
 '''
 else, check if sum can be obtained by any of the following

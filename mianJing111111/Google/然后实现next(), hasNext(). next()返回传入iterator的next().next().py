@@ -4,15 +4,20 @@
 '''
 class IteratorPeek: #代码不长。可以背下
     def __init__(self, iterator):
-        self.iterator = iterator
+        self.iterator = iterator  #因为隔2隔无法直接判断。所以用了一个nextO的变量. 提前了一格
         self.nextO = None
-        if iterator.hasNext(): self.nextO = iterator.next()      #初始。 nextO
+        self.advance()     #初始。 nextO
 
     def hasNext(self):
-        if not self.nextO or not self.iterator.hasNext(): return False
-        return True
+        return self.nextO!=None and self.iterator.hasNext()    #用！=None比较合适。  不然空字符，0， 之类。
 
     def next(self):
-        t = self.iterator.next()
-        if self.iterator.hasNext(): self.nextO = self.iterator.next()  #next O 更新
+        assert  self.hasNext()
+        t = self.iterator.next()  #2次
+        self.advance()  #next O 更新
         return t
+
+    def advance(self):
+        if self.iterator.hasNext(): self.nextO = self.iterator.next()
+
+#  1, 2, 3, 4, 5

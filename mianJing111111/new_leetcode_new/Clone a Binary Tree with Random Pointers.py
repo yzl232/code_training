@@ -39,6 +39,8 @@ hashmap:  1 复制node  2 连接random
 
 '''
 
+
+# 就是inorder traversal类似。
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -71,6 +73,8 @@ class Solution:
         self.connect(root.right)
 
 #最优解
+#稍微看看
+#太麻烦的东西。 又不是面经。 看看即可
 class Solution3:
     def cloneTree(self, root): #和leetcode 类似。 三步 copy, connect ，restore
         if not root: return    #都复制到原本的left

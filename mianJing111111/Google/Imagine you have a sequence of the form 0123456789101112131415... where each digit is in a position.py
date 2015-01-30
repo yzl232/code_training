@@ -22,14 +22,27 @@ index = 1000, result = 3
 # #规律。 1*9， 2*90， 3*900， 。。。。。
 
 def getDigit(n):
-    x = 0
+    i = 0
     while True:
-        x += 1
-        size = (10**x-10**(x-1)) * x
+        i += 1
+        size = (10**i-10**(i-1)) * i   #规律。 1*9， 2*90， 3*900， 。。。。。
         if size > n:   break
         n -= size
-    number, digit = 10**(x-1) + n / x, n % x
+    number, digit = 10**(i-1) + n / i, n % i
     return int(str(number)[digit])
 
 for i in range(17):
     print getDigit(i)
+
+
+# Count the number of digits that in all legal positive numbers below N
+# 也是G家
+def smallerCnt(x):
+    cnt=0;  s = str(x); n=len(s)
+    for i in range(1, n):  # x=1005.,  9+2*90+3*900+6*4
+        size = (10**i-10**(i-1)) * i   #规律。 1*9， 2*90， 3*900， 。。。。。
+        cnt+=size
+    return cnt+(x-10**(n-1))*n
+
+print smallerCnt(1005)
+print smallerCnt(12)

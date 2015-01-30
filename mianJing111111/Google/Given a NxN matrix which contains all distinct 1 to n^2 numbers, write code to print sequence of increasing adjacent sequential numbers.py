@@ -10,9 +10,11 @@ should print
 6 7 8 9
 '''
 
+# 这是O(n4)  有O(n2)解。 用fill dp.
+
 # word search 变体
 class Solution:
-    # @param board, a list of lists of 1 length string
+    # @param board, a list of lists of 1 length string。。
     # @param word, a string
     # @return a boolean
     def exist(self, board):

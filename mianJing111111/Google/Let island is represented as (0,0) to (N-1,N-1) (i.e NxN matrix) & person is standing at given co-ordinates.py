@@ -9,22 +9,15 @@ Write a psuedocode & then full code for function
 " float probabilityofalive(int x,int y, int k) ".
 '''
 
-
-#memoization
+# 站在起点。
+#用不了memoization或者fill。就是很正常的
 
 class Solution:
     def solve(self, x, y, n, k):
-        self.d ={}; self.n=n
-        if not (0<=x<=n-1) or not (0<=y<=n-1): return 0
-        return self.dfs(x, y, k)
+        self.n=n
+        self.dfs(x, y, k)
 
     def dfs(self, x, y, k):
-        if k==0: return 1.0
-        if (x, y, k) in self.d: return self.d[(x, y, k)]
-        ret = 0.0
-        if x>0: ret+=0.25* self.dfs(x-1, y, k-1)
-        if x<self.n-1: ret+=0.25*self.dfs(x+1, y, k-1)
-        if y>0:  ret+=0.25*self.dfs(x, y-1, k-1)
-        if y<self.n-1: ret+=0.25*self.dfs(x, y+1, k-1)
-        self.d[(x, y, k)] = ret
-        return ret
+        if not (0<=x<self.n) or not (0<=y<=self.n): return 0
+        if k==0: return 1
+        return sum(0.25*self.dfs(r, c)  for r, c in [(x-1, y), (x, y-1), (x+1, y), (x, y+1)])

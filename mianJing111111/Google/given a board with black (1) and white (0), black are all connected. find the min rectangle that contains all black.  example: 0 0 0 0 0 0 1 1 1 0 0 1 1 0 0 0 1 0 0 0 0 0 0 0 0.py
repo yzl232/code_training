@@ -1,6 +1,6 @@
 # encoding=utf-8
 '''
-given a board with black (1) and white (0), black are all connected. find the min rectangle that contains all black.
+given a board with black (1) and white (0), black are all connected. find the max rectangle that contains all black.
 
 example:
 0 0 0 0 0

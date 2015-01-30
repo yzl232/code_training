@@ -15,16 +15,19 @@ Given a matrix consisting of 0's and 1's, find the largest connected component c
 
 Iterative 用BFS
 '''
+#搜索0， 1都不用恢复的
+
 
 class Solution:
     # @param board, a list of lists of 1 length string
     # @param word, a string
     # @return a boolean
     def findAll(self, board):
-        self.m, self.n = len(board), len(board[0])
+        if not board: raise ValueError()
+        self.m=m= len(board); self.n = n= len(board[0])
         num=0; sizeArea = []
-        for i in range(self.m):
-            for j in range(self.n):
+        for i in range(m):
+            for j in range(n):
                 if board[i][j] == 1:       #每次找到一个匹配，就迅速把它替换掉。然后DFS
                     board[i][j] = '#'      #比word search要简单。  只要替换过去。 不用替换回来
                     self.size = 0
@@ -36,8 +39,7 @@ class Solution:
     def dfs(self, board, i, j):
         self.size+=1
         for r, c in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
-            if 0<=r<=self.m-1 and 0<=c<=self.n-1:
-                if board[r][c] == 1:
+            if 0<=r<self.m and 0<=c<self.n and board[r][c] == 1:
                     board[r][c] = '#'
                     self.dfs(board, r, c)
 

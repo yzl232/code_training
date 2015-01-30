@@ -14,20 +14,18 @@ So, we can count the number of existing values between 1 and M. Then, process th
 
 '''
 
-class Solution:
-    def solve(self, vals):  #返回的n是数目， 实际上处于0~n之间。  这样子要大于等于n。 我们忽略负数， 0
-        n = len(vals)
-        cnt = [0 for i in range(n+1)] #cnt[i] cnt数目。
-        for val in vals:
-            if val>=n:  cnt[n]+=1   #大于等于n的视为n
-            elif val>0: cnt[val]+=1   # ignore negative values
-        ret = 0
-        for i in range(n, -1, -1):
-            ret +=cnt[i]  #非常巧妙
-            if ret>=i:  return i
+class Solution: #和原本array没太大关系 我们建立0~N的cnt  array。 因为结果可能是0~N。
+    def solve(self, vals):  #返回的n是数目， 实际上处于0~n之间。  这样子要大于等于n。 我们忽略负数.
+        n = len(vals); curN=0
+        cnt = [0]*(n+1) #cnt[i] cnt数目。
+        for x in vals:
+            if x>=n:  cnt[n]+=1   #大于等于n的视为n
+            elif x>=0: cnt[x]+=1   # ignore negative values
+        for i in range(len(cnt)-1, -1, -1):   # 0~n  为了对应cnt array
+            curN +=cnt[i]  #非常巧妙
+            if curN>=i:  return i
         return 0
 
-#脑袋要转几圈。 比较耗脑袋。
 
 s = Solution()
 print s.solve([900, 2, 901, 3, 1000])

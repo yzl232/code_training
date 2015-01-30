@@ -30,8 +30,8 @@ class Solution:
     def rand5(self):
         pass
 
-    def rand7(self):
-        i = self.rand5() + 5* self.rand5() - 5   #这里-5， 保证了平均
+    def rand7(self):      #和之前二进制的90%类似。  5进制模拟。    self.rand5() + 5* self.rand5()~~~6~30
+        i = self.rand5() + 5* self.rand5() - 5   #这里-5是无所谓。  可以减去任何数。 只要模拟了5进制。25个值
         if i<=21:
             return i%7+1
         return self.rand7()
@@ -42,7 +42,6 @@ class Solution2:
         pass
 
     def rand5(self):
-        i = self.rand3() + 3*self.rand3()  -3
-        if i<=5:
-            return i%5+1
+        i = self.rand3() + 3*self.rand3()  -3    # 4~12
+        if i<=5: return i%5+1
         return self.rand5()

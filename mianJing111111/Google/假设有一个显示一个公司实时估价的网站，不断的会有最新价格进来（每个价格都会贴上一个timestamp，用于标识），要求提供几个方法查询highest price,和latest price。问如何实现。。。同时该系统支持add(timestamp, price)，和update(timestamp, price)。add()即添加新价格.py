@@ -4,9 +4,11 @@
 - 系统不用提供删除操作
 - 假设add()进来的price的timestamp都是递增的，即timestamp没有重复。
 
-- follow up，如果add()需求很大，update只是偶尔的操作，该怎么解决。
+- follow up，如果add()需求很大，update只是偶尔的操作，该怎么解决。 (add需要O(1),  update O(n)也可以了)
 解答
-我用的是max heap+hash来解决highest pric，用一个变量来解决latest price(因为不要求删除)。
+我用的是max heap+hash来解决highest pric，用一个变量来解决latest timestamp(因为不要求删除), 然后再hashtaable找latest price。
+本来想maxVal也用一个变量。 但是更新后，可能会消去maxVal。 所以做不到。 只好用heap
+
 follow up
 之前的add()和update()操作都是O(logN)，follow up之后，不再维护heap，将add()降低为O(1)的操作，update()变为O(N)的操作。
 '''
@@ -18,3 +20,5 @@ follow up
 
 
 # follow up:   单元变量   maxVal,  latest Val .   Hashtable 用来更新  都是O(1)
+
+#

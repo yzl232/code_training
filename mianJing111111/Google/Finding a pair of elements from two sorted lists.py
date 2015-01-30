@@ -48,6 +48,5 @@ class Solution:
             s = a[i]+b[j]
             if s==target:
                 return (i, j)
-            elif s>target:
-                j-=1
+            elif s>target:    j-=1
             else: i+=1

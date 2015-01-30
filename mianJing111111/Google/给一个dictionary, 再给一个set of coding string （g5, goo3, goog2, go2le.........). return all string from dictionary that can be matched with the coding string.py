@@ -4,15 +4,14 @@
 goog2, go2le.........). return all string from dictionary that can be
 matched with the coding string. 要求尽量减少dictionary look up 次数。
 
-                     （b)如何用Trie,   把问题(a)解决,
-
-                     要求写code 建一个Trie包
+（b)如何用Trie,   把问题(a)解决,
+ 要求写code 建一个Trie包
 括所有字典词和coding string.
 '''
 
 #确实是trie的变体。
 #可以这样。 所有数字变成 *号 x N
-
+# 可以做。 但是代码这么长。 不容易。 我觉得不一定考。
 
 _end = '_end_'
 class Trie:   #30多行。 主要是hashtable和DFS。   不难
@@ -45,16 +44,14 @@ class Trie:   #30多行。 主要是hashtable和DFS。   不难
         start=end=None;
         for i in range(len(s)):
             if'0'<=s[i]<='9':
-                if not start:   start=i
-            else:
-                if start and not end:
-                    end=i
-                    break
+                if start==None:   start=i
+            elif start!=None and end==None:    #not  容易混淆0， None
+                end=i; break
         if not start:
             if self.inTrie(trie, s): return s
             return None
-        if not end: end=len(s)
-        s1 = s[:start];  cnt=int(s[start:end]);  s2 = s[end:]  #前半部分是startwith的变体，有count。后半是intrie的部分。
+        if end==None: end=len(s)
+        s1 = s[:start];  cnt=int(s[start:end]);  s2 = s[end:]   #前半部分是startwith的变体，有count。后半是intrie的部分。
         branch = self.retrieveBranch(trie, s1)
         self.tmpRet = []
         self.dfs1(branch, s1, cnt)
@@ -70,15 +67,7 @@ class Trie:   #30多行。 主要是hashtable和DFS。   不难
             return
         for key in trie:
             if key==_end: continue
-            self.dfs(trie[key], cur+key)
-
-
-
-
-
-
-
-
+            self.dfs1(trie[key], cur+key, cnt-1)
 
 
     def startWith(self, trie, prefix):  #太适合用recursion了。 想了半天，用recursion取最合适。 也不用修改原来的结构。

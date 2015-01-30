@@ -13,6 +13,7 @@ The smallest range here would be [20, 24] as it contains 24 from list 1, 20 from
 #一看到多个sorted array就是 n-way merge。用min heap
 #和facebook题像
 ## Find a minimum range contain a number from each row
+
 '''
 There are k lists of sorted integers. Make a min heap of size k containing 1 element from each list. Keep track of min and max element and calculate the range.
 In min heap, minimum element is at top. Delete the minimum element and another element instead of that from the same list to which minimum element belong. Repeat the process till any one of the k list gets empty.
@@ -42,30 +43,37 @@ Finally you will yield the result.
 
 #因为本身是sorted。 要让range变小，只能pop最小的边界，让最小边界变大
 
+#可以这样想象  。 range:  minV~maxV。  每次minhEap移除minV。  来尝试得到更小的范围
+#每次push之前得到最大。 pop的是最小。  最大减去最小就是range
+
+# F家也考过
+#因为本身是sorted。 所以我们放心pop最小的，因为拿上来的会变大
+
+#加入本身不是sorted。 那么sort一下。
 import heapq
 class Solution:
     # @param a list of ListNode
     # @return a ListNode
-    def mergeKLists(self, arrs):
-        h =[(arrs[i][0], i, 0) for i in range(len(arrs)) if arrs[i]]
-        maxH = max(h)[0]
-        heapq.heapify(h);  ret = []; minR = 10**10
-        while True:
+    def mergeKLists(self, arrs):  #可以raise error如果某个为空。
+        for x in arrs:
+            if not x: raise ValueError
+        h =[(arrs[i][0], i, 0) for i in range(len(arrs)) ]
+        maxH = max(h)[0]; ret=(0, 0, 10**10)
+        heapq.heapify(h);
+        while h:
             val, i, j = heapq.heappop(h)
-            if maxH-val<minR:     #keep track of the minimum window
-                minR = maxH-val
-                ret = (val, maxH)
-            if j<len(arrs[i])-1:
-                heapq.heappush(h, (arrs[i][j+1], i, j+1))
-                maxH=max(maxH, arrs[i][j+1])
-            else:  break
+            if maxH-val<ret[-1]:        ret = (val, maxH, maxH-val)              #keep track of the minimum window
+            j+=1
+            if j<len(arrs[i]):
+                heapq.heappush(h, (arrs[i][j], i, j))
+                maxH=max(maxH, arrs[i][j])   #  push的同时更新maxH
+            else:   break      #有某行为空了。 停止break。   这时候minV固定了。。。
         return ret   #复杂度 O(nkLogk) 是最优解
 #也可以合并后，
-
 s= Solution()
-print s.mergeKLists([[4, 10, 15, 24, 26] , [0, 9, 12, 20] ,  [5, 18, 22,  30]  ])
+print s.mergeKLists([[4, 10, 15, 24, 26] , [0, 9, 12, 20] ,  [5, 18, 22, 30]  ])
 print s.mergeKLists([[1, 1001 ,2000], [20, 1001, 5000], [55, 1003, 222222]])
-
+print s.mergeKLists([[1000], [1, 200], [4, 800]])
 #另一个办法是用minimum window
 
 '''

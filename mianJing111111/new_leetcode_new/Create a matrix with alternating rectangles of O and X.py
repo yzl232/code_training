@@ -48,15 +48,13 @@ class Solution:
             if n==0 or m==0:
                 return ret
             if m==1:
-                for i in range(n):    ret[0+k][i+k]= digit
+                for j in range(n):    ret[0+k][j+k]= digit
                 return ret
             if n==1:
                 for i in range(m):    ret[i+k][0+k]= digit  #彼此对称
                 return ret
-            for i in range(n-1):  ret[ 0+k][ i+k] = digit
-            for i in range(m-1):  ret[ i+k][ n-1+k] = digit
-            for i in range(n-1, 0, -1):  ret[ m-1 +k][ i+k] = digit     #注意到四个的两两对称，可以检查和加速写
-            for i in range(m-1, 0, -1):   ret[ i+k][ 0+k] = digit
+            for j in range(n):  ret[ 0+k][ j+k] = ret[m-1+k][j+k]= digit
+            for i in range(m):  ret[ i+k][ n-1+k] = ret[i+k][0+k]= digit
             digit = 'O' if digit=="X" else 'X'
             n-=2; m-=2;  k+=1
 s = Solution()

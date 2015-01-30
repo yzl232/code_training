@@ -29,6 +29,10 @@ List<String> findPath(List<Step> steps) {
 }
 '''
 
+# topological sorting
+
+
+'''
 #基本上是二元有向环的问题。  就是变成了==self.end就return而已
 
 class Solution:
@@ -54,3 +58,4 @@ class Solution:
                 tmpCan= candidates[:]
                 tmpCan.remove(edge)
                 self.dfs(tmpPath+[edge[-1]], tmpCan)
+'''

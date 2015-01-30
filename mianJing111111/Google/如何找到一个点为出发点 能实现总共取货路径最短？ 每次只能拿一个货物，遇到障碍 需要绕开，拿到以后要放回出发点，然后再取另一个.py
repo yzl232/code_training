@@ -15,7 +15,7 @@
 '''
 #G家非常高频
 #有障碍BFS。  没障碍求x,y 的median就可以。
-#有障碍也可以用  median+heap
+# 实际上G家考的都是有障碍的。 也就是用k次BFS
 '''
 complexity k*n^2
 
@@ -41,33 +41,38 @@ k次BFS。求和就是得出了总距离矩阵。  每次都是独立的。
 
 #有障碍。 用BFS
 #简单版本在这里   matrix_guard_barrier_保安_障碍
+# global 的count矩阵。
 class Solution:
     # @param board, a 9x9 2D array
     # Capture all regions by modifying the input board in-place.
     # Do not return any value.
     def solve(self, board):
         if board == []: return
-        m = len(board); n = len(board[0])
-        self.cnt = [[0 if board[i][j]=='0' else None for j in range(n)] for i in range(m)]
+        m = len(board); n = len(board[0])  #因为最后结果cnt肯定不为0 。  所以还好
+        cnt = [[0 if board[i][j]=='0' else None for j in range(n)] for i in range(m)]  # global 的count矩阵。   只对‘0’ 存数字
         for i in range(m):
             for j in range(n):
-                if board[i][j]=='G':  self.bfs(board.copy(), i, j)
+                if board[i][j]=='G':
+                    tmpCntMatrix = self.bfs(board.copy(), i, j)
+                    for x in range(m):
+                        for y in range(n):
+                            if tmpCntMatrix[x][y]!=None and cnt[x][y]!=None:
+                                cnt[x][y]+=tmpCntMatrix[x][y]
+        # find min in cnt that is big than 0
 
-    def bfs(self, board, i, j):
+    def bfs(self, board, x, y):
         m = len(board); n = len(board[0])
-        cntMatrix =  [[0 for j in range(n)] for i in range(m)]
-        cnt = 1
+        cntMatrix =  [[None for j in range(n)] for i in range(m)]
+        cnt = 0; pre=[(x, y)]; board[x][y] = '#'; cnt[x][y]=0
         while pre:
-            cur = set([])
+            cur = set([]);  cnt+=1
             for i, j in pre:
                 for r, c in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
                     if 0<=r<=m-1 and 0<=c<=n-1 and board[r][c]=='0':
-                        cur.add((r, c))
-                        board[r][c] = '#'
-                        cntMatrix[r][c] = min(cnt, cntMatrix[r][c])
-            cnt+=1
+                        cur.add((r, c));   board[r][c] = '#'
+                        if cntMatrix==None: cntMatrix[r][c]=cnt  #只考虑第一次过去
             pre = cur
-
+        return cntMatrix
 '''
 find a intersection to build office so that the sum of all employees’
 commute distances is minimum. （the map is represented as a m*n grid, you
@@ -106,6 +111,7 @@ the
 #实际上是取x坐标的中位数。   需要排好序
 # 。对y坐标做同样的操作，从而得到答案。时间复杂度O(klogk)，排序的复杂度。
 # 基于qiuck select的方法找median可以吧
+#非常快。  用O(k)就可以了。 比O(k*n^2). 当然，也可以提一下。加分。
 '''
 On a given axis, the medium meeting place will
 yield the shortest combined distance because if you go either direction by 1
@@ -119,7 +125,7 @@ between the two middle will yield optimal result)
 #如果要求这个点与所给的k个点不重合，该怎么办？
 '''
 进阶：通过初阶的算法得到一个最优位置，如果这个位置与k个点重合，则从这个位置开始进行搜索，将这个点周围的点和对应的距离放入到一个堆里，每次从堆中取出最小距离的点，然后将这个点周围的点放入堆中，直到取出的点不与所给k个点重合。时间复杂度klogk，因为最多从堆中取出k+1个点即可找到一个不与所给k个点重合的点。堆每次操作为logk。
-
+# 从最优位置开始BFS。 找第一个不重合的点。
 
 
 '''
@@ -135,22 +141,37 @@ pass
 Meeting place. You have a city with streets running parallel both
 horizonally and vetically creating a giant grid. The dimension of each grid
 is 1 X 1. All street corners in the city can be represented by a coordinate
-(int x, int y). Given an array of people represented by their closest street
+(int x, int y).
+
+ Given an array of people represented by their closest street
 corner, calculate a street corner to meet where their combined traveling
-distance is the shortest. Assume everyone can only travel on road. For
+distance is the shortest.
+
+Assume everyone can only travel on road. For
 example, the traveling distance from [1,1] to [2,2] is 2.
 
 
 G家超高频。
 
 4. Again, the key is to understanding how to minimize the combined distance
-travelled. First of all, since you have to travel on the grid, x and y axis
-are completely independent. On a given axis, the medium meeting place will
+travelled.
+
+ First of all, since you have to travel on the grid, x and y axis
+are completely independent.
+
+On a given axis, the medium meeting place will
 yield the shortest combined distance because if you go either direction by 1
-from the medium, half of the people will travel 1 less block, and half plus
+from the medium, half of the people will travel 1 less block,
+
+ and half plus
 one people will travel 1 more block (For even number of people, any point
-between the two middle will yield optimal result). In terms of
+between the two middle will yield optimal result).
+
+In terms of
 implementation, I'm not aware of a way to calculate the medium that's better
 than O(N logN) which you can get by sorting (this is your opportunity to
 shire with your sorting knowledge).
+
+
+# median
 '''

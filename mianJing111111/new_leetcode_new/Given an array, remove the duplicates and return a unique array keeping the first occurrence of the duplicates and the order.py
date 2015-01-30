@@ -11,6 +11,20 @@ Given an array, remove the duplicates and return a unique array keeping the firs
 
 '''
 #keep order 一般用fast, slow在前面。
+#既然做不到in place。 那么开辟新的array吧。。
+
+class Solution:
+    def removeDuplicates(self, arr):
+        d = set(); ret=[]
+        for x in arr:
+            if x in d: continue
+            d.add(x)
+            ret.append(x)
+        return ret
+s = Solution()
+print s.removeDuplicates([2, 1, 3, 1, 1, 2])
+
+'''
 class Solution:
     def removeDuplicates(self, arr):
         d = {}; slow = 0
@@ -24,3 +38,4 @@ class Solution:
         return arr[:slow]
 s = Solution()
 print s.removeDuplicates([2, 1, 3, 1, 1, 2])
+'''

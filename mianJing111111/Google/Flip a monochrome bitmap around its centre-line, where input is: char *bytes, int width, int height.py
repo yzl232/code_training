@@ -15,18 +15,38 @@ Output
 1100 1111
 
 
-
-We are given array of characters. Let there be n characters, each row has 8 bits. 8 bits of each char are to be flipped around its centre.
-
-Ex:
-0011 | 0101
-
-will be flipped (swap the nibbles) to
-
-0101 | 0011
 '''
 #这种题目对用python的人比较难
-class Solution:
+#下面是错的。 看错了题意
+#实际上是reverse
+class Solution4:
     def flip(self, arr):
         for i in range(len(arr)):
-           arr[i] = (arr[i]>>4) | (arr[i]<<4)
+           arr[i] = (arr[i]>>4) | (arr[i]&0b1111<<4)   #这里右移不需要事先
+
+
+class Solution:
+    lookUp=[ 0b0000, 0b1000, 0b0100, 0b1100,
+   0b0010, 0b1010, 0b0110, 0b1101,
+   0b0001, 0b1001, 0b0101, 0b1101,
+   0b0011, 0b1011, 0b0111, 0b1111]
+    def reverse(self, arr):
+        for i in range(len(arr)):
+           arr[i] = (self.lookUp[arr[i]>>4]) | (self.lookUp[(arr[i]&0b1111)]<<4)  #低位麻烦一些。  高位方便一些。
+
+'''
+//Index 1==0b0001 => 0b1000
+//Index 7==0b0111 => 0b1110
+//etc
+uint8_t lookup[16] = {
+   0b0000, 0b1000, 0b0100, 0b1100,
+   0b0010, 0b1010, 0b0110, 0b1101,
+   0b0001, 0b1001, 0b0101, 0b1101,
+   0b0011, 0b1011, 0b0111, 0b1111 };
+
+uint8_t reverse(uint8_t n) {
+   // Reverse the top and bottom nibble then swap them.
+   return (lookup[n&0b1111] << 4) | lookup[n>>4];
+}
+'''
+

@@ -12,9 +12,10 @@ Trailing 0s in n! = Count of 5s in prime factors of n!
                   = floor(n/5) + floor(n/25) + floor(n/125) + ....
 '''
 class Solution:
-    def findTrailingZeros(self, n):
-        count = 0; pow5=5
-        while n/pow5>=1:
-            count+=n/pow5
-            pow5*=5
-        return count
+    # @return an integer
+    def trailingZeroes(self, n):
+        ret = 0
+        while n>0:
+            n/=5
+            ret+=n
+        return ret

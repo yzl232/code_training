@@ -16,4 +16,10 @@
 
 #因为随机，可能把自己堵死。 所以用dfs。  backtracking
 #  if (i, j)==(m-1, n-1): return True
-#  if self.dfs(random(xxxx)): return True
+#  random.choice(4 directions): return True
+
+# path = set()  of points   （i ， j）.
+#不在path上得，全都random。 0, 1
+
+#用一个全局变量self.found。  可以只找到一个路径。
+# 每次dfs的时候， random.choice(4 directions)

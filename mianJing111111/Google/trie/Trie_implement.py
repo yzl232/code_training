@@ -47,15 +47,15 @@ class Trie:   #30多行。 主要是hashtable和DFS。   不难
 
 
     def startWith(self, trie, prefix):  #太适合用recursion了。 想了半天，用recursion取最合适。 也不用修改原来的结构。
-        self.result = []; curWord = prefix
+        self.ret = [];
         branch = self.retrieveBranch(trie, prefix)  #先找到目前匹配的。
-        self.dfs(branch, prefix)     #dfs寻找所有的。
-        return self.result
+        self.dfs(branch, prefix)     #dfs寻找所有的。prefix作为cur来用
+        return self.ret
 
     def dfs(self, trie, cur):
         if not trie:  return
         for key in trie:
-            if key == _end:  self.result.append(cur)
+            if key == _end:  self.ret.append(cur)
             else:   self.dfs(trie[key], cur+key)
 
 

@@ -36,10 +36,10 @@ b [1, 2, 3, 4, 4, 4]
 class Solution1:
     def lcs(self, x):
         n= len(x)
-        dp = [[0 for i in range(n+1)] for j in range(n+1)]
+        dp = [[0]*(n+1) for i in range(n+1)]
         for i in range(1, n+1):
             for j in range(1, n+1):
-                if x[i-1]==x[j-1] and i!=j: dp[i][j] = dp[i-1][j-1]+1
+                if x[i-1]==x[j-1] and i!=j: dp[i][j] = dp[i-1][j-1]+1   #就多了一句 i!=j
                 else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])
         return dp[-1][-1]>=2
 s = Solution1()

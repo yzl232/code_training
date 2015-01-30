@@ -18,8 +18,26 @@ slow red dog
 '''
 
 #稍微变化
+#G家风格。  用一个pointer就可以了。
 
 input_list = [['quick', 'slow'], ['brown', 'red'], ['fox', 'dog']]
+
+class Solution:
+    def printCombinations(self, words):
+        self.ret = []; self.words = words
+        self.dfs('', 0)
+        for x in self.ret:  print x
+
+    def dfs(self, cur, i):
+        if i>len(self.words)-1:
+            self.ret.append(cur[1:])
+            return
+        for w in self.words[i]:
+            self.dfs(cur + ' ' + w, i+1)
+
+s = Solution()
+print s.printCombinations(input_list)
+'''
 class Solution:
     def printCombinations(self, words):
         self.ret = []
@@ -36,3 +54,4 @@ class Solution:
 
 s = Solution()
 print s.printCombinations(input_list)
+'''

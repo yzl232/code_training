@@ -17,7 +17,7 @@ test case，大家写出来自己run，全空，全正，全负，正负夹杂�
 
 class Solution:
     def __init__(self, arr):
-        self.i = 0
+        self.i = 0  #和peek类似。  i取了类似top的作用。
         self.arr = arr
         self.findAccept()
 

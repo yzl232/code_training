@@ -4,6 +4,9 @@ How to find medium of 1 billion numbers across N distributed machines efficientl
 '''
 
 
+# second pass可以放进内存了。  直接找第k个数。 用bit vector找。
+ # In the second pass, we’ll actually look for which number is missing. We can do this by creat- ing a simple bit vector of size 1000. We iterate through the file, and for each number that should be in our block, we set the appropriate bit in the bit vector. By the end, we’ll know which number (or numbers) is missi
+
 '''
 median 海量数据
 

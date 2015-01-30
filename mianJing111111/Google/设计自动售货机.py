@@ -7,6 +7,8 @@
 #另外涉及一些dp的东西。 可以preprocess。   需要找的钱 。  以及多少个硬币。
 
 '''
+class drinks :  id, price, name
+
 class VendingMachine
 	- boolean takeMoney(Money money);
 	//Here item will contain type & quantity, no smart search required

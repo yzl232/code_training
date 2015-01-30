@@ -17,7 +17,7 @@ object。
 '''
 
 #其实这个就是用排序，然后从大的变量依次放进block。
-
+# 贪心的思想
 
 '''
 1. 变量的值在{1，4，8，16} 中间，直接group就可，不需排序，找出相同值连续最多
@@ -25,18 +25,22 @@ object。
 '''
 
 #follow up
-#首先第一一定要优先满足padding的要求。  如果是8 的倍数， 就跳过，排序后面
+#首先第一一定要优先满足padding的要求。  如果是8 的倍数， 就跳过，排序后面.   一旦发生不是8的倍数。 没办法了。 只能排序了。 后面统统排序。
 #  4, 4, 1, 1, 8, 8, 1, 1最好的排法是4, 4, 8, 8, 1, 1, 1, 1.
-
+# 例子  1  16  4 1 1 1
+#   1
+# follow up 也就是普通的排序， 稍稍优化。
+# 好像不满足follow up 的要求。  比如 4 8  4   16
+  #小于8是不可以的。
 class Solution:
     def arrange(self, arr):
-        cur = 0
+        s = 0; pre=0
         for i in range(len(arr)): #<=8略去。 一旦大于8且不为16，
-            if cur+arr[i]>8 and (cur+arr[i])%8!=0: break
-            cur+=arr[i]
-            if cur==8 or cur==16: cur=0
-        arr = arr[:i]+sorted(arr[i:], reverse=True)
-        return arr
+            s+=arr[i]
+            if s >8 and s%8!=0: break
+            elif s%8==0:
+                s=0; pre = i+1
+        return  arr[:pre]+sorted(arr[pre:], reverse=True)
 s = Solution()
 print s.arrange([4, 4, 1, 1, 8, 8, 1, 1])
 print s.arrange([1, 1, 1, 1,1,1,1,1, 4, 4, 8, 8])

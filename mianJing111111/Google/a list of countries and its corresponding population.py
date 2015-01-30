@@ -23,3 +23,17 @@ Now generate a random number between 1 to N. Just return the country which owns 
 15>x>=5 return 10
 35>x>=15 return 20
 '''
+
+
+
+# cumulative sum.
+# 2 pass。 O(1) space
+import random
+
+
+class Solution:
+    def solve(self, arr):
+        s = 0;  x = random.randint(1, sum(arr))
+        for i in range(len(arr)):
+            s+=arr[i]
+            if x<s: return i, arr[i]

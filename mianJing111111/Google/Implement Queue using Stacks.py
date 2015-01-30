@@ -25,8 +25,7 @@ class queue:
         self.stack1.append(x)
 
     def dequeue(self):
-        if not self.stack1 and not self.stack2:
-            return
+        if not self.stack1 and not self.stack2: raise ValueError()
         if not self.stack2:
             while self.stack1:    self.stack2.append(self.stack1.pop())
         return self.stack2.pop()

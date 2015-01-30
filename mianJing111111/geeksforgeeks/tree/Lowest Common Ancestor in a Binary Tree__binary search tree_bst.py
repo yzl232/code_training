@@ -26,10 +26,9 @@ class Solution:
 class Solution2:
     def find_Ancestor2(self, p, q):
         h1 = self.getH(p); h2=self.getH(q)
-        if h1<h2:
-            h1, h2 = h2, h1
-            p, q = q, p
-        for i in range(h1-h2): p=p.parent
+        diff = abs(h1-h2)
+        if h1<h2:  p, q = q, p
+        for i in range(diff): p=p.parent
         while p and q:
             if p==q: return p
             p = p.parent;  q=q.parent

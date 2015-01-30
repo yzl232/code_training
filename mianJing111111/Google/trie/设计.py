@@ -26,7 +26,7 @@ N logK
 
 
 俺面试S家的时候，让写一个suggestion system，俺写出了trie的几个function，结果
-挂了。
+挂了。..
 
 
 

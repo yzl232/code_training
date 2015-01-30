@@ -26,8 +26,17 @@ f2(n)=2*f1(n-1)+f2(n-1);
 f1(2)=3;
 f2(2)=6;
 '''
+#  a 相同。 b不同。
 #
-#
+
+class Solution:
+    def cnt(self, n):
+        a, b = 3, 6
+        for i in range(n-1):
+            a, b = a+b, 2*a+b
+        return a
+
+'''
 class Solution:
     def cnt(self, n):
         if n==1: return 3
@@ -42,4 +51,5 @@ class Solution:
 
 s= Solution()
 print s.cnt(3)
+'''
 

@@ -11,6 +11,9 @@
 
 leetcode maximum  path sum改变而来。
 换了公式。 加了cur path ,
+
+
+# F家
 '''
 
 # Definition for a  binary tree node
@@ -30,9 +33,10 @@ class Solution:
 
     def dfs(self, root, curS):
         if not root: return 0
-        vL = self.dfs(root.left, curS+root.val)
-        vR = self.dfs(root.right,curS+root.val)
-        self.ret = max(self.ret, vL+vR - curS - root.val)
+        curS+=root.val
+        vL = self.dfs(root.left, curS)
+        vR = self.dfs(root.right,curS)
+        self.ret = max(self.ret, vL+vR - curS)
         return max(vL, vR)+root.val
 
 '''

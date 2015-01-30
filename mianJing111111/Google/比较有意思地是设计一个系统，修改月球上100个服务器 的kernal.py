@@ -12,3 +12,10 @@ package可能不够装kernal要该的内容。
 不需要等到所有kernal信息都收到了才开始发。整个protocol怎么设计，每个package
 需要什么header。
 '''
+
+#我自己感觉类似sync。  用split成较小的部分。  checksum    to 。  只要同步较小的部分就好了。
+# 另外以树的形状来传
+#        r0
+#   r1       r2
+#r3  r4    r5 r6
+

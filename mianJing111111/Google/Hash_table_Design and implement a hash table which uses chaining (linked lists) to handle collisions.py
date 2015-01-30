@@ -25,7 +25,7 @@ class Hash1:
             self.items[x].append((key, value))
         else:
             if (key, value) in self.items[x]:
-                self.items[x].remove((key, value))
+                self.items[x].remove((key, value))    #删去 。然后插入。 put。
             self.items[x].append((key, value))
     
     def get(self, key):
@@ -54,31 +54,23 @@ class Hash2:
         self.items = items
 
     def hashCodeOfKey(self, key):
-        return len(str(key)) % len(self.items)
+        return hash(key) % len(self.items)
 
     def put(self, key, value):
         x = self.hashCodeOfKey(key)
-        if not self.items[x]:
-            self.items[x] = ListNode(key, value)
+        if not self.items[x]:  self.items[x] = ListNode(key, value)
         else:
-            dummy = ListNode(0); cur = self.items[x];  dummy.next = cur
+            dummy = ListNode(0, 0); cur = self.items[x];  dummy.next = cur
             pre = dummy
             while cur:
-                if cur.key == key:
-                    pre.next = cur.next
+                if cur.key == key:     pre.next = cur.next
                 pre, cur = cur, cur.next
             cur.next = ListNode(key, value)
             self.items[x] = dummy.next
 
     def get(self, key):
         x = self.hashCodeOfKey(key)
-        if not self.items[x] : return
-        val = None
         cur = self.items[x]
         while cur:
-            if cur.key == key:
-                val = cur.val
-        return val
-
-        
-    
+            if cur.key == key:     return cur.val
+            cur = cur.next

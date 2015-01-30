@@ -23,23 +23,37 @@ To check a word, do following for each letter in the word:
 Repeat this for each word and record the longest word matched.
 '''
 
+#与那道7 letter tile的区别。  那个是所有。 这个是最长
 
 #有点暴力。不过好像已经是最好的办法了。
 class Solution:
     def longest(self, chList, wordList):
-        chCnt = {};  self.ret = (0, '')
-        for ch in chList:
-            if ch not in chCnt: chCnt[ch]=0
-            chCnt[ch]+=1
+        chCnt = self.cntW(chList)
+        wordList.sort(key=lambda w:-len(w))
         for word in wordList:
-            if self.check(word, chCnt):  self.ret = (len(word), word)
-        return self.ret
+            if self.valid(word, chCnt):  return word
 
-    def check(self, word, chCnt):
-        wCnt = {}
-        for ch  in word:
-            if ch not in wCnt: wCnt[ch]=0
-            wCnt[ch]+=1
+    def cntW(self, word):  #经常用到。 单独拿出来吧。
+        d = {}
+        for ch in word:
+            if ch not in d: d[ch]=0
+            d[ch]+=1
+        return d
+
+    def valid(self, word, chCnt):   #实际上pre Compute好了
+        wCnt = self.cntW(word)
         for ch in wCnt:
             if ch not in chCnt or chCnt[ch]<wCnt[ch]: return False
         return True
+
+# 三个minor的可以稍微优化。   都是pre-process
+# #1      trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
+# 2      pre compute the hashmap.   这样子每次check就是O(num of distinct char.  which is less than 26 ) * O(n)
+# 3     按word7长度从长的到段排序（预处理）。 从长到短来找， 可以优化。
+#  4  prune， 跳过长度超过charList的单词
+# 第5个优化。  预存所有车牌查好后的结果。
+#
+#
+# 如果dictionary有上百萬個字，然後給你上千個車牌號碼，要你回傳相對應的最短字串，該如何optimize?
+# 对应的一个arr[62].   preprocesss保存。 对应的最短的字串。。  然后如果车牌号对应的cnt array相同。 就不用重复找了。
+# 或者sort车牌的字母。 作为key。 hashtable value储存结果

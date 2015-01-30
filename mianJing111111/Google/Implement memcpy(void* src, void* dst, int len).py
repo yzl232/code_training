@@ -2,6 +2,6 @@
 #Implement memcpy(void* src, void* dst, int len)
 class Solution:
     def memcpy(self, dst, src, n):
-        if not dst or not src: return
+        if not dst or not src: raise ValueError
         for i in range(n):
             dst[i] = src[i]

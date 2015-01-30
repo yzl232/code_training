@@ -31,13 +31,13 @@ Diagonal printing of the above matrix is
 
 class Solution:
     def diag(self, matrix):
-        if not matrix:return
+        if not matrix:return []
         m= len(matrix); n= len(matrix[0])
-        ret = [[]for i in range(m+n-1)]
+        ret = [[]for i in range(m+n-1)]  #想象一个很瘦长的矩阵。 可以普安段M+N-1
         for x in range(m+n-1):
             for i in range(x, -1, -1):     #i从最大开始     x=>0
                 j=x-i    #特点是i+j ==x
-                if i<m and j<n: ret[x].append(matrix[i][j])  #后半
+                if i<m and j<n: ret[x].append(matrix[i][j])  #后半.   <m, <n没有超过矩阵外面
         return ret
 
 
@@ -109,3 +109,5 @@ I feel It will be easier if we print from the left.
 
 I can do it from the left and then modify the approach a little bit to finish the problem
 '''
+
+#矩阵每行reverse之后。 用上面的题目来解答

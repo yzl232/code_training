@@ -32,6 +32,30 @@ public void printSubTreeWeight(List<Node> nodes) {
 #比较适合用memoization来做。
 #dp不大好操作。
 
+# 又是build tree。  建图。 找root。  BFS。
+
+
+
+class Solution:  #可以用hashmap  build 简单的node: children属性。   #也就是hashtable based..    tree
+    def buildTree(self, relations):
+        d = {};  notRoot = set()
+        for rs in relations:
+            if d[rs[0]] not in d:  d[rs[0]] = []
+            d[rs[0]].append(rs[1])
+            notRoot.add(rs[1])
+        roots=[]    #找root
+        for k in d.keys():
+            if k not in notRoot:  roots.append(k)
+
+
+
+# 第二部分。 更新为sum of decendents
+    def dfs(self, root):
+        for x in root.children:   root.val +=self.dfs(x)
+        return root.val
+
+
+'''
 class Solution:
     def calWeights(self, triples):
         tree = {t[0]:[] for t in triples};  weights={t[1]:0 for t in triples}
@@ -48,3 +72,4 @@ class Solution:
         for child in self.tree[id]:  #直到dfs到child为空的为止。
             w+=self.dfs(child)
         self.subTreeW[id] = w
+'''

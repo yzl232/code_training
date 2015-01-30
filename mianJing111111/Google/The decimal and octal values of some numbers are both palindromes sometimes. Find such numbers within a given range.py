@@ -15,11 +15,14 @@ d = n%N
 n = n/N
 '''
 
+# 8进制。   8-based system
+
 class Solution:
     def isPalindrom(self, s):
         i =0;  j = len(s)-1
         while i<j:
             if s[i]!=s[j]: return False
+
             i+=1; j-=1
         return True
 
@@ -27,8 +30,8 @@ class Solution:
         s = ''
         while n!=0:
             r , n= n%8, n/8   # 从低位逐步开始
-            s = str(r)+s  #新的在左边。 老的在右边
-        return s
+            s = str(r)+s  #新的在左边。 老的在右边.
+        return s  # 也可以到后面逆序。
 
     def getPanlindrom(self, bound):
         result = []

@@ -10,10 +10,24 @@
 #暴力
 # 高端算法看不懂。 可以用brute force
 
+
+# 提一下hamilton path .  Debrujin sequence.
+
 '''
 What is the shortest string that contains all the numbers from 0000 to 9999.
 
 For example: '012345678' contains 0123, 1234, 2345, 3456, 4567, 5678.
+
+'''
+
+#也是G家题
+'''
+#检查一个字符串是否包含k位a进制数的所有表示形式。保证原字符串的所有字串都是合法的k位a进制数。"00110, a=2, k=2"
+#followup我没有想出来：满足这样的条件的字符串至少要有多长（用a和k表示）
+
+10003 =
+a**k + (k-1)
+
 
 
 '''
@@ -28,13 +42,12 @@ class Solution:
     def dfs(self):
         if len(self.ret)==10003: return True
         for ch in '0123456789':
-            cur = ''.join(self.ret[-3:]+ch)
+            cur = ''.join(self.ret[-3:]+[ch])
             if cur in self.visited: continue
             self.ret.append(ch);   self.visited.add(cur)
             if self.dfs(): return True
             self.ret.pop();    self.visited.remove(cur)
         return False
-
 #暴力法
 
 
@@ -201,4 +214,25 @@ result) {
 
         return false;
     }
+
+
+
+# encoding=utf-8
+
+
+有一把四位数的密码锁密码忘掉了，每一位都是0-9。现在需 要我把这个密码试出来。这是一把滑动密码锁，每试完一个数字，前三位都滑到后三位，下一次只能改变第一位数字。例子：1234，下一次4滑出去，只能试 x123，比如在这之后我试了8123，那么下一次只能试x81
+
+前两天，看到一个帖子——链接先不找了，找到后补上。 发面经的，应该是GG的机器人组，问了个题，大概是有个密码锁，密码是4位数字，每次尝试是扔掉一位数字，朝左滑动（朝右滑动也一样）在右端补上一位数字，例如先尝试了1234,下次可以尝试234x, x是任意数字，问最差情况至少试验几次可以试出密码。
+
+
+#同一道题。  10000次。
+'''
+
+
+
+
+'''
+# encoding=utf-8
+
+# set  . 全部放进去。  求count==10003
 '''

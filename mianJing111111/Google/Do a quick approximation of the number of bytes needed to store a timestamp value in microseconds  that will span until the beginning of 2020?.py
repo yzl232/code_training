@@ -8,7 +8,7 @@ Quick approximation: --> come up with an answer without doing complicated operat
 
 calculator, just back of the envelope computations).
 
-1s = 1000*1000ms
+1s = 1000*1000ms   # 微秒,也就是百万分之一秒.
 
 1min = 60s
 
@@ -18,15 +18,21 @@ calculator, just back of the envelope computations).
 
 1y = 365d
 
-1 timestamp = 6* 365*24*60*60*1000*1000
+
+6年
+
+一共多少个。 timestamp = 6* 365*24*60*60*1000*1000
 
 10^14
 
-2^3.X
+2^3.3
 
-2^14*3=2^42
+2^(14*3.3)=2^47
+2
 
-42/8 = 5.
+一共是42个bit。  那就是6个byte
+
+47/8 =~ 6
 
 6bytes
 

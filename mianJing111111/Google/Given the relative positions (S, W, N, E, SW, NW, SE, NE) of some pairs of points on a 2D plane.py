@@ -7,7 +7,7 @@ e.g., if the input is "p1 SE p2, p2 SE p3, p3 SE p1", output "impossible".
 # build 2 graphs。    x,  cooridinates.  y  coordinates
 
 '''
-One idea, not sure whether this is correct.
+One idea, not sure whether this is correct..
 
 Construct two graphs, one for x-coordinate--Gx, one for y-coordinate--Gy.
 

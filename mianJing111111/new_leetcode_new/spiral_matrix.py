@@ -28,14 +28,14 @@ class Solution:
         while True:
             if m==0 and n==0: return ret
             if m==1:
-                for i in range(n-1, -1, -1):       ret.append(matrix[0][i])
+                for j in range(n-1, -1, -1):       ret.append(matrix[0 +k][j+k ])
                 return ret
             if n==1:
-                for i in range(m):      ret.append(matrix[i][0])
+                for i in range(m):      ret.append(matrix[i+k][0+k])
                 return ret
-            for i in range(n-1, 0, -1):        ret.append(matrix[0+k][i+k])
+            for j in range(n-1, 0, -1):        ret.append(matrix[0+k][j+k])
             for i in range(m-1):     ret.append(matrix[i+k][0+k])
-            for i in range(n-1):      ret.append(matrix[m-1+k][i+k])
+            for j in range(n-1):      ret.append(matrix[m-1+k][j+k])
             for i in range(m-1, 0, -1):     ret.append(matrix[i+k][n-1+k])
             k +=1;   m-=2;   n-=2
 s = Solution()

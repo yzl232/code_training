@@ -39,9 +39,8 @@ class Solution:
         print pre, arr[0][1]
         for i in range(1, len(arr)):
             a, b  = arr[i]
-            if a-pre<=x/2: continue
-            elif x/2<a-pre<x*1.5:
-                print a,b
+            if a-pre<=x/2: continue      #三种情况。 间隔大了， 补上，间隔小了， 省略。 合适，。
+            elif x/2<=a-pre<=x*1.5:   print a,b
             else:
                 while a-pre>x*1.5:   #贪心算法
                     pre+=100
