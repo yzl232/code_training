@@ -17,7 +17,7 @@ print quickSort(L)
 
 #quick selection  O(n)
 def quickSelect(a, k):  #才7行。 背下
-    assert k>=len(a)
+    assert k<=len(a)
     pivot = random.choice(a)
     s = [i for i in a if i<pivot]
     m = [i for i in a if i==pivot]     #写一下O(1)的partition写法。 这种效率略低。

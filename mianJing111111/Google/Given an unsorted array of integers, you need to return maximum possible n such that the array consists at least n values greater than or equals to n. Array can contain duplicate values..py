@@ -13,9 +13,13 @@ Lets say the array has M numbers. For the purpose of this problem, negative valu
 So, we can count the number of existing values between 1 and M. Then, process the values backwards (M to 1) to find the answer, adding the counts of the values processed so far.
 
 '''
-
-class Solution: #和原本array没太大关系 我们建立0~N的cnt  array。 因为结果可能是0~N。
-    def solve(self, vals):  #返回的n是数目， 实际上处于0~n之间。  这样子要大于等于n。 我们忽略负数.
+#暴力为O(n2)。 sort为O(nlogn) .  这里空间换时间， 为O(n)
+class Solution(object):#和原本array没太大关系 我们建立0~N的cnt  array。 因为结果可能是0~N。
+    def hIndex(self, vals):#返回的n是数目， 实际上处于0~n之间。  这样子要大于等于n。 我们忽略负数.
+        """
+        :type citations: List[int]
+        :rtype: int
+        """
         n = len(vals); curN=0
         cnt = [0]*(n+1) #cnt[i] cnt数目。
         for x in vals:
@@ -25,6 +29,7 @@ class Solution: #和原本array没太大关系 我们建立0~N的cnt  array。 �
             curN +=cnt[i]  #非常巧妙
             if curN>=i:  return i
         return 0
+        #也可以用counting sort。   然后sort。     
 
 
 s = Solution()

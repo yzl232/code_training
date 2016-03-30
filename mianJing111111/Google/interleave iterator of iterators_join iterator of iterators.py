@@ -51,13 +51,10 @@ B:abcd
 from collections import  deque
 class FlatIterator:
     def __init__(self, iters):
-        self.q= deque(iters)
+        self.q= deque([x for x in iters if x.hasNext()])
 
     def hasNext(self):
-        while self.q:
-            if self.q[0].hasNext(): return True
-            self.q.popleft()
-        return False
+        return False if not self.q else True
 
     def next(self):
         assert self.hasNext()   #以后都可以加一句这个

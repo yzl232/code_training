@@ -11,24 +11,20 @@
 class IteratorPeek: #代码不长。可以背下
     def __init__(self, iterator):
         self.iter = iterator
-        self.top = None
-        self.getTop()
+        self.top = self.getTop()
 
     def hasNext(self):
         return self.top!=None
 
     def next(self):
-        if not self.hasNext():   raise ValueError("End of iterator")
-        ret = self.top
-        self.getTop()  #更新一个新的top
+        ret = self.top   # self. 设置空很关键.
+        self.top = self.getTop()    #提前一步。 注意是自己的iter   #更新一个新的top
         return ret
 
     def getTop(self):
-        self.top=None  #必须先置为空.  非常关键。 之前少了这个。
-        if self.iter.hasNext: self.top = self.iter.next()  #提前一步。 注意是自己的iter
+        return None if not self.iter.hasNext else self.iter.next()
 
     def peek(self):
-        if not self.hasNext(): raise ValueError
         return self.top
 
 
