@@ -104,13 +104,18 @@ the
 '''
 在一个n*m的矩阵中，有k个点，求矩阵中距离这k个点的距离和最近的点
 '''
+class Solution:
+    def minTotalDistance(self, grid):
+        x = [i for i in range(len(grid)) for j in range(len(grid[0])) if grid[i][j]]
+        y = [j for j in range(len(grid[0])) for i in range(len(grid)) if grid[i][j]]
+        return sum(abs(x[len(x)/2]-i)+abs(y[len(y)/2]-j) for i in range(len(grid)) for j in range(len(grid[0])) if grid[i][j])
 
 #这里的距离采用曼哈顿距离——|x0-x1| + |y0-y1|
 #因为采用曼哈顿距离，所以可以分开考虑x坐标和y坐标。将k个点的x坐标排序，可以知道要求的x坐标一定在这k个点的x坐标上，
 
-#实际上是取x坐标的中位数。   需要排好序
+#实际上是取x坐标的中位数。   需要排好序。   默认就是排序的。
 # 。对y坐标做同样的操作，从而得到答案。时间复杂度O(klogk)，排序的复杂度。
-# 基于qiuck select的方法找median可以吧
+#  不需要什么quick select算法。 天生sort好了，    length/2就是median。      。 基于qiuck select的方法找median可以吧
 #非常快。  用O(k)就可以了。 比O(k*n^2). 当然，也可以提一下。加分。
 '''
 On a given axis, the medium meeting place will
