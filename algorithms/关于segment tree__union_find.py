@@ -15,12 +15,15 @@
 就是某种parent的recursion。  标记source
 '''
 class Solution:
-    arr = []
+    parent = {}
     def find(self, x):
-        while x!=self.arr[x]:    x = self.arr[x]
+        while x!=self.parent[x]:    x = self.parent[x]
         return x
 
     def union(self, x, y):
         r1=self.find(x); r2=self.find(y)
-        self.arr[r1] = r2
+        self.parent[r1] = r2
+        
+    def add(self, x):
+        self.parent[x]  = x
 # 这2种数据结构少见。  只是以防万一。
