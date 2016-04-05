@@ -93,24 +93,24 @@ class flatten implements iterator{
 
 class DeepIterator: #代码不长。可以背下
     def __init__(self, l):
-        self.stack = [l]
-        self.advanceToNext()
+        self.stack = [l][::-1]
+        self.advance()
 
     def hasNext(self):
-        if not self.stack: return False
-        return True
+        return False if not self.stack else True
 
     def next(self):
         assert self.hasNext()   #以后都可以加一句这个
         result = self.stack.pop()
-        self.advanceToNext()
+        self.advance()
         return result
 
-    def advanceToNext(self):
+    def advance(self):
         if self.stack and isinstance(self.stack[-1], list):  #加入第一个一直是iterator。就一直解开。
                 cur = self.stack.pop()
                 self.stack+=cur[::-1]
-                self.advanceToNext()
+                self.advance()
+
 
 
 

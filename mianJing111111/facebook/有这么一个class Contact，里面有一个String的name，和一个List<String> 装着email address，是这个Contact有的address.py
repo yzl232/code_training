@@ -18,16 +18,19 @@
 #比较tricky。 用hash。  key: email.    val:  自己建立id.
 class Solution: #自己建立2个hashmap。 一个email-myid,   一个是myid- [email1, email2, ...]
     def sanitizeContacts(self, contacts):
-        id = 0; d={};  ret={}  #d1 key 是email。val是id
+        id = 0; emailToid={};  idToEmail={}  #d1 key 是email。val是id
         for c in contacts:   #d2 key 是 id , val 是emails
             myId = -1 #起了flag的作用
             for email in c[1]: #第一遍找有没有存在
-                if email in d:  myId=d[email]    #found group
+                if email in emailToid:  myId=emailToid[email]    #found group
             if myId<0:
                 id+=1
                 myId=id
-                ret[myId] = set()
+                idToEmail[myId] = set()
             for email in c[1]:  #主要在第二遍赋值
-                d[email]=myId
-                ret[myId].add(email)
-        return ret
+                emailToid[email]=myId
+                idToEmail[myId].add(email)
+        return idToEmail
+snapchat也有考
+东欧大叔，project diving deep, 题目是手机上的通讯录，每条记录只有(name, number)这种pair,有些记录名字重复，有些记录号码重复，让我返回一个list<list<Record>>，将所有记录按人分组。比较tricky的点在于(ABC,123), (ABC, 456), (BCD, 456)三条记录，第一条和第三条也属于同一个人。要求时间复杂度尽量小。
+'''
