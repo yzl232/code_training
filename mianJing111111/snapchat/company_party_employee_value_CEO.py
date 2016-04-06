@@ -1,3 +1,5 @@
+# encoding=utf-8
+
 '''
 
 
@@ -43,3 +45,59 @@ Or it’s legal to invite D, E, A, but you cannot invite D and C, or B and A.
    Stewart教授面对一棵描述公司结构的树，使用了左子女、右兄弟表示法。树中每个结点除了包含指针，还包含雇员的名字和该雇员喜欢聚会的排名。描述一个算法，它生成一张客人列表，使得客人喜欢聚会的程度的总和最大。分析你的算法的执行时间。
 
 '''
+#好像就是 House Robber III, 但是不是只有左右子树。 有多个树。
+
+
+
+class Solution(object):
+    def rob(self, root):
+        def dfs(x):
+            if not x: return (0, 0)
+            s0 = 0;  s1=0
+            for y in x.children:
+                t0, t1 = dfs(y)
+                s0+=t0
+                s1+=t1
+            return (s1, max(s1, s0 + x.val))
+        return dfs(root)[1]
+
+class TreeNode:
+    def __init__(self, x, children = []):
+        self.children = children
+        self.val = x
+a = TreeNode(5)
+b = TreeNode(7)
+c = TreeNode(8)
+e = TreeNode(9)
+c.children = [e]
+a.children = [b, c]
+s = Solution()
+print s.rob(a)
+
+'''
+noRoot(node) = curMax(node.left) + curMax(node.right)
+
+curMax(node) = max( noRoot(node.left)+noRoot(node.right)+node.value, noRoot(node) ).
+
+
+
+假设如下：
+
+dp[i][0]表示不选i结点时，i子树的最大价值
+
+dp[i][1]表示选i结点时，i子树的最大价值
+
+列出状态方程
+
+dp[i][0] = sum(max(dp[u][0], dp[u][1]))
+
+(如果不选i结点，u为结点i的儿子)
+
+dp[i][1] = sum(dp[u][0]) + val[i]
+
+(如果选i结点，val[i]表示i结点的价值)
+
+最后就是求max(dp[root][0], dp[root][1])
+
+'''
+#有点像这道题。 geeks: Given a Binary Tree, find size of the Largest Independent Set(LIS)
