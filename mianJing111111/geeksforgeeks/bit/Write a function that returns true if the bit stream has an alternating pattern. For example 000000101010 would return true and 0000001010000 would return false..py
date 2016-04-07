@@ -18,7 +18,5 @@ return false;
 '''
 
 def check(a):
-    b = a>>1
-    n = a^b+1  # n=a&b
-    if n&(n-1)==0: return True  #简单的说，就是是不是2^n次方？  只有一个set bit
-    return False
+    n = a^(a>>1)+1  # n=a&b
+    return n&(n-1)==0   #简单的说，就是是不是2^n次方？  只有一个set bit
