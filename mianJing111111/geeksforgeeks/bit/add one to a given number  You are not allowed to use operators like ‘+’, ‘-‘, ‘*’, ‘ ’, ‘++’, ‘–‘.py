@@ -11,7 +11,8 @@ Output: 7
 
 楼主先用leetcode。 完全解法。  然后套上条件。用了hashmap。 套用
 '''
-
+# complement 补码
+# 负数为何是正数的取反加1?
 #  ~a+1  = -a   不懂。 背吧。 ~a+1  = -a
 
 class Solution:
