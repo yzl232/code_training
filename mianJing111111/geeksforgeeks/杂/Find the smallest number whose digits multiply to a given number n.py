@@ -39,10 +39,10 @@ class Solution:
         ret = []
         for i in range(9, 1, -1):
             while n%i==0:
-                n /=i
-                ret.append(i)
-        if n!=0:  print "Not possible"
-        return ret[::-1]
+                n/=i
+                ret.append(str(i))
+        return "".join(ret[::-1]) if n==1 else None
 s = Solution()
+print s.finsSmallest(3)
 print s.finsSmallest(100)
-print s.finsSmallest(1000)
+print s.finsSmallest(26)

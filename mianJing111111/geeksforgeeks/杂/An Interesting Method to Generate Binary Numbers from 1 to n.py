@@ -48,20 +48,25 @@ two = MyClass()
 two.a = 3
 print one.a
 和subsets拿到题目的迭代方法很像。
-
+也像BFS
 '''
+import math
 class Solution:
     def biNumbers(self, n):
-        ret = ['1']; cur=ret
+        ret = ["1"];  pre = ["1"]
         k = int(math.log(n, 2))
         for i in range(k):
-            old = cur[:]
             cur = []
-            for j in old:
-                cur.append(j+'0')
-                cur.append(j+'1')
+            for x in pre:
+                cur.append(x+"0")
+                cur.append(x+"1")
             ret+=cur
+            pre = cur
         return ret[:n]
+
+s = Solution()
+print s.biNumbers(2)
+print s.biNumbers(5)
 s = Solution()
 print s.biNumbers(2)
 print s.biNumbers(5)

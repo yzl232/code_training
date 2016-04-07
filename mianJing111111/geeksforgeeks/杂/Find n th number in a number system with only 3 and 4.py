@@ -7,6 +7,8 @@ Find n’th number in a number system with only 3 and 4
 
 Given a number system with only 3 and 4. Find the nth number in the number system. First few numbers in the number system are: 3, 4, 33, 34, 43, 44, 333, 334, 343, 344, 433, 434, 443, 444, 3333, 3334, 3343, 3344, 3433, 3434, 3443, 3444, …
 
+
+
 0, 1, 00, 01, 10, 11, 000, 001, 010, .......
 
 但是不是二进制计数。 而是某种二进制排列。
@@ -23,15 +25,15 @@ Given a number system with only 3 and 4. Find the nth number in the number syste
 # 和上面拿到题目一样的   An Interesting Method to Generate Binary Numbers from 1 to n
 class Solution:
     def biNumbers(self, n):
-        ret = ['3', '4']; cur=ret
+        ret = ['3', '4']; pre=ret[:]
         k = int(math.log(n, 2))
         for i in range(k):
-            old = cur[:]
             cur = []
-            for j in old:
+            for j in pre:
                 cur.append(j+'3')
                 cur.append(j+'4')
             ret+=cur
+            pre = cur
         return ret[n-1]
 s = Solution()
 print s.biNumbers(14)
