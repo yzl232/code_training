@@ -2,11 +2,57 @@
 
 G家也考过。
 实现BigInteger类，主要实现BigInteger之间的加法。由于正负数都要考虑，其实这里也要实现求相反数和减法。思路不难，但是代码还挺多的，test case也挺多的，不过都测对了
+
+
+
+
+刚刚面完第二轮电面，原题 BigInt, 不过把详细一点的放在这里，和我的答案。// This is the text editor interface. . 1point3acres.com/bbs
+// Anything you type or change here will be seen by the other person in real time.
+
+/*
+* class BigInt, to represent non-negative integers of arbitrary size. 1point 3acres 璁哄潧
+        * constructor accept a String, representing this non-neg int (e.g. "50"), assume valid input
+        * needs to be able to add to another BigInt, and return their sum as a new BigInt object.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+        * immutable
+            * new BigInt("20").add(new BigInt("30")) --> BigInt("50").
 '''
 
 
 # http://songyishan.iteye.com/blog/1026042
-#非常麻烦的题目. 如果要写代码的话.. 写半天. 
+#如果考虑负数和减法,回事非常麻烦的题目. 如果要写代码的话.. 写半天.
+
+class BigInt:  #正常这种程度就行了.  
+    def __init__(self, s):
+        self.s = s
+
+    def add(self, bigInt2):
+        a, b = self.s, bigInt2.s
+        la, lb = len(a), len(b)
+        if la>lb:  return self.addBinary(b, a)
+        a = '0'*(lb-la)+a
+        carry =0; ret=''
+        for i in range(len(a)-1, -1, -1):
+            s = carry+int(a[i])+int(b[i])
+            carry, s = s/2, s%2
+            ret = str(s)+ret
+        ret = ret if not carry else '1'+ret
+        return BigInt(ret)
+
+    def multiply(self, bigInt2):
+        a, b = self.s, bigInt2
+        a, b = a[::-1], b[::-1]
+        ret = [0]*(len(a) + len(b))
+        for i in range(len(a)):
+            for j in range(len(b)):
+                ret[i + j] += int(a[i]) * int(b[j])
+        carry, total = 0, []
+        for x in ret:
+            x+=carry
+            carry, s = x/10, x%10
+            total.append(str(s))     #也append的反面  total.insert(0, str(s % 10))
+        while len(total) >= 2 and total[-1] == "0": total.pop()
+        return BigInt(''.join(total[::-1]))
+'''
 class BigInt:
     def __init__(self, s):
         self.positive = True
@@ -75,3 +121,5 @@ print s.add(a, d).digits, s.add(a, d).positive
 print s.minus(a, b).digits, s.minus(a, b).positive
 print s.minus(a, c).digits, s.minus(a, c).positive
 print s.minus(a, d).digits, s.minus(a, d).positive
+
+'''
