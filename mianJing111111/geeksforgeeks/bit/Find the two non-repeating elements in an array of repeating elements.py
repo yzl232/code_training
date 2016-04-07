@@ -24,13 +24,13 @@ We have chosen the rightmost set bit of the xor as it is easy to find out.
 class Solution:
     def get2NonRepeatingNos(self, arr):
         xor = 0
-        for i in arr:    xor ^= i      # 完成后,  x^y = xor
+        for x in arr:    xor ^= x      # 完成后,  x^y = xor
         bit = xor & ~(xor-1)  #Get the rightmost set bit in    set_bit_no.
-        x = y =0
-        for i in arr:
-            if bit & i:   x ^=i
-            else:   y ^=i
-        return x, y
+        a = b =0
+        for x in arr:
+            if bit & x:   a ^=x
+            else:   b ^=x
+        return a, b
 
 s = Solution()
 print s.get2NonRepeatingNos([2, 3, 7, 9, 11, 2, 3, 11])

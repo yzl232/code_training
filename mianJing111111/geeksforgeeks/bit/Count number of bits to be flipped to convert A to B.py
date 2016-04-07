@@ -15,6 +15,8 @@ class Solution:
         return self.cntBits(a^b)
         
 '''   
+# Turn off the rightmost set bit
+
 class Solution:
     def cntBits(self, n):
         cnt=0

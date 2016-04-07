@@ -17,6 +17,14 @@ class Solution2:
             cnt+=1
         return cnt
 
+'''
+    def cntBits(self, n):
+        cnt = 0
+        while n:
+            cnt+=n&1
+            n>>=1
+        return cnt
+
 #也可以查表
 
 #这道题目
