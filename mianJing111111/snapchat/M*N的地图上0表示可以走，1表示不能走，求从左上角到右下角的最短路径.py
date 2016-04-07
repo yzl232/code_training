@@ -37,3 +37,4 @@ class Solution:
 grid = [[0 ,1], [0, 0]]
 s = Solution()
 print s.solve(grid)
+
