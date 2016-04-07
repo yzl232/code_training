@@ -37,3 +37,8 @@ class Operations:
     def abs(self, a):
         if a<0: return self.negate(a)
         return a
+        
+    def addBi(self, x, y):  #见文件Add two numbers
+        while y:
+            x, y = x^y, (x&y)<<1     #  都是1. 要向左进位。  x, y的和一直都是恒定不变。
+        return x
