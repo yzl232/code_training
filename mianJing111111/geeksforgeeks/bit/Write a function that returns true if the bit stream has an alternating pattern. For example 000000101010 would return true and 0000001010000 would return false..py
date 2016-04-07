@@ -17,6 +17,7 @@ return false;
 }
 '''
 
+
 def check(a):
     n = a^(a>>1)+1  # n=a&b
     return n&(n-1)==0   #简单的说，就是是不是2^n次方？  只有一个set bit

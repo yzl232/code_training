@@ -36,22 +36,14 @@ Since the value of rank starts from 1, the final rank = 1 + 597 = 598
 这道题目就是leetcode  permutation sequence的变体.
 就是反过来而已
 '''
+import math
 class Solution:
-    def fact(self, n):
-        ret = 1
-        for i in range(1, n+1):
-            ret*=i
-        return ret
-
     def countSmallerRight(self, arr, l):
-        ret =0
-        for i in range(l+1, len(arr)):
-            if arr[i]<arr[l]:  ret+=1
-        return ret
+        return sum(1  for i in range(l+1, len(arr)) if arr[i]<arr[l])
 
     def findRank(self, arr):
         n = len(arr)
-        m = self.fact(n)
+        m = math.factorial(n)
         rank = 0
         for i in range(len(arr)):
             m/= n-i     #n, n-1, n-2, ...
