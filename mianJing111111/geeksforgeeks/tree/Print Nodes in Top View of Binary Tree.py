@@ -38,15 +38,14 @@ class Solution:
     def findVertical(self, root):
         self.d = {}  #用hashtable是因为不知道最左边index有多左。
         self.dfs(root, 0,  0)
-        k1 = min(self.d); k2 = max(self.d)
-        return [min(self.d[x])[-1] for x in range(k1, k2+1)]
+        return [min(self.d[x])[-1] for x in sorted(self.d)]
 
-    def dfs(self, root, rlvl,  clvl):
+    def dfs(self, root, r, c):
         if not root: return
-        if clvl not in self.d:  self.d[clvl] = []
-        self.d[clvl].append((rlvl, root.val))
-        self.dfs(root.left,rlvl+1,  clvl-1)
-        self.dfs(root.right, rlvl+1,  clvl+1)
+        if c not in self.d:  self.d[c] = []
+        self.d[c].append((r, root.val))
+        self.dfs(root.left, r + 1, c - 1)
+        self.dfs(root.right, r + 1, c + 1)
 
 '''
 class Solution:

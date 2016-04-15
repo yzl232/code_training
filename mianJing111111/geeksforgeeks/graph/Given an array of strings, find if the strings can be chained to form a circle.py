@@ -50,15 +50,13 @@ Output: No
 class Solution:
     def solve(self, arr):   #这道题目必须用到所有的string
         if not arr: raise ValueError
-        return  self.dfs( [arr[0]], arr[1:])
+        return  self.dfs( arr[:1], arr[1:])
 
-    def dfs(self, cur, words):
-        if not words:
-            if cur[0][0]==cur[-1][-1]:   return True
-            return False
-        for x in words:
+    def dfs(self, cur, rest):
+        if not rest:   return cur[0][0] == cur[-1][-1]
+        for x in rest:
             if x[0]==cur[-1][-1]:
-                t = words[:]; t.remove(x)
+                t = rest[:]; t.remove(x)
                 if self.dfs(cur+[x] ,t): return True
         return False
 

@@ -21,9 +21,7 @@ def isprime(n):
     if n<=1: return False
     if n==2 or n==3: return True
     if n%2==0:     return False
-    for i in range(3, int(n**0.5)+1, 2):
-        if n % i == 0:    return False
-    return True
+    return all(n%i!=0 for i in range(3, int(n**0.5)+1, 2) )
 
 #下面的方法。 O(sqrt(n))   复杂度要更好一些。
 
@@ -38,7 +36,7 @@ class Solution:  #因为只需要prime的factor。不是所有factors    #核心
                 n/=i
                 ret.append(i)
         if n>=3:    ret.append(n) # 一般的数除完 n==1.         除完了居然还大于2，说明本身是素数。   #由上面的 isPrime函数也可以判断。
-        return ret
+        return set(ret)
 
 s = Solution()
 print s.primeFactors(315)

@@ -27,8 +27,7 @@ class Solution:
     def findVertical(self, root):
         self.d = {}  #用hashtable是因为不知道最左边index有多左。
         self.dfs(root, 0)
-        k1, k2 = min(self.d), max(self.d)
-        return [self.d[x] for x in range(k1, k2+1)]
+        return [self.d[x] for x in sorted(self.d)]
 
     def dfs(self, root,  colLevel):
         if not root: return

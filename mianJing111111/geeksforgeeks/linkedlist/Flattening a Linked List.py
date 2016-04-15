@@ -33,17 +33,16 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, l1, l2):
-        dummy = ListNode(-1); cur = dummy
-        while l1 and l2:
-            if l1.val <= l2.val:
-                cur.down = l1
-                l1 = l1.down
-            else:
+        dummy = cur = ListNode(-1)
+        while l1 and l2:   #用了pre。  也用了dummy
+            if l1.val > l2.val:
                 cur.down = l2
                 l2 = l2.down
+            else:
+                cur.down = l1
+                l1 = l1.down
             cur = cur.down
-        if l1:    cur.down = l1
-        if l2:    cur.down = l2
+        cur.down = l1 or l2
         return dummy.down
 
     def flatten(self, head):

@@ -35,7 +35,7 @@ class Solution:
         arr = [None] * n
         h = [(0-d[ch], ch) for ch in d]
         heapq.heapify(h)     #我这里用负数。解决了max Heap.   min Heap 的问题
-        for i in range(len(h)):
+        while h:
             p = heapq.heappop(h)      #每次弹出频率最高的。
             freq = 0-p[0]; ch =p[1]
             while arr[start]: start+=1    #找到填充的起点。

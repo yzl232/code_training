@@ -17,7 +17,7 @@ We can Use Hashing to solve this in O(n) time on average. The idea is to travers
 class Solution:
     def findFirs(self, arr):
         ret = None; d = {}
-        for i in range(len(arr)-1, -1, -1):
-            if arr[i] in d:  ret = i
-            else:  d[arr[i]] = True
+        for x in reversed(arr):
+            if x in d:  ret = x
+            else:  d[x] = True
         return ret

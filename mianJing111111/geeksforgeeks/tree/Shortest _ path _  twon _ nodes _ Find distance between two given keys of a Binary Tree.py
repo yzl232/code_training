@@ -28,13 +28,10 @@ geeks的答案过于复杂了。 害死我了。
 '''
 class Solution:
     def findAncestor(self, root, p, q):
-        if not root: return
-        if root == p or root == q: return root
-        l = self.findAncestor(root.left, p, q)
-        r = self.findAncestor(root.right, p, q)
-        if l and r: return root  #2个都找到。在root
-        if l: return l  #找到一个。在左边
-        else: return r  #找到一个。在右边
+        if root in (None, p, q): return root
+        l, r = self.findAncestor(root.left, p, q), self.findAncestor(root.right, p, q)
+        return root if (l and r) else (l or r)
+
 
     def findShortestPath(self, root, a, b):
         self.rets = []
@@ -57,13 +54,9 @@ class Solution:
 
 class Solution5:
     def findAncestor(self, root, p, q):
-        if not root: return
-        if root == p or root == q: return root
-        l = self.findAncestor(root.left, p, q)
-        r = self.findAncestor(root.right, p, q)
-        if l and r: return root      #2个都找到。在root
-        if l: return l        #找到一个。在左边
-        else: return r      #找到一个。在右边
+        if root in (None, p, q): return root
+        l, r = self.findAncestor(root.left, p, q), self.findAncestor(root.right, p, q)
+        return root if (l and r) else (l or r)
 
     def findLevel(self, root, node):
         self.ret = None; self.node = node

@@ -28,8 +28,7 @@ class Solution:
         while tail.next:  tail = tail.next
         while cur !=tail:
             if cur.child:  #每次碰到child, flat，并且更新tail
-                tail.next = cur.child
+                tail.next, cur.child = cur.child, None
                 while tail.next: tail = tail.next  #重复了
-                cur.child=None  #g4g忘了这个了 . 这一点比较重要。   搞完了后， cur.child = None
             cur = cur.next
 #形象的理解就是把child的那一大块移动到右边去
