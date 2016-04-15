@@ -10,12 +10,12 @@ To get LIS of a given array, we need to return max(L(i)) where 0 < i < n
 
 '''
 
-class Solution:
+class Solution:   #靠. 这个DP和暴力法的复杂度相差不大. 还费更多空间
     def lis(self, arr):
         ret = 0;  n = len(arr)
         dp = [1 for i in range(n)]
         for i in range(1, n):
-            dp[i] = max([1+dp[j] for j in range(i) if arr[j]<arr[i]] +[1])
+            dp[i] = max(1+dp[j] if arr[j]<arr[i] else 1 for j in range(i) )
             ret = max(ret, dp[i])
         return ret
 

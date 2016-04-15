@@ -20,12 +20,10 @@ Kadane’s algorithm for 1D array can be used to reduce the time complexity to O
 class Solution:
     def findMaxS(self, mtx):
         if not mtx: return
-        ret = -10**10; n = len(mtx[0]); m =len(mtx)
-        for top in range(m):
-            colS = [0]*n       #必须放在这里  . 理解成一直压缩, 压扁成一行colSum
+        ret = float('-inf'); n = len(mtx[0]); m =len(mtx)
+        for top in range(m):     #必须放在这里  . 理解成一直压缩, 压扁成一行colSum
             for bottom in range(top, m):
-                row = mtx[bottom]
-                for i in range(n):  colS[i]+=row[i]       #新的一行。 压扁。
+                colS = [sum(mtx[i][j]   for i in range(top, bottom+1))   for j in range(n)]       #新的一行。 压扁。
                 ret = max(ret, self.maxSubArray(colS))
         return ret
 

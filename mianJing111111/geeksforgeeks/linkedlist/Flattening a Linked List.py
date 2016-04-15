@@ -70,6 +70,9 @@ L1 --> L2 --> L3 -->L4 -->L5-->L6-->L7-->L8
 
 可能是Facebook的题目
 '''
+
+
+# down替换成left，next替换成right，这就是一道pre order traversal 呢。不就是换了个variable
 #难点。 h.child要置为空
 #和那个multilevel一个套路.
 class Solution4: #如果只有2层
@@ -84,10 +87,6 @@ class Solution4: #如果只有2层
                 cur.child = None
                 cur = tail  #连环因为是有序有逻辑，更好记忆。
             cur = cur.next
-
-
-
-
 
 #下面这道题目多次浪费大量时间。 别看了。
 '''

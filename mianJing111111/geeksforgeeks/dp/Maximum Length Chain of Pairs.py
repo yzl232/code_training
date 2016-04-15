@@ -18,9 +18,8 @@ This problem is a variation of standard Longest Increasing Subsequence problem. 
 '''
 class Solution:
     def lis(self, arr):
-        ret = 0;  n = len(arr)
+        n = len(arr)
         dp = [1]*n
         for i in range(1, n):
-            dp[i] = max([1+dp[j] for j in range(i) if arr[j][1]<arr[i][0]]  + [1])  #就改了一点带你
-            ret = max(ret, dp[i])
-        return ret
+            dp[i] = max( 1+dp[j] if arr[j][1]<arr[i][0] else 1 for j in range(i) )  #就改了一点带你
+        return max(dp)
