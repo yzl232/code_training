@@ -28,5 +28,6 @@ class Solution: #0~n-1
         leftS = 0;   rightS = sum(arr)  #可以想象它随着指针动态移动。
         for i in range(len(arr)):
             rightS-= arr[i]
-            if leftS == rightS: return i+1
+            if leftS == rightS: return i
             leftS+=arr[i]
+        return -1

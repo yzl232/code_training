@@ -32,9 +32,6 @@ class Solution:
                 ret=i
         return ret
 
-    def findMaxRepeating(self, arr):
-        return self.maxRepeating(arr, 8)
-
 s =Solution()
-print s.findMaxRepeating([2, 3, 3, 5, 3, 4, 1, 7])
+print s.maxRepeating([2, 3, 3, 5, 3, 4, 1, 7], 8)
 # Rearrange an array so that arr[i] becomes arr[arr[i]] with O(1) extra space

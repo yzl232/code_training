@@ -28,8 +28,7 @@ isSubsetSum(set, n, sum) = true, if sum == 0
 class Solution:
     def isSubsetS(self, arr, target):
         if target==0: return True
-        if target<0: return False
-        if not arr: return False  #s不为0. 又为空。 False
+        if target<0 or not arr: return False #s不为0. 又为空。 False
         return self.isSubsetS(arr[1:], target-arr[0]) or self.isSubsetS(arr[1:], target)   #和coin那道题目的稍有变化。
 
 class Solution2:

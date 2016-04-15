@@ -53,8 +53,8 @@ class Solution:  #比较难。 背下
     def find(self, arr):
         if not arr:return
         incl=excl=0
-        for i in range(len(arr)):
-            incl, excl = excl+arr[i], max(incl, excl)
+        for x in arr:
+            incl, excl = excl+x, max(incl, excl)
         return max(excl, incl)
 s = Solution()
 print s.find([3 ,2 ,10 ,7])
