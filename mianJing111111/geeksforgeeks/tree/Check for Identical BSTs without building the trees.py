@@ -55,10 +55,8 @@ class Solution:
             x = arr[i]
             while stack and stack[-1][0]<x:  d[stack.pop()[1]]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
             stack.append((x, i))   #存index, 以及值
-        ret = [None] *n
-        for i in range(n):
-            if i in d:  ret[i]=d[i]
-        return ret
+        return [ None if i not in d else d[i] for i in range(n) ]
+
 
     def nse(self, arr):
         if not arr: return
@@ -67,7 +65,5 @@ class Solution:
             x = arr[i]
             while stack and stack[-1][0]>x:    d[stack.pop()[1]]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
             stack.append((x, i))   #存index, 以及值
-        ret = [None ] *n
-        for i in range(n):
-            if i in d:  ret[i]=d[i]
-        return ret
+        return [ None if i not in d else d[i] for i in range(n) ]
+

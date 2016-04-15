@@ -34,12 +34,11 @@ Thanks to pchild for suggesting following approach.
 class Solution:    #存的是tuple   (val, i)
     def nge(self, arr):
         if not arr: return
-        stack = [];  d = {}
-        n = len(arr)
+        stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
         for i in range(n):
-            while stack and stack[-1][0]<arr[i]:
-                d[stack.pop()[1]] = arr[i]
-            stack.append((arr[i], i))
+            x = arr[i]
+            while stack and stack[-1][0]<x:  d[stack.pop()[1]]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
+            stack.append((x, i))   #存index, 以及值
         return [ None if i not in d else d[i] for i in range(n) ]
 s = Solution()
 print s.nge([4, 2, 5,6, 2, 4])
