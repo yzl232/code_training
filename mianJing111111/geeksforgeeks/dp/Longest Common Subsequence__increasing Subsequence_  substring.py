@@ -35,8 +35,7 @@ class Solution1:
         dp = [[0]*(n+1) for i in range(n+1)]  #m+1是考虑了''空得字符。 这样初始化会更加容易一些。
         for i in range(1, m+1):
             for j in range(1, n+1):
-                if x[i-1]==y[j-1]: dp[i][j] = dp[i-1][j-1]+1
-                else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+                dp[i][j] = dp[i-1][j-1]+1 if  x[i-1]==y[j-1] else  max(dp[i-1][j], dp[i][j-1])
         return dp[-1][-1]
 s = Solution1()
 print s.lcs('abcdgh', 'aedfhr')
@@ -93,7 +92,7 @@ class Solution4:
         dp = [ [0 for i in range(n+1)] for j in range(m+1)]
         for i in range(1, m+1):
             for j in range(1, n+1):
-                if x[i-1] == y[i-1]:   dp[i][j] =  dp[i-1][j-1]+1
+                dp[i][j] = dp[i-1][j-1]+1 if  x[i-1]==y[j-1] else  0
                 ret = max(ret, dp[i][j])     # else:   dp[i][j] = 0 和 subsequence的不同在于这里
         return ret
 
