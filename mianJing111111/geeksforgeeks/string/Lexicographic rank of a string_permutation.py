@@ -44,11 +44,11 @@ class Solution:
     def findRank(self, arr):
         n = len(arr)
         m = math.factorial(n)
-        rank = 0
+        rank = 1
         for i in range(len(arr)):
             m/= n-i     #n, n-1, n-2, ...
             rank+=m*(self.countSmallerRight(arr, i))        #在它前面的有多少个。
-        return rank+1
+        return rank
 s = Solution()
 print s.findRank(['c', 'b', 'a'])
 '''
