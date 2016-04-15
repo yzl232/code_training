@@ -3,13 +3,14 @@
 Dynamic programming problem: Coin change problem: Find the minimum number of coins required to make change for a given sum (given unlimited cumber of N different denominations coin)
 '''
 
+#复杂度比较差。
 class Solution:
     def minCoin(self, arr, target):
         n = target
-        dp = [10**10 for i in range(n+1)]
+        dp = [float('inf')]*(n+1)
         dp[0]=0
         for i in range(1, n+1):
-            dp[i] = min([dp[i-val]+1 for val in arr if i-val>=0]+[10**10])
+            dp[i] = min([dp[i-val]+1 if i-val>=0 else float('inf') for val in arr ])
 
 '''
 Greedy algorithm does not always give you minimum number of coins. Consider sum as 40, and coins as {1, 5, 10, 20, 25}.

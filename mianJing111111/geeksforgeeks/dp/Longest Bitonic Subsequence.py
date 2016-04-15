@@ -23,17 +23,17 @@ class Solution:
         n = len(arr)
         dp = [1 for i in range(n)]
         for i in range(1, n):
-            dp[i] = max([1+dp[j] for j in range(i) if arr[j]<arr[i]] + [1])
+            dp[i] = max( 1+dp[j]  if arr[j]<arr[i] else 1 for j in range(i) )
         return dp
 
     def lds(self, arr):   #也必须从后往前吧~！！
         n = len(arr)
         dp = [1 for i in range(n)]
         for i in range(n-2, -1, -1):
-            dp[i] = max([1+dp[j] for j in range(i+1, n) if arr[j]<arr[i]] + [1])  #内容一样。就是范围反过来了
+            dp[i] = max(1+dp[j]  if arr[j]<arr[i] else 1 for j in range(i+1, n) )  #内容一样。就是范围反过来了
         return dp
 
     def lbs(self, arr):
         if not arr: return 0
         dp1 = self.lis(arr);   dp2 = self.lbs(arr)
-        return max(dp1[i]+dp2[i]-1 for i in range(len(arr)))  #很赞！！ 非常优雅  
+        return max(dp1[i]+dp2[i]-1 for i in range(len(arr)))  #很赞！！ 非常优雅
