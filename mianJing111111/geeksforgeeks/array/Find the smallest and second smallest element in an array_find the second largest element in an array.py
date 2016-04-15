@@ -22,7 +22,7 @@ class Solution:
         if n<2: return
         first=second = 10**10
         for i in range(n):
-            if arr[i] < first:   second, first = first, arr[i]
-            elif arr[i]<second and arr[i]!=first:    second = arr[i]
+            if arr[i] <= first:   second, first = first, arr[i]
+            elif arr[i]<second:    second = arr[i]
         if second==10**10: print 'only one element'
         print first, second
