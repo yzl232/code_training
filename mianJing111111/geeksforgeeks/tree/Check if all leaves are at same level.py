@@ -33,14 +33,15 @@ The idea is to first find level of the leftmost leaf and store it in a variable 
 #巧妙。  就是全局变量height。 看是不是都相等
 class Solution:
     def check(self, root):
-        self.h = -1; self.ret = True
+        self.h = -1; self.same = True
         self.dfs(root, 1)
-        return self.ret
+        return self.same
 
     def dfs(self, root, lvl):
+        if not self.same: return
         if not root: return
         if not root.left and not root.right: # found a leaf
             if self.h==-1:  self.h=lvl
-            if  self.h!=lvl: self.ret = False
+            elif  self.h!=lvl: self.same = False
         self.dfs(root.left, lvl+1)
         self.dfs(root.right, lvl+1)
