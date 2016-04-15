@@ -85,6 +85,20 @@ Given a binary tree (not a binary search tree) and two values say n1 and n2, wri
 #存path的方法。 大概看一下geeksforgeeks的原理， 提一下就好， 因为不是最优解。
 
 #最优解
+
+class Solution(object):
+    def lowestCommonAncestor(self, root, p, q):
+        """
+        :type root: TreeNode
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
+        """
+        if root in (None, p, q): return root
+        l, r = self.lowestCommonAncestor(root.left, p, q), self.lowestCommonAncestor(root.right, p, q)
+        return root if (l and r) else (l or r)
+
+'''
 class SolutionRecursin:
     def anc(self, root, p, q):        #和findlevel  search的题目是有点像的, 往下seach x ，  往下search p, q
         if not root: return  #没找到
@@ -94,3 +108,4 @@ class SolutionRecursin:
         if l and r: return root  #2个都找到。在root   # 这一行只会运行一次。
         if l: return l  #找到一个。都在左边      .
         else: return r  #找到一个。都在右边
+'''

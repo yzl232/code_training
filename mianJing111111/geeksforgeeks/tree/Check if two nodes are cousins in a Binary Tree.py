@@ -44,7 +44,6 @@ class Solution:
     def dfs(self, root, level): #找一个子节点到root得距离
         if self.ret !=None: return 
         if not root: return
-        if self.ret: return
         if root == self.node:     self.ret = level
         self.dfs(root.left, level+1)
         self.dfs(root.right,  level+1)

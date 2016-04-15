@@ -21,8 +21,7 @@ class Solution:  #和lca 现在很相似了
     def printAncestors(self, root, target):  #返回flag。 在leetcode  sudoku也用到这种技巧
         if not root: return False
         if root.val == target: return True
-        l= self.printAncestors(root.left, target)
-        r = self.printAncestors(root.right, target)
+        l, r= self.printAncestors(root.left, target), self.printAncestors(root.right, target)
         if l or r:
             print root.val
             return True
