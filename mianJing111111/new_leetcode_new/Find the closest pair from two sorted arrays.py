@@ -45,7 +45,7 @@ The idea is to start from left side of one array and right side of another array
 
 class Solution:
     def pair(self, arr1, arr2, x):
-        i=len(arr1)-1; j=0;  ret = (None, None, 10**10)
+        i=len(arr1)-1; j=0;  ret = (None, None, float('inf'))
         while i>=0 and  j<len(arr2):
             diff = abs(arr1[i]+arr2[j]-x)
             if diff<ret[-1]: ret=(arr1[i], arr2[j], diff)

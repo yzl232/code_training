@@ -56,7 +56,7 @@ class Solution:
             cur = []
             for node in prev:
                 if node.left:
-                    cur.append(node.left)
+                    cur.append(node.left)    # once a node is found which is NOT a Full Node, all the following nodes must be leaf nodes.
                     if stop:   return False
                 else: stop = True
                 if node.right:
