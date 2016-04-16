@@ -47,3 +47,4 @@ class Solution:
         return arr[ret[0]:ret[1]+1]
 s = Solution()
 print s.dpremoval([4, 5, 100, 9, 10, 11, 12, 15, 200])
+# 类似的用cur sum优化复杂度的有 Maximum sum rectangle in a 2D matrix
