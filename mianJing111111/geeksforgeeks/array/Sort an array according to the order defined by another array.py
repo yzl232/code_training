@@ -14,14 +14,13 @@ The code should handle all cases like number of elements in A2[] may be more or 
 '''
 class Solution:  #很简单的count次数就可以了。  然后添加
     def sortN(self, a1, a2):
-        d = {x:0 for x in a2}
+        cnt = {x:0 for x in a2}
         noInDict = []; ret = []
         for x in a1:
-            if x in d:  d[x]+=1
+            if x in cnt:  cnt[x]+=1
             else: noInDict.append(x)
-        noInDict.sort()
         for x in a2:
-            ret +=[x]*d[x]
-        return ret+noInDict
+            ret +=[x]*cnt[x]
+        return ret+sorted(noInDict)
 s =Solution()
 print s.sortN([2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8], [2, 1, 8, 3] )
