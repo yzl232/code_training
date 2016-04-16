@@ -43,7 +43,7 @@ class Solution:
 
 
 
-#如果是sorted array
+#如果是sorted array, 和subsequence一样;   Given two strings, find if first string is a subsequence of second
 class Solution2:
     def isSubset(self, l, s):  #large, small
         n=len(l); m = len(s)
@@ -53,5 +53,18 @@ class Solution2:
             if l[j]<s[i]: j+=1  #大的array可以小
             elif l[j]==s[i]:
                 i+=1; j+=1
-            else: return False
         return j==m   #能不能走完
+
+'''
+class Solution:
+    def isSubsequene(self, s1, s2):
+        i=j=0
+        while i<len(s1) and j<len(s2):
+            if s1[i]==s2[j]:
+                i+=1
+                j+=1
+            else:   j+=1
+        return i==len(s1)
+s = Solution()
+print s.isSubsequene('gksrek', 'geeksforgeeks')
+'''

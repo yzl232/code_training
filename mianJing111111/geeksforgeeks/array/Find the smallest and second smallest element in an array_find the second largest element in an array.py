@@ -20,7 +20,7 @@ class Solution:
     def print2Smallest(self, arr):
         n =len(arr)
         if n<2: return
-        first=second = 10**10
+        first=second =  float('inf')
         for i in range(n):
             if arr[i] <= first:   second, first = first, arr[i]
             elif arr[i]<second:    second = arr[i]
