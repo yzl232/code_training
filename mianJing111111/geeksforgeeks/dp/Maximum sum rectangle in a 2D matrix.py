@@ -24,9 +24,10 @@ class Solution:
         for top in range(m):
             colS = [0]*n       #必须放在这里  . 理解成一直压缩, 压扁成一行colSum
             for bottom in range(top, m):
-                for i in range(n):  colS[i]+=mtx[bottom][i]       #新的一行。 压扁。  #这里在求和的时候, 减少了复杂度, 利用了之前的结果
+                row = mtx[bottom]
+                for i in range(n):  colS[i]+=row[i]       #新的一行。 压扁。  #这里在求和的时候, 减少了复杂度, 利用了之前的结果
                 ret = max(ret, self.maxSubArray(colS))   # 上一行求和不能用list comprehension, 否则会增加复杂度.
-        return ret
+        return ret   #类似的还有 Remove minimum elements from either side such that 2*min becomes more than max
 
     def maxSubArray(self, a):  #leetcode
         ret = maxN = a[0]
