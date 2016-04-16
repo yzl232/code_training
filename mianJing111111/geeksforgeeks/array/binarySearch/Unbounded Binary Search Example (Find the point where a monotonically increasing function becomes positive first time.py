@@ -69,6 +69,6 @@ class Solution:
         l = start;  h =end; accuracy = 0.0001
         while l<=h:
             m = (l+h)/2
-            if abs(self.func(m)-y)<=accuracy:  return accuracy
+            if abs(self.func(m)-y)<=accuracy:  return m
             elif self.func(m)>y:  h = m
             else:  l = m

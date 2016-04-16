@@ -22,6 +22,7 @@ Output: 8
 '''
 #leetcode不是sorted,  sorted可以做到logN。 没有sort就是O(n)  leetcode
 #sorted 用binary search
+#本题目默认没有重复.
 class Solution:
     def findFirstMissing(self,  arr):
         l =0;  h = len(arr)-1

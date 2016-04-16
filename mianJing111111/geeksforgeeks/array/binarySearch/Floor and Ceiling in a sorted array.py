@@ -25,10 +25,7 @@ class Solution:
             if arr[m]==x:return [x, x]
             elif arr[m]<x:   l = m+1
             else: h=m-1
-        result = [None, None]
-        if l<len(arr): result[1]= arr[l]
-        if h>=0: result[0]= arr[h]
-        return result
+        return [arr[h] if h>=0 else None,  arr[l] if l<len(arr) else None]
 
 
 
