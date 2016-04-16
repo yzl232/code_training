@@ -66,9 +66,7 @@ class Solution:
         dp = [x[:] for x in matrix]
         for i in range(m):
             for j in range(n):
-                if i==0 or j==0: dp[i][j] = matrix[i][j]  #只支持正方形。 所以最多就是1
-                elif matrix[i][j] == 1:   dp[i][j] = min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]) + 1 #正方形。第四角 至少要前面3个部分
-                else:  dp[i][j] = 0
+                if i and j and matrix[i][j] == 1:   dp[i][j] = min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]) + 1 #正方形。第四角 至少要前面3个部分
                 ret = max(ret, dp[i][j])
         return ret
 s = Solution()

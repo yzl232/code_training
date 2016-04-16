@@ -47,9 +47,7 @@ class Solution:
 
     def maxCircularSum(self, a):
         v1 = self.maxSubArray(a)  # sub
-        v2 = sum(a)
-        a = [-x for x in a]
-        v2 +=self.maxSubArray(a)  #
+        v2=sum(a)+self.maxSubArray([-x for x in a])  #
         return max(v2, v1)
 
 s = Solution()

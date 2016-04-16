@@ -80,10 +80,8 @@ class Solution6:
     def find3(self, arr):
         n =len(arr)
         lMin = arr[:];   rMax = arr[:]
-        for i in range(1, n):
-            lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
-        for i in range(n-2, -1, -1):
-            rMax[i] = max(rMax[i+1], arr[i])
+        for i in range(1, n):    lMin[i] = min(lMin[i-1], arr[i])   #lMin[i]可以等于arr[i]
+        for i in range(n-2, -1, -1):   rMax[i] = max(rMax[i+1], arr[i])
         for i in range(n):
             if lMin[i]!=arr[i] and rMax[i]!=arr[i]:  print lMin[i], arr[i], rMax[i]
 s = Solution6()
