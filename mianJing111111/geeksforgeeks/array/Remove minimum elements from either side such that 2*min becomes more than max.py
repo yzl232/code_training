@@ -41,8 +41,7 @@ class Solution:
             minN, maxN=float('inf'), float('-inf')
             for e in range(b, n):
                 minN, maxN = min(arr[e], minN), max(arr[e], maxN)
-                if 2*minN <=maxN: break   #因为随着arr变大， min可能变小， max可能变大。
-                if e-b>ret[-1]-ret[0]: ret = (b,  e)
+                if 2*minN > maxN and e-b>ret[-1]-ret[0]:  ret = (b,  e) 
         if ret==(0, -1): return
         return arr[ret[0]:ret[1]+1]
 s = Solution()
