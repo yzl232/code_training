@@ -27,6 +27,4 @@ class Solution:
 
     def find(self, arr, t):
         arr = self.merge(arr)  #扫一遍
-        for i in arr:
-            if i.start<=t.start and i.end>=t.end: return True
-        return False
+        return any( x.start<=t.start and x.end>=t.end for x in arr)

@@ -73,7 +73,7 @@ class Solution:
             val, i, j = heapq.heappop(h)
             ret.append(val);  j+=1
             if j<len(arrs[i]):  heapq.heappush(h, (arrs[i][j], i, j))
-        return ret   #复杂度 O(nkLogk) 是最优解
+        return ret   #复杂度 O(nkLogk) 是最优解.   暴力法是nk log(nk)
 #好处是代码特别短。7行
 # 稍微注意while里边的三行就可以=
 

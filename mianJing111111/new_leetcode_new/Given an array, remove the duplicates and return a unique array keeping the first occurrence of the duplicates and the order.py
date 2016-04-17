@@ -15,11 +15,10 @@ Given an array, remove the duplicates and return a unique array keeping the firs
 
 class Solution:
     def removeDuplicates(self, arr):
-        d = set(); ret=[]
+        d= set(); ret= []
         for x in arr:
-            if x in d: continue
+            if x not in d: ret.append(x)
             d.add(x)
-            ret.append(x)
         return ret
 s = Solution()
 print s.removeDuplicates([2, 1, 3, 1, 1, 2])
