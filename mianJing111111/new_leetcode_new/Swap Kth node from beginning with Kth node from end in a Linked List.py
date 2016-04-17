@@ -17,16 +17,15 @@ class Solution:
         dummy = ListNode(0); dummy.next = head   #p1, p2记录以前的位置
         cur = dummy
         for i in range(k-1):
-            if cur: cur = cur.next  #例子。  1，  k=1.            1, 2   k=1.      k=2
+            if cur.next: cur = cur.next  #例子。  1，  k=1.            1, 2   k=1.      k=2
+        if not cur.next: raise  ValueError()
         p1=cur;  p2=dummy
-        if cur: cur = cur.next
-        if not cur: raise  ValueError()
-        while cur and cur.next:
+        cur = cur.next
+        while cur.next:
             p2 = p2.next;  cur =cur.next
-        if p1 and p1.next and p2 and p2.next:
-            t1 = p1.next.next;  t2 = p2.next.next
-            p1.next, p2.next = p2.next, p1.next
-            p1.next.next = t1;   p2.next.next = t2
+        t1 = p1.next.next;  t2 = p2.next.next
+        p1.next, p2.next = p2.next, p1.next
+        p1.next.next = t1;   p2.next.next = t2
 
 
 '''

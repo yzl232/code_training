@@ -9,7 +9,24 @@ Find the presence of a given word in a given grid, word can be matched in any di
 和leetcode差不多。
 
 '''
+class Solution:
+    # @param board, a list of lists of 1 length string
+    # @param word, a string
+    # @return a boolean
+    def exist(self, grid, word):
+        if not grid or not word: raise ValueError()
+        return  any(self.dfs(grid, i, j, word) for i in range(len(grid)) for j in range(len(grid[0])))
 
+    def dfs(self, grid, i, j, word):
+        if not word: return True
+        if not (0<=i<len(grid) and 0<=j<len(grid[0])) or grid[i][j] != word[0]:  return False     #每次找到一个匹配，就迅速把它替换掉。然后DFS
+        t, grid[i][j] = grid[i][j], '#'
+        for r in range(i-1, i+2):
+            for c in range(j-1, j+2):
+                if (r!=i or c!=j) and self.dfs(grid, r, c, word[1:]): return True
+        grid[i][j] = t
+        return False
+'''
 
 class Solution:
     # @param board, a list of lists of 1 length string
@@ -37,9 +54,9 @@ class Solution:
                         tmp, board[r][c] = board[r][c] , '#'
                         self.dfs(board, r, c,word[1:], cur+[(r, c)])
                         board[r][c] = tmp
-
+'''
 sss = [
 ['a', 'b', 'c'], ['c', 'c', 'c']
 ]
 s = Solution()
-print s.search(sss, 'abc')
+print s.exist(sss, 'abc')

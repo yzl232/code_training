@@ -10,19 +10,20 @@ Following is a simple algorithm to find out whether a given graph is Birpartite 
 #思想就是所有node和它的邻居颜色必须不同
 class Solution:
     def isBiparty(self, graph, src):
-        colors = {src: 0}
-        pre = set([src])
+        colors = {src: False}
+        pre = [src]
         while pre:
-            cur = set([])
-            for n in pre:
-                for x in n.neighbors:
-                    if x not in colors:
-                        cur.add(x)
-                        colors[x]=1-colors[n]
-                    else:
-                        if colors[x]==colors[n]: return False
+            cur = []
+            for x in pre:
+                for y in x.neighbors:
+                    if y not in colors:  
+                        colors[y] = not colors[x]
+                        cur.append(y)
+                    else:  
+                        if colors[y] == colors[x]: return False
             pre = cur
         return True
+                      
 
 '''
 #graph。 BFS都是用一个hashmap代替visited。   然后
