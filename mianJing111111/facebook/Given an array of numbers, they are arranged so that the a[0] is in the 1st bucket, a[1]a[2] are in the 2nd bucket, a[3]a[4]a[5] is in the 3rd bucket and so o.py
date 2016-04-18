@@ -26,11 +26,11 @@ class Solution: #还是挺巧妙的。
     def find(self,arr, x):
         l=0; h=len(arr)
         while l<=h:
-            if h==l+1: break  ##当m=l的时候，可能永远不会再动了。 停止
+            if h==l+1: return x in arr[l] or x in arr[h]  # O( sqrt(N) )  in worst case  ##当m=l的时候，可能永远不会再动了。 停止
             m = (l+h)/2
             if arr[m][-1]==x: return True
             elif arr[m][-1]<x:  l=m     #这里是稍微不一样    #当m=l的时候，可能永远不会再动了。 停止
             else:  h=m
         #然后肯定在h, 或者L
-        return x in arr[l] or x in arr[h]      # O( sqrt(N) )  in worst case
+        
 

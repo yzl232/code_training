@@ -23,10 +23,7 @@ class Solution:
             if d[i]>count:
                 maxN=i
                 count=d[i]
-        candidates = []
-        for i in range(len(arr)):
-            if arr[i]==maxN:  candidates.append(i)
-        return random.choice(candidates)
+        return random.choice([i for i in range(len(arr)) if arr[i] == maxN])
 
 
 

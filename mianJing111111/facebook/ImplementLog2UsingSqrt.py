@@ -15,10 +15,12 @@ class Solution:
     def log2(self, val):
         if 0<val<1: return -self.log2(1.0/val)
         if val==1: return 0
-        h = 1;   accuracy = 0.001     #val>1 才是普通情况
-        while 2**h  < val:  h+=1
+        h = 1;   accuracy = 0.001; cur =2     #val>1 才是普通情况
+        while cur  < val:
+            h+=1
+            cur+=cur
         l = h-1       #如果是求整数， 已经求得结果了。
-        lval = 2**l;  hval = 2**h
+        lval = cur/2;  hval = cur
         while l<h:
             m =  (l+h)/2.0
             midVal = (lval * hval)**0.5

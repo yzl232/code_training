@@ -16,8 +16,8 @@ ret = max(ret, arr[i]+leftMax(i-k))
 class Solution:
     def findPairt(self, arr, k):
         assert len(arr)>k
-        dp = [arr[i] for i in range(len(arr))]
-        ret = arr[0]+arr[k]
+        dp = arr[:]
+        ret = float('-inf')
         for i in range(len(arr)):
             dp[i] = max(dp[i-1], arr[i])
             if i-k>=0: ret = max(ret,  arr[i]+dp[i-k])

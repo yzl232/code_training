@@ -16,9 +16,7 @@ class Solution:
         pass
 
     def rand10(self):
-        ret = ''
-        for i in range(4):
-            ret+=str(self.rand2())
+        ret = ''.join(str(self.rand2()) for i in range(4))
         if '0000'<=ret<='1000': return 0
         elif ret == '1001': return 1
         return self.rand10()

@@ -7,8 +7,16 @@
 
 (c) the answer I gave for b was O(n^2), I was then tasked with finding a more efficient solution. I struggled mightily, and was eventually helped to the solution by many hints from the interviewer.
 '''
+#汉明距离的2 strings长度相同.
 
+class Solution:
+    def hammingD(self, s1, s2):
+        n1, n2 = len(s1), len(s2)
+        if n1>=s2: self.hammingD(s2, s1)
+        s1 = "0"*(n2-n1)+s1
+        return sum(1 if s1[i]!=s2[i] else 0 for i in range(n2))
 
+'''
 class Solution:
     def hammingD(self, s1, s2):
         i=len(s1)-1;  j=len(s2)-1; ret=0
@@ -19,7 +27,7 @@ class Solution:
             i-=1; j-=1
         return ret
     #从右边往高位。
-
+'''
 
 '''
 Write a function that takes a list of binary numbers and returns the sum of the hamming distances for each pair ->

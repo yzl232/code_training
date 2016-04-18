@@ -39,17 +39,16 @@ After second step, array becomes {1, 0, 3, 2}
 每个数包含2个信息： a[i]/n,  a[i]%n
 '''
 
+#文件 . find the maximum repeating number
+#和那题区别. 本题是改变本身arr[i], 将t的信息存入.  那题是将本身arr[i]作为t,  存入arr[t]
 class Solution:
     def relocate(self, arr, k):  # 区分一下这个k。   0~k这个条件必不可少。
-        for x in arr:
-            if not 0<=x<=k-1:  raise  ValueError()
-        for x in arr:
-            t = arr[x]   #把t移动到arr[i]来。
-            arr[t] += t%k * k       #符号%有必要。 可能在后面取前面的数。 而前面的数已经更新比较大了。
-        print arr  #此时用%取回以前的数。
         for i in range(len(arr)):
-            arr[i]/=k
+            t = arr[i]%k
+            arr[i] += (arr[t]%k)*k
+        for i in range(len(arr)):  arr[i]/=k
         return arr
 s = Solution()
-print s.relocate([2, 3, 1, 0])
-print s.relocate([2, 3, 4, 0, 1])
+print s.relocate([3, 1, 0, 2], 4)
+print s.relocate([2, 3, 1, 0], 4)
+print s.relocate([2, 3, 4, 0, 1], 5)
