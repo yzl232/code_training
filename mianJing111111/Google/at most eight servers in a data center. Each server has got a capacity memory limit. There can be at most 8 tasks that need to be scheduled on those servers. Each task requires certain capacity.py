@@ -18,11 +18,12 @@ Got some idea that this needs to be solved using dynamic programming concept, bu
 #和leetcode  sudoku特别像
 class Solution:
     def canArrange(self, servers, tasks):
+        if sum(servers)<sum(tasks): return False
         ok = [False]*len(tasks)
         return self.dfs(servers, tasks, ok)
 
     def dfs(self, servers, tasks, ok):
-        if False not in ok: return True
+        if all(ok): return True
         for i in range(len(tasks)):  #尝试每个servers都试试每个tasks
             if not ok[i]:
                 ok[i] = True

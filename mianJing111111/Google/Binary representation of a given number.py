@@ -20,15 +20,12 @@ class Solution:
         self.dfs(n>>1)  #还是用位移容易理解。 先搞高位的。
         self.ret.append(str(n&1))
 '''
-s = Solution()
-print s.binaryF(12)
-
 class Solution2:
     def binaryF(self, n):
-        ret = []
+        ret = ""
         while n:
-            ret.append(str(n&1))
+            ret+=str(n&1)
             n = n>>1
-        return ''.join(ret[::-1])  #逆转
+        return ret[::-1]  #逆转
 s = Solution2()
 print s.binaryF(19)

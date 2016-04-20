@@ -12,13 +12,6 @@ fullfill the criterion. ( single alphabet assume belong to dict)
  '''
 class Solution:
     def isValid(self, s, d):
-        if not s: raise  ValueError
-        self.d = d  #
-        return self.help(s)
-
-    def help(self, s):       # 可以用memoization    self.vaidWords = set();  
         if not s: return True
-        if s not in self.d: return False
-        for i in range(len(s)):
-            if self.help(s[:i]+s[i+1:]): return True
-        return False
+        if s not in d: return False
+        return any(  self.isValid(s[:i]+s[i+1:], d) for i in range(len(s)))

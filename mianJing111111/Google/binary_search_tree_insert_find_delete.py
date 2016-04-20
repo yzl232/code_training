@@ -28,21 +28,19 @@ class BinarySearchTree:
             else: self.insert(root.right, value)  #必须背下。 很常规的！！！
         return root
 
-#非常常规的递归
     def find(self, root, val):
-        if not root: return
-        if root.val == val: return root
-        elif val<root.val: return self.find(root.left, val)
-        else: return self.find(root.right, val)
+        while root:
+            if root.val == val: return root
+            elif val < root.val: root=root.left
+            else: root = root.right
 
 #delete的时候，我们要用上parent  .  因为要补上node。 所以难得多
     def delete(self, x):
         if not x.left and not x.right:  self.replace(x, None)
-        elif x.left and not x.right:  self.replace(x, x.left)
-        elif x.right and not x.left: self.replace(x, x.right)
+        elif (not x.left) or (not x.right):  self.replace(x, x.left or x.right)
         else: # 2 children.  稍微复杂。 要有while.  右子树的最左边
             suc = self.findMin(x.right)
-            if suc.parent: suc.parent.left = None
+            suc.parent.left = None
             self.replace(x, suc)
 
 # delete的用了2个辅助函数~~简洁了很多

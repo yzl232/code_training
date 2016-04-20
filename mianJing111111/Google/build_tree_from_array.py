@@ -49,10 +49,10 @@ class Relation:
 class Solution:  #可以用hashmap  build 简单的node: children属性。
     def buildTree(self, relations):
         d = {};  notRoot = set()
-        for rs in relations:
-            if d[rs[0]] not in d:  d[rs[0]] = []
-            d[rs[0]].append(rs[1])
-            notRoot.add(rs[1])
+        for x1, x2 in relations:
+            if x1 not in d: d[x1] = []
+            d[x1].append(x1)
+            notRoot.add(x2)
         roots=[ x  for x in d if x not in notRoot ]   # 找root
         self.d = d #build  tree   有了roots。 有了图。 算是已经建好了hashmap形式的tree了。
         for x in roots: self.dfs(x)

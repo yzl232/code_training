@@ -37,7 +37,7 @@ class Solution2:
         self.lastTime = -1
 
     def add_money(self):
-        curr_time = int(time.time())
+        curr_time = time.time()
         if curr_time - self.lastTime > 60:  #这已经是最好的办法。
             self.lastTime = curr_time
             pass
@@ -52,16 +52,17 @@ class Solution3:
         self.N = N
 
     def add_money(self):
-        curr_time = int(time.time())
+        curr_time = time.time()
         if curr_time - self.startTime < 1 and self.count<self.N:
             self.count+=1  #不更新startTime
-            pass
+            self.do()
         elif curr_time-self.startTime>=1:
             self.count=1
             self.startTime = curr_time    #到这里更新
-        else:  #过多了。 啥也不做
-            pass
+            self.do()
 
+    def do(self):
+        pass
 '''
 
 类似于circular buffer in C++

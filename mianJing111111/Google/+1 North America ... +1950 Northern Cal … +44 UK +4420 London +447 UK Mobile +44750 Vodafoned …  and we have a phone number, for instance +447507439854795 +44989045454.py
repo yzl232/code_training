@@ -22,6 +22,6 @@ return where the number is from
 # trie的 _end key存地址的值。
 
 '''
-使用trie的基本思想是没有错的.  
+使用trie的基本思想是没有错的.
 self.ret.   搜索.  每次找到一个end. 更新self.ret.
 '''

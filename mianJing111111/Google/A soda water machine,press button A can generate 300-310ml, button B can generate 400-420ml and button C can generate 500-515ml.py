@@ -6,13 +6,13 @@ A soda water machine,press button A can generate 300-310ml, button B can generat
 
 class Solution:
     def generate(self, minV, maxV):
-        canGen=set(range(300, 311)+range(400, 421)+range(500, 515))
-        for i in range(maxV+1):  #516的选择很有意思。  值得深思
+        canGen=set(range(300, 311)+range(400, 421)+range(500, 516))
+        for i in range(maxV+1):  # i从0开始的。
             if i not in canGen:
                 for j in canGen:
                     if i-j in canGen:
-                        canGen.add(j);  break
-            return False not in [x in canGen  for x in range(minV, maxV)]
+                        canGen.add(i);  break
+            return all(x in canGen  for x in range(minV, maxV))
 s = Solution()
 print s.generate(700, 721)
 '''

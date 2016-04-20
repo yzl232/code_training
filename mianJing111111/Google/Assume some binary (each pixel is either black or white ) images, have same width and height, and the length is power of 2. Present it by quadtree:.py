@@ -48,7 +48,7 @@ class QuadTree:
 
 #b) count all the black pixels of this image
 class Solution:
-    def cntB(self, root, depth, size):
+    def cntB(self, root):
         if not root:   return 0     #混合的话。 就是color = "mixed"
         if root.color == "white":    return 0
         elif root.color == "black":    return  root.size**2
@@ -68,6 +68,8 @@ class Solution5:
             root.nw = self.merge(root1.nw, root2.nw)
             root.se = self.merge(root1.se, root2.se)
             root.sw = self.merge(root1.sw, root2.sw)
+            if root.ne.color == root.nw.color == root.se.color == root.sw.color=="white": root.color = "white"
+            return root
         elif root1.color!=root2.color: return QuadTree('white', root1.size)
         else: return QuadTree(root1.color, root1.size)
         # 根据我的定义。  不是mixed

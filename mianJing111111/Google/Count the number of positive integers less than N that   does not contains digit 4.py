@@ -36,15 +36,15 @@ print count
 
 class Solution:
     def count(self, n): # 3451   =>3999
+        if n<=1: return 0
         s = str(n-1); ret=0
         for i in range(len(s)):
             if s[i]!='4':   ret+=int(s[i]) *(9**(len(s)-i-1))  #  len(s)-i-1  => right digits number.    i=len(s)-1, right=0
             else:
                 ret +=3*(9**(len(s)-1-i));  break
-        return ret-1+sum(9*(9**(len(s)-1-j)) for j in range(i+1, len(s)))       # 原因错了。 减一原因是去掉0 。
+        return ret+sum(9*(9**(len(s)-1-j)) for j in range(i+1, len(s)))       # 原因错了。 减一原因是去掉0 。
 
 s = Solution()
 print s.count(40)
 print s.count(3451)
-
-
+print s.count(4)
