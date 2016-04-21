@@ -4,8 +4,6 @@ G家考过
 
     Question is verbose, uses search engine, string matching
       etc., but at the end boils down to this: There is two dimensional array where each sub array (row) is sorted, i.e. [[1 1000 2000] [20 1001 5000] [55 1002 2222]] Find a minimum range contain a number from each row. For above array it should be (1000-1002) range.
-
-
 '''
 
 #可以这样想象  。 range:  minV~maxV。  每次minhEap移除minV。  来尝试得到更小的范围
@@ -25,16 +23,16 @@ class Solution:
         for x in arrs:
             if not x: raise ValueError
         h =[(arrs[i][0], i, 0) for i in range(len(arrs)) ]
-        maxH = max(h)[0]; ret=(0, 0, 10**10)
+        big = max(h)[0]; ret=(None, None, float('inf'))
         heapq.heapify(h);
         while h:
-            val, i, j = heapq.heappop(h)
-            if maxH-val<ret[-1]:        ret = (val, maxH, maxH-val)              #keep track of the minimum window
+            small, i, j = heapq.heappop(h)
+            if big-small<ret[-1]: ret = (small, big, big-small)      #keep track of the minimum window
             j+=1
             if j<len(arrs[i]):
                 heapq.heappush(h, (arrs[i][j], i, j))
-                maxH=max(maxH, arrs[i][j])   #  push的同时更新maxH
-            else:         break  #有某行为空了。 停止break。   这时候minV固定了。。。
+                big=max(big, arrs[i][j])   #  push的同时更新maxH
+            else:  break  #有某行为空了。 停止break。   这时候minV固定了。。。
         return ret   #复杂度 O(nkLogk) 是最优解
 #也可以合并后，
 s= Solution()
