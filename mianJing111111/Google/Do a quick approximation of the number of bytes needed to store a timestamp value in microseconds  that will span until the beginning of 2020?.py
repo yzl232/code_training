@@ -8,7 +8,7 @@ Quick approximation: --> come up with an answer without doing complicated operat
 
 calculator, just back of the envelope computations).
 
-1s = 1000*1000ms   # 微秒,也就是百万分之一秒.
+1s = 1000*1000  μs   # 微秒,也就是百万分之一秒.
 
 1min = 60s
 

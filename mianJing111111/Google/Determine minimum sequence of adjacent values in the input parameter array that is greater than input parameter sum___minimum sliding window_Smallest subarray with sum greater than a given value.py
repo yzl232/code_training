@@ -63,7 +63,7 @@ class Solution:
 #sliding window就是满足条件的时候，加入一个while循环。 不断尝试移动left pointer。 不难。.
 class Solution3:
     def findShortest5(self, arr, target):
-        ret = 10**10
+        ret = float('inf')
         s = 0;  l=0
         for r in range(len(arr)):
             s+=arr[r]
@@ -79,5 +79,4 @@ print s.findShortest5([ 2,1,1,4,3,6], 8)
 '''
 This takes O(n) since the window is always sliding into 1 direction (left to right), which stops at most 2n steps.  which is  O(n) steps. #
 虽然有2个循环。 却是O(n)
-
 '''
