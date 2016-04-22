@@ -14,7 +14,6 @@ there are N nuts and N bolts, all unique pairs of Nuts and Bolts. You cant compa
 
 # encoding=utf-8
 
-
 '''
 
 # encoding=utf-8
@@ -61,11 +60,13 @@ print("n = ", n)
 
 #我还是适合简单版本
 import random
+
 def quickSort(arr1, arr2):
     assert len(arr1)==len(arr2)
     if len(arr1) <=1: return arr1, arr2
     pivot = random.choice(arr1)
     s2, m2, b2 = partition(arr2, pivot)
+    assert m2!=[]
     pivot = m2[0]
     s1, m1, b1 = partition(arr1, pivot)
     s1, s2 = quickSort(s1, s2)
