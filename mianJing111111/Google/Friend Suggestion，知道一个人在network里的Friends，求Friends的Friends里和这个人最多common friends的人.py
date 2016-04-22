@@ -9,8 +9,8 @@ Friend Suggestion，知道一个人在network里的Friends，求Friends的Friend
 # encoding=utf-8
 #社交网络中，如何实现好友推荐。抽象成图，然后找出共同好友最多的那个人。
 class Node(object):   #2 nd hop.
-    def __init__(self, val):
-        self.val = val   #bfs两轮后，比较出现次数。 次数最多的就是了。
+    def __init__(self, id):
+        self.id = id   #bfs两轮后，比较出现次数。 次数最多的就是了。
         self.friends = []
 
 def recommend(node):

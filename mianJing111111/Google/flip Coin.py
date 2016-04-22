@@ -5,6 +5,7 @@ HHHTT
 HHHTH
 '''
 #普通做法
+#如果要求了是2次H三次t.要用self.h == h, self.t = h,  if h<self.h
 class Solution:
     # @param an integer
     # @return a list of string

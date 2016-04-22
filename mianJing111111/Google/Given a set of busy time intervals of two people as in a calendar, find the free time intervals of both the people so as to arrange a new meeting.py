@@ -11,25 +11,21 @@ ouput: (6,9) (16,17)  (25,26)
 
 class Solution:
     def find(self, arr1, arr2):
-        d1, d2, free= self.getSet(arr1), self.getSet(arr2), []
-        for x in range(1, 31):
-            if x not in d1 and x not in d2:
-                free.append(x)
+        self.d = d = set()
+        self.getSet(arr1+arr2)
+        free = [x for x in range(1, 31) if x not in d]
         i=0; ret=[]
         while i<len(free):
-            start=free[i]
+            s=free[i]
             while i+1<len(free) and free[i]==free[i+1]-1:     i+=1
-            end=free[i]
-            ret.append((start,end))
+            ret.append([s] if s==i else [s, i])
             i+=1
         return ret
 
     def getSet(self, arr):
-        d=set([])
         for i, j in arr:
             for x in range(i, j+1):
-                d.add(x)
-        return d
+                self.d.add(x)
 s = Solution()
 print s.find([(1,5) ,(10, 14), (19,20), (21,24), (27,30)],  [(3,5), (12,15), (18, 21), (23, 24)])
 
@@ -37,6 +33,7 @@ print s.find([(1,5) ,(10, 14), (19,20), (21,24), (27,30)],  [(3,5), (12,15), (18
 #通用法。 先找到free Intervals for both。 然后找intersect
 
 def intersect(arr1, arr2):  # intersection of 2 sorted array变体
+    #找free intervals.
     i=j=0; ret = []
     while i<len(arr1) and j<len(arr2):
         s1, e1=arr1[i];  s2, e2=arr2[j]

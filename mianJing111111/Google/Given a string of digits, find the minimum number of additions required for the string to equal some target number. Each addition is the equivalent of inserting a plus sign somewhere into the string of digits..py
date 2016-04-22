@@ -10,8 +10,9 @@ class Solution:
         self.dfs(s, target, 0, '')
         return self.ret
     def dfs(self, s, target, cnt, pre):
-        if target==0 and not s:
-            self.ret = min(self.ret, cnt-1)
+        if cnt>self.ret or target<0: return
+        if not s:
+            if target ==0 and not pre:   self.ret = min(self.ret, cnt-1)
             return
         if not s or target<0: return
         self.dfs(s[1:], target, cnt, pre+s[0])  #举例  123.       1+23,  12+3 ,  1+2+3, 123

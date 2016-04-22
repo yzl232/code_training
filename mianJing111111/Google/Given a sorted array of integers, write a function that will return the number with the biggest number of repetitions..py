@@ -9,6 +9,18 @@ Given a sorted array of integers, write a function that will return the number w
 class Solution:
     def find(self, arr):
         if not arr: raise ValueError
+        ret = (1, arr[0]); cnt=1; i=0
+        while i<len(arr):
+            cnt = 1
+            while i+1<len(arr) and arr[i+1]==arr[i]:
+                i+=1; cnt+=1
+            ret = max(ret, (cnt, arr[i]))
+            i+=1
+        return ret
+'''
+class Solution:
+    def find(self, arr):
+        if not arr: raise ValueError
         ret = (1, arr[0]); cnt=1
         for i in range(1, len(arr)):
             if arr[i] == arr[i-1]:  cnt+=1
@@ -16,7 +28,7 @@ class Solution:
                 ret = max(ret, (cnt, arr[i-1]))
                 cnt=1
         return ret
-
+'''
 s = Solution()
 print s.find([1, 1, 2, 3])
 print s.find([1, 1, 2, 2, 3, 3, 3, 4])

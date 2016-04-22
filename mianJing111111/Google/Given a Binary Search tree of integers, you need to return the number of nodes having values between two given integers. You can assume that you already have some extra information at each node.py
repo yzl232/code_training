@@ -18,7 +18,7 @@ class TreeNode:
     def __init__(self):
         self.left = None
         self.right = None
-        self.leftN = 0
+        self.size = 1
 
 class Solution:
     def getLess(self, root, v):
@@ -26,7 +26,7 @@ class Solution:
         while root:
             if root.val>=v: root=root.left
             else:
-                ret+=1+root.leftN
+                ret+=1+root.left.size
                 root=root.right
         return ret
 

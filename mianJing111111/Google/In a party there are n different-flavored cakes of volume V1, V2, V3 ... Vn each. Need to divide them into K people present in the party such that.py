@@ -5,7 +5,7 @@ In a party there are n different-flavored cakes of volume V1, V2, V3 ... Vn each
 - A given member should get a cake of single flavour only i.e. You cannot distribute parts of different flavored cakes to same member.
 - Minimum volume of cake gets wasted after distribution so that means a maximum distribution policy
 '''
-# find largest possible x for each person
+# find largest possible x for each person   # 因为是float必须binary search搜索， 否则用int遍历就可以。
 #O(n * log((sum(Vi)/m)/eps) )   # O(nlogh) = O(nlog  Sum(v))
 class Solution:  #因为l基本上是越小越可以符合。 比如 0.0001
     def solve(self, k, v):

@@ -21,11 +21,10 @@ P.S. there may be tens of thousands of words in the dictionary, and the chars se
 class Solution:
     def dfs(self, chD):
         if sum(chD[ch] for ch in chD)==0 : return True
-        for word in self.wordD:
-            wCnt = self.wordD[word]
+        for w, wCnt in self.wordD.items():
             if self.valid(wCnt, chD):
                 t = chD.copy()
-                for ch in word:     t[ch]-=wCnt[ch]
+                for ch in wCnt:     t[ch]-=wCnt[ch]
                 if self.dfs(t): return True
         return False
 
@@ -37,17 +36,13 @@ class Solution:
         return d
 
     def valid(self, wordD, chD):
-        for ch in wordD:
-            if ch not in chD or wordD[ch]>chD[ch]: return False
-        return True
+        return all(ch in chD and chD[ch]>=wordD[ch] for ch in wordD)
 
     def solve(self,words,  charSet ):
         if not charSet: return True
         chD = self.cntW(charSet)     #这个dicts视为永久量。  因为只有26ch。 所以chD会比较小。可以视作constant
-        self.wordD = {}
         dicts = {w: self.cntW(w) for w in words}  #优化。 我们先pre process dict。 这样可以多次调用。
-        for k, v in dicts.items():  #每次使用的时候。prune出valid words
-            if self.valid(v, chD): self.wordD[k] = v
+        self.wordD = {k:v for k,v in dicts.items() if self.valid(v, chD)}    #每次使用的时候。prune出valid words
         return self.dfs(chD)
 
 s = Solution()

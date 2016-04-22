@@ -28,13 +28,13 @@ Otherwise it will be very trivial.
 #  01110
 #11110
 class Solution:
-    def firstBit(self):
-        pass
+    def firstBit(self, x):
+        return (x>>7)&1
 
     def odd(self, arr):
         n = len(arr)
         if self.firstBit(arr[-1])==1:  return '2-byte'
         for i in range(n-2, -1, -1):
             if self.firstBit(arr[i])==0:   break
-        if (n-1-i)%2==1: return '1 byte'
+        if (n-i)%2==0: return '1 byte'
         return '2-byte'

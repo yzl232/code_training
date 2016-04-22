@@ -17,19 +17,19 @@ class Person:
 
 class Solution:
     def find_Ancestor(self, p, q):
-        anc1 = set();  anc2=set()
-        pre1 = []; pre2=[]
+        anc1 = set(p);  anc2=set(q)
+        pre1 = [p]; pre2=[q]
         while pre1 or pre2:
             if pre1:
                 cur = []
                 for x in pre1:
-                    if x.p1 in anc2 or x.p2 in anc2: return True
+                    if x in anc2: return True
                     cur+=[x.p1, x.p2];   anc1.update([x.p1, x.p2])
                 pre1 = cur  # 先写这一句。 容易忘。
             if pre2:
                 cur = []
                 for x in pre2:
-                    if x.p1 in anc1 or x.p2 in anc1: return True
+                    if x in anc1: return True
                     cur+=[x.p1, x.p2];   anc2.update([x.p1, x.p2])
                 pre2 = cur  # 先写这一句。 容易忘。
         return False
@@ -52,5 +52,3 @@ class Solution3:
                 d[q] = 1
                 q = q.parent
         return
-
-

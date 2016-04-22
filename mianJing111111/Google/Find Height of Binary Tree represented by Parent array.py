@@ -83,13 +83,13 @@ class Solution:
 # O(n)
 class Solution:
     def findHeight(self, arr):
-        self.depth = [None] *(len(arr))
+        self.depth = {}
         self.arr = arr
         for i in range(len(arr)):    self.fill(i)
-        return max(self.depth)
+        return max(self.depth.values())
 
     def fill(self, i):
-        if self.depth[i]: return   #已经fill
+        if i in self.depth: return   #已经fill
         parent = self.arr[i]
         if parent == -1:
             self.depth[i] = 1;  return
