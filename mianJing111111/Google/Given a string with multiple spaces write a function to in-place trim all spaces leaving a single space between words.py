@@ -12,7 +12,7 @@ class Solution:
         for i in range(len(s)):
             if s[i]==' ':  j=i+1   #找到了一个可能的start
             elif i==len(s)-1 or s[i+1]==' ': ret+=s[j:i+1]+' '  #单词的end.  意思是现在不是空格。 i+1是空格。 必须加上.  非空格才更新
-        return ret[:-1]
+        return ret[:-1] if ret else " "
 s = Solution()
 print s.trim('   Hello World    ')
 print s.trim('Hello World    ')

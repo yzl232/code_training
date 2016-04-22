@@ -26,11 +26,11 @@ Answer:
 
 class Solution:
     def find(self, graph):
-        ret = 0
+        ret = 0    #   3! 种排列
         for a in graph:
-            for x in a.friends:    # 1-st hop
+            for x in a.friends:    # 1-st hop 
                 for y in x.friends:  #  2-nd hop
-                    if x in y.friends: ret+=1  #假设y.friend是一个set。  那就是O(n3)
+                    if y in a.friends: ret+=1  #假设y.friend是一个set。  那就是O(n3)
         return ret/6
 
 

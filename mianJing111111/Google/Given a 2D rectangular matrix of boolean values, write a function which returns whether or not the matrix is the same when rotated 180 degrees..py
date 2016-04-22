@@ -77,7 +77,4 @@ for i in ret: print i
 class Solution:
     def isSymmetric(self, matrix):
         m = len(matrix);  n=len(matrix[0])
-        for i in range(m):
-            for j in range(n):
-                if matrix[i][j] != matrix[m-1-i][n-1-j]: return False
-        return True
+        return all(matrix[i][j] == matrix[m-1-i][n-1-j] for i in range(m) for j in range(n)) 
