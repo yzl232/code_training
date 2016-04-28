@@ -16,60 +16,54 @@ has
 #trie用到的没有那么多。 主要就是prefix相关的题目
 
 
-_end = '_end_'
+_end = 'end'
 class Trie:   #30多行。 主要是hashtable和DFS。   不难
-    def makeTrie(self, words):
-        root = {}
-        for word in words:
-            self.insert(word, root)
-        return root
+    def __init__(self):
+        self.root = {}
 
-    def insert(self, word, root):  #这两个函数用的多
-        cur = root
+    def makeTrie(self, words):
+        for word in words:  self.insert(word)
+
+    def insert(self, word):  #这两个函数用的多
+        cur = self.root
         for ch in word:
             if ch not in cur:   cur[ch] = {}
             cur = cur[ch]
         cur[_end] = _end  #end的value可以用来存储东西。。。
 
-    def inTrie(self, trie, word):
-        branch = self.retrieveBranch(trie, word)
-        if branch and _end in branch: return True
-        return False
+    def inTrie(self, word):
+        branch = self.retrieveBranch(word)
+        return branch!=None and _end in branch
 
-
-    def retrieveBranch(self, trie, word):#这两个函数用的多
-        cur = trie
+    def retrieveBranch(self, word):#这两个函数用的多
+        cur = self.root
         for ch in word:
             if ch not in cur: return    #和insert基本上一样
             cur = cur[ch]
         return cur
 
-
-
-    def startWith(self, trie, prefix):  #太适合用recursion了。 想了半天，用recursion取最合适。 也不用修改原来的结构。
-        self.ret = [];
-        branch = self.retrieveBranch(trie, prefix)  #先找到目前匹配的。
+    def startWith(self, prefix):  #太适合用recursion了。 想了半天，用recursion取最合适。 也不用修改原来的结构。
+        self.ret = []
+        branch = self.retrieveBranch(prefix)  #先找到目前匹配的。
         self.dfs(branch, prefix)     #dfs寻找所有的。prefix作为cur来用
         return self.ret
 
-    def dfs(self, trie, cur):
-        if not trie:  return
-        for key in trie:
+    def dfs(self, node, cur):
+        if not node:  return
+        for key in node:
             if key == _end:  self.ret.append(cur)
-            else:   self.dfs(trie[key], cur+key)
-
-
-
+            else:   self.dfs(node[key], cur + key)
 
 t = Trie()
-a = t.makeTrie(['foo', 'bar', 'baz', 'barz'])
-print a
-print t.inTrie(a, 'ba')
-print t.inTrie(a, 'barz')
-b = t.makeTrie(["the", "a", "there", "answer", "any", "by", "bye", "their"])
-print b
-print t.startWith(b, "th")
-print t.startWith(b, "a")
+t.makeTrie(['foo', 'bar', 'baz', 'barz'])
+print t.root
+print t.inTrie('ba')
+print t.inTrie('barz')
+t1 = Trie()
+t1.makeTrie(["the", "a", "there", "answer", "any", "by", "bye", "their"])
+print t1.root
+print t1.startWith("th")
+print t1.startWith("a")
 '''
                        root
                     /   \    \
