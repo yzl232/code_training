@@ -33,21 +33,23 @@ Write a function which takes an array and emits the majority element (if it exis
 
 
 #其他元素看做-1，  这个元素看做1？？。。
-class Solution:
-    def findMajority(self, arr):
+
+class Solution:  #   
+    # @param num, a list of integers
+    # @return an integer
+    def majorityElement(self, arr):
         maj = self.findCandidate(arr)
-        if arr.count(maj)<=len(arr)/2: raise ValueError  ## verify  arr[x] really appears more than half  .  O(n)
-        return maj    
+        assert arr.count(maj)>len(arr)/2  ## verify  arr[x] really appears
+        return maj
 
     def findCandidate(self, arr):
-        x =0; cnt=1
-        for i in range(1, len(arr)):
-            if arr[i]==arr[x]: cnt+=1
+        ret =arr[0]; cnt=0
+        for x in arr:
+            if x==ret: cnt+=1
             else: cnt-=1
             if cnt==0:  #之前部分没有出现超过半数的元素。 继续到剩下的部分找。
-                x=i
-                cnt=1
-        return arr[x]
+                ret=x;  cnt=1
+        return ret
 
 
 '''
