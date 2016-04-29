@@ -18,6 +18,6 @@ class Solution:
         self.dfs(x, y, k)
 
     def dfs(self, x, y, k):
-        if not (0<=x<self.n) or not (0<=y<=self.n): return 0
+        if not (0<=x<self.n and 0<=y<self.n): return 0
         if k==0: return 1
         return sum(0.25*self.dfs(r, c)  for r, c in [(x-1, y), (x, y-1), (x+1, y), (x, y+1)])

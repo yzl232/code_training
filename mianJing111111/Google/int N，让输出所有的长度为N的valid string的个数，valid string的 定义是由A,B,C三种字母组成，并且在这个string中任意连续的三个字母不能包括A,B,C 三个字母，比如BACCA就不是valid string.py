@@ -13,11 +13,14 @@ b = 2*a+b;
 初始值为长度为2，所以a=3,b=6，不就可以了吗
 
 
-x0  x0  __
-x0  x1 __
+diff:    x0  x1  _
+
+same: x0  x0  _
 '''
 #和黑格子的类似
 def triple_free_combinations(n):
+    """Return the number of ways to choose n items , subject to the constraint that no colour appears three
+    times in a row.    """
     if n == 1:     return 3
     same, dif = 3, 6 #初始化
     for i in range(n - 2):

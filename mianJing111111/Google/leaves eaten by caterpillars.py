@@ -25,13 +25,17 @@ Explanation
 '''
 class Solution:
     def countUneaten(self, n, arr):
+        return n-len(set(y for x in arr for y in range(x, n+1, x)))
+'''
+class Solution:
+    def countUneaten(self, n, arr):
         d = {}
         for i in arr:
             for j in range(i, n+1, i):  #类似于sieve prime那道题目
                 if j not in d:   d[j] = 1
         print d
         return n-len(d)
-
+'''
 s = Solution()
 print s.countUneaten(10, [2, 4, 5])
 
