@@ -23,9 +23,9 @@ You could always XOR the first N bits and if you get 0 as a result you have a ma
 class Solution:
     def solve(self, byte, len1, pattern, len2):
         pattern>>=(8-len2)
-        i = 0; ret=[]
+        i = 0; ret=[]; t =1<<len2-1
         for i in range(8-len2+1):
-            if ( byte>>i ) & (1<<len2-1)==pattern: ret.append(i)
+            if ( byte>>i ) & t ==pattern: ret.append(i)
         return ret
 
 

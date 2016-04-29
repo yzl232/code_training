@@ -18,8 +18,7 @@ class Solution:
 #如果任意列
 class Solution:  #用一个坐标表示第几行。
     def combs2(self, arr):
-        self.arr = arr
-        self.ret=[]
+        self.arr = arr;  self.ret=[]
         self.dfs('', 0)
         return self.ret
 

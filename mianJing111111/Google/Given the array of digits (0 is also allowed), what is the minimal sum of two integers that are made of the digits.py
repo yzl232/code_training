@@ -16,9 +16,7 @@ E.g. 1 3 5 7 8 9 => 1 and 3, then 15 and 37, then 158 and 379. 0 is a special ca
 class Solution:
     def minSum(self, arr):
         if not arr: return 0
-        arr.sort()
-        arr = [str(i) for i in arr]
+        arr = [str(i) for i in sorted(arr)]
         one =int( ''.join(arr[i] for i in range(0, len(arr), 2)) )
         two =int( ''.join(arr[i] for i in range(1, len(arr), 2)) )
         return one+two
-    pass

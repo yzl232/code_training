@@ -34,6 +34,19 @@ Sum(m, n, X) = Sum(m, n - 1, X - 1) +
 '''
 
 class Solution:
+    d = {}
+    def findWays(self, m, n, x):  #m算是固定值. 比如6。 主要是x, n
+        if n<1 or x<=0: return 0
+        if n==1 and 1<=x<=m: return 1
+        if (n, x) not in self.d:
+            self.d[n, x] = sum(self.findWays(m, n-1, x-i) for i in range(1, m+1))
+        return self.d[n, x]
+
+s = Solution()
+print s.findWays(4, 2, 1)
+print s.findWays(2, 2, 3)
+'''
+class Solution:
     def findWays(self, m, n, x):  #m算是固定值. 比如6。 主要是x, n
         dp = [[0]*(x+1) for i in range(n+1)]
         for j in range(1, m+1):
@@ -44,6 +57,4 @@ class Solution:
                 dp[i][j]=  sum(dp[i-1][j-k]  for k in range(1, m+1) if j-k>=0)   #防止越界
         return dp[-1][-1]
 
-s = Solution()
-print s.findWays(4, 2, 1)
-print s.findWays(2, 2, 3)
+'''

@@ -41,23 +41,18 @@ class Relation:
 
 class Solution:  #可以用hashmap  build 简单的node: children属性。
     def buildTree(self, relations):
-        d = {};  notRoot = set()
-        for rs in relations:
-            if d[rs[0]] not in d:  d[rs[0]] = []
-            d[rs[0]].append(rs[1])
-            notRoot.add(rs[1])
-        roots=[]    #找root
-        for k in d.keys():
-            if k not in notRoot:  roots.append(k)
+        self.d = d = {x:set() for x in relations};  noRoot = set()
+        for x,y in relations:
+            self.d[x].add(y)
+            noRoot.add(y)
+        roots = [x for x in d if d not in noRoot]
         if len(roots)!=1: return False
-        root = roots[0]
-        self.d = d
-        self.bfs(root)
+        return self.bfs(roots[0])
 
     def bfs(self, root):
         pre, found = [root], set([root])   # 除了pre, cur之外，还用了第三个vals
         while pre:
-            cur, vals = [], []     #必须用array。 因为是有序的。 并且不会有重复
+            cur = []     #必须用array。 因为是有序的。 并且不会有重复
             for node in pre:
                 if node not in self.d: continue
                 for x in self.d[node]:

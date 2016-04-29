@@ -12,22 +12,16 @@ class Solution:
     # @param a list of ListNode
     # @return a ListNode
     def mergeKLists(self, arrs):
-        h =[(arrs[i][0], i, 0) for i in range(len(arrs)) if arrs[i]]
-        heapq.heapify(h);  ret = ''
+        h = [(x[0], i, 0) for i,x in enumerate(arrs) if x]
+        heapq.heapify(h); ret= ""
         while h:
-            val, i, j = heapq.heappop(h)
-            ret+=val
-            if j+1<len(arrs[i]):  heapq.heappush(h, (arrs[i][j+1], i, j+1))
-        ret = self.removeDup(ret)
-        return ret
+            ch, i, j = heapq.heappop(h)
+            ret+=ch;  j+=1
+            if j<len(arrs[i]): heapq.heappush(h, (arrs[i][j], i, j))
+        return self.removeDup(ret)
 
     def removeDup(self, s):
-        if not s: raise ValueError('Empty result')
-        ret = s[0]
-        for i in range(1, len(s)):
-            if s[i]==s[i-1]: continue
-            ret+=s[i]
-        return ret
+        return "" if not s else s[0]+"".join(s[i] for i in range(1, len(s)) if s[i]!=s[i-1])
 
 
 s = Solution()

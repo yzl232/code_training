@@ -14,6 +14,19 @@ def bs(arr, x):
         else: h=m-1
 '''
 #类似有  if root.val <x: self.pre = root.val
+
+class Solution:
+    def findPreSuc(self, root, x):
+        ret = (float('inf'), root)
+        while root:
+            ret = min(ret, (abs(root.val - x), root))
+            if root.val > x: root=root.left
+            elif root.val<x: root = root.right
+            else: return root
+        return ret[1]
+'''
+
+
 class Solution:
     def findPreSuc(self, root, x):
         self.x = x; self.ret = root
@@ -26,13 +39,25 @@ class Solution:
         if root.val == self.x:      return
         elif root.val>self.x:     self.dfs(root.left)
         else:   self.dfs(root.right)
-
+'''
 # 另一种办法就是找pre, and successor
 
 
 
 # G家题。 变体
 # 寻找BST中距离某个值最近的第二个元素。
+
+class Solution:
+    def findPreSuc(self, root, x):
+        close1 = close2 = root
+        while root:
+            if abs(root.val-x)< abs(root.val -close1.val ):  close2, close1 = close1, root
+            elif abs(root.val-x)< abs(root.val -close2.val ):  close2 = root
+            if root.val > x: root=root.left
+            elif root.val<x: root = root.right
+            else: return root
+        return close2
+'''
 class Solution9:
     def successor(self, root, target):   # binary search 的思想.  binary search val
         ret = None
@@ -59,3 +84,4 @@ class Solution9:
         if not suc: return self.predessor(root, pre)
         if not pre: return self.successor(root, suc)
         return suc if abs(suc-target)<abs(pre-target) else pre
+'''

@@ -17,16 +17,22 @@ while(it.hasNext())
 class Solution:
     def __init__(self, arr):
         self.arr = arr
-        self.p = 0
+        self.p = 0; self.ret = []
+        self.advance()
 
     def hasNext(self):
-        return self.p<len(self.arr)-1  #举特例。 P=-2时候， len至少要是2. 也就是
+        return self.ret != []  #举特例。 P=-2时候， len至少要是2. 也就是
 
     def next(self):
         assert self.hasNext()
-        t= [self.arr[self.p+1]] * self.arr[self.p]
-        self.p+=2
+        t = self.ret.pop()
+        if self.ret == []: self.advance()
         return t
+
+    def advance(self):
+        if self.p>=len(self.arr)-1: return
+        self.ret= [self.arr[self.p+1]] * self.arr[self.p]
+        self.p+=2
 
 s = Solution([1, 1, 2, 2, 3, 3, 4, 4])
 while s.hasNext():
@@ -63,4 +69,25 @@ class Solution:
 s = Solution([1, 1, 2, 2, 3, 3, 4, 4])
 while s.hasNext():
     print s.next()
+    
+    
+class Solution:
+    def __init__(self, arr):
+        self.arr = arr
+        self.p = 0
+
+    def hasNext(self):
+        return self.p<len(self.arr)-1  #举特例。 P=-2时候， len至少要是2. 也就是
+
+    def next(self):
+        assert self.hasNext()
+        t= [self.arr[self.p+1]] * self.arr[self.p]
+        self.p+=2
+        return t
+
+s = Solution([1, 1, 2, 2, 3, 3, 4, 4])
+while s.hasNext():
+    print s.next()
+
+
 '''

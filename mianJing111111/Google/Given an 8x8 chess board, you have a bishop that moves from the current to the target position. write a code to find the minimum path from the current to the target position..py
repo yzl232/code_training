@@ -22,15 +22,12 @@ If the "rooks" are on different boards, there is no path. If they are on the sam
 #是2步走完或者1步就走完。 O(1)
 class Solution:
     def bishop(self, x1, y1, x2, y2):
-        if (x1+y1)%2 != (x2+y2)%2: raise ValueError('impossible')
-        if abs(x1-x2)!=abs(y1-y2):  #都是有2种走法。不妨取一种
-            x = (y2-y1+x1+x2)/2
-            y = x2+y2-x
-            if not (0<=x<7) or not (0<=y<7):   #如果超过了棋盘。  符号不对。  就是x1, y1,     x2,y2换个位子
-                x =(y1-y2+x1+x2)/2
-                y = x1+y1-x
-            print (x, y)
-        print (x2, y2)
+        if (x1+y1)%2 != (x2+y2)%2: return []   #都是有2种走法。不妨取一种
+        if abs(x1-x2)!=abs(y1-y2): return [(x2, y2)]
+        x = (y2-y1+x1+x2)/2;    y = x2+y2-x
+        if not (0<=x<8 and 0<=y<8):   #如果超过了棋盘。  符号不对。  就是x1, y1,     x2,y2换个位子
+            x =(y1-y2+x1+x2)/2;   y = x1+y1-x
+        return [(x, y), (x2, y2)]
 # 可以解方程 abs(x1-x)==abs(y1-y),    abs(x2-x) = abs(y2-y)
 #x-y = x1- y1  #解1
 # x+y = x2+y2

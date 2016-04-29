@@ -9,16 +9,12 @@ Given an input file and any criteria write a function that will find the best sc
 
 class Solution:
     def vowels(self, line):
-        d = {ch: True for ch in 'aeiouAEIOU'}
-        cnt=0
-        for ch in line:
-            if ch in d: cnt+=1
-        return cnt
+        d = set('aeiouAEIOU')
+        return sum(ch in d for ch in line)
 
     def bestScoreLine(self, content, scoreFunction=vowels):
-        ret = (-10**10, None)
+        ret = (float("-inf"), None)
         for line in content:
             cur= scoreFunction(line)
             ret = max(ret, (cur, line))
-        return ret
-
+        return ret[1]

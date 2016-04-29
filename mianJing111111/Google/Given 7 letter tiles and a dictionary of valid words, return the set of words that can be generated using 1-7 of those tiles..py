@@ -18,6 +18,28 @@ would return: A AA APE PEA PARE PEAR SPARE APPEARS
 
 # trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
 # pre Compute hashtables for words
+
+'''
+现在想明白了解法, 用dfs求combination , 同时剪枝.  用Trie剪枝.
+
+'''
+class Solution:
+    def solve(self, letters, trie):
+        self.ret = []; letters.sort(); self.letters = letters
+        self.dfs("", 0, trie)
+        return self.ret
+        
+    def dfs(self, cur, i, trie):
+        if i>=len(self.letters): return
+        if "#" in trie: self.ret.append(cur)
+        for j in range(i, len(self.letters)):
+            ch = self.letters[j]
+            if ch in trie:  self.dfs(cur+ch, i+1, trie[ch])
+
+
+
+
+
 '''
 考过好几次。  也是简化版
 
@@ -29,7 +51,7 @@ would return: A AA APE PEA PARE PEAR SPARE APPEARS
 
 我觉得可能是预处理吧。  就是key: word, value: hashtable
 
-'''
+
 # 三个minor的可以稍微优化。   都是pre-process
 # #1      trie可以优化一点。   比如对于某些prefix。 直接标记不可行。 于是这个分支的词全部消去
 # 2      pre compute the hashmap.   这样子每次check就是O(num of distinct char.  which is less than 26 ) * O(n)
@@ -62,7 +84,7 @@ class Solution:
         ret = []
         for w in words:  #每次使用的时候。prune出valid words
             if self.valid(w, charD): ret.append(w)
-'''
+
     def validW(self, word, charD):  #实际上都是preCompute了的。。。
         wCnt = {}
         for ch in word:
@@ -71,6 +93,8 @@ class Solution:
             wCnt[ch]+=1
             if wCnt[ch]>charD[ch]: return False
         return True
+
+
 '''
 
 '''

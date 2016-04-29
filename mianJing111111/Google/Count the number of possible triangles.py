@@ -46,3 +46,4 @@ print s.getCountTriangles([10, 21, 22, 100, 101, 200, 300])
 #和那个count  平方数目的也很像
 #Count Distinct Non-Negative Integer Pairs (x, y) that Satisfy the Inequality。。。
 # Let's say there is a double square number X
+# 类似这题 Input - array of integers size N, integer Threshold

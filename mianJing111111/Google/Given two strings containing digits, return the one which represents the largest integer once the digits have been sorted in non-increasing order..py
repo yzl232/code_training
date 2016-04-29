@@ -17,18 +17,17 @@ return 178
 '''
 class Solution:
     def cmpare(self, a, b):
-        cntA =self.cnt(a)
-        cntB = self.cnt(b)
+        if set(a)=="0": return b
+        if set(b) == "0": return a
+        if len(a)<len(b): return b
+        if len(a)>len(b): return a
+        d1, d2 =self.cnt(a), self.cnt(b)
         for i in range(9, -1, -1):
-            if cntA[i]==cntB[i]: continue
-            elif cntA[i]<cntB[i]: return b
-            else: return a
+            if d1[i]<d2[i]: return b
+            if d1[i]>d2[i]: return a
 
 
     def cnt(self, s):
-        ret = [0 for i in range(10)]
-        for ch in s:
-            i = ord(ch)-ord('0')
-            ret[i]+=1
-        return ret
-
+        d = {i:0 for i in range(10)}
+        for ch in s:   d[int(ch)]+=1
+        return d

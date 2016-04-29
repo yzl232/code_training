@@ -7,9 +7,8 @@ def max_sum_sorted(arr):
     if not arr: raise ValueError("empty array")  #一般就是raise ValueError
     ret= maxN = arr[0][1]
     for i in range(1, len(arr)):
-        x, y =arr[i];
-        if x <= arr[i-1][0]:   maxN = y      #主要是多了这一句
-        else: maxN = max(y, maxN+y)
+        x, y =arr[i]
+        maxN = max(y, maxN+y) if x > arr[i-1][0] else y    #主要是多了这一句
         ret = max(maxN, ret)
     return ret
 

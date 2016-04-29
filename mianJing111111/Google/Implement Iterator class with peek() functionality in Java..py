@@ -40,7 +40,7 @@ class IteratorMerge: #代码不长。可以背下
         heapq.heapify(self.h)
 
     def hasNext(self):
-        return self.h!=None
+        return len(self.h)>0
 
     def next(self):
         if not self.hasNext():   raise ValueError("End of iterator")

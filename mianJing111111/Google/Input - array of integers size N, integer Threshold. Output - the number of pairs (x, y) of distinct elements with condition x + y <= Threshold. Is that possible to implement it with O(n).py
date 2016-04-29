@@ -12,7 +12,7 @@ class Solution:
         ret = 0
         while i<j:
             if arr[i]+arr[j]<=target:
-                ret += j-i+1
+                ret += j-i
                 i+=1
             else: j-=1
         return ret
