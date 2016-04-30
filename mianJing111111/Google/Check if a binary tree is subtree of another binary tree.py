@@ -94,7 +94,7 @@ class Solution:  #O(n)
     def inorderTraversal(self, a, small):
         aIn, aPre = self.inorder_Preorder(a)
         sIn, sPre = self.inorder_Preorder(a)
-        return sIn in aIn and sPre in aPre
+        return sIn in aIn and sPre in aPre   #KMP.  strstr  O(n)
 
     def inorder_Preorder(self, root):
         self.inRet = []; self.preRet = []
