@@ -10,6 +10,17 @@ Serialize and deserialize a collection of strings into a single one.
 
 2#3%4%a%ca#aa
 '''
+
+class Codec:
+    def encode(self, strs):
+        return ''.join(s.replace('#', '##') + 'x#x' for s in strs)  #注意#两边必须有空格.
+
+    def decode(self, s):
+        return [t.replace('##', '#') for t in s.split('x#x')[:-1]]
+
+
+
+'''
 # 就是加了很多信息保证了效果。  add more information
 class Solution:
     def serizlize(self, arr):   #想法很好。 存储了string 的数目。 每条string的长度。
@@ -36,3 +47,4 @@ print s.deserialize(tmp)
 tmp =  s.serizlize(["abc", "aeaa",])
 print tmp
 print s.deserialize(tmp)
+'''
