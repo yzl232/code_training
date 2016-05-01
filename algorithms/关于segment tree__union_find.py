@@ -15,12 +15,14 @@
 就是某种parent的recursion。  标记source
 '''
 class Solution:
-    def solve(self):
-        parent = {}
+    def solve(self, n):
+        parent = range(n)
         def find(x):
             if x!=parent[x]: parent[x] = find(parent[x])  #路径压缩
             return parent[x]
 
-        def union( x, y):
-            r1=find(x); r2=find(y)
-            parent[r1] = r2
+        def union( x, y):      #parent[find(x)] = find(y)  如果只是这一句 ， 不需要定义union函数。
+            a,  b = find(x), find(y)
+            parent[a] = b
+            return True if a!=b else False
+            
