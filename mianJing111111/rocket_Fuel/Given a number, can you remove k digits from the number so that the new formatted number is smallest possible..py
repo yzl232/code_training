@@ -32,16 +32,27 @@ k=2的时候，只有1前3个数有影响
 '''
 #没有想到解法。 关于特殊情况      # 6666692, 2       从前往后找最大的digit。删去
 
-
 class Solution:  #O(n)
     def removeK(self, n, k):
-        stack = list(str(s))[::-1]
+        arr = list(str(n));  ret = []
+        for x in arr:
+            while k>0 and ret and ret[-1]>x:   #不满足递增就不断pop. 想histagram
+                ret.pop(); k-=1
+            ret.append(x)
+        return ret[:len(arr)-k]
+#  leetcode https://leetcode.com/problems/create-maximum-number/
+
+
+'''
+class Solution:  #O(n)
+    def removeK(self, n, k):
+        stack = list(str(n))[::-1]
         for i in range(k):
             one = stack.pop()
             two = stack.pop()
             stack.append(min(one, two))
         return ''.join(stack[::-1])
-
+'''
 s = Solution()
 print s.removeK(1432219, 2)
 print s.removeK(1432219, 3)

@@ -23,7 +23,7 @@ class Solution:
             if part1[i]<=part2[j]:
                 ret.append(part1[i]);   i+=1
             else:   #发现逆序！！！
-                ret.append(part2[j])
+                ret.append(part2[j])  # 都是加上l, 或r的 右边一部分的长度
                 self.cnt+=len(part1)-i   #第一个序列右边的都符合。       关键.
                 j+=1    #j=length, 之前都加过了比part2[-1]大的数。  #i=length  右边的数目为0
         return ret+part1[i:]+part2[j:]
@@ -50,7 +50,7 @@ class Solution6:
         ret = [];   i=j=0
         while i<len(part1) and j<len(part2): #就增加了一行。
             if part1[i]<part2[j]:
-                ret.append(part1[i])
+                ret.append(part1[i])  # 都是加上l, 或r的 右边一部分的长度
                 self.cnt+=len(part2)-j   #第2个序列右边的都符合。       关键.
                 i+=1
             else:
@@ -69,5 +69,8 @@ class Solution6:
 
 s = Solution()
 print s.incnt([2, 4, 1, 9])
+print s.incnt([2, 4, 1, 0])
+
 s = Solution6()
 print s.incnt([2, 4, 1,9])
+print s.incnt([2, 4, 1, 0])
