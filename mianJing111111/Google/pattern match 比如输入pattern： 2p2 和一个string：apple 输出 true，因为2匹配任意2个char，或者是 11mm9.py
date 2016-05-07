@@ -12,7 +12,7 @@ class Solution:
             if '0'<=s1[i]<='9':  #贪心。  如果是数字。 直接跳到后面。直到字母。
                 pre = i
                 while i<len(s1) and '0'<=s1[i]<='9':   i+=1   #没有i+1. y因为与相邻无关
-                cnt = int(s1[pre:i]); j+=cnt
+                j+=int(s1[pre:i])
             else:
                 if s1[i]!=s2[j]: return False
                 i+=1;  j+=1

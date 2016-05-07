@@ -18,17 +18,15 @@ Your algorithm needs to run no worse than O(n) time where n is the size of the a
 # 我们只要走到一个走过的节点或者断裂，就可以停止本次找寻
 #  结束时如果停止的节点时本轮里经过的，我们就找到一个圈。 比如1->2->3->4->2 。
 class Solution:  # time stamp
-    def solve(self, arr):
-        n = len(arr); now=0; ret=0
-        ts = [-1]*n
+    def solve(self, arr):  #
+        n = len(arr); time=0; ret=0; d = {}
         for i in range(n):
-            if ts[i]<0:
+            if i not in d:
                 x=i
-                while 0<=x<n and ts[x]<0:
-                    ts[x]=now;  now+=1;   x = arr[x]
-                if 0<=x<n and ts[x]>=ts[i]:   ret=max(ret, now-ts[x])   # ts[x]>=ts[i]代表是本轮循环。
-        print ts
-        return ret
+                while 0<=x<n and x not in d:
+                    d[x]=time;  time+=1;   x = arr[x]
+                if 0<=x<n and d[x]>=d[i]:   ret=max(ret, time-d[x])   # ts[x]>=ts[i]代表是本轮循环。
+        return ret  #x是交叉点， i是起始点，  如果交叉点小于起始点， 那么是以前的cycle.
 # ts[x]<ts[i], 代表是以前visited，跳过。ts[x]==ts[i]代表正好起点也在环内。  ts[x]>ts[i]起点不在环内
 
 s = Solution()

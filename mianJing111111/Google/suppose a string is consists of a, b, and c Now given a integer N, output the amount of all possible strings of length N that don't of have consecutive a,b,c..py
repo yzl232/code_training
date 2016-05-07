@@ -30,11 +30,14 @@ f2(2)=6;
 #
 
 class Solution:
-    def cnt(self, n):
+    def solve(self, n):
+        if n==1: return 3
+        if n==2: return 9
         a, b = 3, 6
-        for i in range(n-1):
+        for i in range(n-2):
             a, b = a+b, 2*a+b
-        return a
+        return a+b
+
 
 '''
 class Solution:

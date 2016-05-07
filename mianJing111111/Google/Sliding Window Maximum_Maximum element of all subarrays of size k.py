@@ -61,14 +61,18 @@ print s.find([1, 2, 3, 1, 24, 5, 2, 3, 6], 3)
 #  给一个list和k（number）。找一个区域k，使得这个区域里k的最大值和最小值的差值最大，返回这个值。
 
 # G家题目。
-class Solution:
-    def find(self, arr, k):  #比较难。 8行。 背下
-        q1 = deque(maxlen=k); q2=deque(maxlen=k)  #必须限制k
-        a1 = max(arr[:k]); a2=min(arr[:k]); ret=a1-a2
-        q1.append(a1); q2.append(a2)
-        for i in range(k, len(arr)):  #结果有n-k+1个
-            while q1 and arr[i]>=q1[0]:  q1.popleft()   #remove all that 比现在的小的,, 也就是没必要存的元素   #关键一步
-            while q2 and arr[i]<=q2[0]:  q2.popleft()
-            q1.append(arr[i]); q2.append(arr[i])
-            ret = max(q1[0]-q2[0], ret)
+from collections import deque
+class Solution:  #去年做过
+    # @param {integer[]} nums     #从队尾pop, 就是考虑到if q[0] == i - k:    q.popleft()
+    # @param {integer} k
+    # @return {integer[]}
+    def maxSlidingWindow(self, nums, k):  # 双端队列
+        q1 = deque(); ret = float("-inf"); q2 = deque()
+        for i in range(len(nums)):
+            while q1 and nums[q1[-1]] <= nums[i]:  q1.pop() #全部pop掉，成空， 是可能的。
+            while q2 and nums[q2[-1]] >= nums[i]:  q2.pop() #全部pop掉，成空， 是可能的。
+            q1.append(i); q2.append(i)
+            if q1[0] == i - k:    q1.popleft()  #保持队列头是最大值, 当最大值过了边界时, 必须pop了.
+            if q2[0] == i - k:  q2.popleft()
+            if i >= k - 1:    ret = max(ret, nums[q1[0]], nums[q2[0]])
         return ret

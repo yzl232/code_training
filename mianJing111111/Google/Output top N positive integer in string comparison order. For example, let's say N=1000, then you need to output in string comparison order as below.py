@@ -6,14 +6,15 @@ Output top N positive integer in string comparison order. For example, let's say
 class Solution:
     def dfs(self,s):
         if int(s)>self.n: return
-        print s
+        self.ret.append(s)
         for i in range(10):  # 0~9都可以
             self.dfs(s+str(i))
 
     def solve(self, n=1000):
-        self.n = n
+        self.n = n;  self.ret = []
         for i in range(1, 10):  #1~9
             self.dfs(''+str(i))
+        return self.ret
 s = Solution()
 print s.solve(1000)
 

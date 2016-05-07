@@ -33,19 +33,16 @@ Other than the odd edge case, this problem seems to be straightforward enough. A
 #面经出现了2次！！！
 class Solution:
     def remove_Comments(self, s):    #其实不是很容易写。  有点tricky
-        rets = '';  i=0; n=len(s)
+        rets = "";  i=0; n=len(s)
         while i<n:
-            pre = i    # pre=i   比count要万能多了 。而且还简洁
-            while i+1<n and s[i:i+2] !='/*':    i+=1
+            pre = i
+            while i+1<n and s[i:i+2]!="/*": i+=1
             rets+=s[pre:i]
-            if i==n-1:
-                rets+=s[i]; break
-            else:
-                i+=2
-                while i+1<n and s[i:i+2] !='*/':    i+=1
-                i+=2
+            if i==n-1: return rets+s[n-1]
+            i+=2
+            while i+1<n and s[i:i+2]!= "*/": i+=1
+            i+=2
         return rets
-
 
 
 s= Solution()
@@ -99,18 +96,17 @@ class Solution:
         rets = [];  i=0; n=len(s)
         while i<n:
             while i+1<n and s[i:i+2] not in ['/*', '//']: i+=1
-            if i==n-1: break
+            if i==n-1:  return rets
             elif s[i:i+2] =='//':
                 pre = i = i+2
                 while i<n and s[i]!='\n': i+=1
                 rets.append(s[pre:i])
+                i+=1
             elif s[i:i+2] =='/*':
                 pre = i = i+2
-                while i+1<n and s[i:i+2] !='*/': i+=1
+                while i+1<n and s[i:i+2] !='*/': i+=1  #假设*/一定会出现.
                 rets.append(s[pre:i])
-                if i==n-1:
-                    rets[-1]+=s[n-1]; break
-                else: i+=2
+                i+=2
         return rets
 
 s = Solution()

@@ -4,13 +4,29 @@
 Implement strstr() to Find a Substring in a String
 
 '''
-
-
 class Solution:
     def strstr(self, s1, s2):
-        if not s2: return s1  #非空就是找到了
-        if not s1:  return
-        if s1[0]==s2[0] and self.strstr(s1[1:], s2[1:]): return s1
+        self.n2 = len(s2)
+        return self.helper(s1, 0, s2)
+
+    def helper(self, s1, i, s2):
+        if not s2: return i-self.n2
+        if i>=len(s1): return
+        if s1[i]==s2[0]: return self.helper(s1, i+1, s2[1:])
+        return self.helper(s1, i+1,  s2)
+
+s = Solution()
+print s.strstr("absdf", "sd")
+print s.strstr("sfasdfw", "fw")
+print s.strstr("sdfwefw", "xx")
+
+
+'''
+class Solution:
+    def strstr(self, s1, s2):
+        if not s2: return True
+        if not s1: return False
+        if s1[0]==s2[0]: return self.strstr(s1[1:], s2[1:])
         return self.strstr(s1[1:], s2)
 
 '''

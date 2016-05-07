@@ -26,10 +26,7 @@ Tic-tac-toe game,  N * N board,  红黑两方， 任何横向、竖向、对角�
 '''
 class Solution:
     def findWinner(self, ):
-        black = self.findCount('b')
-        red = self.findCount('r')
-        print 'black count: ' + str(black)
-        print 'red count: ' + str(red)
+        print 'black count: ' + str(self.findCount('b')), 'red count: ' + str(self.findCount('r'))
 
     def findCount(self, matrix, color):
         if not matrix: return 0
@@ -40,6 +37,7 @@ class Solution:
                 if i+2<=row-1 and matrix[i][j] ==  matrix[i+1][j] ==  matrix[i+2][j]==color:   count+=1
                 if i+2<=row-1 and j+2<=col-1 and matrix[i][j] ==   matrix[i+1][j+1] ==  matrix[i+2][j+2]==color:    count+=1
                 if i-2>=0 and j+2<=col-1 and matrix[i][j] == matrix[i-1][j+1] ==  matrix[i-2][j+2]==color:   count+=1
+        return count
 
 '''
 #G家考过题目

@@ -35,6 +35,7 @@ public void printSubTreeWeight(List<Node> nodes) {
 # 又是build tree。  建图。 找root。  BFS。
 
 
+# undirected graph.   适合union find。   其他不适合。
 
 class Solution:  #可以用hashmap  build 简单的node: children属性。   #也就是hashtable based..    tree
     def buildTree(self, relations):

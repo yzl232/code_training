@@ -19,6 +19,17 @@ an get three sub-problems:
 
 自己想象。  一个矩形。 切掉左上角一小块。  有2种分法
 '''
+class Solution:
+    def cutProfit(self, w, h, pieces):
+        self.d = {}
+        self.pieces= pieces
+        self.dfs(w, h)
+
+    def dfs(self, w, h):
+        if w<=0 or h<=0: return 0
+        if (w, h) not in self.d:
+            self.d[(w, h)] = max([price + max(self.dfs(w-w1, h) + self.dfs(w1, h-h1),   self.dfs(w, h-h1) + self.dfs(w-w1, h1)) for w1, h1, price in self.pieces if w>=w1 and h>=h1] or [0])
+        return self.d[(w, h)]
 
 class Solution:
     def cutProfit(self, w, h, pieces, prices):
