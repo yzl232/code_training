@@ -18,9 +18,7 @@ class Solution:
         return self.hasFlag
 
     def next(self):
-        ret = ''
-        for i in range(self.n):
-            ret += self.arrs[i][self.pointers[i]]
+        ret = " ".join(self.arrs[i][self.pointers[i]] for i in range(self.n))
         for i in range(self.n-1, -1, -1):     #就是plus one
             self.pointers[i]+=1
             if self.pointers[i]==len(self.arrs[i]):

@@ -32,7 +32,7 @@ class Solution:
                         while self.valid(r+d1, c+d2):
                             r+=d1; c+=d2
                         board[r][c]='#'   #  #注意了。 标为visited的只有起点，重点。 路径上得不要标为visited.
-                        cur.add((r, c))
+                        if r!=i or c!=j: cur.add((r, c))  #防止i， j没有移动
             pre = cur
         return False
 

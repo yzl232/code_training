@@ -1,8 +1,6 @@
 # encoding=utf-8
 
 '''
-
-
 经题，后悔没有仔细想，也是没想到面试官会问这么麻烦。给你一个8*8的矩阵，一个起始点，一个终点，和k值，求从起始点到终点走k步有多少种走法。这里和我们平时刷题的搜索题不同，这里所有点都可以重复走。我愣了一小会儿，说用bfs搜k层看有多少种结果。面试官不满意时间复杂度和空间复杂度太高，要我改进，我说剪枝。面试官还是不满意，说这个其实没什么改进，然后提示下说用其他搜索可以省空间，于是就写了个dfs。然后时间久到了，面试官说你已经在找到答案的方向上了，说时间上还可以提高很多。说完这话我就觉得估计这轮也够呛了。。。吐血，我回家之后也没想到这题有啥好方法，如果没记错的话貌似面试官要求线性复杂度，这打死我也想不出来。。。
 
 
@@ -65,20 +63,18 @@
  http://www.1point3acres.com/bbs/thread-176559-1-1.html
 '''
 
-
-#  然后如果棋盘无穷大怎么办 答棋盘尺寸不会超过K 初始化K的棋盘然后shift起始坐标和终点坐标
 class Solution:
     def solve(self, k, start, end):
-        pre = [[0]*8 for i in range(8)]
-        pre[start[0]][start[1]] = 1
-        cur = {}
+        board = [[0]*8 for i in range(8)]
+        board[start[0]][start[1]] = 1
+        tempBoard = {}
         for x in range(k-1):
             for i in range(8):
                 for j in range(8):
-                    cur[(i, j)] = sum( pre[x][y] for x in [i-1, i, i+1] for y in [j-1, j, j+1] if (i!=x or j!=y) and (0<=x<8 and 0<=y<8))
-            for x,y in cur:  pre[x][y] = cur[(x, y)]
-            cur = {}
-        return pre[end[0]][end[1]]
+                    tempBoard[(i, j)] = sum( board[x][y] for x in [i-1, i, i+1] for y in [j-1, j, j+1] if (i!=x or j!=y) and (0<=x<8 and 0<=y<8))
+            for x,y in tempBoard:  board[x][y] = tempBoard[(x, y)]
+            tempBoard = {}
+        return board[end[0]][end[1]]
 
 s = Solution()
 print s.solve(3, [1, 0], [2, 0])

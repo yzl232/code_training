@@ -14,10 +14,9 @@ class Solution4:
     def dfs(self, root):
         if not root: return
         self.dfs(root.left)
-        if not self.pre: self.pre = root.val;
-        if root.val==self.pre:
+        if self.pre!=None and root.val==self.pre:
             self.cnt+=1
-            self.ret = max(self.ret, (self.cnt, root))
         else:    self.cnt=1
+        self.ret = max(self.ret, (self.cnt, root))
         self.pre=root.val
         self.dfs(root.right)

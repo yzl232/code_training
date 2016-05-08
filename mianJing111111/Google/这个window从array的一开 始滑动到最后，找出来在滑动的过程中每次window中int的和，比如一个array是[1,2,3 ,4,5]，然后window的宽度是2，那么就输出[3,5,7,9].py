@@ -7,11 +7,10 @@
 class Solution:
     def solve(self, arr, w):
         x = len(arr)-w+1
-        ret = [0 for i in range(x)]
         assert x>=0
-        cur = sum(arr[:w]);  ret[0]=cur
+        cur = sum(arr[:w]);  ret=[cur]
         for l in range(1, x):
             r = l+w-1
             cur+=arr[r]-arr[l]
-            ret[l]=cur
+            ret.append(cur)
         return cur

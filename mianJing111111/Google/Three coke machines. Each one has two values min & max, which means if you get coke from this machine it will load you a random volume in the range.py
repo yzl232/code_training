@@ -27,21 +27,27 @@ n=90, m=40, no.
 n=100, m=60, no
 '''
 
+
+
+
+#列出了方程式就清楚了额.
+'''
+Condition 1 : a1*min1 + a2*min2 + a3*min3 >= l
+Condition 2 : a1*max1 + a2*max2 + a3*max3 <= h
+'''
+
 #题目是possible。 我觉得如果是某种strategy保证一定实现的话。的话， 才是如下解法
 #似乎是机器的范围一定要比杯子小？？？
 
 
 class Solution:
-    def getCoke(self, machines, n, m):
+    def getCoke(self, machines, h, l):
         self.machines = machines
-        return self.dfs(n, m)
+        return self.dfs(l, h)
 
-    def dfs(self, n, m):
-        if n<0 or m<0: return False
-        for row in self.machines:
-            minV, maxV = row[0], row[1]
-            if (minV>=m and maxV<=n) or self.dfs(m-minV, n-maxV): return True
-        return False
+    def dfs(self, l,h):
+        if h<0 or l<0: return False
+        return any((minV <= l and maxV >= h) or self.dfs(l - minV, h - maxV) for minV, maxV in self.machines)
 s= Solution()
 print s.getCoke([(50, 100), (100, 200), (500, 1000)],  110, 40)
 print s.getCoke([(50, 100), (100, 200), (500, 1000)],  90, 40)

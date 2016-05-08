@@ -7,6 +7,5 @@ class Fibonacci(object):
         self.dp = arr[:]
 
     def next(self):
-        res = self.dp[- self.j] +   self.dp[- self.k]
-        self.dp.append(res)
-        return res
+        self.dp.append(self.dp[- self.j] +   self.dp[- self.k])
+        return self.dp[-1]

@@ -37,8 +37,7 @@ class Solution:
         if not arr: raise  ValueError
         pre = arr[0][0]
         print pre, arr[0][1]
-        for i in range(1, len(arr)):
-            a, b  = arr[i]
+        for a, b in arr[1:]:
             if a-pre<=x/2: continue      #三种情况。 间隔大了， 补上，间隔小了， 省略。 合适，。
             elif x/2<=a-pre<=x*1.5:   print a,b
             else:

@@ -26,8 +26,7 @@ shorest unique prefix
 如果count》=2。 说明不是unique的。 继续找。
 如果count==1. 找到最短的了。返回。
 '''
-_end = '_end_'
-_cnt = '_count_'
+_cnt = 'cnt'
 class Trie:
     def makeTrie(self, words):
         root = {}
@@ -43,15 +42,14 @@ class Trie:
                 cur[ch][_cnt]=0
             cur[ch][_cnt]+=1
             cur = cur[ch]
-        cur[_end] = _end
+        cur['#'] = '#'
 
     def getPrefix(self, trie, word):
-        ret = '';   cur = trie
-        for ch in word:
+        cur = trie
+        for i, ch in enumerate(word):
             if ch not in cur: return
-            ret+=ch
             cur = cur[ch]
-            if cur[_cnt]==1: return ret
+            if cur[_cnt]==1: return word[:i+1]
 
 t = Trie()
 b = t.makeTrie(["the", "a", "there", "answer", "any", "by", "bye", "their"])

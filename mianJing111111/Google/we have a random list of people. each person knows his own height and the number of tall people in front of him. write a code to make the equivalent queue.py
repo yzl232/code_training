@@ -23,16 +23,18 @@ dequeue(set of people)
  O(n2)
 '''
 
+# http://www.meetqun.com/thread-3505-1-1.html
+
 
 class Solution:
     def printQueue(self, arr):
         ret = []
         while arr:
-            small = min(x for x in arr if x[1]==0)       #0里边找个子最矮的
-            ret.append(small[2])  #站在队伍前面的潜在cadidates.     tallNum
-            arr.remove(small)
-            for i in range(len(arr)):
-                if arr[i][0]<small[0]:  arr[i]=(arr[i][0], arr[i][1]-1, arr[i][2])  #如果比small矮，则要更新一下tallnum了，减一
+            first = min(x for x in arr if x[1]==0)       #0里面找最矮的, 
+            ret.append(first[2])  #站在队伍前面的潜在cadidates.     tallNum
+            arr.remove(first)
+            for i, x in enumerate(arr):
+                if x[0]<first[0]:  arr[i]=(x[0], x[1]-1, x[2])  #如果比small矮，则要更新一下tallnum了，减一
         return ret
 
 s = Solution()

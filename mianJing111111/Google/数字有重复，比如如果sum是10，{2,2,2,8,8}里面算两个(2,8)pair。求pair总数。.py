@@ -12,7 +12,9 @@ class Solution:
             if x not in d: d[x]=0
             d[x]+=1
         for x in d:
-            if target-x in d:  cnt+=min(d[x], d[target-x])  #{2,2,2,8,8}里面算两个(2,8)pair
+            if target-x in d:  
+                if x==target-x: cnt+=d[x]/2
+                else: cnt+=min(d[x], d[target-x])  #{2,2,2,8,8}里面算两个(2,8)pair
         return cnt/2
 s = Solution()
 print s.twoSum([2, 2, 2, 8, 8], 10)

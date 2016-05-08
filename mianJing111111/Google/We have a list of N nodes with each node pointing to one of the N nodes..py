@@ -94,9 +94,17 @@ print s.count_max_nodes([1,5,1,2,5])
 # 有点像并查集
 # 。
 #用memoization是最优化的。
-
-
-
+#绝对是并查集了..
+class Solution:
+    def solve(self, arr):
+        parent = {x:i for i,x in enumerate(arr[1:])}
+        def find(x):
+            if x!=parent[x]: parent[x] = find(parent[x])
+            return parent[x]
+        for i,x in enumerate(arr[1:]):  find(x)
+        t = set(parent.values())
+        return len(t) if 1 not in t else len(t)-1
+'''
 class Solution:
     def find_root(self, arr, x):
         while arr[x]!=x:  x=arr[x]
@@ -108,6 +116,7 @@ class Solution:
         for i in range(1,len(arr)):
             arr[i] = self.find_root(arr,i)
         return len(set(arr))
+'''
 s = Solution()
 print s.count_max_nodes([1,2,3,4,5])
 print s.count_max_nodes([5,5,5,5,5])

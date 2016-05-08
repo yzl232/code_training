@@ -27,7 +27,7 @@ class Solution:
         while x>0 and arr!=minArr:
             r = x+l+1
             minV=min(arr[l:r]); minIdx = arr[l:r].index(minV)
-            arr[l+1:minIdx+1], arr[l]=arr[l:minIdx], arr[minIdx]
+            arr[l], arr[l+1:minIdx+1] = arr[minIdx], arr[l:minIdx]
             x-=minIdx-l;  l+=1
         return arr
 s = Solution()

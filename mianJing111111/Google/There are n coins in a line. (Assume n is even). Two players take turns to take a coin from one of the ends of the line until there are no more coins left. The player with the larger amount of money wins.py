@@ -63,20 +63,19 @@ class Solution:
         return dp[0][l-1]
 
 
-'''
+
 # memoization
 class Solution2:
     def mCo(self, arr):
         self.d = {}; self.arr = arr
         return self.dfs(0, len(arr)-1)
 
-    def dfs(self, start, end):
-        if start>end: return 0
-        if (start, end) in self.d: return self.d[(start, end)]
-        if end==start+1: return max(self.arr[start], self.arr[end])
-        if end==start: return self.arr[start]
-        a = self.arr[start]+min(self.dfs(start+2, end),  self.dfs(start+1, end-1))
-        b = self.arr[end]+min(self.dfs(start+1, end-1), self.dfs(start, end-2))
-        self.d[(start, end)] = max(a, b)
-        return max(a, b)
-'''
+    def dfs(self, l, h):
+        if l>h: return 0
+        if h==l+1: return max(self.arr[l], self.arr[h])
+        if h==l: return self.arr[l]
+        if (l, h) not in self.d:
+            a = self.arr[l] + min(self.dfs(l + 2, h), self.dfs(l + 1, h - 1))
+            b = self.arr[h] + min(self.dfs(l + 1, h - 1), self.dfs(l, h - 2))
+            self.d[(l, h)] = max(a, b)
+        return self.d[(l, h)]
