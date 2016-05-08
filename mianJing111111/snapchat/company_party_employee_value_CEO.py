@@ -53,13 +53,13 @@ class Solution(object):
     def rob(self, root):
         def dfs(x):
             if not x: return (0, 0)
-            s0 = 0;  s1=0
+            s0 = x.val;  s1=0  # S0:  withRoo,t   s1 without Root
             for y in x.children:
                 t0, t1 = dfs(y)
-                s0+=t0
-                s1+=t1
-            return (s1, max(s1, s0 + x.val))
-        return dfs(root)[1]
+                s0+=t1
+                s1+=t0
+            return (max(s1, s0), s1)
+        return dfs(root)[0]
 
 class TreeNode:
     def __init__(self, x, children = []):
