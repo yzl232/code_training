@@ -31,15 +31,14 @@ Thanks to pchild for suggesting following approach.
 3) After the loop in step 2 is over, pop all the elements from stack and print -1 as next element for them.
 '''
 #O(n)    比较难。 不大懂    背下.  才10行代码。  循环里就2行。
-class Solution:    #存的是tuple   (val, i)
+class Solution:
     def nge(self, arr):
         if not arr: return
-        stack = []; d={}; n=len(arr)  #顺序是乱得。 用hashmap可以保存好顺序。
-        for i in range(n):
-            x = arr[i]
-            while stack and stack[-1][0]<x:  d[stack.pop()[1]]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
-            stack.append((x, i))   #存index, 以及值
-        return [ None if i not in d else d[i] for i in range(n) ]
+        stack = [];n=len(arr); ret = [None]*n;   #顺序是乱得。 用hashmap可以保存好顺序。
+        for i, x in enumerate(arr):  #类似sliding window,   histogram,  Create Maximum Number等等, 都是append  index
+            while stack and arr[stack[-1]]<x:  ret[stack.pop()]=x  #pop出来的都是    #发现了一个比之前都要大，不断pop
+            stack.append(i)   #存index, 以及值
+        return ret
 s = Solution()
 print s.nge([4, 2, 5,6, 2, 4])
 print s.nge([11, 13, 21, 3])
